@@ -15,12 +15,17 @@ const DEFAULT_PERIODS: { id: number; label: string; time: string }[] = [
 type QuarterRange = { start: string; end: string };
 type QuarterRanges = Record<Quarter, QuarterRange>;
 
+type Grade = "秀" | "優" | "良" | "可" | "不可" | "未履修";
+
 type CourseCell = {
   title: string;
   room?: string;
   teacher?: string;
   color?: string;
   memo?: string;
+  credits?: number; // 単位数
+  grade?: Grade; // 成績
+  isRequired?: boolean; // 必修科目かどうか
 } | null;
 
 type Timetable = {
@@ -37,6 +42,7 @@ type Settings = {
   title: string;
   showTime: boolean;
   quarterRanges: QuarterRanges;
+  requiredCredits: number; // 卒業に必要な単位数
 };
 
 const DAY_JA_TO_INDEX: Record<string, number> = {
@@ -48,6 +54,58 @@ const DAY_JA_TO_INDEX: Record<string, number> = {
   "金": 5,
   "土": 6,
 };
+
+// 成績からGPAポイントを取得
+function getGradePoint(grade?: Grade): number {
+  switch (grade) {
+    case "秀":
+      return 4.0;
+    case "優":
+      return 3.0;
+    case "良":
+      return 2.0;
+    case "可":
+      return 1.0;
+    case "不可":
+      return 0.0;
+    default:
+      return 0.0;
+  }
+}
+
+// 全科目からGPAと単位数を計算
+function calculateGPAAndCredits(data: Timetable) {
+  let totalCredits = 0; // 取得単位数
+  let totalGradePoints = 0;
+  let gradeCount = 0;
+
+  for (const quarter of QUARTERS) {
+    const quarterData = data[quarter];
+    if (!quarterData) continue;
+
+    for (const day of Object.keys(quarterData)) {
+      for (const periodId of Object.keys(quarterData[day])) {
+        const cell = quarterData[day][periodId];
+        if (!cell || !cell.title) continue;
+
+        const credits = cell.credits || 0;
+        const grade = cell.grade;
+
+        // 成績が登録されている場合のみGPA計算に含める
+        if (grade && grade !== "未履修" && credits > 0) {
+          if (grade !== "不可") {
+            totalCredits += credits;
+          }
+          totalGradePoints += getGradePoint(grade) * credits;
+          gradeCount += credits;
+        }
+      }
+    }
+  }
+
+  const gpa = gradeCount > 0 ? totalGradePoints / gradeCount : 0;
+  return { gpa, totalCredits };
+}
 
 export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
@@ -270,6 +328,10 @@ export default function TimetableApp() {
 
   const printPage = () => window.print();
 
+  // GPAと単位数を計算
+  const { gpa, totalCredits } = useMemo(() => calculateGPAAndCredits(data), [data]);
+  const remainingCredits = settings.requiredCredits - totalCredits;
+
   return (
     <div className="tcu-tt">
       <header className="tt-toolbar print:hidden">
@@ -325,6 +387,33 @@ export default function TimetableApp() {
       </header>
 
       <main className="container">
+        {/* 成績情報セクション */}
+        <section className="tt-card" style={{ marginBottom: "1.5rem" }}>
+          <div className="section-title">
+            <h2>📊 成績・単位情報</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", padding: "1rem" }}>
+            <div className="stats-card">
+              <div className="stats-label">取得単位数</div>
+              <div className="stats-value">{totalCredits} 単位</div>
+            </div>
+            <div className="stats-card">
+              <div className="stats-label">必要単位数</div>
+              <div className="stats-value">{settings.requiredCredits} 単位</div>
+            </div>
+            <div className="stats-card">
+              <div className="stats-label">残り必要単位数</div>
+              <div className={`stats-value ${remainingCredits <= 0 ? "stats-complete" : ""}`}>
+                {remainingCredits > 0 ? `${remainingCredits} 単位` : "達成！"}
+              </div>
+            </div>
+            <div className="stats-card">
+              <div className="stats-label">GPA</div>
+              <div className="stats-value">{gpa.toFixed(2)}</div>
+            </div>
+          </div>
+        </section>
+
         <section className="tt-card">
           <div className="section-title">
             <h2>{activeQuarter} の時間割</h2>
@@ -470,6 +559,9 @@ function EditModal({
   const [teacher, setTeacher] = useState(initial?.teacher ?? "");
   const [color, setColor] = useState(initial?.color ?? "#eef2ff");
   const [memo, setMemo] = useState(initial?.memo ?? "");
+  const [credits, setCredits] = useState(String(initial?.credits ?? ""));
+  const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
+  const [isRequired, setIsRequired] = useState(initial?.isRequired ?? false);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -516,6 +608,34 @@ function EditModal({
             <Field label="色（背景）">
               <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
             </Field>
+            <Field label="単位数">
+              <input
+                type="number"
+                min="0"
+                step="0.5"
+                value={credits}
+                onChange={(e) => setCredits(e.target.value)}
+                placeholder="例：2"
+              />
+            </Field>
+            <Field label="成績">
+              <select value={grade} onChange={(e) => setGrade(e.target.value as Grade)}>
+                <option value="未履修">未履修</option>
+                <option value="秀">秀 (4.0)</option>
+                <option value="優">優 (3.0)</option>
+                <option value="良">良 (2.0)</option>
+                <option value="可">可 (1.0)</option>
+                <option value="不可">不可 (0.0)</option>
+              </select>
+            </Field>
+            <label className="field checkbox">
+              <span>必修科目</span>
+              <input
+                type="checkbox"
+                checked={isRequired}
+                onChange={(e) => setIsRequired(e.target.checked)}
+              />
+            </label>
           </div>
           <Field label="備考">
             <textarea
@@ -541,6 +661,9 @@ function EditModal({
                 teacher: teacher.trim() || undefined,
                 color,
                 memo: memo.trim() || undefined,
+                credits: credits ? parseFloat(credits) : undefined,
+                grade: grade !== "未履修" ? grade : undefined,
+                isRequired,
               })}
               className="btn-primary"
               disabled={!title.trim()}
@@ -693,6 +816,7 @@ function SettingsPopover({
   const [daysStr, setDaysStr] = useState(settings.days.join(","));
   const [periodsText, setPeriodsText] = useState(formatPeriods(settings.periods));
   const [ranges, setRanges] = useState<QuarterRanges>(() => copyQuarterRanges(settings.quarterRanges));
+  const [requiredCredits, setRequiredCredits] = useState(String(settings.requiredCredits));
 
   useEffect(() => {
     if (open) {
@@ -701,6 +825,7 @@ function SettingsPopover({
       setDaysStr(settings.days.join(","));
       setPeriodsText(formatPeriods(settings.periods));
       setRanges(copyQuarterRanges(settings.quarterRanges));
+      setRequiredCredits(String(settings.requiredCredits));
     }
   }, [open, settings]);
 
@@ -730,6 +855,7 @@ function SettingsPopover({
       days: newDays,
       periods: newPeriods,
       quarterRanges: sanitizedRanges,
+      requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
     }));
     setData((prev: Timetable) => {
       const next: Timetable = {} as Timetable;
@@ -772,6 +898,15 @@ function SettingsPopover({
               <textarea
                 value={periodsText}
                 onChange={(e) => setPeriodsText(e.target.value)}
+              />
+            </Field>
+            <Field label="卒業に必要な単位数">
+              <input
+                type="number"
+                min="0"
+                value={requiredCredits}
+                onChange={(e) => setRequiredCredits(e.target.value)}
+                placeholder="例：124"
               />
             </Field>
           </div>
@@ -892,6 +1027,7 @@ function createDefaultSettings(): Settings {
     title: "個人用授業時間割（東京都市大学・4Q制）",
     showTime: true,
     quarterRanges: createDefaultQuarterRanges(),
+    requiredCredits: 124, // デフォルト値
   };
 }
 

@@ -158,6 +158,41 @@ html[data-theme="eco"] {
 .tcu-tt .quarter-range span{ font-size:12px; color:var(--muted); white-space:nowrap }
 .tcu-tt .quarter-range input[type="date"]{ flex:1 }
 
+/* ===== 成績・単位表示 ===== */
+.stats-card {
+  background: linear-gradient(135deg, var(--card) 0%, var(--chipbg) 100%);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.stats-label {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.stats-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--brand);
+  background: linear-gradient(135deg, var(--brand), var(--brand2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stats-complete {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* レスポンシブ / 印刷 */
 @media (max-width:900px){ .tcu-tt .form-grid{ grid-template-columns:1fr } .tcu-tt .bulk-grid{ grid-template-columns:1fr } }
 @media print {
