@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
+import CSVImporter from "./components/CSVImporter";
+import CourseList from "./components/CourseList";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -177,6 +179,17 @@ function calculateGPAAndCredits(data: Timetable) {
 
 export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
+  
+  // 科目リストの状態管理
+  const [importedCourses, setImportedCourses] = useState<Array<{
+    id: string;
+    title: string;
+    credits: number;
+    category: string;
+    group: string;
+    courseType: 'required' | 'elective-required' | 'elective';
+  }>>([]);
+  
   const [settings, setSettings] = useState<Settings>(() => {
     const defaults = createDefaultSettings();
     const stored = load<Partial<Settings>>("timetable_settings_v1");
@@ -237,6 +250,44 @@ export default function TimetableApp() {
     setEditing({ open: false });
   };
   const clearCell = () => saveCell(null);
+
+  // CSVインポートのハンドラー
+  const handleImportCurriculum = (curriculum: { requiredCredits: number; breakdown: { required: number; electiveRequired: number; elective: number }; name: string }) => {
+    setSettings(prev => ({
+      ...prev,
+      requiredCredits: curriculum.requiredCredits,
+      curriculum: {
+        name: curriculum.name,
+        requiredCredits: curriculum.requiredCredits,
+        breakdown: curriculum.breakdown
+      }
+    }));
+  };
+
+  const handleImportCourses = (courses: Array<{ id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }>) => {
+    setImportedCourses(courses);
+  };
+
+  const handleSelectCourse = (course: { id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }) => {
+    // 科目を選択したら編集ダイアログを開く準備をする
+    // ここでは選択した科目情報をeditingに反映
+    if (editing.open && editing.day && editing.periodId) {
+      const updatedValue: CourseCell = {
+        title: course.title,
+        credits: course.credits,
+        courseType: course.courseType,
+        grade: '未履修',
+        room: '',
+        teacher: '',
+        color: '',
+        memo: `ID: ${course.id} | ${course.category}`
+      };
+      setEditing(prev => ({
+        ...prev,
+        value: updatedValue
+      }));
+    }
+  };
 
   const fileRef = useRef<HTMLInputElement>(null);
   const exportJSON = () => {
@@ -426,6 +477,14 @@ export default function TimetableApp() {
             ))}
           </div>
           <div className="tt-actions">
+            <CSVImporter 
+              onImportCurriculum={handleImportCurriculum}
+              onImportCourses={handleImportCourses}
+            />
+            <CourseList 
+              courses={importedCourses}
+              onSelectCourse={handleSelectCourse}
+            />
             <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost">
               他Qへコピー
             </button>

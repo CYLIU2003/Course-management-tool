@@ -27,7 +27,19 @@
 - **残り必要単位数の表示**
 - **科目区分別の進捗表示** (必修・選択必修・選択ごと)
 
-### 📤 データ管理
+### � CSVインポート機能（NEW!）
+- **卒業要件CSVの読み込み** (*_credit_requirements.csv)
+  - 学科別の卒業要件を自動設定
+  - 必修・選択必修・選択科目の必要単位数を一括登録
+- **科目一覧CSVの読み込み** (*_timetable_by_category.csv)
+  - 学科の全科目リストをインポート
+  - 科目ID、科目名、単位数、科目区分を自動取得
+  - カテゴリ・グループ別での科目検索
+- **科目一覧からの簡単登録**
+  - インポートした科目を検索・フィルタして時間割に追加
+  - 科目情報が自動入力されるので入力ミスを防止
+
+### �📤 データ管理
 - JSON形式でのエクスポート/インポート
 - ICS形式でのカレンダー出力(Google Calendar等に対応)
 - ローカルストレージによる自動保存
@@ -37,7 +49,19 @@
 
 ## セットアップ
 
+### 必要な環境
+- Node.js 20.19+ または 22.12+
+- npm 10+
+
+### インストール手順
+
 ```bash
+# nvmを使用してNode.js 20をインストール（推奨）
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.bashrc
+nvm install 20
+nvm use 20
+
 # 依存関係のインストール
 npm install
 
@@ -46,6 +70,56 @@ npm run dev
 
 # ビルド
 npm run build
+```
+
+## CSVファイルの形式
+
+### 卒業要件CSV (*_credit_requirements.csv)
+```csv
+stage,area,subarea,total_required_credits,必修_credits,選択必修1_credits,選択必修2_credits,自由_credits,notes
+卒業,共通分野,教養基幹科目,10,0,1,0,9,
+卒業,共通分野,体育科目,1,0,1,0,0,
+卒業,共通分野,外国語科目,8,4,0,0,4,
+卒業,専門分野,理工学基礎科目,31,16,4,2,9,
+卒業,専門分野,専門科目,60,32,10,2,16,
+```
+
+### 科目一覧CSV (*_timetable_by_category.csv)
+```csv
+id,title,credits,raw_required,category,group,courseType
+SE-111,微分積分学(1a)※MS,1,○,理工学基礎科目,数学系,required
+SE-112,微分積分学(1b)※MS,1,○,理工学基礎科目,数学系,required
+SE-211,微分積分学(2a)※MS,1,△1,理工学基礎科目,数学系,elective-required
+SE-311,微分方程式論,2,△1,理工学基礎科目,数学系,elective-required
+SE-316,代数学,2,,理工学基礎科目,数学系,elective
+```
+
+**courseType の値:**
+- `required`: 必修科目
+- `elective-required`: 選択必修科目
+- `elective`: 選択科目
+
+## 使い方
+
+### CSVファイルの準備
+1. `department` フォルダに学科名のフォルダを作成（例: `department/rikou/`）
+2. 以下の2つのCSVファイルを配置:
+   - `学科名_credit_requirements.csv`: 卒業要件
+   - `学科名_timetable_by_category.csv`: 科目一覧
+
+### CSVのインポート
+1. アプリのツールバーにある **📁 CSV読込** ボタンをクリック
+2. 学科名を入力（任意）
+3. 卒業要件CSVファイルを選択してアップロード
+4. 科目一覧CSVファイルを選択してアップロード
+5. **両方まとめて読み込む** をクリック
+
+### 科目の登録
+1. ツールバーの **📚 科目一覧** ボタンをクリック
+2. 検索・フィルタ機能で目的の科目を探す
+3. 科目をクリックして時間割に追加
+4. 必要に応じて教室・担当教員などの情報を追加
+
 ```
 
 ## 使い方
