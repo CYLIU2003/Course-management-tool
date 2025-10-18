@@ -740,7 +740,6 @@ function EditModal({
   const [credits, setCredits] = useState(String(initial?.credits ?? ""));
   const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
   const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
-  const [useDropdown, setUseDropdown] = useState(true);
   const [selectedCourseId, setSelectedCourseId] = useState("");
 
   // 科目選択時の処理
@@ -780,40 +779,22 @@ function EditModal({
         </div>
         <div className="tt-dialog__body">
           <div className="form-grid">
-            {/* 学科選択時は科目選択プルダウンを表示 */}
-            {hasCurriculum && importedCourses.length > 0 && (
-              <>
-                <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
-                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '14px' }}>
-                    <input
-                      type="checkbox"
-                      checked={useDropdown}
-                      onChange={(e) => setUseDropdown(e.target.checked)}
-                    />
-                    登録済み科目から選択
-                  </label>
-                </div>
-                {useDropdown && (
-                  <div style={{ gridColumn: '1 / -1' }}>
-                    <Field label="科目を選択">
-                      <select
-                        value={selectedCourseId}
-                        onChange={(e) => handleCourseSelect(e.target.value)}
-                      >
-                        <option value="">-- 科目を選択してください --</option>
-                        {importedCourses.map((course) => (
-                          <option key={course.id} value={course.id}>
-                            {course.title} ({course.credits}単位) - {course.category}
-                          </option>
-                        ))}
-                      </select>
-                    </Field>
-                  </div>
-                )}
-              </>
-            )}
-            
             <Field label="授業名" required>
+              {/* 学科選択時は科目選択プルダウンを表示 */}
+              {hasCurriculum && importedCourses.length > 0 && (
+                <select
+                  value={selectedCourseId}
+                  onChange={(e) => handleCourseSelect(e.target.value)}
+                  style={{ marginBottom: '0.5rem' }}
+                >
+                  <option value="">-- 登録済み科目から選択 --</option>
+                  {importedCourses.map((course) => (
+                    <option key={course.id} value={course.id}>
+                      {course.title} ({course.credits}単位) - {course.category}
+                    </option>
+                  ))}
+                </select>
+              )}
               <input
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
