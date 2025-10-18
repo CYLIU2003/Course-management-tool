@@ -741,6 +741,7 @@ function EditModal({
   const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
   const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
   const [selectedCourseId, setSelectedCourseId] = useState("");
+  const [showCourseDropdown, setShowCourseDropdown] = useState(false);
 
   // 科目選択時の処理
   const handleCourseSelect = (courseId: string) => {
@@ -755,6 +756,7 @@ function EditModal({
       setCredits(String(course.credits));
       setCourseType(course.courseType);
       setMemo(`ID: ${course.id} | ${course.category}${course.group ? ` - ${course.group}` : ''}`);
+      setShowCourseDropdown(false); // 選択後はドロップダウンを閉じる
     }
   };
 
@@ -780,26 +782,56 @@ function EditModal({
         <div className="tt-dialog__body">
           <div className="form-grid">
             <Field label="授業名" required>
-              {/* 学科選択時は科目選択プルダウンを表示 */}
-              {hasCurriculum && importedCourses.length > 0 && (
-                <select
-                  value={selectedCourseId}
-                  onChange={(e) => handleCourseSelect(e.target.value)}
-                  style={{ marginBottom: '0.5rem' }}
-                >
-                  <option value="">-- 登録済み科目から選択 --</option>
-                  {importedCourses.map((course) => (
-                    <option key={course.id} value={course.id}>
-                      {course.title} ({course.credits}単位) - {course.category}
-                    </option>
-                  ))}
-                </select>
-              )}
-              <input
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder="例：電力システム工学A"
-              />
+              <div style={{ position: 'relative' }}>
+                {/* 学科選択時にドロップダウンが開いている場合のみ表示 */}
+                {showCourseDropdown && hasCurriculum && importedCourses.length > 0 && (
+                  <select
+                    value={selectedCourseId}
+                    onChange={(e) => handleCourseSelect(e.target.value)}
+                    style={{ 
+                      marginBottom: '0.5rem',
+                      width: '100%'
+                    }}
+                    autoFocus
+                  >
+                    <option value="">-- 登録済み科目から選択 --</option>
+                    {importedCourses.map((course) => (
+                      <option key={course.id} value={course.id}>
+                        {course.title} ({course.credits}単位) - {course.category}
+                      </option>
+                    ))}
+                  </select>
+                )}
+                <div style={{ display: 'flex', gap: '0.25rem' }}>
+                  <input
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="例：電力システム工学A"
+                    style={{ flex: 1 }}
+                  />
+                  {/* 学科選択時のみ検索ボタンを表示 */}
+                  {hasCurriculum && importedCourses.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setShowCourseDropdown(!showCourseDropdown)}
+                      style={{
+                        padding: '0.5rem 0.75rem',
+                        backgroundColor: showCourseDropdown ? 'var(--primary)' : 'var(--bg-secondary)',
+                        border: '1px solid var(--stroke)',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        fontSize: '1rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                      }}
+                      title="科目を検索"
+                    >
+                      🔍
+                    </button>
+                  )}
+                </div>
+              </div>
             </Field>
             <Field label="教場">
               <input
