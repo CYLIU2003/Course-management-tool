@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import CSVImporter from "./components/CSVImporter";
 import CourseList from "./components/CourseList";
 import GradeManagement from "./components/GradeManagement";
+import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS } from "./utils/autoLoadCSV";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -199,6 +200,43 @@ export default function TimetableApp() {
       curriculum: settings.curriculum
     });
   }, [settings.curriculum]);
+
+  // 起動時にCSVを自動読み込み
+  useEffect(() => {
+    const loadCSVs = async () => {
+      // 既に読み込み済みの場合はスキップ
+      if (importedCourses.length > 0 || settings.curriculum) {
+        console.log('⏭️ CSVs already loaded, skipping auto-load');
+        return;
+      }
+
+      console.log('🚀 Starting auto-load...');
+      try {
+        // デフォルトで最初の学科を読み込む
+        const defaultDept = AVAILABLE_DEPARTMENTS[0];
+        const result = await autoLoadDepartmentCSVs(defaultDept.path);
+        
+        // 卒業要件を設定
+        setSettings(prev => ({
+          ...prev,
+          curriculum: {
+            ...result.curriculum,
+            name: result.departmentName
+          }
+        }));
+        
+        // 科目リストを設定
+        setImportedCourses(result.courses);
+        
+        console.log('✅ Auto-load successful!');
+      } catch (error) {
+        console.error('❌ Auto-load failed:', error);
+        // エラーが発生しても続行（手動読み込みは可能）
+      }
+    };
+
+    loadCSVs();
+  }, []); // 初回のみ実行
 
   const emptyQuarterGrid = useMemo(
     () => buildEmptyQuarter(settings.days, settings.periods),
