@@ -169,6 +169,14 @@ export default function TimetableApp() {
     group: string;
     courseType: 'required' | 'elective-required' | 'elective';
   }>>([]);
+
+  // デバッグ用: importedCoursesの変更を監視
+  useEffect(() => {
+    console.log('📚 importedCourses changed:', importedCourses.length, 'courses');
+    if (importedCourses.length > 0) {
+      console.log('First course:', importedCourses[0]);
+    }
+  }, [importedCourses]);
   
   const [settings, setSettings] = useState<Settings>(() => {
     const defaults = createDefaultSettings();
@@ -183,6 +191,14 @@ export default function TimetableApp() {
       showTime: stored.showTime ?? defaults.showTime,
     };
   });
+
+  // デバッグ用: curriculumの状態を監視
+  useEffect(() => {
+    console.log('🎓 Curriculum status:', {
+      hasCurriculum: !!settings.curriculum,
+      curriculum: settings.curriculum
+    });
+  }, [settings.curriculum]);
 
   const emptyQuarterGrid = useMemo(
     () => buildEmptyQuarter(settings.days, settings.periods),
@@ -266,6 +282,7 @@ export default function TimetableApp() {
   };
 
   const handleImportCourses = (courses: Array<{ id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }>) => {
+    console.log('📚 Importing courses:', courses.length, 'courses');
     setImportedCourses(courses);
   };
 
@@ -732,6 +749,12 @@ function EditModal({
   }>;
   hasCurriculum: boolean;
 }) {
+  console.log('🔍 EditModal render:', {
+    hasCurriculum,
+    importedCoursesCount: importedCourses.length,
+    shouldShowButton: hasCurriculum && importedCourses.length > 0
+  });
+  
   const [title, setTitle] = useState(initial?.title ?? "");
   const [room, setRoom] = useState(initial?.room ?? "");
   const [teacher, setTeacher] = useState(initial?.teacher ?? "");

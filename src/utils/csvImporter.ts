@@ -41,8 +41,11 @@ export function parseCSVFile<T>(file: File): Promise<T[]> {
 
 // 卒業要件CSVからカリキュラムテンプレートを生成
 export function parseCreditRequirements(rows: CreditRequirementRow[]) {
+  console.log('🔄 parseCreditRequirements: Processing', rows.length, 'rows');
+  
   // 卒業要件の行のみをフィルタ
   const graduationRows = rows.filter(row => row.stage === '卒業');
+  console.log('📋 Graduation rows found:', graduationRows.length);
   
   let required = 0;
   let electiveRequired = 0;
@@ -58,12 +61,14 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
     required += requiredCredits;
     electiveRequired += electiveRequired1 + electiveRequired2;
     elective += freeCredits;
+    
+    console.log('  Row:', row.subarea, 'Required:', requiredCredits, 'Elective-Req:', electiveRequired1 + electiveRequired2, 'Free:', freeCredits);
   });
 
   // 総単位数を計算
   total = required + electiveRequired + elective;
 
-  return {
+  const result = {
     requiredCredits: total,
     breakdown: {
       required,
@@ -71,19 +76,38 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
       elective
     }
   };
+  
+  console.log('✅ parseCreditRequirements: Result', result);
+  return result;
 }
 
 // 科目CSVから科目リストを取得
 export function parseCourses(rows: CourseRow[]) {
-  return rows.map(row => ({
-    id: row.id,
-    title: row.title,
-    credits: parseFloat(row.credits) || 0,
-    category: row.category,
-    group: row.group,
-    courseType: row.courseType,
-    rawRequired: row.raw_required
-  }));
+  console.log('🔄 parseCourses: Processing', rows.length, 'rows');
+  
+  const courses = rows
+    .filter(row => row.id && row.title) // 空行をフィルタ
+    .map(row => {
+      // courseTypeが正しい値か確認
+      let courseType: 'required' | 'elective-required' | 'elective' = 'elective';
+      if (row.courseType === 'required' || row.courseType === 'elective-required' || row.courseType === 'elective') {
+        courseType = row.courseType;
+      } else {
+        console.warn('⚠️ Invalid courseType:', row.courseType, 'for course:', row.title);
+      }
+      
+      return {
+        id: row.id,
+        title: row.title,
+        credits: parseFloat(row.credits) || 0,
+        category: row.category || '',
+        group: row.group || '',
+        courseType: courseType
+      };
+    });
+  
+  console.log('✅ parseCourses: Processed', courses.length, 'courses');
+  return courses;
 }
 
 // departmentフォルダ内のファイルを検索して一覧を返す

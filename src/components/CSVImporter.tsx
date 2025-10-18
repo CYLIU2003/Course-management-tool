@@ -36,8 +36,11 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
     }
 
     try {
+      console.log('🔄 Starting requirements import...', selectedFiles.requirements.name);
       const rows = await parseCSVFile<CreditRequirementRow>(selectedFiles.requirements);
+      console.log('📄 Parsed requirement rows:', rows.length);
       const curriculum = parseCreditRequirements(rows);
+      console.log('✅ Parsed curriculum:', curriculum);
       
       onImportCurriculum({
         ...curriculum,
@@ -45,9 +48,10 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
       });
       
       alert('卒業要件の読み込みが完了しました！');
+      setIsOpen(false); // 成功したらモーダルを閉じる
     } catch (error) {
-      console.error('Error importing requirements:', error);
-      alert('卒業要件の読み込みに失敗しました');
+      console.error('❌ Error importing requirements:', error);
+      alert('卒業要件の読み込みに失敗しました: ' + (error instanceof Error ? error.message : String(error)));
     }
   };
 
@@ -58,15 +62,25 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
     }
 
     try {
+      console.log('🔄 Starting timetable import...', selectedFiles.timetable.name);
       const rows = await parseCSVFile<CourseRow>(selectedFiles.timetable);
+      console.log('📄 Parsed rows:', rows.length, 'Sample:', rows.slice(0, 2));
       const courses = parseCourses(rows);
+      console.log('✅ Parsed courses:', courses.length, 'Sample:', courses.slice(0, 2));
       
+      if (courses.length === 0) {
+        alert('科目データが見つかりませんでした。CSVファイルの形式を確認してください。');
+        return;
+      }
+      
+      console.log('📤 Calling onImportCourses with', courses.length, 'courses');
       onImportCourses(courses);
       
       alert(`${courses.length}件の科目を読み込みました！`);
+      setIsOpen(false); // 成功したらモーダルを閉じる
     } catch (error) {
-      console.error('Error importing timetable:', error);
-      alert('時間割の読み込みに失敗しました');
+      console.error('❌ Error importing timetable:', error);
+      alert('時間割の読み込みに失敗しました: ' + (error instanceof Error ? error.message : String(error)));
     }
   };
 
@@ -76,8 +90,14 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
       return;
     }
 
-    await handleImportRequirements();
-    await handleImportTimetable();
+    try {
+      console.log('🔄 Starting import all...');
+      await handleImportRequirements();
+      await handleImportTimetable();
+      console.log('✅ All imports completed');
+    } catch (error) {
+      console.error('❌ Error in import all:', error);
+    }
   };
 
   return (
