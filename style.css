@@ -193,6 +193,39 @@ html[data-theme="eco"] {
   background-clip: text;
 }
 
+/* ===== 科目区分別表示 ===== */
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background: var(--chipbg);
+  border-radius: 8px;
+  border: 1px solid var(--stroke);
+}
+.breakdown-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.breakdown-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.breakdown-remaining {
+  font-size: 0.85rem;
+  color: var(--brand);
+  font-weight: 500;
+}
+
+/* ===== テンプレート情報 ===== */
+.template-info {
+  grid-column: 1 / -1;
+}
+
 /* レスポンシブ / 印刷 */
 @media (max-width:900px){ .tcu-tt .form-grid{ grid-template-columns:1fr } .tcu-tt .bulk-grid{ grid-template-columns:1fr } }
 @media print {

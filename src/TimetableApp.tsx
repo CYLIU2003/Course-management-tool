@@ -16,6 +16,7 @@ type QuarterRange = { start: string; end: string };
 type QuarterRanges = Record<Quarter, QuarterRange>;
 
 type Grade = "秀" | "優" | "良" | "可" | "不可" | "未履修";
+type CourseType = "required" | "elective-required" | "elective"; // 必修・選択必修・選択
 
 type CourseCell = {
   title: string;
@@ -25,8 +26,58 @@ type CourseCell = {
   memo?: string;
   credits?: number; // 単位数
   grade?: Grade; // 成績
-  isRequired?: boolean; // 必修科目かどうか
+  courseType?: CourseType; // 科目区分
 } | null;
+
+// カリキュラムテンプレート型
+type CurriculumTemplate = {
+  name: string; // 学科名
+  requiredCredits: number; // 卒業に必要な総単位数
+  breakdown: {
+    required: number; // 必修科目の必要単位数
+    electiveRequired: number; // 選択必修の必要単位数
+    elective: number; // 選択科目の必要単位数
+  };
+};
+
+// 学科別カリキュラムテンプレート
+const CURRICULUM_TEMPLATES: CurriculumTemplate[] = [
+  {
+    name: "電気電子通信工学科",
+    requiredCredits: 124,
+    breakdown: { required: 88, electiveRequired: 20, elective: 16 },
+  },
+  {
+    name: "機械工学科",
+    requiredCredits: 124,
+    breakdown: { required: 90, electiveRequired: 18, elective: 16 },
+  },
+  {
+    name: "情報工学科",
+    requiredCredits: 124,
+    breakdown: { required: 85, electiveRequired: 22, elective: 17 },
+  },
+  {
+    name: "建築学科",
+    requiredCredits: 124,
+    breakdown: { required: 92, electiveRequired: 16, elective: 16 },
+  },
+  {
+    name: "都市工学科",
+    requiredCredits: 124,
+    breakdown: { required: 88, electiveRequired: 20, elective: 16 },
+  },
+  {
+    name: "医用工学科",
+    requiredCredits: 124,
+    breakdown: { required: 90, electiveRequired: 18, elective: 16 },
+  },
+  {
+    name: "カスタム(自由設定)",
+    requiredCredits: 124,
+    breakdown: { required: 0, electiveRequired: 0, elective: 124 },
+  },
+];
 
 type Timetable = {
   [quarter: string]: {
@@ -43,6 +94,7 @@ type Settings = {
   showTime: boolean;
   quarterRanges: QuarterRanges;
   requiredCredits: number; // 卒業に必要な単位数
+  curriculum?: CurriculumTemplate; // 選択されたカリキュラムテンプレート
 };
 
 const DAY_JA_TO_INDEX: Record<string, number> = {
@@ -78,6 +130,13 @@ function calculateGPAAndCredits(data: Timetable) {
   let totalCredits = 0; // 取得単位数
   let totalGradePoints = 0;
   let gradeCount = 0;
+  
+  // 科目区分別の取得単位数
+  const creditsByType = {
+    required: 0,
+    electiveRequired: 0,
+    elective: 0,
+  };
 
   for (const quarter of QUARTERS) {
     const quarterData = data[quarter];
@@ -90,11 +149,20 @@ function calculateGPAAndCredits(data: Timetable) {
 
         const credits = cell.credits || 0;
         const grade = cell.grade;
+        const courseType = cell.courseType || "elective";
 
         // 成績が登録されている場合のみGPA計算に含める
         if (grade && grade !== "未履修" && credits > 0) {
           if (grade !== "不可") {
             totalCredits += credits;
+            // 科目区分別に集計
+            if (courseType === "required") {
+              creditsByType.required += credits;
+            } else if (courseType === "elective-required") {
+              creditsByType.electiveRequired += credits;
+            } else {
+              creditsByType.elective += credits;
+            }
           }
           totalGradePoints += getGradePoint(grade) * credits;
           gradeCount += credits;
@@ -104,7 +172,7 @@ function calculateGPAAndCredits(data: Timetable) {
   }
 
   const gpa = gradeCount > 0 ? totalGradePoints / gradeCount : 0;
-  return { gpa, totalCredits };
+  return { gpa, totalCredits, creditsByType };
 }
 
 export default function TimetableApp() {
@@ -329,8 +397,15 @@ export default function TimetableApp() {
   const printPage = () => window.print();
 
   // GPAと単位数を計算
-  const { gpa, totalCredits } = useMemo(() => calculateGPAAndCredits(data), [data]);
+  const { gpa, totalCredits, creditsByType } = useMemo(() => calculateGPAAndCredits(data), [data]);
   const remainingCredits = settings.requiredCredits - totalCredits;
+  
+  // カリキュラムテンプレートがある場合の区分別残り単位数
+  const breakdown = settings.curriculum ? {
+    required: Math.max(0, settings.curriculum.breakdown.required - creditsByType.required),
+    electiveRequired: Math.max(0, settings.curriculum.breakdown.electiveRequired - creditsByType.electiveRequired),
+    elective: Math.max(0, settings.curriculum.breakdown.elective - creditsByType.elective),
+  } : null;
 
   return (
     <div className="tcu-tt">
@@ -391,6 +466,9 @@ export default function TimetableApp() {
         <section className="tt-card" style={{ marginBottom: "1.5rem" }}>
           <div className="section-title">
             <h2>📊 成績・単位情報</h2>
+            {settings.curriculum && (
+              <span className="small">({settings.curriculum.name})</span>
+            )}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", padding: "1rem" }}>
             <div className="stats-card">
@@ -412,6 +490,44 @@ export default function TimetableApp() {
               <div className="stats-value">{gpa.toFixed(2)}</div>
             </div>
           </div>
+          
+          {/* カリキュラムテンプレート使用時の詳細表示 */}
+          {settings.curriculum && breakdown && (
+            <div style={{ padding: "1rem", borderTop: "1px solid var(--stroke)" }}>
+              <h3 style={{ fontSize: "0.95rem", marginBottom: "0.75rem", color: "var(--text)" }}>
+                📚 科目区分別の進捗状況
+              </h3>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem" }}>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">必修科目</span>
+                  <span className="breakdown-value">
+                    {creditsByType.required} / {settings.curriculum.breakdown.required} 単位
+                    {breakdown.required > 0 && (
+                      <span className="breakdown-remaining"> (残り {breakdown.required})</span>
+                    )}
+                  </span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">選択必修科目</span>
+                  <span className="breakdown-value">
+                    {creditsByType.electiveRequired} / {settings.curriculum.breakdown.electiveRequired} 単位
+                    {breakdown.electiveRequired > 0 && (
+                      <span className="breakdown-remaining"> (残り {breakdown.electiveRequired})</span>
+                    )}
+                  </span>
+                </div>
+                <div className="breakdown-item">
+                  <span className="breakdown-label">選択科目</span>
+                  <span className="breakdown-value">
+                    {creditsByType.elective} / {settings.curriculum.breakdown.elective} 単位
+                    {breakdown.elective > 0 && (
+                      <span className="breakdown-remaining"> (残り {breakdown.elective})</span>
+                    )}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         <section className="tt-card">
@@ -561,7 +677,7 @@ function EditModal({
   const [memo, setMemo] = useState(initial?.memo ?? "");
   const [credits, setCredits] = useState(String(initial?.credits ?? ""));
   const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
-  const [isRequired, setIsRequired] = useState(initial?.isRequired ?? false);
+  const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -628,14 +744,13 @@ function EditModal({
                 <option value="不可">不可 (0.0)</option>
               </select>
             </Field>
-            <label className="field checkbox">
-              <span>必修科目</span>
-              <input
-                type="checkbox"
-                checked={isRequired}
-                onChange={(e) => setIsRequired(e.target.checked)}
-              />
-            </label>
+            <Field label="科目区分">
+              <select value={courseType} onChange={(e) => setCourseType(e.target.value as CourseType)}>
+                <option value="required">必修科目</option>
+                <option value="elective-required">選択必修科目</option>
+                <option value="elective">選択科目(自由科目)</option>
+              </select>
+            </Field>
           </div>
           <Field label="備考">
             <textarea
@@ -663,7 +778,7 @@ function EditModal({
                 memo: memo.trim() || undefined,
                 credits: credits ? parseFloat(credits) : undefined,
                 grade: grade !== "未履修" ? grade : undefined,
-                isRequired,
+                courseType,
               })}
               className="btn-primary"
               disabled={!title.trim()}
@@ -817,6 +932,9 @@ function SettingsPopover({
   const [periodsText, setPeriodsText] = useState(formatPeriods(settings.periods));
   const [ranges, setRanges] = useState<QuarterRanges>(() => copyQuarterRanges(settings.quarterRanges));
   const [requiredCredits, setRequiredCredits] = useState(String(settings.requiredCredits));
+  const [selectedTemplate, setSelectedTemplate] = useState<string>(
+    settings.curriculum?.name || ""
+  );
 
   useEffect(() => {
     if (open) {
@@ -826,6 +944,7 @@ function SettingsPopover({
       setPeriodsText(formatPeriods(settings.periods));
       setRanges(copyQuarterRanges(settings.quarterRanges));
       setRequiredCredits(String(settings.requiredCredits));
+      setSelectedTemplate(settings.curriculum?.name || "");
     }
   }, [open, settings]);
 
@@ -848,6 +967,10 @@ function SettingsPopover({
       }
     }
     const sanitizedRanges = copyQuarterRanges(ranges);
+    const curriculum = selectedTemplate 
+      ? CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate) 
+      : undefined;
+    
     setSettings((prev: Settings) => ({
       ...prev,
       title,
@@ -856,6 +979,7 @@ function SettingsPopover({
       periods: newPeriods,
       quarterRanges: sanitizedRanges,
       requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
+      curriculum,
     }));
     setData((prev: Timetable) => {
       const next: Timetable = {} as Timetable;
@@ -900,16 +1024,60 @@ function SettingsPopover({
                 onChange={(e) => setPeriodsText(e.target.value)}
               />
             </Field>
-            <Field label="卒業に必要な単位数">
-              <input
-                type="number"
-                min="0"
-                value={requiredCredits}
-                onChange={(e) => setRequiredCredits(e.target.value)}
-                placeholder="例：124"
-              />
-            </Field>
           </div>
+          
+          {/* カリキュラムテンプレート選択 */}
+          <div className="tt-bulk" style={{ marginTop: 12 }}>
+            <div className="bulk-head">🎓 学科・カリキュラムテンプレート</div>
+            <div className="form-grid">
+              <Field label="学科を選択">
+                <select
+                  value={selectedTemplate}
+                  onChange={(e) => {
+                    const template = CURRICULUM_TEMPLATES.find(t => t.name === e.target.value);
+                    setSelectedTemplate(e.target.value);
+                    if (template) {
+                      setRequiredCredits(String(template.requiredCredits));
+                    }
+                  }}
+                >
+                  <option value="">テンプレートを使用しない</option>
+                  {CURRICULUM_TEMPLATES.map((template) => (
+                    <option key={template.name} value={template.name}>
+                      {template.name}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+              {selectedTemplate && (
+                <div className="template-info">
+                  <p className="small" style={{ marginTop: "0.5rem" }}>
+                    ✅ 選択中: <strong>{selectedTemplate}</strong>
+                  </p>
+                  {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate) && (
+                    <div className="small" style={{ marginTop: "0.5rem", padding: "0.75rem", background: "var(--chipbg)", borderRadius: "8px" }}>
+                      <div>必修: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.required} 単位</div>
+                      <div>選択必修: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.electiveRequired} 単位</div>
+                      <div>選択: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.elective} 単位</div>
+                      <div style={{ marginTop: "0.25rem", fontWeight: "600" }}>
+                        合計: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.requiredCredits} 単位
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              <Field label="卒業に必要な単位数">
+                <input
+                  type="number"
+                  min="0"
+                  value={requiredCredits}
+                  onChange={(e) => setRequiredCredits(e.target.value)}
+                  placeholder="例：124"
+                />
+              </Field>
+            </div>
+          </div>
+          
           <div className="tt-bulk" style={{ marginTop: 12 }}>
             <div className="bulk-head">クオーター期間</div>
             <div className="form-grid">
