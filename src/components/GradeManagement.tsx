@@ -22,6 +22,20 @@ type Timetable = {
   };
 };
 
+type YearData = {
+  timetable: Timetable;
+  quarterRanges: Record<string, { start: string; end: string }>;
+};
+
+type AllYearsData = {
+  "1年次": YearData;
+  "2年次": YearData;
+  "3年次": YearData;
+  "4年次": YearData;
+  "M1": YearData;
+  "M2": YearData;
+};
+
 type CurriculumTemplate = {
   name: string;
   requiredCredits: number;
@@ -38,7 +52,7 @@ type Settings = {
 };
 
 interface GradeManagementProps {
-  data: Timetable;
+  allYearsData: AllYearsData;
   settings: Settings;
   onBack: () => void;
 }
@@ -56,7 +70,7 @@ function getGradePoint(grade?: Grade): number {
   }
 }
 
-function calculateGPAAndCredits(data: Timetable) {
+function calculateGPAAndCredits(allYearsData: AllYearsData) {
   let totalCredits = 0;
   let totalGradePoints = 0;
   let gradeCount = 0;
@@ -67,32 +81,42 @@ function calculateGPAAndCredits(data: Timetable) {
     elective: 0,
   };
 
-  for (const quarter of QUARTERS) {
-    const quarterData = data[quarter];
-    if (!quarterData) continue;
+  // 全年度のデータを集計
+  const years = ["1年次", "2年次", "3年次", "4年次", "M1", "M2"] as const;
+  
+  for (const year of years) {
+    const yearData = allYearsData[year];
+    if (!yearData) continue;
+    
+    const data = yearData.timetable;
+    
+    for (const quarter of QUARTERS) {
+      const quarterData = data[quarter];
+      if (!quarterData) continue;
 
-    for (const day of Object.keys(quarterData)) {
-      for (const periodId of Object.keys(quarterData[day])) {
-        const cell = quarterData[day][periodId];
-        if (!cell || !cell.title) continue;
+      for (const day of Object.keys(quarterData)) {
+        for (const periodId of Object.keys(quarterData[day])) {
+          const cell = quarterData[day][periodId];
+          if (!cell || !cell.title) continue;
 
-        const credits = cell.credits || 0;
-        const grade = cell.grade;
-        const courseType = cell.courseType || "elective";
+          const credits = cell.credits || 0;
+          const grade = cell.grade;
+          const courseType = cell.courseType || "elective";
 
-        if (grade && grade !== "未履修" && credits > 0) {
-          if (grade !== "不可") {
-            totalCredits += credits;
-            if (courseType === "required") {
-              creditsByType.required += credits;
-            } else if (courseType === "elective-required") {
-              creditsByType.electiveRequired += credits;
-            } else {
-              creditsByType.elective += credits;
+          if (grade && grade !== "未履修" && credits > 0) {
+            if (grade !== "不可") {
+              totalCredits += credits;
+              if (courseType === "required") {
+                creditsByType.required += credits;
+              } else if (courseType === "elective-required") {
+                creditsByType.electiveRequired += credits;
+              } else {
+                creditsByType.elective += credits;
+              }
             }
+            totalGradePoints += getGradePoint(grade) * credits;
+            gradeCount += credits;
           }
-          totalGradePoints += getGradePoint(grade) * credits;
-          gradeCount += credits;
         }
       }
     }
@@ -102,8 +126,8 @@ function calculateGPAAndCredits(data: Timetable) {
   return { gpa, totalCredits, creditsByType };
 }
 
-export default function GradeManagement({ data, settings, onBack }: GradeManagementProps) {
-  const { gpa, totalCredits, creditsByType } = useMemo(() => calculateGPAAndCredits(data), [data]);
+export default function GradeManagement({ allYearsData, settings, onBack }: GradeManagementProps) {
+  const { gpa, totalCredits, creditsByType } = useMemo(() => calculateGPAAndCredits(allYearsData), [allYearsData]);
   const remainingCredits = settings.requiredCredits - totalCredits;
   
   const breakdown = settings.curriculum ? {

@@ -90,12 +90,30 @@ type Timetable = {
   };
 };
 
+// 学年の型
+type Year = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
+
+// 年度ごとのデータ
+type YearData = {
+  timetable: Timetable;
+  quarterRanges: QuarterRanges;
+};
+
+// 全年度のデータ
+type AllYearsData = {
+  "1年次": YearData;
+  "2年次": YearData;
+  "3年次": YearData;
+  "4年次": YearData;
+  "M1": YearData;
+  "M2": YearData;
+};
+
 type Settings = {
   days: string[];
   periods: { id: number; label: string; time: string }[];
   title: string;
   showTime: boolean;
-  quarterRanges: QuarterRanges;
   requiredCredits: number; // 卒業に必要な単位数
   curriculum?: CurriculumTemplate; // 選択されたカリキュラムテンプレート
 };
@@ -110,8 +128,36 @@ const DAY_JA_TO_INDEX: Record<string, number> = {
   "土": 6,
 };
 
+// ヘルパー関数群
+function createDefaultQuarterRanges(): QuarterRanges {
+  const ranges = {} as QuarterRanges;
+  for (const q of QUARTERS) {
+    ranges[q] = { start: "", end: "" };
+  }
+  return ranges;
+}
+
+function createDefaultYearData(): YearData {
+  return {
+    timetable: {} as Timetable,
+    quarterRanges: createDefaultQuarterRanges(),
+  };
+}
+
+function createDefaultAllYearsData(): AllYearsData {
+  return {
+    "1年次": createDefaultYearData(),
+    "2年次": createDefaultYearData(),
+    "3年次": createDefaultYearData(),
+    "4年次": createDefaultYearData(),
+    "M1": createDefaultYearData(),
+    "M2": createDefaultYearData(),
+  };
+}
+
 export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
+  const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<"timetable" | "grades">("timetable");
   
   // 科目リストの状態管理
@@ -126,7 +172,7 @@ export default function TimetableApp() {
   
   const [settings, setSettings] = useState<Settings>(() => {
     const defaults = createDefaultSettings();
-    const stored = load<Partial<Settings>>("timetable_settings_v1");
+    const stored = load<Partial<Settings>>("timetable_settings_v2");
     if (!stored) return defaults;
     return {
       ...defaults,
@@ -135,7 +181,6 @@ export default function TimetableApp() {
       periods: stored.periods ?? defaults.periods,
       title: stored.title ?? defaults.title,
       showTime: stored.showTime ?? defaults.showTime,
-      quarterRanges: mergeQuarterRanges((stored as any).quarterRanges),
     };
   });
 
@@ -144,19 +189,32 @@ export default function TimetableApp() {
     [settings.days, settings.periods]
   );
 
-  const [data, setData] = useState<Timetable>(() => {
-    const d = load<Timetable>("timetable_data_v1");
-    if (d) return d;
-    const init: Timetable = {} as Timetable;
-    for (const q of QUARTERS) init[q] = clone(emptyQuarterGrid);
-    return init;
+  // 年度ごとのデータ管理
+  const [allYearsData, setAllYearsData] = useState<AllYearsData>(() => {
+    const stored = load<AllYearsData>("timetable_allyears_v2");
+    if (stored) return stored;
+    
+    // 初期化: createDefaultAllYearsData を使用
+    return createDefaultAllYearsData();
   });
 
+  // 現在の年度のデータを取得
+  const currentYearData: YearData = allYearsData[currentYear] || {
+    timetable: {} as Timetable,
+    quarterRanges: {
+      "1Q": { start: "", end: "" },
+      "2Q": { start: "", end: "" },
+      "3Q": { start: "", end: "" },
+      "4Q": { start: "", end: "" },
+    },
+  };
+
   useEffect(() => {
-    save("timetable_data_v1", data);
-  }, [data]);
+    save("timetable_allyears_v2", allYearsData);
+  }, [allYearsData]);
+  
   useEffect(() => {
-    save("timetable_settings_v1", settings);
+    save("timetable_settings_v2", settings);
   }, [settings]);
 
   const [editing, setEditing] = useState<{
@@ -165,24 +223,33 @@ export default function TimetableApp() {
     periodId?: number;
     value?: CourseCell;
   }>({ open: false });
+  
   const openEdit = (day: string, periodId: number) => {
-    const v = data[activeQuarter]?.[day]?.[String(periodId)] ?? null;
+    const v = currentYearData.timetable[activeQuarter]?.[day]?.[String(periodId)] ?? null;
     setEditing({ open: true, day, periodId, value: v });
   };
+  
   const saveCell = (payload: CourseCell) => {
     if (!editing.day || !editing.periodId) return;
-    setData((prev) => ({
+    setAllYearsData((prev) => ({
       ...prev,
-      [activeQuarter]: {
-        ...prev[activeQuarter],
-        [editing.day!]: {
-          ...prev[activeQuarter][editing.day!],
-          [String(editing.periodId!)]: payload,
+      [currentYear]: {
+        ...prev[currentYear],
+        timetable: {
+          ...prev[currentYear].timetable,
+          [activeQuarter]: {
+            ...prev[currentYear].timetable[activeQuarter],
+            [editing.day!]: {
+              ...prev[currentYear].timetable[activeQuarter][editing.day!],
+              [String(editing.periodId!)]: payload,
+            },
+          },
         },
       },
     }));
     setEditing({ open: false });
   };
+  
   const clearCell = () => saveCell(null);
 
   // CSVインポートのハンドラー
@@ -225,7 +292,7 @@ export default function TimetableApp() {
 
   const fileRef = useRef<HTMLInputElement>(null);
   const exportJSON = () => {
-    const blob = new Blob([JSON.stringify({ version: 1, settings, data }, null, 2)], {
+    const blob = new Blob([JSON.stringify({ version: 2, settings, allYearsData }, null, 2)], {
       type: "application/json",
     });
     const a = document.createElement("a");
@@ -238,7 +305,16 @@ export default function TimetableApp() {
     reader.onload = () => {
       try {
         const obj = JSON.parse(String(reader.result));
-        if (obj.settings && obj.data) {
+        if (obj.settings && obj.allYearsData) {
+          // v2 形式
+          setSettings((prev) => ({
+            ...prev,
+            ...(obj.settings ?? {}),
+          }));
+          setAllYearsData(obj.allYearsData);
+          alert("読込が完了しました。");
+        } else if (obj.settings && obj.data) {
+          // v1 形式 - 1年次にマイグレーション
           const fixed: Timetable = {} as Timetable;
           for (const q of QUARTERS) {
             fixed[q] = mergeGrids(
@@ -246,13 +322,17 @@ export default function TimetableApp() {
               obj.data[q] ?? {}
             );
           }
+          const migratedData: AllYearsData = createDefaultAllYearsData();
+          migratedData["1年次"].timetable = fixed;
+          if (obj.settings?.quarterRanges) {
+            migratedData["1年次"].quarterRanges = obj.settings.quarterRanges;
+          }
           setSettings((prev) => ({
             ...prev,
             ...(obj.settings ?? {}),
-            quarterRanges: mergeQuarterRanges(obj.settings?.quarterRanges ?? prev.quarterRanges),
           }));
-          setData(fixed);
-          alert("読込が完了しました。");
+          setAllYearsData(migratedData);
+          alert("読込が完了しました(v1形式を1年次に変換しました)。");
         } else {
           alert("不正なファイルです。");
         }
@@ -266,25 +346,35 @@ export default function TimetableApp() {
   const exportICS = () => {
     const dtstamp = formatICSDateUTC(new Date());
     const events: string[] = [];
-    for (const quarter of QUARTERS) {
-      const range = settings.quarterRanges[quarter];
-      if (!range?.start || !range?.end) continue;
-      const startDate = parseISODate(range.start);
-      const endDate = parseISODate(range.end);
-      if (!startDate || !endDate || startDate > endDate) continue;
-      const rangeEnd = new Date(endDate.getTime());
-      rangeEnd.setHours(23, 59, 59, 999);
+    
+    // 全年度のデータをエクスポート
+    const years = ["1年次", "2年次", "3年次", "4年次", "M1", "M2"] as const;
+    for (const year of years) {
+      const yearData = allYearsData[year];
+      if (!yearData) continue;
+      
+      const data = yearData.timetable;
+      const quarterRanges = yearData.quarterRanges;
+      
+      for (const quarter of QUARTERS) {
+        const range = quarterRanges[quarter];
+        if (!range?.start || !range?.end) continue;
+        const startDate = parseISODate(range.start);
+        const endDate = parseISODate(range.end);
+        if (!startDate || !endDate || startDate > endDate) continue;
+        const rangeEnd = new Date(endDate.getTime());
+        rangeEnd.setHours(23, 59, 59, 999);
 
-      for (const day of settings.days) {
-        const weekday = mapDayLabelToIndex(day);
-        if (weekday === null) continue;
-        const first = getFirstOccurrence(startDate, weekday);
-        if (first > rangeEnd) continue;
+        for (const day of settings.days) {
+          const weekday = mapDayLabelToIndex(day);
+          if (weekday === null) continue;
+          const first = getFirstOccurrence(startDate, weekday);
+          if (first > rangeEnd) continue;
 
-        for (const period of settings.periods) {
-          const cell = data[quarter]?.[day]?.[String(period.id)] ?? null;
-          if (!cell) continue;
-          const timeRange = parseTimeRange(period.time);
+          for (const period of settings.periods) {
+            const cell = data[quarter]?.[day]?.[String(period.id)] ?? null;
+            if (!cell) continue;
+            const timeRange = parseTimeRange(period.time);
           if (!timeRange) continue;
 
           let occurrence = new Date(first.getTime());
@@ -318,6 +408,7 @@ export default function TimetableApp() {
             occurrence = addDays(occurrence, 7);
           }
         }
+      }
       }
     }
 
@@ -356,21 +447,22 @@ export default function TimetableApp() {
   const [copyOpen, setCopyOpen] = useState(false);
   const copyQuarter = (from: Quarter, targets: Quarter[], mode: CopyMode) => {
     if (!targets.length) return;
-    setData((prev) => {
+    setAllYearsData((prev) => {
       const next = clone(prev);
+      const currentData = next[currentYear].timetable;
       const base = buildEmptyQuarter(settings.days, settings.periods);
-      const src = mergeGrids(base, next[from] ?? {});
+      const src = mergeGrids(base, currentData[from] ?? {});
       for (const to of targets) {
         if (to === from) continue;
-        next[to] = mergeGrids(base, next[to] ?? {});
+        currentData[to] = mergeGrids(base, currentData[to] ?? {});
         for (const d of settings.days) {
           for (const p of settings.periods) {
             const pid = String(p.id);
             const srcCell = src[d][pid];
             if (mode === "overwrite") {
-              next[to][d][pid] = srcCell;
-            } else if (!next[to][d][pid]) {
-              next[to][d][pid] = srcCell;
+              currentData[to][d][pid] = srcCell;
+            } else if (!currentData[to][d][pid]) {
+              currentData[to][d][pid] = srcCell;
             }
           }
         }
@@ -385,7 +477,7 @@ export default function TimetableApp() {
   if (currentPage === "grades") {
     return (
       <GradeManagement 
-        data={data}
+        allYearsData={allYearsData}
         settings={settings}
         onBack={() => setCurrentPage("timetable")}
       />
@@ -397,6 +489,24 @@ export default function TimetableApp() {
       <header className="tt-toolbar print:hidden">
         <div className="container tt-toolbar__inner">
           <h1 className="tt-title">{settings.title}</h1>
+          
+          {/* 年度選択タブ */}
+          <div className="tt-tabs" role="tablist" aria-label="年度切替" style={{ marginRight: '0.5rem' }}>
+            {(["1年次", "2年次", "3年次", "4年次", "M1", "M2"] as Year[]).map((year) => (
+              <button
+                key={year}
+                className={`tt-tab${currentYear === year ? " is-active" : ""}`}
+                onClick={() => setCurrentYear(year)}
+                aria-pressed={currentYear === year}
+                type="button"
+                style={{ fontSize: '12px', padding: '0.35rem 0.6rem' }}
+              >
+                {year}
+              </button>
+            ))}
+          </div>
+          
+          {/* クオーター選択タブ */}
           <div className="tt-tabs" role="tablist" aria-label="クオーター切替">
             {QUARTERS.map((q) => (
               <button
@@ -410,6 +520,7 @@ export default function TimetableApp() {
               </button>
             ))}
           </div>
+          
           <div className="tt-actions">
             <button type="button" onClick={() => setCurrentPage("grades")} className="btn-primary">
               📊 成績管理
@@ -450,7 +561,9 @@ export default function TimetableApp() {
             <SettingsPopover
               settings={settings}
               setSettings={setSettings}
-              setData={setData}
+              allYearsData={allYearsData}
+              setAllYearsData={setAllYearsData}
+              currentYear={currentYear}
               QUARTERS={QUARTERS}
             />
           </div>
@@ -460,13 +573,13 @@ export default function TimetableApp() {
       <main className="container">
         <section className="tt-card">
           <div className="section-title">
-            <h2>{activeQuarter} の時間割</h2>
+            <h2>{currentYear} - {activeQuarter} の時間割</h2>
             <span className="small print:hidden">クリックで編集できます</span>
           </div>
           <div className="tt-tablewrap">
             <Table
               quarter={activeQuarter}
-              data={data}
+              data={currentYearData.timetable}
               days={settings.days}
               periods={settings.periods}
               showTime={settings.showTime}
@@ -485,6 +598,8 @@ export default function TimetableApp() {
           onClose={() => setEditing({ open: false })}
           onSave={saveCell}
           onClear={clearCell}
+          importedCourses={importedCourses}
+          hasCurriculum={!!settings.curriculum}
         />
       )}
 
@@ -590,6 +705,8 @@ function EditModal({
   onSave,
   onClear,
   onClose,
+  importedCourses,
+  hasCurriculum,
 }: {
   initial: CourseCell;
   day: string;
@@ -597,6 +714,15 @@ function EditModal({
   onSave: (v: CourseCell) => void;
   onClear: () => void;
   onClose: () => void;
+  importedCourses: Array<{
+    id: string;
+    title: string;
+    credits: number;
+    category: string;
+    group: string;
+    courseType: 'required' | 'elective-required' | 'elective';
+  }>;
+  hasCurriculum: boolean;
 }) {
   const [title, setTitle] = useState(initial?.title ?? "");
   const [room, setRoom] = useState(initial?.room ?? "");
@@ -606,6 +732,24 @@ function EditModal({
   const [credits, setCredits] = useState(String(initial?.credits ?? ""));
   const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
   const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
+  const [useDropdown, setUseDropdown] = useState(true);
+  const [selectedCourseId, setSelectedCourseId] = useState("");
+
+  // 科目選択時の処理
+  const handleCourseSelect = (courseId: string) => {
+    setSelectedCourseId(courseId);
+    if (courseId === "") {
+      return;
+    }
+    
+    const course = importedCourses.find(c => c.id === courseId);
+    if (course) {
+      setTitle(course.title);
+      setCredits(String(course.credits));
+      setCourseType(course.courseType);
+      setMemo(`ID: ${course.id} | ${course.category}${course.group ? ` - ${course.group}` : ''}`);
+    }
+  };
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -628,6 +772,39 @@ function EditModal({
         </div>
         <div className="tt-dialog__body">
           <div className="form-grid">
+            {/* 学科選択時は科目選択プルダウンを表示 */}
+            {hasCurriculum && importedCourses.length > 0 && (
+              <>
+                <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
+                  <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '14px' }}>
+                    <input
+                      type="checkbox"
+                      checked={useDropdown}
+                      onChange={(e) => setUseDropdown(e.target.checked)}
+                    />
+                    登録済み科目から選択
+                  </label>
+                </div>
+                {useDropdown && (
+                  <div style={{ gridColumn: '1 / -1' }}>
+                    <Field label="科目を選択">
+                      <select
+                        value={selectedCourseId}
+                        onChange={(e) => handleCourseSelect(e.target.value)}
+                      >
+                        <option value="">-- 科目を選択してください --</option>
+                        {importedCourses.map((course) => (
+                          <option key={course.id} value={course.id}>
+                            {course.title} ({course.credits}単位) - {course.category}
+                          </option>
+                        ))}
+                      </select>
+                    </Field>
+                  </div>
+                )}
+              </>
+            )}
+            
             <Field label="授業名" required>
               <input
                 value={title}
@@ -845,12 +1022,16 @@ function QuarterCopyModal({
 function SettingsPopover({
   settings,
   setSettings,
-  setData,
+  allYearsData,
+  setAllYearsData,
+  currentYear,
   QUARTERS,
 }: {
   settings: Settings;
   setSettings: React.Dispatch<React.SetStateAction<Settings>>;
-  setData: React.Dispatch<React.SetStateAction<Timetable>>;
+  allYearsData: AllYearsData;
+  setAllYearsData: React.Dispatch<React.SetStateAction<AllYearsData>>;
+  currentYear: Year;
   QUARTERS: readonly string[];
 }) {
   const [open, setOpen] = useState(false);
@@ -858,7 +1039,7 @@ function SettingsPopover({
   const [showTime, setShowTime] = useState(settings.showTime);
   const [daysStr, setDaysStr] = useState(settings.days.join(","));
   const [periodsText, setPeriodsText] = useState(formatPeriods(settings.periods));
-  const [ranges, setRanges] = useState<QuarterRanges>(() => copyQuarterRanges(settings.quarterRanges));
+  const [ranges, setRanges] = useState<QuarterRanges>(() => copyQuarterRanges(allYearsData[currentYear].quarterRanges));
   const [requiredCredits, setRequiredCredits] = useState(String(settings.requiredCredits));
   const [selectedTemplate, setSelectedTemplate] = useState<string>(
     settings.curriculum?.name || ""
@@ -870,11 +1051,11 @@ function SettingsPopover({
       setShowTime(settings.showTime);
       setDaysStr(settings.days.join(","));
       setPeriodsText(formatPeriods(settings.periods));
-      setRanges(copyQuarterRanges(settings.quarterRanges));
+      setRanges(copyQuarterRanges(allYearsData[currentYear].quarterRanges));
       setRequiredCredits(String(settings.requiredCredits));
       setSelectedTemplate(settings.curriculum?.name || "");
     }
-  }, [open, settings]);
+  }, [open, settings, allYearsData, currentYear]);
 
   const apply = () => {
     const newDays = daysStr
@@ -905,14 +1086,19 @@ function SettingsPopover({
       showTime,
       days: newDays,
       periods: newPeriods,
-      quarterRanges: sanitizedRanges,
       requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
       curriculum,
     }));
-    setData((prev: Timetable) => {
-      const next: Timetable = {} as Timetable;
+    
+    setAllYearsData((prev: AllYearsData) => {
+      const next = clone(prev);
+      next[currentYear].quarterRanges = sanitizedRanges;
+      // 曜日・時限の変更に伴うマージ
       for (const q of QUARTERS) {
-        next[q] = mergeGrids(buildEmptyQuarter(newDays, newPeriods), prev[q]);
+        next[currentYear].timetable[q] = mergeGrids(
+          buildEmptyQuarter(newDays, newPeriods), 
+          next[currentYear].timetable[q]
+        );
       }
       return next;
     });
@@ -1122,32 +1308,8 @@ function createDefaultSettings(): Settings {
     periods: DEFAULT_PERIODS.map((p) => ({ ...p })),
     title: "個人用授業時間割（東京都市大学・4Q制）",
     showTime: true,
-    quarterRanges: createDefaultQuarterRanges(),
     requiredCredits: 124, // デフォルト値
   };
-}
-
-function createDefaultQuarterRanges(): QuarterRanges {
-  const ranges = {} as QuarterRanges;
-  for (const q of QUARTERS) {
-    ranges[q] = { start: "", end: "" };
-  }
-  return ranges;
-}
-
-function mergeQuarterRanges(input: unknown): QuarterRanges {
-  const base = createDefaultQuarterRanges();
-  if (!input || typeof input !== "object") return base;
-  for (const q of QUARTERS) {
-    const value = (input as Record<string, any>)[q];
-    if (value && typeof value === "object") {
-      base[q] = {
-        start: typeof value.start === "string" ? value.start : "",
-        end: typeof value.end === "string" ? value.end : "",
-      };
-    }
-  }
-  return base;
 }
 
 function copyQuarterRanges(input: QuarterRanges): QuarterRanges {
