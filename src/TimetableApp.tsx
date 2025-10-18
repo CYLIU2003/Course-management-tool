@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import CSVImporter from "./components/CSVImporter";
 import CourseList from "./components/CourseList";
+import GradeManagement from "./components/GradeManagement";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -109,76 +110,9 @@ const DAY_JA_TO_INDEX: Record<string, number> = {
   "土": 6,
 };
 
-// 成績からGPAポイントを取得
-function getGradePoint(grade?: Grade): number {
-  switch (grade) {
-    case "秀":
-      return 4.0;
-    case "優":
-      return 3.0;
-    case "良":
-      return 2.0;
-    case "可":
-      return 1.0;
-    case "不可":
-      return 0.0;
-    default:
-      return 0.0;
-  }
-}
-
-// 全科目からGPAと単位数を計算
-function calculateGPAAndCredits(data: Timetable) {
-  let totalCredits = 0; // 取得単位数
-  let totalGradePoints = 0;
-  let gradeCount = 0;
-  
-  // 科目区分別の取得単位数
-  const creditsByType = {
-    required: 0,
-    electiveRequired: 0,
-    elective: 0,
-  };
-
-  for (const quarter of QUARTERS) {
-    const quarterData = data[quarter];
-    if (!quarterData) continue;
-
-    for (const day of Object.keys(quarterData)) {
-      for (const periodId of Object.keys(quarterData[day])) {
-        const cell = quarterData[day][periodId];
-        if (!cell || !cell.title) continue;
-
-        const credits = cell.credits || 0;
-        const grade = cell.grade;
-        const courseType = cell.courseType || "elective";
-
-        // 成績が登録されている場合のみGPA計算に含める
-        if (grade && grade !== "未履修" && credits > 0) {
-          if (grade !== "不可") {
-            totalCredits += credits;
-            // 科目区分別に集計
-            if (courseType === "required") {
-              creditsByType.required += credits;
-            } else if (courseType === "elective-required") {
-              creditsByType.electiveRequired += credits;
-            } else {
-              creditsByType.elective += credits;
-            }
-          }
-          totalGradePoints += getGradePoint(grade) * credits;
-          gradeCount += credits;
-        }
-      }
-    }
-  }
-
-  const gpa = gradeCount > 0 ? totalGradePoints / gradeCount : 0;
-  return { gpa, totalCredits, creditsByType };
-}
-
 export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
+  const [currentPage, setCurrentPage] = useState<"timetable" | "grades">("timetable");
   
   // 科目リストの状態管理
   const [importedCourses, setImportedCourses] = useState<Array<{
@@ -447,16 +381,16 @@ export default function TimetableApp() {
 
   const printPage = () => window.print();
 
-  // GPAと単位数を計算
-  const { gpa, totalCredits, creditsByType } = useMemo(() => calculateGPAAndCredits(data), [data]);
-  const remainingCredits = settings.requiredCredits - totalCredits;
-  
-  // カリキュラムテンプレートがある場合の区分別残り単位数
-  const breakdown = settings.curriculum ? {
-    required: Math.max(0, settings.curriculum.breakdown.required - creditsByType.required),
-    electiveRequired: Math.max(0, settings.curriculum.breakdown.electiveRequired - creditsByType.electiveRequired),
-    elective: Math.max(0, settings.curriculum.breakdown.elective - creditsByType.elective),
-  } : null;
+  // 成績管理ページの表示切替
+  if (currentPage === "grades") {
+    return (
+      <GradeManagement 
+        data={data}
+        settings={settings}
+        onBack={() => setCurrentPage("timetable")}
+      />
+    );
+  }
 
   return (
     <div className="tcu-tt">
@@ -477,6 +411,9 @@ export default function TimetableApp() {
             ))}
           </div>
           <div className="tt-actions">
+            <button type="button" onClick={() => setCurrentPage("grades")} className="btn-primary">
+              📊 成績管理
+            </button>
             <CSVImporter 
               onImportCurriculum={handleImportCurriculum}
               onImportCourses={handleImportCourses}
@@ -521,74 +458,6 @@ export default function TimetableApp() {
       </header>
 
       <main className="container">
-        {/* 成績情報セクション */}
-        <section className="tt-card" style={{ marginBottom: "1.5rem" }}>
-          <div className="section-title">
-            <h2>📊 成績・単位情報</h2>
-            {settings.curriculum && (
-              <span className="small">({settings.curriculum.name})</span>
-            )}
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", padding: "1rem" }}>
-            <div className="stats-card">
-              <div className="stats-label">取得単位数</div>
-              <div className="stats-value">{totalCredits} 単位</div>
-            </div>
-            <div className="stats-card">
-              <div className="stats-label">必要単位数</div>
-              <div className="stats-value">{settings.requiredCredits} 単位</div>
-            </div>
-            <div className="stats-card">
-              <div className="stats-label">残り必要単位数</div>
-              <div className={`stats-value ${remainingCredits <= 0 ? "stats-complete" : ""}`}>
-                {remainingCredits > 0 ? `${remainingCredits} 単位` : "達成！"}
-              </div>
-            </div>
-            <div className="stats-card">
-              <div className="stats-label">GPA</div>
-              <div className="stats-value">{gpa.toFixed(2)}</div>
-            </div>
-          </div>
-          
-          {/* カリキュラムテンプレート使用時の詳細表示 */}
-          {settings.curriculum && breakdown && (
-            <div style={{ padding: "1rem", borderTop: "1px solid var(--stroke)" }}>
-              <h3 style={{ fontSize: "0.95rem", marginBottom: "0.75rem", color: "var(--text)" }}>
-                📚 科目区分別の進捗状況
-              </h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.75rem" }}>
-                <div className="breakdown-item">
-                  <span className="breakdown-label">必修科目</span>
-                  <span className="breakdown-value">
-                    {creditsByType.required} / {settings.curriculum.breakdown.required} 単位
-                    {breakdown.required > 0 && (
-                      <span className="breakdown-remaining"> (残り {breakdown.required})</span>
-                    )}
-                  </span>
-                </div>
-                <div className="breakdown-item">
-                  <span className="breakdown-label">選択必修科目</span>
-                  <span className="breakdown-value">
-                    {creditsByType.electiveRequired} / {settings.curriculum.breakdown.electiveRequired} 単位
-                    {breakdown.electiveRequired > 0 && (
-                      <span className="breakdown-remaining"> (残り {breakdown.electiveRequired})</span>
-                    )}
-                  </span>
-                </div>
-                <div className="breakdown-item">
-                  <span className="breakdown-label">選択科目</span>
-                  <span className="breakdown-value">
-                    {creditsByType.elective} / {settings.curriculum.breakdown.elective} 単位
-                    {breakdown.elective > 0 && (
-                      <span className="breakdown-remaining"> (残り {breakdown.elective})</span>
-                    )}
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
-        </section>
-
         <section className="tt-card">
           <div className="section-title">
             <h2>{activeQuarter} の時間割</h2>
