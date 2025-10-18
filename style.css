@@ -1,0 +1,167 @@
+/* ============= ベース（都市大ブルー基調） ============= */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 色・トークン */
+:root {
+  --brand: #005BAC;        /* 都市大ブルー */
+  --brand2: #2F8AE6;       /* 明るい青のグラデ */
+  --bg: #f7fbff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --stroke: #e6eefb;
+  --radius: 18px;
+  --shadow: 0 12px 28px rgba(2, 6, 23, 0.08);
+  --chipbg: #EAF4FF;
+}
+html[data-theme="dark"] {
+  --bg: #0b1220;
+  --card: #0f172a;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --stroke: #233149;
+  --shadow: 0 12px 28px rgba(0,0,0,.45);
+  --chipbg: color-mix(in oklab, var(--brand) 22%, #000 78%);
+}
+html[data-theme="eco"] {
+  --bg: #fbfef8;
+  --card: #ffffff;
+  --stroke: #e6f1dc;
+}
+
+/* ルート */
+#root {
+  min-height: 100dvh;
+  background: linear-gradient(180deg, var(--bg) 0%, #ffffff 55%, var(--bg) 100%);
+}
+
+/* コンテナ・ユーティリティ */
+.container { width: min(1100px, 92vw); margin-inline: auto; padding: 16px; }
+.small { font-size: 12.5px; color: var(--muted); }
+
+/* ===== Toolbar（上部） ===== */
+.tcu-tt .tt-toolbar{
+  position: sticky; top: 0; z-index: 20;
+  border-bottom: 1px solid var(--stroke);
+  backdrop-filter: saturate(180%) blur(8px);
+  background: color-mix(in oklab, var(--card) 86%, transparent);
+}
+.tcu-tt .tt-toolbar__inner{ display:flex; align-items:center; gap:16px; padding:10px 0 }
+.tcu-tt .tt-title{ font-size:clamp(18px,2.2vw,22px); font-weight:800; margin:0; letter-spacing:.01em }
+.tcu-tt .tt-tabs{ margin-left:auto; display:flex; gap:8px }
+.tcu-tt .tt-tab{
+  border:1px solid var(--stroke); border-radius:999px; padding:.45rem .8rem; font-size:13px;
+  background:var(--card); color:var(--text); transition:.18s ease;
+}
+.tcu-tt .tt-tab:hover{ border-color:var(--brand) }
+.tcu-tt .tt-tab.is-active{
+  background:linear-gradient(135deg,var(--brand),var(--brand2));
+  color:#041016; border-color:transparent; font-weight:700
+}
+.tcu-tt .tt-actions{ display:flex; gap:10px; margin-left:10px }
+.tcu-tt .btn-primary{ background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#041016;
+  font-weight:700; border-radius:14px; padding:.7rem 1rem; border:0; cursor:pointer }
+.tcu-tt .btn-ghost{ border:1px solid var(--stroke); border-radius:14px; padding:.7rem 1rem; background:transparent; cursor:pointer }
+.tcu-tt .btn-ghost.danger{ color:#b42318; border-color: color-mix(in oklab,#b42318,#000 25%) }
+.tcu-tt .file-label{ position:relative; overflow:hidden }
+.tcu-tt .file-label input{ position:absolute; inset:0; opacity:0; cursor:pointer }
+
+/* ===== カード / セクション ===== */
+.tcu-tt .tt-card{
+  background:linear-gradient(var(--card),var(--card)) padding-box;
+  border:1px solid var(--stroke); border-radius:var(--radius); box-shadow:var(--shadow);
+  padding:18px; margin:18px 0;
+}
+.tcu-tt .section-title{ display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin-bottom:10px }
+.tcu-tt .section-title h2{ margin:0; font-weight:800; letter-spacing:.01em; font-size:clamp(18px,2.2vw,22px) }
+
+/* ===== テーブル ===== */
+.tcu-tt .tt-tablewrap{ overflow:auto; border-radius:14px; border:1px solid var(--stroke) }
+.tcu-tt .tt-table{ width:100%; border-collapse:separate; border-spacing:0; background:var(--card) }
+.tcu-tt .tt-th-time, .tcu-tt .tt-th-day{
+  position:sticky; top:0; z-index:1; padding:12px; text-align:left;
+  background:color-mix(in oklab,var(--card) 90%, #fff 10%);
+  border-bottom:1px solid var(--stroke);
+}
+.tcu-tt .tt-th-day{ text-align:center; min-width:9rem }
+.tcu-tt .tt-th-slot{
+  background:color-mix(in oklab,var(--card) 94%, #fff 6%);
+  border-top:1px solid var(--stroke); padding:12px; vertical-align:top; width:10.5rem
+}
+.tcu-tt .slot-label{ font-weight:700 }
+.tcu-tt .slot-time{ font-size:12px; color:var(--muted) }
+.tcu-tt .tt-td{ border-top:1px solid var(--stroke); vertical-align:top }
+.tcu-tt .tt-cell{
+  width:100%; text-align:left; padding:12px; min-height:88px; cursor:pointer; border:0; background:transparent;
+  transition: background .15s ease, transform .08s ease; border-radius:12px;
+}
+.tcu-tt .tt-cell:hover{ background: color-mix(in oklab, var(--brand) 8%, transparent); transform: translateY(-1px) }
+.tcu-tt .tt-cell:focus-visible{ outline:2px solid color-mix(in oklab, var(--brand), white 18%); outline-offset:2px }
+.tcu-tt .cell-empty{ font-size:13px; color: color-mix(in oklab, var(--brand), #000 30%) }
+.tcu-tt .cell-filled .title{
+  display:inline-block; padding:2px 8px; border-radius:8px; font-weight:700;
+  color: color-mix(in oklab, var(--text), white 10%); background: var(--chipbg);
+  box-shadow:0 1px 0 rgba(0,0,0,.04) inset;
+}
+.tcu-tt .cell-filled .meta{ margin-top:6px; font-size:12px; color:var(--muted); line-height:1.6 }
+.tcu-tt .cell-filled .memo{ margin-top:4px; font-size:12px; color: color-mix(in oklab, var(--muted), #000 15%) }
+
+/* ===== 設定ポップオーバー ===== */
+.tcu-tt .tt-popover{ position:relative }
+.tcu-tt .tt-popover__panel{
+  position:absolute; right:0; top:calc(100% + 8px);
+  width:min(32rem,95vw); background:var(--card); border:1px solid var(--stroke); border-radius:16px;
+  box-shadow:var(--shadow); padding:16px; z-index:30;
+}
+.tcu-tt .tt-popover__panel h3{ margin:0 0 10px }
+.tcu-tt .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px }
+.tcu-tt .form-grid .field{ display:flex; flex-direction:column; gap:6px }
+.tcu-tt .form-grid .field > span{ font-size:13px; color:var(--muted) }
+.tcu-tt .form-grid input, .tcu-tt .form-grid select, .tcu-tt .form-grid textarea{
+  border:1px solid var(--stroke); border-radius:12px; background:var(--card); color:var(--text);
+  padding:.6rem .75rem; font-size:14px
+}
+.tcu-tt .form-grid textarea{ height:150px }
+.tcu-tt .form-grid .checkbox{ flex-direction:row; align-items:center; gap:8px }
+.tcu-tt .actions{ display:flex; justify-content:flex-end; gap:10px; margin-top:10px }
+
+/* ===== モーダル ===== */
+.tcu-tt .tt-modal{ position:fixed; inset:0; background:rgba(0,0,0,.42); display:flex; align-items:center; justify-content:center; padding:18px; z-index:40 }
+.tcu-tt .tt-dialog{ width:min(720px,96vw); background:var(--card); border:1px solid var(--stroke); border-radius:20px; box-shadow:var(--shadow) }
+.tcu-tt .tt-dialog__head{ display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--stroke) }
+.tcu-tt .tt-dialog__head h2{ margin:0; font-size:16px }
+.tcu-tt .tt-close{ border:1px solid var(--stroke); border-radius:10px; background:transparent; padding:.3rem .55rem; cursor:pointer }
+.tcu-tt .tt-dialog__body{ padding:16px }
+.tcu-tt .tt-dialog__foot{ display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-top:1px solid var(--stroke) }
+.tcu-tt .foot-actions{ display:flex; gap:10px }
+
+/* ===== 対開講UI ===== */
+.tcu-tt .tt-bulk{ margin-top:10px; border:1px dashed var(--stroke); border-radius:14px; padding:12px; background:color-mix(in oklab, var(--card) 96%, transparent) }
+.tcu-tt .bulk-head{ font-weight:700; margin-bottom:10px }
+.tcu-tt .bulk-grid{ display:grid; grid-template-columns:1.4fr .8fr .8fr; gap:12px }
+.tcu-tt .bulk-days{ display:flex; flex-wrap:wrap; gap:8px }
+.tcu-tt .chip{ border:1px solid var(--stroke); border-radius:999px; padding:.35rem .7rem; font-size:12px; background:var(--card); cursor:pointer }
+.tcu-tt .chip--on{ background:linear-gradient(135deg,var(--brand),var(--brand2)); color:#041016; border-color:transparent; font-weight:700 }
+
+/* ===== カレンダー補助 ===== */
+.tcu-tt .quarter-range{ display:flex; align-items:center; gap:8px }
+.tcu-tt .quarter-range span{ font-size:12px; color:var(--muted); white-space:nowrap }
+.tcu-tt .quarter-range input[type="date"]{ flex:1 }
+
+/* レスポンシブ / 印刷 */
+@media (max-width:900px){ .tcu-tt .form-grid{ grid-template-columns:1fr } .tcu-tt .bulk-grid{ grid-template-columns:1fr } }
+@media print {
+  @page { size: A4 landscape; margin: 10mm; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .tt-toolbar { display: none !important; }
+}
