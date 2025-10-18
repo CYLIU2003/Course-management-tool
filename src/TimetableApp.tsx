@@ -214,7 +214,9 @@ export default function TimetableApp() {
       try {
         // デフォルトで最初の学科を読み込む
         const defaultDept = AVAILABLE_DEPARTMENTS[0];
-        const result = await autoLoadDepartmentCSVs(defaultDept.path);
+        console.log('📚 Loading department:', defaultDept.name, `(ID: ${defaultDept.id})`);
+        
+        const result = await autoLoadDepartmentCSVs(defaultDept.id);
         
         // 卒業要件を設定
         setSettings(prev => ({

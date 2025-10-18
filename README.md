@@ -32,6 +32,10 @@
 - **科目区分別の進捗表示** (必修・選択必修・選択ごと)
 
 ### 📥 CSVインポート機能
+- **自動読み込み機能**
+  - アプリ起動時に `/public/department/rikou/` 内のCSVを自動検出・読み込み
+  - ファイル名パターン: `{学科ID}_credit_requirements.csv`, `{学科ID}_timetable_by_category.csv`
+  - 現在対応: `denki` (電気電子通信工学科)
 - **卒業要件CSVの読み込み** (*_credit_requirements.csv)
   - 学科別の卒業要件を自動設定
   - 必修・選択必修・選択科目の必要単位数を一括登録
@@ -87,47 +91,93 @@ npm run build
 4. 他の年度やクォーターも同様に設定
 
 ### 2. CSVインポート機能の使用
-1. `⚙️ 設定` をクリック
-2. **学科選択**セクションでカリキュラムを選択
-3. **CSV読み込み**セクションで以下のファイルをインポート:
-   - 卒業要件CSV（`*_credit_requirements.csv`）- 必要単位数を自動設定
-   - 科目一覧CSV（`*_timetable_by_category.csv`）- 全科目リストを読み込み
+**注: アプリ起動時にデフォルト学科（電気電子通信工学科）のCSVが自動読み込みされます。**
+
+手動で別の学科を読み込む場合:
+1. `📁 CSV読込` をクリック
+2. 卒業要件CSV（`{学科ID}_credit_requirements.csv`）を選択して「卒業要件のみ読み込む」
+3. 科目一覧CSV（`{学科ID}_timetable_by_category.csv`）を選択して「科目一覧のみ読み込む」
 4. 授業登録時、授業名入力欄の右端に🔍ボタンが表示されるのでクリック
 5. 登録済み科目のドロップダウンメニューから科目を選択すると、情報が自動入力されます
 
-### 3. 成績・単位管理
+### 3. 新しい学科を追加する方法
+1. **CSVファイルを用意**
+   - `{学科ID}_credit_requirements.csv` - 卒業要件データ
+   - `{学科ID}_timetable_by_category.csv` - 科目一覧データ
+   
+2. **ファイルを配置**
+   ```bash
+   public/department/rikou/{学科ID}_credit_requirements.csv
+   public/department/rikou/{学科ID}_timetable_by_category.csv
+   ```
+
+3. **コードに学科を登録** (`src/utils/autoLoadCSV.ts`)
+   ```typescript
+   export const AVAILABLE_DEPARTMENTS: Department[] = [
+     { id: 'denki', name: '電気電子通信工学科', faculty: '理工学部' },
+     { id: 'kikai', name: '機械工学科', faculty: '理工学部' },  // 追加例
+     // ここに新しい学科を追加
+   ];
+   ```
+
+4. デフォルト学科を変更する場合は `TimetableApp.tsx` の `AVAILABLE_DEPARTMENTS[0]` を変更
+
+### 4. 成績・単位管理
 1. 時間割の各セルをクリックして開く
 2. 単位数、成績、科目区分（必修/選択必修/選択）を入力
 3. 画面右上の「📊 成績管理」ボタンをクリック
 4. GPA、取得単位数、残り必要単位数が自動計算されて表示
 5. 全年度（1年次～M2）の成績が統合されて集計されます
 
-### 4. データの保存・読み込み
+### 5. データの保存・読み込み
 - **自動保存**: ブラウザのLocalStorageに自動的に保存されます
 - **JSONエクスポート**: `⚙️ 設定` → `💾 JSONダウンロード` で全年度データを保存
 - **JSONインポート**: `⚙️ 設定` → `📂 JSON読込` で以前のデータを復元
 
-### 5. カレンダー連携
+### 6. カレンダー連携
 1. `⚙️ 設定` → `📅 ICSダウンロード` をクリック
 2. ダウンロードしたICSファイルをGoogle Calendarなどにインポート
 3. 全年度の授業予定が一括登録されます
 
 ## CSV ファイルフォーマット
 
-### 卒業要件CSV (`*_credit_requirements.csv`)
+### 卒業要件CSV (`{学科ID}_credit_requirements.csv`)
+## CSV ファイルフォーマット
+
+### ファイル命名規則
+- 卒業要件: `{学科ID}_credit_requirements.csv`
+- 科目一覧: `{学科ID}_timetable_by_category.csv`
+
+例: 電気電子通信工学科 (ID: `denki`)
+- `denki_credit_requirements.csv`
+- `denki_timetable_by_category.csv`
+
+### 卒業要件CSV (`{学科ID}_credit_requirements.csv`)
 ```csv
-科目区分,必要単位数
-必修,85
-選択必修,22
-選択,17
+stage,area,subarea,total_required_credits,必修_credits,選択必修1_credits,選択必修2_credits,自由_credits,notes
+3年次進級,総計,総単位数,60,,,,,2年次終了時に60単位未満は進級不可
+4年次進級,総計,総単位数,100,,,,,3年次終了時に100単位以上で進級
+卒業,共通分野,教養基幹科目,10,0,1,0,9,
+卒業,共通分野,体育科目,1,0,1,0,0,
+卒業,共通分野,外国語科目,8,4,0,0,4,
+卒業,専門分野,理工学基礎科目,31,16,4,2,9,
+卒業,専門分野,専門科目,60,32,10,2,16,
 ```
 
-### 科目一覧CSV (`*_timetable_by_category.csv`)
+### 科目一覧CSV (`{学科ID}_timetable_by_category.csv`)
 ```csv
-科目ID,科目名,単位数,カテゴリ,グループ,科目区分
-EE001,電力システム工学A,2,専門科目,電気電子,必修
-EE002,電気回路I,2,専門基礎科目,電気電子,必修
+id,title,credits,raw_required,category,group,courseType
+SE-111,微分積分学(1a)※MS,1,○,理工学基礎科目,数学系,required
+SE-112,微分積分学(1b)※MS,1,○,理工学基礎科目,数学系,required
+EE-201,電気回路I,2,○,専門科目,電気電子,required
+EE-301,電力システム工学A,2,△1,専門科目,電気電子,elective-required
+LA-401,技術英語,1,,自由科目,,elective
 ```
+
+**courseType の値:**
+- `required`: 必修
+- `elective-required`: 選択必修
+- `elective`: 選択
 
 ※ CSVファイルはUTF-8エンコーディングで保存してください
 
