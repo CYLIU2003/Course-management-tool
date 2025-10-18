@@ -488,26 +488,33 @@ export default function TimetableApp() {
     <div className="tcu-tt">
       <header className="tt-toolbar print:hidden">
         <div className="container tt-toolbar__inner">
-          <h1 className="tt-title">{settings.title}</h1>
-          
-          {/* 年度選択タブ */}
-          <div className="tt-tabs" role="tablist" aria-label="年度切替" style={{ marginRight: '0.5rem' }}>
-            {(["1年次", "2年次", "3年次", "4年次", "M1", "M2"] as Year[]).map((year) => (
-              <button
-                key={year}
-                className={`tt-tab${currentYear === year ? " is-active" : ""}`}
-                onClick={() => setCurrentYear(year)}
-                aria-pressed={currentYear === year}
-                type="button"
-                style={{ fontSize: '12px', padding: '0.35rem 0.6rem' }}
-              >
-                {year}
-              </button>
-            ))}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
+            <h1 className="tt-title" style={{ margin: 0, fontSize: '1.1rem' }}>📚 時間割</h1>
+            
+            {/* 年度選択 - コンパクトなセレクト */}
+            <select 
+              value={currentYear}
+              onChange={(e) => setCurrentYear(e.target.value as Year)}
+              style={{
+                padding: '0.4rem 0.6rem',
+                fontSize: '0.9rem',
+                border: '1px solid var(--stroke)',
+                borderRadius: '4px',
+                backgroundColor: 'var(--bg)',
+                cursor: 'pointer'
+              }}
+            >
+              <option value="1年次">1年次</option>
+              <option value="2年次">2年次</option>
+              <option value="3年次">3年次</option>
+              <option value="4年次">4年次</option>
+              <option value="M1">M1</option>
+              <option value="M2">M2</option>
+            </select>
           </div>
           
-          {/* クオーター選択タブ */}
-          <div className="tt-tabs" role="tablist" aria-label="クオーター切替">
+          {/* クオーター選択タブ - コンパクト版 */}
+          <div className="tt-tabs" role="tablist" aria-label="クオーター切替" style={{ margin: '0 auto' }}>
             {QUARTERS.map((q) => (
               <button
                 key={q}
@@ -515,6 +522,7 @@ export default function TimetableApp() {
                 onClick={() => setActiveQuarter(q)}
                 aria-pressed={activeQuarter === q}
                 type="button"
+                style={{ fontSize: '0.9rem', padding: '0.4rem 0.8rem' }}
               >
                 {q}
               </button>
@@ -1306,7 +1314,7 @@ function createDefaultSettings(): Settings {
   return {
     days: [...DEFAULT_DAYS],
     periods: DEFAULT_PERIODS.map((p) => ({ ...p })),
-    title: "個人用授業時間割（東京都市大学・4Q制）",
+    title: "時間割",
     showTime: true,
     requiredCredits: 124, // デフォルト値
   };
