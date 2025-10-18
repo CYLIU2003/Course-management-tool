@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import CSVImporter from "./components/CSVImporter";
 import CourseList from "./components/CourseList";
 import GradeManagement from "./components/GradeManagement";
@@ -246,11 +246,6 @@ export default function TimetableApp() {
 
     loadCSVs();
   }, []); // 初回のみ実行
-
-  const emptyQuarterGrid = useMemo(
-    () => buildEmptyQuarter(settings.days, settings.periods),
-    [settings.days, settings.periods]
-  );
 
   // 年度ごとのデータ管理
   const [allYearsData, setAllYearsData] = useState<AllYearsData>(() => {
@@ -637,6 +632,7 @@ export default function TimetableApp() {
               setAllYearsData={setAllYearsData}
               currentYear={currentYear}
               QUARTERS={QUARTERS}
+              setImportedCourses={setImportedCourses}
             />
           </div>
         </div>
@@ -1117,6 +1113,7 @@ function SettingsPopover({
   setAllYearsData,
   currentYear,
   QUARTERS,
+  setImportedCourses,
 }: {
   settings: Settings;
   setSettings: React.Dispatch<React.SetStateAction<Settings>>;
@@ -1124,6 +1121,14 @@ function SettingsPopover({
   setAllYearsData: React.Dispatch<React.SetStateAction<AllYearsData>>;
   currentYear: Year;
   QUARTERS: readonly string[];
+  setImportedCourses: React.Dispatch<React.SetStateAction<Array<{
+    id: string;
+    title: string;
+    credits: number;
+    category: string;
+    group: string;
+    courseType: 'required' | 'elective-required' | 'elective';
+  }>>>;
 }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState(settings.title);
