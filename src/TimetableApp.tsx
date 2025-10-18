@@ -36,6 +36,7 @@ type CourseCell = {
 // カリキュラムテンプレート型
 type CurriculumTemplate = {
   name: string; // 学科名
+  departmentId?: string; // 学科ID (CSVファイル名のプレフィックス)
   requiredCredits: number; // 卒業に必要な総単位数
   breakdown: {
     required: number; // 必修科目の必要単位数
@@ -48,31 +49,37 @@ type CurriculumTemplate = {
 const CURRICULUM_TEMPLATES: CurriculumTemplate[] = [
   {
     name: "電気電子通信工学科",
+    departmentId: "denki",
     requiredCredits: 124,
     breakdown: { required: 88, electiveRequired: 20, elective: 16 },
   },
   {
     name: "機械工学科",
+    departmentId: "kikai",
     requiredCredits: 124,
     breakdown: { required: 90, electiveRequired: 18, elective: 16 },
   },
   {
     name: "情報工学科",
+    departmentId: "joho",
     requiredCredits: 124,
     breakdown: { required: 85, electiveRequired: 22, elective: 17 },
   },
   {
     name: "建築学科",
+    departmentId: "kenchiku",
     requiredCredits: 124,
     breakdown: { required: 92, electiveRequired: 16, elective: 16 },
   },
   {
     name: "都市工学科",
+    departmentId: "toshi",
     requiredCredits: 124,
     breakdown: { required: 88, electiveRequired: 20, elective: 16 },
   },
   {
     name: "医用工学科",
+    departmentId: "iyo",
     requiredCredits: 124,
     breakdown: { required: 90, electiveRequired: 18, elective: 16 },
   },
@@ -1141,7 +1148,7 @@ function SettingsPopover({
     }
   }, [open, settings, allYearsData, currentYear]);
 
-  const apply = () => {
+  const apply = async () => {
     const newDays = daysStr
       .split(",")
       .map((s: string) => s.trim())
@@ -1164,15 +1171,60 @@ function SettingsPopover({
       ? CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate) 
       : undefined;
     
-    setSettings((prev: Settings) => ({
-      ...prev,
-      title,
-      showTime,
-      days: newDays,
-      periods: newPeriods,
-      requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
-      curriculum,
-    }));
+    // 学科が選択されていて、departmentIdがある場合はCSVを自動読み込み
+    if (curriculum?.departmentId) {
+      console.log('🔄 Auto-loading CSV for selected department:', curriculum.departmentId);
+      try {
+        const result = await autoLoadDepartmentCSVs(curriculum.departmentId);
+        
+        // 科目リストを更新
+        setImportedCourses(result.courses);
+        console.log('✅ CSV auto-loaded successfully:', result.courses.length, 'courses');
+        
+        // カリキュラム情報もCSVから取得した値で上書き
+        const updatedCurriculum = {
+          ...curriculum,
+          ...result.curriculum,
+          name: curriculum.name // 表示名は元のテンプレート名を維持
+        };
+        
+        setSettings((prev: Settings) => ({
+          ...prev,
+          title,
+          showTime,
+          days: newDays,
+          periods: newPeriods,
+          requiredCredits: updatedCurriculum.requiredCredits,
+          curriculum: updatedCurriculum,
+        }));
+        
+        alert(`✅ ${curriculum.name}のCSVを読み込みました！\n科目数: ${result.courses.length}件`);
+      } catch (error) {
+        console.error('❌ CSV auto-load failed:', error);
+        // エラーが発生してもテンプレートは適用
+        setSettings((prev: Settings) => ({
+          ...prev,
+          title,
+          showTime,
+          days: newDays,
+          periods: newPeriods,
+          requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
+          curriculum,
+        }));
+        alert(`⚠️ CSVの読み込みに失敗しました。\nテンプレートのみを適用します。\n\nエラー: ${error instanceof Error ? error.message : String(error)}`);
+      }
+    } else {
+      // 学科が選択されていない、またはカスタム設定の場合
+      setSettings((prev: Settings) => ({
+        ...prev,
+        title,
+        showTime,
+        days: newDays,
+        periods: newPeriods,
+        requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
+        curriculum,
+      }));
+    }
     
     setAllYearsData((prev: AllYearsData) => {
       const next = clone(prev);
