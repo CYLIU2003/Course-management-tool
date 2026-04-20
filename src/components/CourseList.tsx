@@ -1,17 +1,9 @@
 import { useState, useMemo } from 'react';
-
-interface Course {
-  id: string;
-  title: string;
-  credits: number;
-  category: string;
-  group: string;
-  courseType: 'required' | 'elective-required' | 'elective';
-}
+import type { AcademicCourse } from '../utils/academicProgress';
 
 interface CourseListProps {
-  courses: Course[];
-  onSelectCourse: (course: Course) => void;
+  courses: AcademicCourse[];
+  onSelectCourse: (course: AcademicCourse) => void;
 }
 
 export default function CourseList({ courses, onSelectCourse }: CourseListProps) {

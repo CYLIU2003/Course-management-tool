@@ -1,4 +1,5 @@
 import Papa from 'papaparse';
+import type { AcademicCourse } from './academicProgress';
 
 // CSV行の型定義
 export interface CreditRequirementRow {
@@ -82,7 +83,7 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
 }
 
 // 科目CSVから科目リストを取得
-export function parseCourses(rows: CourseRow[]) {
+export function parseCourses(rows: CourseRow[]): AcademicCourse[] {
   console.log('🔄 parseCourses: Processing', rows.length, 'rows');
   
   const courses = rows

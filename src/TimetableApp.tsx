@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import AcademicOverview from "./components/AcademicOverview";
 import CSVImporter from "./components/CSVImporter";
 import CourseList from "./components/CourseList";
 import GradeManagement from "./components/GradeManagement";
+import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicCurriculum, AcademicSettings, AcademicTimetable, AcademicYearData, CourseType, Grade } from "./utils/academicProgress";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS } from "./utils/autoLoadCSV";
+import { buildDashboardSnapshot } from "./utils/academicProgress";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -19,30 +22,10 @@ const DEFAULT_PERIODS: { id: number; label: string; time: string }[] = [
 type QuarterRange = { start: string; end: string };
 type QuarterRanges = Record<Quarter, QuarterRange>;
 
-type Grade = "秀" | "優" | "良" | "可" | "不可" | "未履修";
-type CourseType = "required" | "elective-required" | "elective"; // 必修・選択必修・選択
-
-type CourseCell = {
-  title: string;
-  room?: string;
-  teacher?: string;
-  color?: string;
-  memo?: string;
-  credits?: number; // 単位数
-  grade?: Grade; // 成績
-  courseType?: CourseType; // 科目区分
-} | null;
-
 // カリキュラムテンプレート型
-type CurriculumTemplate = {
-  name: string; // 学科名
+type CurriculumTemplate = AcademicCurriculum & {
   departmentId?: string; // 学科ID (CSVファイル名のプレフィックス)
-  requiredCredits: number; // 卒業に必要な総単位数
-  breakdown: {
-    required: number; // 必修科目の必要単位数
-    electiveRequired: number; // 選択必修の必要単位数
-    elective: number; // 選択科目の必要単位数
-  };
+  name: string; // 学科名
 };
 
 // 学科別カリキュラムテンプレート
@@ -90,40 +73,24 @@ const CURRICULUM_TEMPLATES: CurriculumTemplate[] = [
   },
 ];
 
-type Timetable = {
-  [quarter: string]: {
-    [day: string]: {
-      [periodId: string]: CourseCell;
-    };
-  };
-};
+type Timetable = AcademicTimetable;
 
 // 学年の型
 type Year = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
 
+type CourseCell = AcademicCourseCell | null;
+
 // 年度ごとのデータ
-type YearData = {
-  timetable: Timetable;
-  quarterRanges: QuarterRanges;
-};
+type YearData = AcademicYearData;
 
 // 全年度のデータ
-type AllYearsData = {
-  "1年次": YearData;
-  "2年次": YearData;
-  "3年次": YearData;
-  "4年次": YearData;
-  "M1": YearData;
-  "M2": YearData;
-};
+type AllYearsData = AcademicAllYearsData;
 
-type Settings = {
+type Settings = AcademicSettings & {
   days: string[];
   periods: { id: number; label: string; time: string }[];
   title: string;
   showTime: boolean;
-  requiredCredits: number; // 卒業に必要な単位数
-  curriculum?: CurriculumTemplate; // 選択されたカリキュラムテンプレート
 };
 
 const DAY_JA_TO_INDEX: Record<string, number> = {
@@ -169,14 +136,7 @@ export default function TimetableApp() {
   const [currentPage, setCurrentPage] = useState<"timetable" | "grades">("timetable");
   
   // 科目リストの状態管理
-  const [importedCourses, setImportedCourses] = useState<Array<{
-    id: string;
-    title: string;
-    credits: number;
-    category: string;
-    group: string;
-    courseType: 'required' | 'elective-required' | 'elective';
-  }>>([]);
+  const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
 
   // デバッグ用: importedCoursesの変更を監視
   useEffect(() => {
@@ -267,6 +227,11 @@ export default function TimetableApp() {
     },
   };
 
+  const dashboardSnapshot = useMemo(
+    () => buildDashboardSnapshot(allYearsData, settings),
+    [allYearsData, settings],
+  );
+
   useEffect(() => {
     save("timetable_allyears_v2", allYearsData);
   }, [allYearsData]);
@@ -323,12 +288,12 @@ export default function TimetableApp() {
     }));
   };
 
-  const handleImportCourses = (courses: Array<{ id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }>) => {
+  const handleImportCourses = (courses: AcademicCourse[]) => {
     console.log('📚 Importing courses:', courses.length, 'courses');
     setImportedCourses(courses);
   };
 
-  const handleSelectCourse = (course: { id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }) => {
+  const handleSelectCourse = (course: AcademicCourse) => {
     // 科目を選択したら編集ダイアログを開く準備をする
     // ここでは選択した科目情報をeditingに反映
     if (editing.open && editing.day && editing.periodId) {
@@ -536,8 +501,9 @@ export default function TimetableApp() {
   if (currentPage === "grades") {
     return (
       <GradeManagement 
-        allYearsData={allYearsData}
         settings={settings}
+        snapshot={dashboardSnapshot}
+        importedCourses={importedCourses}
         onBack={() => setCurrentPage("timetable")}
       />
     );
@@ -639,6 +605,12 @@ export default function TimetableApp() {
       </header>
 
       <main className="container">
+        <AcademicOverview
+          snapshot={dashboardSnapshot}
+          curriculumName={settings.curriculum?.name}
+          compact
+        />
+
         <section className="tt-card">
           <div className="section-title">
             <h2>{currentYear} - {activeQuarter} の時間割</h2>
@@ -782,14 +754,7 @@ function EditModal({
   onSave: (v: CourseCell) => void;
   onClear: () => void;
   onClose: () => void;
-  importedCourses: Array<{
-    id: string;
-    title: string;
-    credits: number;
-    category: string;
-    group: string;
-    courseType: 'required' | 'elective-required' | 'elective';
-  }>;
+  importedCourses: AcademicCourse[];
   hasCurriculum: boolean;
 }) {
   console.log('🔍 EditModal render:', {
@@ -1121,14 +1086,7 @@ function SettingsPopover({
   setAllYearsData: React.Dispatch<React.SetStateAction<AllYearsData>>;
   currentYear: Year;
   QUARTERS: readonly string[];
-  setImportedCourses: React.Dispatch<React.SetStateAction<Array<{
-    id: string;
-    title: string;
-    credits: number;
-    category: string;
-    group: string;
-    courseType: 'required' | 'elective-required' | 'elective';
-  }>>>;
+  setImportedCourses: React.Dispatch<React.SetStateAction<AcademicCourse[]>>;
 }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState(settings.title);

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { parseCSVFile, parseCreditRequirements, parseCourses } from '../utils/csvImporter';
 import type { CourseRow, CreditRequirementRow } from '../utils/csvImporter';
+import type { AcademicCourse } from '../utils/academicProgress';
 
 interface CSVImporterProps {
   onImportCurriculum: (data: { requiredCredits: number; breakdown: { required: number; electiveRequired: number; elective: number }; name: string }) => void;
-  onImportCourses: (courses: Array<{ id: string; title: string; credits: number; category: string; group: string; courseType: 'required' | 'elective-required' | 'elective' }>) => void;
+  onImportCourses: (courses: AcademicCourse[]) => void;
 }
 
 export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSVImporterProps) {
