@@ -1,240 +1,127 @@
-# 時間割管理アプリ (Course Management Tool)
+﻿# 🎓 時間割・成績管理アプリ
 
-東京都市大学の4クォーター制に対応した時間割・成績管理アプリです。
+[![React](https://img.shields.io/badge/React-19.0-20232a.svg?logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg?logo=typescript)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF.svg?logo=vite)](https://vitejs.dev/)
+
+東京都市大学の4クォーター制に対応した、時間割作成・成績管理・卒業要件の進捗確認をまとめて行えるWebアプリです。
+
+---
+
+## 目次
+
+- [主な機能](#主な機能)
+- [セットアップ](#セットアップ)
+- [ディレクトリ構成](#ディレクトリ構成)
+- [CSVファイルの規則](#csvファイルの規則)
+- [AI・LLM向け情報](#ai・llm向け情報)
+
+---
 
 ## 主な機能
 
-### 📅 時間割管理（複数年度対応）
-- **4年制+大学院対応** (1年次～4年次, M1, M2)
-- **年度選択ドロップダウン** で各学年の時間割を個別管理
-- 4クォーター(1Q-4Q)別の時間割作成
-- 各科目の詳細情報(授業名、教場、担当教員、備考)の登録
-- 色分けによる視覚的な管理
-- 時間割のコピー機能(クォーター間)
-- **科目検索機能** - 授業名入力欄に🔍ボタン、学科選択時のみ表示され、CSVデータベースから科目を検索・選択可能
+### 1. 時間割管理
+- 1年次から4年次、大学院(M1, M2)まで切り替えて管理できます。
+- 1Qから4Qまでの時間割を作成できます。
+- 授業名、教場、担当教員、備考を登録できます。
+- 学科選択時には、CSVの科目一覧から授業名を検索して入力できます。
 
-### 📊 成績・単位管理（全年度統合表示）
-- **全年度の成績を統合表示** - 1年次～M2までの全データを集計
-- **各科目の単位数登録**
-- **成績登録** (秀・優・良・可・不可)
-- **科目区分の設定** (必修・選択必修・選択)
-- **学科別カリキュラムテンプレート**
-  - 電気電子通信工学科
-  - 機械工学科
-  - 情報工学科
-  - 建築学科
-  - 都市工学科
-  - 医用工学科
-  - カスタム(自由設定)
-- **GPA自動計算** (秀=4.0, 優=3.0, 良=2.0, 可=1.0, 不可=0.0)
-- **取得単位数の自動計算**
-- **残り必要単位数の表示**
-- **科目区分別の進捗表示** (必修・選択必修・選択ごと)
+### 2. 成績・進捗管理
+- 秀・優・良・可・不可を使ったGPAを自動計算します。
+- 取得単位数と残り必要単位数を自動集計します。
+- 必修・選択必修・選択ごとの進捗を見やすく表示します。
+- 卒業要件に足りない項目がある場合は警告を表示します。
+- 将来の成績を仮定したGPA予測もできます。
 
-### 📥 CSVインポート機能
-- **自動読み込み機能**
-  - アプリ起動時に `/public/department/rikou/` 内のCSVを自動検出・読み込み
-  - ファイル名パターン: `{学科ID}_credit_requirements.csv`, `{学科ID}_timetable_by_category.csv`
-  - 現在対応: `denki` (電気電子通信工学科)
-- **卒業要件CSVの読み込み** (*_credit_requirements.csv)
-  - 学科別の卒業要件を自動設定
-  - 必修・選択必修・選択科目の必要単位数を一括登録
-- **科目一覧CSVの読み込み** (*_timetable_by_category.csv)
-  - 学科の全科目リストをインポート
-  - 科目ID、科目名、単位数、科目区分を自動取得
-  - カテゴリ・グループ別での科目検索
-- **科目一覧からの簡単登録**
-  - 授業名入力欄の右端に🔍検索ボタンを配置（学科選択時のみ表示）
-  - ボタンをクリックすると登録済み科目のドロップダウンメニューが開く
-  - 科目を選択すると授業名、単位数、科目区分が自動入力され、入力ミスを防止
+### 3. CSV連携
+- 起動時に `public/department/rikou/` のCSVを自動読み込みします。
+- 現在は電気電子通信工学科（`denki`）を想定しています。
+- 卒業要件CSVと科目一覧CSVを分けて管理できます。
 
-### 📤 データ管理
-- JSON形式でのエクスポート/インポート（全年度対応）
-- ICS形式でのカレンダー出力(Google Calendar等に対応、全年度出力)
-- ローカルストレージによる自動保存
-- データフォーマットv2対応（複数年度データ構造）
+### 4. データ保存と出力
+- JSONで全年度データを保存・復元できます。
+- ICS形式でカレンダーに出力できます。
+- LocalStorageに自動保存されます。
 
-### 🖨️ 印刷機能
-- A4横向きの印刷レイアウト最適化
+---
 
 ## セットアップ
 
 ### 必要な環境
-- Node.js 20以上 (推奨: 20.19.5)
+- Node.js 20以上
 - npm
 
-### インストール
+### 起動手順
+
 ```bash
 npm install
-```
-
-### 開発サーバーの起動
-```bash
 npm run dev
 ```
 
-ブラウザで `http://localhost:5173/` にアクセスしてください。
+起動後、`http://localhost:5173/` を開いてください。
 
 ### ビルド
+
 ```bash
 npm run build
 ```
 
-ビルドされたファイルは `dist/` ディレクトリに出力されます。
+ビルド結果は `dist/` に出力されます。
 
-## 使い方
+---
 
-### 1. 基本的な時間割作成
-1. 画面上部の年度タブ（1年次～4年次、M1、M2）から対象学年を選択
-2. クォータータブ(1Q～4Q)から対象クォーターを選択
-3. セルをクリックして授業情報を入力
-4. 他の年度やクォーターも同様に設定
+## ディレクトリ構成
 
-### 2. CSVインポート機能の使用
-**注: アプリ起動時にデフォルト学科（電気電子通信工学科）のCSVが自動読み込みされます。**
-
-手動で別の学科を読み込む場合:
-1. `📁 CSV読込` をクリック
-2. 卒業要件CSV（`{学科ID}_credit_requirements.csv`）を選択して「卒業要件のみ読み込む」
-3. 科目一覧CSV（`{学科ID}_timetable_by_category.csv`）を選択して「科目一覧のみ読み込む」
-4. 授業登録時、授業名入力欄の右端に🔍ボタンが表示されるのでクリック
-5. 登録済み科目のドロップダウンメニューから科目を選択すると、情報が自動入力されます
-
-### 3. 新しい学科を追加する方法
-1. **CSVファイルを用意**
-   - `{学科ID}_credit_requirements.csv` - 卒業要件データ
-   - `{学科ID}_timetable_by_category.csv` - 科目一覧データ
-   
-2. **ファイルを配置**
-   ```bash
-   public/department/rikou/{学科ID}_credit_requirements.csv
-   public/department/rikou/{学科ID}_timetable_by_category.csv
-   ```
-
-3. **コードに学科を登録** (`src/utils/autoLoadCSV.ts`)
-   ```typescript
-   export const AVAILABLE_DEPARTMENTS: Department[] = [
-     { id: 'denki', name: '電気電子通信工学科', faculty: '理工学部' },
-     { id: 'kikai', name: '機械工学科', faculty: '理工学部' },  // 追加例
-     // ここに新しい学科を追加
-   ];
-   ```
-
-4. デフォルト学科を変更する場合は `TimetableApp.tsx` の `AVAILABLE_DEPARTMENTS[0]` を変更
-
-### 4. 成績・単位管理
-1. 時間割の各セルをクリックして開く
-2. 単位数、成績、科目区分（必修/選択必修/選択）を入力
-3. 画面右上の「📊 成績管理」ボタンをクリック
-4. GPA、取得単位数、残り必要単位数が自動計算されて表示
-5. 全年度（1年次～M2）の成績が統合されて集計されます
-
-### 5. データの保存・読み込み
-- **自動保存**: ブラウザのLocalStorageに自動的に保存されます
-- **JSONエクスポート**: `⚙️ 設定` → `💾 JSONダウンロード` で全年度データを保存
-- **JSONインポート**: `⚙️ 設定` → `📂 JSON読込` で以前のデータを復元
-
-### 6. カレンダー連携
-1. `⚙️ 設定` → `📅 ICSダウンロード` をクリック
-2. ダウンロードしたICSファイルをGoogle Calendarなどにインポート
-3. 全年度の授業予定が一括登録されます
-
-## CSV ファイルフォーマット
-
-### 卒業要件CSV (`{学科ID}_credit_requirements.csv`)
-## CSV ファイルフォーマット
-
-### ファイル命名規則
-- 卒業要件: `{学科ID}_credit_requirements.csv`
-- 科目一覧: `{学科ID}_timetable_by_category.csv`
-
-例: 電気電子通信工学科 (ID: `denki`)
-- `denki_credit_requirements.csv`
-- `denki_timetable_by_category.csv`
-
-### 卒業要件CSV (`{学科ID}_credit_requirements.csv`)
-```csv
-stage,area,subarea,total_required_credits,必修_credits,選択必修1_credits,選択必修2_credits,自由_credits,notes
-3年次進級,総計,総単位数,60,,,,,2年次終了時に60単位未満は進級不可
-4年次進級,総計,総単位数,100,,,,,3年次終了時に100単位以上で進級
-卒業,共通分野,教養基幹科目,10,0,1,0,9,
-卒業,共通分野,体育科目,1,0,1,0,0,
-卒業,共通分野,外国語科目,8,4,0,0,4,
-卒業,専門分野,理工学基礎科目,31,16,4,2,9,
-卒業,専門分野,専門科目,60,32,10,2,16,
+```text
+Course-management-tool/
+├── public/
+│   └── department/rikou/
+│       ├── denki_credit_requirements.csv
+│       └── denki_timetable_by_category.csv
+├── src/
+│   ├── components/
+│   │   ├── AcademicOverview.tsx
+│   │   ├── CSVImporter.tsx
+│   │   ├── CourseList.tsx
+│   │   ├── GpaPredictionPanel.tsx
+│   │   └── GradeManagement.tsx
+│   ├── utils/
+│   │   ├── academicProgress.ts
+│   │   ├── autoLoadCSV.ts
+│   │   └── csvImporter.ts
+│   ├── App.tsx
+│   ├── TimetableApp.tsx
+│   └── main.tsx
+├── README.md
+├── package.json
+├── vite.config.ts
+└── tsconfig.json
 ```
 
-### 科目一覧CSV (`{学科ID}_timetable_by_category.csv`)
-```csv
-id,title,credits,raw_required,category,group,courseType
-SE-111,微分積分学(1a)※MS,1,○,理工学基礎科目,数学系,required
-SE-112,微分積分学(1b)※MS,1,○,理工学基礎科目,数学系,required
-EE-201,電気回路I,2,○,専門科目,電気電子,required
-EE-301,電力システム工学A,2,△1,専門科目,電気電子,elective-required
-LA-401,技術英語,1,,自由科目,,elective
-```
+---
 
-**courseType の値:**
-- `required`: 必修
-- `elective-required`: 選択必修
-- `elective`: 選択
+## CSVファイルの規則
 
-※ CSVファイルはUTF-8エンコーディングで保存してください
+- 卒業要件CSV: `{学科ID}_credit_requirements.csv`
+- 科目一覧CSV: `{学科ID}_timetable_by_category.csv`
+- 例: `denki_credit_requirements.csv` / `denki_timetable_by_category.csv`
+- 配置先: `public/department/rikou/`
 
-## 技術スタック
+新しい学科を追加する場合は、上記のCSVを用意したうえで `src/utils/autoLoadCSV.ts` の `AVAILABLE_DEPARTMENTS` に学科情報を追加してください。
 
-- **フレームワーク**: React 19.1.1
-- **ビルドツール**: Vite 7.1.6
-- **言語**: TypeScript
-- **CSVパース**: Papaparse 5.x
-- **ストレージ**: LocalStorage API
+---
 
-## データ構造
+<details>
+<summary><b>AI・LLM向け情報</b></summary>
 
-### バージョン2 (v2) - 複数年度対応
-```typescript
-{
-  version: 2,
-  settings: {...},
-  allYearsData: {
-    "1年次": { timetable: {...}, quarterRanges: {...} },
-    "2年次": { timetable: {...}, quarterRanges: {...} },
-    "3年次": { timetable: {...}, quarterRanges: {...} },
-    "4年次": { timetable: {...}, quarterRanges: {...} },
-    "M1": { timetable: {...}, quarterRanges: {...} },
-    "M2": { timetable: {...}, quarterRanges: {...} }
-  }
-}
-```
+機械向けに、実装の中心を短く整理しています。
 
-旧バージョン(v1)のデータも自動的に1年次に変換してインポートされます。
+- コアロジック: `src/utils/academicProgress.ts`
+- 主要UI: `src/components/AcademicOverview.tsx`, `src/components/GpaPredictionPanel.tsx`, `src/components/GradeManagement.tsx`
+- CSV読み込み: `src/utils/csvImporter.ts`, `src/utils/autoLoadCSV.ts`
+- 主な型: `AcademicCourse`, `AcademicCourseCell`, `AcademicDashboardSnapshot`
+- GPA計算: `calculateCurrentGpa`, `predictGpa`
+- 卒業要件警告: `generateGraduationWarnings`
+- 学科追加: `public/department/rikou/{学科ID}_credit_requirements.csv` と `public/department/rikou/{学科ID}_timetable_by_category.csv` を配置し、`AVAILABLE_DEPARTMENTS` に登録
 
-## ライセンス
-
-MIT License
-
-## 開発者
-
-Created for Tokyo City University students
-
-## 更新履歴
-
-### v2.1.0 (2025-01-19)
-- UIの大幅改善：タイトルを「時間割」に短縮、ヘッダーをコンパクト化
-- 年度選択をドロップダウン方式に変更
-- 科目検索機能の追加：授業名入力欄に🔍ボタンを配置、クリックでCSVデータベースから科目を検索
-- 学科選択時のみ検索ボタンが表示される最適化されたUI
-
-### v2.0.0 (2025-01-19)
-- 複数年度対応（1年次～4年次、M1、M2）
-- 年度別タブ切り替えUI
-- 全年度統合成績管理
-- 科目選択ドロップダウン機能
-- データフォーマットv2への移行
-- ICS/JSONエクスポートの全年度対応
-
-### v1.0.0
-- 初版リリース
-- 単一年度の時間割・成績管理
-- CSVインポート機能
-- JSON/ICSエクスポート
+</details>
