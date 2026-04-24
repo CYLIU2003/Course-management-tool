@@ -139,6 +139,10 @@ export default function TimetableApp() {
   async function loadDepartment(departmentId: string, year = entranceYear) {
     const result = await autoLoadDepartmentCSVs(departmentId, year);
 
+    if (result.courses.length === 0) {
+      console.warn(`No courses loaded for department=${departmentId}, entranceYear=${year}. Check CSV headers and file path.`);
+    }
+
     setSettings(prev => ({
       ...prev,
       curriculum: {
@@ -154,9 +158,9 @@ export default function TimetableApp() {
   // 起動時にCSVを自動読み込み
   useEffect(() => {
     const loadCSVs = async () => {
-      if (importedCourses.length > 0 || settings.curriculum) {
+      if (importedCourses.length > 0) {
         if (import.meta.env.DEV) {
-          console.log('⏭️ CSVs already loaded, skipping auto-load');
+          console.log('⏭️ Courses already loaded, skipping auto-load');
         }
         return;
       }
@@ -174,8 +178,10 @@ export default function TimetableApp() {
       }
     };
 
-    loadCSVs();
-  }, []); // 初回のみ実行
+    void loadCSVs();
+    // 初回マウント時のみ。学科・入学年度変更時は各handlerで再読込する。
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // 年度ごとのデータ管理
   const [allYearsData, setAllYearsData] = useState<AllYearsData>(() => {

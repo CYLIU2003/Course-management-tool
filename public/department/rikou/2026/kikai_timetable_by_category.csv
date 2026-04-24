@@ -1,0 +1,284 @@
+﻿id,title,credits,raw_required,category,group,courseType
+LA-111,哲学(1),2.0,G,教養科目,共通分野,elective
+LA-112,哲学(2),2.0,G,教養科目,共通分野,elective
+LA-113,倫理学(1),2.0,,教養科目,共通分野,elective
+LA-114,倫理学(2),2.0,,教養科目,共通分野,elective
+LA-115,倫理学(a),1.0,,教養科目,共通分野,elective
+LA-116,倫理学(b),1.0,,教養科目,共通分野,elective
+LA-117,文化人類学,2.0,,教養科目,共通分野,elective
+LA-118,視覚芸術史(1),2.0,G,教養科目,共通分野,elective
+LA-119,視覚芸術史(2),2.0,G,教養科目,共通分野,elective
+LA-11A,日本史(1),2.0,G,教養科目,共通分野,elective
+LA-11B,日本史(2),2.0,G,教養科目,共通分野,elective
+LA-11C,西洋史(1),2.0,G,教養科目,共通分野,elective
+LA-11D,西洋史(2),2.0,G,教養科目,共通分野,elective
+LA-11E,民俗学(a),1.0,G,教養科目,共通分野,elective
+LA-11F,民俗学(b),1.0,G,教養科目,共通分野,elective
+LA-11G,宗教学,2.0,G,教養科目,共通分野,elective
+LA-121,社会学(1a),1.0,,教養科目,共通分野,elective
+LA-122,社会学(1b),1.0,,教養科目,共通分野,elective
+LA-123,社会学(2a),1.0,,教養科目,共通分野,elective
+LA-124,社会学(2b),1.0,,教養科目,共通分野,elective
+LA-125,社会学入門(a),1.0,,教養科目,共通分野,elective
+LA-126,社会学入門(b),1.0,,教養科目,共通分野,elective
+LA-127,経済学(1a),1.0,,教養科目,共通分野,elective
+LA-128,経済学(1b),1.0,,教養科目,共通分野,elective
+LA-129,経済学(2a),1.0,,教養科目,共通分野,elective
+LA-12A,経済学(2b),1.0,,教養科目,共通分野,elective
+LA-12B,政治学(1a),1.0,,教養科目,共通分野,elective
+LA-12C,会,1.0,,教養科目,共通分野,elective
+LA-12D,政治学(2a),1.0,,教養科目,共通分野,elective
+LA-12E,政治学(2b),1.0,,教養科目,共通分野,elective
+LA-12F,国際関係論(1a),1.0,G,教養科目,共通分野,elective
+LA-12G,国際関係論(1b),1.0,G,教養科目,共通分野,elective
+LA-12H,国際関係論(2a),1.0,G,教養科目,共通分野,elective
+LA-12I,国際関係論(2b),1.0,G,教養科目,共通分野,elective
+LA-12J,日本国憲法,2.0,,教養科目,共通分野,elective
+LA-12K,法学,2.0,,教養科目,共通分野,elective
+LA-12L,民法,2.0,,教養科目,共通分野,elective
+LA-12M,西洋経済史,2.0,G,教養科目,共通分野,elective
+LA-12N,人文地理学(a),1.0,,教養科目,共通分野,elective
+LA-12O,人文地理学(b),1.0,,教養科目,共通分野,elective
+LA-12P,現代中国論,2.0,G,教養科目,共通分野,elective
+LA-131,教育学(1a),1.0,,教養科目,共通分野,elective
+LA-132,教育学(1b),1.0,,教養科目,共通分野,elective
+LA-133,教育学(2a),1.0,,教養科目,共通分野,elective
+LA-134,教育学(2b),1.0,,教養科目,共通分野,elective
+LA-135,スポーツ・健康論,2.0,,教養科目,共通分野,elective
+LA-136,心理学(1a),1.0,,教養科目,共通分野,elective
+LA-137,心理学(1b),1.0,,教養科目,共通分野,elective
+LA-138,間,1.0,,教養科目,共通分野,elective
+LA-139,心理学(2b),1.0,,教養科目,共通分野,elective
+LA-13C,心理学入門,2.0,,教養科目,共通分野,elective
+LA-13D,社会とジェンダー(a),1.0,,教養科目,共通分野,elective
+LA-13E,社会とジェンダー(b),1.0,,教養科目,共通分野,elective
+LA-13F,日本文化の伝承(a),1.0,G,教養科目,共通分野,elective
+LA-13G,日本文化の伝承(b),1.0,G,教養科目,共通分野,elective
+LA-13H,日本文化論,2.0,G,教養科目,共通分野,elective
+LA-141,論理学(1a),1.0,,教養科目,共通分野,elective
+LA-142,論理学(1b),1.0,,教養科目,共通分野,elective
+LA-143,・ 論理学(2a),1.0,,教養科目,共通分野,elective
+LA-144,論理学(2b),1.0,,教養科目,共通分野,elective
+LA-145,データサイエンスリテラシー(1),1.0,※DS,教養科目,共通分野,elective
+LA-211,デザイン概論(1),2.0,G,教養科目,共通分野,elective
+LA-212,デザイン概論(2),2.0,G,教養科目,共通分野,elective
+LA-213,日本文学,2.0,G,教養科目,共通分野,elective
+LA-221,日本の政治(a),1.0,G,教養科目,共通分野,elective
+LA-222,日本の政治(b),1.0,G,教養科目,共通分野,elective
+LA-241,データサイエンスリテラシー(2),1.0,※DS,教養科目,共通分野,elective
+LA-243,生活とメディア,2.0,,教養科目,共通分野,elective
+LA-321,日本経済論(a),1.0,G,教養科目,共通分野,elective
+LA-322,日本経済論(b),1.0,G,教養科目,共通分野,elective
+LA-331,国際化と異文化理解(a),1.0,G,教養科目,共通分野,elective
+LA-332,国際化と異文化理解(b),1.0,G,教養科目,共通分野,elective
+LA-951,ボランティア(1),1.0,,教養科目,共通分野,elective
+LA-952,ボランティア(2),1.0,,教養科目,共通分野,elective
+LA-953,そ,2.0,,教養科目,共通分野,elective
+LA-954,教養ゼミナール(2),2.0,,教養科目,共通分野,elective
+LA-955,他,2.0,,教養科目,共通分野,elective
+LA-956,教養特別講義(2),2.0,,教養科目,共通分野,elective
+LA-957,教養特別講義(3),2.0,,教養科目,共通分野,elective
+PE-111,基礎体育(1a),0.5,△,体育科目,共通分野,elective-required
+PE-112,体,0.5,△,体育科目,共通分野,elective-required
+PE-113,基礎体育(2a),0.5,△,体育科目,共通分野,elective-required
+PE-114,基礎体育(2b),0.5,△,体育科目,共通分野,elective-required
+PE-211,応用体育(1),1.0,,体育科目,共通分野,elective
+PE-212,応用体育(2),1.0,,体育科目,共通分野,elective
+FL-111,Communication Skills(1),1.0,○,外国語科目,共通分野,required
+FL-113,Communication Skills(2),1.0,○,外国語科目,共通分野,required
+FL-115,英,0.5,○,外国語科目,共通分野,required
+FL-116,Reading and Writing(1b),0.5,○,外国語科目,共通分野,required
+FL-117,Reading and Writing(2a),0.5,○,外国語科目,共通分野,required
+FL-118,Reading and Writing(2b),0.5,○,外国語科目,共通分野,required
+FL-211,Basic English Training(a),1.0,,外国語科目,共通分野,elective
+FL-212,キ,1.0,,外国語科目,共通分野,elective
+FL-213,ル,1.0,G,外国語科目,共通分野,elective
+FL-214,Grammar(1b),1.0,G,外国語科目,共通分野,elective
+FL-215,Grammar(2a),1.0,G,外国語科目,共通分野,elective
+FL-216,Grammar(2b),1.0,G,外国語科目,共通分野,elective
+FL-217,Test Taking Skills(1a),1.0,,外国語科目,共通分野,elective
+FL-218,Test Taking Skills(1b),1.0,,外国語科目,共通分野,elective
+FL-219,Test Taking Skills(2a),1.0,,外国語科目,共通分野,elective
+FL-21F,Critical Listening(1a),1.0,,外国語科目,共通分野,elective
+FL-21G,Critical Listening(1b),1.0,,外国語科目,共通分野,elective
+FL-21H,Critical Listening(2a),1.0,,外国語科目,共通分野,elective
+FL-21I,Critical Listening(2b),1.0,,外国語科目,共通分野,elective
+FL-21J,Communication Strategies(1a),1.0,,外国語科目,共通分野,elective
+FL-21K,Communication Strategies(1b),1.0,,外国語科目,共通分野,elective
+FL-21L,Communication Strategies(2a),1.0,,外国語科目,共通分野,elective
+FL-21M,Communication Strategies(2b),1.0,,外国語科目,共通分野,elective
+FL-21N,Academic English(1a),1.0,,外国語科目,共通分野,elective
+FL-21O,Academic English(1b),1.0,,外国語科目,共通分野,elective
+FL-21P,Academic English(2a),1.0,,外国語科目,共通分野,elective
+FL-21Q,Academic English(2b),1.0,,外国語科目,共通分野,elective
+FL-221,Literature in English(1a),1.0,,外国語科目,共通分野,elective
+FL-222,Literature in English(1b),1.0,,外国語科目,共通分野,elective
+FL-223,Literature in English(2a),1.0,,外国語科目,共通分野,elective
+FL-224,Literature in English(2b),1.0,,外国語科目,共通分野,elective
+FL-225,Global Culture(1a),1.0,G,外国語科目,共通分野,elective
+FL-226,Global Culture(1b),1.0,G,外国語科目,共通分野,elective
+FL-227,Global Culture(2a),1.0,G,外国語科目,共通分野,elective
+FL-228,Global Culture(2b),1.0,G,外国語科目,共通分野,elective
+FL-229,Language Sciences(1a),1.0,,外国語科目,共通分野,elective
+FL-22A,Test Taking Skills(2b),1.0,,外国語科目,共通分野,elective
+FL-22B,Critical Reading(1a),1.0,,外国語科目,共通分野,elective
+FL-22C,Critical Reading(1b),1.0,,外国語科目,共通分野,elective
+FL-22D,Critical Reading(2a),1.0,,外国語科目,共通分野,elective
+FL-22E,Critical Reading(2b),1.0,,外国語科目,共通分野,elective
+FL-22F,Language Sciences(1b),1.0,,外国語科目,共通分野,elective
+FL-22G,Language Sciences(2a),1.0,,外国語科目,共通分野,elective
+FL-22H,Language Sciences(2b),1.0,,外国語科目,共通分野,elective
+FL-22J,Global Society(1a),1.0,G,外国語科目,共通分野,elective
+FL-22K,Global Society(1b),1.0,G,外国語科目,共通分野,elective
+FL-22L,Global Society(2a),1.0,G,外国語科目,共通分野,elective
+FL-22M,Global Society(2b),1.0,G,外国語科目,共通分野,elective
+FL-241,ドイツ語(1a),1.0,,外国語科目,共通分野,elective
+FL-242,ドイツ語(1b),1.0,,外国語科目,共通分野,elective
+FL-243,ドイツ語(2a),1.0,,外国語科目,共通分野,elective
+FL-244,ドイツ語(2b),1.0,,外国語科目,共通分野,elective
+FL-245,フランス語(1a),1.0,,外国語科目,共通分野,elective
+FL-246,フランス語(1b),1.0,,外国語科目,共通分野,elective
+FL-247,フランス語(2a),1.0,,外国語科目,共通分野,elective
+FL-248,フランス語(2b),1.0,,外国語科目,共通分野,elective
+FL-249,スペイン語(1a),1.0,,外国語科目,共通分野,elective
+FL-24A,スペイン語(1b),1.0,,外国語科目,共通分野,elective
+FL-24B,スペイン語(2a),1.0,,外国語科目,共通分野,elective
+FL-24C,スペイン語(2b),1.0,,外国語科目,共通分野,elective
+FL-24D,イタリア語(1a),1.0,,外国語科目,共通分野,elective
+FL-24E,イタリア語(1b),1.0,,外国語科目,共通分野,elective
+FL-24F,イタリア語(2a),1.0,,外国語科目,共通分野,elective
+FL-24G,イタリア語(2b),1.0,,外国語科目,共通分野,elective
+FL-24H,中国語(1a),1.0,,外国語科目,共通分野,elective
+FL-24I,中国語(1b),1.0,,外国語科目,共通分野,elective
+FL-24J,中国語(2a),1.0,,外国語科目,共通分野,elective
+FL-24K,中国語(2b),1.0,,外国語科目,共通分野,elective
+FL-24L,アラビア語(1a),1.0,,外国語科目,共通分野,elective
+FL-24M,アラビア語(1b),1.0,,外国語科目,共通分野,elective
+FL-24N,アラビア語(2a),1.0,,外国語科目,共通分野,elective
+FL-24O,アラビア語(2b),1.0,,外国語科目,共通分野,elective
+FL-24P,韓国語(1a),1.0,,外国語科目,共通分野,elective
+FL-24Q,韓国語(1b),1.0,,外国語科目,共通分野,elective
+FL-24R,韓国語(2a),1.0,,外国語科目,共通分野,elective
+FL-24S,韓国語(2b),1.0,,外国語科目,共通分野,elective
+FL-24T,日本語表現(a),1.0,,外国語科目,共通分野,elective
+FL-24U,日本語表現(b),1.0,,外国語科目,共通分野,elective
+FL-311,Test Taking Skills(3a),1.0,,外国語科目,共通分野,elective
+FL-312,Test Taking Skills(3b),1.0,,外国語科目,共通分野,elective
+FL-313,Critical Reading(3a),1.0,,外国語科目,共通分野,elective
+FL-314,英,1.0,,外国語科目,共通分野,elective
+FL-315,キ,1.0,,外国語科目,共通分野,elective
+FL-316,ル,1.0,,外国語科目,共通分野,elective
+FL-317,Communication Strategies(3a),1.0,,外国語科目,共通分野,elective
+FL-318,Communication Strategies(3b),1.0,,外国語科目,共通分野,elective
+FL-319,Academic English(3a),1.0,,外国語科目,共通分野,elective
+FL-31A,Academic English(3b),1.0,,外国語科目,共通分野,elective
+FL-931,海外・特別選抜セミナー,2.0,,外国語科目,共通分野,elective
+FL-932,外国語特別講義(1a),1.0,,外国語科目,共通分野,elective
+FL-933,外国語特別講義(1b),1.0,,外国語科目,共通分野,elective
+FL-934,外国語特別講義(2a),1.0,,外国語科目,共通分野,elective
+FL-935,外国語特別講義(2b),1.0,,外国語科目,共通分野,elective
+SE-111,微分積分学(1a),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-112,微分積分学(1b),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-113,線形代数学(1a),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-114,線形代数学(1b),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-121,物理学及び演習(1),3.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-122,物理学及び演習(2),3.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-123,物理学実験(a),1.0,○,理工学基礎科目,自然科学系,required
+SE-124,物理学実験(b),1.0,○,理工学基礎科目,自然科学系,required
+SE-125,化学(1),2.0,,理工学基礎科目,自然科学系,elective
+SE-126,化学実験,2.0,,理工学基礎科目,自然科学系,elective
+SE-127,生物学(1),2.0,,理工学基礎科目,自然科学系,elective
+SE-128,生物学実験(a),1.0,,理工学基礎科目,自然科学系,elective
+SE-129,生物学実験(b),1.0,,理工学基礎科目,自然科学系,elective
+SE-12A,地学(1),2.0,,理工学基礎科目,自然科学系,elective
+SE-12B,地学実験(a),1.0,,理工学基礎科目,自然科学系,elective
+SE-12C,地学実験(b),1.0,,理工学基礎科目,自然科学系,elective
+SE-131,情報リテラシー演習(a),1.0,○,理工学基礎科目,情報系,required
+SE-132,情報リテラシー演習(b),1.0,○,理工学基礎科目,情報系,required
+SE-133,情報処理入門,2.0,,理工学基礎科目,情報系,elective
+SE-141,未来を拓くイノベーション,2.0,,理工学基礎科目,理工学教養系,elective
+SE-211,微分積分学(2a),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-212,微分積分学(2b),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-213,線形代数学(2a),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-214,線形代数学(2b),1.0,※MS ○,理工学基礎科目,数学系,required
+SE-221,物理学(3),2.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-222,物理学(4),2.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-223,電磁気学基礎,2.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-224,化学(2),2.0,,理工学基礎科目,自然科学系,elective
+SE-225,生物学(2),2.0,,理工学基礎科目,自然科学系,elective
+SE-226,地学(2),2.0,,理工学基礎科目,自然科学系,elective
+SE-231,コンピュータ概論(a),1.0,,理工学基礎科目,情報系,elective
+SE-232,コンピュータ概論(b),1.0,,理工学基礎科目,情報系,elective
+SE-233,プログラミング基礎(a),1.0,,理工学基礎科目,情報系,elective
+SE-234,プログラミング基礎(b),1.0,,理工学基礎科目,情報系,elective
+SE-235,AI・ビッグデータ基礎,1.0,,理工学基礎科目,情報系,elective
+SE-236,情報処理基礎,2.0,,理工学基礎科目,情報系,elective
+SE-241,技術者倫理,2.0,○,理工学基礎科目,理工学教養系,required
+SE-311,微分方程式論,2.0,△1,理工学基礎科目,数学系,elective-required
+SE-312,ベクトル解析学,2.0,△1,理工学基礎科目,数学系,elective-required
+SE-313,フーリエ解析学,2.0,△1,理工学基礎科目,数学系,elective-required
+SE-314,数理統計学(a),1.0,※MS △1,理工学基礎科目,数学系,elective-required
+SE-315,数理統計学(b),1.0,※MS △1,理工学基礎科目,数学系,elective-required
+SE-316,代数学,2.0,,理工学基礎科目,数学系,elective
+SE-321,上級力学,2.0,△2,理工学基礎科目,自然科学系,elective-required
+SE-331,数値解析,2.0,,理工学基礎科目,情報系,elective
+SE-332,AI・ビッグデータ応用,1.0,,理工学基礎科目,情報系,elective
+SE-333,情報処理応用,2.0,,理工学基礎科目,情報系,elective
+SE-341,金属加工(実習含),2.0,,理工学基礎科目,理工学教養系,elective
+SE-342,電気工学概論(実習含),2.0,,理工学基礎科目,理工学教養系,elective
+SE-941,インターンシップ(1),1.0,,理工学基礎科目,理工学教養系,elective
+SE-942,インターンシップ(2),1.0,,理工学基礎科目,理工学教養系,elective
+SE-943,海外体験実習(1),2.0,,理工学基礎科目,理工学教養系,elective
+SE-944,海外体験実習(2),2.0,,理工学基礎科目,理工学教養系,elective
+SE-945,SD PBL(1),1.0,○,理工学基礎科目,理工学教養系,required
+SE-946,SD PBL(2),1.0,○,理工学基礎科目,理工学教養系,required
+SE-947,SD PBL(3),1.0,○,理工学基礎科目,理工学教養系,required
+HP-101,ことづくり,1.0,,専門科目,ひらめきことづくり,elective
+HP-201,く,2.0,,専門科目,ひらめきことづくり,elective
+HP-301,サステナビリティ,2.0,,専門科目,ひらめきことづくり,elective
+HP-901,デザインシンキング,2.0,,専門科目,ひらめきことづくり,elective
+HP-902,アイデアソン演習,1.0,,専門科目,ひらめきことづくり,elective
+HP-903,づ,1.0,,専門科目,ひらめきことづくり,elective
+HP-904,ビジネスコンテスト演習,1.0,,専門科目,ひらめきことづくり,elective
+HP-905,フィールドリサーチ,2.0,,専門科目,ひらめきことづくり,elective
+MC-111,機械設計製図(a),1.0,○,専門科目,学科専門科目,required
+MC-112,機械工作実習(a),1.0,○,専門科目,学科専門科目,required
+MC-171,機械工作概論,2.0,,専門科目,学科専門科目,elective
+MC-211,機械設計製図(b),1.0,○,専門科目,学科専門科目,required
+MC-212,機械工作実習(b),1.0,○,専門科目,学科専門科目,required
+MC-221,機械力学(1)及び演習・実験,3.0,○,専門科目,学科専門科目,required
+MC-222,機械,2.0,,専門科目,学科専門科目,elective
+MC-231,材料,2.0,○,専門科目,学科専門科目,required
+MC-241,流れ学及び演習・実験,3.0,○,専門科目,学科専門科目,required
+MC-251,熱力学及び演習・実験,3.0,○,専門科目,学科専門科目,required
+MC-252,伝熱工学,2.0,,専門科目,学科専門科目,elective
+MC-261,機械材料学及び演習・実験,3.0,○,専門科目,学科専門科目,required
+MC-262,材料学 材料評価,2.0,,専門科目,学科専門科目,elective
+MC-271,加工学 機械要素設計及び演習,3.0,○,専門科目,学科専門科目,required
+MC-311,創成設計演習,2.0,○,専門科目,学科専門科目,required
+MC-312,事例研究,2.0,○,専門科目,学科専門科目,required
+MC-321,力学,2.0,,専門科目,学科専門科目,elective
+MC-322,制御工学(2),2.0,,専門科目,学科専門科目,elective
+MC-331,力学,3.0,○,専門科目,学科専門科目,required
+MC-341,流体力学(1),2.0,,専門科目,学科専門科目,elective
+MC-342,流体力学(2),2.0,,専門科目,学科専門科目,elective
+MC-351,内燃機関,2.0,,専門科目,学科専門科目,elective
+MC-352,トライボロジー,2.0,,専門科目,学科専門科目,elective
+MC-361,材料強度学,2.0,,専門科目,学科専門科目,elective
+MC-371,材料加工学,2.0,,専門科目,学科専門科目,elective
+MC-411,究関連 卒業研究(1),3.0,○,専門科目,学科専門科目,required
+MC-412,卒業研究(2),3.0,○,専門科目,学科専門科目,required
+MC-911,特別講義(1),2.0,,専門科目,学科専門科目,elective
+MC-912,特別講義(2),2.0,,専門科目,学科専門科目,elective
+MC-913,特別講義(3),2.0,,専門科目,学科専門科目,elective
+SL-101,理工学と生活,2.0,△,専門科目,専門教養・学部共通,elective-required
+SL-102,工業概論,2.0,△,専門科目,専門教養・学部共通,elective-required
+SL-103,原子力汎論,2.0,△,専門科目,専門教養・学部共通,elective-required
+SL-104,Direct Current Electrical,2.0,,専門科目,専門教養・学部共通,elective
+SL-105,知的財産,2.0,,専門科目,専門教養・学部共通,elective
+SL-201,量子力学入門,2.0,,専門科目,専門教養・学部共通,elective
+SL-202,相対論入門,2.0,,専門科目,専門教養・学部共通,elective
+SL-203,電気化学(a),1.0,,専門科目,専門教養・学部共通,elective
+SL-204,電気化学(b),1.0,,専門科目,専門教養・学部共通,elective
+SL-205,探究の進め方,2.0,,専門科目,専門教養・学部共通,elective
+SL-302,電気電子通信計測応用,2.0,,専門科目,専門教養・学部共通,elective

@@ -67,13 +67,18 @@ async function fetchCSVText(primaryPath: string, fallbackPath?: string) {
 
   if (response.status === 404 && fallbackPath) {
     const fallbackResponse = await fetch(fallbackPath);
-    if (!fallbackResponse.ok) {
-      throw new Error(`Failed to load CSV: ${fallbackResponse.statusText}`);
+    if (fallbackResponse.ok) {
+      return { text: await fallbackResponse.text(), path: fallbackPath };
     }
-    return { text: await fallbackResponse.text(), path: fallbackPath };
+
+    throw new Error(
+      `Failed to load CSV. primary=${primaryPath} (${response.status} ${response.statusText}), fallback=${fallbackPath} (${fallbackResponse.status} ${fallbackResponse.statusText})`
+    );
   }
 
-  throw new Error(`Failed to load CSV: ${response.statusText}`);
+  throw new Error(
+    `Failed to load CSV. primary=${primaryPath} (${response.status} ${response.statusText})`
+  );
 }
 
 /**
