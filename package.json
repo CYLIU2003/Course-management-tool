@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "check:status": "node scripts/diagnostics/check-system-status.mjs",
+    "check:csv": "node scripts/diagnostics/check-system-status.mjs --csv-only",
+    "check:all": "npm run check:status && npm run build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

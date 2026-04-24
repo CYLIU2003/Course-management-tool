@@ -39,6 +39,7 @@ function getOfferingSearchText(offering: CourseOffering) {
   return [
     offering.day,
     offering.period,
+    offering.day && offering.period ? `${offering.day}${offering.period}` : '',
     offering.term,
     offering.gradeYear,
     offering.className,
@@ -98,7 +99,7 @@ export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
       <div className="course-search__filters">
         <label className="course-search__field">
           <span>検索</span>
-          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="科目名、ID、区分、タグなど" />
+          <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="科目名、教員、教室、講義コード、曜日時限など" />
         </label>
         <label className="course-search__field">
           <span>カテゴリ</span>

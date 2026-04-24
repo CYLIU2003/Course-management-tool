@@ -47,6 +47,8 @@ export interface AcademicCourseCell {
   term?: string;
   target?: string;
   className?: string;
+  remarks?: string;
+  sourceOffering?: CourseOffering;
   scheduleDay?: string;
   schedulePeriod?: string;
 }

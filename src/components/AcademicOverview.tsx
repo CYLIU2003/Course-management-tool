@@ -1,10 +1,18 @@
-import type { AcademicDashboardSnapshot } from '../utils/academicProgress';
+import { useMemo } from 'react';
+import type { AcademicAllYearsData, AcademicCourse, AcademicDashboardSnapshot, AcademicYear } from '../utils/academicProgress';
+import { calculateGraduationRisk } from '../utils/graduationRisk';
+import { recommendCourses } from '../utils/courseRecommendation';
+import GraduationRiskPanel from './GraduationRiskPanel';
+import CourseRecommendationPanel from './CourseRecommendationPanel';
 
 interface AcademicOverviewProps {
   snapshot: AcademicDashboardSnapshot;
   title?: string;
   curriculumName?: string;
   compact?: boolean;
+  allYearsData?: AcademicAllYearsData;
+  courses?: AcademicCourse[];
+  currentYear?: AcademicYear;
 }
 
 const WARNING_STYLES = {
@@ -30,8 +38,31 @@ export default function AcademicOverview({
   title = '履修状況ダッシュボード',
   curriculumName,
   compact = false,
+  allYearsData,
+  courses,
+  currentYear,
 }: AcademicOverviewProps) {
   const visibleWarnings = compact ? snapshot.warnings.slice(0, 3) : snapshot.warnings;
+  const graduationRisk = useMemo(
+    () => (allYearsData ? calculateGraduationRisk(snapshot, allYearsData) : null),
+    [allYearsData, snapshot],
+  );
+  const recommendations = useMemo(
+    () => {
+      if (!allYearsData || !courses) {
+        return [];
+      }
+
+      return recommendCourses({
+        courses,
+        snapshot,
+        allYearsData,
+        currentYear,
+        limit: compact ? 3 : 5,
+      });
+    },
+    [allYearsData, compact, courses, currentYear, snapshot],
+  );
 
   return (
     <section className="tt-card" style={{ marginTop: '1.5rem' }}>
@@ -74,6 +105,14 @@ export default function AcademicOverview({
           <div className="stats-value">{Math.min(100, snapshot.completionRate * 100).toFixed(1)}%</div>
         </div>
       </div>
+
+      {graduationRisk && (
+        <GraduationRiskPanel risk={graduationRisk} compact={compact} />
+      )}
+
+      {allYearsData && courses && (
+        <CourseRecommendationPanel recommendations={recommendations} compact={compact} />
+      )}
 
       {!compact && snapshot.progress.some((item) => item.key !== 'total') && (
         <div style={{ marginTop: '1rem', borderTop: '1px solid var(--stroke)', paddingTop: '1rem' }}>

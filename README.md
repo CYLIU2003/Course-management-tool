@@ -78,6 +78,16 @@ npm run build
 
 ビルド結果は `dist/` に出力されます。
 
+### 診断コマンド
+
+PowerShell からシステム全体の状態を確認できます。
+
+```bash
+npm run check:status
+npm run check:csv
+npm run check:all
+```
+
 ---
 
 ## ディレクトリ構成

@@ -1,12 +1,13 @@
-import type { AcademicCourse, AcademicDashboardSnapshot, AcademicSettings } from '../utils/academicProgress';
+import type { AcademicAllYearsData, AcademicCourse, AcademicDashboardSnapshot, AcademicSettings, AcademicYear } from '../utils/academicProgress';
+import AcademicOverview from './AcademicOverview';
 import GpaPredictionPanel from './GpaPredictionPanel';
-import DashboardCards from './dashboard/DashboardCards';
-import WarningPanel from './dashboard/WarningPanel';
 
 interface GradeManagementProps {
   settings: AcademicSettings;
   snapshot: AcademicDashboardSnapshot;
   importedCourses: AcademicCourse[];
+  allYearsData: AcademicAllYearsData;
+  currentYear: AcademicYear;
   onBack: () => void;
 }
 
@@ -14,6 +15,8 @@ export default function GradeManagement({
   settings,
   snapshot,
   importedCourses,
+  allYearsData,
+  currentYear,
   onBack,
 }: GradeManagementProps) {
   return (
@@ -25,9 +28,15 @@ export default function GradeManagement({
             ← 時間割に戻る
           </button>
         </div>
-        <DashboardCards snapshot={snapshot} curriculumName={settings.curriculum?.name} />
-        <WarningPanel warnings={snapshot.warnings} />
       </div>
+
+      <AcademicOverview
+        snapshot={snapshot}
+        curriculumName={settings.curriculum?.name}
+        allYearsData={allYearsData}
+        courses={importedCourses}
+        currentYear={currentYear}
+      />
 
       <GpaPredictionPanel courses={importedCourses} snapshot={snapshot} />
 
