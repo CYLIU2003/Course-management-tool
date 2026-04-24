@@ -12,18 +12,51 @@ export interface Department {
 
 /**
  * 利用可能な学科リスト
+ *
+ * id は public/department/rikou/{entranceYear}/{id}_*.csv の
+ * ファイル名プレフィックスと一致させること。
  */
 export const AVAILABLE_DEPARTMENTS: Department[] = [
-  { 
-    id: 'denki', 
-    name: '電気電子通信工学科', 
-    faculty: '理工学部' 
+  {
+    id: 'denki',
+    name: '電気電子通信工学科',
+    faculty: '理工学部',
   },
   {
     id: 'kikai',
     name: '機械工学科',
-    faculty: '理工学部'
-  }
+    faculty: '理工学部',
+  },
+  {
+    id: 'kikai_system',
+    name: '機械システム工学科',
+    faculty: '理工学部',
+  },
+  {
+    id: 'iyo',
+    name: '医用工学科',
+    faculty: '理工学部',
+  },
+  {
+    id: 'ouyou_kagaku',
+    name: '応用化学科',
+    faculty: '理工学部',
+  },
+  {
+    id: 'genshiryoku',
+    name: '原子力安全工学科',
+    faculty: '理工学部',
+  },
+  {
+    id: 'shizen_shizen',
+    name: '自然科学科（自然コース）',
+    faculty: '理工学部',
+  },
+  {
+    id: 'shizen_suuri',
+    name: '自然科学科（数理コース）',
+    faculty: '理工学部',
+  },
 ] as const;
 
 /**
@@ -67,36 +100,52 @@ async function fetchCSVText(primaryPath: string, fallbackPath?: string) {
 
   if (response.status === 404 && fallbackPath) {
     const fallbackResponse = await fetch(fallbackPath);
-    if (!fallbackResponse.ok) {
-      throw new Error(`Failed to load CSV: ${fallbackResponse.statusText}`);
+    if (fallbackResponse.ok) {
+      return { text: await fallbackResponse.text(), path: fallbackPath };
     }
-    return { text: await fallbackResponse.text(), path: fallbackPath };
+
+    throw new Error(
+      `Failed to load CSV. primary=${primaryPath} (${response.status} ${response.statusText}), fallback=${fallbackPath} (${fallbackResponse.status} ${fallbackResponse.statusText})`,
+    );
   }
 
-  throw new Error(`Failed to load CSV: ${response.statusText}`);
+  throw new Error(
+    `Failed to load CSV. primary=${primaryPath} (${response.status} ${response.statusText})`,
+  );
 }
 
 /**
  * publicフォルダ内のCSVファイルを自動読み込み
  */
 export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?: number) {
-  console.log('🚀 Auto-loading CSVs for department:', departmentId, 'entranceYear:', entranceYear);
+  if (import.meta.env.DEV) {
+    console.log('🚀 Auto-loading CSVs for department:', departmentId, 'entranceYear:', entranceYear);
+  }
+
+  const department = AVAILABLE_DEPARTMENTS.find((d) => d.id === departmentId);
+  if (!department) {
+    throw new Error(`Unknown departmentId: ${departmentId}`);
+  }
   
   const paths = buildCSVPaths(departmentId, entranceYear);
-  console.log('📂 CSV paths:', paths);
+  if (import.meta.env.DEV) {
+    console.log('📂 CSV paths:', paths);
+  }
   
   try {
     // 卒業要件CSVを読み込み
-    console.log('📥 Fetching requirements from:', paths.requirements);
     const requirementsResult = await fetchCSVText(paths.requirements, paths.fallbackRequirements);
     const requirementsText = requirementsResult.text;
-    console.log('✅ Requirements CSV loaded from:', requirementsResult.path, 'size:', requirementsText.length, 'bytes');
+    if (import.meta.env.DEV) {
+      console.log('✅ Requirements CSV loaded from:', requirementsResult.path, 'size:', requirementsText.length, 'bytes');
+    }
     
     // 時間割CSVを読み込み
-    console.log('📥 Fetching timetable from:', paths.timetable);
     const timetableResult = await fetchCSVText(paths.timetable, paths.fallbackTimetable);
     const timetableText = timetableResult.text;
-    console.log('✅ Timetable CSV loaded from:', timetableResult.path, 'size:', timetableText.length, 'bytes');
+    if (import.meta.env.DEV) {
+      console.log('✅ Timetable CSV loaded from:', timetableResult.path, 'size:', timetableText.length, 'bytes');
+    }
     
     // テキストをBlobに変換してFileオブジェクトを作成
     const requirementsBlob = new Blob([requirementsText], { type: 'text/csv' });
@@ -107,24 +156,25 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     
     // パース
     const requirementRows = await parseCSVFile<CreditRequirementRow>(requirementsFile);
-    console.log('✅ Parsed requirement rows:', requirementRows.length);
-    
     const timetableRows = await parseCSVFile<CourseRow>(timetableFile);
-    console.log('✅ Parsed timetable rows:', timetableRows.length);
     
     const curriculum = parseCreditRequirements(requirementRows);
     const courses = parseCourses(timetableRows);
     
-    // 学科情報を取得
-    const dept = AVAILABLE_DEPARTMENTS.find(d => d.id === departmentId);
-    const departmentName = dept ? `${dept.faculty} ${dept.name}` : departmentId;
+    const departmentName = `${department.faculty} ${department.name}`;
     
-    console.log('✅ Auto-load complete:', { departmentName, curriculum, coursesCount: courses.length });
+    if (import.meta.env.DEV) {
+      console.log('✅ Auto-load complete:', { departmentName, curriculum, coursesCount: courses.length });
+    }
     
     return {
       curriculum,
       courses,
-      departmentName
+      departmentName,
+      sourcePaths: {
+        requirements: requirementsResult.path,
+        timetable: timetableResult.path,
+      },
     };
   } catch (error) {
     console.error('❌ Auto-load failed for department:', departmentId, error);
