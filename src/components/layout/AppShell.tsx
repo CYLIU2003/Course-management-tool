@@ -5,5 +5,5 @@ type AppShellProps = {
 };
 
 export default function AppShell({ children }: AppShellProps) {
-  return <div className="app-shell">{children}</div>;
+  return <div className="app-shell tcu-tt">{children}</div>;
 }

@@ -2,15 +2,18 @@ import type { Department } from '../../utils/autoLoadCSV';
 import type { ReactNode } from 'react';
 import YearSelector from '../timetable/YearSelector';
 
+export type AppPage = 'timetable' | 'grades' | 'courses';
+
 type AppHeaderProps = {
   title: string;
   departmentId: string;
   departments: readonly Department[];
   currentYear: string;
-  currentPage: 'timetable' | 'grades';
+  currentPage: AppPage;
   onDepartmentChange: (departmentId: string) => void | Promise<void>;
   onYearChange: (year: string) => void;
-  onPageChange: (page: 'timetable' | 'grades') => void;
+  onPageChange: (page: AppPage) => void;
+  onOpenSettings?: () => void;
   dataMenu: ReactNode;
 };
 
@@ -23,6 +26,7 @@ export default function AppHeader({
   onDepartmentChange,
   onYearChange,
   onPageChange,
+  onOpenSettings,
   dataMenu,
 }: AppHeaderProps) {
   return (
@@ -57,10 +61,20 @@ export default function AppHeader({
             <button type="button" className={currentPage === 'grades' ? 'page-switch__button is-active' : 'page-switch__button'} onClick={() => onPageChange('grades')}>
               成績・単位
             </button>
+            <button type="button" className={currentPage === 'courses' ? 'page-switch__button is-active' : 'page-switch__button'} onClick={() => onPageChange('courses')}>
+              科目一覧
+            </button>
           </nav>
         </div>
 
-        <div className="app-header__actions">{dataMenu}</div>
+        <div className="app-header__actions">
+          {onOpenSettings && (
+            <button type="button" className="btn-ghost app-header__settings" onClick={onOpenSettings}>
+              設定
+            </button>
+          )}
+          {dataMenu}
+        </div>
       </div>
     </header>
   );

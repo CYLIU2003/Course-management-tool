@@ -1,11 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
 import GradeManagement from "./components/GradeManagement";
 import AppShell from "./components/layout/AppShell";
-import AppHeader from "./components/layout/AppHeader";
+import AppHeader, { type AppPage } from "./components/layout/AppHeader";
 import DataManagementMenu from "./components/layout/DataManagementMenu";
 import DashboardCards from "./components/dashboard/DashboardCards";
 import WarningPanel from "./components/dashboard/WarningPanel";
 import QuarterTabs from "./components/timetable/QuarterTabs";
+import AppSettingsModal from "./components/settings/AppSettingsModal";
+import CourseSearchPanel from "./components/courses/CourseSearchPanel";
+import CourseTagBadge from "./components/courses/CourseTagBadge";
+import CourseTypeBadge from "./components/courses/CourseTypeBadge";
 import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseType, Grade } from "./utils/academicProgress";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS } from "./utils/autoLoadCSV";
 import { buildDashboardSnapshot } from "./utils/academicProgress";
@@ -85,7 +89,8 @@ function createDefaultAllYearsData(): AllYearsData {
 export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
-  const [currentPage, setCurrentPage] = useState<"timetable" | "grades">("timetable");
+  const [currentPage, setCurrentPage] = useState<AppPage>("timetable");
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [selectedDepartmentId, setSelectedDepartmentId] = useState<string>(() => {
     return localStorage.getItem("selected_department_id") ?? AVAILABLE_DEPARTMENTS[0].id;
   });
@@ -95,9 +100,11 @@ export default function TimetableApp() {
 
   // デバッグ用: importedCoursesの変更を監視
   useEffect(() => {
-    console.log('📚 importedCourses changed:', importedCourses.length, 'courses');
-    if (importedCourses.length > 0) {
-      console.log('First course:', importedCourses[0]);
+    if (import.meta.env.DEV) {
+      console.log('📚 importedCourses changed:', importedCourses.length, 'courses');
+      if (importedCourses.length > 0) {
+        console.log('First course:', importedCourses[0]);
+      }
     }
   }, [importedCourses]);
   
@@ -117,10 +124,12 @@ export default function TimetableApp() {
 
   // デバッグ用: curriculumの状態を監視
   useEffect(() => {
-    console.log('🎓 Curriculum status:', {
-      hasCurriculum: !!settings.curriculum,
-      curriculum: settings.curriculum
-    });
+    if (import.meta.env.DEV) {
+      console.log('🎓 Curriculum status:', {
+        hasCurriculum: !!settings.curriculum,
+        curriculum: settings.curriculum
+      });
+    }
   }, [settings.curriculum]);
 
   async function loadDepartment(departmentId: string) {
@@ -142,14 +151,20 @@ export default function TimetableApp() {
   useEffect(() => {
     const loadCSVs = async () => {
       if (importedCourses.length > 0 || settings.curriculum) {
-        console.log('⏭️ CSVs already loaded, skipping auto-load');
+        if (import.meta.env.DEV) {
+          console.log('⏭️ CSVs already loaded, skipping auto-load');
+        }
         return;
       }
 
-      console.log('🚀 Starting auto-load...');
+      if (import.meta.env.DEV) {
+        console.log('🚀 Starting auto-load...');
+      }
       try {
         await loadDepartment(selectedDepartmentId);
-        console.log('✅ Auto-load successful!');
+        if (import.meta.env.DEV) {
+          console.log('✅ Auto-load successful!');
+        }
       } catch (error) {
         console.error('❌ Auto-load failed:', error);
       }
@@ -240,7 +255,9 @@ export default function TimetableApp() {
   };
 
   const handleImportCourses = (courses: AcademicCourse[]) => {
-    console.log('📚 Importing courses:', courses.length, 'courses');
+    if (import.meta.env.DEV) {
+      console.log('📚 Importing courses:', courses.length, 'courses');
+    }
     setImportedCourses(courses);
   };
   const exportJSON = () => {
@@ -425,10 +442,58 @@ export default function TimetableApp() {
 
   const printPage = () => window.print();
 
-  // 成績管理ページの表示切替
   const handleDepartmentChange = async (departmentId: string) => {
     setSelectedDepartmentId(departmentId);
     await loadDepartment(departmentId);
+  };
+
+  const handleOpenSettings = () => {
+    setSettingsOpen(true);
+  };
+
+  const handleResetLocalStorage = async () => {
+    const defaultDepartmentId = AVAILABLE_DEPARTMENTS[0]?.id ?? selectedDepartmentId;
+    localStorage.removeItem("timetable_settings_v2");
+    localStorage.removeItem("timetable_allyears_v2");
+    localStorage.removeItem("selected_department_id");
+    setCurrentYear("1年次");
+    setActiveQuarter("1Q");
+    setCurrentPage("timetable");
+    setSelectedDepartmentId(defaultDepartmentId);
+    setImportedCourses([]);
+    setSettings(createDefaultSettings());
+    setAllYearsData(createDefaultAllYearsData());
+    await loadDepartment(defaultDepartmentId);
+  };
+
+  const handleSaveSettings = ({
+    settings: nextSettings,
+    quarterRanges,
+  }: {
+    settings: {
+      title: string;
+      showTime: boolean;
+      days: string[];
+      periods: { id: number; label: string; time: string }[];
+      requiredCredits: number;
+    };
+    quarterRanges: QuarterRanges;
+  }) => {
+    setSettings((prev) => ({
+      ...prev,
+      ...nextSettings,
+    }));
+    setAllYearsData((prev) => {
+      const next = clone(prev);
+      next[currentYear].quarterRanges = quarterRanges;
+      for (const quarter of QUARTERS) {
+        next[currentYear].timetable[quarter] = mergeGrids(
+          buildEmptyQuarter(nextSettings.days, nextSettings.periods),
+          next[currentYear].timetable[quarter],
+        );
+      }
+      return next;
+    });
   };
 
   const dataManagementMenu = (
@@ -442,16 +507,45 @@ export default function TimetableApp() {
     />
   );
 
-  if (currentPage === "grades") {
-    return (
-      <GradeManagement
-        settings={settings}
-        snapshot={dashboardSnapshot}
-        importedCourses={importedCourses}
-        onBack={() => setCurrentPage("timetable")}
-      />
-    );
-  }
+  const pageContent = currentPage === "grades" ? (
+    <GradeManagement
+      settings={settings}
+      snapshot={dashboardSnapshot}
+      importedCourses={importedCourses}
+      onBack={() => setCurrentPage("timetable")}
+    />
+  ) : currentPage === "courses" ? (
+    <CourseSearchPanel courses={importedCourses} />
+  ) : (
+    <>
+      <DashboardCards snapshot={dashboardSnapshot} curriculumName={settings.curriculum?.name} />
+      <WarningPanel warnings={dashboardSnapshot.warnings} />
+
+      <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
+      <section className="tt-card">
+        <div className="section-title">
+          <div>
+            <h2>{currentYear} - {activeQuarter} の時間割</h2>
+            <span className="small print:hidden">クリックで編集できます</span>
+          </div>
+          <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost print:hidden">
+            他Qへコピー
+          </button>
+        </div>
+        <div className="tt-tablewrap">
+          <Table
+            quarter={activeQuarter}
+            data={currentYearData.timetable}
+            days={settings.days}
+            periods={settings.periods}
+            showTime={settings.showTime}
+            onCellClick={openEdit}
+          />
+        </div>
+        <p className="small print:hidden">Esc キーでモーダルを閉じられます。</p>
+      </section>
+    </>
+  );
 
   return (
     <AppShell>
@@ -464,34 +558,31 @@ export default function TimetableApp() {
         onDepartmentChange={handleDepartmentChange}
         onYearChange={(year: string) => setCurrentYear(year as Year)}
         onPageChange={setCurrentPage}
+        onOpenSettings={handleOpenSettings}
         dataMenu={dataManagementMenu}
       />
 
       <main className="app-container app-main">
-        <DashboardCards snapshot={dashboardSnapshot} curriculumName={settings.curriculum?.name} />
-        <WarningPanel warnings={dashboardSnapshot.warnings} />
-
-        <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
-        <section className="tt-card">
-          <div className="section-title">
-            <h2>{currentYear} - {activeQuarter} の時間割</h2>
-            <span className="small print:hidden">クリックで編集できます</span>
-          </div>
-          <div className="tt-tablewrap">
-            <Table
-              quarter={activeQuarter}
-              data={currentYearData.timetable}
-              days={settings.days}
-              periods={settings.periods}
-              showTime={settings.showTime}
-              onCellClick={openEdit}
-            />
-          </div>
-          <p className="small print:hidden">Esc キーでモーダルを閉じられます。</p>
-        </section>
+        {pageContent}
       </main>
 
-      {editing.open && (
+      <AppSettingsModal
+        open={settingsOpen}
+        settings={{
+          title: settings.title,
+          showTime: settings.showTime,
+          days: settings.days,
+          periods: settings.periods,
+          requiredCredits: settings.requiredCredits,
+        }}
+        quarterRanges={currentYearData.quarterRanges}
+        curriculumName={settings.curriculum?.name}
+        onClose={() => setSettingsOpen(false)}
+        onSave={handleSaveSettings}
+        onResetLocalStorage={handleResetLocalStorage}
+      />
+
+      {currentPage === "timetable" && editing.open && (
         <EditModal
           initial={editing.value ?? null}
           day={editing.day!}
@@ -504,7 +595,7 @@ export default function TimetableApp() {
         />
       )}
 
-      {copyOpen && (
+      {currentPage === "timetable" && copyOpen && (
         <QuarterCopyModal
           active={activeQuarter}
           quarters={QUARTERS}
@@ -609,12 +700,6 @@ function EditModal({
   importedCourses: AcademicCourse[];
   hasCurriculum: boolean;
 }) {
-  console.log('🔍 EditModal render:', {
-    hasCurriculum,
-    importedCoursesCount: importedCourses.length,
-    shouldShowButton: hasCurriculum && importedCourses.length > 0
-  });
-  
   const [title, setTitle] = useState(initial?.title ?? "");
   const [room, setRoom] = useState(initial?.room ?? "");
   const [teacher, setTeacher] = useState(initial?.teacher ?? "");
@@ -623,25 +708,65 @@ function EditModal({
   const [credits, setCredits] = useState(String(initial?.credits ?? ""));
   const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
   const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
-  const [selectedCourseId, setSelectedCourseId] = useState("");
-  const [showCourseDropdown, setShowCourseDropdown] = useState(false);
+  const [courseSearchOpen, setCourseSearchOpen] = useState(false);
+  const [courseSearchQuery, setCourseSearchQuery] = useState("");
+  const [courseCategory, setCourseCategory] = useState("all");
+  const [courseGroup, setCourseGroup] = useState("all");
+  const [courseTypeFilter, setCourseTypeFilter] = useState<CourseType | "all">("all");
+  const [courseTag, setCourseTag] = useState("all");
 
-  // 科目選択時の処理
-  const handleCourseSelect = (courseId: string) => {
-    setSelectedCourseId(courseId);
-    if (courseId === "") {
-      return;
-    }
-    
-    const course = importedCourses.find(c => c.id === courseId);
-    if (course) {
-      setTitle(course.title);
-      setCredits(String(course.credits));
-      setCourseType(course.courseType);
-      setMemo(`ID: ${course.id} | ${course.category}${course.group ? ` - ${course.group}` : ''}`);
-      setShowCourseDropdown(false); // 選択後はドロップダウンを閉じる
-    }
+  const selectCourse = (course: AcademicCourse) => {
+    const tags = [...(course.tags ?? [])];
+    if (course.requirementSubtype === 'triangle1') tags.push('△1');
+    if (course.requirementSubtype === 'triangle2') tags.push('△2');
+    setTitle(course.title);
+    setCredits(String(course.credits));
+    setCourseType(course.courseType);
+    setMemo(
+      `ID: ${course.id} | ${course.category || '未設定'}${course.group ? ` | ${course.group}` : ''}${course.rawRequired ? ` | ${course.rawRequired}` : ''}${tags.length ? ` | ${tags.join(' / ')}` : ''}`
+    );
+    setCourseSearchOpen(false);
   };
+
+  const courseCategories = useMemo(
+    () => [...new Set(importedCourses.map((course) => course.category).filter(Boolean))].sort(),
+    [importedCourses],
+  );
+
+  const courseGroups = useMemo(
+    () => [...new Set(importedCourses.map((course) => course.group).filter(Boolean))].sort(),
+    [importedCourses],
+  );
+
+  const courseLabels = useMemo(() => {
+    const collected = importedCourses.flatMap((course) => {
+      const tags = [...(course.tags ?? [])];
+      if (course.requirementSubtype === 'triangle1') tags.push('△1');
+      if (course.requirementSubtype === 'triangle2') tags.push('△2');
+      return tags;
+    });
+    return [...new Set(collected)].sort();
+  }, [importedCourses]);
+
+  const visibleCourses = useMemo(() => {
+    const keyword = courseSearchQuery.trim().toLowerCase().replace(/\s+/g, '');
+    return importedCourses.filter((course) => {
+      const tags = [...(course.tags ?? [])];
+      if (course.requirementSubtype === 'triangle1') tags.push('△1');
+      if (course.requirementSubtype === 'triangle2') tags.push('△2');
+      const searchable = [course.id, course.title, course.category, course.group, course.rawRequired ?? '', course.courseType, ...tags]
+        .join(' ')
+        .toLowerCase()
+        .replace(/\s+/g, '');
+      return (
+        (!keyword || searchable.includes(keyword)) &&
+        (courseCategory === 'all' || course.category === courseCategory) &&
+        (courseGroup === 'all' || course.group === courseGroup) &&
+        (courseTypeFilter === 'all' || course.courseType === courseTypeFilter) &&
+        (courseTag === 'all' || tags.includes(courseTag))
+      );
+    });
+  }, [courseSearchQuery, importedCourses, courseCategory, courseGroup, courseTypeFilter, courseTag]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -665,55 +790,99 @@ function EditModal({
         <div className="tt-dialog__body">
           <div className="form-grid">
             <Field label="授業名" required>
-              <div style={{ position: 'relative' }}>
-                {/* 学科選択時にドロップダウンが開いている場合のみ表示 */}
-                {showCourseDropdown && hasCurriculum && importedCourses.length > 0 && (
-                  <select
-                    value={selectedCourseId}
-                    onChange={(e) => handleCourseSelect(e.target.value)}
-                    style={{ 
-                      marginBottom: '0.5rem',
-                      width: '100%'
-                    }}
-                    autoFocus
-                  >
-                    <option value="">-- 登録済み科目から選択 --</option>
-                    {importedCourses.map((course) => (
-                      <option key={course.id} value={course.id}>
-                        {course.title} ({course.credits}単位) - {course.category}
-                      </option>
-                    ))}
-                  </select>
-                )}
-                <div style={{ display: 'flex', gap: '0.25rem' }}>
+              <div className="course-picker">
+                <div className="course-picker__row">
                   <input
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="例：電力システム工学A"
-                    style={{ flex: 1 }}
                   />
-                  {/* 学科選択時のみ検索ボタンを表示 */}
                   {hasCurriculum && importedCourses.length > 0 && (
                     <button
                       type="button"
-                      onClick={() => setShowCourseDropdown(!showCourseDropdown)}
-                      style={{
-                        padding: '0.5rem 0.75rem',
-                        backgroundColor: showCourseDropdown ? 'var(--primary)' : 'var(--bg-secondary)',
-                        border: '1px solid var(--stroke)',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        fontSize: '1rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center'
-                      }}
+                      onClick={() => setCourseSearchOpen((prev) => !prev)}
+                      className="btn-ghost course-picker__toggle"
+                      aria-pressed={courseSearchOpen}
                       title="科目を検索"
                     >
                       🔍
                     </button>
                   )}
                 </div>
+
+                {courseSearchOpen && hasCurriculum && importedCourses.length > 0 && (
+                  <div className="course-picker__panel">
+                    <div className="course-picker__filters">
+                      <input
+                        value={courseSearchQuery}
+                        onChange={(e) => setCourseSearchQuery(e.target.value)}
+                        placeholder="科目名 / ID / 区分 / タグで検索"
+                      />
+                      <select value={courseCategory} onChange={(e) => setCourseCategory(e.target.value)}>
+                        <option value="all">カテゴリすべて</option>
+                        {courseCategories.map((value) => (
+                          <option key={value} value={value}>{value}</option>
+                        ))}
+                      </select>
+                      <select value={courseGroup} onChange={(e) => setCourseGroup(e.target.value)}>
+                        <option value="all">科目群すべて</option>
+                        {courseGroups.map((value) => (
+                          <option key={value} value={value}>{value}</option>
+                        ))}
+                      </select>
+                      <select value={courseTypeFilter} onChange={(e) => setCourseTypeFilter(e.target.value as CourseType | 'all')}>
+                        <option value="all">区分すべて</option>
+                        <option value="required">必修</option>
+                        <option value="elective-required">選択必修</option>
+                        <option value="elective">選択</option>
+                      </select>
+                      <select value={courseTag} onChange={(e) => setCourseTag(e.target.value)}>
+                        <option value="all">タグすべて</option>
+                        {courseLabels.map((value) => (
+                          <option key={value} value={value}>{value}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="course-picker__summary small">
+                      表示 {Math.min(visibleCourses.length, courseSearchQuery.trim() ? 50 : 30)} 件 / 候補 {visibleCourses.length} 件
+                    </div>
+
+                    <div className="course-picker__results">
+                      {visibleCourses.length === 0 ? (
+                        <div className="course-picker__empty">一致する科目がありません。</div>
+                      ) : (
+                        visibleCourses.slice(0, courseSearchQuery.trim() ? 50 : 30).map((course) => {
+                          const tags = [...(course.tags ?? [])];
+                          if (course.requirementSubtype === 'triangle1') tags.push('△1');
+                          if (course.requirementSubtype === 'triangle2') tags.push('△2');
+                          return (
+                            <button
+                              key={course.id}
+                              type="button"
+                              className="course-picker__result"
+                              onClick={() => selectCourse(course)}
+                            >
+                              <div className="course-picker__result-head">
+                                <div>
+                                  <strong>{course.title}</strong>
+                                  <div className="small">{course.id} / {course.category || '未設定'} / {course.group || '未設定'}</div>
+                                </div>
+                                <CourseTypeBadge courseType={course.courseType} />
+                              </div>
+                              <div className="course-picker__chips">
+                                {tags.map((tag) => <CourseTagBadge key={`${course.id}-${tag}`} label={tag} />)}
+                              </div>
+                              <div className="course-picker__meta small">
+                                単位数 {course.credits} / raw_required: {course.rawRequired || 'なし'}
+                              </div>
+                            </button>
+                          );
+                        })
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </Field>
             <Field label="教場">
