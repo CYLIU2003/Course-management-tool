@@ -11,11 +11,19 @@ import CourseSearchPanel from "./components/courses/CourseSearchPanel";
 import CourseTagBadge from "./components/courses/CourseTagBadge";
 import CourseTypeBadge from "./components/courses/CourseTypeBadge";
 import { DataLoadNotice } from "./components/status/DataLoadNotice";
+import CalendarExportPanel from "./components/CalendarExportPanel";
 import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./utils/academicProgress";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS, CSVAutoLoadError } from "./utils/autoLoadCSV";
 import type { AutoLoadDepartmentCSVResult } from "./utils/autoLoadCSV";
 import { buildDashboardSnapshot } from "./utils/academicProgress";
 import { buildSyncedCourseCell, selectBestOfferingDetailed } from "./utils/courseOffering";
+import {
+  buildCalendarExportFilename,
+  buildCalendarExportIcs,
+  createFallbackAcademicCalendarConfig,
+  downloadIcsFile,
+  loadAcademicCalendarConfig,
+} from "./utils/icsExport";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -50,16 +58,6 @@ type Settings = AcademicSettings & {
   periods: { id: number; label: string; time: string }[];
   title: string;
   showTime: boolean;
-};
-
-const DAY_JA_TO_INDEX: Record<string, number> = {
-  "日": 0,
-  "月": 1,
-  "火": 2,
-  "水": 3,
-  "木": 4,
-  "金": 5,
-  "土": 6,
 };
 
 function normalizeSearchText(value: string) {
@@ -134,14 +132,12 @@ export default function TimetableApp() {
   const [selectedDepartmentId, setSelectedDepartmentId] = useState<string>(() => {
     return localStorage.getItem("selected_department_id") ?? AVAILABLE_DEPARTMENTS[0].id;
   });
-  
-  // 科目リストの状態管理
+
   const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
   const [csvLoading, setCsvLoading] = useState(false);
   const [csvLoadResult, setCsvLoadResult] = useState<AutoLoadDepartmentCSVResult | null>(null);
   const [csvLoadError, setCsvLoadError] = useState<string | null>(null);
 
-  // デバッグ用: importedCoursesの変更を監視
   useEffect(() => {
     if (import.meta.env.DEV) {
       console.log('📚 importedCourses changed:', importedCourses.length, 'courses');
@@ -150,7 +146,7 @@ export default function TimetableApp() {
       }
     }
   }, [importedCourses]);
-  
+
   const [settings, setSettings] = useState<Settings>(() => {
     const defaults = createDefaultSettings();
     const stored = load<Partial<Settings>>("timetable_settings_v2");
@@ -165,12 +161,11 @@ export default function TimetableApp() {
     };
   });
 
-  // デバッグ用: curriculumの状態を監視
   useEffect(() => {
     if (import.meta.env.DEV) {
       console.log('🎓 Curriculum status:', {
         hasCurriculum: !!settings.curriculum,
-        curriculum: settings.curriculum
+        curriculum: settings.curriculum,
       });
     }
   }, [settings.curriculum]);
@@ -193,7 +188,7 @@ export default function TimetableApp() {
         curriculum: {
           ...result.curriculum,
           name: `${result.departmentName} ${year}年度入学`,
-        }
+        },
       }));
 
       setImportedCourses(result.courses);
@@ -236,8 +231,8 @@ export default function TimetableApp() {
           ...prev,
           curriculum: {
             ...result.curriculum,
-            name: `${result.departmentName} ${year}年度入学`
-          }
+            name: `${result.departmentName} ${year}年度入学`,
+          },
         }));
         setImportedCourses(result.courses);
         localStorage.setItem("selected_department_id", departmentId);
@@ -276,8 +271,8 @@ export default function TimetableApp() {
         ...prev,
         curriculum: {
           ...result.curriculum,
-          name: `${result.departmentName} ${year}年度入学`
-        }
+          name: `${result.departmentName} ${year}年度入学`,
+        },
       }));
       setImportedCourses([]);
       localStorage.setItem("selected_department_id", departmentId);
@@ -462,104 +457,42 @@ export default function TimetableApp() {
     reader.readAsText(file);
   };
 
-  const exportICS = () => {
-    const dtstamp = formatICSDateUTC(new Date());
-    const events: string[] = [];
-    
-    // 全年度のデータをエクスポート
-    const years = ["1年次", "2年次", "3年次", "4年次", "M1", "M2"] as const;
-    for (const year of years) {
-      const yearData = allYearsData[year];
-      if (!yearData) continue;
-      
-      const data = yearData.timetable;
-      const quarterRanges = yearData.quarterRanges;
-      
-      for (const quarter of QUARTERS) {
-        const range = quarterRanges[quarter];
-        if (!range?.start || !range?.end) continue;
-        const startDate = parseISODate(range.start);
-        const endDate = parseISODate(range.end);
-        if (!startDate || !endDate || startDate > endDate) continue;
-        const rangeEnd = new Date(endDate.getTime());
-        rangeEnd.setHours(23, 59, 59, 999);
+  const exportICS = async () => {
+    try {
+      const academicCalendar = await loadAcademicCalendarConfig(entranceYear).catch(() =>
+        createFallbackAcademicCalendarConfig(entranceYear, currentYearData.quarterRanges),
+      );
 
-        for (const day of settings.days) {
-          const weekday = mapDayLabelToIndex(day);
-          if (weekday === null) continue;
-          const first = getFirstOccurrence(startDate, weekday);
-          if (first > rangeEnd) continue;
+      const icsText = buildCalendarExportIcs(
+        {
+          academicYear: entranceYear,
+          range: 'full-year',
+          alarmMinutes: 0,
+          includeRoom: true,
+          includeTeacher: true,
+          includeAssignmentDeadlines: false,
+          includeExamDates: false,
+          academicCalendar,
+          quarterRanges: currentYearData.quarterRanges,
+        },
+        {
+          timetable: currentYearData.timetable,
+          academicYearLabel: currentYear,
+          days: settings.days,
+          periods: settings.periods,
+        },
+      );
 
-          for (const period of settings.periods) {
-            const cell = data[quarter]?.[day]?.[String(period.id)] ?? null;
-            if (!cell) continue;
-            const timeRange = parseTimeRange(period.time);
-          if (!timeRange) continue;
-
-          let occurrence = new Date(first.getTime());
-          while (occurrence <= rangeEnd) {
-            const startDateTime = combineDateAndTime(occurrence, timeRange.startHour, timeRange.startMinute);
-            const endDateTime = combineDateAndTime(occurrence, timeRange.endHour, timeRange.endMinute);
-            if (endDateTime <= startDateTime) break;
-
-            const summary = `${cell.title} (${quarter})`;
-            const lines = [
-              "BEGIN:VEVENT",
-              `UID:${quarter}-${day}-${period.id}-${startDateTime.getTime()}@timetable.local`,
-              `DTSTAMP:${dtstamp}`,
-              `DTSTART;TZID=Asia/Tokyo:${formatICSDate(startDateTime)}`,
-              `DTEND;TZID=Asia/Tokyo:${formatICSDate(endDateTime)}`,
-              `SUMMARY:${escapeICSText(summary)}`,
-            ];
-            if (cell.room) {
-              lines.push(`LOCATION:${escapeICSText(cell.room)}`);
-            }
-            const descriptionParts: string[] = [];
-            if (cell.teacher) descriptionParts.push(`担当: ${cell.teacher}`);
-            if (cell.memo) descriptionParts.push(cell.memo);
-            if (descriptionParts.length) {
-              lines.push(`DESCRIPTION:${escapeICSText(descriptionParts.join("\\n"))}`);
-            }
-            lines.push(`CATEGORIES:${quarter}`);
-            lines.push("END:VEVENT");
-            events.push(...lines);
-
-            occurrence = addDays(occurrence, 7);
-          }
-        }
+      if (!icsText.includes('BEGIN:VEVENT')) {
+        alert('出力できる授業が見つかりません。クォーター期間と時刻を確認してください。');
+        return;
       }
-      }
-    }
 
-    if (!events.length) {
-      alert("出力できる授業が見つかりません。クオーター期間と時刻を確認してください。");
-      return;
+      downloadIcsFile(icsText, buildCalendarExportFilename(entranceYear, 'full-year'));
+    } catch (error) {
+      console.error('ICS export failed:', error);
+      alert('ICS出力に失敗しました。');
     }
-
-    const lines = [
-      "BEGIN:VCALENDAR",
-      "VERSION:2.0",
-      "PRODID:-//TCU Timetable//JP",
-      "CALSCALE:GREGORIAN",
-      "METHOD:PUBLISH",
-      "BEGIN:VTIMEZONE",
-      "TZID:Asia/Tokyo",
-      "BEGIN:STANDARD",
-      "DTSTART:19700101T000000",
-      "TZOFFSETFROM:+0900",
-      "TZOFFSETTO:+0900",
-      "TZNAME:JST",
-      "END:STANDARD",
-      "END:VTIMEZONE",
-      ...events,
-      "END:VCALENDAR",
-    ];
-    const blob = new Blob([lines.join("\r\n")], { type: "text/calendar" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `timetable_${new Date().toISOString().slice(0, 10)}.ics`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   };
 
   type CopyMode = "overwrite" | "fill";
@@ -670,8 +603,8 @@ export default function TimetableApp() {
       settings={settings}
       snapshot={dashboardSnapshot}
       importedCourses={importedCourses}
-        allYearsData={allYearsData}
-        currentYear={currentYear}
+      allYearsData={allYearsData}
+      currentYear={currentYear}
       onBack={() => setCurrentPage("timetable")}
     />
   ) : currentPage === "courses" ? (
@@ -683,6 +616,14 @@ export default function TimetableApp() {
         status={csvLoading ? "loading" : csvLoadError ? "failed" : csvLoadResult?.status === "partial" ? "partial" : csvLoadResult?.status === "success" ? "ready" : "idle"}
         message={csvLoadError}
         onRetry={csvLoadError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
+      />
+      <CalendarExportPanel
+        academicYear={entranceYear}
+        academicYearLabel={currentYear}
+        timetable={currentYearData.timetable}
+        quarterRanges={currentYearData.quarterRanges}
+        days={settings.days}
+        periods={settings.periods}
       />
       <WarningPanel warnings={dashboardSnapshot.warnings} />
 
@@ -1360,122 +1301,4 @@ function createDefaultSettings(): Settings {
     showTime: true,
     requiredCredits: 124, // デフォルト値
   };
-}
-
-function parseTimeRange(time: string) {
-  if (!time) return null;
-  const normalized = time.replace(/\s+/g, "");
-  const match = normalized.match(/^(\d{1,2}):(\d{2})[–-](\d{1,2}):(\d{2})$/);
-  if (!match) return null;
-  const [, sh, sm, eh, em] = match;
-  const startHour = Number(sh);
-  const startMinute = Number(sm);
-  const endHour = Number(eh);
-  const endMinute = Number(em);
-  if (
-    Number.isNaN(startHour) ||
-    Number.isNaN(startMinute) ||
-    Number.isNaN(endHour) ||
-    Number.isNaN(endMinute)
-  ) {
-    return null;
-  }
-  return { startHour, startMinute, endHour, endMinute };
-}
-
-function formatICSDate(date: Date) {
-  const pad = (v: number) => String(v).padStart(2, "0");
-  return (
-    `${date.getFullYear()}` +
-    `${pad(date.getMonth() + 1)}` +
-    `${pad(date.getDate())}` +
-    "T" +
-    `${pad(date.getHours())}` +
-    `${pad(date.getMinutes())}` +
-    `${pad(date.getSeconds())}`
-  );
-}
-
-function formatICSDateUTC(date: Date) {
-  const pad = (v: number) => String(v).padStart(2, "0");
-  return (
-    `${date.getUTCFullYear()}` +
-    `${pad(date.getUTCMonth() + 1)}` +
-    `${pad(date.getUTCDate())}` +
-    "T" +
-    `${pad(date.getUTCHours())}` +
-    `${pad(date.getUTCMinutes())}` +
-    `${pad(date.getUTCSeconds())}` +
-    "Z"
-  );
-}
-
-function escapeICSText(text: string) {
-  return text
-    .replace(/\\/g, "\\\\")
-    .replace(/;/g, "\\;")
-    .replace(/,/g, "\\,")
-    .replace(/\r\n|\r|\n/g, "\\n");
-}
-
-function combineDateAndTime(date: Date, hour: number, minute: number) {
-  const next = new Date(date.getTime());
-  next.setHours(hour, minute, 0, 0);
-  return next;
-}
-
-function addDays(date: Date, amount: number) {
-  const next = new Date(date.getTime());
-  next.setDate(next.getDate() + amount);
-  return next;
-}
-
-function parseISODate(value: string): Date | null {
-  if (!value) return null;
-  const date = new Date(`${value}T00:00:00`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
-
-function getFirstOccurrence(start: Date, targetDay: number) {
-  const first = new Date(start.getTime());
-  const diff = (targetDay - first.getDay() + 7) % 7;
-  first.setDate(first.getDate() + diff);
-  return first;
-}
-
-function mapDayLabelToIndex(day: string): number | null {
-  if (!day) return null;
-  const trimmed = day.trim();
-  if (trimmed in DAY_JA_TO_INDEX) return DAY_JA_TO_INDEX[trimmed];
-  const head = trimmed.charAt(0);
-  if (head && head in DAY_JA_TO_INDEX) return DAY_JA_TO_INDEX[head];
-  const lower = trimmed.toLowerCase();
-  switch (lower) {
-    case "sun":
-    case "sunday":
-      return 0;
-    case "mon":
-    case "monday":
-      return 1;
-    case "tue":
-    case "tues":
-    case "tuesday":
-      return 2;
-    case "wed":
-    case "wednesday":
-      return 3;
-    case "thu":
-    case "thur":
-    case "thurs":
-    case "thursday":
-      return 4;
-    case "fri":
-    case "friday":
-      return 5;
-    case "sat":
-    case "saturday":
-      return 6;
-    default:
-      return null;
-  }
 }

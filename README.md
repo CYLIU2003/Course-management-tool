@@ -53,6 +53,13 @@
 - ICS形式でカレンダーに出力できます。
 - LocalStorageに自動保存されます。
 
+### 6. カレンダー出力
+- 1Q / 2Q / 3Q / 4Q / 前期 / 後期 / 年間 でICSファイルを出力できます。
+- 通知時間は 0分 / 10分 / 30分前から選べます。
+- 教室や担当教員の表示を切り替えられます。
+- iPhone や Google Calendar に取り込める `text/calendar` 形式で保存されます。
+- `public/academic-calendar/2026.json` を参照して、クォーター期間と除外日を扱います。
+
 ---
 
 ## セットアップ
@@ -95,6 +102,8 @@ npm run check:all
 ```text
 Course-management-tool/
 ├── public/
+│   ├── academic-calendar/
+│   │   └── 2026.json
 │   └── department/rikou/
 │       ├── denki_credit_requirements.csv
 │       ├── denki_timetable_by_category.csv

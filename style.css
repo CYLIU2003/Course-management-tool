@@ -978,6 +978,64 @@ html[data-theme="eco"] {
   color: var(--text-main);
 }
 
+.calendar-export-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.calendar-export-panel__notice {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklab, var(--warning) 22%, var(--border-soft) 78%);
+  background: color-mix(in oklab, var(--warning-soft) 72%, var(--surface) 28%);
+  color: var(--text-main);
+}
+
+.calendar-export-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.calendar-export-panel__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text-main);
+}
+
+.calendar-export-panel__toggle input[type="checkbox"] {
+  accent-color: var(--primary);
+}
+
+.calendar-export-panel__toggle small {
+  margin-left: 6px;
+  color: var(--text-sub);
+}
+
+.calendar-export-panel__toggle--disabled {
+  background: color-mix(in oklab, var(--surface) 92%, var(--warning-soft) 8%);
+}
+
+.calendar-export-panel__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.calendar-export-panel__foot .small {
+  display: grid;
+  gap: 4px;
+}
+
 .data-load-notice {
   display: flex;
   align-items: center;
