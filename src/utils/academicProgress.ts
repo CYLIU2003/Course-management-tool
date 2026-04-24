@@ -3,6 +3,19 @@ export type CourseType = "required" | "elective-required" | "elective";
 export type AcademicQuarter = "1Q" | "2Q" | "3Q" | "4Q";
 export type AcademicYear = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
 
+export interface CourseOffering {
+  day?: string;
+  period?: string;
+  term?: string;
+  year?: string;
+  className?: string;
+  teacher?: string;
+  lectureCode?: string;
+  room?: string;
+  target?: string;
+  remarks?: string;
+}
+
 export interface AcademicCourse {
   id: string;
   title: string;
@@ -13,6 +26,8 @@ export interface AcademicCourse {
   rawRequired?: string;
   tags?: string[];
   requirementSubtype?: 'triangle1' | 'triangle2' | 'none';
+  sourceKind?: 'curriculum' | 'schedule';
+  offerings?: CourseOffering[];
 }
 
 export interface AcademicCourseCell {
@@ -24,6 +39,12 @@ export interface AcademicCourseCell {
   credits?: number;
   grade?: Grade;
   courseType?: CourseType;
+  lectureCode?: string;
+  term?: string;
+  target?: string;
+  className?: string;
+  scheduleDay?: string;
+  schedulePeriod?: string;
 }
 
 export type AcademicTimetable = Record<

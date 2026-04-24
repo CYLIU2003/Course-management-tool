@@ -1,5 +1,5 @@
-import { parseCSVFile, parseCreditRequirements, parseCourses } from './csvImporter';
-import type { CreditRequirementRow, CourseRow } from './csvImporter';
+import { parseCSVFile, parseCreditRequirements, parseCourses, mergeCoursesWithSchedule } from './csvImporter';
+import type { CreditRequirementRow, CourseRow, ClassScheduleRow } from './csvImporter';
 
 /**
  * 学科の定義
@@ -39,6 +39,7 @@ type CSVPaths = {
   timetable: string;
   fallbackRequirements?: string;
   fallbackTimetable?: string;
+  scheduleCandidates: string[];
 };
 
 function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
@@ -50,13 +51,38 @@ function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
       timetable: `${basePath}/${entranceYear}/${departmentId}_timetable_by_category.csv`,
       fallbackRequirements: `${basePath}/${departmentId}_credit_requirements.csv`,
       fallbackTimetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
+      scheduleCandidates: [
+        `${basePath}/${entranceYear}/${departmentId}_${entranceYear}_spring_schedule.csv`,
+        `${basePath}/${entranceYear}/rikou_${entranceYear}_spring_schedule.csv`,
+        `${basePath}/${departmentId}_${entranceYear}_spring_schedule.csv`,
+        `${basePath}/rikou_${entranceYear}_spring_schedule.csv`,
+      ],
     };
   }
 
   return {
     requirements: `${basePath}/${departmentId}_credit_requirements.csv`,
     timetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
+    scheduleCandidates: [
+      `${basePath}/${departmentId}_spring_schedule.csv`,
+      `${basePath}/rikou_spring_schedule.csv`,
+    ],
   };
+}
+
+async function fetchOptionalCSVText(paths: string[]) {
+  for (const path of paths) {
+    const response = await fetch(path);
+    if (response.ok) {
+      return { text: await response.text(), path };
+    }
+
+    if (response.status !== 404) {
+      throw new Error(`Failed to load optional CSV. path=${path} (${response.status} ${response.statusText})`);
+    }
+  }
+
+  return null;
 }
 
 async function fetchCSVText(primaryPath: string, fallbackPath?: string) {
@@ -116,9 +142,24 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     
     const timetableRows = await parseCSVFile<CourseRow>(timetableFile);
     console.log('✅ Parsed timetable rows:', timetableRows.length);
+
+    const scheduleResult = await fetchOptionalCSVText(paths.scheduleCandidates);
+    let scheduleRows: ClassScheduleRow[] = [];
+    if (scheduleResult) {
+      console.log('📥 Fetching schedule from:', scheduleResult.path);
+      const scheduleBlob = new Blob([scheduleResult.text], { type: 'text/csv' });
+      const scheduleFile = new File([scheduleBlob], scheduleResult.path.split('/').pop() ?? 'spring_schedule.csv', { type: 'text/csv' });
+      scheduleRows = await parseCSVFile<ClassScheduleRow>(scheduleFile);
+      console.log('✅ Parsed schedule rows:', scheduleRows.length);
+    } else {
+      console.log('ℹ️ Optional schedule CSV not found. Continuing without timetable offerings.');
+    }
     
     const curriculum = parseCreditRequirements(requirementRows);
-    const courses = parseCourses(timetableRows);
+    const timetableCourses = parseCourses(timetableRows);
+    const courses = scheduleRows.length > 0
+      ? mergeCoursesWithSchedule(timetableCourses, scheduleRows)
+      : timetableCourses;
     
     // 学科情報を取得
     const dept = AVAILABLE_DEPARTMENTS.find(d => d.id === departmentId);

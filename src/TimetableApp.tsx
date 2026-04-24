@@ -10,7 +10,7 @@ import AppSettingsModal from "./components/settings/AppSettingsModal";
 import CourseSearchPanel from "./components/courses/CourseSearchPanel";
 import CourseTagBadge from "./components/courses/CourseTagBadge";
 import CourseTypeBadge from "./components/courses/CourseTypeBadge";
-import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseType, Grade } from "./utils/academicProgress";
+import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./utils/academicProgress";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS } from "./utils/autoLoadCSV";
 import { buildDashboardSnapshot } from "./utils/academicProgress";
 
@@ -58,6 +58,60 @@ const DAY_JA_TO_INDEX: Record<string, number> = {
   "金": 5,
   "土": 6,
 };
+
+function normalizeSearchText(value: string) {
+  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
+}
+
+function getOfferingSearchText(offering: CourseOffering) {
+  return [
+    offering.day,
+    offering.period,
+    offering.term,
+    offering.year,
+    offering.className,
+    offering.teacher,
+    offering.lectureCode,
+    offering.room,
+    offering.target,
+    offering.remarks,
+  ].filter(Boolean).join(' ');
+}
+
+function pickOffering(course: AcademicCourse, day: string, periodId: number) {
+  const offerings = course.offerings ?? [];
+  if (offerings.length === 0) {
+    return undefined;
+  }
+
+  const periodText = String(periodId);
+  return offerings.find((offering) => {
+    const offeringDay = normalizeSearchText(offering.day ?? '');
+    const offeringPeriod = normalizeSearchText(offering.period ?? '');
+    return (
+      offeringDay.includes(normalizeSearchText(day)) &&
+      (offeringPeriod === normalizeSearchText(periodText) || offeringPeriod.includes(normalizeSearchText(periodText)))
+    );
+  }) ?? offerings[0];
+}
+
+function formatOfferingMemo(offering?: CourseOffering) {
+  if (!offering) {
+    return '';
+  }
+
+  const parts = [
+    offering.lectureCode ? `講義コード: ${offering.lectureCode}` : '',
+    offering.term ? `学期: ${offering.term}` : '',
+    offering.year ? `年次: ${offering.year}` : '',
+    offering.day && offering.period ? `開講: ${offering.day}${offering.period}限` : '',
+    offering.className ? `クラス: ${offering.className}` : '',
+    offering.target ? `受講対象: ${offering.target}` : '',
+    offering.remarks ? `備考: ${offering.remarks}` : '',
+  ].filter(Boolean);
+
+  return parts.join(' | ');
+}
 
 // ヘルパー関数群
 function createDefaultQuarterRanges(): QuarterRanges {
@@ -692,6 +746,17 @@ function Table({
                             {cell.teacher && <div>担当：{cell.teacher}</div>}
                           </div>
                         )}
+                        {(cell.lectureCode || cell.term || cell.target || cell.className || cell.scheduleDay || cell.schedulePeriod) && (
+                          <div className="meta small">
+                            {cell.lectureCode && <div>講義コード：{cell.lectureCode}</div>}
+                            {(cell.scheduleDay || cell.schedulePeriod) && (
+                              <div>開講：{cell.scheduleDay ?? ''}{cell.schedulePeriod ?? ''}限</div>
+                            )}
+                            {cell.term && <div>学期：{cell.term}</div>}
+                            {cell.className && <div>クラス：{cell.className}</div>}
+                            {cell.target && <div>受講対象：{cell.target}</div>}
+                          </div>
+                        )}
                         {cell.memo && <div className="memo">備考：{cell.memo}</div>}
                       </div>
                     ) : (
@@ -741,16 +806,28 @@ function EditModal({
   const [courseGroup, setCourseGroup] = useState("all");
   const [courseTypeFilter, setCourseTypeFilter] = useState<CourseType | "all">("all");
   const [courseTag, setCourseTag] = useState("all");
+  const [selectedOffering, setSelectedOffering] = useState<CourseOffering | undefined>(undefined);
 
   const selectCourse = (course: AcademicCourse) => {
     const tags = [...(course.tags ?? [])];
     if (course.requirementSubtype === 'triangle1') tags.push('△1');
     if (course.requirementSubtype === 'triangle2') tags.push('△2');
+    const offering = pickOffering(course, day, periodId);
+    setSelectedOffering(offering);
     setTitle(course.title);
     setCredits(String(course.credits));
     setCourseType(course.courseType);
+    setTeacher(offering?.teacher ?? '');
+    setRoom(offering?.room ?? '');
     setMemo(
-      `ID: ${course.id} | ${course.category || '未設定'}${course.group ? ` | ${course.group}` : ''}${course.rawRequired ? ` | ${course.rawRequired}` : ''}${tags.length ? ` | ${tags.join(' / ')}` : ''}`
+      [
+        `ID: ${course.id}`,
+        course.category || '未設定',
+        course.group || '',
+        course.rawRequired || '',
+        tags.length ? tags.join(' / ') : '',
+        formatOfferingMemo(offering),
+      ].filter(Boolean).join(' | ')
     );
     setCourseSearchOpen(false);
   };
@@ -776,13 +853,14 @@ function EditModal({
   }, [importedCourses]);
 
   const visibleCourses = useMemo(() => {
-    const keyword = courseSearchQuery.trim().toLowerCase().replace(/\s+/g, '');
+    const keyword = normalizeSearchText(courseSearchQuery.trim());
     return importedCourses.filter((course) => {
       const tags = [...(course.tags ?? [])];
       if (course.requirementSubtype === 'triangle1') tags.push('△1');
       if (course.requirementSubtype === 'triangle2') tags.push('△2');
-      const searchable = [course.id, course.title, course.category, course.group, course.rawRequired ?? '', course.courseType, ...tags]
+      const searchable = [course.id, course.title, course.category, course.group, course.rawRequired ?? '', course.courseType, ...tags, ...(course.offerings ?? []).map((offering) => getOfferingSearchText(offering))]
         .join(' ')
+        .normalize('NFKC')
         .toLowerCase()
         .replace(/\s+/g, '');
       return (
@@ -984,6 +1062,12 @@ function EditModal({
                 credits: credits ? parseFloat(credits) : undefined,
                 grade: grade !== "未履修" ? grade : undefined,
                 courseType,
+                lectureCode: selectedOffering?.lectureCode,
+                term: selectedOffering?.term,
+                target: selectedOffering?.target,
+                className: selectedOffering?.className,
+                scheduleDay: selectedOffering?.day,
+                schedulePeriod: selectedOffering?.period,
               })}
               className="btn-primary"
               disabled={!title.trim()}

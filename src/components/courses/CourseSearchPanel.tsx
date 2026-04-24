@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import CourseTagBadge from './CourseTagBadge';
 import CourseTypeBadge from './CourseTypeBadge';
-import type { AcademicCourse, CourseType } from '../../utils/academicProgress';
+import type { AcademicCourse, CourseType, CourseOffering } from '../../utils/academicProgress';
 
 type CourseSearchPanelProps = {
   courses: AcademicCourse[];
@@ -18,6 +18,28 @@ function getDisplayTags(course: AcademicCourse) {
   if (course.requirementSubtype === 'triangle1') tags.push('△1');
   if (course.requirementSubtype === 'triangle2') tags.push('△2');
   return tags;
+}
+
+function formatOffering(offering: CourseOffering) {
+  const parts = [offering.term, offering.year, offering.day && offering.period ? `${offering.day}${offering.period}限` : '', offering.teacher ? `担当 ${offering.teacher}` : '', offering.room ? `教室 ${offering.room}` : '']
+    .filter(Boolean);
+
+  return parts.join(' / ');
+}
+
+function getOfferingSearchText(offering: CourseOffering) {
+  return [
+    offering.day,
+    offering.period,
+    offering.term,
+    offering.year,
+    offering.className,
+    offering.teacher,
+    offering.lectureCode,
+    offering.room,
+    offering.target,
+    offering.remarks,
+  ].filter(Boolean).join(' ');
 }
 
 export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
@@ -46,6 +68,7 @@ export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
         course.rawRequired ?? '',
         course.courseType,
         ...displayTags,
+        ...(course.offerings ?? []).flatMap((offering) => [getOfferingSearchText(offering)]),
       ].join(' ')).includes(keyword);
       const matchesCategory = category === 'all' || course.category === category;
       const matchesGroup = group === 'all' || course.group === group;
@@ -130,6 +153,20 @@ export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
                 <div className="course-search__chips">
                   {displayTags.map((value) => <CourseTagBadge key={value} label={value} />)}
                 </div>
+                {(course.offerings?.length ?? 0) > 0 && (
+                  <div className="course-search__offerings">
+                    {course.offerings?.slice(0, 3).map((offering, index) => (
+                      <div key={`${course.id}-${index}`} className="course-search__offering">
+                        <strong>{formatOffering(offering) || '開講情報あり'}</strong>
+                        <span>
+                          {offering.lectureCode ? `講義コード ${offering.lectureCode}` : '講義コード未設定'}
+                          {offering.target ? ` / ${offering.target}` : ''}
+                          {offering.remarks ? ` / ${offering.remarks}` : ''}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
                 <dl className="course-search__details">
                   <div><dt>単位数</dt><dd>{course.credits}</dd></div>
                   <div><dt>カテゴリ</dt><dd>{course.category || '未設定'}</dd></div>
