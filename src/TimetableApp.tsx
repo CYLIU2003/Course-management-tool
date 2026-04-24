@@ -68,7 +68,7 @@ function getOfferingSearchText(offering: CourseOffering) {
     offering.day,
     offering.period,
     offering.term,
-    offering.year,
+    offering.gradeYear,
     offering.className,
     offering.teacher,
     offering.lectureCode,
@@ -103,7 +103,7 @@ function formatOfferingMemo(offering?: CourseOffering) {
   const parts = [
     offering.lectureCode ? `講義コード: ${offering.lectureCode}` : '',
     offering.term ? `学期: ${offering.term}` : '',
-    offering.year ? `年次: ${offering.year}` : '',
+      offering.gradeYear ? `年次: ${offering.gradeYear}` : '',
     offering.day && offering.period ? `開講: ${offering.day}${offering.period}限` : '',
     offering.className ? `クラス: ${offering.className}` : '',
     offering.target ? `受講対象: ${offering.target}` : '',
@@ -899,7 +899,10 @@ function EditModal({
                 <div className="course-picker__row">
                   <input
                     value={title}
-                    onChange={(e) => setTitle(e.target.value)}
+                    onChange={(e) => {
+                      setTitle(e.target.value);
+                      setSelectedOffering(undefined);
+                    }}
                     placeholder="例：電力システム工学A"
                   />
                   {hasCurriculum && importedCourses.length > 0 && (

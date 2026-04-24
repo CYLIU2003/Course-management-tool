@@ -1,4 +1,4 @@
-import { parseCSVFile, parseCreditRequirements, parseCourses, mergeCoursesWithSchedule } from './csvImporter';
+import { parseCSVFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithSchedule } from './csvImporter';
 import type { CreditRequirementRow, CourseRow, ClassScheduleRow } from './csvImporter';
 
 /**
@@ -14,16 +14,14 @@ export interface Department {
  * 利用可能な学科リスト
  */
 export const AVAILABLE_DEPARTMENTS: Department[] = [
-  { 
-    id: 'denki', 
-    name: '電気電子通信工学科', 
-    faculty: '理工学部' 
-  },
-  {
-    id: 'kikai',
-    name: '機械工学科',
-    faculty: '理工学部'
-  }
+  { id: 'denki', name: '電気電子通信工学科', faculty: '理工学部' },
+  { id: 'kikai', name: '機械工学科', faculty: '理工学部' },
+  { id: 'kikai_system', name: '機械システム工学科', faculty: '理工学部' },
+  { id: 'iyo', name: '医用工学科', faculty: '理工学部' },
+  { id: 'ouyou_kagaku', name: '応用化学科', faculty: '理工学部' },
+  { id: 'genshiryoku', name: '原子力安全工学科', faculty: '理工学部' },
+  { id: 'shizen_shizen', name: '自然科学科（自然コース）', faculty: '理工学部' },
+  { id: 'shizen_suuri', name: '自然科学科（数理コース）', faculty: '理工学部' },
 ] as const;
 
 /**
@@ -37,9 +35,12 @@ export const AVAILABLE_DEPARTMENTS: Department[] = [
 type CSVPaths = {
   requirements: string;
   timetable: string;
+  schedule: string;
+  sharedSchedule: string;
   fallbackRequirements?: string;
   fallbackTimetable?: string;
-  scheduleCandidates: string[];
+  fallbackSchedule?: string;
+  fallbackSharedSchedule?: string;
 };
 
 function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
@@ -49,36 +50,38 @@ function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
     return {
       requirements: `${basePath}/${entranceYear}/${departmentId}_credit_requirements.csv`,
       timetable: `${basePath}/${entranceYear}/${departmentId}_timetable_by_category.csv`,
+      schedule: `${basePath}/${entranceYear}/${departmentId}_${entranceYear}_spring_schedule.csv`,
+      sharedSchedule: `${basePath}/${entranceYear}/rikou_${entranceYear}_spring_schedule.csv`,
       fallbackRequirements: `${basePath}/${departmentId}_credit_requirements.csv`,
       fallbackTimetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
-      scheduleCandidates: [
-        `${basePath}/${entranceYear}/${departmentId}_${entranceYear}_spring_schedule.csv`,
-        `${basePath}/${entranceYear}/rikou_${entranceYear}_spring_schedule.csv`,
-        `${basePath}/${departmentId}_${entranceYear}_spring_schedule.csv`,
-        `${basePath}/rikou_${entranceYear}_spring_schedule.csv`,
-      ],
+      fallbackSchedule: `${basePath}/${departmentId}_${entranceYear}_spring_schedule.csv`,
+      fallbackSharedSchedule: `${basePath}/rikou_${entranceYear}_spring_schedule.csv`,
     };
   }
 
   return {
     requirements: `${basePath}/${departmentId}_credit_requirements.csv`,
     timetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
-    scheduleCandidates: [
-      `${basePath}/${departmentId}_spring_schedule.csv`,
-      `${basePath}/rikou_spring_schedule.csv`,
-    ],
+    schedule: `${basePath}/${departmentId}_spring_schedule.csv`,
+    sharedSchedule: `${basePath}/rikou_spring_schedule.csv`,
   };
 }
 
-async function fetchOptionalCSVText(paths: string[]) {
-  for (const path of paths) {
-    const response = await fetch(path);
-    if (response.ok) {
-      return { text: await response.text(), path };
-    }
+async function fetchOptionalCSVText(paths: Array<string | undefined>) {
+  for (const path of paths.filter(Boolean) as string[]) {
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        return { text: await response.text(), path };
+      }
 
-    if (response.status !== 404) {
-      throw new Error(`Failed to load optional CSV. path=${path} (${response.status} ${response.statusText})`);
+      if (import.meta.env.DEV && response.status !== 404) {
+        console.warn(`Optional CSV not loaded: ${path} (${response.status} ${response.statusText})`);
+      }
+    } catch (error) {
+      if (import.meta.env.DEV) {
+        console.warn(`Optional CSV fetch failed: ${path}`, error);
+      }
     }
   }
 
@@ -143,7 +146,12 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     const timetableRows = await parseCSVFile<CourseRow>(timetableFile);
     console.log('✅ Parsed timetable rows:', timetableRows.length);
 
-    const scheduleResult = await fetchOptionalCSVText(paths.scheduleCandidates);
+    const scheduleResult = await fetchOptionalCSVText([
+      paths.schedule,
+      paths.sharedSchedule,
+      paths.fallbackSchedule,
+      paths.fallbackSharedSchedule,
+    ]);
     let scheduleRows: ClassScheduleRow[] = [];
     if (scheduleResult) {
       console.log('📥 Fetching schedule from:', scheduleResult.path);
@@ -157,8 +165,11 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     
     const curriculum = parseCreditRequirements(requirementRows);
     const timetableCourses = parseCourses(timetableRows);
-    const courses = scheduleRows.length > 0
-      ? mergeCoursesWithSchedule(timetableCourses, scheduleRows)
+    const scheduleCourses = scheduleRows.length > 0
+      ? parseClassScheduleRows(scheduleRows, departmentId)
+      : [];
+    const courses = scheduleCourses.length > 0
+      ? mergeCoursesWithSchedule(timetableCourses, scheduleCourses)
       : timetableCourses;
     
     // 学科情報を取得
@@ -170,7 +181,7 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     return {
       curriculum,
       courses,
-      departmentName
+      departmentName,
     };
   } catch (error) {
     console.error('❌ Auto-load failed for department:', departmentId, error);

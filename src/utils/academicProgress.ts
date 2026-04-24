@@ -4,16 +4,20 @@ export type AcademicQuarter = "1Q" | "2Q" | "3Q" | "4Q";
 export type AcademicYear = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
 
 export interface CourseOffering {
-  day?: string;
-  period?: string;
-  term?: string;
-  year?: string;
+  departmentId: string;
+  sourceDepartment?: string;
+  day: string;
+  period: string;
+  term: string;
+  gradeYear?: string;
   className?: string;
   teacher?: string;
   lectureCode?: string;
   room?: string;
   target?: string;
   remarks?: string;
+  requiredFlag?: string;
+  sourcePage?: number;
 }
 
 export interface AcademicCourse {

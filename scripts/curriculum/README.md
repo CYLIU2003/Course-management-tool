@@ -26,18 +26,12 @@
 - `term`
 - `gradeYear`
 - `className`
-- `id`
 - `title`
 - `teacher`
 - `lectureCode`
 - `room`
 - `target`
 - `remarks`
-- `credits`
-- `raw_required`
-- `category`
-- `group`
-- `courseType`
 - `requiredFlag`
 - `sourcePage`
 

@@ -161,6 +161,48 @@ html[data-theme="eco"] {
 .tcu-tt .quarter-range span{ font-size:12px; color:var(--muted); white-space:nowrap }
 .tcu-tt .quarter-range input[type="date"]{ flex:1 }
 
+/* ===== 科目検索の開講情報 ===== */
+.course-search__offerings {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: color-mix(in oklab, var(--card) 94%, #f8fafc 6%);
+}
+
+.course-search__offerings > strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.course-search__offering {
+  display: grid;
+  gap: 4px;
+  padding: 8px 0;
+  border-top: 1px solid var(--stroke);
+}
+
+.course-search__offering:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.course-search__offering strong {
+  font-size: 13px;
+}
+
+.course-search__offering span,
+.course-offering-inline {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.course-offering-inline {
+  margin-top: 4px;
+}
+
 /* ===== App Shell / Header ===== */
 .app-shell {
   min-height: 100vh;

@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import type { AcademicCourse, CourseOffering, CourseType } from './academicProgress';
+import type { AcademicCourse, CourseOffering } from './academicProgress';
 
 // CSV行の型定義
 export interface CreditRequirementRow {
@@ -25,18 +25,21 @@ export interface CourseRow {
 }
 
 export interface ClassScheduleRow {
-  [key: string]: string | undefined;
-}
-
-export interface ParsedClassScheduleRow {
-  id: string;
+  departmentId: string;
+  sourceDepartment: string;
+  day: string;
+  period: string;
+  term: string;
+  gradeYear: string;
+  className: string;
   title: string;
-  credits: number;
-  rawRequired: string;
-  category: string;
-  group: string;
-  courseType: CourseType;
-  offering: CourseOffering;
+  teacher: string;
+  lectureCode: string;
+  room: string;
+  target: string;
+  remarks: string;
+  requiredFlag: string;
+  sourcePage: string;
 }
 
 function parseTags(rawRequired: string): string[] {
@@ -54,144 +57,111 @@ function parseRequirementSubtype(rawRequired: string) {
   return 'none' as const;
 }
 
-function normalizeText(value: string) {
-  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '').replace(/[()（）]/g, '');
+export function normalizeCourseTitle(value: string) {
+  return value
+    .normalize('NFKC')
+    .replace(/\s+/g, '')
+    .replace(/（/g, '(')
+    .replace(/）/g, ')')
+    .replace(/ﾘﾒﾃﾞｨｱﾙｸﾗｽ/g, 'リメディアルクラス')
+    .trim();
 }
 
-function readFirstValue(row: ClassScheduleRow, keys: string[]) {
-  for (const key of keys) {
-    const value = row[key];
-    if (value && value.trim()) {
-      return value.trim();
+function parseScheduleCourseType(requiredFlag: string) {
+  return requiredFlag === '○' ? 'required' : 'elective';
+}
+
+export function parseClassScheduleRows(rows: ClassScheduleRow[], departmentId: string): AcademicCourse[] {
+  const filtered = rows.filter((row) => row.departmentId === departmentId && row.title && row.lectureCode);
+  const seen = new Set<string>();
+
+  return filtered.flatMap((row) => {
+    const key = [row.departmentId, row.lectureCode, row.day, row.period, row.term, row.className].join(':');
+    if (seen.has(key)) {
+      return [];
     }
-  }
+    seen.add(key);
 
-  return '';
+    const offering: CourseOffering = {
+      departmentId: row.departmentId,
+      sourceDepartment: row.sourceDepartment,
+      day: row.day,
+      period: row.period,
+      term: row.term,
+      gradeYear: row.gradeYear,
+      className: row.className,
+      teacher: row.teacher,
+      lectureCode: row.lectureCode,
+      room: row.room,
+      target: row.target,
+      remarks: row.remarks,
+      requiredFlag: row.requiredFlag,
+      sourcePage: Number(row.sourcePage) || undefined,
+    };
+
+    return [{
+      id: `schedule:${row.lectureCode}:${row.day}${row.period}:${row.term}:${row.className || 'all'}`,
+      title: row.title,
+      credits: 0,
+      category: '2026年度前期時間割',
+      group: [
+        row.term,
+        row.day && row.period ? `${row.day}${row.period}限` : '',
+        row.gradeYear ? `${row.gradeYear}年` : '',
+        row.className,
+      ].filter(Boolean).join(' / '),
+      courseType: parseScheduleCourseType(row.requiredFlag),
+      rawRequired: [
+        '2026前期時間割',
+        row.term,
+        row.day && row.period ? `${row.day}${row.period}限` : '',
+        row.gradeYear ? `${row.gradeYear}年` : '',
+        row.className ? `クラス:${row.className}` : '',
+        row.teacher ? `担当:${row.teacher}` : '',
+        row.room ? `教室:${row.room}` : '',
+        row.lectureCode ? `講義コード:${row.lectureCode}` : '',
+        row.target,
+        row.remarks,
+        row.requiredFlag ? `必修印:${row.requiredFlag}` : '',
+        row.sourcePage ? `PDF p.${row.sourcePage}` : '',
+      ].filter(Boolean).join(' / '),
+      tags: ['2026前期', '時間割', ...(row.requiredFlag === '○' ? ['必修印'] : [])],
+      requirementSubtype: 'none',
+      sourceKind: 'schedule',
+      offerings: [offering],
+    } satisfies AcademicCourse];
+  });
 }
 
-function parseScheduleCourseType(rawRequired: string, explicitType: string) {
-  if (explicitType === 'required' || explicitType === 'elective-required' || explicitType === 'elective') {
-    return explicitType;
-  }
-
-  if (rawRequired.includes('○')) return 'required';
-  if (rawRequired.includes('△1') || rawRequired.includes('△2')) return 'elective-required';
-  return 'elective';
-}
-
-function buildScheduleOffering(row: ClassScheduleRow): CourseOffering {
-  const lectureCode = readFirstValue(row, ['lectureCode', '講義コード', 'code', 'id']);
-
-  return {
-    day: readFirstValue(row, ['day', '曜']),
-    period: readFirstValue(row, ['period', '限']),
-    term: readFirstValue(row, ['term', '学期']),
-    year: readFirstValue(row, ['year', 'gradeYear', '年']),
-    className: readFirstValue(row, ['className', 'クラス']),
-    teacher: readFirstValue(row, ['teacher', '担当者']),
-    lectureCode,
-    room: readFirstValue(row, ['room', '教室']),
-    target: readFirstValue(row, ['target', '受講対象', '再履修者科目名']),
-    remarks: readFirstValue(row, ['remarks', '備考']),
-  };
-}
-
-export function parseClassScheduleRows(rows: ClassScheduleRow[]): ParsedClassScheduleRow[] {
-  return rows
-    .map((row) => {
-      const title = readFirstValue(row, ['title', '科目名']);
-      if (!title) {
-        return null;
-      }
-
-      const rawRequired = readFirstValue(row, ['raw_required', 'rawRequired', 'raw required', 'raw']);
-      const explicitType = readFirstValue(row, ['courseType', '科目区分']);
-      const id = readFirstValue(row, ['id', 'lectureCode', '講義コード']) || title;
-
-      return {
-        id,
-        title,
-        credits: parseFloat(readFirstValue(row, ['credits', '単位数'])) || 0,
-        rawRequired,
-        category: readFirstValue(row, ['category', '区分']),
-        group: readFirstValue(row, ['group', '科目群']),
-        courseType: parseScheduleCourseType(rawRequired, explicitType),
-        offering: buildScheduleOffering(row),
-      } satisfies ParsedClassScheduleRow;
-    })
-    .filter((row): row is ParsedClassScheduleRow => row !== null);
-}
-
-export function mergeCoursesWithSchedule(courses: AcademicCourse[], scheduleRows: ClassScheduleRow[]) {
-  const mergedCourses = courses.map((course) => ({
+export function mergeCoursesWithSchedule(courses: AcademicCourse[], scheduleCourses: AcademicCourse[]) {
+  const mergedCourses: AcademicCourse[] = courses.map((course) => ({
     ...course,
     sourceKind: course.sourceKind ?? 'curriculum',
     offerings: [...(course.offerings ?? [])],
   }));
-  const parsedRows = parseClassScheduleRows(scheduleRows);
 
-  const byId = new Map<string, AcademicCourse>();
-  const byTitle = new Map<string, AcademicCourse>();
-
-  for (const course of mergedCourses) {
-    byId.set(normalizeText(course.id), course);
-    byTitle.set(normalizeText(course.title), course);
-  }
-
-  for (const row of parsedRows) {
-    const matchedCourse = byId.get(normalizeText(row.id)) ?? byTitle.get(normalizeText(row.title));
+  for (const schedule of scheduleCourses) {
+    const normalizedTitle = normalizeCourseTitle(schedule.title);
+    const matchedCourse = mergedCourses.find((course) => normalizeCourseTitle(course.title) === normalizedTitle);
 
     if (matchedCourse) {
-      const duplicate = matchedCourse.offerings?.some((offering) => {
-        return [offering.day, offering.period, offering.term, offering.year, offering.className, offering.teacher, offering.lectureCode, offering.room]
-          .join('|') === [
-            row.offering.day,
-            row.offering.period,
-            row.offering.term,
-            row.offering.year,
-            row.offering.className,
-            row.offering.teacher,
-            row.offering.lectureCode,
-            row.offering.room,
-          ].join('|');
-      });
+      matchedCourse.offerings = [
+        ...(matchedCourse.offerings ?? []),
+        ...(schedule.offerings ?? []),
+      ];
 
-      if (!duplicate) {
-        matchedCourse.offerings = [...(matchedCourse.offerings ?? []), row.offering];
+      if (!matchedCourse.rawRequired && schedule.rawRequired) {
+        matchedCourse.rawRequired = schedule.rawRequired;
       }
 
-      if (!matchedCourse.rawRequired && row.rawRequired) {
-        matchedCourse.rawRequired = row.rawRequired;
-      }
-
-      if (!matchedCourse.category && row.category) {
-        matchedCourse.category = row.category;
-      }
-
-      if (!matchedCourse.group && row.group) {
-        matchedCourse.group = row.group;
-      }
-
-      if (!matchedCourse.courseType && row.courseType) {
-        matchedCourse.courseType = row.courseType;
+      if (!matchedCourse.tags?.length && schedule.tags?.length) {
+        matchedCourse.tags = schedule.tags;
       }
 
       continue;
     }
 
-    mergedCourses.push({
-      id: row.id,
-      title: row.title,
-      credits: row.credits,
-      category: row.category,
-      group: row.group,
-      courseType: row.courseType,
-      rawRequired: row.rawRequired,
-      tags: parseTags(row.rawRequired),
-      requirementSubtype: parseRequirementSubtype(row.rawRequired),
-      sourceKind: 'schedule',
-      offerings: [row.offering],
-    });
+    mergedCourses.push(schedule);
   }
 
   return mergedCourses;

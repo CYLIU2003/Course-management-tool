@@ -21,7 +21,15 @@ function getDisplayTags(course: AcademicCourse) {
 }
 
 function formatOffering(offering: CourseOffering) {
-  const parts = [offering.term, offering.year, offering.day && offering.period ? `${offering.day}${offering.period}限` : '', offering.teacher ? `担当 ${offering.teacher}` : '', offering.room ? `教室 ${offering.room}` : '']
+  const parts = [
+    offering.term,
+    offering.gradeYear,
+    offering.day && offering.period ? `${offering.day}${offering.period}限` : '',
+    offering.className ? `クラス ${offering.className}` : '',
+    offering.teacher ? `担当 ${offering.teacher}` : '',
+    offering.room ? `教室 ${offering.room}` : '',
+    offering.lectureCode ? `講義コード ${offering.lectureCode}` : '',
+  ]
     .filter(Boolean);
 
   return parts.join(' / ');
@@ -32,7 +40,7 @@ function getOfferingSearchText(offering: CourseOffering) {
     offering.day,
     offering.period,
     offering.term,
-    offering.year,
+    offering.gradeYear,
     offering.className,
     offering.teacher,
     offering.lectureCode,
@@ -155,11 +163,14 @@ export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
                 </div>
                 {(course.offerings?.length ?? 0) > 0 && (
                   <div className="course-search__offerings">
+                    <strong>開講情報</strong>
                     {course.offerings?.slice(0, 3).map((offering, index) => (
                       <div key={`${course.id}-${index}`} className="course-search__offering">
                         <strong>{formatOffering(offering) || '開講情報あり'}</strong>
                         <span>
                           {offering.lectureCode ? `講義コード ${offering.lectureCode}` : '講義コード未設定'}
+                          {offering.gradeYear ? ` / ${offering.gradeYear}年` : ''}
+                          {offering.className ? ` / ${offering.className}` : ''}
                           {offering.target ? ` / ${offering.target}` : ''}
                           {offering.remarks ? ` / ${offering.remarks}` : ''}
                         </span>

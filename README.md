@@ -39,8 +39,9 @@
 
 ### 3. CSV連携
 - 起動時に `public/department/rikou/` のCSVを自動読み込みします。
-- 電気電子通信工学科（`denki`）と機械工学科（`kikai`）を切り替えて読めます。
+- 電気電子通信工学科（`denki`）、機械工学科（`kikai`）、機械システム工学科（`kikai_system`）、医用工学科（`iyo`）、応用化学科（`ouyou_kagaku`）、原子力安全工学科（`genshiryoku`）、自然科学科（`shizen_shizen` / `shizen_suuri`）を切り替えて読めます。
 - 卒業要件CSVと科目一覧CSVを分けて管理できます。
+- 2026年度前期の時間割CSVがある場合は、科目一覧に開講情報として重ねて読み込みます。
 
 ### 4. PDF→CSV補助
 - PDFの直接取り込みはアプリ本体に入れていません。
@@ -88,7 +89,12 @@ Course-management-tool/
 │       ├── denki_credit_requirements.csv
 │       ├── denki_timetable_by_category.csv
 │       ├── kikai_credit_requirements.csv
-│       └── kikai_timetable_by_category.csv
+│       ├── kikai_timetable_by_category.csv
+│       └── 2026/
+│           ├── rikou_2026_spring_schedule.csv
+│           ├── denki_2026_spring_schedule.csv
+│           ├── kikai_2026_spring_schedule.csv
+│           └── ...
 ├── scripts/
 │   └── curriculum/
 │       ├── README.md
@@ -119,6 +125,7 @@ Course-management-tool/
 
 - 卒業要件CSV: `{学科ID}_credit_requirements.csv`
 - 科目一覧CSV: `{学科ID}_timetable_by_category.csv`
+- 2026年度前期時間割CSV: `{学科ID}_2026_spring_schedule.csv` または `rikou_2026_spring_schedule.csv`
 - 例: `denki_credit_requirements.csv` / `denki_timetable_by_category.csv`
 - 例: `kikai_credit_requirements.csv` / `kikai_timetable_by_category.csv`
 - 配置先: `public/department/rikou/`
