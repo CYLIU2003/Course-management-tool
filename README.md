@@ -35,10 +35,15 @@
 
 ### 3. CSV連携
 - 起動時に `public/department/rikou/` のCSVを自動読み込みします。
-- 現在は電気電子通信工学科（`denki`）を想定しています。
+- 電気電子通信工学科（`denki`）と機械工学科（`kikai`）を切り替えて読めます。
 - 卒業要件CSVと科目一覧CSVを分けて管理できます。
 
-### 4. データ保存と出力
+### 4. PDF→CSV補助
+- PDFの直接取り込みはアプリ本体に入れていません。
+- 変換補助は `scripts/curriculum/` に置きます。
+- 生成したCSVは人間が確認してから `public/department/rikou/` に配置します。
+
+### 5. データ保存と出力
 - JSONで全年度データを保存・復元できます。
 - ICS形式でカレンダーに出力できます。
 - LocalStorageに自動保存されます。
@@ -77,7 +82,13 @@ Course-management-tool/
 ├── public/
 │   └── department/rikou/
 │       ├── denki_credit_requirements.csv
-│       └── denki_timetable_by_category.csv
+│       ├── denki_timetable_by_category.csv
+│       ├── kikai_credit_requirements.csv
+│       └── kikai_timetable_by_category.csv
+├── scripts/
+│   └── curriculum/
+│       ├── README.md
+│       └── parse-kikai-2026.ts
 ├── src/
 │   ├── components/
 │   │   ├── AcademicOverview.tsx
@@ -105,9 +116,11 @@ Course-management-tool/
 - 卒業要件CSV: `{学科ID}_credit_requirements.csv`
 - 科目一覧CSV: `{学科ID}_timetable_by_category.csv`
 - 例: `denki_credit_requirements.csv` / `denki_timetable_by_category.csv`
+- 例: `kikai_credit_requirements.csv` / `kikai_timetable_by_category.csv`
 - 配置先: `public/department/rikou/`
 
 新しい学科を追加する場合は、上記のCSVを用意したうえで `src/utils/autoLoadCSV.ts` の `AVAILABLE_DEPARTMENTS` に学科情報を追加してください。
+PDFからCSVを作る場合は、まず `scripts/curriculum/` で生成してから、内容を確認して `public/department/rikou/` にコピーしてください。
 
 ---
 

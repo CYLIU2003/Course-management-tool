@@ -10,6 +10,9 @@ export interface AcademicCourse {
   category: string;
   group: string;
   courseType: CourseType;
+  rawRequired?: string;
+  tags?: string[];
+  requirementSubtype?: 'triangle1' | 'triangle2' | 'none';
 }
 
 export interface AcademicCourseCell {
@@ -60,6 +63,13 @@ export interface AcademicProgressItem {
 }
 
 export interface AcademicWarning {
+  id: string;
+  level: "info" | "warning" | "danger";
+  message: string;
+  detail?: string;
+}
+
+export interface DetailedRequirementWarning {
   id: string;
   level: "info" | "warning" | "danger";
   message: string;
@@ -409,6 +419,15 @@ export function generateGraduationWarnings(
   }
 
   return warnings;
+}
+
+export function generateDetailedGraduationWarnings(
+  allYearsData: AcademicAllYearsData,
+  courses: AcademicCourse[],
+): DetailedRequirementWarning[] {
+  void allYearsData;
+  void courses;
+  return [];
 }
 
 export function buildDashboardSnapshot(

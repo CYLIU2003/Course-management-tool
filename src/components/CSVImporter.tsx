@@ -223,8 +223,8 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
                 <strong>💡 ヒント:</strong>
                 <ul style={{ margin: '0.5rem 0 0 1.25rem', padding: 0 }}>
                   <li>departmentフォルダ内のCSVファイルを選択してください</li>
-                  <li>例: department/rikou/denki_credit_requirements.csv</li>
-                  <li>例: department/rikou/denki_timetable_by_category.csv</li>
+                  <li>例: public/department/rikou/denki_credit_requirements.csv</li>
+                  <li>例: public/department/rikou/kikai_timetable_by_category.csv</li>
                 </ul>
               </div>
             </div>

@@ -134,6 +134,9 @@ export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<"timetable" | "grades">("timetable");
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState<string>(() => {
+    return localStorage.getItem("selected_department_id") ?? AVAILABLE_DEPARTMENTS[0].id;
+  });
   
   // 科目リストの状態管理
   const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
@@ -168,10 +171,24 @@ export default function TimetableApp() {
     });
   }, [settings.curriculum]);
 
+  async function loadDepartment(departmentId: string) {
+    const result = await autoLoadDepartmentCSVs(departmentId);
+
+    setSettings(prev => ({
+      ...prev,
+      curriculum: {
+        ...result.curriculum,
+        name: result.departmentName
+      }
+    }));
+
+    setImportedCourses(result.courses);
+    localStorage.setItem("selected_department_id", departmentId);
+  }
+
   // 起動時にCSVを自動読み込み
   useEffect(() => {
     const loadCSVs = async () => {
-      // 既に読み込み済みの場合はスキップ
       if (importedCourses.length > 0 || settings.curriculum) {
         console.log('⏭️ CSVs already loaded, skipping auto-load');
         return;
@@ -179,28 +196,10 @@ export default function TimetableApp() {
 
       console.log('🚀 Starting auto-load...');
       try {
-        // デフォルトで最初の学科を読み込む
-        const defaultDept = AVAILABLE_DEPARTMENTS[0];
-        console.log('📚 Loading department:', defaultDept.name, `(ID: ${defaultDept.id})`);
-        
-        const result = await autoLoadDepartmentCSVs(defaultDept.id);
-        
-        // 卒業要件を設定
-        setSettings(prev => ({
-          ...prev,
-          curriculum: {
-            ...result.curriculum,
-            name: result.departmentName
-          }
-        }));
-        
-        // 科目リストを設定
-        setImportedCourses(result.courses);
-        
+        await loadDepartment(selectedDepartmentId);
         console.log('✅ Auto-load successful!');
       } catch (error) {
         console.error('❌ Auto-load failed:', error);
-        // エラーが発生しても続行（手動読み込みは可能）
       }
     };
 
@@ -599,6 +598,9 @@ export default function TimetableApp() {
               currentYear={currentYear}
               QUARTERS={QUARTERS}
               setImportedCourses={setImportedCourses}
+              selectedDepartmentId={selectedDepartmentId}
+              setSelectedDepartmentId={setSelectedDepartmentId}
+              loadDepartment={loadDepartment}
             />
           </div>
         </div>
@@ -1079,6 +1081,9 @@ function SettingsPopover({
   currentYear,
   QUARTERS,
   setImportedCourses,
+  selectedDepartmentId,
+  setSelectedDepartmentId,
+  loadDepartment,
 }: {
   settings: Settings;
   setSettings: React.Dispatch<React.SetStateAction<Settings>>;
@@ -1087,6 +1092,9 @@ function SettingsPopover({
   currentYear: Year;
   QUARTERS: readonly string[];
   setImportedCourses: React.Dispatch<React.SetStateAction<AcademicCourse[]>>;
+  selectedDepartmentId: string;
+  setSelectedDepartmentId: React.Dispatch<React.SetStateAction<string>>;
+  loadDepartment: (departmentId: string) => Promise<void>;
 }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState(settings.title);
@@ -1244,6 +1252,21 @@ function SettingsPopover({
             <div className="bulk-head">🎓 学科・カリキュラムテンプレート</div>
             <div className="form-grid">
               <Field label="学科を選択">
+                <select
+                  value={selectedDepartmentId}
+                  onChange={(e) => {
+                    const next = e.target.value;
+                    setSelectedDepartmentId(next);
+                    void loadDepartment(next);
+                  }}
+                >
+                  {AVAILABLE_DEPARTMENTS.map((dept) => (
+                    <option key={dept.id} value={dept.id}>
+                      {dept.faculty} {dept.name}
+                    </option>
+                  ))}
+                </select>
+                <div style={{ height: 8 }} />
                 <select
                   value={selectedTemplate}
                   onChange={(e) => {

@@ -18,10 +18,12 @@ export const AVAILABLE_DEPARTMENTS: Department[] = [
     id: 'denki', 
     name: '電気電子通信工学科', 
     faculty: '理工学部' 
+  },
+  {
+    id: 'kikai',
+    name: '機械工学科',
+    faculty: '理工学部'
   }
-  // 他の学科を追加する場合:
-  // { id: 'kikai', name: '機械工学科', faculty: '理工学部' },
-  // { id: 'joho', name: '情報工学科', faculty: '理工学部' },
 ] as const;
 
 /**

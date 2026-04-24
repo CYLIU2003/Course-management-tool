@@ -24,6 +24,21 @@ export interface CourseRow {
   courseType: 'required' | 'elective-required' | 'elective';
 }
 
+function parseTags(rawRequired: string): string[] {
+  const tags: string[] = [];
+  if (rawRequired.includes('※DS')) tags.push('DS');
+  if (rawRequired.includes('※MS')) tags.push('MS');
+  if (rawRequired.includes('G')) tags.push('G');
+  if (rawRequired.includes('*')) tags.push('STAR');
+  return tags;
+}
+
+function parseRequirementSubtype(rawRequired: string) {
+  if (rawRequired.includes('△1')) return 'triangle1' as const;
+  if (rawRequired.includes('△2')) return 'triangle2' as const;
+  return 'none' as const;
+}
+
 // CSVファイルを読み込む
 export function parseCSVFile<T>(file: File): Promise<T[]> {
   return new Promise((resolve, reject) => {
@@ -103,7 +118,10 @@ export function parseCourses(rows: CourseRow[]): AcademicCourse[] {
         credits: parseFloat(row.credits) || 0,
         category: row.category || '',
         group: row.group || '',
-        courseType: courseType
+        courseType: courseType,
+        rawRequired: row.raw_required || '',
+        tags: parseTags(row.raw_required || ''),
+        requirementSubtype: parseRequirementSubtype(row.raw_required || '')
       };
     });
   
