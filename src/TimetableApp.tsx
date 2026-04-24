@@ -1,9 +1,12 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import AcademicOverview from "./components/AcademicOverview";
-import CSVImporter from "./components/CSVImporter";
-import CourseList from "./components/CourseList";
+import React, { useEffect, useMemo, useState } from "react";
 import GradeManagement from "./components/GradeManagement";
-import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicCurriculum, AcademicSettings, AcademicTimetable, AcademicYearData, CourseType, Grade } from "./utils/academicProgress";
+import AppShell from "./components/layout/AppShell";
+import AppHeader from "./components/layout/AppHeader";
+import DataManagementMenu from "./components/layout/DataManagementMenu";
+import DashboardCards from "./components/dashboard/DashboardCards";
+import WarningPanel from "./components/dashboard/WarningPanel";
+import QuarterTabs from "./components/timetable/QuarterTabs";
+import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseType, Grade } from "./utils/academicProgress";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS } from "./utils/autoLoadCSV";
 import { buildDashboardSnapshot } from "./utils/academicProgress";
 
@@ -21,57 +24,6 @@ const DEFAULT_PERIODS: { id: number; label: string; time: string }[] = [
 
 type QuarterRange = { start: string; end: string };
 type QuarterRanges = Record<Quarter, QuarterRange>;
-
-// カリキュラムテンプレート型
-type CurriculumTemplate = AcademicCurriculum & {
-  departmentId?: string; // 学科ID (CSVファイル名のプレフィックス)
-  name: string; // 学科名
-};
-
-// 学科別カリキュラムテンプレート
-const CURRICULUM_TEMPLATES: CurriculumTemplate[] = [
-  {
-    name: "電気電子通信工学科",
-    departmentId: "denki",
-    requiredCredits: 124,
-    breakdown: { required: 88, electiveRequired: 20, elective: 16 },
-  },
-  {
-    name: "機械工学科",
-    departmentId: "kikai",
-    requiredCredits: 124,
-    breakdown: { required: 90, electiveRequired: 18, elective: 16 },
-  },
-  {
-    name: "情報工学科",
-    departmentId: "joho",
-    requiredCredits: 124,
-    breakdown: { required: 85, electiveRequired: 22, elective: 17 },
-  },
-  {
-    name: "建築学科",
-    departmentId: "kenchiku",
-    requiredCredits: 124,
-    breakdown: { required: 92, electiveRequired: 16, elective: 16 },
-  },
-  {
-    name: "都市工学科",
-    departmentId: "toshi",
-    requiredCredits: 124,
-    breakdown: { required: 88, electiveRequired: 20, elective: 16 },
-  },
-  {
-    name: "医用工学科",
-    departmentId: "iyo",
-    requiredCredits: 124,
-    breakdown: { required: 90, electiveRequired: 18, elective: 16 },
-  },
-  {
-    name: "カスタム(自由設定)",
-    requiredCredits: 124,
-    breakdown: { required: 0, electiveRequired: 0, elective: 124 },
-  },
-];
 
 type Timetable = AcademicTimetable;
 
@@ -291,29 +243,6 @@ export default function TimetableApp() {
     console.log('📚 Importing courses:', courses.length, 'courses');
     setImportedCourses(courses);
   };
-
-  const handleSelectCourse = (course: AcademicCourse) => {
-    // 科目を選択したら編集ダイアログを開く準備をする
-    // ここでは選択した科目情報をeditingに反映
-    if (editing.open && editing.day && editing.periodId) {
-      const updatedValue: CourseCell = {
-        title: course.title,
-        credits: course.credits,
-        courseType: course.courseType,
-        grade: '未履修',
-        room: '',
-        teacher: '',
-        color: '',
-        memo: `ID: ${course.id} | ${course.category}`
-      };
-      setEditing(prev => ({
-        ...prev,
-        value: updatedValue
-      }));
-    }
-  };
-
-  const fileRef = useRef<HTMLInputElement>(null);
   const exportJSON = () => {
     const blob = new Blob([JSON.stringify({ version: 2, settings, allYearsData }, null, 2)], {
       type: "application/json",
@@ -497,9 +426,25 @@ export default function TimetableApp() {
   const printPage = () => window.print();
 
   // 成績管理ページの表示切替
+  const handleDepartmentChange = async (departmentId: string) => {
+    setSelectedDepartmentId(departmentId);
+    await loadDepartment(departmentId);
+  };
+
+  const dataManagementMenu = (
+    <DataManagementMenu
+      onExportJson={exportJSON}
+      onImportJson={importJSON}
+      onExportIcs={exportICS}
+      onPrint={printPage}
+      onImportCurriculum={handleImportCurriculum}
+      onImportCourses={handleImportCourses}
+    />
+  );
+
   if (currentPage === "grades") {
     return (
-      <GradeManagement 
+      <GradeManagement
         settings={settings}
         snapshot={dashboardSnapshot}
         importedCourses={importedCourses}
@@ -509,110 +454,24 @@ export default function TimetableApp() {
   }
 
   return (
-    <div className="tcu-tt">
-      <header className="tt-toolbar print:hidden">
-        <div className="container tt-toolbar__inner">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: '0 0 auto' }}>
-            <h1 className="tt-title" style={{ margin: 0, fontSize: '1.1rem' }}>📚 時間割</h1>
-            
-            {/* 年度選択 - コンパクトなセレクト */}
-            <select 
-              value={currentYear}
-              onChange={(e) => setCurrentYear(e.target.value as Year)}
-              style={{
-                padding: '0.4rem 0.6rem',
-                fontSize: '0.9rem',
-                border: '1px solid var(--stroke)',
-                borderRadius: '4px',
-                backgroundColor: 'var(--bg)',
-                cursor: 'pointer'
-              }}
-            >
-              <option value="1年次">1年次</option>
-              <option value="2年次">2年次</option>
-              <option value="3年次">3年次</option>
-              <option value="4年次">4年次</option>
-              <option value="M1">M1</option>
-              <option value="M2">M2</option>
-            </select>
-          </div>
-          
-          {/* クオーター選択タブ - コンパクト版 */}
-          <div className="tt-tabs" role="tablist" aria-label="クオーター切替" style={{ margin: '0 auto' }}>
-            {QUARTERS.map((q) => (
-              <button
-                key={q}
-                className={`tt-tab${activeQuarter === q ? " is-active" : ""}`}
-                onClick={() => setActiveQuarter(q)}
-                aria-pressed={activeQuarter === q}
-                type="button"
-                style={{ fontSize: '0.9rem', padding: '0.4rem 0.8rem' }}
-              >
-                {q}
-              </button>
-            ))}
-          </div>
-          
-          <div className="tt-actions">
-            <button type="button" onClick={() => setCurrentPage("grades")} className="btn-primary">
-              📊 成績管理
-            </button>
-            <CSVImporter 
-              onImportCurriculum={handleImportCurriculum}
-              onImportCourses={handleImportCourses}
-            />
-            <CourseList 
-              courses={importedCourses}
-              onSelectCourse={handleSelectCourse}
-            />
-            <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost">
-              他Qへコピー
-            </button>
-            <button type="button" onClick={exportJSON} className="btn-ghost">
-              保存(JSON)
-            </button>
-            <label className="btn-ghost file-label">
-              読込(JSON)
-              <input
-                ref={fileRef}
-                type="file"
-                accept="application/json"
-                onChange={(e) => {
-                  const f = e.target.files?.[0];
-                  if (f) importJSON(f);
-                  e.currentTarget.value = "";
-                }}
-              />
-            </label>
-            <button type="button" onClick={exportICS} className="btn-ghost">
-              カレンダー(ICS)
-            </button>
-            <button type="button" onClick={printPage} className="btn-ghost">
-              印刷
-            </button>
-            <SettingsPopover
-              settings={settings}
-              setSettings={setSettings}
-              allYearsData={allYearsData}
-              setAllYearsData={setAllYearsData}
-              currentYear={currentYear}
-              QUARTERS={QUARTERS}
-              setImportedCourses={setImportedCourses}
-              selectedDepartmentId={selectedDepartmentId}
-              setSelectedDepartmentId={setSelectedDepartmentId}
-              loadDepartment={loadDepartment}
-            />
-          </div>
-        </div>
-      </header>
+    <AppShell>
+      <AppHeader
+        title="履修・成績管理"
+        departmentId={selectedDepartmentId}
+        departments={AVAILABLE_DEPARTMENTS}
+        currentYear={currentYear}
+        currentPage={currentPage}
+        onDepartmentChange={handleDepartmentChange}
+        onYearChange={(year: string) => setCurrentYear(year as Year)}
+        onPageChange={setCurrentPage}
+        dataMenu={dataManagementMenu}
+      />
 
-      <main className="container">
-        <AcademicOverview
-          snapshot={dashboardSnapshot}
-          curriculumName={settings.curriculum?.name}
-          compact
-        />
+      <main className="app-container app-main">
+        <DashboardCards snapshot={dashboardSnapshot} curriculumName={settings.curriculum?.name} />
+        <WarningPanel warnings={dashboardSnapshot.warnings} />
 
+        <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
         <section className="tt-card">
           <div className="section-title">
             <h2>{currentYear} - {activeQuarter} の時間割</h2>
@@ -656,16 +515,7 @@ export default function TimetableApp() {
           }}
         />
       )}
-
-      <style>{`
-        @media print {
-          .print\\:hidden { display: none !important; }
-          .print\\:block { display: block !important; }
-          @page { size: A4 landscape; margin: 10mm; }
-          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-        }
-      `}</style>
-    </div>
+    </AppShell>
   );
 }
 
@@ -1073,299 +923,6 @@ function QuarterCopyModal({
   );
 }
 
-function SettingsPopover({
-  settings,
-  setSettings,
-  allYearsData,
-  setAllYearsData,
-  currentYear,
-  QUARTERS,
-  setImportedCourses,
-  selectedDepartmentId,
-  setSelectedDepartmentId,
-  loadDepartment,
-}: {
-  settings: Settings;
-  setSettings: React.Dispatch<React.SetStateAction<Settings>>;
-  allYearsData: AllYearsData;
-  setAllYearsData: React.Dispatch<React.SetStateAction<AllYearsData>>;
-  currentYear: Year;
-  QUARTERS: readonly string[];
-  setImportedCourses: React.Dispatch<React.SetStateAction<AcademicCourse[]>>;
-  selectedDepartmentId: string;
-  setSelectedDepartmentId: React.Dispatch<React.SetStateAction<string>>;
-  loadDepartment: (departmentId: string) => Promise<void>;
-}) {
-  const [open, setOpen] = useState(false);
-  const [title, setTitle] = useState(settings.title);
-  const [showTime, setShowTime] = useState(settings.showTime);
-  const [daysStr, setDaysStr] = useState(settings.days.join(","));
-  const [periodsText, setPeriodsText] = useState(formatPeriods(settings.periods));
-  const [ranges, setRanges] = useState<QuarterRanges>(() => copyQuarterRanges(allYearsData[currentYear].quarterRanges));
-  const [requiredCredits, setRequiredCredits] = useState(String(settings.requiredCredits));
-  const [selectedTemplate, setSelectedTemplate] = useState<string>(
-    settings.curriculum?.name || ""
-  );
-
-  useEffect(() => {
-    if (open) {
-      setTitle(settings.title);
-      setShowTime(settings.showTime);
-      setDaysStr(settings.days.join(","));
-      setPeriodsText(formatPeriods(settings.periods));
-      setRanges(copyQuarterRanges(allYearsData[currentYear].quarterRanges));
-      setRequiredCredits(String(settings.requiredCredits));
-      setSelectedTemplate(settings.curriculum?.name || "");
-    }
-  }, [open, settings, allYearsData, currentYear]);
-
-  const apply = async () => {
-    const newDays = daysStr
-      .split(",")
-      .map((s: string) => s.trim())
-      .filter(Boolean);
-    const newPeriods = parsePeriods(periodsText);
-    for (const q of QUARTERS) {
-      const quarter = q as Quarter;
-      const { start, end } = ranges[quarter];
-      if (start && end) {
-        const startDate = parseISODate(start);
-        const endDate = parseISODate(end);
-        if (startDate && endDate && startDate > endDate) {
-          alert(`${quarter} の期間が不正です（開始日が終了日より後になっています）。`);
-          return;
-        }
-      }
-    }
-    const sanitizedRanges = copyQuarterRanges(ranges);
-    const curriculum = selectedTemplate 
-      ? CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate) 
-      : undefined;
-    
-    // 学科が選択されていて、departmentIdがある場合はCSVを自動読み込み
-    if (curriculum?.departmentId) {
-      console.log('🔄 Auto-loading CSV for selected department:', curriculum.departmentId);
-      try {
-        const result = await autoLoadDepartmentCSVs(curriculum.departmentId);
-        
-        // 科目リストを更新
-        setImportedCourses(result.courses);
-        console.log('✅ CSV auto-loaded successfully:', result.courses.length, 'courses');
-        
-        // カリキュラム情報もCSVから取得した値で上書き
-        const updatedCurriculum = {
-          ...curriculum,
-          ...result.curriculum,
-          name: curriculum.name // 表示名は元のテンプレート名を維持
-        };
-        
-        setSettings((prev: Settings) => ({
-          ...prev,
-          title,
-          showTime,
-          days: newDays,
-          periods: newPeriods,
-          requiredCredits: updatedCurriculum.requiredCredits,
-          curriculum: updatedCurriculum,
-        }));
-        
-        alert(`✅ ${curriculum.name}のCSVを読み込みました！\n科目数: ${result.courses.length}件`);
-      } catch (error) {
-        console.error('❌ CSV auto-load failed:', error);
-        // エラーが発生してもテンプレートは適用
-        setSettings((prev: Settings) => ({
-          ...prev,
-          title,
-          showTime,
-          days: newDays,
-          periods: newPeriods,
-          requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
-          curriculum,
-        }));
-        alert(`⚠️ CSVの読み込みに失敗しました。\nテンプレートのみを適用します。\n\nエラー: ${error instanceof Error ? error.message : String(error)}`);
-      }
-    } else {
-      // 学科が選択されていない、またはカスタム設定の場合
-      setSettings((prev: Settings) => ({
-        ...prev,
-        title,
-        showTime,
-        days: newDays,
-        periods: newPeriods,
-        requiredCredits: requiredCredits ? parseInt(requiredCredits) : 124,
-        curriculum,
-      }));
-    }
-    
-    setAllYearsData((prev: AllYearsData) => {
-      const next = clone(prev);
-      next[currentYear].quarterRanges = sanitizedRanges;
-      // 曜日・時限の変更に伴うマージ
-      for (const q of QUARTERS) {
-        next[currentYear].timetable[q] = mergeGrids(
-          buildEmptyQuarter(newDays, newPeriods), 
-          next[currentYear].timetable[q]
-        );
-      }
-      return next;
-    });
-    setOpen(false);
-  };
-
-  return (
-    <div className="tt-popover print:hidden">
-      <button type="button" onClick={() => setOpen((v) => !v)} className="btn-ghost">
-        ⚙️ 設定
-      </button>
-      {open && (
-        <div className="tt-popover__panel">
-          <h3>表示設定</h3>
-          <div className="form-grid">
-            <Field label="タイトル">
-              <input value={title} onChange={(e) => setTitle(e.target.value)} />
-            </Field>
-            <label className="field checkbox">
-              <span>時刻を表示</span>
-              <input
-                type="checkbox"
-                checked={showTime}
-                onChange={(e) => setShowTime(e.target.checked)}
-              />
-            </label>
-            <Field label="曜日（カンマ区切り）">
-              <input
-                value={daysStr}
-                onChange={(e) => setDaysStr(e.target.value)}
-                placeholder="例：月,火,水,木,金"
-              />
-            </Field>
-            <Field label="時限（1行1コマ： 例）1限 09:00–10:30）">
-              <textarea
-                value={periodsText}
-                onChange={(e) => setPeriodsText(e.target.value)}
-              />
-            </Field>
-          </div>
-          
-          {/* カリキュラムテンプレート選択 */}
-          <div className="tt-bulk" style={{ marginTop: 12 }}>
-            <div className="bulk-head">🎓 学科・カリキュラムテンプレート</div>
-            <div className="form-grid">
-              <Field label="学科を選択">
-                <select
-                  value={selectedDepartmentId}
-                  onChange={(e) => {
-                    const next = e.target.value;
-                    setSelectedDepartmentId(next);
-                    void loadDepartment(next);
-                  }}
-                >
-                  {AVAILABLE_DEPARTMENTS.map((dept) => (
-                    <option key={dept.id} value={dept.id}>
-                      {dept.faculty} {dept.name}
-                    </option>
-                  ))}
-                </select>
-                <div style={{ height: 8 }} />
-                <select
-                  value={selectedTemplate}
-                  onChange={(e) => {
-                    const template = CURRICULUM_TEMPLATES.find(t => t.name === e.target.value);
-                    setSelectedTemplate(e.target.value);
-                    if (template) {
-                      setRequiredCredits(String(template.requiredCredits));
-                    }
-                  }}
-                >
-                  <option value="">テンプレートを使用しない</option>
-                  {CURRICULUM_TEMPLATES.map((template) => (
-                    <option key={template.name} value={template.name}>
-                      {template.name}
-                    </option>
-                  ))}
-                </select>
-              </Field>
-              {selectedTemplate && (
-                <div className="template-info">
-                  <p className="small" style={{ marginTop: "0.5rem" }}>
-                    ✅ 選択中: <strong>{selectedTemplate}</strong>
-                  </p>
-                  {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate) && (
-                    <div className="small" style={{ marginTop: "0.5rem", padding: "0.75rem", background: "var(--chipbg)", borderRadius: "8px" }}>
-                      <div>必修: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.required} 単位</div>
-                      <div>選択必修: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.electiveRequired} 単位</div>
-                      <div>選択: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.breakdown.elective} 単位</div>
-                      <div style={{ marginTop: "0.25rem", fontWeight: "600" }}>
-                        合計: {CURRICULUM_TEMPLATES.find(t => t.name === selectedTemplate)!.requiredCredits} 単位
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-              <Field label="卒業に必要な単位数">
-                <input
-                  type="number"
-                  min="0"
-                  value={requiredCredits}
-                  onChange={(e) => setRequiredCredits(e.target.value)}
-                  placeholder="例：124"
-                />
-              </Field>
-            </div>
-          </div>
-          
-          <div className="tt-bulk" style={{ marginTop: 12 }}>
-            <div className="bulk-head">クオーター期間</div>
-            <div className="form-grid">
-              {QUARTERS.map((q) => {
-                const quarter = q as Quarter;
-                return (
-                  <Field key={quarter} label={`${quarter} の期間`}>
-                    <div className="quarter-range">
-                      <input
-                        type="date"
-                        value={ranges[quarter].start}
-                        onChange={(e) =>
-                          setRanges((prev) => {
-                            const next = { ...prev } as QuarterRanges;
-                            next[quarter] = { ...prev[quarter], start: e.target.value };
-                            return next;
-                          })
-                        }
-                      />
-                      <span>〜</span>
-                      <input
-                        type="date"
-                        value={ranges[quarter].end}
-                        onChange={(e) =>
-                          setRanges((prev) => {
-                            const next = { ...prev } as QuarterRanges;
-                            next[quarter] = { ...prev[quarter], end: e.target.value };
-                            return next;
-                          })
-                        }
-                      />
-                    </div>
-                  </Field>
-                );
-              })}
-            </div>
-            <p className="small">※ 開始日と終了日が設定されたクオーターのみカレンダー出力に含まれます。</p>
-          </div>
-          <div className="actions">
-            <button type="button" onClick={() => setOpen(false)} className="btn-ghost">
-              閉じる
-            </button>
-            <button type="button" onClick={apply} className="btn-primary">
-              反映
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 function buildEmptyQuarter(
   days: string[],
   periods: { id: number; label: string; time: string }[]
@@ -1406,24 +963,6 @@ function load<T>(key: string): T | null {
   }
 }
 
-function formatPeriods(periods: { id: number; label: string; time: string }[]) {
-  return periods.map((p) => `${p.label} ${p.time}`).join("\n");
-}
-
-function parsePeriods(text: string) {
-  const lines = text
-    .split(/\n+/)
-    .map((l) => l.trim())
-    .filter(Boolean);
-  const out: { id: number; label: string; time: string }[] = [];
-  let id = 1;
-  for (const line of lines) {
-    const m = line.match(/^(\S+)(?:\s+(.+))?$/);
-    if (m) out.push({ id: id++, label: m[1], time: m[2] ?? "" });
-  }
-  return out.length ? out : [{ id: 1, label: "1限", time: "" }];
-}
-
 function createDefaultSettings(): Settings {
   return {
     days: [...DEFAULT_DAYS],
@@ -1432,15 +971,6 @@ function createDefaultSettings(): Settings {
     showTime: true,
     requiredCredits: 124, // デフォルト値
   };
-}
-
-function copyQuarterRanges(input: QuarterRanges): QuarterRanges {
-  const out = {} as QuarterRanges;
-  for (const q of QUARTERS) {
-    const value = input[q] ?? { start: "", end: "" };
-    out[q] = { start: value.start ?? "", end: value.end ?? "" };
-  }
-  return out;
 }
 
 function parseTimeRange(time: string) {
