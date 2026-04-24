@@ -91,6 +91,10 @@ export default function TimetableApp() {
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<AppPage>("timetable");
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [entranceYear, setEntranceYear] = useState<number>(() => {
+    const stored = localStorage.getItem("entrance_year");
+    return stored ? Number(stored) : new Date().getFullYear();
+  });
   const [selectedDepartmentId, setSelectedDepartmentId] = useState<string>(() => {
     return localStorage.getItem("selected_department_id") ?? AVAILABLE_DEPARTMENTS[0].id;
   });
@@ -132,14 +136,14 @@ export default function TimetableApp() {
     }
   }, [settings.curriculum]);
 
-  async function loadDepartment(departmentId: string) {
-    const result = await autoLoadDepartmentCSVs(departmentId);
+  async function loadDepartment(departmentId: string, year = entranceYear) {
+    const result = await autoLoadDepartmentCSVs(departmentId, year);
 
     setSettings(prev => ({
       ...prev,
       curriculum: {
         ...result.curriculum,
-        name: result.departmentName
+        name: `${result.departmentName} ${year}年度入学`
       }
     }));
 
@@ -161,7 +165,7 @@ export default function TimetableApp() {
         console.log('🚀 Starting auto-load...');
       }
       try {
-        await loadDepartment(selectedDepartmentId);
+        await loadDepartment(selectedDepartmentId, entranceYear);
         if (import.meta.env.DEV) {
           console.log('✅ Auto-load successful!');
         }
@@ -205,6 +209,10 @@ export default function TimetableApp() {
   useEffect(() => {
     save("timetable_settings_v2", settings);
   }, [settings]);
+
+  useEffect(() => {
+    localStorage.setItem("entrance_year", String(entranceYear));
+  }, [entranceYear]);
 
   const [editing, setEditing] = useState<{
     open: boolean;
@@ -261,7 +269,7 @@ export default function TimetableApp() {
     setImportedCourses(courses);
   };
   const exportJSON = () => {
-    const blob = new Blob([JSON.stringify({ version: 2, settings, allYearsData }, null, 2)], {
+    const blob = new Blob([JSON.stringify({ version: 3, entranceYear, settings, allYearsData }, null, 2)], {
       type: "application/json",
     });
     const a = document.createElement("a");
@@ -275,6 +283,9 @@ export default function TimetableApp() {
       try {
         const obj = JSON.parse(String(reader.result));
         if (obj.settings && obj.allYearsData) {
+          if (typeof obj.entranceYear === "number" && Number.isFinite(obj.entranceYear)) {
+            setEntranceYear(obj.entranceYear);
+          }
           // v2 形式
           setSettings((prev) => ({
             ...prev,
@@ -444,7 +455,12 @@ export default function TimetableApp() {
 
   const handleDepartmentChange = async (departmentId: string) => {
     setSelectedDepartmentId(departmentId);
-    await loadDepartment(departmentId);
+    await loadDepartment(departmentId, entranceYear);
+  };
+
+  const handleEntranceYearChange = async (year: number) => {
+    setEntranceYear(year);
+    await loadDepartment(selectedDepartmentId, year);
   };
 
   const handleOpenSettings = () => {
@@ -453,17 +469,20 @@ export default function TimetableApp() {
 
   const handleResetLocalStorage = async () => {
     const defaultDepartmentId = AVAILABLE_DEPARTMENTS[0]?.id ?? selectedDepartmentId;
+    const defaultEntranceYear = new Date().getFullYear();
     localStorage.removeItem("timetable_settings_v2");
     localStorage.removeItem("timetable_allyears_v2");
     localStorage.removeItem("selected_department_id");
+    localStorage.removeItem("entrance_year");
     setCurrentYear("1年次");
     setActiveQuarter("1Q");
     setCurrentPage("timetable");
+    setEntranceYear(defaultEntranceYear);
     setSelectedDepartmentId(defaultDepartmentId);
     setImportedCourses([]);
     setSettings(createDefaultSettings());
     setAllYearsData(createDefaultAllYearsData());
-    await loadDepartment(defaultDepartmentId);
+    await loadDepartment(defaultDepartmentId, defaultEntranceYear);
   };
 
   const handleSaveSettings = ({
@@ -553,9 +572,11 @@ export default function TimetableApp() {
         title="履修・成績管理"
         departmentId={selectedDepartmentId}
         departments={AVAILABLE_DEPARTMENTS}
+        entranceYear={entranceYear}
         currentYear={currentYear}
         currentPage={currentPage}
         onDepartmentChange={handleDepartmentChange}
+        onEntranceYearChange={handleEntranceYearChange}
         onYearChange={(year: string) => setCurrentYear(year as Year)}
         onPageChange={setCurrentPage}
         onOpenSettings={handleOpenSettings}

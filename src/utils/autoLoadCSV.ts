@@ -27,46 +27,76 @@ export const AVAILABLE_DEPARTMENTS: Department[] = [
 ] as const;
 
 /**
- * 学科IDからCSVファイルのパスを生成
+ * 学科IDと入学年度からCSVファイルのパスを生成
  * パターン:
- * - 卒業要件: /department/rikou/{departmentId}_credit_requirements.csv
- * - 科目一覧: /department/rikou/{departmentId}_timetable_by_category.csv
+ * - 卒業要件: /department/rikou/{entranceYear}/{departmentId}_credit_requirements.csv
+ * - 科目一覧: /department/rikou/{entranceYear}/{departmentId}_timetable_by_category.csv
+ * - fallback: /department/rikou/{departmentId}_credit_requirements.csv
+ * - fallback: /department/rikou/{departmentId}_timetable_by_category.csv
  */
-function buildCSVPaths(departmentId: string) {
+type CSVPaths = {
+  requirements: string;
+  timetable: string;
+  fallbackRequirements?: string;
+  fallbackTimetable?: string;
+};
+
+function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
   const basePath = `/department/rikou`;
+
+  if (entranceYear) {
+    return {
+      requirements: `${basePath}/${entranceYear}/${departmentId}_credit_requirements.csv`,
+      timetable: `${basePath}/${entranceYear}/${departmentId}_timetable_by_category.csv`,
+      fallbackRequirements: `${basePath}/${departmentId}_credit_requirements.csv`,
+      fallbackTimetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
+    };
+  }
+
   return {
     requirements: `${basePath}/${departmentId}_credit_requirements.csv`,
-    timetable: `${basePath}/${departmentId}_timetable_by_category.csv`
+    timetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
   };
+}
+
+async function fetchCSVText(primaryPath: string, fallbackPath?: string) {
+  const response = await fetch(primaryPath);
+  if (response.ok) {
+    return { text: await response.text(), path: primaryPath };
+  }
+
+  if (response.status === 404 && fallbackPath) {
+    const fallbackResponse = await fetch(fallbackPath);
+    if (!fallbackResponse.ok) {
+      throw new Error(`Failed to load CSV: ${fallbackResponse.statusText}`);
+    }
+    return { text: await fallbackResponse.text(), path: fallbackPath };
+  }
+
+  throw new Error(`Failed to load CSV: ${response.statusText}`);
 }
 
 /**
  * publicフォルダ内のCSVファイルを自動読み込み
  */
-export async function autoLoadDepartmentCSVs(departmentId: string) {
-  console.log('🚀 Auto-loading CSVs for department:', departmentId);
+export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?: number) {
+  console.log('🚀 Auto-loading CSVs for department:', departmentId, 'entranceYear:', entranceYear);
   
-  const paths = buildCSVPaths(departmentId);
+  const paths = buildCSVPaths(departmentId, entranceYear);
   console.log('📂 CSV paths:', paths);
   
   try {
     // 卒業要件CSVを読み込み
     console.log('📥 Fetching requirements from:', paths.requirements);
-    const requirementsResponse = await fetch(paths.requirements);
-    if (!requirementsResponse.ok) {
-      throw new Error(`Failed to load requirements CSV: ${requirementsResponse.statusText}`);
-    }
-    const requirementsText = await requirementsResponse.text();
-    console.log('✅ Requirements CSV loaded, size:', requirementsText.length, 'bytes');
+    const requirementsResult = await fetchCSVText(paths.requirements, paths.fallbackRequirements);
+    const requirementsText = requirementsResult.text;
+    console.log('✅ Requirements CSV loaded from:', requirementsResult.path, 'size:', requirementsText.length, 'bytes');
     
     // 時間割CSVを読み込み
     console.log('📥 Fetching timetable from:', paths.timetable);
-    const timetableResponse = await fetch(paths.timetable);
-    if (!timetableResponse.ok) {
-      throw new Error(`Failed to load timetable CSV: ${timetableResponse.statusText}`);
-    }
-    const timetableText = await timetableResponse.text();
-    console.log('✅ Timetable CSV loaded, size:', timetableText.length, 'bytes');
+    const timetableResult = await fetchCSVText(paths.timetable, paths.fallbackTimetable);
+    const timetableText = timetableResult.text;
+    console.log('✅ Timetable CSV loaded from:', timetableResult.path, 'size:', timetableText.length, 'bytes');
     
     // テキストをBlobに変換してFileオブジェクトを作成
     const requirementsBlob = new Blob([requirementsText], { type: 'text/csv' });

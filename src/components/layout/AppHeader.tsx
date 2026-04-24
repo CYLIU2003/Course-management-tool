@@ -8,9 +8,11 @@ type AppHeaderProps = {
   title: string;
   departmentId: string;
   departments: readonly Department[];
+  entranceYear: number;
   currentYear: string;
   currentPage: AppPage;
   onDepartmentChange: (departmentId: string) => void | Promise<void>;
+  onEntranceYearChange: (year: number) => void | Promise<void>;
   onYearChange: (year: string) => void;
   onPageChange: (page: AppPage) => void;
   onOpenSettings?: () => void;
@@ -21,14 +23,18 @@ export default function AppHeader({
   title,
   departmentId,
   departments,
+  entranceYear,
   currentYear,
   currentPage,
   onDepartmentChange,
+  onEntranceYearChange,
   onYearChange,
   onPageChange,
   onOpenSettings,
   dataMenu,
 }: AppHeaderProps) {
+  const entranceYears = [2023, 2024, 2025, 2026, 2027];
+
   return (
     <header className="app-header print:hidden">
       <div className="app-container app-header__inner">
@@ -47,6 +53,17 @@ export default function AppHeader({
               {departments.map((department) => (
                 <option key={department.id} value={department.id}>
                   {department.faculty} {department.name}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="control-field">
+            <span>入学年度</span>
+            <select value={entranceYear} onChange={(e) => onEntranceYearChange(Number(e.target.value))}>
+              {entranceYears.map((year) => (
+                <option key={year} value={year}>
+                  {year}年度入学
                 </option>
               ))}
             </select>
