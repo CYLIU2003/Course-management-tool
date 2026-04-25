@@ -101,14 +101,45 @@ npm run check:all
 
 ## 開発ブランチ方針
 
-- `main`: PC向けUIを維持する基準ブランチ
-- `main_mobile`: モバイルファーストUIを進める専用ブランチ
+- `main`: 安定版（発表/デモ可能）
+- `develop`: 開発統合
+- `feature/*`: 個別作業
+
+### 基本フロー
+
+```text
+feature/* -> Pull Request -> develop -> 動作確認後 -> main
+```
+
+### 作業開始コマンド
+
+```bash
+git switch develop
+git pull origin develop
+
+git switch -c feature/mobile-course-card
+```
+
+### ブランチ種別
+
+```text
+feature/機能名
+fix/バグ修正
+docs/文書
+refactor/整理
+data/データ作成
+experiment/実験
+```
+
+### 既存運用からの移行メモ
+
+- `main_mobile` は新規作業の起点にせず、以後は `feature/mobile-*` へ統一します。
 
 ### ブランチ切り替え
 
 ```bash
 git switch main
-git switch main_mobile
+git switch develop
 ```
 
 ---
