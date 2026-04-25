@@ -4,18 +4,23 @@ import AppShell from "./components/layout/AppShell";
 import AppHeader, { type AppPage } from "./components/layout/AppHeader";
 import DataManagementMenu from "./components/layout/DataManagementMenu";
 import DashboardCards from "./components/dashboard/DashboardCards";
-import WarningPanel from "./components/dashboard/WarningPanel";
 import QuarterTabs from "./components/timetable/QuarterTabs";
 import AppSettingsModal from "./components/settings/AppSettingsModal";
 import CourseSearchPanel from "./components/courses/CourseSearchPanel";
 import CourseTagBadge from "./components/courses/CourseTagBadge";
 import CourseTypeBadge from "./components/courses/CourseTypeBadge";
+import AcademicOverview from "./components/AcademicOverview";
+import GraduationRequirementPanel from "./components/GraduationRequirementPanel";
+import GpaSummaryPanel from "./components/GpaSummaryPanel";
+import CreditCompletionPanel from "./components/CreditCompletionPanel";
+import TargetGpaPanel from "./components/TargetGpaPanel";
+import GpaPredictionPanel from "./components/GpaPredictionPanel";
 import { DataLoadNotice } from "./components/status/DataLoadNotice";
 import CalendarExportPanel from "./components/CalendarExportPanel";
-import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./utils/academicProgress";
+import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./core/types";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS, CSVAutoLoadError } from "./utils/autoLoadCSV";
 import type { AutoLoadDepartmentCSVResult } from "./utils/autoLoadCSV";
-import { buildDashboardSnapshot } from "./utils/academicProgress";
+import { buildDashboardSnapshot } from "./core/graduation";
 import { buildSyncedCourseCell, selectBestOfferingDetailed } from "./utils/courseOffering";
 import {
   buildCalendarExportFilename,
@@ -23,7 +28,7 @@ import {
   createFallbackAcademicCalendarConfig,
   downloadIcsFile,
   loadAcademicCalendarConfig,
-} from "./utils/icsExport";
+} from "./core/calendar";
 
 const QUARTERS = ["1Q", "2Q", "3Q", "4Q"] as const;
 type Quarter = (typeof QUARTERS)[number];
@@ -52,6 +57,8 @@ type YearData = AcademicYearData;
 
 // 全年度のデータ
 type AllYearsData = AcademicAllYearsData;
+
+type WorkspaceTab = "schedule" | "requirements" | "gpa" | "calendar";
 
 type Settings = AcademicSettings & {
   days: string[];
@@ -124,6 +131,7 @@ export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<AppPage>("timetable");
+  const [workspaceTab, setWorkspaceTab] = useState<WorkspaceTab>("schedule");
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [entranceYear, setEntranceYear] = useState<number>(() => {
     const stored = localStorage.getItem("entrance_year");
@@ -614,43 +622,125 @@ export default function TimetableApp() {
   ) : (
     <div className="timetable-page">
       <DashboardCards snapshot={dashboardSnapshot} curriculumName={settings.curriculum?.name} />
+
       <DataLoadNotice
         status={csvLoading ? "loading" : csvLoadError ? "failed" : csvLoadResult?.status === "partial" ? "partial" : csvLoadResult?.status === "success" ? "ready" : "idle"}
         message={csvLoadError}
         onRetry={csvLoadError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
       />
-      <CalendarExportPanel
-        academicYear={entranceYear}
-        academicYearLabel={currentYear}
-        timetable={currentYearData.timetable}
-        quarterRanges={currentYearData.quarterRanges}
-        days={settings.days}
-        periods={settings.periods}
-      />
-      <WarningPanel warnings={dashboardSnapshot.warnings} />
 
-      <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
-      <section className="tt-card timetable-card">
-        <div className="section-title">
-          <div>
-            <h2>{currentYear} - {activeQuarter} の時間割</h2>
-            <span className="small print:hidden">クリックで編集できます</span>
-          </div>
-          <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost print:hidden">
-            他Qへコピー
-          </button>
-        </div>
-        <div className="tt-tablewrap timetable-scroll">
-          <Table
-            quarter={activeQuarter}
-            data={currentYearData.timetable}
-            days={settings.days}
-            periods={settings.periods}
-            showTime={settings.showTime}
-            onCellClick={openEdit}
-          />
-        </div>
-        <p className="small print:hidden">Esc キーでモーダルを閉じられます。</p>
+      <div className="workspace-tabs print:hidden" role="tablist" aria-label="履修画面の表示切り替え">
+        <button
+          type="button"
+          className={workspaceTab === "schedule" ? "workspace-tabs__button is-active" : "workspace-tabs__button"}
+          aria-pressed={workspaceTab === "schedule"}
+          onClick={() => setWorkspaceTab("schedule")}
+        >
+          時間割
+        </button>
+        <button
+          type="button"
+          className={workspaceTab === "requirements" ? "workspace-tabs__button is-active" : "workspace-tabs__button"}
+          aria-pressed={workspaceTab === "requirements"}
+          onClick={() => setWorkspaceTab("requirements")}
+        >
+          卒業要件
+        </button>
+        <button
+          type="button"
+          className={workspaceTab === "gpa" ? "workspace-tabs__button is-active" : "workspace-tabs__button"}
+          aria-pressed={workspaceTab === "gpa"}
+          onClick={() => setWorkspaceTab("gpa")}
+        >
+          成績 / GPA
+        </button>
+        <button
+          type="button"
+          className={workspaceTab === "calendar" ? "workspace-tabs__button is-active" : "workspace-tabs__button"}
+          aria-pressed={workspaceTab === "calendar"}
+          onClick={() => setWorkspaceTab("calendar")}
+        >
+          カレンダー
+        </button>
+      </div>
+
+      <section className="workspace-grid">
+        <aside className={workspaceTab === "schedule" ? "workspace-panel workspace-panel--search is-active" : "workspace-panel workspace-panel--search"}>
+          <CourseSearchPanel courses={importedCourses} />
+        </aside>
+
+        <section className={workspaceTab === "schedule" ? "workspace-panel workspace-panel--schedule is-active" : "workspace-panel workspace-panel--schedule"}>
+          <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
+          <section className="tt-card timetable-card">
+            <div className="section-title">
+              <div>
+                <h2>{currentYear} - {activeQuarter} の時間割</h2>
+                <span className="small print:hidden">クリックで編集できます</span>
+              </div>
+              <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost print:hidden">
+                他Qへコピー
+              </button>
+            </div>
+            <div className="tt-tablewrap timetable-scroll">
+              <Table
+                quarter={activeQuarter}
+                data={currentYearData.timetable}
+                days={settings.days}
+                periods={settings.periods}
+                showTime={settings.showTime}
+                onCellClick={openEdit}
+              />
+            </div>
+            <p className="small print:hidden">Esc キーでモーダルを閉じられます。</p>
+          </section>
+        </section>
+
+        <aside className="workspace-panel workspace-panel--insights">
+          <section
+            className={workspaceTab === "requirements" ? "workspace-subpanel is-active" : "workspace-subpanel"}
+          >
+            <AcademicOverview
+              snapshot={dashboardSnapshot}
+              curriculumName={settings.curriculum?.name}
+              compact
+              allYearsData={allYearsData}
+              courses={importedCourses}
+              currentYear={currentYear}
+            />
+
+            <GraduationRequirementPanel
+              curriculum={settings.curriculum}
+              allYearsData={allYearsData}
+              courses={importedCourses}
+            />
+          </section>
+
+          <section
+            className={workspaceTab === "gpa" ? "workspace-subpanel is-active" : "workspace-subpanel"}
+          >
+            <GpaSummaryPanel snapshot={dashboardSnapshot} allYearsData={allYearsData} />
+
+            <CreditCompletionPanel snapshot={dashboardSnapshot} allYearsData={allYearsData} />
+
+            <TargetGpaPanel
+              snapshot={dashboardSnapshot}
+              defaultFutureCredits={Math.max(0, dashboardSnapshot.requiredCredits - dashboardSnapshot.earnedCredits)}
+            />
+
+            <GpaPredictionPanel courses={importedCourses} snapshot={dashboardSnapshot} />
+          </section>
+        </aside>
+      </section>
+
+      <section className={workspaceTab === "calendar" ? "workspace-panel workspace-panel--calendar is-active" : "workspace-panel workspace-panel--calendar"}>
+        <CalendarExportPanel
+          academicYear={entranceYear}
+          academicYearLabel={currentYear}
+          timetable={currentYearData.timetable}
+          quarterRanges={currentYearData.quarterRanges}
+          days={settings.days}
+          periods={settings.periods}
+        />
       </section>
     </div>
   );

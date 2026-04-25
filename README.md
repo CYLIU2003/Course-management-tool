@@ -14,6 +14,8 @@
 
 - [主な機能](#主な機能)
 - [セットアップ](#セットアップ)
+- [開発ブランチ方針](#開発ブランチ方針)
+- [アーキテクチャ方針](#アーキテクチャ方針)
 - [ディレクトリ構成](#ディレクトリ構成)
 - [CSVファイルの規則](#csvファイルの規則)
 - [AI・LLM向け情報](#ai・llm向け情報)
@@ -94,6 +96,39 @@ npm run check:status
 npm run check:csv
 npm run check:all
 ```
+
+---
+
+## 開発ブランチ方針
+
+- `main`: PC向けUIを維持する基準ブランチ
+- `main_mobile`: モバイルファーストUIを進める専用ブランチ
+
+### ブランチ切り替え
+
+```bash
+git switch main
+git switch main_mobile
+```
+
+---
+
+## アーキテクチャ方針
+
+- 共通ロジックは `src/core/` を入口として集約します。
+- PC向けUIとモバイル向けUIは画面/コンポーネントを分離し、ロジックは共有します。
+- 卒業判定、GPA計算、時間割衝突判定、ICS出力をUIに直接書かない運用にします。
+
+詳細は以下を参照してください。
+
+- `docs/ARCHITECTURE.md`
+- `docs/API_CONTRACT.md`
+- `docs/DATA_SCHEMA.md`
+- `docs/MOBILE_UI_GUIDE.md`
+- `docs/PC_UI_GUIDE.md`
+- `docs/TASK_TEMPLATE.md`
+- `docs/PR_REVIEW_CHECKLIST.md`
+- `docs/CONTRIBUTING.md`
 
 ---
 

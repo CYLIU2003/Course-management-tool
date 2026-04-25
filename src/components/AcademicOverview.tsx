@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
-import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicYear } from '../utils/academicProgress';
-import { calculateGraduationRisk } from '../utils/graduationRisk';
-import { recommendCourses } from '../utils/courseRecommendation';
+import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicYear } from '../core/types';
+import { calculateGraduationRisk } from '../core/graduation';
+import { recommendCourses } from '../core/courses';
 import GraduationRiskPanel from './GraduationRiskPanel';
 import CourseRecommendationPanel from './CourseRecommendationPanel';
 
