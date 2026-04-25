@@ -93,9 +93,7 @@ export default function GraduationRiskPanel({ risk, compact = false }: Graduatio
               <article key={item.key} className={`warning-panel__item ${getAlertTone(item.riskLevel)}`}>
                 <div style={{ minWidth: '4rem', fontWeight: 800 }}>{item.label}</div>
                 <div style={{ flex: 1 }}>
-                  <p className="warning-panel__message">
-                    {item.earnedCredits} / {item.requiredCredits} 単位
-                  </p>
+                  <p className="warning-panel__message">取得済み {item.earnedCredits} 単位 / 履修予定 {item.plannedCredits ?? 0} 単位</p>
                   <p className="warning-panel__detail">不足 {item.missingCredits} 単位</p>
                 </div>
                 <div style={{ fontWeight: 800, color: summaryStyle.accent }}>

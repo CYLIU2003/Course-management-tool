@@ -32,6 +32,7 @@ export default function GpaPredictionPanel({ courses, snapshot }: GpaPredictionP
       }),
     [snapshot.gpa.currentEarnedPoints, snapshot.gpa.currentGradedCredits, targetCourses],
   );
+  const delta = prediction.predictedGpa - prediction.currentGpa;
 
   const addTargetCourse = () => {
     const course = courses.find((item) => item.id === selectedCourseId);
@@ -83,6 +84,10 @@ export default function GpaPredictionPanel({ courses, snapshot }: GpaPredictionP
         <div className="stats-card">
           <div className="stats-label">予測GPA</div>
           <div className="stats-value">{prediction.predictedGpa.toFixed(2)}</div>
+        </div>
+        <div className="stats-card">
+          <div className="stats-label">変化</div>
+          <div className={`stats-value ${delta >= 0 ? 'stats-complete' : ''}`}>{delta >= 0 ? '+' : ''}{delta.toFixed(2)}</div>
         </div>
         <div className="stats-card">
           <div className="stats-label">追加対象単位</div>

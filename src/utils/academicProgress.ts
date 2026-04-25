@@ -73,6 +73,19 @@ export interface AcademicCurriculum {
     electiveRequired: number;
     elective: number;
   };
+  details?: AcademicCurriculumDetail[];
+}
+
+export interface AcademicCurriculumDetail {
+  stage: string;
+  area: string;
+  subarea: string;
+  totalRequiredCredits: number;
+  requiredCredits: number;
+  electiveRequired1Credits: number;
+  electiveRequired2Credits: number;
+  freeCredits: number;
+  notes?: string;
 }
 
 export interface AcademicSettings {

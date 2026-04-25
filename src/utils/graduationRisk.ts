@@ -1,12 +1,14 @@
-import type { AcademicAllYearsData, AcademicDashboardSnapshot, AcademicYear, CourseType, Grade } from './academicProgress';
+import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicYear, CourseType, Grade } from './academicProgress';
+import { calculateGraduationRequirements, type GraduationCategory } from './graduationRequirements';
 
 export type GraduationRiskLevel = 'safe' | 'warning' | 'danger';
 
 export interface GraduationRiskItem {
-  key: CourseType | 'total';
+  key: GraduationCategory;
   label: string;
   requiredCredits: number;
   earnedCredits: number;
+  plannedCredits: number;
   missingCredits: number;
   riskLevel: GraduationRiskLevel;
 }
@@ -15,7 +17,11 @@ export interface GraduationRiskAlert {
   title: string;
   location: string;
   detail: string;
+  relatedCategory?: GraduationCategory;
+  missingCredits?: number;
 }
+
+export type GraduationRiskWarning = GraduationRiskAlert;
 
 export interface GraduationRiskSummary {
   overallRiskLevel: GraduationRiskLevel;
@@ -126,8 +132,11 @@ function highestLevel(levels: GraduationRiskLevel[]) {
 export function calculateGraduationRisk(
   snapshot: AcademicDashboardSnapshot,
   allYearsData: AcademicAllYearsData,
+  courses: AcademicCourse[] = [],
+  curriculum?: AcademicCurriculum,
 ): GraduationRiskSummary {
   const entries = collectCourseEntries(allYearsData);
+  const requirements = calculateGraduationRequirements({ allYearsData, courses, curriculum });
   const requiredCourseAlerts = entries
     .filter((entry) => entry.courseType === 'required' && entry.credits > 0)
     .filter((entry) => !entry.grade || entry.grade === '未履修' || entry.grade === '不可')
@@ -135,35 +144,47 @@ export function calculateGraduationRisk(
       title: entry.title,
       location: formatLocation(entry),
       detail: entry.grade === '不可' ? '不可のため未取得です。' : '未履修です。',
+      relatedCategory: 'required' as const,
     }));
 
-  const items = snapshot.progress.map<GraduationRiskItem>((item) => {
-    const missingCredits = Math.max(0, item.requiredCredits - item.earnedCredits);
+  const items = requirements.statuses.map<GraduationRiskItem>((item) => {
+    const missingCredits = Math.max(0, item.requiredCredits - item.earnedCredits - item.plannedCredits);
+    const plannedCoverage = item.missingCredits === 0 && item.earnedCredits < item.requiredCredits && item.plannedCredits > 0;
     const baseRisk = severityForMissingCredits(missingCredits);
 
-    const riskLevel = item.key === 'required'
-      ? requiredCourseAlerts.length > 0 || missingCredits > 0
-        ? 'danger'
+    const riskLevel = item.category === 'required'
+      ? requiredCourseAlerts.length > 0 || missingCredits > 0 || plannedCoverage
+        ? missingCredits >= 5 || requiredCourseAlerts.length > 0
+          ? 'danger'
+          : 'warning'
         : 'safe'
-      : baseRisk;
+      : requiredCourseAlerts.length > 0
+        ? 'danger'
+        : plannedCoverage
+          ? 'warning'
+          : baseRisk;
 
     return {
-      key: item.key,
+      key: item.category,
       label: item.label,
       requiredCredits: item.requiredCredits,
       earnedCredits: item.earnedCredits,
+      plannedCredits: item.plannedCredits,
       missingCredits,
       riskLevel,
     };
   });
 
   const shortageItems = items.filter((item) => item.key !== 'total' && item.missingCredits > 0);
-  const totalItem = items.find((item) => item.key === 'total');
-  const requiredItem = items.find((item) => item.key === 'required');
+  const totalItem = requirements.statuses.find((item) => item.category === 'total');
+  const requiredItem = requirements.statuses.find((item) => item.category === 'required');
+
+  const hasPlannedCoverage = requirements.statuses.some((item) => item.category !== 'total' && item.missingCredits === 0 && item.earnedCredits < item.requiredCredits && item.plannedCredits > 0);
 
   const overallRiskLevel = highestLevel([
     ...items.map((item) => item.riskLevel),
     requiredCourseAlerts.length > 0 ? 'danger' : 'safe',
+    hasPlannedCoverage ? 'warning' : 'safe',
   ]);
 
   const summary: GraduationRiskSummary = {

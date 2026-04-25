@@ -203,6 +203,7 @@ export default function TimetableApp() {
           departmentName: dept ? `${dept.faculty} ${dept.name}` : departmentId,
           entranceYear: year,
           curriculum: {
+            name: dept ? `${dept.faculty} ${dept.name}` : departmentId,
             requiredCredits: 0,
             breakdown: { required: 0, electiveRequired: 0, elective: 0 },
           },
@@ -247,6 +248,7 @@ export default function TimetableApp() {
         departmentName: dept ? `${dept.faculty} ${dept.name}` : departmentId,
         entranceYear: year,
         curriculum: {
+          name: dept ? `${dept.faculty} ${dept.name}` : departmentId,
           requiredCredits: 0,
           breakdown: { required: 0, electiveRequired: 0, elective: 0 },
         },

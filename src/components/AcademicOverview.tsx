@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { AcademicAllYearsData, AcademicCourse, AcademicDashboardSnapshot, AcademicYear } from '../utils/academicProgress';
+import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicYear } from '../utils/academicProgress';
 import { calculateGraduationRisk } from '../utils/graduationRisk';
 import { recommendCourses } from '../utils/courseRecommendation';
 import GraduationRiskPanel from './GraduationRiskPanel';
@@ -13,6 +13,7 @@ interface AcademicOverviewProps {
   allYearsData?: AcademicAllYearsData;
   courses?: AcademicCourse[];
   currentYear?: AcademicYear;
+  curriculum?: AcademicCurriculum;
 }
 
 const WARNING_STYLES = {
@@ -41,11 +42,12 @@ export default function AcademicOverview({
   allYearsData,
   courses,
   currentYear,
+  curriculum,
 }: AcademicOverviewProps) {
   const visibleWarnings = compact ? snapshot.warnings.slice(0, 3) : snapshot.warnings;
   const graduationRisk = useMemo(
-    () => (allYearsData ? calculateGraduationRisk(snapshot, allYearsData) : null),
-    [allYearsData, snapshot],
+    () => (allYearsData ? calculateGraduationRisk(snapshot, allYearsData, courses ?? [], curriculum) : null),
+    [allYearsData, courses, curriculum, snapshot],
   );
   const recommendations = useMemo(
     () => {

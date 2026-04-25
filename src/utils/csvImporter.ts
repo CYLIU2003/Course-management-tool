@@ -1,5 +1,5 @@
 import Papa from 'papaparse';
-import type { AcademicCourse, CourseOffering } from './academicProgress';
+import type { AcademicCourse, AcademicCurriculumDetail, CourseOffering } from './academicProgress';
 
 // CSV行の型定義
 export interface CreditRequirementRow {
@@ -195,6 +195,7 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
   let electiveRequired = 0;
   let elective = 0;
   let total = 0;
+  const details: AcademicCurriculumDetail[] = [];
 
   graduationRows.forEach(row => {
     const requiredCredits = parseFloat(row.必修_credits) || 0;
@@ -205,6 +206,17 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
     required += requiredCredits;
     electiveRequired += electiveRequired1 + electiveRequired2;
     elective += freeCredits;
+    details.push({
+      stage: row.stage,
+      area: row.area,
+      subarea: row.subarea,
+      totalRequiredCredits: parseFloat(row.total_required_credits) || 0,
+      requiredCredits,
+      electiveRequired1Credits: electiveRequired1,
+      electiveRequired2Credits: electiveRequired2,
+      freeCredits,
+      notes: row.notes || undefined,
+    });
     
     console.log('  Row:', row.subarea, 'Required:', requiredCredits, 'Elective-Req:', electiveRequired1 + electiveRequired2, 'Free:', freeCredits);
   });
@@ -213,12 +225,14 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
   total = required + electiveRequired + elective;
 
   const result = {
+    name: '卒業要件',
     requiredCredits: total,
     breakdown: {
       required,
       electiveRequired,
-      elective
-    }
+      elective,
+    },
+    details,
   };
   
   console.log('✅ parseCreditRequirements: Result', result);

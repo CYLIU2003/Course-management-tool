@@ -1,5 +1,5 @@
 import { parseCSVFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithSchedule } from './csvImporter';
-import type { AcademicCourse } from './academicProgress';
+import type { AcademicCourse, AcademicCurriculum } from './academicProgress';
 import type { CreditRequirementRow, CourseRow, ClassScheduleRow } from './csvImporter';
 
 /**
@@ -44,14 +44,7 @@ export interface AutoLoadDepartmentCSVResult {
   departmentId: string;
   departmentName: string;
   entranceYear?: number;
-  curriculum: {
-    requiredCredits: number;
-    breakdown: {
-      required: number;
-      electiveRequired: number;
-      elective: number;
-    };
-  };
+  curriculum: AcademicCurriculum;
   courses: AcademicCourse[];
   stats: {
     requirementRows: number;
@@ -375,6 +368,7 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
         departmentName,
         entranceYear,
         curriculum: {
+          name: departmentName,
           requiredCredits: 0,
           breakdown: { required: 0, electiveRequired: 0, elective: 0 },
         },
@@ -410,6 +404,7 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
       departmentName,
       entranceYear,
       curriculum: {
+        name: departmentName,
         requiredCredits: 0,
         breakdown: { required: 0, electiveRequired: 0, elective: 0 },
       },

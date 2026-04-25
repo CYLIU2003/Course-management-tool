@@ -1,6 +1,12 @@
 import type { AcademicAllYearsData, AcademicCourse, AcademicDashboardSnapshot, AcademicSettings, AcademicYear } from '../utils/academicProgress';
 import AcademicOverview from './AcademicOverview';
+import GpaSummaryPanel from './GpaSummaryPanel';
+import CreditCompletionPanel from './CreditCompletionPanel';
+import TargetGpaPanel from './TargetGpaPanel';
+import GraduationRequirementPanel from './GraduationRequirementPanel';
 import GpaPredictionPanel from './GpaPredictionPanel';
+import GradeScanImportPanel from './GradeScanImportPanel';
+import LearningLoadMemoPanel from './LearningLoadMemoPanel';
 
 interface GradeManagementProps {
   settings: AcademicSettings;
@@ -36,9 +42,29 @@ export default function GradeManagement({
         allYearsData={allYearsData}
         courses={importedCourses}
         currentYear={currentYear}
+        curriculum={settings.curriculum}
+      />
+
+      <GraduationRequirementPanel
+        curriculum={settings.curriculum}
+        allYearsData={allYearsData}
+        courses={importedCourses}
+      />
+
+      <GpaSummaryPanel snapshot={snapshot} allYearsData={allYearsData} />
+
+      <CreditCompletionPanel snapshot={snapshot} allYearsData={allYearsData} />
+
+      <TargetGpaPanel
+        snapshot={snapshot}
+        defaultFutureCredits={Math.max(0, snapshot.requiredCredits - snapshot.earnedCredits)}
       />
 
       <GpaPredictionPanel courses={importedCourses} snapshot={snapshot} />
+
+      <GradeScanImportPanel />
+
+      <LearningLoadMemoPanel courses={importedCourses} />
 
       <section className="tt-card" style={{ marginTop: '1.5rem' }}>
         <div className="section-title">
