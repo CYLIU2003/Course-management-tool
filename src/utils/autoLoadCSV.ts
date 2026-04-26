@@ -9,20 +9,32 @@ export interface Department {
   id: string;           // 学科識別子（ファイル名のプレフィックス）
   name: string;         // 学科の表示名
   faculty: string;      // 学部名
+  facultyId: string;    // 学部識別子（public/department配下のフォルダ名）
 }
 
 /**
  * 利用可能な学科リスト
  */
 export const AVAILABLE_DEPARTMENTS: Department[] = [
-  { id: 'denki', name: '電気電子通信工学科', faculty: '理工学部' },
-  { id: 'kikai', name: '機械工学科', faculty: '理工学部' },
-  { id: 'kikai_system', name: '機械システム工学科', faculty: '理工学部' },
-  { id: 'iyo', name: '医用工学科', faculty: '理工学部' },
-  { id: 'ouyou_kagaku', name: '応用化学科', faculty: '理工学部' },
-  { id: 'genshiryoku', name: '原子力安全工学科', faculty: '理工学部' },
-  { id: 'shizen_shizen', name: '自然科学科（自然コース）', faculty: '理工学部' },
-  { id: 'shizen_suuri', name: '自然科学科（数理コース）', faculty: '理工学部' },
+  { id: 'kikai', name: '機械工学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'kikai_system', name: '機械システム工学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'denki', name: '電気電子通信工学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'iyo', name: '医用工学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'ouyou_kagaku', name: '応用化学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'genshiryoku', name: '原子力安全工学科', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'shizen_shizen', name: '自然科学科（自然コース）', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'shizen_suuri', name: '自然科学科（数理コース）', faculty: '理工学部', facultyId: 'rikou' },
+  { id: 'kenchiku', name: '建築学科', faculty: '建築都市デザイン学部', facultyId: 'kenchiku_toshi' },
+  { id: 'toshi_kogaku', name: '都市工学科', faculty: '建築都市デザイン学部', facultyId: 'kenchiku_toshi' },
+  { id: 'joho_kagaku', name: '情報科学科', faculty: '情報工学部', facultyId: 'joho' },
+  { id: 'chino_joho', name: '知能情報工学科', faculty: '情報工学部', facultyId: 'joho' },
+  { id: 'kankyo_sosei', name: '環境創生学科', faculty: '環境学部', facultyId: 'kankyo' },
+  { id: 'kankyo_keiei', name: '環境経営システム学科', faculty: '環境学部', facultyId: 'kankyo' },
+  { id: 'shakai_media', name: '社会メディア学科', faculty: 'メディア情報学部', facultyId: 'media_joho' },
+  { id: 'joho_system', name: '情報システム学科', faculty: 'メディア情報学部', facultyId: 'media_joho' },
+  { id: 'design_data', name: 'デザイン・データ科学科', faculty: 'デザイン・データ科学部', facultyId: 'design_data' },
+  { id: 'toshi_seikatsu', name: '都市生活学科', faculty: '都市生活学部', facultyId: 'toshi_seikatsu' },
+  { id: 'ningen', name: '人間科学科', faculty: '人間科学部', facultyId: 'ningen' },
 ] as const;
 
 export type CSVLoadStatus = 'success' | 'partial' | 'failed';
@@ -87,35 +99,29 @@ export class CSVAutoLoadError extends Error {
 /**
  * 学科IDと入学年度からCSVファイルのパスを生成
  * パターン:
- * - 卒業要件: /department/rikou/{entranceYear}/{departmentId}_credit_requirements.csv
- * - 科目一覧: /department/rikou/{entranceYear}/{departmentId}_timetable_by_category.csv
- * - fallback: /department/rikou/{departmentId}_credit_requirements.csv
- * - fallback: /department/rikou/{departmentId}_timetable_by_category.csv
+ * - 卒業要件: /department/{facultyId}/{entranceYear}/{departmentId}_credit_requirements.csv
+ * - 科目一覧: /department/{facultyId}/{entranceYear}/{departmentId}_timetable_by_category.csv
+ * - fallback（理工学部のみ）: /department/rikou/{departmentId}_*.csv
  */
 type CSVPaths = {
   requirements: string;
   timetable: string;
   schedule: string;
   sharedSchedule: string;
-  fallbackRequirements?: string;
-  fallbackTimetable?: string;
-  fallbackSchedule?: string;
-  fallbackSharedSchedule?: string;
 };
 
 function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
-  const basePath = `/department/rikou`;
+  const department = AVAILABLE_DEPARTMENTS.find((d) => d.id === departmentId);
+  const facultyId = department?.facultyId ?? 'rikou';
+  const basePath = `/department/${facultyId}`;
+  const sharedSchedulePrefix = facultyId;
 
   if (entranceYear) {
     return {
       requirements: `${basePath}/${entranceYear}/${departmentId}_credit_requirements.csv`,
       timetable: `${basePath}/${entranceYear}/${departmentId}_timetable_by_category.csv`,
       schedule: `${basePath}/${entranceYear}/${departmentId}_${entranceYear}_spring_schedule.csv`,
-      sharedSchedule: `${basePath}/${entranceYear}/rikou_${entranceYear}_spring_schedule.csv`,
-      fallbackRequirements: `${basePath}/${departmentId}_credit_requirements.csv`,
-      fallbackTimetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
-      fallbackSchedule: `${basePath}/${departmentId}_${entranceYear}_spring_schedule.csv`,
-      fallbackSharedSchedule: `${basePath}/rikou_${entranceYear}_spring_schedule.csv`,
+      sharedSchedule: `${basePath}/${entranceYear}/${sharedSchedulePrefix}_${entranceYear}_spring_schedule.csv`,
     };
   }
 
@@ -123,16 +129,15 @@ function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
     requirements: `${basePath}/${departmentId}_credit_requirements.csv`,
     timetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
     schedule: `${basePath}/${departmentId}_spring_schedule.csv`,
-    sharedSchedule: `${basePath}/rikou_spring_schedule.csv`,
+    sharedSchedule: `${basePath}/${sharedSchedulePrefix}_spring_schedule.csv`,
   };
 }
 
 async function fetchRequiredCSVText(
   kind: CSVResourceKind,
   primaryPath: string,
-  fallbackPath?: string,
 ): Promise<{ text: string; result: CSVResourceLoadResult }> {
-  const attemptedPaths = [primaryPath, fallbackPath].filter(Boolean) as string[];
+  const attemptedPaths = [primaryPath];
   const primaryResponse = await fetch(primaryPath);
 
   if (primaryResponse.ok) {
@@ -146,37 +151,6 @@ async function fetchRequiredCSVText(
         message: `${kind} CSVを読み込みました。`,
       },
     };
-  }
-
-  if (primaryResponse.status === 404 && fallbackPath) {
-    const fallbackResponse = await fetch(fallbackPath);
-
-    if (fallbackResponse.ok) {
-      return {
-        text: await fallbackResponse.text(),
-        result: {
-          kind,
-          status: 'fallback-loaded',
-          path: fallbackPath,
-          attemptedPaths,
-          message: `${kind} CSVをfallbackから読み込みました。`,
-        },
-      };
-    }
-
-    throw new CSVAutoLoadError(
-      `${kind} CSVの読み込みに失敗しました。primary=${primaryPath} (${primaryResponse.status}), fallback=${fallbackPath} (${fallbackResponse.status})`,
-      [
-        {
-          kind,
-          status: 'failed',
-          path: fallbackPath,
-          attemptedPaths,
-          message: `${kind} CSVの読み込みに失敗しました。`,
-          error: `${fallbackResponse.status} ${fallbackResponse.statusText}`,
-        },
-      ],
-    );
   }
 
   throw new CSVAutoLoadError(
@@ -257,13 +231,13 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     if (import.meta.env.DEV) {
       console.log('📥 Fetching requirements from:', paths.requirements);
     }
-    const requirementsFetch = await fetchRequiredCSVText('requirements', paths.requirements, paths.fallbackRequirements);
+    const requirementsFetch = await fetchRequiredCSVText('requirements', paths.requirements);
     resources.push(requirementsFetch.result);
 
     if (import.meta.env.DEV) {
       console.log('📥 Fetching timetable from:', paths.timetable);
     }
-    const timetableFetch = await fetchRequiredCSVText('timetable', paths.timetable, paths.fallbackTimetable);
+    const timetableFetch = await fetchRequiredCSVText('timetable', paths.timetable);
     resources.push(timetableFetch.result);
 
     const requirementsBlob = new Blob([requirementsFetch.text], { type: 'text/csv' });
@@ -286,8 +260,6 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     const scheduleFetch = await fetchOptionalCSVText('schedule', [
       paths.schedule,
       paths.sharedSchedule,
-      paths.fallbackSchedule,
-      paths.fallbackSharedSchedule,
     ]);
     resources.push(scheduleFetch.result);
 

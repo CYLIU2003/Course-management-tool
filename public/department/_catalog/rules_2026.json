@@ -1,0 +1,60 @@
+{
+  "entrance_year": 2026,
+  "total_graduation_credits": 124,
+  "tracks": [
+    {
+      "departmentId": "joho_kagaku",
+      "trackId": "general",
+      "name": "一般コース",
+      "foreign_language_required": 8,
+      "free_elective_required": 12
+    },
+    {
+      "departmentId": "joho_kagaku",
+      "trackId": "international",
+      "name": "国際コース",
+      "foreign_language_required": 12,
+      "free_elective_required": 8
+    },
+    {
+      "departmentId": "chino_joho",
+      "trackId": "general",
+      "name": "一般コース",
+      "foreign_language_required": 8,
+      "free_elective_required": 12
+    },
+    {
+      "departmentId": "chino_joho",
+      "trackId": "international",
+      "name": "国際コース",
+      "foreign_language_required": 12,
+      "free_elective_required": 8
+    },
+    {
+      "departmentId": "ningen",
+      "trackId": "child_studies",
+      "name": "児童学コース",
+      "notes": "体育科目は必修2単位、専門基礎は必修22単位、専門科目は必修20単位を含む。"
+    },
+    {
+      "departmentId": "ningen",
+      "trackId": "human_sciences",
+      "name": "人間総合科学コース",
+      "notes": "体育科目は選択必修1単位、専門基礎は必修24単位、専門科目は必修18単位を含む。"
+    }
+  ],
+  "cross_cutting_requirements": [
+    {
+      "id": "math_data_science_program",
+      "name": "数理・データサイエンスプログラム",
+      "credits": 4,
+      "condition": "※DS科目から1単位以上を含み、※MS科目と合わせて4単位以上。"
+    },
+    {
+      "id": "free_elective",
+      "name": "自由選択",
+      "condition": "各区分の卒業要件を超える分を合算して学部・学科別の必要単位数以上を修得。"
+    }
+  ],
+  "teacher_license_scope": "理工学部・情報工学部・メディア情報学部の教職課程科目は teacher/2026 に分離。現行の卒業要件CSVには直接合算しない。"
+}

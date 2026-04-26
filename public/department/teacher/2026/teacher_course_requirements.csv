@@ -1,0 +1,46 @@
+﻿id,title,credits,raw_required,category,group,courseType,source_key,source_file,source_line
+TT-211,①－１教育原論,2,○ ☆,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①－１   教育原論                 ○    2       ☆   2                                  TT-211
+TT-212,①－２教職論,2,○ ☆,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①－２   教職論                  ○    2       ☆       2                              TT-212
+TT-214,①－３教育制度論,2,○ ☆,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①－３    教育制度論               ○    2       ☆       2                              TT-214
+TT-215,教育心理学,2,△ ☆,資格・教職,教職課程,elective-required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①         教育心理学                △    2       ☆   2                                  TT-215
+TT-216,発達心理学,2,△ ☆,資格・教職,教職課程,elective-required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,発達心理学               △    2       ☆   2                                  TT-216
+TT-217,①－５特別支援教育,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①－５   特別支援教育               ○    2               2                              TT-217
+TT-218,①－６教育課程論,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,①－６   教育課程論                ○    2                   2                          TT-218
+TT-222,②－２総合的な学習の時間の理論と方法,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,②－２   総合的な学習の時間の理論と方法      ○    2                       2                      TT-222
+TT-223,②－３特別活動の理論と方法,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,②－３   特別活動の理論と方法           ○    2               2                              TT-223
+TT-224,②－４ 教育方法学（ICT 活用を含む）,2,○ ☆,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,②－４   教育方法学（ICT 活用を含む）     ○    2       ☆           2                          TT-224
+TT-226,②－５生徒指導・進路指導の理論と方法,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,②－５   生徒指導・進路指導の理論と方法      ○    2           2                                  TT-226
+TT-227,教育相談とカウンセリング(1),2,△ ☆,資格・教職,教職課程,elective-required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,教育相談とカウンセリング(1)      △    2       ☆   2                                  TT-227
+TT-228,教育相談とカウンセリング(2),2,△ ☆,資格・教職,教職課程,elective-required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,教育相談とカウンセリング(2)     △    2       ☆       2                              TT-228
+TT-333,教育実習(2),2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,教育実習(2)             ○    2                                     2        TT-333
+TT-334,教育実習事前事後指導(2),1,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,③          教育実習事前事後指導(2)       ○    1                                     1        TT-334
+TT-335,③－２教職実践演習（中・高）,2,○,資格・教職,教職課程,required,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,③－２    教職実践演習（中・高）         ○    2                                         2    TT-335
+TT-2D1,情報教育法(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,。     情報教育法(1)              2                            2               必修          TT-2D1
+TT-2D2,情報教育法(2),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,情報教育法(2)              2                                2           必修          TT-2D2
+TT-221,道徳教育の理論と方法＊,2,,資格・教職,教職課程,elective,media_informatics,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,道徳教育の理論と方法                ＊         2           2                                TT-221
+TT-331,教育実習(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,教育実習(1)               2                                2           中学校は必修      TT-331
+TT-332,教育実習事前事後指導(1),1,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,教育実習事前事後指導(1)         1                                1           中学校は必修      TT-332
+TT-2A1,数学教育法(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,数学教育法(1)              2                   2                        必修          TT-2A1
+TT-2A2,数学教育法(2),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,各     数学教育法(2)              2                        2                   必修          TT-2A2
+TT-2A3,数学教育法(3),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,教     数学教育法(3)              2                   2                        中学校は必修      TT-2A3
+TT-2A4,数学教育法(4),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,の     数学教育法(4)              2                        2                   中学校は必修      TT-2A4
+TT-2B1,理科教育法(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,導     理科教育法(1)              2                   2                        必修          TT-2B1
+TT-2B2,理科教育法(2),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,（     理科教育法(2)              2                        2                   必修          TT-2B2
+TT-2B3,理科教育法(3),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,報     理科教育法(3)              2                   2                        中学校は必修      TT-2B3
+TT-2B4,理科教育法(4),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,信     理科教育法(4)              2                        2                   中学校は必修      TT-2B4
+TT-2C1,技術教育法(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,術     技術教育法(1)              2                   2                        必修          TT-2C1
+TT-2C2,技術教育法(2),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,活     技術教育法(2)              2                        2                   必修          TT-2C2
+TT-2C3,技術教育法(3),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,用     技術教育法(3)              2                   2                        必修          TT-2C3
+TT-2C4,技術教育法(4),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,含     技術教育法(4)              2                        2                   必修          TT-2C4
+TT-2E1,工業教育法(1),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,工業教育法(1)              2                            2               必修          TT-2E1
+TT-2E2,工業教育法(2),2,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,工業教育法(2)              2                                2           必修          TT-2E2
+TT-2V1,幾何学(1),2,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,幾何学(1)         2       □         2                                         TT-2V1
+TT-2V2,幾何学(2),2,□ 必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,幾何学(2)         2       □             2             １科目必修       １単位         TT-2V2
+TT-2V3,幾何学(3),2,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,幾何学(3)         2       □             2                      ※以下を含むこと       TT-2V3
+TT-2V4,確率論,2,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,確率論            2       □    2                       必   修                  TT-2V4
+TT-2X2,機械工作実習(a),1,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,機械工作実習(a)    1       □             1               必   修              TT-2X2
+TT-2X3,機械・電気 機械工作実習(b),1,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,機械・電気              機械工作実習(b)    1       □             1               必   修   １単位        TT-2X3
+TT-2X4,生物育成,2,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,生物育成         2       □         2                   必   修              TT-2X4
+TT-2Z2,職業指導,2,□,資格・教職,教職課程,elective,teacher,2026理工教職.pdf,職業指導         2       □             2              必   修              TT-2Z2
+TT-391,介護等体験,1,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,介護等体験                     1             1                         中学のみ必修       TT-391
+TT-393,介護等体験指導,1,必修,資格・教職,教職課程,required,teacher,2026理工教職.pdf,介護等体験指導                   1             1                         中学のみ必修       TT-393
