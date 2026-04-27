@@ -3,7 +3,6 @@ import GradeManagement from "./components/GradeManagement";
 import AppShell from "./components/layout/AppShell";
 import AppHeader, { type AppPage } from "./components/layout/AppHeader";
 import DataManagementMenu from "./components/layout/DataManagementMenu";
-import DashboardCards from "./components/dashboard/DashboardCards";
 import QuarterTabs from "./components/timetable/QuarterTabs";
 import AppSettingsModal from "./components/settings/AppSettingsModal";
 import CourseSearchPanel from "./components/courses/CourseSearchPanel";
@@ -621,7 +620,24 @@ export default function TimetableApp() {
     <CourseSearchPanel courses={importedCourses} />
   ) : (
     <div className="timetable-page">
-      <DashboardCards snapshot={dashboardSnapshot} curriculumName={settings.curriculum?.name} />
+      <AcademicOverview
+        title="学生向けトップ"
+        snapshot={dashboardSnapshot}
+        curriculumName={settings.curriculum?.name}
+        allYearsData={allYearsData}
+        courses={importedCourses}
+        currentYear={currentYear}
+        curriculum={settings.curriculum}
+        currentQuarter={activeQuarter}
+        timetable={currentYearData.timetable}
+        days={settings.days}
+        periods={settings.periods}
+        showActions
+        onOpenRequirements={() => setWorkspaceTab("requirements")}
+        onOpenCourses={() => setCurrentPage("courses")}
+        onOpenGpa={() => setWorkspaceTab("gpa")}
+        onOpenCalendar={() => setWorkspaceTab("calendar")}
+      />
 
       <DataLoadNotice
         status={csvLoading ? "loading" : csvLoadError ? "failed" : csvLoadResult?.status === "partial" ? "partial" : csvLoadResult?.status === "success" ? "ready" : "idle"}
