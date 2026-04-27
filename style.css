@@ -873,6 +873,320 @@ html[data-theme="eco"] {
   border: 1px solid var(--border);
 }
 
+/* ===== 区分別可視化 ===== */
+.requirement-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0.1rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.requirement-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.requirement-category-card {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.requirement-category-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.requirement-category-card__title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.requirement-category-card__description {
+  margin: 0.25rem 0 0;
+  color: var(--text-sub);
+  font-size: 0.82rem;
+}
+
+.requirement-category-card__metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.requirement-category-card__metric {
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  background: color-mix(in oklab, var(--surface) 94%, var(--primary-soft) 6%);
+}
+
+.requirement-category-card__metric-label {
+  display: block;
+  color: var(--text-sub);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.requirement-category-card__metric-value {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.requirement-category-card__bar,
+.requirement-drawer__progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--border-soft);
+}
+
+.requirement-category-card__bar span,
+.requirement-drawer__progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.requirement-category-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: var(--text-sub);
+  font-size: 0.78rem;
+}
+
+.requirement-category-card__meta span {
+  white-space: nowrap;
+}
+
+.requirement-category-card__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.requirement-category-card__actions .btn-primary,
+.requirement-category-card__actions .btn-ghost {
+  min-height: 40px;
+}
+
+.tcu-tt .requirement-drawer {
+  width: min(100vw - 24px, 920px);
+  height: min(calc(100vh - 24px), 920px);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px 0 0 24px;
+}
+
+.requirement-drawer .tt-dialog__body {
+  flex: 1;
+  min-height: 0;
+}
+
+.requirement-drawer__header {
+  display: grid;
+  gap: 4px;
+}
+
+.requirement-drawer__description {
+  margin: 0;
+  color: var(--text-sub);
+  font-size: 0.84rem;
+}
+
+.requirement-drawer__summary {
+  display: grid;
+  gap: 12px;
+}
+
+.requirement-drawer__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.requirement-drawer__metric {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface-soft);
+}
+
+.requirement-drawer__metric-label {
+  margin: 0;
+  color: var(--text-sub);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.requirement-drawer__metric-value {
+  margin: 0.2rem 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.requirement-drawer__progress {
+  display: grid;
+  gap: 6px;
+}
+
+.requirement-drawer__candidate {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  background: color-mix(in oklab, var(--info-soft) 82%, var(--surface) 18%);
+}
+
+.requirement-drawer__candidate p {
+  margin: 0.25rem 0 0;
+  color: var(--text-sub);
+}
+
+.requirement-drawer__candidate strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.requirement-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.requirement-tab {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background: var(--surface);
+  color: var(--text-main);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.requirement-tab.is-active {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  border-color: transparent;
+}
+
+.requirement-course-list {
+  display: grid;
+  gap: 10px;
+}
+
+.requirement-course-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.requirement-course-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.requirement-course-card__title {
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+.requirement-course-card__credits {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  color: var(--text-sub);
+  font-weight: 800;
+}
+
+.requirement-course-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  color: var(--text-sub);
+  font-size: 0.78rem;
+}
+
+.requirement-course-card__meta span {
+  white-space: nowrap;
+}
+
+.requirement-course-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.requirement-empty {
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: var(--surface-soft);
+  padding: 14px;
+  color: var(--text-sub);
+}
+
+.requirement-empty--error {
+  color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.requirement-skeleton {
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--stroke) 55%, transparent) 0%,
+    color-mix(in oklab, var(--stroke) 80%, transparent) 50%,
+    color-mix(in oklab, var(--stroke) 55%, transparent) 100%
+  );
+  background-size: 200% 100%;
+  animation: requirement-skeleton 1.4s ease-in-out infinite;
+}
+
+@keyframes requirement-skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.tcu-tt .tt-modal--drawer {
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.tcu-tt .tt-modal--drawer .tt-dialog {
+  max-width: none;
+}
+
 .course-search__filters,
 .course-picker__filters,
 .settings-modal__grid,
@@ -880,6 +1194,32 @@ html[data-theme="eco"] {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 10px;
+}
+
+@media (max-width: 767px) {
+  .tcu-tt .requirement-drawer {
+    width: 100%;
+    height: min(calc(100vh - 12px), 100vh);
+    border-radius: 18px 18px 0 0;
+  }
+
+  .requirement-category-card__metrics,
+  .requirement-drawer__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .requirement-drawer__candidate {
+    flex-direction: column;
+  }
+
+  .requirement-category-card__actions {
+    justify-content: stretch;
+  }
+
+  .requirement-category-card__actions .btn-primary,
+  .requirement-category-card__actions .btn-ghost {
+    width: 100%;
+  }
 }
 
 
