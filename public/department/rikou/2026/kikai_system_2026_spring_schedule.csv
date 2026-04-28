@@ -1,168 +1,168 @@
-﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence
-kikai_system,機シ,世田谷,月,1,前期前,2,AB,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,2,CD,線形代数学(2a),曽布川 拓也,saa111109,13M,対象[25-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(2a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,3,CD,技術者倫理,田中 康寛 三宅 弘晃 白鳥 英 渡邉 力夫,saa121104,31A,対象[24-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,技術者倫理,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期前,4,CD,ロボット工学応用,佐藤 大祐,saa121102,73A,対象[23-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,ロボット工学応用,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,1,AB,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,2,CD,線形代数学(2b),曽布川 拓也,sab111110,13M,対象[25-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(2b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,1,前期後,3,CD,振動工学,藪井 将太,sab121110,12K,対象[24-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,振動工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,2,前期前,1,SD,PBL(1),土方 規実雄,saa121201,PBL教室,対象[26-20],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,PBL(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,2,前期前,2,SD,ベクトル解析学,渡邉 力夫,saa121202,12P,対象[25-17],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,ベクトル解析学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,2,前期後,1,AB,電気物理及び演習(a),田中 康寛,sab121208,1BB,対象[26-21],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,2,前期後,1,CD,電気物理及び演習(a),三宅 弘晃,sab121209,1BC,対象[26-21],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,2,前期後,3,CD,伝熱工学,永野 秀明,sab121206,21B,対象[24-17],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,伝熱工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,3,前期,2,CD,機械システム基礎実験,"三宅 弘晃 渡邉 力夫 ,機械系実験 永野 秀明 室(10号館) 柴田 拓馬",saz121301,"12E,12F,12G",対象[25-17],"対開講(月3,月4)",,4,2026世田谷キャンパス前期.pdf,機械システム基礎実験,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,3,前期前,1,AB,微分積分学(1a),笹尾 哲,saa121309,13L,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,3,前期前,1,CD,線形代数学(1a),前田 多恵,saa121308,13J,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,3,前期後,1,AB,微分積分学(1b),笹尾 哲,sab121310,13L,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,3,前期後,1,CD,線形代数学(1b),前田 多恵,sab121311,13J,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,4,前期,2,CD,機械システム基礎実験,"三宅 弘晃 渡邉 力夫 ,機械系実験 永野 秀明 室(10号館) 柴田 拓馬",saz121301,"12E,12F,12G",対象[25-17],"対開講(月3,月4)",,4,2026世田谷キャンパス前期.pdf,機械システム基礎実験,,,,,,unmatched,0
-kikai_system,機シ,世田谷,月,4,前期前,1,AB,情報リテラシー演習(a),安井 浩之,saa121401,12L,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0
-kikai_system,機シ,世田谷,月,4,前期前,1,CD,情報リテラシー演習(a),古澤 実,saa121403,12M,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0
-kikai_system,機シ,世田谷,月,4,前期後,1,AB,情報リテラシー演習(b),安井 浩之,sab121402,12L,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0
-kikai_system,機シ,世田谷,月,4,前期後,1,CD,情報リテラシー演習(b),古澤 実,sab121404,12M,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0
-kikai_system,機シ,世田谷,火,1,前期,1,CD,知的財産,伊藤 剣太 (2Q),saz112141,"71B(1Q),61C",対象[26-17],,,4,2026世田谷キャンパス前期.pdf,知的財産,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期前,1,CD,微分積分学(1a),肥田野 久二男,saa122111,1BM,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期前,1,CD,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,saa122112,12M,対象[26-26],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,微分積分学(1a)リメディアルクラス,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期前,2,AB,電気電子回路及び演習,三宅 弘晃,saa122106,1BB,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期前,2,CD,電気電子回路及び演習,土方 規実雄,saa122107,1BC,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期後,1,CD,微分積分学(1b),肥田野 久二男,sab122114,1BM,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期後,1,CD,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,sab122113,12M,対象[26-26],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,微分積分学(1b)リメディアルクラス,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期後,2,CD,流れ学(1)及び演習,白鳥 英,sab122110,1BN,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,流れ学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,1,前期後,3,CD,機械要素,秋田 貢一,sab122102,1BC,対象[24-17],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,機械要素,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期,1,CD,知的財産,伊藤 剣太 (2Q),saz112205,"71B(1Q),61C",対象[26-17],,,4,2026世田谷キャンパス前期.pdf,知的財産,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-A,Reading and,日高 正司,saa122201,12J,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-B,Reading and Writing(1a),ヴァーラ内田 エイ ドリアン ミッシェ,saa122202,12G,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,ReadingandWriting(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-C,Reading and,秋間 聖代,saa122203,12C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-D,Reading and,水戸 俊介,saa122204,12D,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-E,Reading and,佐竹 幸信,saa122205,12A,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-F,Reading and,古谷 裕美,saa122206,12E,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-G,Reading and,松本 淳子,saa122207,12F,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-H,Reading and,鷹取 勇希,saa122208,13K,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-I,Reading and,染谷 昌弘,saa122209,11C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,1,IV-J,Reading and,小林 美文,saa122210,12H,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期前,2,IV-J,熱力学(1)及び演習,白鳥 英,saa122245,1BN,対象[25-21],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,熱力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-A,Reading and,日高 正司,sab122211,12J,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-B,Reading and Writing(1b),ヴァーラ内田 エイ ドリアン ミッシェ,sab122212,12G,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,ReadingandWriting(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-C,Reading and,秋間 聖代,sab122213,12C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-D,Reading and,水戸 俊介,sab122214,12D,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-E,Reading and,佐竹 幸信,sab122215,12A,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-F,Reading and,古谷 裕美,sab122216,12E,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-G,Reading and,松本 淳子,sab122217,12F,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-H,Reading and,鷹取 勇希,sab122218,13K,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-I,Reading and,染谷 昌弘,sab122219,11C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,1,IV-J,Reading and,小林 美文,sab122220,12H,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,2,AB,微分方程式論,田邊 顕一朗,sab122246,12P,対象[25-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,微分方程式論,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,2,CD,微分方程式論,古田 公司,sab122247,11A,対象[25-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,微分方程式論,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,2,前期後,3,CD,計測工学,田中 康寛,sab122243,1BC,対象[24-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,計測工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,3,前期前,1,CD,物理学実験(a),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,saa122308,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,3,前期前,3,CD,ロボット制御プログラミ ング,野中 謙一郎,saa122302,22C,対象[24-17],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,ロボット制御プログラミング,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,3,前期後,1,CD,物理学実験(b),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,sab122309,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,3,前期後,2,SD,PBL(2),宮坂 明宏 藪井 将太,sab122301,13K,対象[25-20],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,PBL(2),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,3,前期後,3,SD,制御システム設計,野中 謙一郎,sab122304,22C,対象[24-17],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,制御システム設計,,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,4,前期前,1,SD,物理学実験(a),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,saa122308,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,火,4,前期後,1,SD,物理学実験(b),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,sab122309,物理学実験,対象[26-26],"対開講(火3,火4)",,5,2026世田谷キャンパス前期.pdf,物理学実験(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,1,前期,2,SD,Cプログラミング及び演 習,藪井 将太 関口 和真,saz123101,"12L,12M",対象[20-17],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,Cプログラミング及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,1,前期前,1,AB,基礎体育(1a),山田 盛朗 井村 祥子 岩本 哲也 山口 良博,saa123107,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1a),TCU-PE-1A,基礎体育(1a),elective-required,体育科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,水,1,前期前,2,AB,プログラミング及び演習 (a),関口 和真,saa123103,"12L,12M",対象[25-21],"対開講(水1,水2) ○",○,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,1,前期前,2,AB,数理統計学(a),出耒 光夫,saa123105,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,1,前期後,1,AB,基礎体育(1b),山田 盛朗 井村 祥子 岩本 哲也 山口 良博,sab123108,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1b),TCU-PE-1B,基礎体育(1b),elective-required,体育科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,水,1,前期後,2,AB,プログラミング及び演習 (b),藪井 将太,sab123104,"12L,12M",対象[25-21],"対開講(水1,水2) ○",○,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,1,前期後,2,AB,数理統計学(b),出耒 光夫,sab123106,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期,2,AB,Cプログラミング及び演 習,藪井 将太 関口 和真,saz123101,"12L,12M",対象[20-17],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,Cプログラミング及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期前,1,AB,線形代数学(1a),矢部 貴大,saa123201,12D,対象[26-21],,,5,2026世田谷キャンパス前期.pdf,線形代数学(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期前,1,CD,基礎体育(1a),椿原 徹也 山田 盛朗 岩本 哲也 山口 良博,saa123207,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1a),TCU-PE-1A,基礎体育(1a),elective-required,体育科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,水,2,前期前,2,CD,プログラミング及び演習 (a),関口 和真,saa123103,"12L,12M",対象[25-21],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期前,2,CD,数理統計学(a),出耒 光夫,saa123202,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期後,1,AB,線形代数学(1b),矢部 貴大,sab123203,12D,対象[26-21],,,5,2026世田谷キャンパス前期.pdf,線形代数学(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期後,1,CD,基礎体育(1b),椿原 徹也 山田 盛朗 岩本 哲也 山口 良博,sab123208,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1b),TCU-PE-1B,基礎体育(1b),elective-required,体育科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,水,2,前期後,2,CD,プログラミング及び演習 (b),藪井 将太,sab123104,"12L,12M",対象[25-21],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,水,2,前期後,2,CD,数理統計学(b),出耒 光夫,sab123204,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,2,AB,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,3,CD,技術者倫理,田中 康寛 三宅 弘晃 白鳥 英 渡邉 力夫,saa121104,31A,対象[24-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,技術者倫理,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期前,4,CD,ロボット工学応用,佐藤 大祐,saa121102,73A,対象[23-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,ロボット工学応用,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期後,1,AB,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,1,前期後,3,CD,振動工学,藪井 将太,sab121110,12K,対象[24-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,振動工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,2,前期前,1,SD,PBL(1),土方 規実雄,saa121201,PBL教室,対象[26-20],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,PBL(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,2,前期前,2,SD,ベクトル解析学,渡邉 力夫,saa121202,12P,対象[25-17],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,ベクトル解析学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,2,前期後,1,AB,電気物理及び演習(a),田中 康寛,sab121208,1BB,対象[26-21],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,2,前期後,1,CD,電気物理及び演習(a),三宅 弘晃,sab121209,1BC,対象[26-21],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,2,前期後,3,CD,伝熱工学,永野 秀明,sab121206,21B,対象[24-17],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,伝熱工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,3,前期,3,CD,機械システム設計演習 (1),島野 健仁郎 土方 規実雄 実験室(10号,saz124301,"12B,機械系",対象[24-17],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,3,前期前,3,AB,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,saa124302,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,3,前期前,3,CD,機械システム設計演習 (1b),土方 規実雄,saa124303,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,3,前期後,1,CD,データサイエンスリテラ シー(1),野田 肇,sab124308,22C,対象[26-20],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,木,3,前期後,3,AB,機械システム設計演習 (1b),土方 規実雄 土方 規実雄,sab124305,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,3,前期後,3,CD,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,sab124304,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,4,前期,3,CD,機械システム設計演習 (1),島野 健仁郎 土方 規実雄 実験室(10号,saz124301,"12B,機械系",対象[24-17],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,4,前期前,3,AB,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,saa124302,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,4,前期前,3,CD,機械システム設計演習 (1b),土方 規実雄,saa124303,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,4,前期後,1,CD,データサイエンスリテラ シー(1),野田 肇,sab124308,22C,対象[26-20],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,木,4,前期後,3,AB,機械システム設計演習 (1b),土方 規実雄 土方 規実雄,sab124305,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,4,前期後,3,CD,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,sab124304,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,5,前期前,2,CD,微分積分学(2a),山本 現,saa124501,13K,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,微分積分学(2a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,木,5,前期後,2,CD,微分積分学(2b),山本 現,sab124502,13K,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,微分積分学(2b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期前,1,CD,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,saa122112,12M,対象[26-26],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,微分積分学(1a)リメディアルクラス,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期前,2,AB,電気電子回路及び演習,三宅 弘晃,saa122106,1BB,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期前,2,CD,電気電子回路及び演習,土方 規実雄,saa122107,1BC,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期後,1,CD,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,sab122113,12M,対象[26-26],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,微分積分学(1b)リメディアルクラス,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期後,2,CD,流れ学(1)及び演習,白鳥 英,sab122110,1BN,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,流れ学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,1,前期後,3,CD,機械要素,秋田 貢一,sab122102,1BC,対象[24-17],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,機械要素,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-A,Communication,佐竹 幸信,saz125201,12G,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-B,Communication,グルンデル 教子,saz125202,12H,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-C,Communication Skills(1),ヴァーラ内田 エイ ドリアン ミッシェ,saz125203,12D,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,CommunicationSkills(1),TCU-ENG-CS1,Communication Skills(1),required,外国語科目,共通分野,exact,1.0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-D,Communication,倉持 和歌子,saz125204,12E,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-E,Communication,吹野 佐枝子,saz125205,11C,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-F,Communication,大塚 圭,saz125206,12B,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-G,Communication,鷹取 勇希,saz125207,13N,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-H,Communication,松本 弘法,saz125208,11D,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-I,Communication,稲垣 亜希子,saz125209,11B,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期,1,IV-J,Communication,三宅 加恵,saz125210,1BL,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期前,2,IV-J,熱力学(1)及び演習,白鳥 英,saa122245,1BN,対象[25-21],"対開講(火2,金2)",,5,2026世田谷キャンパス前期.pdf,熱力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期後,2,AB,微分方程式論,田邊 顕一朗,sab122246,12P,対象[25-17],"対開講(火2,金2)",,5,2026世田谷キャンパス前期.pdf,微分方程式論,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期後,2,CD,微分方程式論,古田 公司,sab122247,11A,対象[25-17],"対開講(火2,金2)",,6,2026世田谷キャンパス前期.pdf,微分方程式論,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,2,前期後,3,CD,計測工学,田中 康寛,sab122243,1BC,対象[24-17],"対開講(火2,金2)",,6,2026世田谷キャンパス前期.pdf,計測工学,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期,1,AB,基礎設計製図,岩附 信行 製図室(10号 館),saz125301,機械系設計,対象[26-17],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,基礎設計製図,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期前,3,CD,ロボット制御プログラミ 野中 ング,謙一郎,saa122302,22C,対象[24-17],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,ロボット制御プログラミ野中ング,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期後,1,CD,機械工作概論及び実習 熊谷 (b) 土井,正芳 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習熊谷(b)土井,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期後,2,SD,PBL(2),宮坂 明宏 藪井 将太,sab122301,13K,対象[25-20],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,PBL(2),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,3,前期後,3,SD,制御システム設計,野中 謙一郎,sab122304,22C,対象[24-17],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,制御システム設計,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,4,前期,1,AB,基礎設計製図,岩附 信行 製図室(10号 館),saz125301,機械系設計,対象[26-17],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,基礎設計製図,,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,4,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,4,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,4,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,金,4,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,3,前期前,1,CD,化学(1),木屋 幸蔵,saa116301,21C,対象[26-17],"対開講(土3,土4)",,6,2026世田谷キャンパス前期.pdf,化学(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前期前,1,CD,化学(1),木屋 幸蔵,saa116301,21C,対象[26-17],"対開講(土3,土4)",,6,2026世田谷キャンパス前期.pdf,化学(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,ことづくり(2),鈴木 憲吏,saz137613,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ことづくり(2),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひとづくり(2),杉浦 正吾 加藤 雄一,saz137612,-,対象[25-21],教養特別講義,,6,2026世田谷キャンパス前期.pdf,ひとづくり(2),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137615,-,対象[25-23],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137616,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,材料力学(1)及び演習,秋田 貢一,saz127614,-,対象[23-21],,,6,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,創成設計演習,田中 康寛 宮坂 明宏,saz127602,-,対象[20-20],,,6,2026世田谷キャンパス前期.pdf,創成設計演習,,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,2,CD,電磁気学基礎,須藤 誠一,saa112209,-,対象[20-17],,,6,2026世田谷キャンパス前期.pdf,電磁気学基礎,,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,ことづくり(4),瀬戸 久美子,saz137621,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ことづくり(4),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,ことづくり(4),瀬戸 久美子,saz137622,-,対象[24-23],,,6,2026世田谷キャンパス前期.pdf,ことづくり(4),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひとづくり(3),岸 和幸,saz137629,-,対象[24-21],教養特別講義,,6,2026世田谷キャンパス前期.pdf,ひとづくり(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137624,-,対象[24-23],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137625,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,材料力学(3),秋田 貢一,saz127601,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,材料力学(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,流れ学(3),島野 健仁郎,saz127613,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,流れ学(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,3,CD,熱力学(3),島野 健仁郎,saz127612,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,熱力学(3),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,4,CD,卒業研究(1),宮坂 明宏 秋田 貢一 永野 秀明 島野 健仁郎,saz127603,-,対象[23-19],,,6,2026世田谷キャンパス前期.pdf,卒業研究(1),,,,,,unmatched,0
-kikai_system,機シ,世田谷,土,4,前集中,4,CD,卒業研究(2),宮坂 明宏 秋田 貢一 永野 秀明 島野 健仁郎,saz127605,-,対象[23-19],,,6,2026世田谷キャンパス前期.pdf,卒業研究(2),,,,,,unmatched,0
+﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence,curriculumCourseId,curriculumCourseTitle,curriculumMatchStatus,curriculumMatchConfidence
+kikai_system,機シ,世田谷,月,1,前期前,2,AB,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,2,CD,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,4,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,2,CD,線形代数学(2a),曽布川 拓也,saa111109,13M,対象[25-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(2a),IT-213,線形代数学(2a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-213,線形代数学(2a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,3,CD,技術者倫理,田中 康寛 三宅 弘晃 白鳥 英 渡邉 力夫,saa121104,31A,対象[24-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,技術者倫理,IT-232,技術者倫理,required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-232,技術者倫理,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期前,4,CD,ロボット工学応用,佐藤 大祐,saa121102,73A,対象[23-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,ロボット工学応用,SCH-SAA121102,ロボット工学応用,elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAA121102,ロボット工学応用,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,1,AB,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,2,CD,線形代数学(2b),曽布川 拓也,sab111110,13M,対象[25-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(2b),IT-214,線形代数学(2b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-214,線形代数学(2b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,1,前期後,3,CD,振動工学,藪井 将太,sab121110,12K,対象[24-17],"対開講(月1,木1)",,4,2026世田谷キャンパス前期.pdf,振動工学,SCH-SAB121110,振動工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB121110,振動工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,2,前期前,1,SD,PBL(1),土方 規実雄,saa121201,PBL教室,対象[26-20],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,PBL(1),SCH-SAA121201,PBL(1),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA121201,PBL(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,2,前期前,2,SD,ベクトル解析学,渡邉 力夫,saa121202,12P,対象[25-17],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,ベクトル解析学,IT-312,ベクトル解析学,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-312,ベクトル解析学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,2,前期後,1,AB,電気物理及び演習(a),田中 康寛,sab121208,1BB,対象[26-21],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),SCH-SAB121208,電気物理及び演習(a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121208,電気物理及び演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,2,前期後,1,CD,電気物理及び演習(a),三宅 弘晃,sab121209,1BC,対象[26-21],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),SCH-SAB121208,電気物理及び演習(a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121208,電気物理及び演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,2,前期後,3,CD,伝熱工学,永野 秀明,sab121206,21B,対象[24-17],"対開講(月2,木2)",,4,2026世田谷キャンパス前期.pdf,伝熱工学,SCH-SAB121206,伝熱工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB121206,伝熱工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,3,前期,2,CD,機械システム基礎実験,"三宅 弘晃 渡邉 力夫 ,機械系実験 永野 秀明 室(10号館) 柴田 拓馬",saz121301,"12E,12F,12G",対象[25-17],"対開講(月3,月4)",,4,2026世田谷キャンパス前期.pdf,機械システム基礎実験,SCH-SAZ121301,機械システム基礎実験,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ121301,機械システム基礎実験,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,3,前期前,1,AB,微分積分学(1a),笹尾 哲,saa121309,13L,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1a),IT-111,微分積分学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-111,微分積分学(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,3,前期前,1,CD,線形代数学(1a),前田 多恵,saa121308,13J,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(1a),IT-113,線形代数学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-113,線形代数学(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,3,前期後,1,AB,微分積分学(1b),笹尾 哲,sab121310,13L,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1b),IT-112,微分積分学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-112,微分積分学(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,3,前期後,1,CD,線形代数学(1b),前田 多恵,sab121311,13J,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,線形代数学(1b),IT-114,線形代数学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-114,線形代数学(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,4,前期,2,CD,機械システム基礎実験,"三宅 弘晃 渡邉 力夫 ,機械系実験 永野 秀明 室(10号館) 柴田 拓馬",saz121301,"12E,12F,12G",対象[25-17],"対開講(月3,月4)",,4,2026世田谷キャンパス前期.pdf,機械システム基礎実験,SCH-SAZ121301,機械システム基礎実験,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ121301,機械システム基礎実験,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,4,前期前,1,AB,情報リテラシー演習(a),安井 浩之,saa121401,12L,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0,AU-131,情報リテラシー演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,4,前期前,1,CD,情報リテラシー演習(a),古澤 実,saa121403,12M,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0,AU-131,情報リテラシー演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,4,前期後,1,AB,情報リテラシー演習(b),安井 浩之,sab121402,12L,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0,AU-132,情報リテラシー演習(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,月,4,前期後,1,CD,情報リテラシー演習(b),古澤 実,sab121404,12M,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0,AU-132,情報リテラシー演習(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期,1,CD,知的財産,伊藤 剣太 (2Q),saz112141,"71B(1Q),61C",対象[26-17],,,4,2026世田谷キャンパス前期.pdf,知的財産,SCH-SAZ112141,知的財産,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ112141,知的財産,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期前,1,CD,微分積分学(1a),肥田野 久二男,saa122111,1BM,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1a),IT-111,微分積分学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-111,微分積分学(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期前,1,CD,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,saa122112,12M,対象[26-26],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,微分積分学(1a)リメディアルクラス,SCH-SAA122112,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122112,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期前,2,AB,電気電子回路及び演習,三宅 弘晃,saa122106,1BB,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,SCH-SAA122106,電気電子回路及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122106,電気電子回路及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期前,2,CD,電気電子回路及び演習,土方 規実雄,saa122107,1BC,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,SCH-SAA122106,電気電子回路及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122106,電気電子回路及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期後,1,CD,微分積分学(1b),肥田野 久二男,sab122114,1BM,対象[26-21],,,4,2026世田谷キャンパス前期.pdf,微分積分学(1b),IT-112,微分積分学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-112,微分積分学(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期後,1,CD,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,sab122113,12M,対象[26-26],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,微分積分学(1b)リメディアルクラス,SCH-SAB122113,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB122113,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期後,2,CD,流れ学(1)及び演習,白鳥 英,sab122110,1BN,対象[25-21],"対開講(火1,金1) ○",○,4,2026世田谷キャンパス前期.pdf,流れ学(1)及び演習,SCH-SAB122110,流れ学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB122110,流れ学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,1,前期後,3,CD,機械要素,秋田 貢一,sab122102,1BC,対象[24-17],"対開講(火1,金1)",,4,2026世田谷キャンパス前期.pdf,機械要素,SCH-SAB122102,機械要素,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122102,機械要素,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期,1,CD,知的財産,伊藤 剣太 (2Q),saz112205,"71B(1Q),61C",対象[26-17],,,4,2026世田谷キャンパス前期.pdf,知的財産,SCH-SAZ112141,知的財産,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ112141,知的財産,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-A,Reading and,日高 正司,saa122201,12J,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-B,Reading and Writing(1a),ヴァーラ内田 エイ ドリアン ミッシェ,saa122202,12G,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,ReadingandWriting(1a),SCH-SAA122202,Reading and Writing(1a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122202,Reading and Writing(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-C,Reading and,秋間 聖代,saa122203,12C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-D,Reading and,水戸 俊介,saa122204,12D,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-E,Reading and,佐竹 幸信,saa122205,12A,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-F,Reading and,古谷 裕美,saa122206,12E,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-G,Reading and,松本 淳子,saa122207,12F,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-H,Reading and,鷹取 勇希,saa122208,13K,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-I,Reading and,染谷 昌弘,saa122209,11C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,1,IV-J,Reading and,小林 美文,saa122210,12H,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期前,2,IV-J,熱力学(1)及び演習,白鳥 英,saa122245,1BN,対象[25-21],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,熱力学(1)及び演習,SCH-SAA122245,熱力学(1)及び演習,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122245,熱力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-A,Reading and,日高 正司,sab122211,12J,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-B,Reading and Writing(1b),ヴァーラ内田 エイ ドリアン ミッシェ,sab122212,12G,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,ReadingandWriting(1b),SCH-SAB122212,Reading and Writing(1b),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB122212,Reading and Writing(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-C,Reading and,秋間 聖代,sab122213,12C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-D,Reading and,水戸 俊介,sab122214,12D,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-E,Reading and,佐竹 幸信,sab122215,12A,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-F,Reading and,古谷 裕美,sab122216,12E,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-G,Reading and,松本 淳子,sab122217,12F,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-H,Reading and,鷹取 勇希,sab122218,13K,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-I,Reading and,染谷 昌弘,sab122219,11C,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,1,IV-J,Reading and,小林 美文,sab122220,12H,対象[26-26],,,4,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,2,AB,微分方程式論,田邊 顕一朗,sab122246,12P,対象[25-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,2,CD,微分方程式論,古田 公司,sab122247,11A,対象[25-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,2,前期後,3,CD,計測工学,田中 康寛,sab122243,1BC,対象[24-17],"対開講(火2,金2)",,4,2026世田谷キャンパス前期.pdf,計測工学,SCH-SAB122243,計測工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122243,計測工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,3,前期前,1,CD,物理学実験(a),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,saa122308,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(a),IT-123,物理学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-123,物理学実験(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,3,前期前,3,CD,ロボット制御プログラミ ング,野中 謙一郎,saa122302,22C,対象[24-17],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,ロボット制御プログラミング,SCH-SAA122302,ロボット制御プログラミ ング,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA122302,ロボット制御プログラミ ング,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,3,前期後,1,CD,物理学実験(b),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,sab122309,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(b),IT-124,物理学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-124,物理学実験(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,3,前期後,2,SD,PBL(2),宮坂 明宏 藪井 将太,sab122301,13K,対象[25-20],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,PBL(2),SCH-SAB122301,PBL(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB122301,PBL(2),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,3,前期後,3,SD,制御システム設計,野中 謙一郎,sab122304,22C,対象[24-17],"対開講(火3,金3)",,4,2026世田谷キャンパス前期.pdf,制御システム設計,SCH-SAB122304,制御システム設計,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122304,制御システム設計,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,4,前期前,1,SD,物理学実験(a),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,saa122308,物理学実験,対象[26-26],"対開講(火3,火4)",,4,2026世田谷キャンパス前期.pdf,物理学実験(a),IT-123,物理学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-123,物理学実験(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,火,4,前期後,1,SD,物理学実験(b),門多 顕司 尼子 淳 室(62H) 金子 核 鈴木 ひろみ,sab122309,物理学実験,対象[26-26],"対開講(火3,火4)",,5,2026世田谷キャンパス前期.pdf,物理学実験(b),IT-124,物理学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-124,物理学実験(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期,2,SD,Cプログラミング及び演 習,藪井 将太 関口 和真,saz123101,"12L,12M",対象[20-17],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,Cプログラミング及び演習,SCH-SAZ123101,Cプログラミング及び演 習,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ123101,Cプログラミング及び演 習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期前,1,AB,基礎体育(1a),山田 盛朗 井村 祥子 岩本 哲也 山口 良博,saa123107,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1a),TCU-PE-1A,基礎体育(1a),elective-required,体育科目,共通分野,exact,1.0,PE-111,基礎体育(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期前,2,AB,プログラミング及び演習 (a),関口 和真,saa123103,"12L,12M",対象[25-21],"対開講(水1,水2) ○",○,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(a),SCH-SAA123103,プログラミング及び演習 (a),required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA123103,プログラミング及び演習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期前,2,AB,数理統計学(a),出耒 光夫,saa123105,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(a),SCH-SAA123105,数理統計学(a),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA123105,数理統計学(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期後,1,AB,基礎体育(1b),山田 盛朗 井村 祥子 岩本 哲也 山口 良博,sab123108,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1b),TCU-PE-1B,基礎体育(1b),elective-required,体育科目,共通分野,exact,1.0,PE-112,基礎体育(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期後,2,AB,プログラミング及び演習 (b),藪井 将太,sab123104,"12L,12M",対象[25-21],"対開講(水1,水2) ○",○,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(b),SCH-SAB123104,プログラミング及び演習 (b),required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB123104,プログラミング及び演習 (b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,1,前期後,2,AB,数理統計学(b),出耒 光夫,sab123106,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(b),SCH-SAB123106,数理統計学(b),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB123106,数理統計学(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期,2,AB,Cプログラミング及び演 習,藪井 将太 関口 和真,saz123101,"12L,12M",対象[20-17],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,Cプログラミング及び演習,SCH-SAZ123101,Cプログラミング及び演 習,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ123101,Cプログラミング及び演 習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期前,1,AB,線形代数学(1a),矢部 貴大,saa123201,12D,対象[26-21],,,5,2026世田谷キャンパス前期.pdf,線形代数学(1a),IT-113,線形代数学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-113,線形代数学(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期前,1,CD,基礎体育(1a),椿原 徹也 山田 盛朗 岩本 哲也 山口 良博,saa123207,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1a),TCU-PE-1A,基礎体育(1a),elective-required,体育科目,共通分野,exact,1.0,PE-111,基礎体育(1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期前,2,CD,プログラミング及び演習 (a),関口 和真,saa123103,"12L,12M",対象[25-21],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(a),SCH-SAA123103,プログラミング及び演習 (a),required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA123103,プログラミング及び演習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期前,2,CD,数理統計学(a),出耒 光夫,saa123202,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(a),SCH-SAA123105,数理統計学(a),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA123105,数理統計学(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期後,1,AB,線形代数学(1b),矢部 貴大,sab123203,12D,対象[26-21],,,5,2026世田谷キャンパス前期.pdf,線形代数学(1b),IT-114,線形代数学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-114,線形代数学(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期後,1,CD,基礎体育(1b),椿原 徹也 山田 盛朗 岩本 哲也 山口 良博,sab123208,-,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,基礎体育(1b),TCU-PE-1B,基礎体育(1b),elective-required,体育科目,共通分野,exact,1.0,PE-112,基礎体育(1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期後,2,CD,プログラミング及び演習 (b),藪井 将太,sab123104,"12L,12M",対象[25-21],"対開講(水1,水2)",,5,2026世田谷キャンパス前期.pdf,プログラミング及び演習(b),SCH-SAB123104,プログラミング及び演習 (b),required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB123104,プログラミング及び演習 (b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,水,2,前期後,2,CD,数理統計学(b),出耒 光夫,sab123204,12A,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,数理統計学(b),SCH-SAB123106,数理統計学(b),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB123106,数理統計学(b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,2,AB,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,宮坂 明宏,saa121109,12H,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,2,CD,材料力学(1)及び演習,秋田 貢一,saa121108,12P,対象[25-21],"対開講(月1,木1) ○",○,5,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,3,CD,技術者倫理,田中 康寛 三宅 弘晃 白鳥 英 渡邉 力夫,saa121104,31A,対象[24-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,技術者倫理,IT-232,技術者倫理,required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-232,技術者倫理,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期前,4,CD,ロボット工学応用,佐藤 大祐,saa121102,73A,対象[23-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,ロボット工学応用,SCH-SAA121102,ロボット工学応用,elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAA121102,ロボット工学応用,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期後,1,AB,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,宮坂 明宏,sab121106,1BN,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期後,1,CD,工業力学及び演習,柴田 拓馬,sab121107,1BL,対象[26-21],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,工業力学及び演習,SCH-SAB121106,工業力学及び演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121106,工業力学及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,1,前期後,3,CD,振動工学,藪井 将太,sab121110,12K,対象[24-17],"対開講(月1,木1)",,5,2026世田谷キャンパス前期.pdf,振動工学,SCH-SAB121110,振動工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB121110,振動工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,2,前期前,1,SD,PBL(1),土方 規実雄,saa121201,PBL教室,対象[26-20],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,PBL(1),SCH-SAA121201,PBL(1),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA121201,PBL(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,2,前期前,2,SD,ベクトル解析学,渡邉 力夫,saa121202,12P,対象[25-17],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,ベクトル解析学,IT-312,ベクトル解析学,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-312,ベクトル解析学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,2,前期後,1,AB,電気物理及び演習(a),田中 康寛,sab121208,1BB,対象[26-21],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),SCH-SAB121208,電気物理及び演習(a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121208,電気物理及び演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,2,前期後,1,CD,電気物理及び演習(a),三宅 弘晃,sab121209,1BC,対象[26-21],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,電気物理及び演習(a),SCH-SAB121208,電気物理及び演習(a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB121208,電気物理及び演習(a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,2,前期後,3,CD,伝熱工学,永野 秀明,sab121206,21B,対象[24-17],"対開講(月2,木2)",,5,2026世田谷キャンパス前期.pdf,伝熱工学,SCH-SAB121206,伝熱工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB121206,伝熱工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期,3,CD,機械システム設計演習 (1),島野 健仁郎 土方 規実雄 実験室(10号,saz124301,"12B,機械系",対象[24-17],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1),SCH-SAZ124301,機械システム設計演習 (1),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ124301,機械システム設計演習 (1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期前,3,AB,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,saa124302,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),SCH-SAA124302,機械システム設計演習 (1a),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124302,機械システム設計演習 (1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期前,3,CD,機械システム設計演習 (1b),土方 規実雄,saa124303,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),SCH-SAA124303,機械システム設計演習 (1b),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124303,機械システム設計演習 (1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期後,1,CD,データサイエンスリテラ シー(1),野田 肇,sab124308,22C,対象[26-20],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0,LA-145,データサイエンスリテラシー(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期後,3,AB,機械システム設計演習 (1b),土方 規実雄 土方 規実雄,sab124305,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),SCH-SAA124303,機械システム設計演習 (1b),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124303,機械システム設計演習 (1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,3,前期後,3,CD,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,sab124304,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),SCH-SAA124302,機械システム設計演習 (1a),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124302,機械システム設計演習 (1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期,3,CD,機械システム設計演習 (1),島野 健仁郎 土方 規実雄 実験室(10号,saz124301,"12B,機械系",対象[24-17],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1),SCH-SAZ124301,機械システム設計演習 (1),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ124301,機械システム設計演習 (1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期前,3,AB,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,saa124302,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),SCH-SAA124302,機械システム設計演習 (1a),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124302,機械システム設計演習 (1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期前,3,CD,機械システム設計演習 (1b),土方 規実雄,saa124303,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),SCH-SAA124303,機械システム設計演習 (1b),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124303,機械システム設計演習 (1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期後,1,CD,データサイエンスリテラ シー(1),野田 肇,sab124308,22C,対象[26-20],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0,LA-145,データサイエンスリテラシー(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期後,3,AB,機械システム設計演習 (1b),土方 規実雄 土方 規実雄,sab124305,1BJ,対象[24-24],"対開講(木3,木4)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1b),SCH-SAA124303,機械システム設計演習 (1b),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124303,機械システム設計演習 (1b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,4,前期後,3,CD,機械システム設計演習 (1a),島野 健仁郎 実験室(10号,sab124304,"12B,機械系",対象[24-24],"対開講(木3,木4) 館)",,5,2026世田谷キャンパス前期.pdf,機械システム設計演習(1a),SCH-SAA124302,機械システム設計演習 (1a),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA124302,機械システム設計演習 (1a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,5,前期前,2,CD,微分積分学(2a),山本 現,saa124501,13K,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,微分積分学(2a),IT-211,微分積分学(2a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-211,微分積分学(2a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,木,5,前期後,2,CD,微分積分学(2b),山本 現,sab124502,13K,対象[25-21],,,5,2026世田谷キャンパス前期.pdf,微分積分学(2b),IT-212,微分積分学(2b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-212,微分積分学(2b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期前,1,CD,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,saa122112,12M,対象[26-26],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,微分積分学(1a)リメディアルクラス,SCH-SAA122112,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122112,微分積分学(1a)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期前,2,AB,電気電子回路及び演習,三宅 弘晃,saa122106,1BB,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,SCH-SAA122106,電気電子回路及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122106,電気電子回路及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期前,2,CD,電気電子回路及び演習,土方 規実雄,saa122107,1BC,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,電気電子回路及び演習,SCH-SAA122106,電気電子回路及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122106,電気電子回路及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期後,1,CD,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,井上 浩一 大矢 浩徳,sab122113,12M,対象[26-26],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,微分積分学(1b)リメディアルクラス,SCH-SAB122113,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB122113,微分積分学(1b)ﾘﾒﾃﾞｨｱﾙｸ ﾗｽ,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期後,2,CD,流れ学(1)及び演習,白鳥 英,sab122110,1BN,対象[25-21],"対開講(火1,金1) ○",○,5,2026世田谷キャンパス前期.pdf,流れ学(1)及び演習,SCH-SAB122110,流れ学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB122110,流れ学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,1,前期後,3,CD,機械要素,秋田 貢一,sab122102,1BC,対象[24-17],"対開講(火1,金1)",,5,2026世田谷キャンパス前期.pdf,機械要素,SCH-SAB122102,機械要素,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122102,機械要素,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-A,Communication,佐竹 幸信,saz125201,12G,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-B,Communication,グルンデル 教子,saz125202,12H,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-C,Communication Skills(1),ヴァーラ内田 エイ ドリアン ミッシェ,saz125203,12D,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,CommunicationSkills(1),TCU-ENG-CS1,Communication Skills(1),required,外国語科目,共通分野,exact,1.0,SCH-SAZ125203,Communication Skills(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-D,Communication,倉持 和歌子,saz125204,12E,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-E,Communication,吹野 佐枝子,saz125205,11C,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-F,Communication,大塚 圭,saz125206,12B,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-G,Communication,鷹取 勇希,saz125207,13N,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-H,Communication,松本 弘法,saz125208,11D,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-I,Communication,稲垣 亜希子,saz125209,11B,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期,1,IV-J,Communication,三宅 加恵,saz125210,1BL,対象[26-26],,,5,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期前,2,IV-J,熱力学(1)及び演習,白鳥 英,saa122245,1BN,対象[25-21],"対開講(火2,金2)",,5,2026世田谷キャンパス前期.pdf,熱力学(1)及び演習,SCH-SAA122245,熱力学(1)及び演習,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA122245,熱力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期後,2,AB,微分方程式論,田邊 顕一朗,sab122246,12P,対象[25-17],"対開講(火2,金2)",,5,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期後,2,CD,微分方程式論,古田 公司,sab122247,11A,対象[25-17],"対開講(火2,金2)",,6,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,2,前期後,3,CD,計測工学,田中 康寛,sab122243,1BC,対象[24-17],"対開講(火2,金2)",,6,2026世田谷キャンパス前期.pdf,計測工学,SCH-SAB122243,計測工学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122243,計測工学,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期,1,AB,基礎設計製図,岩附 信行 製図室(10号 館),saz125301,機械系設計,対象[26-17],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,基礎設計製図,SCH-SAZ125301,基礎設計製図,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125301,基礎設計製図,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),SCH-SAA125303,機械工作概論及び実習 (a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA125303,機械工作概論及び実習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),SCH-SAA125303,機械工作概論及び実習 (a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA125303,機械工作概論及び実習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期前,3,CD,ロボット制御プログラミ 野中 ング,謙一郎,saa122302,22C,対象[24-17],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,ロボット制御プログラミ野中ング,SCH-SAA122302,ロボット制御プログラミ 野中 ング,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA122302,ロボット制御プログラミ 野中 ング,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期後,1,CD,機械工作概論及び実習 熊谷 (b) 土井,正芳 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習熊谷(b)土井,SCH-SAB125305,機械工作概論及び実習 熊谷 (b) 土井,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB125305,機械工作概論及び実習 熊谷 (b) 土井,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),SCH-SAB125305,機械工作概論及び実習 (b),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB125305,機械工作概論及び実習 (b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期後,2,SD,PBL(2),宮坂 明宏 藪井 将太,sab122301,13K,対象[25-20],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,PBL(2),SCH-SAB122301,PBL(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB122301,PBL(2),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,3,前期後,3,SD,制御システム設計,野中 謙一郎,sab122304,22C,対象[24-17],"対開講(火3,金3)",,6,2026世田谷キャンパス前期.pdf,制御システム設計,SCH-SAB122304,制御システム設計,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB122304,制御システム設計,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,4,前期,1,AB,基礎設計製図,岩附 信行 製図室(10号 館),saz125301,機械系設計,対象[26-17],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,基礎設計製図,SCH-SAZ125301,基礎設計製図,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125301,基礎設計製図,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,4,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),SCH-SAA125303,機械工作概論及び実習 (a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA125303,機械工作概論及び実習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,4,前期前,1,CD,機械工作概論及び実習 (a),熊谷 正芳 土井 俊弥 くり支援セ ンター,saa125303,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(a),SCH-SAA125303,機械工作概論及び実習 (a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA125303,機械工作概論及び実習 (a),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,4,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),SCH-SAB125305,機械工作概論及び実習 (b),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB125305,機械工作概論及び実習 (b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,金,4,前期後,1,CD,機械工作概論及び実習 (b),熊谷 正芳 土井 俊弥 くり支援セ ンター,sab125305,"13L,ものつ",対象[26-21],"対開講(金3,金4)",,6,2026世田谷キャンパス前期.pdf,機械工作概論及び実習(b),SCH-SAB125305,機械工作概論及び実習 (b),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB125305,機械工作概論及び実習 (b),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,3,前期前,1,CD,化学(1),木屋 幸蔵,saa116301,21C,対象[26-17],"対開講(土3,土4)",,6,2026世田谷キャンパス前期.pdf,化学(1),IT-125,化学(1),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-125,化学(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前期前,1,CD,化学(1),木屋 幸蔵,saa116301,21C,対象[26-17],"対開講(土3,土4)",,6,2026世田谷キャンパス前期.pdf,化学(1),IT-125,化学(1),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-125,化学(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,ことづくり(2),鈴木 憲吏,saz137613,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ことづくり(2),SCH-SAZ137613,ことづくり(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137613,ことづくり(2),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひとづくり(2),杉浦 正吾 加藤 雄一,saz137612,-,対象[25-21],教養特別講義,,6,2026世田谷キャンパス前期.pdf,ひとづくり(2),SCH-SAZ137612,ひとづくり(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137612,ひとづくり(2),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137615,-,対象[25-23],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),SCH-SAZ137615,ひらめきづくり(3),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137615,ひらめきづくり(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137616,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),SCH-SAZ137615,ひらめきづくり(3),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137615,ひらめきづくり(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,材料力学(1)及び演習,秋田 貢一,saz127614,-,対象[23-21],,,6,2026世田谷キャンパス前期.pdf,材料力学(1)及び演習,SCH-SAA121108,材料力学(1)及び演習,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA121108,材料力学(1)及び演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,創成設計演習,田中 康寛 宮坂 明宏,saz127602,-,対象[20-20],,,6,2026世田谷キャンパス前期.pdf,創成設計演習,SCH-SAZ127602,創成設計演習,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ127602,創成設計演習,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,2,CD,電磁気学基礎,須藤 誠一,saa112209,-,対象[20-17],,,6,2026世田谷キャンパス前期.pdf,電磁気学基礎,AU-223,電磁気学基礎,elective,専門分野,学部基盤科目,curriculum-exact-title,1.0,AU-223,電磁気学基礎,curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,ことづくり(4),瀬戸 久美子,saz137621,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ことづくり(4),SCH-SAZ137621,ことづくり(4),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137621,ことづくり(4),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,ことづくり(4),瀬戸 久美子,saz137622,-,対象[24-23],,,6,2026世田谷キャンパス前期.pdf,ことづくり(4),SCH-SAZ137621,ことづくり(4),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137621,ことづくり(4),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひとづくり(3),岸 和幸,saz137629,-,対象[24-21],教養特別講義,,6,2026世田谷キャンパス前期.pdf,ひとづくり(3),SCH-SAZ137629,ひとづくり(3),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137629,ひとづくり(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137624,-,対象[24-23],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),SCH-SAZ137624,ひらめきづくり(5),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137624,ひらめきづくり(5),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137625,-,対象[22-21],,,6,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),SCH-SAZ137624,ひらめきづくり(5),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137624,ひらめきづくり(5),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,材料力学(3),秋田 貢一,saz127601,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,材料力学(3),SCH-SAZ127601,材料力学(3),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ127601,材料力学(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,流れ学(3),島野 健仁郎,saz127613,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,流れ学(3),SCH-SAZ127613,流れ学(3),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ127613,流れ学(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,3,CD,熱力学(3),島野 健仁郎,saz127612,-,対象[19-17],,,6,2026世田谷キャンパス前期.pdf,熱力学(3),SCH-SAZ127612,熱力学(3),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ127612,熱力学(3),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,4,CD,卒業研究(1),宮坂 明宏 秋田 貢一 永野 秀明 島野 健仁郎,saz127603,-,対象[23-19],,,6,2026世田谷キャンパス前期.pdf,卒業研究(1),SCH-SAZ127603,卒業研究(1),elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAZ127603,卒業研究(1),curriculum-exact-title,1.0
+kikai_system,機シ,世田谷,土,4,前集中,4,CD,卒業研究(2),宮坂 明宏 秋田 貢一 永野 秀明 島野 健仁郎,saz127605,-,対象[23-19],,,6,2026世田谷キャンパス前期.pdf,卒業研究(2),SCH-SAZ127605,卒業研究(2),elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAZ127605,卒業研究(2),curriculum-exact-title,1.0

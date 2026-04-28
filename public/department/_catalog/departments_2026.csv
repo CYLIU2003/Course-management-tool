@@ -1,20 +1,20 @@
-﻿facultyId,faculty,id,name,english,campus
-rikou,理工学部,kikai,機械工学科,Department of Mechanical Engineering,世田谷
-rikou,理工学部,kikai_system,機械システム工学科,Department of Mechanical Systems Engineering,世田谷
-rikou,理工学部,denki,電気電子通信工学科,"Department of Electrical, Electronics and Communication Engineering",世田谷
-rikou,理工学部,iyo,医用工学科,Department of Medical Engineering,世田谷
-rikou,理工学部,ouyou_kagaku,応用化学科,Department of Applied Chemistry,世田谷
-rikou,理工学部,genshiryoku,原子力安全工学科,Department of Nuclear Safety Engineering,世田谷
-rikou,理工学部,shizen_shizen,自然科学科（自然コース）,Department of Natural Sciences / Natural Science Course,世田谷
-rikou,理工学部,shizen_suuri,自然科学科（数理コース）,Department of Natural Sciences / Mathematical Science Course,世田谷
-kenchiku_toshi,建築都市デザイン学部,kenchiku,建築学科,Department of Architecture,世田谷
-kenchiku_toshi,建築都市デザイン学部,toshi_kogaku,都市工学科,Department of Urban and Civil Engineering,世田谷
-joho,情報工学部,joho_kagaku,情報科学科,Department of Computer Science,世田谷
-joho,情報工学部,chino_joho,知能情報工学科,Department of Intelligent Systems,世田谷
-kankyo,環境学部,kankyo_sosei,環境創生学科,Department of Restoration Ecology and Built Environment,横浜
-kankyo,環境学部,kankyo_keiei,環境経営システム学科,Department of Environmental Management and Sustainability,横浜
-media_joho,メディア情報学部,shakai_media,社会メディア学科,Department of Sociology and Media Studies,横浜
-media_joho,メディア情報学部,joho_system,情報システム学科,Department of Information Systems,横浜
-design_data,デザイン・データ科学部,design_data,デザイン・データ科学科,Department of Design and Data Science,横浜
-toshi_seikatsu,都市生活学部,toshi_seikatsu,都市生活学科,Department of Urban Life Studies,世田谷
-ningen,人間科学部,ningen,人間科学科,Department of Human Life Sciences,世田谷
+﻿departmentId,name,facultyId,facultyName,campus,sourceDepartment,entranceYear,curriculumPath,schedulePath,sourceStatus,notes
+kikai,機械工学科,rikou,理工学部,世田谷,機械,2026,/department/rikou/2026/kikai_timetable_by_category.csv,/department/rikou/2026/kikai_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+kikai_system,機械システム工学科,rikou,理工学部,世田谷,機シ,2026,/department/rikou/2026/kikai_system_timetable_by_category.csv,/department/rikou/2026/kikai_system_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+denki,電気電子通信工学科,rikou,理工学部,世田谷,電通,2026,/department/rikou/2026/denki_timetable_by_category.csv,/department/rikou/2026/denki_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+iyo,医用工学科,rikou,理工学部,世田谷,医用,2026,/department/rikou/2026/iyo_timetable_by_category.csv,/department/rikou/2026/iyo_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+ouyou_kagaku,応用化学科,rikou,理工学部,世田谷,応化,2026,/department/rikou/2026/ouyou_kagaku_timetable_by_category.csv,/department/rikou/2026/ouyou_kagaku_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+genshiryoku,原子力安全工学科,rikou,理工学部,世田谷,原子,2026,/department/rikou/2026/genshiryoku_timetable_by_category.csv,/department/rikou/2026/genshiryoku_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+shizen_shizen,自然科学科（自然コース）,rikou,理工学部,世田谷,自然,2026,/department/rikou/2026/shizen_shizen_timetable_by_category.csv,/department/rikou/2026/shizen_shizen_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+shizen_suuri,自然科学科（数理コース）,rikou,理工学部,世田谷,自然,2026,/department/rikou/2026/shizen_suuri_timetable_by_category.csv,/department/rikou/2026/shizen_suuri_2026_spring_schedule.csv,partial_no_department_curriculum_pdf,理工学部は学科別教育課程表PDFが未提供のため、共通分野＋時間割由来の補助行を含む
+kenchiku,建築学科,kenchiku_toshi,建築都市デザイン学部,世田谷,建築,2026,/department/kenchiku_toshi/2026/kenchiku_timetable_by_category.csv,/department/kenchiku_toshi/2026/kenchiku_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+toshi_kogaku,都市工学科,kenchiku_toshi,建築都市デザイン学部,世田谷,都市,2026,/department/kenchiku_toshi/2026/toshi_kogaku_timetable_by_category.csv,/department/kenchiku_toshi/2026/toshi_kogaku_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+joho_kagaku,情報科学科,joho,情報工学部,世田谷,情科,2026,/department/joho/2026/joho_kagaku_timetable_by_category.csv,/department/joho/2026/joho_kagaku_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+chino_joho,知能情報工学科,joho,情報工学部,世田谷,知能,2026,/department/joho/2026/chino_joho_timetable_by_category.csv,/department/joho/2026/chino_joho_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+kankyo_sosei,環境創生学科,kankyo,環境学部,横浜,環創,2026,/department/kankyo/2026/kankyo_sosei_timetable_by_category.csv,/department/kankyo/2026/kankyo_sosei_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+kankyo_keiei,環境経営システム学科,kankyo,環境学部,横浜,環経,2026,/department/kankyo/2026/kankyo_keiei_timetable_by_category.csv,/department/kankyo/2026/kankyo_keiei_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+shakai_media,社会メディア学科,media_joho,メディア情報学部,横浜,社メ,2026,/department/media_joho/2026/shakai_media_timetable_by_category.csv,/department/media_joho/2026/shakai_media_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+joho_system,情報システム学科,media_joho,メディア情報学部,横浜,情シ,2026,/department/media_joho/2026/joho_system_timetable_by_category.csv,/department/media_joho/2026/joho_system_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+design_data,デザイン・データ科学科,design_data,デザイン・データ科学部,横浜,デザ,2026,/department/design_data/2026/design_data_timetable_by_category.csv,/department/design_data/2026/design_data_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+toshi_seikatsu,都市生活学科,toshi_seikatsu,都市生活学部,世田谷,都市生活,2026,/department/toshi_seikatsu/2026/toshi_seikatsu_timetable_by_category.csv,/department/toshi_seikatsu/2026/toshi_seikatsu_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出
+ningen,人間科学科,ningen,人間科学部,世田谷,人間,2026,/department/ningen/2026/ningen_timetable_by_category.csv,/department/ningen/2026/ningen_2026_spring_schedule.csv,curriculum_pdf_available,教育課程表PDFから抽出

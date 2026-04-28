@@ -1,153 +1,153 @@
-﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence
-shizen_shizen,自然,世田谷,月,1,前期前,1,A,化学実験,吉田 真史 高木 晋作 中村 和彦 石井 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,1,前期前,2,A,線形代数学(2a),曽布川 拓也,saa111109,13M,対象[25-21],,,21,2026世田谷キャンパス前期.pdf,線形代数学(2a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,1,前期後,1,B,化学実験,吉田 真史 田中 健太郎 中村 和彦 石井 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,1,前期後,2,B,線形代数学(2b),曽布川 拓也,sab111110,13M,対象[25-21],,,21,2026世田谷キャンパス前期.pdf,線形代数学(2b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,2,前期前,1,A,化学実験,吉田 真史 高木 晋作 中村 和彦 石井 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,2,前期前,2,A,微分方程式論,中井 洋史,saa141202,1BB,対象[25-18],"対開講(月2,木4)",,21,2026世田谷キャンパス前期.pdf,微分方程式論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,2,前期後,1,B,化学実験,吉田 真史 田中 健太郎 中村 和彦 石井 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,2,前期後,2,B,集合と論理,中井 洋史,sab171203,12H,対象[25-18],"対開講(月2,木4)",,21,2026世田谷キャンパス前期.pdf,集合と論理,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,3,前期前,1,B,物理学(1),飯島 正徳,saa171302,1BL,対象[19-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,物理学(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,3,前期前,1,B,力学,飯島 正徳,saa171302,1BL,対象[26-20],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,力学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,3,前期後,1,B,データサイエンスリテラ シー(1),糸川 修,sab161302,21C,対象[26-20],"対開講(月3,月4)",,21,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,月,3,前期後,2,B,地球変動論,萩谷 宏,sab171303,11C,対象[25-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,地球変動論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,3,前期後,3,B,分子の運動,高木 晋作,sab171305,12H,対象[24-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,分子の運動,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,4,前期前,1,B,物理学(1)演習,飯島 正徳,saa171403,1BL,対象[19-18],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,物理学(1)演習,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,4,前期前,1,B,力学演習,飯島 正徳,saa171403,1BL,対象[26-20],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,力学演習,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,4,前期後,1,B,データサイエンスリテラ シー(1),糸川 修,sab161302,21C,対象[26-20],"対開講(月3,月4)",,21,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,月,4,前期後,1,B,地学(1),萩谷 宏,sab172308,11C,対象[26-18],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,地学(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,4,前期後,2,B,ベクトル解析学,服部 新,sab171401,11F,対象[25-18],"対開講(月4,木2)",,21,2026世田谷キャンパス前期.pdf,ベクトル解析学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,4,前期後,3,B,古生物学,中島 保寿,sab171406,12C,対象[24-19],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,古生物学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,月,5,前期,2,B,幾何学(1),橋本 義武,saz171501,13P,対象[25-20],,,21,2026世田谷キャンパス前期.pdf,幾何学(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期,1,B,知的財産,伊藤 剣太 (2Q),saz112141,"71B(1Q),61C",対象[26-23],,,21,2026世田谷キャンパス前期.pdf,知的財産,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期前,1,B,微分積分学(1a),中井 洋史,saa172101,11A,対象[26-21],,,21,2026世田谷キャンパス前期.pdf,微分積分学(1a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期前,2,B,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-18],"対開講(火1,金1) ○",○,21,2026世田谷キャンパス前期.pdf,基礎論理回路,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期前,2,B,極限と位相,服部 新,saa172110,1BP,対象[19-19],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,極限と位相,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期前,2,B,分子構造論,吉田 真史,saa172108,71A,対象[25-18],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,分子構造論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期前,3,B,極限と位相,服部 新,saa172110,1BP,対象[24-20],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,極限と位相,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期後,1,B,微分積分学(1b),中井 洋史,sab172102,11A,対象[26-21],,,21,2026世田谷キャンパス前期.pdf,微分積分学(1b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,1,前期後,2,B,電磁気学,飯島 正徳 門多 顕司,sab172106,1BD,対象[25-18],"対開講(火1,金1) ○",○,21,2026世田谷キャンパス前期.pdf,電磁気学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期,1,B,知的財産,伊藤 剣太 (2Q),saz112205,"71B(1Q),61C",対象[26-23],,,21,2026世田谷キャンパス前期.pdf,知的財産,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-A,Reading and,日高 正司,saa122201,12J,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-B,Reading and Writing(1a),ヴァーラ内田 エイ ドリアン ミッシェ,saa122202,12G,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,ReadingandWriting(1a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-C,Reading and,秋間 聖代,saa122203,12C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-D,Reading and,水戸 俊介,saa122204,12D,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-E,Reading and,佐竹 幸信,saa122205,12A,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-F,Reading and,古谷 裕美,saa122206,12E,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-G,Reading and,松本 淳子,saa122207,12F,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-H,Reading and,鷹取 勇希,saa122208,13K,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-I,Reading and,染谷 昌弘,saa122209,11C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,1,IV-J,Reading and,小林 美文,saa122210,12H,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,2,IV-J,技術者倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[25-20],"対開講(火2,金2)",,21,2026世田谷キャンパス前期.pdf,技術者倫理,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期前,2,IV-J,情報社会と倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[19-18],"対開講(火2,金2)",,21,2026世田谷キャンパス前期.pdf,情報社会と倫理,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-A,Reading and,日高 正司,sab122211,12J,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-B,Reading and Writing(1b),ヴァーラ内田 エイ ドリアン ミッシェ,sab122212,12G,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,ReadingandWriting(1b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-C,Reading and,秋間 聖代,sab122213,12C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-D,Reading and,水戸 俊介,sab122214,12D,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-E,Reading and,佐竹 幸信,sab122215,12A,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-F,Reading and,古谷 裕美,sab122216,12E,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-G,Reading and,松本 淳子,sab122217,12F,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-H,Reading and,鷹取 勇希,sab122218,13K,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-I,Reading and,染谷 昌弘,sab122219,11C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,2,前期後,1,IV-J,Reading and,小林 美文,sab122220,12H,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,3,前期前,2,IV-J,進化論 福田 中島 田中,達哉 保寿 健太郎,saa172303,11B,対象[25-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,進化論福田中島田中,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,3,前期後,2,IV-J,プレート･テクトニクス 小田島,庸浩,sab172304,12A,対象[25-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,プレート・テクトニクス小田島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,3,前期後,3,IV-J,現代代数学 橋本,義武,sab172307,11B,対象[24-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,現代代数学橋本,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期前,1,IV-J,生物学(1) 福田,達哉,saa172406,11B,対象[26-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,生物学(1)福田,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期前,2,IV-J,数理統計学(a) 出耒,光夫,saa112401,12H,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,数理統計学(a)出耒,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期前,3,IV-J,惑星科学 萩谷 津村,宏 耕司,saa172405,31B,対象[24-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,惑星科学萩谷津村,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期後,1,IV-J,化学(1) 高木,晋作,sab172405,31B,対象[26-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,化学(1)高木,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期後,2,IV-J,数理統計学(b) 出耒,光夫,sab112403,12H,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,数理統計学(b)出耒,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,4,前期後,3,IV-J,生命と物質 福田,達哉,sab172406,13K,対象[24-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,生命と物質福田,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,5,前期,1,IV-J,数学演習(1) 古田 郭,公司 柔均,saz322503,"12B,12C",対象[20-18],,,22,2026世田谷キャンパス前期.pdf,数学演習(1)古田郭,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,5,前期前,1,IV-J,数学演習(1a) 古田 郭,公司 柔均,saa322501,"12B,12C",対象[26-21],,,22,2026世田谷キャンパス前期.pdf,数学演習(1a)古田郭,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,火,5,前期後,1,IV-J,数学演習(1b) 古田 郭,公司 柔均,sab322502,"12B,12C",対象[26-21],,,22,2026世田谷キャンパス前期.pdf,数学演習(1b)古田郭,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,1,前期,2,IV-J,自然科学科実験及び演習 吉田 須藤 中島 萩谷,真史 誠一 同実験室 保寿 宏,saz173101,"1BJ,6号館共",対象[25-18],"対開講(水1,水2)",,22,2026世田谷キャンパス前期.pdf,自然科学科実験及び演習吉田須藤中島萩谷,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,1,前期前,1,IV-J,基礎体育(1a) 山田 井村 岩本 山口,盛朗 祥子 哲也 良博,saa123107,-,対象[26-26],,,22,2026世田谷キャンパス前期.pdf,基礎体育(1a)山田井村岩本山口,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,1,前期後,1,IV-J,基礎体育(1b) 山田 井村 岩本 山口,盛朗 祥子 哲也 良博,sab123108,-,対象[26-26],,,22,2026世田谷キャンパス前期.pdf,基礎体育(1b)山田井村岩本山口,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,2,前期,1,SD,PBL(1) 堀越 須藤,篤史 誠一,saz173201,11F,対象[26-20],,,22,2026世田谷キャンパス前期.pdf,PBL(1)堀越須藤,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,2,前期,1,SD,知識工学汎論 堀越 須藤,篤史 誠一,saz173201,11F,対象[19-18],,,22,2026世田谷キャンパス前期.pdf,知識工学汎論堀越須藤,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,水,2,前期,2,SD,自然科学科実験及び演習 吉田 須藤 中島 萩谷,真史 誠一 同実験室 保寿 宏,saz173101,"1BJ,6号館共",対象[25-18],"対開講(水1,水2)",,22,2026世田谷キャンパス前期.pdf,自然科学科実験及び演習吉田須藤中島萩谷,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,1,前期前,1,A,化学実験 吉田 高木 中村 石井,真史 晋作 和彦 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田高木中村石井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,1,前期後,1,B,化学実験 吉田 田中 中村 石井,真史 健太郎 和彦 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田田中中村石井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,2,前期前,1,A,化学実験 吉田 高木 中村 石井,真史 晋作 和彦 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田高木中村石井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,2,前期後,1,B,化学実験 吉田 田中 中村 石井,真史 健太郎 和彦 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田田中中村石井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,2,前期後,2,B,ベクトル解析学 服部,新,sab171401,11F,対象[25-18],"対開講(月4,木2)",,22,2026世田谷キャンパス前期.pdf,ベクトル解析学服部,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期,2,B,代数学(1) 古田,公司,saz174303,11A,対象[25-16],,,22,2026世田谷キャンパス前期.pdf,代数学(1)古田,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期前,1,B,物理学(1) 飯島,正徳,saa171302,1BL,対象[19-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,物理学(1)飯島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期前,1,B,力学 飯島,正徳,saa171302,1BL,対象[26-20],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,力学飯島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期前,3,B,博物館学(3) 中島 青塚 森 筒井,保寿 圭一 健人 牧子,saa174304,12E,対象[24-18],"対開講(木3,木4)",,22,2026世田谷キャンパス前期.pdf,博物館学(3)中島青塚森筒井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期後,2,B,地球変動論 萩谷,宏,sab171303,11C,対象[25-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,地球変動論萩谷,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,3,前期後,3,B,分子の運動 高木,晋作,sab171305,12H,対象[24-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,分子の運動高木,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期前,1,B,物理学(1)演習 飯島,正徳,saa171403,1BL,対象[19-18],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,物理学(1)演習飯島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期前,1,B,力学演習 飯島,正徳,saa171403,1BL,対象[26-20],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,力学演習飯島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期前,2,B,微分方程式論 中井,洋史,saa141202,1BB,対象[25-18],"対開講(月2,木4)",,22,2026世田谷キャンパス前期.pdf,微分方程式論中井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期前,3,B,博物館学(3) 中島 青塚 森 筒井,保寿 圭一 健人 牧子,saa174304,12E,対象[24-18],"対開講(木3,木4)",,22,2026世田谷キャンパス前期.pdf,博物館学(3)中島青塚森筒井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期後,1,B,地学(1) 萩谷,宏,sab172308,11C,対象[26-18],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,地学(1)萩谷,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期後,2,B,集合と論理 中井,洋史,sab171203,12H,対象[25-18],"対開講(月2,木4)",,22,2026世田谷キャンパス前期.pdf,集合と論理中井,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,4,前期後,3,B,古生物学 中島,保寿,sab171406,12C,対象[24-19],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,古生物学中島,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,5,前期,2,国際,デジタル信号処理 L・マテラム,,saz314501,12J,対象[19-19],,,22,2026世田谷キャンパス前期.pdf,デジタル信号処理L・マテラム,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,5,前期前,2,国際,微分積分学(2a) 山本,現,saa124501,13K,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,微分積分学(2a)山本,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,木,5,前期後,2,国際,微分積分学(2b),山本 現,sab124502,13K,対象[25-21],,,23,2026世田谷キャンパス前期.pdf,微分積分学(2b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期前,1,国際,線形代数学(1a),橋本 義武,saa175101,13P,対象[26-21],,,23,2026世田谷キャンパス前期.pdf,線形代数学(1a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期前,2,国際,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-18],"対開講(火1,金1) ○",○,23,2026世田谷キャンパス前期.pdf,基礎論理回路,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期前,2,国際,極限と位相,服部 新,saa172110,1BP,対象[19-19],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,極限と位相,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期前,2,国際,分子構造論,吉田 真史,saa172108,71A,対象[25-18],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,分子構造論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期前,3,国際,極限と位相,服部 新,saa172110,1BP,対象[24-20],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,極限と位相,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期後,1,国際,線形代数学(1b),橋本 義武,sab175102,13P,対象[26-21],,,23,2026世田谷キャンパス前期.pdf,線形代数学(1b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期後,2,国際,電磁気学,飯島 正徳 門多 顕司,sab172106,1BD,対象[25-18],"対開講(火1,金1) ○",○,23,2026世田谷キャンパス前期.pdf,電磁気学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,1,前期後,3,国際,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[19-18],"対開講(金1,金2)",,23,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-A,Communication,佐竹 幸信,saz125201,12G,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-B,Communication,グルンデル 教子,saz125202,12H,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-C,Communication Skills(1),ヴァーラ内田 エイ ドリアン ミッシェ,saz125203,12D,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,CommunicationSkills(1),TCU-ENG-CS1,Communication Skills(1),required,外国語科目,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-D,Communication,倉持 和歌子,saz125204,12E,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-E,Communication,吹野 佐枝子,saz125205,11C,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-F,Communication,大塚 圭,saz125206,12B,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-G,Communication,鷹取 勇希,saz125207,13N,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-H,Communication,松本 弘法,saz125208,11D,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-I,Communication,稲垣 亜希子,saz125209,11B,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期,1,IV-J,Communication,三宅 加恵,saz125210,1BL,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期前,2,IV-J,技術者倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[25-20],"対開講(火2,金2)",,23,2026世田谷キャンパス前期.pdf,技術者倫理,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期前,2,IV-J,情報社会と倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[19-18],"対開講(火2,金2)",,23,2026世田谷キャンパス前期.pdf,情報社会と倫理,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,2,前期後,3,IV-J,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[19-18],"対開講(金1,金2)",,23,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,3,前期前,1,IV-J,情報リテラシー演習(a),安井 浩之,saa175302,12P,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,金,3,前期前,2,IV-J,進化論,福田 達哉 中島 保寿 田中 健太郎,saa172303,11B,対象[25-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,進化論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,3,前期後,1,IV-J,情報リテラシー演習(b),安井 浩之,sab175303,12P,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,金,3,前期後,2,IV-J,プレート･テクトニクス,小田島 庸浩,sab172304,12A,対象[25-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,プレート・テクトニクス,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,3,前期後,3,IV-J,現代代数学,橋本 義武,sab172307,11B,対象[24-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,現代代数学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,4,前期前,1,IV-J,生物学(1),福田 達哉,saa172406,11B,対象[26-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,生物学(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,4,前期前,3,IV-J,惑星科学,萩谷 宏 津村 耕司,saa172405,31B,対象[24-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,惑星科学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,4,前期後,1,IV-J,化学(1),高木 晋作,sab172405,31B,対象[26-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,化学(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,4,前期後,3,IV-J,生命と物質,福田 達哉,sab172406,13K,対象[24-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,生命と物質,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,金,5,前期,2,国際,情報理論,L・マテラム,saz315501,12J,対象[19-19],,,23,2026世田谷キャンパス前期.pdf,情報理論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,1,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006104,6号館学生実,対象[20-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,1,前期,3,国際,再・情報社会と職業,川上 誓,saz316103,13L,対象[19-18],,,23,2026世田谷キャンパス前期.pdf,情報社会と職業,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,1,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006102,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,1,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006103,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,1,前期後,3,国際,地理学,吉村 風,sab176101,12A,対象[24-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,地理学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,2,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006104,6号館学生実,対象[20-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,2,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006102,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,2,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006103,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,2,前期後,3,国際,地理学,吉村 風,sab176101,12A,対象[24-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,地理学,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,3,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006304,6号館学生実,対象[20-18],"対開講(土3,土4)",,23,2026世田谷キャンパス前期.pdf,生物学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,3,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006302,6号館学生実,対象[26-21],"対開講(土3,土4)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,3,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006303,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006304,6号館学生実,対象[20-18],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006302,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(a),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006303,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(b),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,1,国際,情報リテラシー演習(a),西村 太樹,saz177602,-,対象[25-21],,,24,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,土,4,前集中,1,国際,情報リテラシー演習(b),西村 太樹,saz177603,-,対象[25-21],,,24,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0
-shizen_shizen,自然,世田谷,土,4,前集中,2,国際,ひとづくり(2),杉浦 正吾 加藤 雄一,saz137612,-,対象[25-24],教養特別講義,,24,2026世田谷キャンパス前期.pdf,ひとづくり(2),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,2,国際,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137615,-,対象[25-24],,,24,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,2,SD,PBL(2),服部 新 吉田 真史,saz177605,-,対象[25-20],,,24,2026世田谷キャンパス前期.pdf,PBL(2),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,2,SD,キャリアデザイン,服部 新 吉田 真史,saz177605,-,対象[19-18],,,24,2026世田谷キャンパス前期.pdf,キャリアデザイン,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,2,SD,電磁気学基礎,須藤 誠一,saa112209,-,対象[20-20],,,24,2026世田谷キャンパス前期.pdf,電磁気学基礎,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,ことづくり(4),瀬戸 久美子,saz137622,-,対象[24-24],,,24,2026世田谷キャンパス前期.pdf,ことづくり(4),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137624,-,対象[24-24],,,24,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,事例研究(1),橋本 義武 飯島 正徳 福田 達哉 吉田 真史,saz177606,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,事例研究(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,博物館学実習(1),萩谷 宏 和田 浩,saz177607,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,博物館学実習(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,博物館展示論,滝本 秀夫 高木 晋作,saz177608,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,博物館展示論,,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,3,SD,野外調査法及び実習(2),福田 達哉 萩谷 宏 中島 保寿 田中 健太郎,saz177609,-,対象[23-18],,,24,2026世田谷キャンパス前期.pdf,野外調査法及び実習(2),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,4,SD,卒業研究(1),福田 達哉 飯島 正徳 橋本 義武 吉田 真史,saz177615,-,対象[23-19],,,24,2026世田谷キャンパス前期.pdf,卒業研究(1),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,前集中,4,SD,卒業研究(2),福田 達哉 飯島 正徳 橋本 義武 吉田 真史,saz177616,-,対象[23-19],,,24,2026世田谷キャンパス前期.pdf,卒業研究(2),,,,,,unmatched,0
-shizen_shizen,自然,世田谷,土,4,通年,4,SD,卒業研究 福田 飯島 橋本 吉田,達哉 正徳 義武 真史,szz177619,-,対象[18-18],,,25,2026世田谷キャンパス前期.pdf,卒業研究福田飯島橋本吉田,,,,,,unmatched,0
+﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence,curriculumCourseId,curriculumCourseTitle,curriculumMatchStatus,curriculumMatchConfidence
+shizen_shizen,自然,世田谷,月,1,前期前,1,A,化学実験,吉田 真史 高木 晋作 中村 和彦 石井 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,IT-126,化学実験,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-126,化学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,1,前期前,2,A,線形代数学(2a),曽布川 拓也,saa111109,13M,対象[25-21],,,21,2026世田谷キャンパス前期.pdf,線形代数学(2a),IT-213,線形代数学(2a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-213,線形代数学(2a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,1,前期後,1,B,化学実験,吉田 真史 田中 健太郎 中村 和彦 石井 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,IT-126,化学実験,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-126,化学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,1,前期後,2,B,線形代数学(2b),曽布川 拓也,sab111110,13M,対象[25-21],,,21,2026世田谷キャンパス前期.pdf,線形代数学(2b),IT-214,線形代数学(2b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-214,線形代数学(2b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,2,前期前,1,A,化学実験,吉田 真史 高木 晋作 中村 和彦 石井 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,IT-126,化学実験,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-126,化学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,2,前期前,2,A,微分方程式論,中井 洋史,saa141202,1BB,対象[25-18],"対開講(月2,木4)",,21,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,2,前期後,1,B,化学実験,吉田 真史 田中 健太郎 中村 和彦 石井 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,21,2026世田谷キャンパス前期.pdf,化学実験,IT-126,化学実験,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-126,化学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,2,前期後,2,B,集合と論理,中井 洋史,sab171203,12H,対象[25-18],"対開講(月2,木4)",,21,2026世田谷キャンパス前期.pdf,集合と論理,SCH-SAB171203,集合と論理,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB171203,集合と論理,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,3,前期前,1,B,物理学(1),飯島 正徳,saa171302,1BL,対象[19-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,物理学(1),IT-121,物理学(1),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-121,物理学(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,3,前期前,1,B,力学,飯島 正徳,saa171302,1BL,対象[26-20],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,力学,SCH-SAA171302,力学,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171302,力学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,3,前期後,1,B,データサイエンスリテラ シー(1),糸川 修,sab161302,21C,対象[26-20],"対開講(月3,月4)",,21,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0,LA-145,データサイエンスリテラシー(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,3,前期後,2,B,地球変動論,萩谷 宏,sab171303,11C,対象[25-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,地球変動論,SCH-SAB171303,地球変動論,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB171303,地球変動論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,3,前期後,3,B,分子の運動,高木 晋作,sab171305,12H,対象[24-18],"対開講(月3,木3)",,21,2026世田谷キャンパス前期.pdf,分子の運動,SCH-SAB171305,分子の運動,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB171305,分子の運動,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期前,1,B,物理学(1)演習,飯島 正徳,saa171403,1BL,対象[19-18],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,物理学(1)演習,IT-122,物理学(1)演習,elective,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-122,物理学(1)演習,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期前,1,B,力学演習,飯島 正徳,saa171403,1BL,対象[26-20],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,力学演習,SCH-SAA171403,力学演習,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171403,力学演習,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期後,1,B,データサイエンスリテラ シー(1),糸川 修,sab161302,21C,対象[26-20],"対開講(月3,月4)",,21,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),TCU-DS-LIT1,データサイエンスリテラシー(1),elective-required,数理・データ活用及び人工知能に関する科目,共通分野,exact,1.0,LA-145,データサイエンスリテラシー(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期後,1,B,地学(1),萩谷 宏,sab172308,11C,対象[26-18],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,地学(1),IT-12A,地学(1),elective,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-12A,地学(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期後,2,B,ベクトル解析学,服部 新,sab171401,11F,対象[25-18],"対開講(月4,木2)",,21,2026世田谷キャンパス前期.pdf,ベクトル解析学,IT-312,ベクトル解析学,elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-312,ベクトル解析学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,4,前期後,3,B,古生物学,中島 保寿,sab171406,12C,対象[24-19],"対開講(月4,木4)",,21,2026世田谷キャンパス前期.pdf,古生物学,SCH-SAB171406,古生物学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB171406,古生物学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,月,5,前期,2,B,幾何学(1),橋本 義武,saz171501,13P,対象[25-20],,,21,2026世田谷キャンパス前期.pdf,幾何学(1),SCH-SAZ171501,幾何学(1),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ171501,幾何学(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期,1,B,知的財産,伊藤 剣太 (2Q),saz112141,"71B(1Q),61C",対象[26-23],,,21,2026世田谷キャンパス前期.pdf,知的財産,SCH-SAZ112141,知的財産,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ112141,知的財産,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期前,1,B,微分積分学(1a),中井 洋史,saa172101,11A,対象[26-21],,,21,2026世田谷キャンパス前期.pdf,微分積分学(1a),IT-111,微分積分学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-111,微分積分学(1a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期前,2,B,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-18],"対開講(火1,金1) ○",○,21,2026世田谷キャンパス前期.pdf,基礎論理回路,SCH-SAA312103,基礎論理回路,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA312103,基礎論理回路,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期前,2,B,極限と位相,服部 新,saa172110,1BP,対象[19-19],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,極限と位相,SCH-SAA172110,極限と位相,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172110,極限と位相,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期前,2,B,分子構造論,吉田 真史,saa172108,71A,対象[25-18],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,分子構造論,SCH-SAA172108,分子構造論,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172108,分子構造論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期前,3,B,極限と位相,服部 新,saa172110,1BP,対象[24-20],"対開講(火1,金1)",,21,2026世田谷キャンパス前期.pdf,極限と位相,SCH-SAA172110,極限と位相,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172110,極限と位相,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期後,1,B,微分積分学(1b),中井 洋史,sab172102,11A,対象[26-21],,,21,2026世田谷キャンパス前期.pdf,微分積分学(1b),IT-112,微分積分学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-112,微分積分学(1b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,1,前期後,2,B,電磁気学,飯島 正徳 門多 顕司,sab172106,1BD,対象[25-18],"対開講(火1,金1) ○",○,21,2026世田谷キャンパス前期.pdf,電磁気学,SCH-SAB172106,電磁気学,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB172106,電磁気学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期,1,B,知的財産,伊藤 剣太 (2Q),saz112205,"71B(1Q),61C",対象[26-23],,,21,2026世田谷キャンパス前期.pdf,知的財産,SCH-SAZ112141,知的財産,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ112141,知的財産,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-A,Reading and,日高 正司,saa122201,12J,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-B,Reading and Writing(1a),ヴァーラ内田 エイ ドリアン ミッシェ,saa122202,12G,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,ReadingandWriting(1a),SCH-SAA122202,Reading and Writing(1a),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122202,Reading and Writing(1a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-C,Reading and,秋間 聖代,saa122203,12C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-D,Reading and,水戸 俊介,saa122204,12D,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-E,Reading and,佐竹 幸信,saa122205,12A,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-F,Reading and,古谷 裕美,saa122206,12E,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-G,Reading and,松本 淳子,saa122207,12F,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-H,Reading and,鷹取 勇希,saa122208,13K,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-I,Reading and,染谷 昌弘,saa122209,11C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,1,IV-J,Reading and,小林 美文,saa122210,12H,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,2,IV-J,技術者倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[25-20],"対開講(火2,金2)",,21,2026世田谷キャンパス前期.pdf,技術者倫理,IT-232,技術者倫理,required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-232,技術者倫理,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期前,2,IV-J,情報社会と倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[19-18],"対開講(火2,金2)",,21,2026世田谷キャンパス前期.pdf,情報社会と倫理,SCH-SAA172202,情報社会と倫理,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172202,情報社会と倫理,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-A,Reading and,日高 正司,sab122211,12J,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-B,Reading and Writing(1b),ヴァーラ内田 エイ ドリアン ミッシェ,sab122212,12G,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,ReadingandWriting(1b),SCH-SAB122212,Reading and Writing(1b),elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB122212,Reading and Writing(1b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-C,Reading and,秋間 聖代,sab122213,12C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-D,Reading and,水戸 俊介,sab122214,12D,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-E,Reading and,佐竹 幸信,sab122215,12A,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-F,Reading and,古谷 裕美,sab122216,12E,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-G,Reading and,松本 淳子,sab122217,12F,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-H,Reading and,鷹取 勇希,sab122218,13K,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-I,Reading and,染谷 昌弘,sab122219,11C,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,2,前期後,1,IV-J,Reading and,小林 美文,sab122220,12H,対象[26-26],,,21,2026世田谷キャンパス前期.pdf,Readingand,SCH-SAA122201,Reading and,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA122201,Reading and,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,3,前期前,2,IV-J,進化論 福田 中島 田中,達哉 保寿 健太郎,saa172303,11B,対象[25-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,進化論福田中島田中,SCH-SAA172303,進化論 福田 中島 田中,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172303,進化論 福田 中島 田中,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,3,前期後,2,IV-J,プレート･テクトニクス 小田島,庸浩,sab172304,12A,対象[25-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,プレート・テクトニクス小田島,SCH-SAB172304,プレート･テクトニクス 小田島,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB172304,プレート･テクトニクス 小田島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,3,前期後,3,IV-J,現代代数学 橋本,義武,sab172307,11B,対象[24-18],"対開講(火3,金3)",,22,2026世田谷キャンパス前期.pdf,現代代数学橋本,SCH-SAB172307,現代代数学 橋本,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB172307,現代代数学 橋本,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期前,1,IV-J,生物学(1) 福田,達哉,saa172406,11B,対象[26-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,生物学(1)福田,SCH-SAA172406,生物学(1) 福田,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA172406,生物学(1) 福田,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期前,2,IV-J,数理統計学(a) 出耒,光夫,saa112401,12H,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,数理統計学(a)出耒,SCH-SAA112401,数理統計学(a) 出耒,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA112401,数理統計学(a) 出耒,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期前,3,IV-J,惑星科学 萩谷 津村,宏 耕司,saa172405,31B,対象[24-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,惑星科学萩谷津村,SCH-SAA172405,惑星科学 萩谷 津村,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA172405,惑星科学 萩谷 津村,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期後,1,IV-J,化学(1) 高木,晋作,sab172405,31B,対象[26-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,化学(1)高木,SCH-SAB172405,化学(1) 高木,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB172405,化学(1) 高木,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期後,2,IV-J,数理統計学(b) 出耒,光夫,sab112403,12H,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,数理統計学(b)出耒,SCH-SAB112403,数理統計学(b) 出耒,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB112403,数理統計学(b) 出耒,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,4,前期後,3,IV-J,生命と物質 福田,達哉,sab172406,13K,対象[24-18],"対開講(火4,金4)",,22,2026世田谷キャンパス前期.pdf,生命と物質福田,SCH-SAB172406,生命と物質 福田,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB172406,生命と物質 福田,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,5,前期,1,IV-J,数学演習(1) 古田 郭,公司 柔均,saz322503,"12B,12C",対象[20-18],,,22,2026世田谷キャンパス前期.pdf,数学演習(1)古田郭,SCH-SAZ322503,数学演習(1) 古田 郭,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ322503,数学演習(1) 古田 郭,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,5,前期前,1,IV-J,数学演習(1a) 古田 郭,公司 柔均,saa322501,"12B,12C",対象[26-21],,,22,2026世田谷キャンパス前期.pdf,数学演習(1a)古田郭,SCH-SAA322501,数学演習(1a) 古田 郭,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA322501,数学演習(1a) 古田 郭,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,火,5,前期後,1,IV-J,数学演習(1b) 古田 郭,公司 柔均,sab322502,"12B,12C",対象[26-21],,,22,2026世田谷キャンパス前期.pdf,数学演習(1b)古田郭,SCH-SAB322502,数学演習(1b) 古田 郭,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB322502,数学演習(1b) 古田 郭,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,1,前期,2,IV-J,自然科学科実験及び演習 吉田 須藤 中島 萩谷,真史 誠一 同実験室 保寿 宏,saz173101,"1BJ,6号館共",対象[25-18],"対開講(水1,水2)",,22,2026世田谷キャンパス前期.pdf,自然科学科実験及び演習吉田須藤中島萩谷,SCH-SAZ173101,自然科学科実験及び演習 吉田 須藤 中島 萩谷,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ173101,自然科学科実験及び演習 吉田 須藤 中島 萩谷,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,1,前期前,1,IV-J,基礎体育(1a) 山田 井村 岩本 山口,盛朗 祥子 哲也 良博,saa123107,-,対象[26-26],,,22,2026世田谷キャンパス前期.pdf,基礎体育(1a)山田井村岩本山口,SCH-SAA123107,基礎体育(1a) 山田 井村 岩本 山口,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA123107,基礎体育(1a) 山田 井村 岩本 山口,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,1,前期後,1,IV-J,基礎体育(1b) 山田 井村 岩本 山口,盛朗 祥子 哲也 良博,sab123108,-,対象[26-26],,,22,2026世田谷キャンパス前期.pdf,基礎体育(1b)山田井村岩本山口,SCH-SAB123108,基礎体育(1b) 山田 井村 岩本 山口,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB123108,基礎体育(1b) 山田 井村 岩本 山口,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,2,前期,1,SD,PBL(1) 堀越 須藤,篤史 誠一,saz173201,11F,対象[26-20],,,22,2026世田谷キャンパス前期.pdf,PBL(1)堀越須藤,SCH-SAZ173201,PBL(1) 堀越 須藤,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ173201,PBL(1) 堀越 須藤,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,2,前期,1,SD,知識工学汎論 堀越 須藤,篤史 誠一,saz173201,11F,対象[19-18],,,22,2026世田谷キャンパス前期.pdf,知識工学汎論堀越須藤,SCH-SAZ173201,知識工学汎論 堀越 須藤,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ173201,知識工学汎論 堀越 須藤,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,水,2,前期,2,SD,自然科学科実験及び演習 吉田 須藤 中島 萩谷,真史 誠一 同実験室 保寿 宏,saz173101,"1BJ,6号館共",対象[25-18],"対開講(水1,水2)",,22,2026世田谷キャンパス前期.pdf,自然科学科実験及び演習吉田須藤中島萩谷,SCH-SAZ173101,自然科学科実験及び演習 吉田 須藤 中島 萩谷,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ173101,自然科学科実験及び演習 吉田 須藤 中島 萩谷,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,1,前期前,1,A,化学実験 吉田 高木 中村 石井,真史 晋作 和彦 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田高木中村石井,SCH-SAA171103,化学実験 吉田 高木 中村 石井,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171103,化学実験 吉田 高木 中村 石井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,1,前期後,1,B,化学実験 吉田 田中 中村 石井,真史 健太郎 和彦 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田田中中村石井,SCH-SAB171104,化学実験 吉田 田中 中村 石井,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB171104,化学実験 吉田 田中 中村 石井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,2,前期前,1,A,化学実験 吉田 高木 中村 石井,真史 晋作 和彦 義孝,saa171103,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田高木中村石井,SCH-SAA171103,化学実験 吉田 高木 中村 石井,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171103,化学実験 吉田 高木 中村 石井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,2,前期後,1,B,化学実験 吉田 田中 中村 石井,真史 健太郎 和彦 義孝,sab171104,化学実験室,対象[26-18],"対開講(月1,月2,木1,木2)",,22,2026世田谷キャンパス前期.pdf,化学実験吉田田中中村石井,SCH-SAB171104,化学実験 吉田 田中 中村 石井,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB171104,化学実験 吉田 田中 中村 石井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,2,前期後,2,B,ベクトル解析学 服部,新,sab171401,11F,対象[25-18],"対開講(月4,木2)",,22,2026世田谷キャンパス前期.pdf,ベクトル解析学服部,SCH-SAB171401,ベクトル解析学 服部,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB171401,ベクトル解析学 服部,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期,2,B,代数学(1) 古田,公司,saz174303,11A,対象[25-16],,,22,2026世田谷キャンパス前期.pdf,代数学(1)古田,SCH-SAZ174303,代数学(1) 古田,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ174303,代数学(1) 古田,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期前,1,B,物理学(1) 飯島,正徳,saa171302,1BL,対象[19-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,物理学(1)飯島,SCH-SAA171302,物理学(1) 飯島,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171302,物理学(1) 飯島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期前,1,B,力学 飯島,正徳,saa171302,1BL,対象[26-20],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,力学飯島,SCH-SAA171302,力学 飯島,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171302,力学 飯島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期前,3,B,博物館学(3) 中島 青塚 森 筒井,保寿 圭一 健人 牧子,saa174304,12E,対象[24-18],"対開講(木3,木4)",,22,2026世田谷キャンパス前期.pdf,博物館学(3)中島青塚森筒井,SCH-SAA174304,博物館学(3) 中島 青塚 森 筒井,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA174304,博物館学(3) 中島 青塚 森 筒井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期後,2,B,地球変動論 萩谷,宏,sab171303,11C,対象[25-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,地球変動論萩谷,SCH-SAB171303,地球変動論 萩谷,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB171303,地球変動論 萩谷,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,3,前期後,3,B,分子の運動 高木,晋作,sab171305,12H,対象[24-18],"対開講(月3,木3)",,22,2026世田谷キャンパス前期.pdf,分子の運動高木,SCH-SAB171305,分子の運動 高木,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB171305,分子の運動 高木,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期前,1,B,物理学(1)演習 飯島,正徳,saa171403,1BL,対象[19-18],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,物理学(1)演習飯島,SCH-SAA171403,物理学(1)演習 飯島,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171403,物理学(1)演習 飯島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期前,1,B,力学演習 飯島,正徳,saa171403,1BL,対象[26-20],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,力学演習飯島,SCH-SAA171403,力学演習 飯島,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAA171403,力学演習 飯島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期前,2,B,微分方程式論 中井,洋史,saa141202,1BB,対象[25-18],"対開講(月2,木4)",,22,2026世田谷キャンパス前期.pdf,微分方程式論中井,SCH-SAA141202,微分方程式論 中井,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA141202,微分方程式論 中井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期前,3,B,博物館学(3) 中島 青塚 森 筒井,保寿 圭一 健人 牧子,saa174304,12E,対象[24-18],"対開講(木3,木4)",,22,2026世田谷キャンパス前期.pdf,博物館学(3)中島青塚森筒井,SCH-SAA174304,博物館学(3) 中島 青塚 森 筒井,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA174304,博物館学(3) 中島 青塚 森 筒井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期後,1,B,地学(1) 萩谷,宏,sab172308,11C,対象[26-18],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,地学(1)萩谷,SCH-SAB172308,地学(1) 萩谷,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAB172308,地学(1) 萩谷,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期後,2,B,集合と論理 中井,洋史,sab171203,12H,対象[25-18],"対開講(月2,木4)",,22,2026世田谷キャンパス前期.pdf,集合と論理中井,SCH-SAB171203,集合と論理 中井,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB171203,集合と論理 中井,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,4,前期後,3,B,古生物学 中島,保寿,sab171406,12C,対象[24-19],"対開講(月4,木4)",,22,2026世田谷キャンパス前期.pdf,古生物学中島,SCH-SAB171406,古生物学 中島,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB171406,古生物学 中島,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,5,前期,2,国際,デジタル信号処理 L・マテラム,,saz314501,12J,対象[19-19],,,22,2026世田谷キャンパス前期.pdf,デジタル信号処理L・マテラム,SCH-SAZ314501,デジタル信号処理 L・マテラム,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ314501,デジタル信号処理 L・マテラム,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,5,前期前,2,国際,微分積分学(2a) 山本,現,saa124501,13K,対象[25-21],,,22,2026世田谷キャンパス前期.pdf,微分積分学(2a)山本,SCH-SAA124501,微分積分学(2a) 山本,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA124501,微分積分学(2a) 山本,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,木,5,前期後,2,国際,微分積分学(2b),山本 現,sab124502,13K,対象[25-21],,,23,2026世田谷キャンパス前期.pdf,微分積分学(2b),IT-212,微分積分学(2b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-212,微分積分学(2b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期前,1,国際,線形代数学(1a),橋本 義武,saa175101,13P,対象[26-21],,,23,2026世田谷キャンパス前期.pdf,線形代数学(1a),IT-113,線形代数学(1a),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-113,線形代数学(1a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期前,2,国際,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-18],"対開講(火1,金1) ○",○,23,2026世田谷キャンパス前期.pdf,基礎論理回路,SCH-SAA312103,基礎論理回路,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA312103,基礎論理回路,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期前,2,国際,極限と位相,服部 新,saa172110,1BP,対象[19-19],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,極限と位相,SCH-SAA172110,極限と位相,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172110,極限と位相,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期前,2,国際,分子構造論,吉田 真史,saa172108,71A,対象[25-18],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,分子構造論,SCH-SAA172108,分子構造論,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172108,分子構造論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期前,3,国際,極限と位相,服部 新,saa172110,1BP,対象[24-20],"対開講(火1,金1)",,23,2026世田谷キャンパス前期.pdf,極限と位相,SCH-SAA172110,極限と位相,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172110,極限と位相,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期後,1,国際,線形代数学(1b),橋本 義武,sab175102,13P,対象[26-21],,,23,2026世田谷キャンパス前期.pdf,線形代数学(1b),IT-114,線形代数学(1b),required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-114,線形代数学(1b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期後,2,国際,電磁気学,飯島 正徳 門多 顕司,sab172106,1BD,対象[25-18],"対開講(火1,金1) ○",○,23,2026世田谷キャンパス前期.pdf,電磁気学,SCH-SAB172106,電磁気学,required,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB172106,電磁気学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,1,前期後,3,国際,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[19-18],"対開講(金1,金2)",,23,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,SCH-SAB315101,専門キャリアデザイン,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB315101,専門キャリアデザイン,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-A,Communication,佐竹 幸信,saz125201,12G,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-B,Communication,グルンデル 教子,saz125202,12H,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-C,Communication Skills(1),ヴァーラ内田 エイ ドリアン ミッシェ,saz125203,12D,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,CommunicationSkills(1),TCU-ENG-CS1,Communication Skills(1),required,外国語科目,共通分野,exact,1.0,SCH-SAZ125203,Communication Skills(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-D,Communication,倉持 和歌子,saz125204,12E,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-E,Communication,吹野 佐枝子,saz125205,11C,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-F,Communication,大塚 圭,saz125206,12B,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-G,Communication,鷹取 勇希,saz125207,13N,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-H,Communication,松本 弘法,saz125208,11D,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-I,Communication,稲垣 亜希子,saz125209,11B,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期,1,IV-J,Communication,三宅 加恵,saz125210,1BL,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,Communication,SCH-SAZ125201,Communication,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ125201,Communication,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期前,2,IV-J,技術者倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[25-20],"対開講(火2,金2)",,23,2026世田谷キャンパス前期.pdf,技術者倫理,IT-232,技術者倫理,required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-232,技術者倫理,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期前,2,IV-J,情報社会と倫理,中村 正人（講師） 服部 新 中島 保寿 長田 剛,saa172202,22A,対象[19-18],"対開講(火2,金2)",,23,2026世田谷キャンパス前期.pdf,情報社会と倫理,SCH-SAA172202,情報社会と倫理,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172202,情報社会と倫理,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,2,前期後,3,IV-J,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[19-18],"対開講(金1,金2)",,23,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,SCH-SAB315101,専門キャリアデザイン,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB315101,専門キャリアデザイン,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,3,前期前,1,IV-J,情報リテラシー演習(a),安井 浩之,saa175302,12P,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0,AU-131,情報リテラシー演習(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,3,前期前,2,IV-J,進化論,福田 達哉 中島 保寿 田中 健太郎,saa172303,11B,対象[25-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,進化論,SCH-SAA172303,進化論,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAA172303,進化論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,3,前期後,1,IV-J,情報リテラシー演習(b),安井 浩之,sab175303,12P,対象[26-26],,,23,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0,AU-132,情報リテラシー演習(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,3,前期後,2,IV-J,プレート･テクトニクス,小田島 庸浩,sab172304,12A,対象[25-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,プレート・テクトニクス,SCH-SAB172304,プレート･テクトニクス,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAB172304,プレート･テクトニクス,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,3,前期後,3,IV-J,現代代数学,橋本 義武,sab172307,11B,対象[24-18],"対開講(火3,金3)",,23,2026世田谷キャンパス前期.pdf,現代代数学,SCH-SAB172307,現代代数学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB172307,現代代数学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,4,前期前,1,IV-J,生物学(1),福田 達哉,saa172406,11B,対象[26-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,生物学(1),IT-127,生物学(1),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-127,生物学(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,4,前期前,3,IV-J,惑星科学,萩谷 宏 津村 耕司,saa172405,31B,対象[24-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,惑星科学,SCH-SAA172405,惑星科学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAA172405,惑星科学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,4,前期後,1,IV-J,化学(1),高木 晋作,sab172405,31B,対象[26-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,化学(1),IT-125,化学(1),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-125,化学(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,4,前期後,3,IV-J,生命と物質,福田 達哉,sab172406,13K,対象[24-18],"対開講(火4,金4)",,23,2026世田谷キャンパス前期.pdf,生命と物質,SCH-SAB172406,生命と物質,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB172406,生命と物質,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,金,5,前期,2,国際,情報理論,L・マテラム,saz315501,12J,対象[19-19],,,23,2026世田谷キャンパス前期.pdf,情報理論,SCH-SAZ315501,情報理論,elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ315501,情報理論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,1,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006104,6号館学生実,対象[20-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験,SCH-SAZ006104,生物学実験,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ006104,生物学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,1,前期,3,国際,再・情報社会と職業,川上 誓,saz316103,13L,対象[19-18],,,23,2026世田谷キャンパス前期.pdf,情報社会と職業,SCH-SAZ316103,情報社会と職業,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ316103,情報社会と職業,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,1,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006102,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),IT-128,生物学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-128,生物学実験(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,1,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006103,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(b),IT-129,生物学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-129,生物学実験(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,1,前期後,3,国際,地理学,吉村 風,sab176101,12A,対象[24-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,地理学,SCH-SAB176101,地理学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB176101,地理学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,2,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006104,6号館学生実,対象[20-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験,SCH-SAZ006104,生物学実験,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ006104,生物学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,2,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006102,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),IT-128,生物学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-128,生物学実験(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,2,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006103,6号館学生実,対象[26-21],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,生物学実験(b),IT-129,生物学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-129,生物学実験(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,2,前期後,3,国際,地理学,吉村 風,sab176101,12A,対象[24-18],"対開講(土1,土2)",,23,2026世田谷キャンパス前期.pdf,地理学,SCH-SAB176101,地理学,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAB176101,地理学,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,3,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006304,6号館学生実,対象[20-18],"対開講(土3,土4)",,23,2026世田谷キャンパス前期.pdf,生物学実験,SCH-SAZ006104,生物学実験,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ006104,生物学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,3,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006302,6号館学生実,対象[26-21],"対開講(土3,土4)",,23,2026世田谷キャンパス前期.pdf,生物学実験(a),IT-128,生物学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-128,生物学実験(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,3,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006303,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(b),IT-129,生物学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-129,生物学実験(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前期,1,国際,生物学実験,福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saz006304,6号館学生実,対象[20-18],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験,SCH-SAZ006104,生物学実験,elective,時間割由来科目,2026前期/1年,curriculum-exact-title,1.0,SCH-SAZ006104,生物学実験,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前期前,1,国際,生物学実験(a),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,saa006302,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(a),IT-128,生物学実験(a),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-128,生物学実験(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前期後,1,国際,生物学実験(b),福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,sab006303,6号館学生実,対象[26-21],"対開講(土3,土4)",,24,2026世田谷キャンパス前期.pdf,生物学実験(b),IT-129,生物学実験(b),elective-required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-129,生物学実験(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,1,国際,情報リテラシー演習(a),西村 太樹,saz177602,-,対象[25-21],,,24,2026世田谷キャンパス前期.pdf,情報リテラシー演習(a),TCU-IT-LITA,情報リテラシー演習(a),elective-required,情報機器の操作,共通分野,exact,1.0,AU-131,情報リテラシー演習(a),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,1,国際,情報リテラシー演習(b),西村 太樹,saz177603,-,対象[25-21],,,24,2026世田谷キャンパス前期.pdf,情報リテラシー演習(b),TCU-IT-LITB,情報リテラシー演習(b),elective-required,情報機器の操作,共通分野,exact,1.0,AU-132,情報リテラシー演習(b),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,2,国際,ひとづくり(2),杉浦 正吾 加藤 雄一,saz137612,-,対象[25-24],教養特別講義,,24,2026世田谷キャンパス前期.pdf,ひとづくり(2),SCH-SAZ137612,ひとづくり(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137612,ひとづくり(2),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,2,国際,ひらめきづくり(3),杉浦 正吾 N・スランタ 加藤 雄一,saz137615,-,対象[25-24],,,24,2026世田谷キャンパス前期.pdf,ひらめきづくり(3),SCH-SAZ137615,ひらめきづくり(3),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ137615,ひらめきづくり(3),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,2,SD,PBL(2),服部 新 吉田 真史,saz177605,-,対象[25-20],,,24,2026世田谷キャンパス前期.pdf,PBL(2),SCH-SAZ177605,PBL(2),elective,時間割由来科目,2026前期/2年,curriculum-exact-title,1.0,SCH-SAZ177605,PBL(2),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,2,SD,キャリアデザイン,服部 新 吉田 真史,saz177605,-,対象[19-18],,,24,2026世田谷キャンパス前期.pdf,キャリアデザイン,IT-134,キャリアデザイン,required,専門分野,情報工学基盤科目,curriculum-exact-title,1.0,IT-134,キャリアデザイン,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,2,SD,電磁気学基礎,須藤 誠一,saa112209,-,対象[20-20],,,24,2026世田谷キャンパス前期.pdf,電磁気学基礎,AU-223,電磁気学基礎,elective,専門分野,学部基盤科目,curriculum-exact-title,1.0,AU-223,電磁気学基礎,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,ことづくり(4),瀬戸 久美子,saz137622,-,対象[24-24],,,24,2026世田谷キャンパス前期.pdf,ことづくり(4),SCH-SAZ137622,ことづくり(4),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137622,ことづくり(4),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,ひらめきづくり(5),杉浦 正吾 大木 浩士,saz137624,-,対象[24-24],,,24,2026世田谷キャンパス前期.pdf,ひらめきづくり(5),SCH-SAZ137624,ひらめきづくり(5),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ137624,ひらめきづくり(5),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,事例研究(1),橋本 義武 飯島 正徳 福田 達哉 吉田 真史,saz177606,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,事例研究(1),SCH-SAZ177606,事例研究(1),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ177606,事例研究(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,博物館学実習(1),萩谷 宏 和田 浩,saz177607,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,博物館学実習(1),SCH-SAZ177607,博物館学実習(1),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ177607,博物館学実習(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,博物館展示論,滝本 秀夫 高木 晋作,saz177608,-,対象[24-18],,,24,2026世田谷キャンパス前期.pdf,博物館展示論,SCH-SAZ177608,博物館展示論,elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ177608,博物館展示論,curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,3,SD,野外調査法及び実習(2),福田 達哉 萩谷 宏 中島 保寿 田中 健太郎,saz177609,-,対象[23-18],,,24,2026世田谷キャンパス前期.pdf,野外調査法及び実習(2),SCH-SAZ177609,野外調査法及び実習(2),elective,時間割由来科目,2026前期/3年,curriculum-exact-title,1.0,SCH-SAZ177609,野外調査法及び実習(2),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,4,SD,卒業研究(1),福田 達哉 飯島 正徳 橋本 義武 吉田 真史,saz177615,-,対象[23-19],,,24,2026世田谷キャンパス前期.pdf,卒業研究(1),SCH-SAZ177615,卒業研究(1),elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAZ177615,卒業研究(1),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,前集中,4,SD,卒業研究(2),福田 達哉 飯島 正徳 橋本 義武 吉田 真史,saz177616,-,対象[23-19],,,24,2026世田谷キャンパス前期.pdf,卒業研究(2),SCH-SAZ177616,卒業研究(2),elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SAZ177616,卒業研究(2),curriculum-exact-title,1.0
+shizen_shizen,自然,世田谷,土,4,通年,4,SD,卒業研究 福田 飯島 橋本 吉田,達哉 正徳 義武 真史,szz177619,-,対象[18-18],,,25,2026世田谷キャンパス前期.pdf,卒業研究福田飯島橋本吉田,SCH-SZZ177619,卒業研究 福田 飯島 橋本 吉田,elective,時間割由来科目,2026前期/4年,curriculum-exact-title,1.0,SCH-SZZ177619,卒業研究 福田 飯島 橋本 吉田,curriculum-exact-title,1.0

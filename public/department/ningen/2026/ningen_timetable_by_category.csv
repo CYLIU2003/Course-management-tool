@@ -1,303 +1,458 @@
-﻿id,title,credits,raw_required,category,group,courseType
-FL-111,English I-A,1,○,共通分野,外国語科目,required
-FL-112,English I-B,1,○,共通分野,外国語科目,required
-FL-113,English II-A,1,○,共通分野,外国語科目,required
-FL-114,English II-B,1,○,共通分野,外国語科目,required
-FL-115,English III-A,1,○,共通分野,外国語科目,required
-FL-116,English III-B,1,○,共通分野,外国語科目,required
-FL-117,Reading and Writing(2a),0.5,○,共通分野,外国語科目,required
-FL-118,Reading and Writing(2b),0.5,○,共通分野,外国語科目,required
-FL-211,Reading Comprehension,2,,共通分野,外国語科目,elective
-FL-212,Debate & Discussion,2,,共通分野,外国語科目,elective
-FL-213,Presentation Strategies,2,,共通分野,外国語科目,elective
-FL-214,English Test Preparation,2,,共通分野,外国語科目,elective
-FL-215,Writing Strategies,2,,共通分野,外国語科目,elective
-FL-217,Test Taking Skills(1a),1,,共通分野,外国語科目,elective
-FL-218,Test Taking Skills(1b),1,,共通分野,外国語科目,elective
-FL-219,Test Taking Skills(2a),1,,共通分野,外国語科目,elective
-FL-21F,Critical Listening(1a),1,,共通分野,外国語科目,elective
-FL-21G,Critical Listening(1b),1,,共通分野,外国語科目,elective
-FL-21H,Critical Listening(2a),1,,共通分野,外国語科目,elective
-FL-21I,Critical Listening(2b),1,,共通分野,外国語科目,elective
-FL-21J,Communication Strategies(1a),1,,共通分野,外国語科目,elective
-FL-21K,Communication Strategies(1b),1,,共通分野,外国語科目,elective
-FL-21L,Communication Strategies(2a),1,,共通分野,外国語科目,elective
-FL-21M,Communication Strategies(2b),1,,共通分野,外国語科目,elective
-FL-21N,Academic English(1a),1,,共通分野,外国語科目,elective
-FL-21O,Academic English(1b),1,,共通分野,外国語科目,elective
-FL-21P,Academic English(2a),1,,共通分野,外国語科目,elective
-FL-21Q,Academic English(2b),1,,共通分野,外国語科目,elective
-FL-221,Literature in English(1a),1,,共通分野,外国語科目,elective
-FL-222,Literature in English(1b),1,,共通分野,外国語科目,elective
-FL-223,Literature in English(2a),1,,共通分野,外国語科目,elective
-FL-224,Literature in English(2b),1,,共通分野,外国語科目,elective
-FL-229,Language Sciences(1a),1,,共通分野,外国語科目,elective
-FL-22A,Test Taking Skills(2b),1,,共通分野,外国語科目,elective
-FL-22B,Critical Reading(1a),1,,共通分野,外国語科目,elective
-FL-22C,Critical Reading(1b),1,,共通分野,外国語科目,elective
-FL-22D,Critical Reading(2a),1,,共通分野,外国語科目,elective
-FL-22E,Critical Reading(2b),1,,共通分野,外国語科目,elective
-FL-22F,Language Sciences(1b),1,,共通分野,外国語科目,elective
-FL-22G,Language Sciences(2a),1,,共通分野,外国語科目,elective
-FL-22H,Language Sciences(2b),1,,共通分野,外国語科目,elective
-FL-241,ドイツ語(1a),1,,共通分野,外国語科目,elective
-FL-242,ドイツ語(1b),1,,共通分野,外国語科目,elective
-FL-243,ドイツ語(2a),1,,共通分野,外国語科目,elective
-FL-244,ドイツ語(2b),1,,共通分野,外国語科目,elective
-FL-245,フランス語(1a),1,,共通分野,外国語科目,elective
-FL-246,フランス語(1b),1,,共通分野,外国語科目,elective
-FL-247,フランス語(2a),1,,共通分野,外国語科目,elective
-FL-248,フランス語(2b),1,,共通分野,外国語科目,elective
-FL-249,スペイン語(1a),1,,共通分野,外国語科目,elective
-FL-24A,スペイン語(1b),1,,共通分野,外国語科目,elective
-FL-24B,スペイン語(2a),1,,共通分野,外国語科目,elective
-FL-24C,スペイン語(2b),1,,共通分野,外国語科目,elective
-FL-24D,イタリア語(1a),1,,共通分野,外国語科目,elective
-FL-24E,イタリア語(1b),1,,共通分野,外国語科目,elective
-FL-24F,イタリア語(2a),1,,共通分野,外国語科目,elective
-FL-24G,イタリア語(2b),1,,共通分野,外国語科目,elective
-FL-24H,中国語(1a),1,,共通分野,外国語科目,elective
-FL-24I,中国語(1b),1,,共通分野,外国語科目,elective
-FL-24J,中国語(2a),1,,共通分野,外国語科目,elective
-FL-24K,中国語(2b),1,,共通分野,外国語科目,elective
-FL-24L,アラビア語(1a),1,,共通分野,外国語科目,elective
-FL-24M,アラビア語(1b),1,,共通分野,外国語科目,elective
-FL-24N,アラビア語(2a),1,,共通分野,外国語科目,elective
-FL-24O,アラビア語(2b),1,,共通分野,外国語科目,elective
-FL-24P,韓国語(1a),1,,共通分野,外国語科目,elective
-FL-24Q,韓国語(1b),1,,共通分野,外国語科目,elective
-FL-24R,韓国語(2a),1,,共通分野,外国語科目,elective
-FL-24S,韓国語(2b),1,,共通分野,外国語科目,elective
-FL-24T,日本語表現(a),1,,共通分野,外国語科目,elective
-FL-24U,日本語表現(b),1,,共通分野,外国語科目,elective
-FL-311,Academic Reading,2,△,共通分野,外国語科目,elective-required
-FL-312,Academic Discussion,2,△,共通分野,外国語科目,elective-required
-FL-313,Critical Reading(3a),1,,共通分野,外国語科目,elective
-FL-314,Critical Reading(3b),1,,共通分野,外国語科目,elective
-FL-315,Critical Listening(3a),1,,共通分野,外国語科目,elective
-FL-316,Critical Listening(3b),1,,共通分野,外国語科目,elective
-FL-317,Communication Strategies(3a),1,,共通分野,外国語科目,elective
-FL-318,Communication Strategies(3b),1,,共通分野,外国語科目,elective
-FL-319,Academic English(3a),1,,共通分野,外国語科目,elective
-FL-31A,Academic English(3b),1,,共通分野,外国語科目,elective
-FL-931,海外・特別選抜セミナー,2,,共通分野,外国語科目,elective
-FL-932,外国語特別講義(1a),1,,共通分野,外国語科目,elective
-FL-933,外国語特別講義(1b),1,,共通分野,外国語科目,elective
-FL-934,外国語特別講義(2a),1,,共通分野,外国語科目,elective
-FL-935,外国語特別講義(2b),1,,共通分野,外国語科目,elective
-HP-101,ことづくり,1,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-201,デザインリサーチ,2,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-301,サステナビリティ,2,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-901,デザインシンキング,2,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-902,アイデアソン演習,1,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-903,ハッカソン演習,1,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-904,ビジネスコンテスト演習,1,,副専攻・ひらめき,ひらめきプログラム,elective
-HP-905,フィールドリサーチ,2,,副専攻・ひらめき,ひらめきプログラム,elective
-HS-111,SD PBL(1) 演習,1,○,専門分野,人間科学科科目,required
-HS-112,人間科学入門講義,2,○,専門分野,人間科学科科目,required
-HS-113,情報通信技術の基礎と活用(1)演習,1,○,専門分野,人間科学科科目,required
-HS-114,情報通信技術の基礎と活用(2)演習,1,○,専門分野,人間科学科科目,required
-HS-121,保育原理講義,2,○,専門分野,人間科学科科目,required
-HS-122,教育学概論講義,2,○ △4 △5,専門分野,人間科学科科目,elective-required
-HS-131,発達心理学講義,2,○,専門分野,人間科学科科目,required
-HS-132,人間の行動と心理講義,2,△1,専門分野,人間科学科科目,elective-required
-HS-141,子どもと人間関係演習,2,△4 ○,専門分野,人間科学科科目,elective-required
-HS-142,子どもと環境演習,2,△4 ○,専門分野,人間科学科科目,elective-required
-HS-143,保育内容の理解と方法（造形表現）演習,1,○,専門分野,人間科学科科目,required
-HS-144,保育内容の理解と方法（言語表現）演習,1,○,専門分野,人間科学科科目,required
-HS-151,音楽実技入門演習,2,,専門分野,人間科学科科目,elective
-HS-152,音楽実技(1)演習,2,○,専門分野,人間科学科科目,required
-HS-154,手話演習,2,△4,専門分野,人間科学科科目,elective-required
-HS-161,子ども家庭福祉講義,2,○,専門分野,人間科学科科目,required
-HS-171,乳児保育(1)講義,2,○,専門分野,人間科学科科目,required
-HS-172,子どもの食と栄養演習,2,○,専門分野,人間科学科科目,required
-HS-173,医用工学リテラシー講義,2,,専門分野,人間科学科科目,elective
-HS-174,理工学と生活講義,2,,専門分野,人間科学科科目,elective
-HS-175,人間と健康講義,1,○,専門分野,人間科学科科目,required
-HS-211,SD PBL(2) 演習,1,○,専門分野,人間科学科科目,required
-HS-212,情報通信技術の理解と応用(1）演習,1,○ △1,専門分野,人間科学科科目,elective-required
-HS-213,情報通信技術の理解と応用(2)演習,1,○ △1,専門分野,人間科学科科目,elective-required
-HS-221,教育原理講義,2,○,専門分野,人間科学科科目,required
-HS-222,教育社会学講義,2,○,専門分野,人間科学科科目,required
-HS-223,保育の計画と評価講義,2,○,専門分野,人間科学科科目,required
-HS-231,子ども家庭支援の心理学講義,2,○,専門分野,人間科学科科目,required
-HS-232,教育心理学講義,2,○,専門分野,人間科学科科目,required
-HS-241,保育内容総論演習,2,○,専門分野,人間科学科科目,required
-HS-242,保育内容人間関係指導法演習,2,○,専門分野,人間科学科科目,required
-HS-243,保育内容の理解と方法（音楽表現）演習,1,○,専門分野,人間科学科科目,required
-HS-244,保育内容の理解と方法（身体表現）演習,1,○,専門分野,人間科学科科目,required
-HS-245,保育内容表現指導法演習,2,○,専門分野,人間科学科科目,required
-HS-246,子どもと言葉演習,2,△4 ○,専門分野,人間科学科科目,elective-required
-HS-247,保育内容言葉指導法演習,2,○,専門分野,人間科学科科目,required
-HS-251,音楽実技(2)演習,2,△4,専門分野,人間科学科科目,elective-required
-HS-252,造形演習,2,△4,専門分野,人間科学科科目,elective-required
-HS-253,食農文化と子育て(1)演習,2,○,専門分野,人間科学科科目,required
-HS-254,食農文化と子育て(2)演習,2,△4,専門分野,人間科学科科目,elective-required
-HS-261,子ども家庭支援論講義,2,○,専門分野,人間科学科科目,required
-HS-262,社会的養護(1)講義,2,○,専門分野,人間科学科科目,required
-HS-263,社会福祉講義,2,○,専門分野,人間科学科科目,required
-HS-271,演習,2,○,専門分野,人間科学科科目,required
-HS-272,子どもの保健と健康講義,2,○,専門分野,人間科学科科目,required
-HS-273,子どもの安全と健康演習,1,○,専門分野,人間科学科科目,required
-HS-274,生理学（1）講義,2,,専門分野,人間科学科科目,elective
-HS-275,生理学（2）講義,2,,専門分野,人間科学科科目,elective
-HS-276,解剖・外科学講義,2,,専門分野,人間科学科科目,elective
-HS-281,海外研修(1)演習,2,,専門分野,人間科学科科目,elective
-HS-282,海外研修(2)演習,2,,専門分野,人間科学科科目,elective
-HS-283,海外研修(3)演習,1,,専門分野,人間科学科科目,elective
-HS-311,SD PBL(3) 演習,1,○,専門分野,人間科学科科目,required
-HS-312,特別研究(1)演習,2,○,専門分野,人間科学科科目,required
-HS-313,特別研究(2)演習,2,○,専門分野,人間科学科科目,required
-HS-321,幼児教育方法論講義,1,○,専門分野,人間科学科科目,required
-HS-322,カリキュラム論講義,1,○,専門分野,人間科学科科目,required
-HS-323,保育者論講義,2,○,専門分野,人間科学科科目,required
-HS-324,学習科学概論講義,1,○ △5,専門分野,人間科学科科目,elective-required
-HS-325,教育工学講義,1,○ △5,専門分野,人間科学科科目,elective-required
-HS-331,心理研究法演習,2,○,専門分野,人間科学科科目,required
-HS-332,子ども理解の理論と方法演習,2,○,専門分野,人間科学科科目,required
-HS-333,教育相談講義,2,○,専門分野,人間科学科科目,required
-HS-334,生涯発達心理学（1）演習,1,○,専門分野,人間科学科科目,required
-HS-335,生涯発達心理学（2）演習,1,○,専門分野,人間科学科科目,required
-HS-341,保育内容環境指導法演習,2,○,専門分野,人間科学科科目,required
-HS-344,保育内容健康指導法演習,2,○,専門分野,人間科学科科目,required
-HS-361,子育て支援演習,2,○,専門分野,人間科学科科目,required
-HS-362,社会的養護(2)演習,1,○,専門分野,人間科学科科目,required
-HS-371,乳児保育(2)演習,1,○,専門分野,人間科学科科目,required
-HS-372,公衆衛生学講義,2,○ △1,専門分野,人間科学科科目,elective-required
-HS-373,医用機器講義,2,,専門分野,人間科学科科目,elective
-HS-374,医用安全工学講義,2,,専門分野,人間科学科科目,elective
-HS-375,臨床医学総論講義,2,,専門分野,人間科学科科目,elective
-HS-376,基礎医学総論講義,2,,専門分野,人間科学科科目,elective
-HS-391,保育実習指導(1)(保育所)演習,1,○,専門分野,人間科学科科目,required
-HS-392,保育実習指導(1)(施設)演習,1,○,専門分野,人間科学科科目,required
-HS-393,保育実習(1)(保育所・施設)実習,4,○,専門分野,人間科学科科目,required
-HS-394,幼稚園教育実習指導演習,1,○,専門分野,人間科学科科目,required
-HS-395,幼稚園教育実習実習,4,○,専門分野,人間科学科科目,required
-HS-411,卒業研究(1)演習,3,○,専門分野,人間科学科科目,required
-HS-412,卒業研究(2)演習,3,○,専門分野,人間科学科科目,required
-HS-431,臨床心理学演習,2,△4,専門分野,人間科学科科目,elective-required
-HS-491,保育実習指導(2)(保育所)演習,1,△2,専門分野,人間科学科科目,elective-required
-HS-492,保育実習指導(3)(施設)演習,1,△3,専門分野,人間科学科科目,elective-required
-HS-493,保育実習(2)(保育所)実習,2,△2,専門分野,人間科学科科目,elective-required
-HS-494,保育実習(3)(施設)実習,2,△3,専門分野,人間科学科科目,elective-required
-HS-495,保育・教職実践演習(幼稚園)演習,2,○,専門分野,人間科学科科目,required
-HS-511,インターンシップ(1)実習,1,,専門分野,人間科学科科目,elective
-HS-512,インターンシップ(2)実習,1,,専門分野,人間科学科科目,elective
-HS-513,特別講義(1)講義,2,,専門分野,人間科学科科目,elective
-HS-514,特別講義(2)講義,2,,専門分野,人間科学科科目,elective
-HS-515,特別講義(3)講義,1,,専門分野,人間科学科科目,elective
-HS-516,情報処理入門講義,2,,専門分野,人間科学科科目,elective
-HS-517,情報処理基礎講義,2,,専門分野,人間科学科科目,elective
-HS-518,情報処理応用講義,2,,専門分野,人間科学科科目,elective
-HS-519,未来を拓くイノベーション講義,2,,専門分野,人間科学科科目,elective
-HS-591,子育て支援演習(1)演習,1,○,専門分野,人間科学科科目,required
-HS-592,子育て支援演習(2)演習,1,○,専門分野,人間科学科科目,required
-LA-111,哲学(1),2,G,共通分野,教養科目,elective
-LA-112,哲学(2),2,G,共通分野,教養科目,elective
-LA-113,倫理学(1),2,,共通分野,教養科目,elective
-LA-114,倫理学(2),2,,共通分野,教養科目,elective
-LA-115,倫理学(a),1,,共通分野,教養科目,elective
-LA-116,倫理学(b),1,,共通分野,教養科目,elective
-LA-117,文化人類学,2,,共通分野,教養科目,elective
-LA-118,視覚芸術史(1),2,G,共通分野,教養科目,elective
-LA-119,視覚芸術史(2),2,G,共通分野,教養科目,elective
-LA-11A,日本史(1),2,G,共通分野,教養科目,elective
-LA-11B,日本史(2),2,G,共通分野,教養科目,elective
-LA-11C,西洋史(1),2,G,共通分野,教養科目,elective
-LA-11D,西洋史(2),2,G,共通分野,教養科目,elective
-LA-11E,民俗学(a),1,G,共通分野,教養科目,elective
-LA-11F,民俗学(b),1,G,共通分野,教養科目,elective
-LA-11G,宗教学,2,G,共通分野,教養科目,elective
-LA-121,社会学(1a),1,,共通分野,教養科目,elective
-LA-122,社会学(1b),1,,共通分野,教養科目,elective
-LA-123,社会学(2a),1,,共通分野,教養科目,elective
-LA-124,社会学(2b),1,,共通分野,教養科目,elective
-LA-125,社会学入門(a),1,,共通分野,教養科目,elective
-LA-126,社会学入門(b),1,,共通分野,教養科目,elective
-LA-127,経済学(1a),1,,共通分野,教養科目,elective
-LA-128,経済学(1b),1,,共通分野,教養科目,elective
-LA-129,経済学(2a),1,,共通分野,教養科目,elective
-LA-12A,経済学(2b),1,,共通分野,教養科目,elective
-LA-12B,政治学(1a),1,,共通分野,教養科目,elective
-LA-12C,政治学(1b),1,,共通分野,教養科目,elective
-LA-12D,政治学(2a),1,,共通分野,教養科目,elective
-LA-12E,政治学(2b),1,,共通分野,教養科目,elective
-LA-12F,国際関係論(1a),1,G,共通分野,教養科目,elective
-LA-12G,国際関係論(1b),1,G,共通分野,教養科目,elective
-LA-12H,国際関係論(2a),1,G,共通分野,教養科目,elective
-LA-12I,国際関係論(2b),1,G,共通分野,教養科目,elective
-LA-12J,日本国憲法,2,,共通分野,教養科目,elective
-LA-12K,法学,2,,共通分野,教養科目,elective
-LA-12L,民法,2,,共通分野,教養科目,elective
-LA-12M,西洋経済史,2,G,共通分野,教養科目,elective
-LA-12N,人文地理学(a),1,,共通分野,教養科目,elective
-LA-12O,人文地理学(b),1,,共通分野,教養科目,elective
-LA-12P,現代中国論,2,G,共通分野,教養科目,elective
-LA-131,教育学(1a),1,,共通分野,教養科目,elective
-LA-132,教育学(1b),1,,共通分野,教養科目,elective
-LA-133,教育学(2a),1,,共通分野,教養科目,elective
-LA-134,教育学(2b),1,,共通分野,教養科目,elective
-LA-135,スポーツ・健康論,2,,共通分野,教養科目,elective
-LA-136,心理学(1a),1,,共通分野,教養科目,elective
-LA-137,心理学(1b),1,,共通分野,教養科目,elective
-LA-138,心理学(2a),1,,共通分野,教養科目,elective
-LA-139,心理学(2b),1,,共通分野,教養科目,elective
-LA-13C,心理学入門,2,,共通分野,教養科目,elective
-LA-13D,社会とジェンダー(a),1,,共通分野,教養科目,elective
-LA-13E,社会とジェンダー(b),1,,共通分野,教養科目,elective
-LA-13F,日本文化の伝承(a),1,G,共通分野,教養科目,elective
-LA-13G,日本文化の伝承(b),1,G,共通分野,教養科目,elective
-LA-13H,日本文化論,2,G,共通分野,教養科目,elective
-LA-141,論理学(1a),1,,共通分野,教養科目,elective
-LA-142,論理学(1b),1,,共通分野,教養科目,elective
-LA-143,論理学(2a),1,,共通分野,教養科目,elective
-LA-144,論理学(2b),1,,共通分野,教養科目,elective
-LA-145,データサイエンスリテラシー(1),1,※DS,共通分野,教養科目,elective
-LA-146,現代の物理(a),1,,共通分野,教養科目,elective
-LA-147,現代の物理(b),1,,共通分野,教養科目,elective
-LA-148,現代の化学,2,,共通分野,教養科目,elective
-LA-149,現代の地学,2,,共通分野,教養科目,elective
-LA-14A,情報通信入門,2,,共通分野,教養科目,elective
-LA-14B,情報編集入門,2,,共通分野,教養科目,elective
-LA-14C,環境問題と社会,2,,共通分野,教養科目,elective
-LA-14D,情報社会入門,2,,共通分野,教養科目,elective
-LA-14E,情報演習基礎(a),1,,共通分野,教養科目,elective
-LA-14F,情報演習基礎(b),1,,共通分野,教養科目,elective
-LA-14G,情報処理入門,2,,共通分野,教養科目,elective
-LA-14H,文系のための数理基礎,2,※MS,共通分野,教養科目,elective
-LA-211,デザイン概論(1),2,G,共通分野,教養科目,elective
-LA-212,デザイン概論(2),2,G,共通分野,教養科目,elective
-LA-213,日本文学,2,G,共通分野,教養科目,elective
-LA-221,日本の政治(a),1,G,共通分野,教養科目,elective
-LA-222,日本の政治(b),1,G,共通分野,教養科目,elective
-LA-241,データサイエンスリテラシー(2),1,※DS,共通分野,教養科目,elective
-LA-242,科学技術と社会,2,G,共通分野,教養科目,elective
-LA-243,生活とメディア,2,,共通分野,教養科目,elective
-LA-244,情報処理基礎,2,,共通分野,教養科目,elective
-LA-321,日本経済論(a),1,G,共通分野,教養科目,elective
-LA-322,日本経済論(b),1,G,共通分野,教養科目,elective
-LA-331,国際化と異文化理解(a),1,G,共通分野,教養科目,elective
-LA-332,国際化と異文化理解(b),1,G,共通分野,教養科目,elective
-LA-341,情報処理応用,2,,共通分野,教養科目,elective
-LA-351,Japan Studies,2,△,共通分野,教養科目,elective-required
-LA-356,Intercultural Understanding(1),2,△,共通分野,教養科目,elective-required
-LA-357,Intercultural Understanding(2),2,△,共通分野,教養科目,elective-required
-LA-931,インターンシップ(1),1,,共通分野,教養科目,elective
-LA-932,インターンシップ(2),1,,共通分野,教養科目,elective
-LA-933,海外フィールド演習,2,G,共通分野,教養科目,elective
-LA-936,特別講義(1),2,,共通分野,教養科目,elective
-LA-937,特別講義(2),2,,共通分野,教養科目,elective
-LA-951,ボランティア(1),1,,共通分野,教養科目,elective
-LA-952,ボランティア(2),1,,共通分野,教養科目,elective
-LA-953,教養ゼミナール(1),2,,共通分野,教養科目,elective
-LA-954,教養ゼミナール(2),2,,共通分野,教養科目,elective
-LA-955,教養特別講義,2,,共通分野,教養科目,elective
-LA-956,教養特別講義(2),2,,共通分野,教養科目,elective
-LA-957,教養特別講義(3),2,,共通分野,教養科目,elective
-LA-958,未来を拓くイノベーション,2,,共通分野,教養科目,elective
-PE-111,基礎体育(1a),0.5,△,共通分野,体育科目,elective-required
-PE-112,基礎体育(1b),0.5,△,共通分野,体育科目,elective-required
-PE-113,基礎体育(2a),0.5,△,共通分野,体育科目,elective-required
-PE-114,基礎体育(2b),0.5,△,共通分野,体育科目,elective-required
-PE-211,応用体育(1),1,,共通分野,体育科目,elective
-PE-212,応用体育(2),1,,共通分野,体育科目,elective
+﻿id,title,credits,raw_required,category,group,courseType,sourceKind,sourceFile,sourceLine,sourceQuality,aliases,notes
+HS-113,情報通信技術の基礎と活用(1)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報通信技術の基礎と活用(1)       演習   ○   ○   1     ○       ○   2                         HS-113   20    10   10   10   50,pdf_curriculum_table,,source_key=human
+HS-114,情報通信技術の基礎と活用(2)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報通信技術の基礎と活用(2)       演習   ○   ○   1     ○       ○       2                     HS-114   20    10   10   10   50,pdf_curriculum_table,,source_key=human
+HS-212,情報通信技術の理解と応用(1）演習,1,○ △1,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報通信技術の理解と応用(1）       演習       ○   1     △1      －           2                 HS-212   20    10   10   10   50,pdf_curriculum_table,,source_key=human
+HS-213,情報通信技術の理解と応用(2)演習,1,○ △1,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報通信技術の理解と応用(2)       演習       ○   1     △1      －               2             HS-213   20    10   10   10   50,pdf_curriculum_table,,source_key=human
+HS-132,人間の行動と心理講義,2,△1,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,人間の行動と心理              講義           2     △1      －   2                         HS-132   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-175,人間と健康講義,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,人間と健康                 講義   ○   ○   1     ○       －   1                         HS-175   40    10   10   20   20,pdf_curriculum_table,,source_key=human
+HS-372,公衆衛生学講義,2,○ △1,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,公衆衛生学                 講義       ○   2     △1      －                         2   HS-372   20    20   10   20   30,pdf_curriculum_table,,source_key=human
+HS-121,保育原理講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育原理                  講義   ○   ○   2     ○       －   2                         HS-121   40    10   10   20   20,pdf_curriculum_table,,source_key=human
+HS-221,教育原理講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育原理                  講義   ○       2     ○       ○           2                 HS-221   10    10   10   10   60,pdf_curriculum_table,,source_key=human
+HS-222,教育社会学講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育社会学                 講義   ○       2     －       ○               2             HS-222   10    10   10   10   60,pdf_curriculum_table,,source_key=human
+HS-161,子ども家庭福祉講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,専       子ども家庭福祉               講義   ○   ○   2     ○       －   2                         HS-161   20    30   10   10   30,pdf_curriculum_table,,source_key=human
+HS-263,社会福祉講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,門       社会福祉                  講義       ○   2     ○       －               2             HS-263   20    10   10   30   30,pdf_curriculum_table,,source_key=human
+HS-262,社会的養護(1)講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,基       社会的養護(1)              講義           2     ○       －           2                 HS-262   10    30   20   10   30,pdf_curriculum_table,,source_key=human
+HS-131,発達心理学講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,礎       発達心理学                 講義   ○   ○   2     ○       ○       2                     HS-131   35    25   10   10   20,pdf_curriculum_table,,source_key=human
+HS-231,子ども家庭支援の心理学講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,科       子ども家庭支援の心理学           講義   ○       2     ○       －           2                 HS-231   20    20   20   30   10,pdf_curriculum_table,,source_key=human
+HS-272,子どもの保健と健康講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,目       子どもの保健と健康             講義       ○   2     ○       ○           2                 HS-272   20    20   10   20   30,pdf_curriculum_table,,source_key=human
+HS-273,子どもの安全と健康演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子どもの安全と健康             演習           1     ○       －               1             HS-273   20    20   10   20   30,pdf_curriculum_table,,source_key=human
+HS-172,子どもの食と栄養演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子どもの食と栄養              演習       ○   2     ○       －       2                     HS-172   20    20   10   20   30,pdf_curriculum_table,,source_key=human
+HS-241,保育内容総論演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容総論                演習   ○       2     ○       ○           2                 HS-241   30    20   0    25   25,pdf_curriculum_table,,source_key=human
+HS-151,音楽実技入門演習,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,音楽実技入門                演習           2     －       －   2                         HS-151   60    0    0     0   40,pdf_curriculum_table,,source_key=human
+HS-174,理工学と生活講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,理工学と生活                講義           2     －       －       2                     HS-174   15    15   15   30   25,pdf_curriculum_table,,source_key=human
+HS-173,医用工学リテラシー講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,医用工学リテラシー             講義           2     －       －   2                         HS-173   10    0    20    0   70,pdf_curriculum_table,,source_key=human
+HS-112,人間科学入門講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,人間科学入門                講義   ○   ○   2     ○       －   2                         HS-112   20    20   10   10   40,pdf_curriculum_table,,source_key=human
+HS-111,SD PBL(1) 演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,SD PBL(1)             演習   ○   ○   1     －       －   2                         HS-111   30    20   30   10   10,pdf_curriculum_table,,source_key=human
+HS-211,SD PBL(2) 演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,SD PBL(2)             演習   ○   ○   1     －       －           1                 HS-211   20    20   10   20   30,pdf_curriculum_table,,source_key=human
+HS-311,SD PBL(3) 演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,SD PBL(3)             演習   ○   ○   1     －       －                         2   HS-311   9     24   24   24   19,pdf_curriculum_table,,source_key=human
+HS-323,保育者論講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育者論                  講義   ○       2     ○       ○                         2   HS-323   30    20   0     0   50,pdf_curriculum_table,,source_key=human
+HS-232,教育心理学講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育心理学                 講義   ○       2     ○       ○               2             HS-232   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-332,子ども理解の理論と方法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子ども理解の理論と方法           演習   ○       2     ○       ○                     2       HS-332   30    20   20   10   20,pdf_curriculum_table,,source_key=human
+HS-261,子ども家庭支援論講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子ども家庭支援論              講義           2     ○       －           2                 HS-261   20    30   10   10   30,pdf_curriculum_table,,source_key=human
+HS-223,保育の計画と評価講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育の計画と評価              講義           2     ○       －               2             HS-223   30    10   20   10   30,pdf_curriculum_table,,source_key=human
+HS-322,カリキュラム論講義,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,カリキュラム論               講義           1     －       ○                         1   HS-322   10    10   10   10   60,pdf_curriculum_table,,source_key=human
+HS-344,保育内容健康指導法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,専       保育内容健康指導法             演習           2     ○       ○                         2   HS-344   10    20   20   20   30,pdf_curriculum_table,,source_key=human
+HS-242,保育内容人間関係指導法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,門       保育内容人間関係指導法           演習           2     ○       ○           2                 HS-242   30    10   20   10   30,pdf_curriculum_table,,source_key=human
+HS-341,保育内容環境指導法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,科       保育内容環境指導法             演習           2     ○       ○                     2       HS-341   20    30   0     0   50,pdf_curriculum_table,,source_key=human
+HS-247,保育内容言葉指導法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,目       保育内容言葉指導法             演習           2     ○       ○               2             HS-247   30    20   0    25   25,pdf_curriculum_table,,source_key=human
+HS-245,保育内容表現指導法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容表現指導法             演習           2     ○       ○               2             HS-245   40    0    0    30   30,pdf_curriculum_table,,source_key=human
+HS-171,乳児保育(1)講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,乳児保育(1)               講義           2     ○       －       2                     HS-171   40    10   10   30   10,pdf_curriculum_table,,source_key=human
+HS-371,乳児保育(2)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,乳児保育(2)               演習           1     ○       －                     1       HS-371   40    20   20   20   0,pdf_curriculum_table,,source_key=human
+HS-271,演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,演習   ○       2     ○       ○               2             HS-271   30    0    20   30   20,pdf_curriculum_table,,source_key=human
+HS-362,社会的養護(2)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,社会的養護(2)              演習           1     ○       －                         1   HS-362   30    0    20   30   20,pdf_curriculum_table,,source_key=human
+HS-361,子育て支援演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子育て支援                演習   ○       2    ○      －                              2             HS-361   20    20   10   30   20,pdf_curriculum_table,,source_key=human
+HS-243,保育内容の理解と方法（音楽表現）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容の理解と方法（音楽表現）     演習           1    ○      ○              2                             HS-243   30    20   0    0    50,pdf_curriculum_table,,source_key=human
+HS-143,保育内容の理解と方法（造形表現）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容の理解と方法（造形表現）     演習           1    ○      ○        2                                   HS-143   30    0    10   20   40,pdf_curriculum_table,,source_key=human
+HS-244,保育内容の理解と方法（身体表現）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容の理解と方法（身体表現）     演習           1    ○      ○              2                             HS-244   20    20   10   30   20,pdf_curriculum_table,,source_key=human
+HS-144,保育内容の理解と方法（言語表現）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育内容の理解と方法（言語表現）     演習           1    ○      ○        2                                   HS-144   10    30   10   10   40,pdf_curriculum_table,,source_key=human
+HS-393,保育実習(1)(保育所・施設)実習,4,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習(1)(保育所・施設)      実習           4    ○      －                        4                   HS-393   40    0    0    60    0,pdf_curriculum_table,,source_key=human
+HS-391,保育実習指導(1)(保育所)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習指導(1)(保育所)       演習           1    ○      －                        2                   HS-391   30    0    20   30   20,pdf_curriculum_table,,source_key=human
+HS-392,保育実習指導(1)(施設)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習指導(1)(施設)        演習           1    ○      －                        2                   HS-392   30    10   10   30   20,pdf_curriculum_table,,source_key=human
+HS-493,保育実習(2)(保育所)実習,2,△2,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習(2)(保育所)         実習           2    △2     －                                    2       HS-493   40    0    0    60    0,pdf_curriculum_table,,source_key=human
+HS-491,保育実習指導(2)(保育所)演習,1,△2,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習指導(2)(保育所)       演習           1    △2     －                                    2       HS-491   30    0    20   30   20,pdf_curriculum_table,,source_key=human
+HS-494,保育実習(3)(施設)実習,2,△3,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習(3)(施設)          実習           2    △3     －                                    2       HS-494   30    10   20   20   20,pdf_curriculum_table,,source_key=human
+HS-492,保育実習指導(3)(施設)演習,1,△3,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育実習指導(3)(施設)        演習           1    △3     －                                    2       HS-492   30    10   20   20   20,pdf_curriculum_table,,source_key=human
+HS-495,保育・教職実践演習(幼稚園)演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,保育・教職実践演習(幼稚園)       演習           2    ○      ○                                        2   HS-495   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-331,心理研究法演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,心理研究法                演習       ○   2    －      －                        2                   HS-331   10    20   20   20   30,pdf_curriculum_table,,source_key=human
+HS-431,臨床心理学演習,2,△4,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,臨床心理学                演習           2    △4     －                                    2       HS-431   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-152,音楽実技(1)演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,音楽実技(1)              演習           2    ○      －        2                                   HS-152   60    0    0    0    40,pdf_curriculum_table,,source_key=human
+HS-251,音楽実技(2)演習,2,△4,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,音楽実技(2)              演習           2    △4     －                  2                         HS-251   40    0    0    0    60,pdf_curriculum_table,,source_key=human
+HS-252,造形演習,2,△4,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,造形                   演習           2    △4     －              2                             HS-252   30    0    10   20   40,pdf_curriculum_table,,source_key=human
+HS-154,手話演習,2,△4,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,手話                   演習           2    △4     －    2                                       HS-154   30    20   10   30   10,pdf_curriculum_table,,source_key=human
+HS-141,子どもと人間関係演習,2,△4 ○,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子どもと人間関係             演習           2    △4     ○    2                                       HS-141   30    10   10   20   30,pdf_curriculum_table,,source_key=human
+HS-246,子どもと言葉演習,2,△4 ○,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子どもと言葉               演習           2    △4     ○              2                             HS-246   10    30   0    0    60,pdf_curriculum_table,,source_key=human
+HS-122,教育学概論講義,2,○ △4 △5,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育学概論                講義       ○   2    △4 △5       2                                       HS-122   10    10   10   10   60,pdf_curriculum_table,,source_key=human
+HS-321,幼児教育方法論講義,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,幼児教育方法論              講義           1    －      ○                        1                   HS-321   30    10   20   10   30,pdf_curriculum_table,,source_key=human
+HS-333,教育相談講義,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育相談                 講義           2    －      ○                        2                   HS-333   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-395,幼稚園教育実習実習,4,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,幼稚園教育実習              実習           4    －      ○                        (4)   4             HS-395   40    0    0    30   30,pdf_curriculum_table,,source_key=human
+HS-394,幼稚園教育実習指導演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,幼稚園教育実習指導            演習           1    －      ○                        (1)   1             HS-394   40    0    0    30   30,pdf_curriculum_table,,source_key=human
+HS-511,インターンシップ(1)実習,1,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,インターンシップ(1)          実習           1    －      －                                            HS-511   20    20   20   20   20,pdf_curriculum_table,,source_key=human
+HS-512,インターンシップ(2)実習,1,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,インターンシップ(2)          実習           1    －      －                                            HS-512   20    20   20   20   20,pdf_curriculum_table,,source_key=human
+HS-142,子どもと環境演習,2,△4 ○,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子どもと環境               演習           2    △4     ○    2                                       HS-142   30    20   20   0    30,pdf_curriculum_table,,source_key=human
+HS-281,海外研修(1)演習,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,海外研修(1)              演習           2    －      －                                            HS-281   20    10   20   20   30,pdf_curriculum_table,,source_key=human
+HS-282,海外研修(2)演習,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,海外研修(2)              演習           2    －      －                                            HS-282   20    10   20   20   30,pdf_curriculum_table,,source_key=human
+HS-283,海外研修(3)演習,1,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,海外研修(3)              演習           1    －      －                                            HS-283   20    10   20   20   30,pdf_curriculum_table,,source_key=human
+HS-591,子育て支援演習(1)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子育て支援演習(1)           演習           1    ○      －              1   (1)                       HS-591   30    20   0    30   20,pdf_curriculum_table,,source_key=human
+HS-592,子育て支援演習(2)演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,子育て支援演習(2)           演習           1    ○      －                        1     (1)           HS-592   30    20   0    30   20,pdf_curriculum_table,,source_key=human
+HS-253,食農文化と子育て(1)演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,食農文化と子育て(1)          演習           2    ○      －              2                             HS-253   20    10   0    30   40,pdf_curriculum_table,,source_key=human
+HS-254,食農文化と子育て(2)演習,2,△4,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,食農文化と子育て(2)          演習           2    △4     －                  2                         HS-254   20    10   0    30   40,pdf_curriculum_table,,source_key=human
+HS-325,教育工学講義,1,○ △5,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,教育工学                 講義       ○   1    －      △5                             1             HS-325   10    10   10   10   60,pdf_curriculum_table,,source_key=human
+HS-324,学習科学概論講義,1,○ △5,専門分野,人間科学科科目,elective-required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,学習科学概論               講義       ○   1    －      △5                       1                   HS-324   20    20   30   0    30,pdf_curriculum_table,,source_key=human
+HS-334,生涯発達心理学（1）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,生涯発達心理学（1）           演習       ○   1    －      －                        1                   HS-334   35    25   10   10   20,pdf_curriculum_table,,source_key=human
+HS-335,生涯発達心理学（2）演習,1,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,生涯発達心理学（2）           演習       ○   1    －      －                        1                   HS-335   20    25   10   15   30,pdf_curriculum_table,,source_key=human
+HS-274,生理学（1）講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,生理学（1）               講義           2    －      －              2                             HS-274   0     0    0    0    100,pdf_curriculum_table,,source_key=human
+HS-275,生理学（2）講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,生理学（2）               講義           2    －      －              2                             HS-275   0     0    0    0    100,pdf_curriculum_table,,source_key=human
+HS-276,解剖・外科学講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,解剖・外科学               講義           2    －      －                  2                         HS-276   10    0    10   10   70,pdf_curriculum_table,,source_key=human
+HS-375,臨床医学総論講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,臨床医学総論               講義           2    －      －                              2             HS-375   10    0    10   20   60,pdf_curriculum_table,,source_key=human
+HS-376,基礎医学総論講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,基礎医学総論               講義           2    －      －                              2             HS-376   0     0    0    0    100,pdf_curriculum_table,,source_key=human
+HS-373,医用機器講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,医用機器                 講義           2    －      －                        2                   HS-373   20    0    0    0    80,pdf_curriculum_table,,source_key=human
+HS-374,医用安全工学講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,医用安全工学               講義           2    －      －                        2                   HS-374   20    0    0    0    80,pdf_curriculum_table,,source_key=human
+HS-516,情報処理入門講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報処理入門               講義           2    －      －    2   (2)                                 HS-516   65    10   25   0     0,pdf_curriculum_table,,source_key=human
+HS-517,情報処理基礎講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報処理基礎               講義           2    －      －    2   (2)                                 HS-517   65    10   25   0     0,pdf_curriculum_table,,source_key=human
+HS-518,情報処理応用講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,情報処理応用               講義           2    －      －    2   (2)                                 HS-518   65    10   25   0     0,pdf_curriculum_table,,source_key=human
+HS-519,未来を拓くイノベーション講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,未来を拓くイノベーション         講義           2    －      －    2   (2)                                 HS-519   60    20   10   0    10,pdf_curriculum_table,,source_key=human
+HS-513,特別講義(1)講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,特別講義(1)            講義           2    －      －                                          HS-513   20    20   20   20   20,pdf_curriculum_table,,source_key=human
+HS-514,特別講義(2)講義,2,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,特別講義(2)            講義           2    －      －                                          HS-514   20    20   20   20   20,pdf_curriculum_table,,source_key=human
+HS-515,特別講義(3)講義,1,,専門分野,人間科学科科目,elective,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,特別講義(3)            講義           1    －      －                                          HS-515   20    20   20   20   20,pdf_curriculum_table,,source_key=human
+HS-312,特別研究(1)演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,特別研究(1)            演習   ○   ○   2    －      －                   2    (2)               HS-312   20    20   30   20   10,pdf_curriculum_table,,source_key=human
+HS-313,特別研究(2)演習,2,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,特別研究(2)            演習   ○   ○   2    －      －                         2    (2)         HS-313   20    20   30   20   10,pdf_curriculum_table,,source_key=human
+HS-411,卒業研究(1)演習,3,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,卒業研究(1)            演習   ○   ○   3    －      －                              6     (6)   HS-411   15    15   15   15   40,pdf_curriculum_table,,source_key=human
+HS-412,卒業研究(2)演習,3,○,専門分野,人間科学科科目,required,curriculum,9ac54018ba04a3dadd1774fcaec7facc.pdf,卒業研究(2)            演習   ○   ○   3    －      －                              (6)   6     HS-412   15    15   15   15   40,pdf_curriculum_table,,source_key=human
+SCH-SAZ561101,食農文化と子育て(1),0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz561101 野村 明洋,schedule_only_credit_unknown,食農文化と子育て(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561102,学習科学概論,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz561102 内海 太祐,schedule_only_credit_unknown,学習科学概論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561202,人間と健康,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz561202 田中 淳司,schedule_only_credit_unknown,人間と健康,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564209,特別研究(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz564209 横山 草介,schedule_only_credit_unknown,特別研究(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561302,保育原理,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz561302 宮川 哲弥,schedule_only_credit_unknown,保育原理,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561305,保育内容の理解と方法 （身体表現）,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz561305 髙橋 うらら,schedule_only_credit_unknown,保育内容の理解と方法(身体表現),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561303,保育内容の理解と方法 （音楽表現）,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz561303 岩田 遵子 ノ室,schedule_only_credit_unknown,保育内容の理解と方法(音楽表現),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561304,子どもと言葉,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz561304 亀田 佐知子,schedule_only_credit_unknown,子どもと言葉,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561306,教育相談,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz561306 紺野 道子,schedule_only_credit_unknown,教育相談,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ561403,健康と運動(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期 saz561403 井村 祥子 山田 盛朗,schedule_only_credit_unknown,健康と運動(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA561401,基礎体育(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期前 saa561401 井村 祥子 山田 盛朗,schedule_only_credit_unknown,基礎体育(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB561402,基礎体育(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期後 sab561402 井村 祥子,schedule_only_credit_unknown,基礎体育(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562102,保育内容表現指導法,0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期 saz562102 大須賀 裕子,schedule_only_credit_unknown,保育内容表現指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562101,保育内容総論,0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期 saz562101 亀田 佐知子,schedule_only_credit_unknown,保育内容総論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA112101,Reading and,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期前 saa112101 日高 正司,schedule_only_credit_unknown,Readingand,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA112102,Reading and Writing(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期前 saa112102 ヴァーラ内田 エイ ドリアン ミッシェ,schedule_only_credit_unknown,ReadingandWriting(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB112112,Reading and Writing(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期後 sab112112 ヴァーラ内田 エイ ドリアン ミッシェ,schedule_only_credit_unknown,ReadingandWriting(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562203,子どもの音楽表現指導法,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz562203 岩田 遵子,schedule_only_credit_unknown,子どもの音楽表現指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562202,子どもの身体表現指導法,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz562202 髙橋 うらら,schedule_only_credit_unknown,子どもの身体表現指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562204,子どもの造形表現指導法,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz562204 大塚 習平,schedule_only_credit_unknown,子どもの造形表現指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA562201,生涯発達心理学(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa562201 井戸 ゆかり,schedule_only_credit_unknown,生涯発達心理学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562303,人間の行動と心理,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz562303 森山 徹,schedule_only_credit_unknown,人間の行動と心理,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562304,子どもと環境,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,"火3 前期 saz562304 松橋 圭子 (1Q),12J(2Q",schedule_only_credit_unknown,子どもと環境,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562305,子ども家庭支援の心理学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz562305 井戸 ゆかり,schedule_only_credit_unknown,子ども家庭支援の心理学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562310,保育者論,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz562310 園田 巌,schedule_only_credit_unknown,保育者論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562403,保育実習指導(3)(施設),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz562403 宮川 哲弥 大須賀 裕子,schedule_only_credit_unknown,保育実習指導(3)(施設),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA562301,心理学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa562301 森山 徹,schedule_only_credit_unknown,心理学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB562302,心理学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期後 sab562302 森山 徹,schedule_only_credit_unknown,心理学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562406,教育社会学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火4 前期 saz562406 横山 草介,schedule_only_credit_unknown,教育社会学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ562405,保育実習指導(2)(保育 所),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火4 前期 saz562405 室井 眞紀子 園田 巌,schedule_only_credit_unknown,保育実習指導(2)(保育所),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ563108,SD PBL(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期 saz563108 横山 草介,schedule_only_credit_unknown,SDPBL(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA563101,SD PBL(2),0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期前 saa563101 髙橋 うらら 松橋 圭子,schedule_only_credit_unknown,SDPBL(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ563202,幼児教育方法論,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz563202 室井 眞紀子,schedule_only_credit_unknown,幼児教育方法論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564101,情報処理演習(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564101 須藤 智亜紀,schedule_only_credit_unknown,情報処理演習(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564101,情報通信技術の基礎と活 用(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564101 須藤 智亜紀,schedule_only_credit_unknown,情報通信技術の基礎と活用(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564102,音楽実技入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564102 上野 彩子 小寺 洋子 ノ室 江口 久美子 島内 亜津子,schedule_only_credit_unknown,音楽実技入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564103,保育内容言葉指導法,0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564103 森 志津,schedule_only_credit_unknown,保育内容言葉指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564105,造形,0,○,時間割由来科目,2026前期/2年,required,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564105 大塚 習平,schedule_only_credit_unknown,造形,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564104,保育実習指導(1)(保育 所),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz564104 室井 眞紀子 深津 さよこ,schedule_only_credit_unknown,保育実習指導(1)(保育所),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564203,手話,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz564203 森永 慶子,schedule_only_credit_unknown,手話,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564304,子どもと人間関係,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz564304 関山 隆一,schedule_only_credit_unknown,子どもと人間関係,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564302,子ども家庭支援論,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz564302 泉 秀生,schedule_only_credit_unknown,子ども家庭支援論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564301,臨床心理学,0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz564301 紺野 道子,schedule_only_credit_unknown,臨床心理学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ564402,教育原理,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz564402 横山 草介,schedule_only_credit_unknown,教育原理,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB561301,生涯発達心理学(2),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期後 sab561301 紺野 道子,schedule_only_credit_unknown,生涯発達心理学(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ115101,Communication,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期 saz115101 佐竹 幸信,schedule_only_credit_unknown,Communication,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ115103,Communication Skills(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期 saz115103 ヴァーラ内田 エイ ドリアン ミッシェ,schedule_only_credit_unknown,CommunicationSkills(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565101,保育実習指導(1)(施設),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期 saz565101 宮川 哲弥 大須賀 裕子,schedule_only_credit_unknown,保育実習指導(1)(施設),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA565103,社会的養護(2),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期前 saa565103 浦野 耕司,schedule_only_credit_unknown,社会的養護(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565201,情報処理演習(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz565201 須藤 智亜紀,schedule_only_credit_unknown,情報処理演習(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565204,保育内容の理解と方法 （身体表現） 保育実習指導(1)(施設),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz565204 髙橋 うらら,schedule_only_credit_unknown,保育内容の理解と方法(身体表現)保育実習指導(1)(施設),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565202,宮川,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz565202 哲弥 大須賀 裕子,schedule_only_credit_unknown,宮川,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565211,心理研究法,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz565211 眞榮城 和美,schedule_only_credit_unknown,心理研究法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA565201,データサイエンスリテラ シー(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa565201 叢 瑞晨,schedule_only_credit_unknown,データサイエンスリテラシー(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB565202,文系のための数理基礎,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期後 sab565202 菅原 麻衣,schedule_only_credit_unknown,文系のための数理基礎,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565302,乳児保育(2),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz565302 宮川 哲弥 野崎 百合子,schedule_only_credit_unknown,乳児保育(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ565303,保育内容環境指導法,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz565303 松橋 圭子,schedule_only_credit_unknown,保育内容環境指導法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ566201,人間科学入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前期 saz566201 紺野 道子 井戸 ゆかり 田中 淳司 岩田 遵子,schedule_only_credit_unknown,人間科学入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ566201,児童学入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前期 saz566201 紺野 道子 井戸 ゆかり 田中 淳司 岩田 遵子,schedule_only_credit_unknown,児童学入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ567609,卒業研究(１),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前期 saz567609 大塚 習平 岩田 遵子 泉 秀生 紺野 道子,schedule_only_credit_unknown,卒業研究(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ567607,海外研修(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前集中 saz567607 室井 眞紀子 宮川 哲弥,schedule_only_credit_unknown,海外研修(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ567601,保育実習(1)(保育所・施 設),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前集中 saz567601 室井 眞紀子 宮川 哲弥 大須賀 裕子,schedule_only_credit_unknown,保育実習(1)(保育所・施設),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ567602,保育実習(2)(保育所),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前集中 saz567602 室井 眞紀子 園田 巌,schedule_only_credit_unknown,保育実習(2)(保育所),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ567603,保育実習(3)(施設),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 前集中 saz567603 宮川 哲弥 大須賀 裕子,schedule_only_credit_unknown,保育実習(3)(施設),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SZZ567608,卒業研究,0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土2 通年 szz567608 大塚 習平 岩田 遵子 泉 秀生 紺野 道子,schedule_only_credit_unknown,卒業研究,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001108,微分積分学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001108 肥田野 久二男,schedule_only_credit_unknown,微分積分学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001107,線形代数学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001107 井上 浩一,schedule_only_credit_unknown,線形代数学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001123,教養 宗教学,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001123 長島 大輔,schedule_only_credit_unknown,教養宗教学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001119,教養 政治学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001119 徳田 太郎,schedule_only_credit_unknown,教養政治学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001101,ドイツ語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001101 中村 仁,schedule_only_credit_unknown,ドイツ語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001110,基礎 線形代数学(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期 saz001110 曽布川 拓也,schedule_only_credit_unknown,基礎線形代数学(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA171103,化学実験,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa171103 吉田 真史 高木 晋作 中村 和彦 石井 義孝,schedule_only_credit_unknown,化学実験,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA161101,線形代数学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa161101 井上 浩一,schedule_only_credit_unknown,線形代数学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA261101,微分積分学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa261101 肥田野 久二男,schedule_only_credit_unknown,微分積分学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001117,教養 政治学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa001117 徳田 太郎,schedule_only_credit_unknown,教養政治学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001102,ドイツ語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa001102 中村 仁,schedule_only_credit_unknown,ドイツ語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA111109,基礎 線形代数学(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期前 saa111109 曽布川 拓也,schedule_only_credit_unknown,基礎線形代数学(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB311107,化学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab311107 堀越 篤史,schedule_only_credit_unknown,化学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB161102,線形代数学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab161102 井上 浩一,schedule_only_credit_unknown,線形代数学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB261103,微分積分学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab261103 肥田野 久二男,schedule_only_credit_unknown,微分積分学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001118,政治学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab001118 徳田 太郎,schedule_only_credit_unknown,政治学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001103,ドイツ語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab001103 中村 仁,schedule_only_credit_unknown,ドイツ語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB271104,基礎 ベクトル解析学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab271104 小野村 史穂 秋山 祐樹,schedule_only_credit_unknown,基礎ベクトル解析学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB111110,線形代数学(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月1 前期後 sab111110 曽布川 拓也,schedule_only_credit_unknown,線形代数学(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001221,教養 教育学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz001221 坂本 保宏,schedule_only_credit_unknown,教養教育学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001210,基礎 微分積分学(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz001210 前田 多恵,schedule_only_credit_unknown,基礎微分積分学(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001209,線形代数学(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz001209 曽布川 拓也,schedule_only_credit_unknown,線形代数学(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001213,基礎体育(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期 saz001213 久保 哲也 山田 盛朗 山口 良博,schedule_only_credit_unknown,基礎体育(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001231,生物学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa001231 宮崎 正峰,schedule_only_credit_unknown,生物学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001219,教育学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa001219 坂本 保宏,schedule_only_credit_unknown,教育学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001242,政治学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa001242 坂井 亮太,schedule_only_credit_unknown,政治学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001241,倫理学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa001241 山本 史華,schedule_only_credit_unknown,倫理学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001231,生物学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa001231 宮崎 正峰,schedule_only_credit_unknown,生物学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA141201,線形代数学(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa141201 曽布川 拓也,schedule_only_credit_unknown,線形代数学(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA111202,微分積分学(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa111202 前田 多恵,schedule_only_credit_unknown,微分積分学(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA141202,微分方程式論,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期前 saa141202 中井 洋史,schedule_only_credit_unknown,微分方程式論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001220,教育学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期後 sab001220 坂本 保宏,schedule_only_credit_unknown,教育学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001234,哲学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期後 sab001234 大野 晃徳,schedule_only_credit_unknown,哲学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB271203,数理統計学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期後 sab271203 珠玖 隆行,schedule_only_credit_unknown,数理統計学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB111203,微分積分学(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月2 前期後 sab111203 前田 多恵,schedule_only_credit_unknown,微分積分学(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001321,教育学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001321 坂本 保宏,schedule_only_credit_unknown,教育学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001341,心理学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001341 清水 恒三朗,schedule_only_credit_unknown,心理学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001341,学習と動機づけ,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001341 清水 恒三朗,schedule_only_credit_unknown,学習と動機づけ,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001337,政治学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001337 坂井 亮太,schedule_only_credit_unknown,政治学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001330,論理学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001330 小草 泰,schedule_only_credit_unknown,論理学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001334,物理学実験,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001334 長田 剛 砂畑 浩樹 田中 敏幸 手束 文子,schedule_only_credit_unknown,物理学実験,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001301,Critical Listening(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001301 中村 優子,schedule_only_credit_unknown,CriticalListening(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001301,映画で学ぶ英語,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001301 中村 優子,schedule_only_credit_unknown,映画で学ぶ英語,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001307,中国語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz001307 黄 愛華,schedule_only_credit_unknown,中国語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005301,Critical Listening(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz005301 松原 理佐,schedule_only_credit_unknown,CriticalListening(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005301,英語発音・聴解トレーニ ング,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz005301 松原 理佐,schedule_only_credit_unknown,英語発音・聴解トレーニング,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004213,Communication Strategies(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz004213 稲垣 亜希子,schedule_only_credit_unknown,CommunicationStrategies(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004213,スポーツで学ぶ英語,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期 saz004213 稲垣 亜希子,schedule_only_credit_unknown,スポーツで学ぶ英語,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA321301,基礎 コンピュータ概論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa321301 桂 卓成,schedule_only_credit_unknown,基礎コンピュータ概論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001334,西洋史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa001334 増永 理考,schedule_only_credit_unknown,西洋史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001328,論理学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa001328 小草 泰,schedule_only_credit_unknown,論理学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA131307,物理学実験(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa131307 長田 剛 砂畑 浩樹 田中 敏幸 手束 文子,schedule_only_credit_unknown,物理学実験(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA131307,物理学実験(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa131307 長田 剛 砂畑 浩樹 田中 敏幸 手束 文子,schedule_only_credit_unknown,物理学実験(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004214,Communication Strategies(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa004214 稲垣 亜希子,schedule_only_credit_unknown,CommunicationStrategies(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005302,Critical Listening(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa005302 松原 理佐,schedule_only_credit_unknown,CriticalListening(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001302,Critical Listening(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa001302 中村 優子,schedule_only_credit_unknown,CriticalListening(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001308,中国語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa001308 黄 愛華,schedule_only_credit_unknown,中国語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA131312,基礎 微分方程式論,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期前 saa131312 古田 公司,schedule_only_credit_unknown,基礎微分方程式論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001329,論理学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab001329 小草 泰,schedule_only_credit_unknown,論理学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB321303,基礎確率統計,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab321303 ニーナ スヴィリド ヴァ,schedule_only_credit_unknown,基礎確率統計,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB131308,物理学実験(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab131308 長田 剛 砂畑 浩樹 田中 敏幸 手束 文子,schedule_only_credit_unknown,物理学実験(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB131308,物理学実験(2),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab131308 長田 剛 砂畑 浩樹 田中 敏幸 手束 文子,schedule_only_credit_unknown,物理学実験(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004215,Communication Strategies(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab004215 稲垣 亜希子,schedule_only_credit_unknown,CommunicationStrategies(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005303,Critical Listening(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab005303 松原 理佐,schedule_only_credit_unknown,CriticalListening(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001303,Critical Listening(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab001303 中村 優子,schedule_only_credit_unknown,CriticalListening(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001309,中国語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab001309 黄 愛華,schedule_only_credit_unknown,中国語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB141305,ベクトル解析学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月3 前期後 sab141305 服部 新,schedule_only_credit_unknown,ベクトル解析学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001407,Test Taking,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期 saz001407 Skills(2) 稲垣 亜希子,schedule_only_credit_unknown,TestTaking,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001401,Critical Reading(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期 saz001401 浜崎 絵梨,schedule_only_credit_unknown,CriticalReading(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001401,ニュースを英語で読む,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期 saz001401 浜崎 絵梨,schedule_only_credit_unknown,ニュースを英語で読む,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001402,Critical Reading(3a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期前 saa001402 浜崎 絵梨,schedule_only_credit_unknown,CriticalReading(3a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001403,Critical Reading(3b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月4 前期後 sab001403 浜崎 絵梨,schedule_only_credit_unknown,CriticalReading(3b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001514,教職 確率論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz001514 山本 現,schedule_only_credit_unknown,教職確率論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001511,教職 発達心理学,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz001511 水野 直樹,schedule_only_credit_unknown,教職発達心理学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ171501,教職 幾何学(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz171501 橋本 義武,schedule_only_credit_unknown,教職幾何学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001509,教職 技術教育法(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz001509 平山 勲,schedule_only_credit_unknown,教職技術教育法(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001510,教職 理科教育法(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz001510 渡邉 大輔,schedule_only_credit_unknown,教職理科教育法(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ001517,電気工学概論(実習含),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期 saz001517 鈴木 憲吏,schedule_only_credit_unknown,電気工学概論(実習含),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001520,情報リテラシー演習(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期前 saa001520 安井 浩之,schedule_only_credit_unknown,情報リテラシー演習(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001521,情報リテラシー演習(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,月5 前期後 sab001521 安井 浩之,schedule_only_credit_unknown,情報リテラシー演習(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002114,生涯スポーツ(ゴルフ)ゼ ミナール,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期 saz002114 椿原 徹也,schedule_only_credit_unknown,生涯スポーツ(ゴルフ)ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002107,職業指導(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期 saz002107 尾高 進,schedule_only_credit_unknown,職業指導(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002101,アラビア語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期 saz002101 長渡 陽一,schedule_only_credit_unknown,アラビア語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA152105,基礎 化学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期前 saa152105 田中 健太郎,schedule_only_credit_unknown,基礎化学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002102,アラビア語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期前 saa002102 長渡 陽一,schedule_only_credit_unknown,アラビア語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA172108,基礎 化学(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期前 saa172108 吉田 真史,schedule_only_credit_unknown,基礎化学(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002103,アラビア語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期後 sab002103 長渡 陽一,schedule_only_credit_unknown,アラビア語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002117,教養 生活とメディア,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火1 前期後 sab002117 松浦 李恵,schedule_only_credit_unknown,教養生活とメディア,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002239,日本国憲法,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002239 大沼 友紀恵,schedule_only_credit_unknown,日本国憲法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002235,経済学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002235 宮田 卓弥,schedule_only_credit_unknown,経済学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007649,食料と農業,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz007649 小塩 海平 真田 篤史 寺田 順紀,schedule_only_credit_unknown,食料と農業,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002240,応用体育(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002240 山田 盛朗,schedule_only_credit_unknown,応用体育(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002241,応用体育(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002241 山田 盛朗,schedule_only_credit_unknown,応用体育(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002225,教職 技術教育法(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002225 尾高 進,schedule_only_credit_unknown,教職技術教育法(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002219,フランス語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002219 富塚 真理子,schedule_only_credit_unknown,フランス語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002207,Basic English,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002207 Training 鴨下 恵子,schedule_only_credit_unknown,BasicEnglish,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002201,韓国語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz002201 長渡 陽一,schedule_only_credit_unknown,韓国語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005221,教養 日本の政治,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期 saz005221 丸島 和洋,schedule_only_credit_unknown,教養日本の政治,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002216,地学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002216 小田島 庸浩,schedule_only_credit_unknown,地学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002233,経済学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002233 宮田 卓弥,schedule_only_credit_unknown,経済学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002208,Basic English Training(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002208 鴨下 恵子,schedule_only_credit_unknown,BasicEnglishTraining(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002220,フランス語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002220 富塚 真理子,schedule_only_credit_unknown,フランス語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002202,韓国語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002202 長渡 陽一,schedule_only_credit_unknown,韓国語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002216,基礎 地学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa002216 小田島 庸浩,schedule_only_credit_unknown,基礎地学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005219,日本の政治(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期前 saa005219 丸島 和洋,schedule_only_credit_unknown,日本の政治(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002234,経済学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab002234 宮田 卓弥,schedule_only_credit_unknown,経済学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002209,Basic English Training(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab002209 鴨下 恵子,schedule_only_credit_unknown,BasicEnglishTraining(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002221,フランス語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab002221 富塚 真理子,schedule_only_credit_unknown,フランス語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002203,韓国語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab002203 長渡 陽一,schedule_only_credit_unknown,韓国語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002117,生活とメディア,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab002117 松浦 李恵,schedule_only_credit_unknown,生活とメディア,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005220,日本の政治(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火2 前期後 sab005220 丸島 和洋,schedule_only_credit_unknown,日本の政治(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002345,日本史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saa002345 丸島 和洋,schedule_only_credit_unknown,日本史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002304,Critical Reading(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002304 松本 淳子,schedule_only_credit_unknown,CriticalReading(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002304,英語読解力養成,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002304 松本 淳子,schedule_only_credit_unknown,英語読解力養成,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002316,Test Taking Skills(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002316 秋間 聖代,schedule_only_credit_unknown,TestTakingSkills(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002316,Advanced TOEIC,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002316 秋間 聖代,schedule_only_credit_unknown,AdvancedTOEIC,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002310,Literature in English(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002310 水戸 俊介,schedule_only_credit_unknown,LiteratureinEnglish(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002351,Test Taking Skills(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz002351 佐竹 幸信,schedule_only_credit_unknown,TestTakingSkills(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ132303,基礎 数理統計学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期 saz132303 林 正博,schedule_only_credit_unknown,基礎数理統計学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA312307,コンピュータ概論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa312307 佐々木 智志,schedule_only_credit_unknown,コンピュータ概論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002305,Critical Reading(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa002305 松本 淳子,schedule_only_credit_unknown,CriticalReading(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002311,Literature in English(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa002311 水戸 俊介,schedule_only_credit_unknown,LiteratureinEnglish(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002317,Test Taking Skills(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa002317 秋間 聖代,schedule_only_credit_unknown,TestTakingSkills(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002352,Test Taking Skills(3a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa002352 佐竹 幸信,schedule_only_credit_unknown,TestTakingSkills(3a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA132301,基礎 数理統計学(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期前 saa132301 林 正博,schedule_only_credit_unknown,基礎数理統計学(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002306,Critical Reading(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期後 sab002306 松本 淳子,schedule_only_credit_unknown,CriticalReading(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002312,Literature in English(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期後 sab002312 水戸 俊介,schedule_only_credit_unknown,LiteratureinEnglish(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB132302,基礎 数理統計学(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火3 前期後 sab132302 林 正博,schedule_only_credit_unknown,基礎数理統計学(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002419,教育相談とカウンセリン グ(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火4 前期 saz002419 今野 紀子,schedule_only_credit_unknown,教育相談とカウンセリング(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007644,日本海軍の技術史,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火4 前期 saz007644 丸島 和洋,schedule_only_credit_unknown,日本海軍の技術史,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002511,教育心理学,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火5 前期 saz002511 今野 紀子,schedule_only_credit_unknown,教育心理学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002507,教職 教育課程論,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火5 前期 saz002507 高橋 哲男,schedule_only_credit_unknown,教職教育課程論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002501,Reading and Writing(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,火5 前期 saz002501 鈴木 穣,schedule_only_credit_unknown,ReadingandWriting(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003116,人文地理学,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期 saz003116 新井 智一,schedule_only_credit_unknown,人文地理学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003109,微分積分学(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期 saz003109 富久 拓磨,schedule_only_credit_unknown,微分積分学(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA003114,教養 人文地理学(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期前 saa003114 新井 智一,schedule_only_credit_unknown,教養人文地理学(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA133101,基礎 微分積分学(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期前 saa133101 富久 拓磨,schedule_only_credit_unknown,基礎微分積分学(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB003111,教養 スポーツ･健康論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期後 sab003111 椿原 徹也,schedule_only_credit_unknown,教養スポーツ・健康論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB003115,教養 人文地理学(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期後 sab003115 新井 智一,schedule_only_credit_unknown,教養人文地理学(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB133102,基礎 微分積分学(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水1 前期後 sab133102 富久 拓磨,schedule_only_credit_unknown,基礎微分積分学(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004238,視覚芸術史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz004238 岡山 理香,schedule_only_credit_unknown,視覚芸術史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003221,科学コミュニケーション 論ゼミナール,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz003221 五十嵐 美樹 神野 健哉,schedule_only_credit_unknown,科学コミュニケーション論ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003201,Academic English(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz003201 小山 英二,schedule_only_credit_unknown,AcademicEnglish(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003201,英語でライティング＆プ レゼンテーション,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz003201 小山 英二,schedule_only_credit_unknown,英語でライティング&プレゼンテーション,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004242,日本の政治,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期 saz004242 丸島 和洋,schedule_only_credit_unknown,日本の政治,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA003202,Academic English(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期前 saa003202 小山 英二,schedule_only_credit_unknown,AcademicEnglish(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB003203,Academic English(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期後 sab003203 小山 英二,schedule_only_credit_unknown,AcademicEnglish(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB133202,基礎 線形代数学(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水2 前期後 sab133202 田邊 顕一朗,schedule_only_credit_unknown,基礎線形代数学(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003308,生徒指導･進路指導の理論 と方法,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期 saz003308 坂本 保宏,schedule_only_credit_unknown,生徒指導・進路指導の理論と方法,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003311,AIと人間と社会,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期 saz003311 トム ガリー,schedule_only_credit_unknown,AIと人間と社会,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003307,介護等体験指導,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期 saz003307 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,介護等体験指導,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003301,日本語表現,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期 saz003301 萩原 喜美子,schedule_only_credit_unknown,日本語表現,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA003302,日本語表現(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期前 saa003302 萩原 喜美子,schedule_only_credit_unknown,日本語表現(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB003303,日本語表現(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水3 前期後 sab003303 萩原 喜美子,schedule_only_credit_unknown,日本語表現(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003401,日本語基礎(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水4 前期 saz003401 萩原 喜美子,schedule_only_credit_unknown,日本語基礎(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003404,教育実習事前事後指導(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水4 前期 saz003404 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,教育実習事前事後指導(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003502,数学教育法(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水5 前期 saz003502 高橋 哲男,schedule_only_credit_unknown,数学教育法(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ003501,教育実習事前事後指導(2),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,水5 前期 saz003501 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,教育実習事前事後指導(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004117,国際関係論(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期 saz004117 伊藤 隆太,schedule_only_credit_unknown,関係論(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004115,国際関係論(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期前 saa004115 伊藤 隆太,schedule_only_credit_unknown,関係論(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004116,国際関係論(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木1 前期後 sab004116 伊藤 隆太,schedule_only_credit_unknown,関係論(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004255,法学,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004255 大沼 友紀恵,schedule_only_credit_unknown,法学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004245,社会学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004245 山田 唐波里,schedule_only_credit_unknown,社会学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004260,Communication Strategies(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004260 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CommunicationStrategies(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004260,キャリア・イングリッ シュ,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004260 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,キャリア・イングリッシュ,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004219,Grammar(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004219 日高 正司,schedule_only_credit_unknown,Grammar(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004219,英語文法トレーニング,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期 saz004219 日高 正司,schedule_only_credit_unknown,英語文法トレーニング,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004243,社会学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期前 saa004243 山田 唐波里,schedule_only_credit_unknown,社会学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004261,Communication Strategies(3a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期前 saa004261 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CommunicationStrategies(3a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004220,Grammar(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期前 saa004220 日高 正司,schedule_only_credit_unknown,Grammar(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004244,社会学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期後 sab004244 山田 唐波里,schedule_only_credit_unknown,社会学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004262,Communication Strategies(3b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期後 sab004262 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CommunicationStrategies(3b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004221,Grammar(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期後 sab004221 日高 正司,schedule_only_credit_unknown,Grammar(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004203,Test Taking Skills(3b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木2 前期後 sab004203 佐竹 幸信,schedule_only_credit_unknown,TestTakingSkills(3b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004301,Academic English(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004301 倉持 和歌子,schedule_only_credit_unknown,AcademicEnglish(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004301,ｱｶﾃﾞﾐｯｸ・ｲﾝｸﾞﾘｯｼｭ・ｾﾐﾅｰ,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004301 倉持 和歌子,schedule_only_credit_unknown,アカデミック・イングリッシュ・セミナー,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004328,Literature in English(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004328 田中 美和,schedule_only_credit_unknown,LiteratureinEnglish(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004328,文学で学ぶ英語,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004328 田中 美和,schedule_only_credit_unknown,文学で学ぶ英語,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004310,Critical Listening(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004310 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CriticalListening(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004310,音楽で学ぶ英語,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004310 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,音楽で学ぶ英語,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004322,Grammar(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004322 沢村 静,schedule_only_credit_unknown,Grammar(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004313,Critical Reading(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004313 伊藤 千里,schedule_only_credit_unknown,CriticalReading(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004313,科学技術英語,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz004313 伊藤 千里,schedule_only_credit_unknown,科学技術英語,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ174303,基礎 代数学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz174303 古田 公司,schedule_only_credit_unknown,基礎代数学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ174303,代数学(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期 saz174303 古田 公司,schedule_only_credit_unknown,代数学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001334,教養 西洋史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa001334 増永 理考,schedule_only_credit_unknown,教養西洋史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA001325,教養 倫理学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa001325 山本 史華,schedule_only_credit_unknown,教養倫理学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004302,Academic English(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004302 倉持 和歌子,schedule_only_credit_unknown,AcademicEnglish(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004311,Critical Listening(3a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004311 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CriticalListening(3a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004314,Critical Reading(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004314 伊藤 千里,schedule_only_credit_unknown,CriticalReading(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004323,Grammar(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004323 沢村 静,schedule_only_credit_unknown,Grammar(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004329,Literature in English(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004329 田中 美和,schedule_only_credit_unknown,LiteratureinEnglish(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004334,外国語特別講義(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期前 saa004334 末田 美香子,schedule_only_credit_unknown,外国語特別講義(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004303,Academic English(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004303 倉持 和歌子,schedule_only_credit_unknown,AcademicEnglish(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004312,Critical Listening(3b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004312 ヴァーラ内田 エイド リアン ミッシェル,schedule_only_credit_unknown,CriticalListening(3b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004315,Critical Reading(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004315 伊藤 千里,schedule_only_credit_unknown,CriticalReading(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004324,Grammar(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004324 沢村 静,schedule_only_credit_unknown,Grammar(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004330,Literature in English(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004330 田中 美和,schedule_only_credit_unknown,LiteratureinEnglish(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004336,外国語特別講義(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木3 前期後 sab004336 末田 美香子,schedule_only_credit_unknown,外国語特別講義(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004427,教養 西洋経済史,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004427 増永 理考,schedule_only_credit_unknown,教養西洋経済史,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004430,教養 社会学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004430 山田 唐波里,schedule_only_credit_unknown,教養社会学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004419,教職 栽培(実習含),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004419 平山 勲,schedule_only_credit_unknown,教職栽培(実習含),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004419,教職 生物育成,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004419 平山 勲,schedule_only_credit_unknown,教職生物育成,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004413,Language Sciences(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004413 末田 美香子,schedule_only_credit_unknown,LanguageSciences(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004407,Global Culture(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004407 浜崎 絵梨,schedule_only_credit_unknown,GlobalCulture(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004407,Cultural Comparison,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期 saz004407 浜崎 絵梨,schedule_only_credit_unknown,CulturalComparison,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004408,Global Culture(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期前 saa004408 浜崎 絵梨,schedule_only_credit_unknown,GlobalCulture(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA004414,Language Sciences(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期前 saa004414 末田 美香子,schedule_only_credit_unknown,LanguageSciences(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB001440,教養 哲学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期後 sab001440 大野 晃徳,schedule_only_credit_unknown,教養哲学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004409,Global Culture(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期後 sab004409 浜崎 絵梨,schedule_only_credit_unknown,GlobalCulture(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB004415,Language Sciences(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木4 前期後 sab004415 末田 美香子,schedule_only_credit_unknown,LanguageSciences(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004512,教育原論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004512 井上 健,schedule_only_credit_unknown,教育原論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004520,未来を拓くイノベーショ ン,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004520 亀山 雄高 関口 和真 大久保 寛基 北村 亘,schedule_only_credit_unknown,未来を拓くイノベーション,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004509,教育方法学(ICT活用を含 む),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004509 渡邉 大輔,schedule_only_credit_unknown,教育方法学(ICT活用を含む),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004509,教職 教育の方法と技術(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004509 渡邉 大輔,schedule_only_credit_unknown,教職教育の方法と技術(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004510,工業教育法(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004510 平山 勲,schedule_only_credit_unknown,工業教育法(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004511,情報教育法(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004511 安井 浩之,schedule_only_credit_unknown,情報教育法(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004526,環境と機械ゼミナール,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,木5 前期 saz004526 丸山 恵史 小玉 脩平,schedule_only_credit_unknown,環境と機械ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA172108,化学(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期前 saa172108 吉田 真史,schedule_only_credit_unknown,化学(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB135101,電気電子通信計測応用,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金1 前期後 sab135101 鈴木 憲吏 野平 博司,schedule_only_credit_unknown,電気電子通信計測応用,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005213,基礎 微分積分学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz005213 大槻 玲,schedule_only_credit_unknown,基礎微分積分学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ004346,教養 視覚芸術史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz004346 岡山 理香,schedule_only_credit_unknown,教養視覚芸術史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005222,教養 日本文化の伝承,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz005222 丸島 和洋,schedule_only_credit_unknown,教養日本文化の伝承,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005207,外国語特別講義,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz005207 山口 和洋,schedule_only_credit_unknown,外国語特別講義,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005207,外国語特別講義(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz005207 山口 和洋,schedule_only_credit_unknown,外国語特別講義(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002514,教養 SDGsとESG探究ゼミナール,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期 saz002514 杉浦 正吾,schedule_only_credit_unknown,教養SDGsとESG探究ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002216,基礎 地学(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa002216 小田島 庸浩,schedule_only_credit_unknown,基礎地学(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA315201,基礎 微分積分学(1a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa315201 大槻 玲,schedule_only_credit_unknown,基礎微分積分学(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005220,教養 日本文化の伝承(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa005220 丸島 和洋,schedule_only_credit_unknown,教養日本文化の伝承(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005208,外国語特別講義(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa005208 山口 和洋,schedule_only_credit_unknown,外国語特別講義(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005208,外国語特別講義(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期前 saa005208 山口 和洋,schedule_only_credit_unknown,外国語特別講義(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB315202,基礎 微分積分学(1b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期後 sab315202 大槻 玲,schedule_only_credit_unknown,基礎微分積分学(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005226,教養 日本文化の伝承(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期後 sab005226 丸島 和洋,schedule_only_credit_unknown,教養日本文化の伝承(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005209,外国語特別講義(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期後 sab005209 山口 和洋,schedule_only_credit_unknown,外国語特別講義(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005209,外国語特別講義(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金2 前期後 sab005209 山口 和洋,schedule_only_credit_unknown,外国語特別講義(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002431,教養 日本史(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saa002431 丸島 和洋,schedule_only_credit_unknown,教養日本史(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005343,教養 都市の社会史,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005343 増永 理考,schedule_only_credit_unknown,教養都市の社会史,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005349,教養 社会学入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005349 岡村 逸郎,schedule_only_credit_unknown,教養社会学入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005347,体育 応用体育(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005347 井村 祥子,schedule_only_credit_unknown,体育応用体育(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005348,体育 応用体育(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005348 井村 祥子,schedule_only_credit_unknown,体育応用体育(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005201,Language Sciences(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005201 三幣 友行,schedule_only_credit_unknown,LanguageSciences(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ002301,Academic English(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz002301 鷹取 勇希,schedule_only_credit_unknown,AcademicEnglish(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005313,Global Society(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005313 松本 弘法,schedule_only_credit_unknown,GlobalSociety(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005313,Modern Society,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005313 松本 弘法,schedule_only_credit_unknown,ModernSociety,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005325,イタリア語(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005325 清水 英夫,schedule_only_credit_unknown,イタリア語(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005307,Communication Strategies(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005307 三宅 加恵,schedule_only_credit_unknown,CommunicationStrategies(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005307,サバイバル･イングリッ シュ,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005307 三宅 加恵,schedule_only_credit_unknown,サバイバル・イングリッシュ,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SBB005342,教養 日本文学,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 sbb005342 青木 言葉,schedule_only_credit_unknown,教養日本文学,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005345,最適解ビジネスモデル論 ゼミナール,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期 saz005345 岸 和幸,schedule_only_credit_unknown,最適解ビジネスモデル論ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005333,社会学入門(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005333 岡村 逸郎,schedule_only_credit_unknown,社会学入門(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA002302,Academic English(3a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa002302 鷹取 勇希,schedule_only_credit_unknown,AcademicEnglish(3a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005308,Communication Strategies(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005308 三宅 加恵,schedule_only_credit_unknown,CommunicationStrategies(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005314,Global Society(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005314 松本 弘法,schedule_only_credit_unknown,GlobalSociety(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005326,イタリア語(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005326 清水 英夫,schedule_only_credit_unknown,イタリア語(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005202,Language Sciences(1a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005202 三幣 友行,schedule_only_credit_unknown,LanguageSciences(1a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005217,教養 デザイン概論(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期前 saa005217 岡山 理香,schedule_only_credit_unknown,教養デザイン概論(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005334,社会学入門(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005334 岡村 逸郎,schedule_only_credit_unknown,社会学入門(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005225,教養 日本文化論,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005225 岡山 理香,schedule_only_credit_unknown,教養日本文化論,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB002303,Academic English(3b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab002303 鷹取 勇希,schedule_only_credit_unknown,AcademicEnglish(3b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005309,Communication Strategies(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005309 三宅 加恵,schedule_only_credit_unknown,CommunicationStrategies(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005315,Global Society(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005315 松本 弘法,schedule_only_credit_unknown,GlobalSociety(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005327,イタリア語(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005327 清水 英夫,schedule_only_credit_unknown,イタリア語(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005203,Language Sciences(1b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金3 前期後 sab005203 三幣 友行,schedule_only_credit_unknown,LanguageSciences(1b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005435,教養 西洋史の歴史創作を考え るゼミナール,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期 saz005435 増永 理考,schedule_only_credit_unknown,教養西洋史の歴史創作を考えるゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005407,Global Society(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期 saz005407 松本 弘法,schedule_only_credit_unknown,GlobalSociety(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005425,通訳案内を学ぶゼミナー ル,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期 saz005425 島野 健仁郎,schedule_only_credit_unknown,通訳案内を学ぶゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005436,教養 アイデア実装への資金調 達ゼミナール,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期 saz005436 瀬戸 久美子,schedule_only_credit_unknown,教養アイデア実装への資金調達ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005434,教養 社会学入門(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期前 saa005434 岡村 逸郎,schedule_only_credit_unknown,教養社会学入門(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005408,Global Society(2a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期前 saa005408 松本 弘法,schedule_only_credit_unknown,GlobalSociety(2a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005435,教養 社会学入門(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期後 sab005435 岡村 逸郎,schedule_only_credit_unknown,教養社会学入門(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005409,Global Society(2b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金4 前期後 sab005409 松本 弘法,schedule_only_credit_unknown,GlobalSociety(2b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005551,社会学入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期 saz005551 岡村 逸郎,schedule_only_credit_unknown,社会学入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005502,数学教育法(1),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期 saz005502 高橋 哲男,schedule_only_credit_unknown,数学教育法(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005501,理科教育法(3),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期 saz005501 渡邉 大輔,schedule_only_credit_unknown,理科教育法(3),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ005513,プログラミング基礎,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期 saz005513 白鳥 成彦,schedule_only_credit_unknown,プログラミング基礎,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005511,プログラミング基礎(a),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期前 saa005511 白鳥 成彦,schedule_only_credit_unknown,プログラミング基礎(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB005512,プログラミング基礎(b),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,金5 前期後 sab005512 白鳥 成彦,schedule_only_credit_unknown,プログラミング基礎(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ006104,生物学実験,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土1 前期 saz006104 福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,schedule_only_credit_unknown,生物学実験,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA006102,生物学実験(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土1 前期前 saa006102 福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,schedule_only_credit_unknown,生物学実験(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB006103,生物学実験(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土1 前期後 sab006103 福田 達哉 中島 保寿 験室 池田 佑美 池島 宏子,schedule_only_credit_unknown,生物学実験(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAB006303,基礎 生物学実験(b),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土3 前期後 sab006303 福田 達哉 中島 保寿 池田 佑美 池島 宏子,schedule_only_credit_unknown,基礎生物学実験(b),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ006304,基礎 生物学実験,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前期 saz006304 福田 達哉 中島 保寿 池田 佑美 池島 宏子,schedule_only_credit_unknown,基礎生物学実験,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ006401,教職 教職総合ゼミナール,0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前期 saz006401 井上 健,schedule_only_credit_unknown,教職教職総合ゼミナール,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA006302,基礎 生物学実験(a),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前期前 saa006302 福田 達哉 中島 保寿 池田 佑美 池島 宏子,schedule_only_credit_unknown,基礎生物学実験(a),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007657,デザインシンキング,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007657 岸 和幸 杉浦 正吾,schedule_only_credit_unknown,デザインシンキング,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAA005508,ひらめきづくり(1),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saa005508 岸 和幸 杉浦 正吾,schedule_only_credit_unknown,ひらめきづくり(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SBB005509,ひらめきづくり(2),0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 sbb005509 岸 和幸 杉浦 正吾,schedule_only_credit_unknown,ひらめきづくり(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007640,情報処理基礎,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007640 渡辺 さき,schedule_only_credit_unknown,情報処理基礎,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007639,情報処理入門,0,時間割由来,時間割由来科目,2026前期/1年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007639 渡辺 さき,schedule_only_credit_unknown,情報処理入門,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007631,教職 介護等体験,0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007631 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,教職介護等体験,理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007654,ことづくり(2),0,時間割由来,時間割由来科目,2026前期/2年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007654 鈴木 憲吏,schedule_only_credit_unknown,ことづくり(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007633,教育実習(1),0,時間割由来,時間割由来科目,2026前期/3年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007633 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,教育実習(1),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
+SCH-SAZ007634,教育実習(2),0,時間割由来,時間割由来科目,2026前期/4年,elective,schedule-derived,2026世田谷キャンパス前期.pdf,土4 前集中 saz007634 井上 健 高橋 哲男 渡邉 大輔 平山 勲,schedule_only_credit_unknown,教育実習(2),理工学部の学科別教育課程表PDF未提供のため、2026年前期時間割から補助生成。単位数0は要確認。
