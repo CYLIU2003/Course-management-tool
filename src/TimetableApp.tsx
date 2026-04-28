@@ -728,6 +728,7 @@ export default function TimetableApp() {
               curriculum={settings.curriculum}
               allYearsData={allYearsData}
               courses={importedCourses}
+              currentYear={currentYear}
             />
           </section>
 

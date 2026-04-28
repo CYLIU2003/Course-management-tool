@@ -1,18 +1,20 @@
 import {
   calculateRequirementProgressPercent,
-  REQUIREMENT_STATUS_THEME,
+  resolveRequirementProgressTheme,
   type RequirementCategorySummary,
 } from '../../utils/requirements';
+import type { AcademicYear } from '../../utils/academicProgress';
 import RequirementStatusBadge from './RequirementStatusBadge';
 
 interface RequirementCategoryCardProps {
   category: RequirementCategorySummary;
+  currentYear?: AcademicYear;
   onOpenDetail: (categoryId: string) => void;
 }
 
-export default function RequirementCategoryCard({ category, onOpenDetail }: RequirementCategoryCardProps) {
-  const theme = REQUIREMENT_STATUS_THEME[category.status];
+export default function RequirementCategoryCard({ category, currentYear, onOpenDetail }: RequirementCategoryCardProps) {
   const progressPercent = calculateRequirementProgressPercent(category.requiredCredits, category.earnedCredits, category.plannedCredits);
+  const theme = resolveRequirementProgressTheme(category.status, progressPercent, currentYear);
 
   return (
     <article
@@ -60,7 +62,7 @@ export default function RequirementCategoryCard({ category, onOpenDetail }: Requ
 
       <div className="requirement-category-card__meta">
         <span>該当授業 {category.totalEligibleCourses ?? 0} 件</span>
-        <span>カウント済 {category.countedCourses ?? 0} 件</span>
+        <span>反映済 {category.countedCourses ?? 0} 件</span>
         <span>取得済 {category.passedCourses ?? 0} 件</span>
         <span>履修予定 {category.plannedCourses ?? 0} 件</span>
       </div>

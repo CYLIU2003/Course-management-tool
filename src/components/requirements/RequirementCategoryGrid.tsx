@@ -1,8 +1,10 @@
 import RequirementCategoryCard from './RequirementCategoryCard';
+import type { AcademicYear } from '../../utils/academicProgress';
 import type { RequirementCategorySummary } from '../../utils/requirements';
 
 interface RequirementCategoryGridProps {
   categories: RequirementCategorySummary[];
+  currentYear?: AcademicYear;
   loading?: boolean;
   error?: string | null;
   onRetry?: () => void;
@@ -26,7 +28,7 @@ function RequirementCategorySkeleton() {
   );
 }
 
-export default function RequirementCategoryGrid({ categories, loading = false, error = null, onRetry, onOpenDetail }: RequirementCategoryGridProps) {
+export default function RequirementCategoryGrid({ categories, currentYear, loading = false, error = null, onRetry, onOpenDetail }: RequirementCategoryGridProps) {
   if (loading) {
     return (
       <div className="requirement-category-grid" aria-busy="true">
@@ -59,7 +61,7 @@ export default function RequirementCategoryGrid({ categories, loading = false, e
   return (
     <div className="requirement-category-grid">
       {categories.map((category) => (
-        <RequirementCategoryCard key={category.categoryId} category={category} onOpenDetail={onOpenDetail} />
+        <RequirementCategoryCard key={category.categoryId} category={category} currentYear={currentYear} onOpenDetail={onOpenDetail} />
       ))}
     </div>
   );

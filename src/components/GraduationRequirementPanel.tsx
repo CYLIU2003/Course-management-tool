@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum } from '../utils/academicProgress';
+import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicYear } from '../utils/academicProgress';
 import { calculateGraduationRequirements } from '../utils/graduationRequirements';
 import { fetchRequirementCategories } from '../api/requirements';
 import RequirementCategoryGrid from './requirements/RequirementCategoryGrid';
@@ -10,10 +10,11 @@ type GraduationRequirementPanelProps = {
   curriculum?: AcademicCurriculum;
   allYearsData: AcademicAllYearsData;
   courses: AcademicCourse[];
+  currentYear?: AcademicYear;
 };
 const CATEGORY_LOAD_ERROR = '区分一覧を読み込めませんでした。';
 
-export default function GraduationRequirementPanel({ curriculum, allYearsData, courses }: GraduationRequirementPanelProps) {
+export default function GraduationRequirementPanel({ curriculum, allYearsData, courses, currentYear }: GraduationRequirementPanelProps) {
   const result = useMemo(() => calculateGraduationRequirements({ allYearsData, courses, curriculum }), [allYearsData, courses, curriculum]);
   const [categories, setCategories] = useState<RequirementCategorySummary[]>([]);
   const [loadingCategories, setLoadingCategories] = useState(true);
@@ -56,8 +57,8 @@ export default function GraduationRequirementPanel({ curriculum, allYearsData, c
     <section className="tt-card" style={{ marginTop: '1.5rem' }}>
       <div className="section-title">
         <div>
-          <h2>区分別 該当授業・カウント済授業</h2>
-          <span className="small">区分ごとの該当授業と、卒業要件への反映状態をひとつの画面で確認できます</span>
+          <h2>区分別 該当授業・要件算入状況</h2>
+          <span className="small">区分ごとの該当授業と、卒業要件への算入状況をひとつの画面で確認できます</span>
         </div>
         <span className="course-tag course-tag--neutral" style={{ fontWeight: 800 }}>
           {result.plannedCredits > 0 ? `履修予定 ${result.plannedCredits} 単位` : '履修予定なし'}
@@ -85,6 +86,7 @@ export default function GraduationRequirementPanel({ curriculum, allYearsData, c
 
       <RequirementCategoryGrid
         categories={categories}
+        currentYear={currentYear}
         loading={loadingCategories}
         error={categoryError}
         onRetry={() => {

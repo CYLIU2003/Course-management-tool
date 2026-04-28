@@ -13,18 +13,16 @@ interface RequirementCourseListProps {
   courses: CategoryCourse[];
   activeTab: CategoryCourseTab;
   onTabChange: (tab: CategoryCourseTab) => void;
+  onPlanCourse?: (course: CategoryCourse) => void;
 }
 
 const EMPTY_MESSAGES: Record<CategoryCourseTab, string> = {
-  all: 'この条件に一致する授業はありません。',
-  passed: '取得済の授業はまだありません。',
-  planned: '履修予定の授業はまだありません。',
-  not_taken: '未取得の候補授業はありません。',
-  counted: 'この区分にカウント済の授業はありません。',
-  eligible: 'この区分の候補授業はありません。',
+  candidate: 'この区分で今すぐ候補にできる授業はまだありません。',
+  achievements: 'この区分で取得済・履修予定の授業はまだありません。',
+  all: 'この区分に該当する授業はまだありません。',
 };
 
-export default function RequirementCourseList({ courses, activeTab, onTabChange }: RequirementCourseListProps) {
+export default function RequirementCourseList({ courses, activeTab, onTabChange, onPlanCourse }: RequirementCourseListProps) {
   const visibleCourses = useMemo(() => {
     return sortCategoryCourses(filterCoursesByTab(courses, activeTab));
   }, [activeTab, courses]);
@@ -54,7 +52,7 @@ export default function RequirementCourseList({ courses, activeTab, onTabChange 
       ) : (
         <div className="requirement-course-list">
           {visibleCourses.map((course) => (
-            <RequirementCourseCard key={course.courseId} course={course} />
+            <RequirementCourseCard key={course.courseId} course={course} onPlanCourse={onPlanCourse} />
           ))}
         </div>
       )}

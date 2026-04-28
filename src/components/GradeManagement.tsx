@@ -49,6 +49,7 @@ export default function GradeManagement({
         curriculum={settings.curriculum}
         allYearsData={allYearsData}
         courses={importedCourses}
+        currentYear={currentYear}
       />
 
       <GpaSummaryPanel snapshot={snapshot} allYearsData={allYearsData} />

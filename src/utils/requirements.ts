@@ -1,3 +1,5 @@
+import type { AcademicYear } from './academicProgress';
+
 export type RequirementStatus = 'completed' | 'completed_with_planned' | 'shortage' | 'not_started';
 
 export interface RequirementCategorySummary {
@@ -43,7 +45,7 @@ export interface RequirementCategoryDetail extends RequirementCategorySummary {
   courses: CategoryCourse[];
 }
 
-export type CategoryCourseTab = 'all' | 'passed' | 'planned' | 'not_taken' | 'counted' | 'eligible';
+export type CategoryCourseTab = 'candidate' | 'achievements' | 'all';
 
 export const REQUIREMENT_STATUS_LABELS: Record<RequirementStatus, string> = {
   completed: '達成済',
@@ -59,22 +61,19 @@ export const COURSE_TAKEN_STATUS_LABELS: Record<CourseTakenStatus, string> = {
 };
 
 export const CATEGORY_MATCH_STATE_LABELS: Record<CategoryMatchState, string> = {
-  counted_in_this_category: 'この区分にカウント済',
+  counted_in_this_category: 'この区分に反映済',
   eligible_for_this_category: 'この区分の候補',
-  counted_in_other_category: '他区分にカウント済',
+  counted_in_other_category: '他区分に反映済',
   not_eligible: '対象外',
 };
 
 export const CATEGORY_COURSE_TAB_LABELS: Record<CategoryCourseTab, string> = {
+  candidate: '履修候補',
+  achievements: 'あなたの実績',
   all: 'すべて',
-  passed: '取得済',
-  planned: '履修予定',
-  not_taken: '未取得',
-  counted: 'カウント済',
-  eligible: '候補授業',
 };
 
-export const CATEGORY_COURSE_TAB_ORDER: CategoryCourseTab[] = ['all', 'passed', 'planned', 'not_taken', 'counted', 'eligible'];
+export const CATEGORY_COURSE_TAB_ORDER: CategoryCourseTab[] = ['candidate', 'achievements', 'all'];
 
 export interface BadgeTheme {
   background: string;
@@ -179,22 +178,132 @@ export function calculateRequirementProgressPercent(requiredCredits: number, ear
   return Math.min(100, Math.round(((earnedCredits + plannedCredits) / requiredCredits) * 100));
 }
 
+type RequirementPaceTone = 'on_track' | 'steady' | 'warning' | 'fresh';
+
+function getAcademicYearIndex(currentYear?: AcademicYear) {
+  switch (currentYear) {
+    case '1年次':
+      return 1;
+    case '2年次':
+      return 2;
+    case '3年次':
+      return 3;
+    case '4年次':
+      return 4;
+    case 'M1':
+      return 5;
+    case 'M2':
+      return 6;
+    default:
+      return null;
+  }
+}
+
+function getRequirementProgressTone(currentYear: AcademicYear | undefined, progressPercent: number): RequirementPaceTone {
+  const yearIndex = getAcademicYearIndex(currentYear);
+
+  if (!yearIndex) {
+    if (progressPercent >= 75) {
+      return 'on_track';
+    }
+
+    if (progressPercent >= 45) {
+      return 'steady';
+    }
+
+    if (progressPercent >= 15) {
+      return 'warning';
+    }
+
+    return 'fresh';
+  }
+
+  if (yearIndex === 1) {
+    if (progressPercent >= 35) {
+      return 'on_track';
+    }
+
+    if (progressPercent >= 10) {
+      return 'steady';
+    }
+
+    return 'fresh';
+  }
+
+  if (yearIndex === 2) {
+    if (progressPercent >= 55) {
+      return 'on_track';
+    }
+
+    if (progressPercent >= 25) {
+      return 'steady';
+    }
+
+    return 'fresh';
+  }
+
+  if (yearIndex === 3) {
+    if (progressPercent >= 75) {
+      return 'on_track';
+    }
+
+    if (progressPercent >= 45) {
+      return 'steady';
+    }
+
+    return 'warning';
+  }
+
+  if (yearIndex === 4) {
+    if (progressPercent >= 90) {
+      return 'on_track';
+    }
+
+    if (progressPercent >= 65) {
+      return 'steady';
+    }
+
+    return 'warning';
+  }
+
+  if (progressPercent >= 95) {
+    return 'on_track';
+  }
+
+  if (progressPercent >= 80) {
+    return 'steady';
+  }
+
+  return 'warning';
+}
+
+export function resolveRequirementProgressTheme(status: RequirementStatus, progressPercent: number, currentYear?: AcademicYear): BadgeTheme {
+  if (status === 'completed' || status === 'completed_with_planned') {
+    return REQUIREMENT_STATUS_THEME[status];
+  }
+
+  const tone = getRequirementProgressTone(currentYear, progressPercent);
+
+  switch (tone) {
+    case 'on_track':
+      return REQUIREMENT_STATUS_THEME.completed;
+    case 'steady':
+      return REQUIREMENT_STATUS_THEME.completed_with_planned;
+    case 'warning':
+      return REQUIREMENT_STATUS_THEME.shortage;
+    case 'fresh':
+    default:
+      return REQUIREMENT_STATUS_THEME.not_started;
+  }
+}
+
 export function filterCoursesByTab(courses: CategoryCourse[], tab: CategoryCourseTab) {
   switch (tab) {
-    case 'passed':
-      return courses.filter((course) => course.takenStatus === 'passed');
+    case 'candidate':
+      return courses.filter((course) => course.matchState === 'eligible_for_this_category' && course.takenStatus === 'not_taken');
 
-    case 'planned':
-      return courses.filter((course) => course.takenStatus === 'planned');
-
-    case 'not_taken':
-      return courses.filter((course) => course.takenStatus === 'not_taken');
-
-    case 'counted':
-      return courses.filter((course) => course.matchState === 'counted_in_this_category');
-
-    case 'eligible':
-      return courses.filter((course) => course.matchState === 'eligible_for_this_category');
+    case 'achievements':
+      return courses.filter((course) => course.takenStatus === 'passed' || course.takenStatus === 'planned');
 
     case 'all':
     default:

@@ -2,8 +2,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { fetchRequirementCategoryDetail } from '../../api/requirements';
 import {
   calculateRequirementProgressPercent,
+  calculateRequirementStatus,
   CATEGORY_COURSE_TAB_LABELS,
+  filterCoursesByTab,
   REQUIREMENT_STATUS_THEME,
+  type CategoryCourse,
   type CategoryCourseTab,
   type RequirementCategoryDetail,
 } from '../../utils/requirements';
@@ -20,7 +23,7 @@ export default function RequirementCategoryDetailDrawer({ open, categoryId, onCl
   const [detail, setDetail] = useState<RequirementCategoryDetail | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<CategoryCourseTab>('all');
+  const [activeTab, setActiveTab] = useState<CategoryCourseTab>('candidate');
   const [reloadVersion, setReloadVersion] = useState(0);
 
   useEffect(() => {
@@ -62,11 +65,37 @@ export default function RequirementCategoryDetailDrawer({ open, categoryId, onCl
 
   useEffect(() => {
     if (open && categoryId) {
-      setActiveTab('all');
+      setActiveTab('candidate');
     }
   }, [categoryId, open]);
 
-  const eligibleCount = useMemo(() => detail?.courses.filter((course) => course.matchState === 'eligible_for_this_category').length ?? 0, [detail]);
+  const candidateCount = useMemo(() => filterCoursesByTab(detail?.courses ?? [], 'candidate').length, [detail]);
+
+  function handlePlanCourse(course: CategoryCourse) {
+    setDetail((currentDetail) => {
+      if (!currentDetail) {
+        return currentDetail;
+      }
+
+      const targetCourse = currentDetail.courses.find((candidate) => candidate.courseId === course.courseId);
+      if (!targetCourse || targetCourse.takenStatus !== 'not_taken' || targetCourse.matchState !== 'eligible_for_this_category') {
+        return currentDetail;
+      }
+
+      const plannedCredits = currentDetail.plannedCredits + targetCourse.credits;
+      const remainingCredits = Math.max(0, currentDetail.remainingCredits - targetCourse.credits);
+
+      return {
+        ...currentDetail,
+        plannedCredits,
+        remainingCredits,
+        status: calculateRequirementStatus(currentDetail.requiredCredits, currentDetail.earnedCredits, plannedCredits),
+        courses: currentDetail.courses.map((candidate) =>
+          candidate.courseId === targetCourse.courseId ? { ...candidate, takenStatus: 'planned' } : candidate,
+        ),
+      };
+    });
+  }
 
   if (!open || !categoryId) {
     return null;
@@ -76,7 +105,7 @@ export default function RequirementCategoryDetailDrawer({ open, categoryId, onCl
   const progressPercent = detail
     ? calculateRequirementProgressPercent(detail.requiredCredits, detail.earnedCredits, detail.plannedCredits)
     : 0;
-  const candidateCourses = detail?.courses.filter((course) => course.matchState === 'eligible_for_this_category').slice(0, 3) ?? [];
+  const candidateCourses = filterCoursesByTab(detail?.courses ?? [], 'candidate').slice(0, 3);
 
   return (
     <div className="tt-modal tt-modal--drawer" onClick={onClose}>
@@ -84,7 +113,7 @@ export default function RequirementCategoryDetailDrawer({ open, categoryId, onCl
         <div className="tt-dialog__head">
           <div className="requirement-drawer__header">
             <h2 style={{ margin: 0 }}>{detail?.categoryName ?? '区分詳細'}</h2>
-            <p className="requirement-drawer__description">{detail?.description ?? '区分に含まれる授業と、その反映状態を確認できます。'}</p>
+            <p className="requirement-drawer__description">{detail?.description ?? '区分に含まれる授業と、要件への算入状況を確認できます。'}</p>
           </div>
           <button type="button" onClick={onClose} className="tt-close" aria-label="閉じる">
             ✕
@@ -161,19 +190,19 @@ export default function RequirementCategoryDetailDrawer({ open, categoryId, onCl
                       {detail.remainingCredits > 0
                         ? candidateCourses.length > 0
                           ? candidateCourses.map((course) => course.courseName).join(' / ')
-                          : '候補授業がまだ登録されていません。'
-                        : 'この区分は履修予定込みで達成しています。'}
+                          : '今すぐ候補にできる授業はまだ登録されていません。'
+                        : 'この区分は履修予定込みで達成見込みです。'}
                     </p>
                   </div>
-                  {eligibleCount > 0 ? (
-                    <button type="button" className="btn-ghost" onClick={() => setActiveTab('eligible')}>
+                  {candidateCount > 0 ? (
+                    <button type="button" className="btn-ghost" onClick={() => setActiveTab('candidate')}>
                       候補を見る
                     </button>
                   ) : null}
                 </div>
               </section>
 
-              <RequirementCourseList courses={detail.courses} activeTab={activeTab} onTabChange={setActiveTab} />
+              <RequirementCourseList courses={detail.courses} activeTab={activeTab} onTabChange={setActiveTab} onPlanCourse={handlePlanCourse} />
             </div>
           ) : null}
         </div>

@@ -8,11 +8,13 @@ import CourseTakenStatusBadge from './CourseTakenStatusBadge';
 
 interface RequirementCourseCardProps {
   course: CategoryCourse;
+  onPlanCourse?: (course: CategoryCourse) => void;
 }
 
-export default function RequirementCourseCard({ course }: RequirementCourseCardProps) {
+export default function RequirementCourseCard({ course, onPlanCourse }: RequirementCourseCardProps) {
   const stateTheme = CATEGORY_MATCH_STATE_THEME[course.matchState];
   const takenTheme = COURSE_TAKEN_STATUS_THEME[course.takenStatus];
+  const isPlannable = course.takenStatus === 'not_taken' && course.matchState === 'eligible_for_this_category';
 
   return (
     <article
@@ -43,10 +45,18 @@ export default function RequirementCourseCard({ course }: RequirementCourseCardP
 
       {course.countedCategoryName && course.matchState === 'counted_in_other_category' ? (
         <div className="requirement-empty" style={{ padding: '0.8rem 0.85rem', background: takenTheme.background }}>
-          <strong style={{ display: 'block', marginBottom: '0.25rem' }}>カウント先</strong>
+          <strong style={{ display: 'block', marginBottom: '0.25rem' }}>反映先</strong>
           <span className="small" style={{ color: takenTheme.color }}>
             {course.countedCategoryName}
           </span>
+        </div>
+      ) : null}
+
+      {onPlanCourse && isPlannable ? (
+        <div className="requirement-course-card__actions">
+          <button type="button" className="btn-ghost" onClick={() => onPlanCourse(course)}>
+            履修予定に追加
+          </button>
         </div>
       ) : null}
     </article>
