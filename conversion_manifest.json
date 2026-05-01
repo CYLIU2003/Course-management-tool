@@ -1,0 +1,77 @@
+{
+  "dataset_id": "tcu_2026_curriculum_complete_from_uploaded_pdfs",
+  "entrance_year": 2026,
+  "target_system": "CYLIU2003/Course-management-tool",
+  "faculties": 8,
+  "departments": 19,
+  "course_catalog_rows": 1040,
+  "teacher_course_rows": 45,
+  "status": "complete_seed_from_uploaded_files",
+  "schema": {
+    "credit_requirements_csv": [
+      "stage",
+      "area",
+      "subarea",
+      "total_required_credits",
+      "必修_credits",
+      "選択必修1_credits",
+      "選択必修2_credits",
+      "自由_credits",
+      "notes"
+    ],
+    "timetable_by_category_csv": [
+      "id",
+      "title",
+      "credits",
+      "raw_required",
+      "category",
+      "group",
+      "courseType"
+    ]
+  },
+  "notes": [
+    "全学部・全学科のCSVを生成済み。",
+    "理工学部8学科は前回生成済みCSVを継承。",
+    "建築都市デザイン学部・情報工学部・環境学部・メディア情報学部・デザインデータ科学部・都市生活学部・人間科学部は今回アップロードPDFから科目抽出。",
+    "現行CSVで表現しきれないコース別条件は rules_2026.json に保存。"
+  ],
+  "spring_schedule_2026": {
+    "source_pdfs": [
+      "2026世田谷キャンパス前期.pdf",
+      "2026横浜キャンパス前期.pdf"
+    ],
+    "total_rows": 5080,
+    "by_campus": {
+      "世田谷": 2829,
+      "横浜": 2251
+    },
+    "by_department": {
+      "kikai": 135,
+      "kikai_system": 167,
+      "denki": 182,
+      "iyo": 142,
+      "ouyou_kagaku": 270,
+      "shizen_shizen": 152,
+      "shizen_suuri": 152,
+      "kenchiku": 167,
+      "toshi_kogaku": 153,
+      "joho_kagaku": 121,
+      "chino_joho": 306,
+      "ningen": 882,
+      "kankyo_sosei": 479,
+      "kankyo_keiei": 475,
+      "shakai_media": 469,
+      "joho_system": 828
+    },
+    "output_files": [
+      "public/department/_catalog/spring_schedule_2026_all_campuses.csv",
+      "schedule_validation_summary_2026_spring.csv",
+      "schedule_unmatched_review_2026_spring.csv"
+    ],
+    "match_status_counts": {
+      "exact": 1805,
+      "unmatched": 2680,
+      "fuzzy": 595
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "2026-curriculum-first-v2",
+  "generatedAt": "2026-04-27T07:00:09.178397+00:00",
+  "principles": [
+    "教育課程表を主とし、時間割は開講情報として従属させる",
+    "講義コードは開講識別子であり、教育課程表の科目ナンバリングとは別管理する",
+    "卒業要件はcredit_requirements.csv、科目属性はtimetable_by_category.csv、曜日時限はspring_schedule.csvに分離する"
+  ],
+  "knownLimitations": [
+    "理工学部の学科別教育課程表PDF（機械、機械システム、電気電子通信、医用、応用化学、原子力安全、自然科学）は今回のアップロード群に含まれていない。該当学科は共通分野＋前期時間割由来の補助行を含む。",
+    "schedule-derived行は単位数を0としているため、卒業判定・GPA計算には使わず、表示・照合補助に限定すること。",
+    "保育士・幼稚園教諭・教職課程など資格要件は卒業要件とは別ルールとして扱う。"
+  ],
+  "departmentSourceStatus": {
+    "kikai": "partial_no_department_curriculum_pdf",
+    "kikai_system": "partial_no_department_curriculum_pdf",
+    "denki": "partial_no_department_curriculum_pdf",
+    "iyo": "partial_no_department_curriculum_pdf",
+    "ouyou_kagaku": "partial_no_department_curriculum_pdf",
+    "genshiryoku": "partial_no_department_curriculum_pdf",
+    "shizen_shizen": "partial_no_department_curriculum_pdf",
+    "shizen_suuri": "partial_no_department_curriculum_pdf",
+    "kenchiku": "curriculum_pdf_available",
+    "toshi_kogaku": "curriculum_pdf_available",
+    "joho_kagaku": "curriculum_pdf_available",
+    "chino_joho": "curriculum_pdf_available",
+    "kankyo_sosei": "curriculum_pdf_available",
+    "kankyo_keiei": "curriculum_pdf_available",
+    "shakai_media": "curriculum_pdf_available",
+    "joho_system": "curriculum_pdf_available",
+    "design_data": "curriculum_pdf_available",
+    "toshi_seikatsu": "curriculum_pdf_available",
+    "ningen": "curriculum_pdf_available"
+  },
+  "multiTrackRules": {
+    "joho_kagaku": [
+      "一般コース",
+      "国際コース"
+    ],
+    "chino_joho": [
+      "一般コース",
+      "国際コース"
+    ],
+    "ningen": [
+      "児童学コース",
+      "人間総合科学コース"
+    ],
+    "shizen_shizen": [
+      "自然科学科 自然コース"
+    ],
+    "shizen_suuri": [
+      "自然科学科 数理コース"
+    ]
+  }
+}

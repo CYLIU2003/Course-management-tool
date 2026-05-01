@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { parseCSVFile, parseCreditRequirements, parseCourses } from '../utils/csvImporter';
-import type { CourseRow, CreditRequirementRow } from '../utils/csvImporter';
+import { parseCreditRequirementsFile, parseCoursesFile, parseCreditRequirements, parseCourses, formatCsvIssues } from '../utils/csvImporter';
 import type { AcademicCourse } from '../utils/academicProgress';
 
 interface CSVImporterProps {
@@ -38,9 +37,17 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
 
     try {
       console.log('🔄 Starting requirements import...', selectedFiles.requirements.name);
-      const rows = await parseCSVFile<CreditRequirementRow>(selectedFiles.requirements);
-      console.log('📄 Parsed requirement rows:', rows.length);
-      const curriculum = parseCreditRequirements(rows);
+      const result = await parseCreditRequirementsFile(selectedFiles.requirements);
+      if (result.errors.length > 0) {
+        throw new Error(formatCsvIssues(result.errors));
+      }
+
+      if (result.warnings.length > 0) {
+        console.warn('⚠️ Requirement CSV warnings:', formatCsvIssues(result.warnings));
+      }
+
+      console.log('📄 Parsed requirement rows:', result.rows.length);
+      const curriculum = parseCreditRequirements(result.rows);
       console.log('✅ Parsed curriculum:', curriculum);
       
       onImportCurriculum({
@@ -64,9 +71,17 @@ export default function CSVImporter({ onImportCurriculum, onImportCourses }: CSV
 
     try {
       console.log('🔄 Starting timetable import...', selectedFiles.timetable.name);
-      const rows = await parseCSVFile<CourseRow>(selectedFiles.timetable);
-      console.log('📄 Parsed rows:', rows.length, 'Sample:', rows.slice(0, 2));
-      const courses = parseCourses(rows);
+      const result = await parseCoursesFile(selectedFiles.timetable);
+      if (result.errors.length > 0) {
+        throw new Error(formatCsvIssues(result.errors));
+      }
+
+      if (result.warnings.length > 0) {
+        console.warn('⚠️ Timetable CSV warnings:', formatCsvIssues(result.warnings));
+      }
+
+      console.log('📄 Parsed rows:', result.rows.length, 'Sample:', result.rows.slice(0, 2));
+      const courses = parseCourses(result.rows);
       console.log('✅ Parsed courses:', courses.length, 'Sample:', courses.slice(0, 2));
       
       if (courses.length === 0) {

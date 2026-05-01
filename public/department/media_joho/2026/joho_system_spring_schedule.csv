@@ -1,0 +1,829 @@
+﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence,curriculumCourseId,curriculumCourseTitle,curriculumMatchStatus,curriculumMatchConfidence
+joho_system,情シ,横浜,月,1,前期,1,M4,Communication Skills(1),M・フォードリー,yaz071101,32D,対象[26-26],,,13,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期,1,M5,Communication Skills(1),高橋 信博,yaz071102,32I,対象[26-26],,,13,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期,1,M6,Communication Skills(1),ボルジロフスカヤ ア ンナ,yaz071103,31F,対象[26-26],,,13,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期,4,M6,再・Academic English(2) 中條,純子,yaz051101,32B,対象[19-17]/18-17:アカデミッ ク・イングリッシュ・セミナー,,,13,2026横浜キャンパス前期.pdf,AcademicEnglish(2)中條,FL-21P,Academic English(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,1,M1,Reading and Writing(1a),鈴木 夏実,yaa071101,32F,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,1,M2,Reading and Writing(1a),田中 美和,yaa071102,32G,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,1,M3,Reading and Writing(1a),鴨下 恵子,yaa071103,32J,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,2,M3,Academic English(2a),中條 純子,yaa051101,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,AcademicEnglish(2a),FL-21P,Academic English(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,1,M3,環境問題と社会,佐藤 秀樹,yab091101,22G,対象[26-17],"対開講(月1,月2)",,13,2026横浜キャンパス前期.pdf,環境問題と社会,LA-14C,環境問題と社会,elective,共通分野,教養科目,exact,1.0,LA-14C,環境問題と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,1,前期後,1,M1,Reading and Writing(1b),鈴木 夏実,yab071101,32F,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,1,M2,Reading and Writing(1b),田中 美和,yab071102,32G,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,1,M3,Reading and Writing(1b),鴨下 恵子,yab071103,32J,対象[26-26],,,13,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,2,M3,Academic English(2b),中條 純子,yab051101,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,AcademicEnglish(2b),FL-21Q,Academic English(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,2,M3,プログラミング演習A,小倉 信彦,yab721101,21A,対象[25-17],"対開講(月1,木1)",,13,2026横浜キャンパス前期.pdf,プログラミング演習A,IF-221,プログラミング演習Ａ,elective-required,専門分野,情報システム学科科目,exact,1.0,IF-221,プログラミング演習Ａ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,1,前期後,2,M3,プログラミング演習B,三川 健太,yab721102,22H,対象[25-17],"対開講(月1,木1)",,13,2026横浜キャンパス前期.pdf,プログラミング演習B,IF-222,プログラミング演習Ｂ,elective-required,専門分野,情報システム学科科目,exact,1.0,IF-222,プログラミング演習Ｂ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期,2,M3,情報と職業,齋藤 康之,yaz701201,32A,対象[25-17],,,13,2026横浜キャンパス前期.pdf,情報と職業,IF-232,情報と職業,elective,専門分野,情報システム学科科目,exact,1.0,SM-261,情報と職業,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期,4,M3,再・Communication Strategies(2),中條 純子,yaz051201,32B,対象[19-17]/18-17:スポーツで 学ぶ英語,,,13,2026横浜キャンパス前期.pdf,CommunicationStrategies(2),FL-21L,Communication Strategies(2a),elective,共通分野,外国語科目,fuzzy,0.981,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期,4,M3,再・基礎体育(1),千野 謙太郎,yaz051202,体育施設,対象[19-17],,,13,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,1,M3,SD PBL(1),増田 聡 岩野 公司 大谷 紀子 小倉 信彦,yaa721201,31B,対象[26-17],,,13,2026横浜キャンパス前期.pdf,SDPBL(1),IF-101,SD PBL(1),required,専門分野,情報システム学科科目,exact,1.0,IF-101,SD PBL(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期前,1,M3,基礎体育(1a),岩嶋 孝夫 千野 謙太郎,yaa051202,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,2,M3,Communication Strategies(2a),中條 純子,yaa051201,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,CommunicationStrategies(2a),FL-21L,Communication Strategies(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,M3,基礎体育(1b),千野 謙太郎,yab051202,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,M3,統計学基礎,山崎 瑞紀,yab701201,FEIS,対象[26-17],"対開講(月2,木1)",,13,2026横浜キャンパス前期.pdf,統計学基礎,IF-136,統計学基礎,elective,専門分野,情報システム学科科目,exact,1.0,SM-121,統計学基礎,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期後,1,M3,アルゴリズムとプログラ 大谷 紀子 ミング,,yab721201,32H,対象[26-17],"対開講(月2,水2)",,13,2026横浜キャンパス前期.pdf,アルゴリズムとプログラ大谷紀子ミング,IF-122,アルゴリズムとプログラミング,required,専門分野,情報システム学科科目,fuzzy,0.875,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,M3,環境問題と社会,佐藤 秀樹,yab091101,22G,対象[26-17],"対開講(月1,月2)",,13,2026横浜キャンパス前期.pdf,環境問題と社会,LA-14C,環境問題と社会,elective,共通分野,教養科目,exact,1.0,LA-14C,環境問題と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期後,2,M3,Communication Strategies(2b),中條 純子,yab051201,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,CommunicationStrategies(2b),FL-21M,Communication Strategies(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,3,M3,マルチメディア記述法,中村 裕美,yab721202,31C,対象[24-17],"対開講(月2,木2)",,13,2026横浜キャンパス前期.pdf,マルチメディア記述法,IF-342,ザ門マルチメディア記述法,elective,専門分野,情報システム学科科目,fuzzy,0.909,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,M3,教育相談とカウンセリン 水野 直樹 グ(1),,yaz071301,32I,対象[26-17],,,13,2026横浜キャンパス前期.pdf,教育相談とカウンセリン水野直樹グ(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,4,M3,再・Basic English Training,中條 純子,yaz051301,32B,対象[19-19],,,13,2026横浜キャンパス前期.pdf,BasicEnglishTraining,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,4,M3,再・基礎体育(1),岩嶋 孝夫 千野 謙太郎,yaz051302,体育施設,対象[19-17],,,13,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,4,M3,再・確率統計,矢作 由美,yaz721301,31C,対象[20-17],,,13,2026横浜キャンパス前期.pdf,確率統計,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,4,M3,再・現代の物理,杉本 憲彦,yaz051303,FEIS,対象[19-17],,,13,2026横浜キャンパス前期.pdf,現代の物理,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,M3,基礎体育(1a),岩嶋 孝夫 千野 謙太郎,yaa051302,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,M3,現代の物理(a),杉本 憲彦,yaa051303,FEIS,対象[26-20],,,13,2026横浜キャンパス前期.pdf,現代の物理(a),LA-146,現代の物理(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,M3,プログラミング基礎演習A 大谷 紀子,,yaa721301,21A,対象[26-17],"対開講(月3,木3)",,13,2026横浜キャンパス前期.pdf,プログラミング基礎演習A大谷紀子,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,M3,プログラミング基礎演習A 賈 伊陽,,yaa721302,22H,対象[26-17],"対開講(月3,木3)",,13,2026横浜キャンパス前期.pdf,プログラミング基礎演習A賈伊陽,IF-121,プログラミング基礎演習Ａ,required,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,2,M3,Basic English Training(a),中條 純子,yaa051301,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,BasicEnglishTraining(a),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,2,M3,確率統計(a),矢作 由美,yaa721303,31C,対象[25-17],,,13,2026横浜キャンパス前期.pdf,確率統計(a),IF-273,確率統計(a),elective,専門分野,情報システム学科科目,exact,1.0,IF-273,確率統計(a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,前期後,1,M3,基礎体育(1b),岩嶋 孝夫 千野 謙太郎,yab051302,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,M3,現代の物理(b),杉本 憲彦,yab051303,FEIS,対象[26-20],,,13,2026横浜キャンパス前期.pdf,現代の物理(b),LA-147,現代の物理(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,2,M3,Basic English Training(b),中條 純子,yab051301,32B,対象[25-20],,,13,2026横浜キャンパス前期.pdf,BasicEnglishTraining(b),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,2,M3,メディアと表現,周 娟 奥村 倫弘,yab701301,33I,対象[25-17],"対開講(月3,木3)",,13,2026横浜キャンパス前期.pdf,メディアと表現,IF-233,メディアと表現,elective,専門分野,情報システム学科科目,exact,1.0,IF-233,メディアと表現,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,前期後,2,M3,確率統計(b),矢作 由美,yab721301,31C,対象[25-17],,,13,2026横浜キャンパス前期.pdf,確率統計(b),IF-276,確率統計(b),elective,専門分野,情報システム学科科目,exact,1.0,IF-276,確率統計(b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,前期後,3,M3,企業統治と情報管理,増田 聡,yab721302,22B,対象[24-17],"対開講(月3,月4)",,13,2026横浜キャンパス前期.pdf,企業統治と情報管理,IF-361,企業統治と情報管理,elective,専門分野,情報システム学科科目,exact,1.0,IF-361,企業統治と情報管理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,前期,4,M3,再・Literature in English(1),岡島 慶,yaz051401,32F,対象[19-17]/18-17:文学で学ぶ 英語,,,13,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1),FL-221,Literature in English(1a),elective,共通分野,外国語科目,fuzzy,0.978,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,4,M3,再・基礎体育(1),岩嶋 孝夫 千野 謙太郎,yaz051402,体育施設,対象[19-17],,,13,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,4,M3,再・教養数学,矢作 由美,yaz721401,31C,対象[20-17],,,13,2026横浜キャンパス前期.pdf,教養数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,1,M3,基礎体育(1a),岩嶋 孝夫 千野 謙太郎,yaa051402,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,1,M3,教養数学(a),矢作 由美,yaa721401,31C,対象[26-17],,,13,2026横浜キャンパス前期.pdf,教養数学(a),IF-171,教養数学(a),required,専門分野,情報システム学科科目,exact,1.0,IF-171,教養数学(a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,前期前,2,M3,Literature in English(1a),岡島 慶,yaa051401,32F,対象[25-20],,,13,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1a),FL-221,Literature in English(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,2,M3,情報理論,三川 健太,yaa721402,FEIS,対象[25-17],"対開講(月4,金4)",,13,2026横浜キャンパス前期.pdf,情報理論,IF-241,情報理論,elective,専門分野,情報システム学科科目,exact,1.0,IF-241,情報理論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,前期後,1,M3,基礎体育(1b),岩嶋 孝夫 千野 謙太郎,yab051402,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,M3,特別講義(技術士補コー 安部 毅 ス),佐藤 貢一 寺島 和秀 永尾 浩一,yab051403,32B,対象[26-17],"対開講(月4,木4)",,13,2026横浜キャンパス前期.pdf,特別講義(技術士補コー安部毅ス),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,M3,教養数学(b),矢作 由美,yab721401,31C,対象[26-17],,,13,2026横浜キャンパス前期.pdf,教養数学(b),IF-174,教養数学(b),required,専門分野,情報システム学科科目,exact,1.0,IF-174,教養数学(b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,前期後,2,M3,Literature in English(1b),岡島 慶,yab051401,32F,対象[25-20],,,13,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1b),FL-222,Literature in English(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,2,M3,ディジタル信号処理,小倉 信彦,yab721402,32H,対象[25-17],"対開講(月4,火3)",,13,2026横浜キャンパス前期.pdf,ディジタル信号処理,IF-243,ディジタル信号処理,elective,専門分野,情報システム学科科目,exact,1.0,IF-243,ディジタル信号処理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,前期後,3,M3,企業統治と情報管理,増田 聡,yab721302,22B,対象[24-17],"対開講(月3,月4)",,13,2026横浜キャンパス前期.pdf,企業統治と情報管理,IF-361,企業統治と情報管理,elective,専門分野,情報システム学科科目,exact,1.0,IF-361,企業統治と情報管理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,5,前期,1,M3,発達心理学,水野 直樹,saz001511,12D,対象[26-17] 08-216,,,13,2026横浜キャンパス前期.pdf,発達心理学,TT-216,発達心理学,elective-required,資格・教職,教職課程,curriculum-exact-title,1.0,TT-216,発達心理学,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,1,前期,4,M3,再・Critical Listening(1),M・フォードリー,yaz052101,32D,対象[19-17]/18-17:英語発音・ 聴解トレーニング,,,13,2026横浜キャンパス前期.pdf,CriticalListening(1),FL-21F,Critical Listening(1a),elective,共通分野,外国語科目,fuzzy,0.976,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期,4,M3,再・基礎体育(1),岩嶋 孝夫,yaz052103,体育施設,対象[19-17],,,13,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期,4,M3,再・日本の政治,薦田 宏俊,yaz052102,33K,対象[19-17],,,13,2026横浜キャンパス前期.pdf,日本の政治,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,1,M3,基礎体育(1a),岩嶋 孝夫,yaa052102,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,2,M3,Critical Listening(1a),M・フォードリー,yaa052101,32D,対象[25-20],,,13,2026横浜キャンパス前期.pdf,CriticalListening(1a),FL-21F,Critical Listening(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,2,M3,日本の政治(a),薦田 宏俊,yaa002101,33K,対象[25-20],,,13,2026横浜キャンパス前期.pdf,日本の政治(a),LA-221,日本の政治(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,1,M3,基礎体育(1b),岩嶋 孝夫,yab052102,体育施設,対象[26-20],,,13,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,1,M3,心理学入門,大津 嘉代子,yab002102,31A,対象[26-17],"対開講(火1,火2)",,13,2026横浜キャンパス前期.pdf,心理学入門,LA-13C,心理学入門,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,1,M3,ICTアセスメント概論,中村 裕美,yab722101,32A,対象[26-17],"対開講(火1,火2)",,13,2026横浜キャンパス前期.pdf,ICTアセスメント概論,IF-133,ＩＣＴアセスメント概論,required,専門分野,情報システム学科科目,exact,1.0,IF-133,ＩＣＴアセスメント概論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,1,前期後,2,M3,Critical Listening(1b),M・フォードリー,yab052101,32D,対象[25-20],,,13,2026横浜キャンパス前期.pdf,CriticalListening(1b),FL-21G,Critical Listening(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,M3,生活とメディア,松浦 李恵,sab002117,12K,対象[25-17],"対開講(火1,火2)",,13,2026横浜キャンパス前期.pdf,生活とメディア,LA-243,生活とメディア,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,M3,日本の政治(b),薦田 宏俊,yab002101,33K,対象[25-20],,,13,2026横浜キャンパス前期.pdf,日本の政治(b),LA-222,日本の政治(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・ドイツ語(1),森田 里津子,yaz052204,31D,対象[19-17],,,13,2026横浜キャンパス前期.pdf,ドイツ語(1),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・韓国語(1),白雪 花,yaz052201,32J,対象[19-17],,,13,2026横浜キャンパス前期.pdf,韓国語(1),FL-24P,韓国語(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・基礎体育(1),岩嶋 孝夫,yaz052203,体育施設,対象[19-17],,,13,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・倫理学,笹路 梨咲子,ybz056401,22G,対象[19-17],,,13,2026横浜キャンパス前期.pdf,倫理学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・微分積分学II,北條 真弓,yaz722201,32B,対象[20-17],,,13,2026横浜キャンパス前期.pdf,微分積分学II,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,4,M3,再・Test Taking Skills(3),M・フォードリー,yaz052202,32D,対象[19-19],,,13,2026横浜キャンパス前期.pdf,TestTakingSkills(3),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,1,M3,基礎体育(1a),岩嶋 孝夫,yaa052203,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,1,M3,情報数学,賈 伊陽,yaa722201,32A,対象[26-17],"対開講(火2,木1)",,14,2026横浜キャンパス前期.pdf,情報数学,IF-141,情報数学,required,専門分野,情報システム学科科目,exact,1.0,IF-141,情報数学,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,前期前,1,M3,倫理学(a),笹路 梨咲子,yba006401,22G,対象[26-20],,,14,2026横浜キャンパス前期.pdf,倫理学(a),LA-115,倫理学(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,2,M3,Test Taking Skills(3a),M・フォードリー,yaa052202,32D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(3a),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.95,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,2,M3,ドイツ語(1a),森田 里津子,yaa052204,31D,,,,14,2026横浜キャンパス前期.pdf,ドイツ語(1a),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,2,M3,韓国語(1a),白雪 花,yaa052201,32J,対象[25-20],,,14,2026横浜キャンパス前期.pdf,韓国語(1a),FL-24P,韓国語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,2,M3,微分積分学(2a),北條 真弓,yaa722202,32B,対象[25-17],,,14,2026横浜キャンパス前期.pdf,微分積分学(2a),IF-272,微分積分学(2a),elective,専門分野,情報システム学科科目,exact,1.0,IF-272,微分積分学(2a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,前期後,1,M3,基礎体育(1b),岩嶋 孝夫,yab052203,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,M3,心理学入門,大津 嘉代子,yab002102,31A,対象[26-17],"対開講(火1,火2)",,14,2026横浜キャンパス前期.pdf,心理学入門,LA-13C,心理学入門,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,M3,倫理学(b),笹路 梨咲子,ybb006401,22G,対象[26-20],,,14,2026横浜キャンパス前期.pdf,倫理学(b),LA-116,倫理学(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,M3,ICTアセスメント概論,中村 裕美,yab722101,32A,対象[26-17],"対開講(火1,火2)",,14,2026横浜キャンパス前期.pdf,ICTアセスメント概論,IF-133,ＩＣＴアセスメント概論,required,専門分野,情報システム学科科目,exact,1.0,IF-133,ＩＣＴアセスメント概論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,前期後,2,M3,Test Taking Skills(3b),M・フォードリー,yab052202,32D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(3b),FL-218,Test Taking Skills(1b),elective,共通分野,外国語科目,fuzzy,0.95,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,M3,ドイツ語(1b),森田 里津子,yab052204,31D,,,,14,2026横浜キャンパス前期.pdf,ドイツ語(1b),FL-242,ドイツ語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,M3,韓国語(1b),白雪 花,yab052201,32J,対象[25-20],,,14,2026横浜キャンパス前期.pdf,韓国語(1b),FL-24Q,韓国語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,M3,生活とメディア,松浦 李恵,sab002117,12K,対象[25-17],"対開講(火1,火2)",,14,2026横浜キャンパス前期.pdf,生活とメディア,LA-243,生活とメディア,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,M3,微分積分学(2b),北條 真弓,yab722201,32B,対象[25-17],,,14,2026横浜キャンパス前期.pdf,微分積分学(2b),IF-275,微分積分学(2b),elective,専門分野,情報システム学科科目,exact,1.0,IF-275,微分積分学(2b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,前期後,3,M3,データ分析法,飯田 成敏,yab702201,"21A, 22D,",対象[24-17],"対開講(火2,金2) 22H",,14,2026横浜キャンパス前期.pdf,データ分析法,IF-332,データ分析法,elective,専門分野,情報システム学科科目,exact,1.0,SM-321,データ分析法,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,3,前期,1,M3,哲学(1),高取 正大,yaz052304,33K,対象[26-17],,,14,2026横浜キャンパス前期.pdf,哲学(1),LA-111,哲学(1),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,4,M3,再・ドイツ語(1),森田 里津子,yaz052303,31D,対象[19-17],,,14,2026横浜キャンパス前期.pdf,ドイツ語(1),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,4,M3,再・韓国語(1),白雪 花,yaz052301,32I,対象[19-17],,,14,2026横浜キャンパス前期.pdf,韓国語(1),FL-24P,韓国語(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,4,M3,再・社会学入門,牛膓 政孝,yaz072301,31A,対象[19-17],,,14,2026横浜キャンパス前期.pdf,社会学入門,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,4,M3,再・倫理学,笹路 梨咲子,ybz056402,22G,対象[19-17],,,14,2026横浜キャンパス前期.pdf,倫理学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,4,M3,再・Test Taking Skills(1),M・フォードリー,yaz052302,32D,対象[19-17]/18-17:Advanced TOEIC,,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(1),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.974,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,M3,データサイエンスリテラ 生松 聡 シー(1),,yaa092302,FEIS,対象[26-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,データサイエンスリテラ生松聡シー(1),LA-145,データサイエンスリテラシー(1),elective,共通分野,教養科目,fuzzy,0.914,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,M3,社会学入門(a),牛膓 政孝,yaa092301,31A,対象[26-20],,,14,2026横浜キャンパス前期.pdf,社会学入門(a),LA-125,社会学入門(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,M3,倫理学(a),笹路 梨咲子,yba006402,22G,対象[26-20],,,14,2026横浜キャンパス前期.pdf,倫理学(a),LA-115,倫理学(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,2,M3,Test Taking Skills(1a),M・フォードリー,yaa052302,32D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(1a),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,2,M3,ドイツ語(1a),森田 里津子,yaa052303,31D,,,,14,2026横浜キャンパス前期.pdf,ドイツ語(1a),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,2,M3,韓国語(1a),白雪 花,yaa052301,32I,対象[25-20],,,14,2026横浜キャンパス前期.pdf,韓国語(1a),FL-24P,韓国語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,3,M3,マルチメディア情報処理 岩野 公司,,yaa722301,32H,対象[24-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,マルチメディア情報処理岩野公司,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,M3,社会学入門(b),牛膓 政孝,yab092301,31A,対象[26-20],,,14,2026横浜キャンパス前期.pdf,社会学入門(b),LA-126,社会学入門(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,M3,倫理学(b),笹路 梨咲子,ybb006402,22G,対象[26-20],,,14,2026横浜キャンパス前期.pdf,倫理学(b),LA-116,倫理学(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,M3,特別講義(メディアの最前 奥村 倫弘 線),川名 周 岸田 浩和 伊澤 理江,yab052302,FEIS,対象[26-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,特別講義(メディアの最前奥村倫弘線),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,2,M3,Test Taking Skills(1b),M・フォードリー,yab052303,32D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(1b),FL-218,Test Taking Skills(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,2,M3,ディジタル信号処理,小倉 信彦,yab721402,32H,対象[25-17],"対開講(月4,火3)",,14,2026横浜キャンパス前期.pdf,ディジタル信号処理,IF-243,ディジタル信号処理,elective,専門分野,情報システム学科科目,exact,1.0,IF-243,ディジタル信号処理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,3,前期後,2,M3,ドイツ語(1b),森田 里津子,yab052304,31D,,,,14,2026横浜キャンパス前期.pdf,ドイツ語(1b),FL-242,ドイツ語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,2,M3,韓国語(1b),白雪 花,yab052301,32I,対象[25-20],,,14,2026横浜キャンパス前期.pdf,韓国語(1b),FL-24Q,韓国語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,3,B,LAN環境演習,騫 申,yab722301,22B,対象[24-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,4,前期,1,B,哲学(1),高取 正大,yaz052401,33K,対象[26-17],,,14,2026横浜キャンパス前期.pdf,哲学(1),LA-111,哲学(1),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期,1,B,教養ゼミナール（Human デトレフ ラングマン Congnition and A.I.）,,yaz056501,32I,対象[26-17],"対開講(火4,火4)/教養ゼミナー ル",,14,2026横浜キャンパス前期.pdf,教養ゼミナール(HumanデトレフラングマンCongnitionandA.I.),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期前,1,B,データサイエンスリテラ 生松 聡 シー(1),,yaa092302,FEIS,対象[26-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,データサイエンスリテラ生松聡シー(1),LA-145,データサイエンスリテラシー(1),elective,共通分野,教養科目,fuzzy,0.914,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期前,2,B,情報セキュリティ,騫 申,yaa992401,31A,対象[25-17],"対開講(火4,木4)",,14,2026横浜キャンパス前期.pdf,情報セキュリティ,IF-236,情報セキュリティ,elective,専門分野,情報システム学科科目,exact,1.0,SM-251,情報セキュリティ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,4,前期前,3,B,マルチメディア情報処理 岩野 公司,,yaa722301,32H,対象[24-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,マルチメディア情報処理岩野公司,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,1,B,特別講義(メディアの最前 奥村 倫弘 線),川名 周 岸田 浩和 伊澤 理江,yab052302,FEIS,対象[26-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,特別講義(メディアの最前奥村倫弘線),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,3,B,LAN環境演習,騫 申,yab722301,22B,対象[24-17],"対開講(火3,火4)",,14,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,5,前期,1,B,教育心理学,今野 紀子,saz002511,12N,対象[26-17] 08-215,,,14,2026横浜キャンパス前期.pdf,教育心理学,TT-215,教育心理学,elective-required,資格・教職,教職課程,curriculum-exact-title,1.0,TT-215,教育心理学,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,5,前期,2,B,教育課程論,高橋 哲男,saz002507,12D,対象[25-17] 08-218,,,14,2026横浜キャンパス前期.pdf,教育課程論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,5,前期,3,B,情報教育法(1),安井 浩之,yaz072501,22D,対象[24-17],,,14,2026横浜キャンパス前期.pdf,情報教育法(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期,1,B,日本語基礎(1),村田 朋美,yaz053101,31F,対象[26-23],,,14,2026横浜キャンパス前期.pdf,日本語基礎(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期前,3,A,LAN環境演習,騫 申,yaa723101,22B,対象[24-17],"対開講(水1,水2)",,14,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,1,前期後,1,A,スポーツ・健康論,岩嶋 孝夫,yab003101,33K,対象[26-17],"対開講(水1,木4)",,14,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,3,A,組織とマネジメント,増田 聡,yab723101,FEIS,対象[24-17],"対開講(水1,金3)",,14,2026横浜キャンパス前期.pdf,組織とマネジメント,IF-362,セ門組織とマネジメント,elective,専門分野,情報システム学科科目,fuzzy,0.9,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期,2,A,情報と法,佐藤 豊,yaz703201,33K,対象[25-17],,,14,2026横浜キャンパス前期.pdf,情報と法,IF-231,情報と法,elective,専門分野,情報システム学科科目,exact,1.0,SM-252,情報と法,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,前期前,2,A,日本語表現(a),村田 朋美,yaa053201,31F,対象[25-20],,,14,2026横浜キャンパス前期.pdf,日本語表現(a),FL-24T,日本語表現(a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,3,A,LAN環境演習,騫 申,yaa723101,22B,対象[24-17],"対開講(水1,水2)",,14,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,前期後,1,A,アルゴリズムとプログラ 大谷 紀子 ミング,,yab721201,32H,対象[26-17],"対開講(月2,水2)",,14,2026横浜キャンパス前期.pdf,アルゴリズムとプログラ大谷紀子ミング,IF-122,アルゴリズムとプログラミング,required,専門分野,情報システム学科科目,fuzzy,0.875,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,2,A,日本語表現(b),村田 朋美,yab053201,31F,対象[25-20],,,14,2026横浜キャンパス前期.pdf,日本語表現(b),FL-24U,日本語表現(b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,3,A,機械学習とシミュレー ション,三川 健太,yab723201,22H,対象[24-17]/23-17:コンピュー,"対開講(水2,木3) タシミュレーション",,14,2026横浜キャンパス前期.pdf,機械学習とシミュレーション,IF-322,機械学習とシミュレーション,elective,専門分野,情報システム学科科目,exact,1.0,IF-322,機械学習とシミュレーション,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,3,前期,1,A,生徒指導･進路指導の理論 坂本 保宏 と方法,,saz003308,12C,対象[26-17] 08-226,,,14,2026横浜キャンパス前期.pdf,生徒指導・進路指導の理論坂本保宏と方法,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,5,前期,4,A,教育実習事前事後指導(2) 井上 健,高橋 哲男 渡邉 大輔 平山 勲,saz003501,12D,対象[23-19] 08-334,,,14,2026横浜キャンパス前期.pdf,教育実習事前事後指導(2)井上健,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期,4,A,再・基礎体育(1),高瀬 武志,yaz054101,体育施設,対象[19-17],,,14,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期前,1,A,基礎体育(1a),高瀬 武志 備前 嘉文,yaa054101,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期前,1,A,情報数学,賈 伊陽,yaa722201,32A,対象[26-17],"対開講(火2,木1)",,14,2026横浜キャンパス前期.pdf,情報数学,IF-141,情報数学,required,専門分野,情報システム学科科目,exact,1.0,IF-141,情報数学,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,1,前期前,3,A,ビジュアライゼーション 宮地 英生,,yaa724101,22H,対象[24-17],"対開講(木1,木2)",,14,2026横浜キャンパス前期.pdf,ビジュアライゼーション宮地英生,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,A,基礎体育(1b),高瀬 武志,yab054101,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,A,統計学基礎,山崎 瑞紀,yab701201,FEIS,対象[26-17],"対開講(月2,木1)",,14,2026横浜キャンパス前期.pdf,統計学基礎,IF-136,統計学基礎,elective,専門分野,情報システム学科科目,exact,1.0,SM-121,統計学基礎,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,1,前期後,2,A,プログラミング演習A,小倉 信彦,yab721101,21A,対象[25-17],"対開講(月1,木1)",,14,2026横浜キャンパス前期.pdf,プログラミング演習A,IF-221,プログラミング演習Ａ,elective-required,専門分野,情報システム学科科目,exact,1.0,IF-221,プログラミング演習Ａ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,1,前期後,2,A,プログラミング演習B,三川 健太,yab721102,22H,対象[25-17],"対開講(月1,木1)",,14,2026横浜キャンパス前期.pdf,プログラミング演習B,IF-222,プログラミング演習Ｂ,elective-required,専門分野,情報システム学科科目,exact,1.0,IF-222,プログラミング演習Ｂ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,2,前期,1,M1,Communication Skills(1),中條 純子,yaz074201,32D,対象[26-26],,,14,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,M2,Communication Skills(1),伊藤 衣里,yaz074202,32I,対象[26-26],,,14,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,M3,Communication Skills(1),稲垣 亜希子,yaz074203,22E,対象[26-26],,,14,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,4,M3,再・ドイツ語(1),森田 里津子,yaz054201,31D,対象[19-17],,,14,2026横浜キャンパス前期.pdf,ドイツ語(1),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,4,M3,再・基礎体育(1),高瀬 武志,yaz054202,体育施設,対象[19-17],,,14,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,M3,基礎体育(1a),高瀬 武志 備前 嘉文,yaa054202,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,M4,Reading and Writing(1a),小林 美文,yaa074201,32F,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,M5,Reading and Writing(1a),小倉 雅明,yaa074202,32K,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,M6,Reading and Writing(1a),ボルジロフスカヤ ア ンナ,yaa074203,32G,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,2,M6,ドイツ語(1a),森田 里津子,yaa054201,31D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,ドイツ語(1a),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,3,M6,ビジュアライゼーション 宮地 英生,,yaa724101,22H,対象[24-17],"対開講(木1,木2)",,14,2026横浜キャンパス前期.pdf,ビジュアライゼーション宮地英生,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,M6,基礎体育(1b),高瀬 武志,yab054202,体育施設,対象[26-20],,,14,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,M4,Reading and Writing(1b),小林 美文,yab074201,32F,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,M5,Reading and Writing(1b),小倉 雅明,yab074202,32K,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,M6,Reading and Writing(1b),ボルジロフスカヤ ア ンナ,yab074203,32G,対象[26-26],,,14,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,2,M6,ドイツ語(1b),森田 里津子,yab054201,31D,対象[25-20],,,14,2026横浜キャンパス前期.pdf,ドイツ語(1b),FL-242,ドイツ語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,3,M6,マルチメディア記述法,中村 裕美,yab721202,31C,対象[24-17],"対開講(月2,木2)",,14,2026横浜キャンパス前期.pdf,マルチメディア記述法,IF-342,ザ門マルチメディア記述法,elective,専門分野,情報システム学科科目,fuzzy,0.909,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・Grammar(1),吉田 季実子,yaz054301,32F,対象[19-17]/18-17:英語文法ト レーニング,,,14,2026横浜キャンパス前期.pdf,Grammar(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・Test Taking Skills(2),伊藤 衣里,yaz054302,32I,対象[19-19],,,14,2026横浜キャンパス前期.pdf,TestTakingSkills(2),FL-219,Test Taking Skills(2a),elective,共通分野,外国語科目,fuzzy,0.974,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・ドイツ語(1),森田 里津子,yaz054303,31D,対象[19-17],,,14,2026横浜キャンパス前期.pdf,ドイツ語(1),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・基礎体育(1),高瀬 武志,yaz054305,体育施設,対象[19-17],,,14,2026横浜キャンパス前期.pdf,基礎体育(1),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・中国語(1),黄 愛華,yaz054304,32G,対象[19-17],,,14,2026横浜キャンパス前期.pdf,中国語(1),FL-24H,中国語(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,4,M6,再・日本経済論,鍛治 篤,yaz054306,32K,対象[19-17],,,15,2026横浜キャンパス前期.pdf,日本経済論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,M6,基礎体育(1a),高瀬 武志 備前 嘉文,yaa054305,体育施設,対象[26-20],,,15,2026横浜キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,M6,現代の化学,堀田 芳生,yaa054306,32H,対象[26-17],"対開講(木3,木4)",,15,2026横浜キャンパス前期.pdf,現代の化学,LA-148,現代の化学,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,M6,プログラミング基礎演習A 大谷 紀子,,yaa721301,21A,対象[26-17],"対開講(月3,木3)",,15,2026横浜キャンパス前期.pdf,プログラミング基礎演習A大谷紀子,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,M6,プログラミング基礎演習A 賈 伊陽,,yaa721302,22H,対象[26-17],"対開講(月3,木3)",,15,2026横浜キャンパス前期.pdf,プログラミング基礎演習A賈伊陽,IF-121,プログラミング基礎演習Ａ,required,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,2,M6,Grammar(1a),吉田 季実子,yaa054301,32F,対象[25-20],,,15,2026横浜キャンパス前期.pdf,Grammar(1a),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,2,M6,Test Taking Skills(2a),伊藤 衣里,yaa054302,32I,対象[25-20],,,15,2026横浜キャンパス前期.pdf,TestTakingSkills(2a),FL-219,Test Taking Skills(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,2,M6,ドイツ語(1a),森田 里津子,yaa054303,31D,対象[25-20],,,15,2026横浜キャンパス前期.pdf,ドイツ語(1a),FL-241,ドイツ語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,2,M6,中国語(1a),黄 愛華,yaa054304,32G,対象[25-20],,,15,2026横浜キャンパス前期.pdf,中国語(1a),FL-24H,中国語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,3,M6,日本経済論(a),鍛治 篤,yaa004301,32K,対象[24-20],,,15,2026横浜キャンパス前期.pdf,日本経済論(a),LA-321,日本経済論(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,M6,基礎体育(1b),高瀬 武志,yab054305,体育施設,対象[26-20],,,15,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,M6,Grammar(1b),吉田 季実子,yab054301,32F,対象[25-20],,,15,2026横浜キャンパス前期.pdf,Grammar(1b),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,M6,Test Taking Skills(2b),伊藤 衣里,yab054302,32I,対象[25-20],,,15,2026横浜キャンパス前期.pdf,TestTakingSkills(2b),FL-22A,Test Taking Skills(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,M6,ドイツ語(1b),森田 里津子,yab054303,31D,対象[25-20],,,15,2026横浜キャンパス前期.pdf,ドイツ語(1b),FL-242,ドイツ語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,M6,中国語(1b),黄 愛華,yab054304,32G,対象[25-20],,,15,2026横浜キャンパス前期.pdf,中国語(1b),FL-24I,中国語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,M6,メディアと表現,周 娟 奥村 倫弘,yab701301,33I,対象[25-17],"対開講(月3,木3)",,15,2026横浜キャンパス前期.pdf,メディアと表現,IF-233,メディアと表現,elective,専門分野,情報システム学科科目,exact,1.0,IF-233,メディアと表現,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,3,前期後,3,M6,日本経済論(b),鍛治 篤,yab004301,32K,対象[24-20],,,15,2026横浜キャンパス前期.pdf,日本経済論(b),LA-322,日本経済論(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,3,M6,機械学習とシミュレー ション,三川 健太,yab723201,22H,対象[24-17]/23-17:コンピュー,"対開講(水2,木3) タシミュレーション",,15,2026横浜キャンパス前期.pdf,機械学習とシミュレーション,IF-322,機械学習とシミュレーション,elective,専門分野,情報システム学科科目,exact,1.0,IF-322,機械学習とシミュレーション,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,4,前期,2,M6,応用体育(1),高瀬 武志,yaz054404,体育施設,対象[25-22],,,15,2026横浜キャンパス前期.pdf,応用体育(1),PE-211,応用体育(1),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,2,M6,応用体育(2),高瀬 武志,yaz054405,体育施設,対象[25-22],,,15,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,2,M6,再・応用体育(1),高瀬 武志,yaz054403,体育施設,対象[21-17],,,15,2026横浜キャンパス前期.pdf,応用体育(1),PE-211,応用体育(1),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,4,M6,再・Critical Reading(3),吉田 季実子,yaz054401,32F,対象[19-17]/18-17:ニュースを 英語で読む,,,15,2026横浜キャンパス前期.pdf,CriticalReading(3),FL-313,Critical Reading(3a),elective,共通分野,外国語科目,fuzzy,0.973,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,4,M6,再・中国語(1),黄 愛華,yaz054402,32G,対象[19-17],,,15,2026横浜キャンパス前期.pdf,中国語(1),FL-24H,中国語(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期前,1,M6,現代の化学,堀田 芳生,yaa054306,32H,対象[26-17],"対開講(木3,木4)",,15,2026横浜キャンパス前期.pdf,現代の化学,LA-148,現代の化学,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期前,2,M6,Critical Reading(3a),吉田 季実子,yaa054401,32F,対象[25-20],,,15,2026横浜キャンパス前期.pdf,CriticalReading(3a),FL-313,Critical Reading(3a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期前,2,M6,情報セキュリティ,騫 申,yaa992401,31A,対象[25-17],"対開講(火4,木4)",,15,2026横浜キャンパス前期.pdf,情報セキュリティ,IF-236,情報セキュリティ,elective,専門分野,情報システム学科科目,exact,1.0,SM-251,情報セキュリティ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,4,前期前,2,M6,中国語(1a),黄 愛華,yaa054402,32G,対象[25-20],,,15,2026横浜キャンパス前期.pdf,中国語(1a),FL-24H,中国語(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,1,M6,スポーツ・健康論,岩嶋 孝夫,yab003101,33K,対象[26-17],"対開講(水1,木4)",,15,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,1,M6,特別講義(技術士補コー ス),安部 毅 佐藤 貢一 寺島 和秀 永尾 浩一,yab051403,32B,対象[26-17],"対開講(月4,木4)",,15,2026横浜キャンパス前期.pdf,特別講義(技術士補コース),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,2,M6,Critical Reading(3b),吉田 季実子,yab054401,32F,対象[25-20],,,15,2026横浜キャンパス前期.pdf,CriticalReading(3b),FL-314,Critical Reading(3b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,2,M6,中国語(1b),黄 愛華,yab054402,32G,対象[25-20],,,15,2026横浜キャンパス前期.pdf,中国語(1b),FL-24I,中国語(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,1,M6,教育原論,井上 健,saz004512,13J,対象[26-17] 08-211,,,15,2026横浜キャンパス前期.pdf,教育原論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,1,M6,未来を拓くイノベーショ 京相 雅樹 ン,田口 亮 亀山 雄高 大久保 寛基,saz004521,61C、61B,対象[26-25:理工学部+建築都市,YC実施教室 32A デザイン学部+都市生活学部+人 間科学部+環境学部+メディア情 報学部],,15,2026横浜キャンパス前期.pdf,未来を拓くイノベーショ京相雅樹ン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,2,M6,教育方法学(ICT活用を含 渡邉 大輔 む),,saz004509,12P,対象[25-22] 08-224,,,15,2026横浜キャンパス前期.pdf,教育方法学(ICT活用を含渡邉大輔む),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,2,M6,教育の方法と技術(1),渡邉 大輔,saz004509,12P,対象[21-17] 08-224,,,15,2026横浜キャンパス前期.pdf,教育の方法と技術(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,2,M6,未来を拓くイノベーショ 京相 雅樹 ン,田口 亮 亀山 雄高 大久保 寛基,saz004519,61C、61B,対象[24-15:理工学部+建築都市,教養特別講義|YC実施教室 32A デザイン学部+情報工学部+都市 生活学部+人間科学部+環境学部+ メディア情報学部+デザイン・,,15,2026横浜キャンパス前期.pdf,未来を拓くイノベーショ京相雅樹ン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期,4,M6,再・Reading and Writing(1),ボルジロフスカヤ ア ンナ,yaz055101,22E,対象[19-19],,,15,2026横浜キャンパス前期.pdf,ReadingandWriting(1),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.927,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期,4,M6,再・教養数学,田邊 顕一朗,yaz725101,31B(SC:1BA),対象[20-17],,,15,2026横浜キャンパス前期.pdf,教養数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,1,M6,情報と社会,中村 雅子 奥村 倫弘 岡部 大介,yaa705101,31A,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,情報と社会,IF-135,情報と社会,elective,専門分野,情報システム学科科目,exact,1.0,SM-111,情報と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,前期前,1,M6,現代の地学,安井 万奈,yaa055102,FEIS,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,現代の地学,LA-149,現代の地学,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,1,M6,教養数学(a),田邊 顕一朗,yaa725102,31B(SC:1BA),対象[26-17],,,15,2026横浜キャンパス前期.pdf,教養数学(a),IF-171,教養数学(a),required,専門分野,情報システム学科科目,exact,1.0,IF-171,教養数学(a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,前期前,1,M6,情報リテラシー演習,松浦 李恵,yaa725101,22H,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,情報リテラシー演習,IF-131,情報リテラシー演習,elective,専門分野,情報システム学科科目,exact,1.0,SM-112,情報リテラシー演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,前期前,2,M6,再・Reading and Writing(1a),ボルジロフスカヤ ア ンナ,yaa055101,22E,対象[25-20],,,15,2026横浜キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,3,C,LAN環境演習,浅香 航太,yaa725103,22B,対象[24-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,前期後,1,C,基礎体育(1b),岩嶋 孝夫,yab055102,体育施設,対象[26-20],,,15,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期後,1,C,教養数学(b),田邊 顕一朗,yab725101,31B(SC:1BA),対象[26-17],,,15,2026横浜キャンパス前期.pdf,教養数学(b),IF-174,教養数学(b),required,専門分野,情報システム学科科目,exact,1.0,IF-174,教養数学(b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,前期後,2,C,再・Reading and Writing(1b),ボルジロフスカヤ ア ンナ,yab055101,22E,対象[25-20],,,15,2026横浜キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期,4,C,再・Communication Strategies(3),ボルジロフスカヤ ア ンナ,yaz055201,22E,対象[19-17]/18-17:サバイバ ル・イングリッシュ,,,15,2026横浜キャンパス前期.pdf,CommunicationStrategies(3),FL-317,Communication Strategies(3a),elective,共通分野,外国語科目,fuzzy,0.981,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期,4,C,再・線形代数学II,肥田野 久二男,yaz725201,31B,対象[20-17],,,15,2026横浜キャンパス前期.pdf,線形代数学II,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期前,1,C,情報と社会,中村 雅子 奥村 倫弘 岡部 大介,yaa705101,31A,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,情報と社会,IF-135,情報と社会,elective,専門分野,情報システム学科科目,exact,1.0,SM-111,情報と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,2,前期前,1,C,現代の地学,安井 万奈,yaa055102,FEIS,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,現代の地学,LA-149,現代の地学,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期前,1,C,情報リテラシー演習,松浦 李恵,yaa725101,22H,対象[26-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,情報リテラシー演習,IF-131,情報リテラシー演習,elective,専門分野,情報システム学科科目,exact,1.0,SM-112,情報リテラシー演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,2,前期前,2,C,Communication Strategies(3a),ボルジロフスカヤ ア ンナ,yaa055201,22E,対象[25-20],,,15,2026横浜キャンパス前期.pdf,CommunicationStrategies(3a),FL-317,Communication Strategies(3a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期前,2,C,線形代数学(2a),肥田野 久二男,yaa725201,31B,対象[25-17],,,15,2026横浜キャンパス前期.pdf,線形代数学(2a),IF-271,線形代数学(2a),required,専門分野,情報システム学科科目,exact,1.0,IF-271,線形代数学(2a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,2,前期前,3,C,LAN環境演習,浅香 航太,yaa725103,22B,対象[24-17],"対開講(金1,金2)",,15,2026横浜キャンパス前期.pdf,LAN環境演習,IF-251,ＬＡＮ環境演習,required,専門分野,情報システム学科科目,exact,1.0,SM-351,ＬＡＮ環境演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,2,前期後,1,C,基礎体育(1b),備前 嘉文,yab055202,体育施設,対象[26-20],,,15,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,2,C,Communication Strategies(3b),ボルジロフスカヤ ア ンナ,yab055201,22E,対象[25-20],,,15,2026横浜キャンパス前期.pdf,CommunicationStrategies(3b),FL-318,Communication Strategies(3b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,2,C,線形代数学(2b),肥田野 久二男,yab725201,31B,対象[25-17],,,15,2026横浜キャンパス前期.pdf,線形代数学(2b),IF-274,線形代数学(2b),required,専門分野,情報システム学科科目,exact,1.0,IF-274,線形代数学(2b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,2,前期後,3,C,データ分析法,飯田 成敏,yab702201,"21A, 22D,",対象[24-17],"対開講(火2,金2) 22H",,15,2026横浜キャンパス前期.pdf,データ分析法,IF-332,データ分析法,elective,専門分野,情報システム学科科目,exact,1.0,SM-321,データ分析法,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,3,前期,2,C,再・Communication Skills(1),M・フォードリー,yaz055301,32F,対象[25-17],,,15,2026横浜キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,4,C,再・線形代数学II,出耒 光夫,yaz725301,31B,対象[20-17],,,15,2026横浜キャンパス前期.pdf,線形代数学II,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期前,1,C,情報リテラシー演習,松浦 李恵,yaa725301,22H,対象[26-17],"対開講(金3,金4)",,15,2026横浜キャンパス前期.pdf,情報リテラシー演習,IF-131,情報リテラシー演習,elective,専門分野,情報システム学科科目,exact,1.0,SM-112,情報リテラシー演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,3,前期前,2,C,線形代数学(2a),出耒 光夫,yaa725302,31B,対象[25-17],,,15,2026横浜キャンパス前期.pdf,線形代数学(2a),IF-271,線形代数学(2a),required,専門分野,情報システム学科科目,exact,1.0,IF-271,線形代数学(2a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,3,前期前,3,C,情報の倫理,田川 史朗,yaa705301,31A,対象[24-17],"対開講(金3,金4)",,15,2026横浜キャンパス前期.pdf,情報の倫理,IF-331,情報の倫理,elective,専門分野,情報システム学科科目,exact,1.0,SM-352,情報の倫理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,3,前期後,1,C,基礎体育(1b),備前 嘉文,yab055301,体育施設,対象[26-20],,,15,2026横浜キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,2,C,線形代数学(2b),出耒 光夫,yab725301,31B,対象[25-17],,,15,2026横浜キャンパス前期.pdf,線形代数学(2b),IF-274,線形代数学(2b),required,専門分野,情報システム学科科目,exact,1.0,IF-274,線形代数学(2b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,3,前期後,3,C,組織とマネジメント,増田 聡,yab723101,FEIS,対象[24-17],"対開講(水1,金3)",,15,2026横浜キャンパス前期.pdf,組織とマネジメント,IF-362,セ門組織とマネジメント,elective,専門分野,情報システム学科科目,fuzzy,0.9,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期前,1,C,情報リテラシー演習,松浦 李恵,yaa725301,22H,対象[26-17],"対開講(金3,金4)",,15,2026横浜キャンパス前期.pdf,情報リテラシー演習,IF-131,情報リテラシー演習,elective,専門分野,情報システム学科科目,exact,1.0,SM-112,情報リテラシー演習,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,4,前期前,2,C,情報理論,三川 健太,yaa721402,FEIS,対象[25-17],"対開講(月4,金4)",,15,2026横浜キャンパス前期.pdf,情報理論,IF-241,情報理論,elective,専門分野,情報システム学科科目,exact,1.0,IF-241,情報理論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,4,前期前,3,C,情報の倫理,田川 史朗,yaa705301,31A,対象[24-17],"対開講(金3,金4)",,15,2026横浜キャンパス前期.pdf,情報の倫理,IF-331,情報の倫理,elective,専門分野,情報システム学科科目,exact,1.0,SM-352,情報の倫理,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前期,2,C,教育社会学,井上 健,saz006301,13K,対象[24-17] 08-213,,,15,2026横浜キャンパス前期.pdf,教育社会学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,2,C,Academic English(1a),中條 純子,yaz057005,,対象[25-20],"実施日：7/25 1-5時限,8/7 1-2 時限",,15,2026横浜キャンパス前期.pdf,AcademicEnglish(1a),FL-21N,Academic English(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,2,C,Academic English(1b),中條 純子,yaz057004,,対象[25-20],"実施日：8/7 3-5時限,8/8 1-4時",,15,2026横浜キャンパス前期.pdf,AcademicEnglish(1b),FL-21O,Academic English(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,2,C,応用体育(1),岩嶋 孝夫,yaz057001,-,対象[25-17],,,15,2026横浜キャンパス前期.pdf,応用体育(1),PE-211,応用体育(1),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,2,C,応用体育(2),岩嶋 孝夫,yaz057003,,対象[25-22],,,15,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,2,C,再・応用体育(2),岩嶋 孝夫,yaz057002,,対象[21-17],,,15,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,前集中,4,C,教育実習(2),井上 健 高橋 哲男 渡邉 大輔 平山 勲,saz007634,-,対象[23-17] 08-333,,,16,2026横浜キャンパス前期.pdf,教育実習(2),TT-333,教育実習(2),required,資格・教職,教職課程,curriculum-exact-title,1.0,TT-333,教育実習(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),宮地 英生,yaz727002,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),岩野 公司,yaz727004,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),増田 聡,yaz727007,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),大谷 紀子,yaz727001,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),三川 健太,yaz727008,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),小倉 信彦,yaz727003,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),中村 裕美,yaz727006,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),浅香 航太,yaz727005,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),騫 申,yaz727009,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,卒業研究(1),賈 伊陽,yaz727010,,対象[23-19],CAP制の上限に含まれます,,16,2026横浜キャンパス前期.pdf,卒業研究(1),IF-412,卒業研究(1),required,専門分野,情報システム学科科目,exact,1.0,SM-410,卒業研究(1),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,3,前集中,4,C,再・Academic English(1),中條 純子,yaz057006,,対象[19-17]/18-17:英語でライ,"実施日：7/25 1-5時限,8/7 1-5 ティング＆プレゼンテーション 時限,8/8 1-4時限",,16,2026横浜キャンパス前期.pdf,AcademicEnglish(1),FL-21N,Academic English(1a),elective,共通分野,外国語科目,fuzzy,0.973,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,2,C,Japan Studies,ストーン リチャード,yaa811101,72B,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,JapanStudies,LA-351,Japan Studies,elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,2,C,プログラミング応用演習,髙橋 弘毅,yaa811102,22H,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,プログラミング応用演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,1,C,環境問題と社会,佐藤 秀樹,yab091101,22G,対象[26-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,環境問題と社会,LA-14C,環境問題と社会,elective,共通分野,教養科目,exact,1.0,LA-14C,環境問題と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,1,前期後,2,C,統計学基礎,山口 敦子,yab811102,32K,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,統計学基礎,IF-136,統計学基礎,elective,専門分野,情報システム学科科目,exact,1.0,SM-121,統計学基礎,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,1,前期後,3,C,ニューラルネットワーク,髙橋 弘毅,yab811101,31B,対象[24-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,ニューラルネットワーク,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,2,C,Japan Studies,ストーン リチャード,yaa811101,72B,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,JapanStudies,LA-351,Japan Studies,elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,2,C,プログラミング応用演習,髙橋 弘毅,yaa811102,22H,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,プログラミング応用演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,C,環境問題と社会,佐藤 秀樹,yab091101,22G,対象[26-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,環境問題と社会,LA-14C,環境問題と社会,elective,共通分野,教養科目,exact,1.0,LA-14C,環境問題と社会,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期後,2,C,統計学基礎,山口 敦子,yab811102,32K,対象[25-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,統計学基礎,IF-136,統計学基礎,elective,専門分野,情報システム学科科目,exact,1.0,SM-121,統計学基礎,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,前期後,3,C,ニューラルネットワーク,髙橋 弘毅,yab811101,31B,対象[24-23],"対開講(月1,月2)",,17,2026横浜キャンパス前期.pdf,ニューラルネットワーク,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,2,C,業務プロセス分析,大久保 寛基,yaa814302,33K,対象[25-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,業務プロセス分析,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,3,C,Global Studies(3),永盛 祐介 蓮池 公威 阪口 紗季,yaa811301,32K,対象[24-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,GlobalStudies(3),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,2,SD,PBL(2),佐藤 圭浩 髙橋 弘毅,yab814302,72A,対象[25-23],,,17,2026横浜キャンパス前期.pdf,PBL(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,3,SD,Global Studies(2),佐藤 圭浩 小川 祐樹 山口 敦子 河合 孝純,yab811301,32K,対象[24-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,GlobalStudies(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,2,SD,業務プロセス分析,大久保 寛基,yaa814302,33K,対象[25-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,業務プロセス分析,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,3,SD,Global Studies(3),永盛 祐介 蓮池 公威 阪口 紗季,yaa811301,32K,対象[24-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,GlobalStudies(3),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,3,SD,Global Studies(2),佐藤 圭浩 小川 祐樹 山口 敦子 河合 孝純,yab811301,32K,対象[24-23],"対開講(月3,月4)",,17,2026横浜キャンパス前期.pdf,GlobalStudies(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,1,SD,English I-A,畑 和樹,yaa812103,22G,対象[26-26],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,EnglishI-A,FL-111,English I-A,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,2,SD,日本の政治(a),薦田 宏俊,yaa002101,33K,対象[25-20],,,17,2026横浜キャンパス前期.pdf,日本の政治(a),LA-221,日本の政治(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,2,SD,Presentation Strategies,中村 優子,yaa812102,32J,対象[25-23],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,PresentationStrategies,FL-213,Presentation Strategies,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,2,SD,再・English III-A,ストーン リチャード,yaa812101,31F,対象[25-23],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,EnglishIII-A,FL-115,English III-A,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期前,3,SD,デザインプロトタイピン 韓 燦教 グ(2),,yaa814101,"72B, 72C",対象[24-23],"対開講(火1,火2)",,17,2026横浜キャンパス前期.pdf,デザインプロトタイピン韓燦教グ(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,1,SD,心理学入門,大津 嘉代子,yab002102,31A,対象[26-23],"対開講(火1,火2)",,17,2026横浜キャンパス前期.pdf,心理学入門,LA-13C,心理学入門,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,1,SD,English I-B,畑 和樹,yab812103,22G,対象[26-26],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,EnglishI-B,FL-112,English I-B,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,SD,日本の政治(b),薦田 宏俊,yab002101,33K,対象[25-20],,,17,2026横浜キャンパス前期.pdf,日本の政治(b),LA-222,日本の政治(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,SD,Intercultural Understanding(2),中村 優子,yab812101,32G,対象[25-23],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,InterculturalUnderstanding(2),LA-357,Intercultural Understanding(2),elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,SD,再・English III-B,ストーン リチャード,yab812102,31F,対象[25-23],"対開講(火1,金1)",,17,2026横浜キャンパス前期.pdf,EnglishIII-B,FL-116,English III-B,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,1,SD,社会学入門(a),牛膓 政孝,yaa092201,33I,対象[26-20],,,17,2026横浜キャンパス前期.pdf,社会学入門(a),LA-125,社会学入門(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,1,SD,倫理学(a),笹路 梨咲子,yba006401,22G,対象[26-20],,,17,2026横浜キャンパス前期.pdf,倫理学(a),LA-115,倫理学(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,3,SD,デザインプロトタイピン 韓 燦教 グ(2),,yaa814101,"72B, 72C",対象[24-23],"対開講(火1,火2)",,17,2026横浜キャンパス前期.pdf,デザインプロトタイピン韓燦教グ(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,SD,心理学入門,大津 嘉代子,yab002102,31A,対象[26-23],"対開講(火1,火2)",,17,2026横浜キャンパス前期.pdf,心理学入門,LA-13C,心理学入門,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,SD,社会学入門(b),牛膓 政孝,yab092201,33I,対象[26-20],,,17,2026横浜キャンパス前期.pdf,社会学入門(b),LA-126,社会学入門(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,SD,倫理学(b),笹路 梨咲子,ybb006401,22G,対象[26-20],,,17,2026横浜キャンパス前期.pdf,倫理学(b),LA-116,倫理学(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,SD,Academic Discussion,畑 和樹,yaa812201,72D,対象[25-23],"対開講(火2,金2)",,17,2026横浜キャンパス前期.pdf,AcademicDiscussion,FL-312,Academic Discussion,elective-required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,3,SD,特別講義（Towards Humanistically- Principled A.I. Systems),デトレフ ラングマン,yab812201,32I,対象[24-23],"対開講(火2,金2)",,17,2026横浜キャンパス前期.pdf,特別講義(TowardsHumanistically-PrincipledA.I.Systems),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,SD,データサイエンスリテラ 生松 聡 シー(1),,yaa092302,FEIS,対象[26-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,データサイエンスリテラ生松聡シー(1),LA-145,データサイエンスリテラシー(1),elective,共通分野,教養科目,fuzzy,0.914,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,SD,社会学入門(a),牛膓 政孝,yaa092301,31A,対象[26-20],,,17,2026横浜キャンパス前期.pdf,社会学入門(a),LA-125,社会学入門(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,SD,倫理学(a),笹路 梨咲子,yba006402,22G,対象[26-20],,,17,2026横浜キャンパス前期.pdf,倫理学(a),LA-115,倫理学(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,3,SD,デザインリサーチ,永盛 祐介,yaa812301,72A,対象[24-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,デザインリサーチ,HP-201,デザインリサーチ,elective,副専攻・ひらめき,ひらめきプログラム,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,SD,社会学入門(b),牛膓 政孝,yab092301,31A,対象[26-20],,,17,2026横浜キャンパス前期.pdf,社会学入門(b),LA-126,社会学入門(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,SD,倫理学(b),笹路 梨咲子,ybb006402,22G,対象[26-20],,,17,2026横浜キャンパス前期.pdf,倫理学(b),LA-116,倫理学(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,SD,データサイエンス数学,髙橋 弘毅,yab812302,32A,対象[26-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,データサイエンス数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,2,SD,デザインプレゼンテー ション,永盛 祐介,yab812303,72A,対象[25-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,デザインプレゼンテーション,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,3,SD,企業経営分析ケーススタ 赤木 宏匡 ディ,,yab812301,32K,対象[24-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,企業経営分析ケーススタ赤木宏匡ディ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期前,1,SD,データサイエンスリテラ 生松 聡 シー(1),,yaa092302,FEIS,対象[26-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,データサイエンスリテラ生松聡シー(1),LA-145,データサイエンスリテラシー(1),elective,共通分野,教養科目,fuzzy,0.914,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期前,3,SD,デザインリサーチ,永盛 祐介,yaa812301,72A,対象[24-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,デザインリサーチ,HP-201,デザインリサーチ,elective,副専攻・ひらめき,ひらめきプログラム,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,1,SD,データサイエンス数学,髙橋 弘毅,yab812302,32A,対象[26-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,データサイエンス数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,2,SD,デザインプレゼンテー ション,永盛 祐介,yab812303,72A,対象[25-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,デザインプレゼンテーション,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,3,SD,企業経営分析ケーススタ 赤木 宏匡 ディ,,yab812301,32K,対象[24-23],"対開講(火3,火4)",,17,2026横浜キャンパス前期.pdf,企業経営分析ケーススタ赤木宏匡ディ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期前,1,SD,データサイエンス概論,河合 孝純,yaa813102,32A,対象[26-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,データサイエンス概論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期前,2,SD,サービスイノベーション 関 良明,,yaa813103,FEIS,対象[25-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,サービスイノベーション関良明,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期前,3,SD,ビッグデータ解析演習,山口 敦子,yaa813101,31B,対象[24-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,ビッグデータ解析演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,1,SD,スポーツ・健康論,岩嶋 孝夫,yab003101,33K,対象[26-23],"対開講(水1,木4)",,17,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,1,SD,データサイエンス数学,新井 優太,yab813102,31C,対象[26-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,データサイエンス数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,2,SD,機械学習論,佐藤 圭浩,yab814103,33I,対象[25-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,機械学習論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,3,SD,ベイズ統計学,河合 孝純,yab813101,32K,対象[24-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,ベイズ統計学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,1,SD,データサイエンス概論,河合 孝純,yaa813102,32A,対象[26-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,データサイエンス概論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,2,SD,サービスイノベーション 関 良明,,yaa813103,FEIS,対象[25-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,サービスイノベーション関良明,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,3,SD,ビッグデータ解析演習,山口 敦子,yaa813101,31B,対象[24-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,ビッグデータ解析演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,1,SD,データサイエンス数学,新井 優太,yab813102,31C,対象[26-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,データサイエンス数学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,2,SD,機械学習論,佐藤 圭浩,yab814103,33I,対象[25-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,機械学習論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,3,SD,ベイズ統計学,河合 孝純,yab813101,32K,対象[24-23],"対開講(水1,水2)",,17,2026横浜キャンパス前期.pdf,ベイズ統計学,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,SD,ユーザーエクスペリエン 蓮池 公威 スデザイン入門,永盛 祐介 阪口 紗季,yab814102,72A,対象[26-23],"対開講(木1,木2)",,17,2026横浜キャンパス前期.pdf,ユーザーエクスペリエン蓮池公威スデザイン入門,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,3,SD,サービスシステムデザイ 大久保 寛基 ン演習,,yab814101,"72B, 72C",対象[24-23],"対開講(木1,木2)",,17,2026横浜キャンパス前期.pdf,サービスシステムデザイ大久保寛基ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,PBL(1),ストーン リチャード 畑 和樹,yaa814201,72A,対象[26-23],,,17,2026横浜キャンパス前期.pdf,PBL(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,2,SD,English Test Preparation for Academic Purposes,瀬端 睦,yab812202,32B,対象[25-23],"対開講(木2,木3)",,17,2026横浜キャンパス前期.pdf,EnglishTestPreparationforAcademicPurposes,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,ユーザーエクスペリエン 蓮池 公威 スデザイン入門,永盛 祐介 阪口 紗季,yab814102,72A,対象[26-23],"対開講(木1,木2)",,17,2026横浜キャンパス前期.pdf,ユーザーエクスペリエン蓮池公威スデザイン入門,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,2,SD,Academic Presentation,瀬端 睦,ybb812201,32B,対象[25-23],"対開講(木2,木3)",,17,2026横浜キャンパス前期.pdf,AcademicPresentation,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,3,SD,サービスシステムデザイ 大久保 寛基 ン演習,,yab814101,"72B, 72C",対象[24-23],"対開講(木1,木2)",,17,2026横浜キャンパス前期.pdf,サービスシステムデザイ大久保寛基ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,2,SD,English Test Preparation for Academic Purposes,瀬端 睦,yab812202,32B,対象[25-23],"対開講(木2,木3)",,17,2026横浜キャンパス前期.pdf,EnglishTestPreparationforAcademicPurposes,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,3,SD,日本経済論(a),鍛治 篤,yaa004301,32K,対象[24-23],,,17,2026横浜キャンパス前期.pdf,日本経済論(a),LA-321,日本経済論(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,3,SD,Global Studies(1),畑 和樹 ストーン リチャード デトレフ ラングマン,yaa814301,32J,対象[24-23],"対開講(木3,木4)",,17,2026横浜キャンパス前期.pdf,GlobalStudies(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,2,SD,Academic Presentation,瀬端 睦,ybb812201,32B,対象[25-23],"対開講(木2,木3)",,17,2026横浜キャンパス前期.pdf,AcademicPresentation,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,3,SD,日本経済論(b),鍛治 篤,yab004301,32K,対象[24-23],,,17,2026横浜キャンパス前期.pdf,日本経済論(b),LA-322,日本経済論(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,3,SD,Global Studies(4),吉川 玄徳 大久保 寛基 斎藤 文 関 良明,yab814301,31C,対象[24-23],"対開講(木3,木4)",,18,2026横浜キャンパス前期.pdf,GlobalStudies(4),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期前,3,SD,Global Studies(1),畑 和樹 ストーン リチャード デトレフ ラングマン,yaa814301,32J,対象[24-23],"対開講(木3,木4)",,18,2026横浜キャンパス前期.pdf,GlobalStudies(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,1,SD,スポーツ・健康論,岩嶋 孝夫,yab003101,33K,対象[26-23],"対開講(水1,木4)",,18,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,3,SD,Global Studies(4),吉川 玄徳 大久保 寛基 斎藤 文 関 良明,yab814301,31C,対象[24-23],"対開講(木3,木4)",,18,2026横浜キャンパス前期.pdf,GlobalStudies(4),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,2,SD,未来を拓くイノベーショ 京相 雅樹 ン,田口 亮 亀山 雄高 大久保 寛基,saz004519,61C、61B,対象[24-15:理工学部+建築都市,教養特別講義|YC実施教室 32A デザイン学部+情報工学部+都市 生活学部+人間科学部+環境学部+ メディア情報学部+デザイン・,,18,2026横浜キャンパス前期.pdf,未来を拓くイノベーショ京相雅樹ン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,1,SD,English I-A,畑 和樹,yaa812103,22G,対象[26-26],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,EnglishI-A,FL-111,English I-A,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,2,SD,Presentation Strategies,中村 優子,yaa812102,32J,対象[25-23],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,PresentationStrategies,FL-213,Presentation Strategies,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,2,SD,再・English III-A,ストーン リチャード,yaa812101,31F,対象[25-23],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,EnglishIII-A,FL-115,English III-A,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期前,3,SD,インタフェースデザイン 阪口 紗季,,yaa815101,32K,対象[24-23],"対開講(金1,金2)",,18,2026横浜キャンパス前期.pdf,インタフェースデザイン阪口紗季,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期後,1,SD,English I-B,畑 和樹,yab812103,22G,対象[26-26],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,EnglishI-B,FL-112,English I-B,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期後,2,SD,Intercultural Understanding(2),中村 優子,yab812101,32G,対象[25-23],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,InterculturalUnderstanding(2),LA-357,Intercultural Understanding(2),elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,前期後,2,SD,再・English III-B,ストーン リチャード,yab812102,31F,対象[25-23],"対開講(火1,金1)",,18,2026横浜キャンパス前期.pdf,EnglishIII-B,FL-116,English III-B,required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期前,3,SD,インタフェースデザイン 阪口 紗季,,yaa815101,32K,対象[24-23],"対開講(金1,金2)",,18,2026横浜キャンパス前期.pdf,インタフェースデザイン阪口紗季,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,2,SD,Academic Discussion,畑 和樹,yaa812201,72D,対象[25-23],"対開講(火2,金2)",,18,2026横浜キャンパス前期.pdf,AcademicDiscussion,FL-312,Academic Discussion,elective-required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,3,SD,特別講義（Towards Humanistically- Principled A.I. Systems),デトレフ ラングマン,yab812201,32I,対象[24-23],"対開講(火2,金2)",,18,2026横浜キャンパス前期.pdf,特別講義(TowardsHumanistically-PrincipledA.I.Systems),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期前,1,SD,コンピュータ基礎演習,佐藤 圭浩,yaa815301,72A,対象[26-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,コンピュータ基礎演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期前,2,SD,経営分析論,吉川 玄徳,yaa815302,22G,対象[25-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,経営分析論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,1,SD,情報学理論,小川 祐樹,yab815302,32A,対象[26-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,情報学理論,IF-241,情報理論,elective,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,2,SD,デザインプロトタイピン 蓮池 公威 グ(1),,yab815303,72A,対象[25-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,デザインプロトタイピン蓮池公威グ(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,3,SD,プロジェクトマネジメン 吉野 良成 ト,,yab815301,"72B, 72C",対象[24-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,プロジェクトマネジメン吉野良成ト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期前,1,SD,コンピュータ基礎演習,佐藤 圭浩,yaa815301,72A,対象[26-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,コンピュータ基礎演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期前,2,SD,経営分析論,吉川 玄徳,yaa815302,22G,対象[25-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,経営分析論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期後,1,SD,情報学理論,小川 祐樹,yab815302,32A,対象[26-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,情報学理論,IF-241,情報理論,elective,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期後,2,SD,デザインプロトタイピン 蓮池 公威 グ(1),,yab815303,72A,対象[25-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,デザインプロトタイピン蓮池公威グ(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期後,3,SD,プロジェクトマネジメン 吉野 良成 ト,,yab815301,"72B, 72C",対象[24-23],"対開講(金3,金4)",,18,2026横浜キャンパス前期.pdf,プロジェクトマネジメン吉野良成ト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前集中,2,SD,経営戦略概論,木村 裕一,ybz817002,,対象[25-23],"実施日：4/22 1-2時限,5/13 1-2 時限,5/27 1-2時限,6/10 1-2時 限,6/24 1-2時限,7/8 1-2時 限,7/22 1-2時限",,18,2026横浜キャンパス前期.pdf,経営戦略概論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前集中,4,SD,COOPプログラム ストーン デトレフ 佐藤 吉川,リチャード ラングマン 圭浩 玄徳,yaz814101,,対象[23-23],"実施日：4/1 3時限,4/7 1-2時 限, 4/16 1時限,4/23 1時 限,4/30 1時限,5/7 1時限,5/14 1時限,5/21 1時限,5/28 1時",,18,2026横浜キャンパス前期.pdf,COOPプログラムストーンデトレフ佐藤吉川,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期,1,SD,宗教学 長島 大輔,,saz001123,71A,対象[26-15] 2025年度のみセメスター,,,19,2026横浜キャンパス前期.pdf,宗教学長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期,1,SD,政治学(1) 徳田 太郎,,saz001119,61C,対象[19-15],,,19,2026横浜キャンパス前期.pdf,政治学(1)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期前,1,SD,政治学(1a) 徳田 太郎,,saa001117,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1a)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,前期後,1,SD,政治学(1b) 徳田 太郎,,sab001118,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1b)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期,1,SD,宗教学 長島 大輔,,saz001238,71A,対象[26-15] 2025年度のみセメスター,,,19,2026横浜キャンパス前期.pdf,宗教学長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期,1,SD,教育学(1) 坂本 保宏,,saz001221,13K,対象[19-15],,,19,2026横浜キャンパス前期.pdf,教育学(1)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期,1,SD,政治学(1) 坂井 亮太,,saz001239,32A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,政治学(1)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期,1,SD,政治学(1) 徳田 太郎,,saz001227,61C,対象[19-15] 2025年度のみ特別配置,,,19,2026横浜キャンパス前期.pdf,政治学(1)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,1,SD,教育学(1a) 坂本 保宏,,saa001219,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1a)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,1,SD,政治学(1a) 坂井 亮太,,saa001242,32A,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1a)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,1,SD,政治学(1a) 徳田 太郎,,saa001225,61C,対象[26-20] 2025年度のみ特別配置,,,19,2026横浜キャンパス前期.pdf,政治学(1a)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期前,1,SD,倫理学(1) 山本 史華,,saa001241,小講堂,対象[26-15],"対開講(月2,木2)",,19,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,SD,教育学(1b) 坂本 保宏,,sab001220,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1b)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,SD,政治学(1b) 坂井 亮太,,sab001243,32A,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1b)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,SD,政治学(1b) 徳田 太郎,,sab001226,61C,対象[26-20] 2025年度のみ特別配置,,,19,2026横浜キャンパス前期.pdf,政治学(1b)徳田太郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,SD,哲学(1) 大野 晃徳,,sab001234,31A,対象[26-15],"対開講(月2,木2)",,19,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,前期後,1,SD,倫理学(1) 山本 史華,,sab001242,小講堂,対象[26-15],"対開講(月2,木2)",,19,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,SD,教育学(1) 坂本 保宏,,saz001321,13K,対象[19-15],,,19,2026横浜キャンパス前期.pdf,教育学(1)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,SD,心理学(1) 清水 恒三朗,,saz001341,61B,対象[19-18],,,19,2026横浜キャンパス前期.pdf,心理学(1)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,SD,学習と動機づけ 清水 恒三朗,,saz001341,61B,対象[17-15],,,19,2026横浜キャンパス前期.pdf,学習と動機づけ清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,SD,政治学(1) 坂井 亮太,,saz001337,32A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,政治学(1)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期,1,SD,論理学(1) 小草 泰,,saz001330,61C,対象[19-15],,,19,2026横浜キャンパス前期.pdf,論理学(1)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,教育学(1a) 坂本 保宏,,saa001319,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1a)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,心理学(1a) 清水 恒三朗,,saa001339,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1a)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,政治学(1a) 坂井 亮太,,saa001335,32A,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1a)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,西洋史(1) 増永 理考,,saa001334,11E,対象[26-15],"対開講(月3,木3)",,19,2026横浜キャンパス前期.pdf,西洋史(1)増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,倫理学(1) 山本 史華,,saa001325,小講堂,対象[26-15],"対開講(月3,木3)",,19,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期前,1,SD,論理学(1a) 小草 泰,,saa001328,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,論理学(1a)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,教育学(1b) 坂本 保宏,,sab001320,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1b)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,心理学(1b) 清水 恒三朗,,sab001340,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1b)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,政治学(1b) 坂井 亮太,,sab001336,32A,対象[26-20],,,19,2026横浜キャンパス前期.pdf,政治学(1b)坂井亮太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,西洋史(1) 増永 理考,,sab001335,11E,対象[26-15],"対開講(月3,木3)",,19,2026横浜キャンパス前期.pdf,西洋史(1)増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,哲学(1) 大野 晃徳,,sab001338,31A,対象[26-15],"対開講(月3,木3)",,19,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,倫理学(1) 山本 史華,,sab001326,小講堂,対象[26-15],"対開講(月3,木3)",,19,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,前期後,1,SD,論理学(1b) 小草 泰,,sab001329,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,論理学(1b)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,1,SD,西洋史(1) 増永 理考,,saz001438,11E,対象[26-15],,,19,2026横浜キャンパス前期.pdf,西洋史(1)増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,1,SD,教育学(1) 坂本 保宏,,saz001428,13K,対象[19-15],,,19,2026横浜キャンパス前期.pdf,教育学(1)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,1,SD,心理学(1) 清水 恒三朗,,saz001443,61B,対象[19-18],,,19,2026横浜キャンパス前期.pdf,心理学(1)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,1,SD,学習と動機づけ 清水 恒三朗,,saz001443,61B,対象[17-15],,,19,2026横浜キャンパス前期.pdf,学習と動機づけ清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期,1,SD,論理学(1) 小草 泰,,saz001434,61C,対象[19-15],,,19,2026横浜キャンパス前期.pdf,論理学(1)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,1,SD,教育学(1a) 坂本 保宏,,saa001426,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1a)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,1,SD,心理学(1a) 清水 恒三朗,,saa001441,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1a)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期前,1,SD,論理学(1a) 小草 泰,,saa001432,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,論理学(1a)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,SD,教育学(1b) 坂本 保宏,,sab001427,13K,対象[26-20],,,19,2026横浜キャンパス前期.pdf,教育学(1b)坂本保宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,SD,心理学(1b) 清水 恒三朗,,sab001442,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1b)清水恒三朗,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,SD,哲学(1) 大野 晃徳,,sab001440,31A,対象[26-15],"対開講(月4,木4)",,19,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,前期後,1,SD,論理学(1b) 小草 泰,,sab001433,61C,対象[26-20],,,19,2026横浜キャンパス前期.pdf,論理学(1b)小草泰,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期,1,SD,生涯スポーツ(ゴルフ)ゼ 椿原 徹也 ミナール,アリ-ナ,saz002114,9号館2階第1,対象[26-15],教養ゼミナール,,19,2026横浜キャンパス前期.pdf,生涯スポーツ(ゴルフ)ゼ椿原徹也ミナール,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,前期後,2,SD,生活とメディア 松浦 李恵,,sab002117,12K,対象[25-24:理工学部+建築都市,"対開講(火1,火2) デザイン学部+情報工学部,25- 15:都市生活学部+人間科学部]",,19,2026横浜キャンパス前期.pdf,生活とメディア松浦李恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,1,SD,日本国憲法 大沼 友紀恵,,saz002239,1BD,対象[26-15:理工学部+建築都市 デザイン学部+情報工学部+都市 生活学部+工学部+知識工学部],,,19,2026横浜キャンパス前期.pdf,日本国憲法大沼友紀恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,1,SD,経済学(1) 宮田 卓弥,,saz002235,71A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,経済学(1)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,1,SD,食料と農業 小塩 海平 真田 篤史 寺田 順紀,,saz007649,13M,対象[26-15] 世田谷６大学,,,19,2026横浜キャンパス前期.pdf,食料と農業小塩海平真田篤史寺田順紀,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期,2,SD,日本の政治 丸島 和洋,,saz005221,小講堂,対象[19-15],,,19,2026横浜キャンパス前期.pdf,日本の政治丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,1,SD,経済学(1a) 宮田 卓弥,,saa002233,71A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1a)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期前,2,SD,日本の政治(a) 丸島 和洋,,saa005219,小講堂,対象[25-20],,,19,2026横浜キャンパス前期.pdf,日本の政治(a)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,1,SD,経済学(1b) 宮田 卓弥,,sab002234,71A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1b)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,SD,生活とメディア 松浦 李恵,,sab002117,12K,対象[25-24:理工学部+建築都市,"対開講(火1,火2) デザイン学部+情報工学部,25- 15:都市生活学部+人間科学部]",,19,2026横浜キャンパス前期.pdf,生活とメディア松浦李恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,前期後,2,SD,日本の政治(b) 丸島 和洋,,sab005220,小講堂,対象[25-20],,,19,2026横浜キャンパス前期.pdf,日本の政治(b)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,1,SD,日本史(1) 丸島 和洋,,saa002345,1BB,対象[26-18],,,19,2026横浜キャンパス前期.pdf,日本史(1)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期,1,SD,経済学(1) 宮田 卓弥,,saz002350,71A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,経済学(1)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期前,1,SD,経済学(1a) 宮田 卓弥,,saa002348,71A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1a)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,前期後,1,SD,経済学(1b) 宮田 卓弥,,sab002349,71A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1b)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期,1,SD,日本国憲法 大沼 友紀恵,,saz002433,1BD,対象[26-15:理工学部+建築都市 デザイン学部+情報工学部+都市 生活学部+工学部+知識工学部],,,19,2026横浜キャンパス前期.pdf,日本国憲法大沼友紀恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期,1,SD,経済学(1) 宮田 卓弥,,saz002436,71A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,経済学(1)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期,1,SD,日本海軍の技術史 丸島 和洋,,saz007644,1BB,対象[26-15],教養特別講義/第2Q火4限7回開 講、残り7回は夏休み冒頭に集中 講義で開講,,19,2026横浜キャンパス前期.pdf,日本海軍の技術史丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期前,1,SD,経済学(1a) 宮田 卓弥,,saa002434,71A,対象[26-20] 学籍番号下一桁7～9が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1a)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,前期後,1,SD,経済学(1b) 宮田 卓弥,,sab002435,71A,対象[26-20] 学籍番号下一桁7～9が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,経済学(1b)宮田卓弥,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期,1,SD,人文地理学 新井 智一,,saz003116,71B,対象[19-15],,,19,2026横浜キャンパス前期.pdf,人文地理学新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期前,1,SD,人文地理学(a) 新井 智一,,saa003114,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,人文地理学(a)新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,1,SD,スポーツ･健康論 椿原 徹也,,sab003111,22A,対象[26-15],"対開講(水1,金2)",,19,2026横浜キャンパス前期.pdf,スポーツ・健康論椿原徹也,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,前期後,1,SD,人文地理学(b) 新井 智一,,sab003115,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,人文地理学(b)新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期,1,SD,視覚芸術史(1) 岡山 理香,,saz004238,22C,対象[26-15],,,19,2026横浜キャンパス前期.pdf,視覚芸術史(1)岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期,1,SD,人文地理学 新井 智一,,saz003224,71B,対象[19-15],,,19,2026横浜キャンパス前期.pdf,人文地理学新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期,1,SD,科学コミュニケーション 五十嵐 美樹 論ゼミナール 神野 健哉,,saz003221,1BP,対象[26-15],教養ゼミナール,,19,2026横浜キャンパス前期.pdf,科学コミュニケーション五十嵐美樹論ゼミナール神野健哉,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期,2,SD,日本の政治 丸島 和洋,,saz004242,31A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,日本の政治丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,1,SD,人文地理学(a) 新井 智一,,saa003222,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,人文地理学(a)新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期前,2,SD,日本の政治(a) 丸島 和洋,,saa004240,31A,対象[25-20],,,19,2026横浜キャンパス前期.pdf,日本の政治(a)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,1,SD,人文地理学(b) 新井 智一,,sab003223,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,人文地理学(b)新井智一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,前期後,2,SD,日本の政治(b) 丸島 和洋,,sab004241,31A,対象[25-20],,,19,2026横浜キャンパス前期.pdf,日本の政治(b)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,3,前期,1,SD,AIと人間と社会 トム ガリー,,saz003311,12A,対象[26-15],教養特別講義,,19,2026横浜キャンパス前期.pdf,AIと人間と社会トムガリー,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期,1,SD,国際関係論(1) 伊藤 隆太,,saz004117,32A,対象[19-15],,,19,2026横浜キャンパス前期.pdf,関係論(1)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期,1,SD,国際関係論(1) 長島 大輔,,saz004129,71B,対象[19-15],,,19,2026横浜キャンパス前期.pdf,関係論(1)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期,1,SD,心理学(1) 高田 純,,saz004123,61B,対象[19-18],,,19,2026横浜キャンパス前期.pdf,心理学(1)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期,1,SD,学習と動機づけ 高田 純,,saz004123,61B,対象[17-15],,,19,2026横浜キャンパス前期.pdf,学習と動機づけ高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期前,1,SD,国際関係論(1a) 伊藤 隆太,,saa004115,32A,対象[26-20] 学籍番号下一桁7～9が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,関係論(1a)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期前,1,SD,国際関係論(1a) 長島 大輔,,saa004127,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,関係論(1a)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期前,1,SD,心理学(1a) 高田 純,,saa004121,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1a)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,SD,国際関係論(1b) 伊藤 隆太,,sab004116,32A,対象[26-20] 学籍番号下一桁7～9が受講可 （2022年度以前入学生を除く）,,,19,2026横浜キャンパス前期.pdf,関係論(1b)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,SD,国際関係論(1b) 長島 大輔,,sab004128,71B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,関係論(1b)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,前期後,1,SD,心理学(1b) 高田 純,,sab004122,61B,対象[26-20],,,19,2026横浜キャンパス前期.pdf,心理学(1b)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,法学 大沼 友紀恵,,saz004255,13Q,対象[26-15],,,19,2026横浜キャンパス前期.pdf,法学大沼友紀恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,国際関係論(1) 伊藤 隆太,,saz004234,32A,対象[19-15],,,20,2026横浜キャンパス前期.pdf,関係論(1)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,国際関係論(1) 長島 大輔,,saz004259,71B,対象[19-15],,,20,2026横浜キャンパス前期.pdf,関係論(1)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,社会学(1) 山田 唐波里,,saz004245,21C,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学(1)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,心理学(1) 高田 純,,saz004251,61B,対象[19-18],,,20,2026横浜キャンパス前期.pdf,心理学(1)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期,1,SD,学習と動機づけ 高田 純,,saz004251,61B,対象[17-15],,,20,2026横浜キャンパス前期.pdf,学習と動機づけ高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,国際関係論(1a) 伊藤 隆太,,saa004232,32A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,関係論(1a)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,国際関係論(1a) 長島 大輔,,saa004257,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,関係論(1a)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,社会学(1a) 山田 唐波里,,saa004243,21C,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1a)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,心理学(1a) 高田 純,,saa004249,61B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,心理学(1a)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期前,1,SD,倫理学(1) 山本 史華,,saa001241,小講堂,対象[26-15],"対開講(月2,木2)",,20,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,国際関係論(1b) 伊藤 隆太,,sab004233,32A,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,関係論(1b)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,国際関係論(1b) 長島 大輔,,sab004258,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,関係論(1b)長島大輔,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,社会学(1b) 山田 唐波里,,sab004244,21C,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1b)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,心理学(1b) 高田 純,,sab004250,61B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,心理学(1b)高田純,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,哲学(1) 大野 晃徳,,sab001234,31A,対象[26-15],"対開講(月2,木2)",,20,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,前期後,1,SD,倫理学(1) 山本 史華,,sab001242,小講堂,対象[26-15],"対開講(月2,木2)",,20,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,1,SD,法学 大沼 友紀恵,,saz004354,13Q,対象[26-15],,,20,2026横浜キャンパス前期.pdf,法学大沼友紀恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,1,SD,国際関係論(1) 伊藤 隆太,,saz004358,32A,対象[19-15],,,20,2026横浜キャンパス前期.pdf,関係論(1)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期,1,SD,社会学(1) 山田 唐波里,,saz004350,61C,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学(1)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,SD,国際関係論(1a) 伊藤 隆太,,saa004356,32A,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,関係論(1a)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,SD,社会学(1a) 山田 唐波里,,saa004348,61C,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1a)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,SD,西洋史(1) 増永 理考,,saa001334,11E,対象[26-15],"対開講(月3,木3)",,20,2026横浜キャンパス前期.pdf,西洋史(1)増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期前,1,SD,倫理学(1) 山本 史華,,saa001325,小講堂,対象[26-15],"対開講(月3,木3)",,20,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,SD,国際関係論(1b) 伊藤 隆太,,sab004357,32A,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,関係論(1b)伊藤隆太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,SD,社会学(1b) 山田 唐波里,,sab004349,21C,対象[26-20] 学籍番号下一桁4～6が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1b)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,SD,西洋史(1) 増永 理考,,sab001335,11E,対象[26-15],"対開講(月3,木3)",,20,2026横浜キャンパス前期.pdf,西洋史(1)増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,SD,哲学(1) 大野 晃徳,,sab001338,31A,対象[26-15],"対開講(月3,木3)",,20,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,前期後,1,SD,倫理学(1) 山本 史華,,sab001326,小講堂,対象[26-15],"対開講(月3,木3)",,20,2026横浜キャンパス前期.pdf,倫理学(1)山本史華,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,1,SD,西洋経済史 増永 理考,,saz004427,11E,対象[26-15] SC開講,,,20,2026横浜キャンパス前期.pdf,西洋経済史増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期,1,SD,社会学(1) 山田 唐波里,,saz004430,61C,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学(1)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期前,1,SD,社会学(1a) 山田 唐波里,,saa004428,61C,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1a)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,1,SD,社会学(1b) 山田 唐波里,,sab004429,21C,対象[26-20] 学籍番号下一桁0～3が受講可 （2022年度以前入学生を除く）,,,20,2026横浜キャンパス前期.pdf,社会学(1b)山田唐波里,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,前期後,1,SD,哲学(1) 大野 晃徳,,sab001440,31A,対象[26-15],"対開講(月4,木4)",,20,2026横浜キャンパス前期.pdf,哲学(1)大野晃徳,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,前期,3,SD,環境と機械ゼミナール 丸山 恵史 小玉 脩平,,saz004526,12D,対象[24-15],教養ゼミナール,,20,2026横浜キャンパス前期.pdf,環境と機械ゼミナール丸山恵史小玉脩平,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期,1,SD,視覚芸術史(1) 岡山 理香,,saz004346,71A,対象[26-15],,,20,2026横浜キャンパス前期.pdf,視覚芸術史(1)岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期,1,SD,日本文化の伝承 丸島 和洋,,saz005222,小講堂,対象[19-15] 臨時で前期配置,,,20,2026横浜キャンパス前期.pdf,日本文化の伝承丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期,3,SD,SDGsとESG探究ゼミナール 杉浦 正吾,,saz002514,11F,対象[24-15],教養ゼミナール,,20,2026横浜キャンパス前期.pdf,SDGsとESG探究ゼミナール杉浦正吾,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期前,1,SD,日本文化の伝承(a) 丸島 和洋,,saa005220,小講堂,対象[26-20] 臨時で前期配置,,,20,2026横浜キャンパス前期.pdf,日本文化の伝承(a)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,1,SD,スポーツ･健康論 椿原 徹也,,sab003111,22A,対象[26-15],"対開講(水1,金2)",,20,2026横浜キャンパス前期.pdf,スポーツ・健康論椿原徹也,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,前期後,1,SD,日本文化の伝承(b) 丸島 和洋,,sab005226,小講堂,対象[26-20] 臨時で前期配置,,,20,2026横浜キャンパス前期.pdf,日本文化の伝承(b)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,1,SD,日本史(1) 丸島 和洋,,saa002431,小講堂,対象[26-18],,,20,2026横浜キャンパス前期.pdf,日本史(1)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,1,SD,都市の社会史 増永 理考,,saz005343,11E,対象[26-15] SC開講、,教養特別講義,,20,2026横浜キャンパス前期.pdf,都市の社会史増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,1,SD,社会学入門 岡村 逸郎,,saz005349,71B,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学入門岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,2,SD,日本文学 青木 言葉,,sbb005342,1BP,対象[25-15],,,20,2026横浜キャンパス前期.pdf,日本文学青木言葉,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期,3,SD,最適解ビジネスモデル論 岸 和幸 ゼミナール,,saz005345,11A,対象[24-15],教養ゼミナール,,20,2026横浜キャンパス前期.pdf,最適解ビジネスモデル論岸和幸ゼミナール,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期前,1,SD,社会学入門(a) 岡村 逸郎,,saa005333,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(a)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期前,2,SD,デザイン概論(1) 岡山 理香,,saa005217,12D,対象[25-15],"対開講(金3,金4)",,20,2026横浜キャンパス前期.pdf,デザイン概論(1)岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,1,SD,社会学入門(b) 岡村 逸郎,,sab005334,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(b)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,前期後,1,SD,日本文化論 岡山 理香,,sab005225,11F,対象[26-23:理工学部+建築都市,"対開講(金3,金4) デザイン学部+情報工学部+都市 生活学部,26-24:人間科学部]",,20,2026横浜キャンパス前期.pdf,日本文化論岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,1,SD,日本史(1) 丸島 和洋,,sab002346,小講堂,対象[26-18],,,20,2026横浜キャンパス前期.pdf,日本史(1)丸島和洋,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,1,SD,西洋史の歴史創作を考え 増永 理考 るゼミナール,,saz005435,1BE,対象[26-15],教養ゼミナール,,20,2026横浜キャンパス前期.pdf,西洋史の歴史創作を考え増永理考るゼミナール,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,1,SD,社会学入門 岡村 逸郎,,saz005450,71B,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学入門岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,2,SD,日本文学 青木 言葉,,sbb005434,1BP,対象[25-15],,,20,2026横浜キャンパス前期.pdf,日本文学青木言葉,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,3,SD,通訳案内を学ぶゼミナー 島野 健仁郎 ル,,saz005425,12C,対象[24-15],,,20,2026横浜キャンパス前期.pdf,通訳案内を学ぶゼミナー島野健仁郎ル,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期,3,SD,アイデア実装への資金調 瀬戸 久美子 達ゼミナール,,saz005436,1BJ,対象[24-15],教養ゼミナール,,20,2026横浜キャンパス前期.pdf,アイデア実装への資金調瀬戸久美子達ゼミナール,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期前,1,SD,社会学入門(a) 岡村 逸郎,,saa005434,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(a)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期前,2,SD,デザイン概論(1) 岡山 理香,,saa005217,12D,対象[25-15],"対開講(金3,金4)",,20,2026横浜キャンパス前期.pdf,デザイン概論(1)岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期後,1,SD,社会学入門(b) 岡村 逸郎,,sab005435,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(b)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,前期後,1,SD,日本文化論 岡山 理香,,sab005225,11F,対象[26-23:理工学部+建築都市,"対開講(金3,金4) デザイン学部+情報工学部+都市 生活学部,26-24:人間科学部]",,20,2026横浜キャンパス前期.pdf,日本文化論岡山理香,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,5,前期,1,SD,社会学入門 岡村 逸郎,,saz005551,71B,対象[19-15],,,20,2026横浜キャンパス前期.pdf,社会学入門岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,5,前期前,1,SD,社会学入門(a) 岡村 逸郎,,saa005535,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(a)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,5,前期後,1,SD,社会学入門(b) 岡村 逸郎,,sab005536,71B,対象[26-20],,,20,2026横浜キャンパス前期.pdf,社会学入門(b)岡村逸郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M4,Communication Skills(2),M・フォードリー,ybz071101,32D,対象[26-26],,,30,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M5,Communication Skills(2),高橋 信博,ybz071102,32I,対象[26-26],,,30,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M6,Communication Skills(2),ボルジロフスカヤ ア ンナ,ybz071103,22E,対象[26-26],,,30,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,4,M6,再・Academic English(2) 中條,純子,ybz051101,32B,対象[19-17]/18-17:アカデミッ ク・イングリッシュ・セミナー,,,30,2026横浜キャンパス前期.pdf,AcademicEnglish(2)中條,FL-21P,Academic English(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M1,Reading and Writing(2a),鈴木 夏実,yba071101,32F,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M2,Reading and Writing(2a),田中 美和,yba071102,31B,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M3,Reading and Writing(2a),鴨下 恵子,yba071103,32K,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,2,M3,Academic English(2a),中條 純子,yba051101,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,AcademicEnglish(2a),FL-21P,Academic English(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,2,M3,人工知能とデータマイニ 大谷 紀子 ング,,yba721101,33I,対象[25-17],"対開講(月1,水2)",,30,2026横浜キャンパス前期.pdf,人工知能とデータマイニ大谷紀子ング,IF-245,人工知能とデータマイニング,required,専門分野,情報システム学科科目,fuzzy,0.867,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,3,M3,Webプログラミング,小倉 信彦,yba721102,"21A, 22G",対象[24-17],"対開講(月1,水2)",,30,2026横浜キャンパス前期.pdf,Webプログラミング,IF-323,Ｗｅｂプログラミング,elective,専門分野,情報システム学科科目,exact,1.0,IF-323,Ｗｅｂプログラミング,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,1,,1,M1,Reading and Writing(2b),鈴木 夏実,ybb071101,32F,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M2,Reading and Writing(2b),田中 美和,ybb071102,31B,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,1,M3,Reading and Writing(2b),鴨下 恵子,ybb071103,32K,対象[26-26],,,30,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,,2,M3,Academic English(2b),中條 純子,ybb051101,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,AcademicEnglish(2b),FL-21Q,Academic English(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,4,M3,再・Communication Strategies(2),中條 純子,ybz051201,32B,対象[19-17]/18-17:スポーツで 学ぶ英語,,,30,2026横浜キャンパス前期.pdf,CommunicationStrategies(2),FL-21L,Communication Strategies(2a),elective,共通分野,外国語科目,fuzzy,0.981,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,4,M3,再・微分積分学I,矢作 由美,ybz721201,31C,対象[20-17],,,30,2026横浜キャンパス前期.pdf,微分積分学I,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,1,M3,微分積分学(1a),矢作 由美,yba721201,31C,対象[26-17],,,30,2026横浜キャンパス前期.pdf,微分積分学(1a),IF-173,微分積分学(1a),required,専門分野,情報システム学科科目,exact,1.0,IF-173,微分積分学(1a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,,2,M3,Communication Strategies(2a),中條 純子,yba051201,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,CommunicationStrategies(2a),FL-21L,Communication Strategies(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,2,M3,オブジェクト指向方法論 小倉 信彦,,yba721202,33I,対象[25-17],"対開講(月2,水1)",,30,2026横浜キャンパス前期.pdf,オブジェクト指向方法論小倉信彦,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,3,M3,システムソリューション 賈 伊陽,,yba721203,32H,対象[24-17],"対開講(月2,木2)",,30,2026横浜キャンパス前期.pdf,システムソリューション賈伊陽,IF-324,システムソリューション,elective,専門分野,情報システム学科科目,fuzzy,0.88,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,1,M3,微分積分学(1b),矢作 由美,ybb721201,31C,対象[26-17],,,30,2026横浜キャンパス前期.pdf,微分積分学(1b),IF-176,微分積分学(1b),required,専門分野,情報システム学科科目,exact,1.0,IF-176,微分積分学(1b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,2,,2,M3,Communication Strategies(2b),中條 純子,ybb051201,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,CommunicationStrategies(2b),FL-21M,Communication Strategies(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,,2,M3,電子商取引論,増田 聡,ybb701201,"22B, FEIS",対象[25-17],"対開講(月2,金3)",,30,2026横浜キャンパス前期.pdf,電子商取引論,IF-262,電子商取引論,elective,専門分野,情報システム学科科目,exact,1.0,SM-255,電子商取引論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,,4,M3,再・Basic English Training,中條 純子,ybz051301,32B,対象[19-19],,,30,2026横浜キャンパス前期.pdf,BasicEnglishTraining,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,,4,M3,再・微分積分学I,矢作 由美,ybz721301,31C,対象[20-17],,,30,2026横浜キャンパス前期.pdf,微分積分学I,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,,1,M3,微分積分学(1a),矢作 由美,yba721301,31C,対象[26-17],,,30,2026横浜キャンパス前期.pdf,微分積分学(1a),IF-173,微分積分学(1a),required,専門分野,情報システム学科科目,exact,1.0,IF-173,微分積分学(1a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,,2,M3,Basic English Training(a),中條 純子,yba051301,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,BasicEnglishTraining(a),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,,1,M3,微分積分学(1b),矢作 由美,ybb721301,31C,対象[26-17],,,30,2026横浜キャンパス前期.pdf,微分積分学(1b),IF-176,微分積分学(1b),required,専門分野,情報システム学科科目,exact,1.0,IF-176,微分積分学(1b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,3,,2,M3,Basic English Training(b),中條 純子,ybb051301,32B,対象[25-20],,,30,2026横浜キャンパス前期.pdf,BasicEnglishTraining(b),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,,2,M3,ヒューマンコンピュータ 中村 裕美 インタラクション,,ybb701301,FEIS,対象[25-17],"対開講(月3,月4)",,30,2026横浜キャンパス前期.pdf,ヒューマンコンピュータ中村裕美インタラクション,IF-244,ヒューマンコンピュータインタラクション,elective,専門分野,情報システム学科科目,fuzzy,0.905,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,4,M3,再・Literature in English(1),岡島 慶,ybz051401,32F,対象[19-17]/18-17:文学で学ぶ 英語,,,30,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1),FL-221,Literature in English(1a),elective,共通分野,外国語科目,fuzzy,0.978,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,1,M3,コンピュータネットワー 浅香 航太 ク,,yba721401,FEIS,対象[26-17],"対開講(月4,金1)",,30,2026横浜キャンパス前期.pdf,コンピュータネットワー浅香航太ク,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,2,M3,Literature in English(1a),岡島 慶,yba051401,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1a),FL-221,Literature in English(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,2,M3,キャリアデザイン,池田 宗人,yba721402,32K,対象[25-17],"対開講(月4,木4)",,30,2026横浜キャンパス前期.pdf,キャリアデザイン,IF-134,キャリアデザイン,elective,専門分野,情報システム学科科目,exact,1.0,IF-134,キャリアデザイン,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,,1,M3,コンピュータグラフィッ 宮地 英生 クス,,ybb701401,33I,対象[26-17],"対開講(月4,木3)",,30,2026横浜キャンパス前期.pdf,コンピュータグラフィッ宮地英生クス,IF-145,コンピュータグラフィックス,elective,専門分野,情報システム学科科目,fuzzy,0.867,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,2,M3,Literature in English(1b),岡島 慶,ybb051401,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,LiteratureinEnglish(1b),FL-222,Literature in English(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,,2,M3,ヒューマンコンピュータ 中村 裕美 インタラクション,,ybb701301,FEIS,対象[25-17],"対開講(月3,月4)",,30,2026横浜キャンパス前期.pdf,ヒューマンコンピュータ中村裕美インタラクション,IF-244,ヒューマンコンピュータインタラクション,elective,専門分野,情報システム学科科目,fuzzy,0.905,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,5,,1,M3,教育相談とカウンセリン 水野 直樹 グ(2),,sbz001512,,対象[26-17] 08-228,,,30,2026横浜キャンパス前期.pdf,教育相談とカウンセリン水野直樹グ(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,4,M3,再・Critical Listening(1),M・フォードリー,ybz052101,32F,対象[19-17]/18-17:英語発音・ 聴解トレーニング,,,30,2026横浜キャンパス前期.pdf,CriticalListening(1),FL-21F,Critical Listening(1a),elective,共通分野,外国語科目,fuzzy,0.976,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,4,M3,再・基礎体育(2),岩嶋 孝夫,ybz052102,体育施設,対象[19-17],,,30,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,1,M3,基礎体育(2a),岩嶋 孝夫,yba052102,体育施設,対象[26-20],,,30,2026横浜キャンパス前期.pdf,基礎体育(2a),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,2,M3,Critical Listening(1a),M・フォードリー,yba052101,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,CriticalListening(1a),FL-21F,Critical Listening(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,2,M3,システム開発演習A,増田 聡,yba722101,22H,対象[25-17],"対開講(火1,火2)",,30,2026横浜キャンパス前期.pdf,システム開発演習A,IF-223,システム開発演習Ａ,elective,専門分野,情報システム学科科目,exact,1.0,IF-223,システム開発演習Ａ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,1,,1,M3,基礎体育(2b),岩嶋 孝夫,ybb052102,体育施設,対象[26-20],,,30,2026横浜キャンパス前期.pdf,基礎体育(2b),PE-114,基礎体育(2b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,,2,M3,Critical Listening(1b),M・フォードリー,ybb052101,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,CriticalListening(1b),FL-21G,Critical Listening(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,4,M3,再・ドイツ語(2),森田 里津子,ybz052204,31D,対象[19-17],,,30,2026横浜キャンパス前期.pdf,ドイツ語(2),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,4,M3,再・韓国語(2),白雪 花,ybz052201,32J,対象[19-17],,,30,2026横浜キャンパス前期.pdf,韓国語(2),FL-24R,韓国語(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,4,M3,再・基礎体育(2),岩嶋 孝夫,ybz052203,体育施設,対象[19-17],,,30,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,4,M3,再・Test Taking Skills(3),M・フォードリー,ybz052202,32F,対象[19-19],,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(3),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,1,M3,コンピュータシステム,岩野 公司,yba702201,31A,対象[26-17],"対開講(火2,金4)",,30,2026横浜キャンパス前期.pdf,コンピュータシステム,IF-142,コンピュータシステム,required,専門分野,情報システム学科科目,exact,1.0,SM-152,コンピュータシステム,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,,1,M3,基礎体育(2a),岩嶋 孝夫,yba052203,体育施設,対象[26-20],,,30,2026横浜キャンパス前期.pdf,基礎体育(2a),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,Test Taking Skills(3a),M・フォードリー,yba052202,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(3a),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.95,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,ドイツ語(2a),森田 里津子,yba052204,31D,,,,30,2026横浜キャンパス前期.pdf,ドイツ語(2a),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,韓国語(2a),白雪 花,yba052201,32J,対象[25-20],,,30,2026横浜キャンパス前期.pdf,韓国語(2a),FL-24R,韓国語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,システム開発演習A,増田 聡,yba722101,22H,対象[25-17],"対開講(火1,火2)",,30,2026横浜キャンパス前期.pdf,システム開発演習A,IF-223,システム開発演習Ａ,elective,専門分野,情報システム学科科目,exact,1.0,IF-223,システム開発演習Ａ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,,1,M3,基礎体育(2b),岩嶋 孝夫,ybb052203,体育施設,対象[26-20],,,30,2026横浜キャンパス前期.pdf,基礎体育(2b),PE-114,基礎体育(2b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,1,M3,ソフトウエア開発技法,賈 伊陽,ybb722201,FEIS,対象[26-17],"対開講(火2,金2)",,30,2026横浜キャンパス前期.pdf,ソフトウエア開発技法,IF-124,ソフトウエア開発技法,required,専門分野,情報システム学科科目,exact,1.0,IF-124,ソフトウエア開発技法,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,,2,M3,Test Taking Skills(3b),M・フォードリー,ybb052202,32F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(3b),FL-218,Test Taking Skills(1b),elective,共通分野,外国語科目,fuzzy,0.95,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,ドイツ語(2b),森田 里津子,ybb052204,31D,,,,30,2026横浜キャンパス前期.pdf,ドイツ語(2b),FL-244,ドイツ語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,,2,M3,韓国語(2b),白雪 花,ybb052201,32J,対象[25-20],,,30,2026横浜キャンパス前期.pdf,韓国語(2b),FL-24S,韓国語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,1,M3,哲学(2),高取 正大,ybz052304,32K,対象[26-17],,,30,2026横浜キャンパス前期.pdf,哲学(2),LA-112,哲学(2),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,4,M3,再・ドイツ語(2),森田 里津子,ybz052303,31D,対象[19-17],,,30,2026横浜キャンパス前期.pdf,ドイツ語(2),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,4,M3,再・韓国語(2),白雪 花,ybz052301,32J,対象[19-17],,,30,2026横浜キャンパス前期.pdf,韓国語(2),FL-24R,韓国語(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,4,M3,再・Test Taking Skills(1),M・フォードリー,ybz052302,31F,対象[19-17]/18-17:Advanced TOEIC,,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(1),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,fuzzy,0.974,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,1,M3,プログラミング基礎演習B 中村 裕美,,yba722301,22H,対象[26-17],"対開講(火3,木3)",,30,2026横浜キャンパス前期.pdf,プログラミング基礎演習B中村裕美,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,1,M3,プログラミング基礎演習B 浅香 航太,,yba722302,21A,対象[26-17],"対開講(火3,木3)",,30,2026横浜キャンパス前期.pdf,プログラミング基礎演習B浅香航太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,Test Taking Skills(1a),M・フォードリー,yba052302,31F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(1a),FL-217,Test Taking Skills(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,ドイツ語(2a),森田 里津子,yba052303,31D,,,,30,2026横浜キャンパス前期.pdf,ドイツ語(2a),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,韓国語(2a),白雪 花,yba052301,32J,対象[25-20],,,30,2026横浜キャンパス前期.pdf,韓国語(2a),FL-24R,韓国語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,サーバシステム構築,岩野 公司,yba722303,"22B, 22D",対象[25-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,サーバシステム構築,IF-351,サーバシステム構築,required,専門分野,情報システム学科科目,exact,1.0,IF-351,サーバシステム構築,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,3,,1,M3,データサイエンスリテラ 篠田 恵子 シー(2),,ybb092301,31C,対象[26-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,データサイエンスリテラ篠田恵子シー(2),LA-241,データサイエンスリテラシー(2),elective,共通分野,教養科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,Test Taking Skills(1b),M・フォードリー,ybb052302,31F,対象[25-20],,,30,2026横浜キャンパス前期.pdf,TestTakingSkills(1b),FL-218,Test Taking Skills(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,ドイツ語(2b),森田 里津子,ybb052303,31D,,,,30,2026横浜キャンパス前期.pdf,ドイツ語(2b),FL-244,ドイツ語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,韓国語(2b),白雪 花,ybb052301,32J,対象[25-20],,,30,2026横浜キャンパス前期.pdf,韓国語(2b),FL-24S,韓国語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,,2,M3,サーバ運用技術,岩野 公司,ybb722301,"22B, 22D",対象[25-17],,,30,2026横浜キャンパス前期.pdf,サーバ運用技術,IF-352,サーバ運用技術,required,専門分野,情報システム学科科目,exact,1.0,IF-352,サーバ運用技術,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,3,,3,M3,アカウンティングシステ 藤﨑 晴彦 ム,,ybb992301,33I,対象[24-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,アカウンティングシステ藤﨑晴彦ム,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,哲学(2),高取 正大,ybz052401,32K,対象[26-17],,,30,2026横浜キャンパス前期.pdf,哲学(2),LA-112,哲学(2),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,日本国憲法,大沼 友紀恵,ybz002401,22G,対象[26-17]/19-17:法と市民 （憲法を含む）,,,30,2026横浜キャンパス前期.pdf,日本国憲法,LA-12J,日本国憲法,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,オペレーティングシステ 大谷 ム,紀子,yba722401,33K,対象[26-17],"対開講(火4,木1)",,30,2026横浜キャンパス前期.pdf,オペレーティングシステ大谷ム,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,キャリアデザイン基礎 小木,貢,yba072401,32D,対象[26-17],"対開講(火4,金4)",,30,2026横浜キャンパス前期.pdf,キャリアデザイン基礎小木,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,2,M3,サーバシステム構築 岩野,公司,yba722303,"22B, 22D",対象[25-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,サーバシステム構築岩野,IF-351,サーバシステム構築,required,専門分野,情報システム学科科目,fuzzy,0.9,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,データサイエンスリテラ 篠田 シー(2),恵子,ybb092301,31C,対象[26-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,データサイエンスリテラ篠田シー(2),LA-241,データサイエンスリテラシー(2),elective,共通分野,教養科目,fuzzy,0.941,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,1,M3,情報環境論 関,博紀,ybb702401,32A,対象[26-17],"対開講(火4,木4)",,30,2026横浜キャンパス前期.pdf,情報環境論関,IF-137,情報環境論,elective,専門分野,情報システム学科科目,fuzzy,0.909,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,2,M3,SD PBL(2) 岩野,公司,ybb722401,"22B, 22D",対象[25-17],,,30,2026横浜キャンパス前期.pdf,SDPBL(2)岩野,IF-201,SD PBL(2),required,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,,3,M3,アカウンティングシステ 藤﨑 ム,晴彦,ybb992301,33I,対象[24-17],"対開講(火3,火4)",,30,2026横浜キャンパス前期.pdf,アカウンティングシステ藤﨑ム,IF-333,アカウンティングシステム,elective,専門分野,情報システム学科科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,5,,1,M3,教職論 井上,健,sbz002509,,対象[26-17] 08-212,,,30,2026横浜キャンパス前期.pdf,教職論井上,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,5,,2,M3,総合的な学習の時間の理 論と方法,渡邉 大輔,sbz002508,,対象[25-19] 08-222,,,31,2026横浜キャンパス前期.pdf,総合的な学習の時間の理論と方法,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,5,,3,M3,情報教育法(2),安井 浩之,ybz072501,22D,対象[24-17],,,31,2026横浜キャンパス前期.pdf,情報教育法(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,,1,M3,日本語基礎(2),村田 朋美,ybz053101,31F,対象[26-23],,,31,2026横浜キャンパス前期.pdf,日本語基礎(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,,4,M3,再・線形代数学I,未定,ybz723101,31B,対象[20-17],,,31,2026横浜キャンパス前期.pdf,線形代数学I,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,,1,M3,特別講義(アントレプレ ナー特論),川名 周,yba053101,31C,対象[26-17],"対開講(水1,水2)",,31,2026横浜キャンパス前期.pdf,特別講義(アントレプレナー特論),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,,1,M3,線形代数学(1a),未定,yba723101,31B,対象[26-17],,,31,2026横浜キャンパス前期.pdf,線形代数学(1a),IF-172,線形代数学(1a),required,専門分野,情報システム学科科目,exact,1.0,IF-172,線形代数学(1a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,1,,2,M3,オブジェクト指向方法論,小倉 信彦,yba721202,33I,対象[25-17],"対開講(月2,水1)",,31,2026横浜キャンパス前期.pdf,オブジェクト指向方法論,IF-225,オブジェクト指向方法論,elective,専門分野,情報システム学科科目,exact,1.0,IF-225,オブジェクト指向方法論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,1,,3,M3,ネットワークセキュリ ティ,騫 申,yba723102,FEIS,対象[24-17],"対開講(水1,金2)",,31,2026横浜キャンパス前期.pdf,ネットワークセキュリティ,IF-364,ネットワークセキュリティ,elective,専門分野,情報システム学科科目,exact,1.0,IF-364,ネットワークセキュリティ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,1,,1,M3,スポーツ・健康論,岩嶋 孝夫,ybb003101,22D,対象[26-17],"対開講(水1,木4)",,31,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,,1,M3,線形代数学(1b),未定,ybb723101,31B,対象[26-17],,,31,2026横浜キャンパス前期.pdf,線形代数学(1b),IF-175,線形代数学(1b),required,専門分野,情報システム学科科目,exact,1.0,IF-175,線形代数学(1b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,1,,3,M3,SD PBL(3),増田 聡 小倉 信彦,ybb723102,"32I, 32J,",対象[24-17],"対開講(水1,水2) 32K",,31,2026横浜キャンパス前期.pdf,SDPBL(3),IF-304,SD PBL(3),required,専門分野,情報システム学科科目,exact,1.0,IF-304,SD PBL(3),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,,1,M3,教養ゼミナール(トータ ル・テニス),岩嶋 孝夫,ybz053201,体育施設,対象[26-17],教養ゼミナール,,31,2026横浜キャンパス前期.pdf,教養ゼミナール(トータル・テニス),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,,4,M3,再・線形代数学I,未定,ybz723201,31B,対象[20-17],,,31,2026横浜キャンパス前期.pdf,線形代数学I,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,,1,M3,特別講義(アントレプレ ナー特論),川名 周,yba053101,31C,対象[26-17],"対開講(水1,水2)",,31,2026横浜キャンパス前期.pdf,特別講義(アントレプレナー特論),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,,1,M3,線形代数学(1a),未定,yba723201,31B,対象[26-17],,,31,2026横浜キャンパス前期.pdf,線形代数学(1a),IF-172,線形代数学(1a),required,専門分野,情報システム学科科目,exact,1.0,IF-172,線形代数学(1a),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,,2,M3,日本語表現(a),村田 朋美,yba053201,31F,対象[25-20],,,31,2026横浜キャンパス前期.pdf,日本語表現(a),FL-24T,日本語表現(a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,,2,M3,人工知能とデータマイニ ング,大谷 紀子,yba721101,33I,対象[25-17],"対開講(月1,水2)",,31,2026横浜キャンパス前期.pdf,人工知能とデータマイニング,IF-245,人工知能とデータマイニング,required,専門分野,情報システム学科科目,exact,1.0,IF-245,人工知能とデータマイニング,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,,3,M3,Webプログラミング,小倉 信彦,yba721102,"21A, 22G",対象[24-17],"対開講(月1,水2)",,31,2026横浜キャンパス前期.pdf,Webプログラミング,IF-323,Ｗｅｂプログラミング,elective,専門分野,情報システム学科科目,exact,1.0,IF-323,Ｗｅｂプログラミング,curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,,1,M3,線形代数学(1b),未定,ybb723201,31B,対象[26-17],,,31,2026横浜キャンパス前期.pdf,線形代数学(1b),IF-175,線形代数学(1b),required,専門分野,情報システム学科科目,exact,1.0,IF-175,線形代数学(1b),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,2,,2,M3,日本語表現(b),村田 朋美,ybb053201,31F,対象[25-20],,,31,2026横浜キャンパス前期.pdf,日本語表現(b),FL-24U,日本語表現(b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,,3,M3,SD PBL(3),増田 聡 小倉 信彦,ybb723102,"32I, 32J,",対象[24-17],"対開講(水1,水2) 32K",,31,2026横浜キャンパス前期.pdf,SDPBL(3),IF-304,SD PBL(3),required,専門分野,情報システム学科科目,exact,1.0,IF-304,SD PBL(3),curriculum-exact-title,1.0
+joho_system,情シ,横浜,水,5,,4,M3,教職実践演習(中･高),井上 健 高橋 哲男 渡邉 大輔 平山 勲,sbz003504,,対象[23-17] 08-335,,,31,2026横浜キャンパス前期.pdf,教職実践演習(中・高),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,4,M3,再・基礎体育(2),高瀬 武志 備前 嘉文,ybz054101,体育施設,対象[19-17],,,31,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,4,M3,再・社会とジェンダー,渡邊 寛,ybz074101,FEIS,対象[19-17],,,31,2026横浜キャンパス前期.pdf,社会とジェンダー,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,1,M3,オペレーティングシステ 大谷 紀子 ム,,yba722401,33K,対象[26-17],"対開講(火4,木1)",,31,2026横浜キャンパス前期.pdf,オペレーティングシステ大谷紀子ム,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,1,M3,基礎体育(2a),高瀬 武志 備前 嘉文,yba054101,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2a),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,1,M3,社会とジェンダー(a),渡邊 寛,yba094101,FEIS,対象[26-20],,,31,2026横浜キャンパス前期.pdf,社会とジェンダー(a),LA-13D,社会とジェンダー(a),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,2,M3,サーバシステム構築,宮地 英生,yba724101,"22B, 22D",対象[25-17],"対開講(木1,木2)",,31,2026横浜キャンパス前期.pdf,サーバシステム構築,IF-351,サーバシステム構築,required,専門分野,情報システム学科科目,exact,1.0,IF-351,サーバシステム構築,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,1,,1,M3,基礎体育(2b),高瀬 武志 備前 嘉文,ybb054101,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2b),PE-114,基礎体育(2b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,1,M3,社会とジェンダー(b),渡邊 寛,ybb094101,FEIS,対象[26-20],,,31,2026横浜キャンパス前期.pdf,社会とジェンダー(b),LA-13E,社会とジェンダー(b),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,,2,M3,サーバ運用技術,宮地 英生,ybb724101,"22B, 22D",対象[25-17],,,31,2026横浜キャンパス前期.pdf,サーバ運用技術,IF-352,サーバ運用技術,required,専門分野,情報システム学科科目,exact,1.0,IF-352,サーバ運用技術,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,2,,1,M1,Communication Skills(2),中條 純子,ybz074201,32D,対象[26-26],,,31,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M2,Communication Skills(2),伊藤 衣里,ybz074202,31C,対象[26-26],,,31,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M3,Communication Skills(2),稲垣 亜希子,ybz074203,32G,対象[26-26],,,31,2026横浜キャンパス前期.pdf,CommunicationSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,4,M3,再・ドイツ語(2),森田 里津子,ybz054201,31D,対象[19-17],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,4,M3,再・基礎体育(2),高瀬 武志 備前 嘉文,ybz054202,体育施設,対象[19-17],,,31,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M3,基礎体育(2a),高瀬 武志 備前 嘉文,yba054202,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2a),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M4,Reading and Writing(2a),小林 美文,yba074201,32F,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M5,Reading and Writing(2a),小倉 雅明,yba074202,32K,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M6,Reading and Writing(2a),ボルジロフスカヤ ア ンナ,yba074203,22E,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,2,M6,ドイツ語(2a),森田 里津子,yba054201,31D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2a),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,2,M6,サーバシステム構築,宮地 英生,yba724101,"22B, 22D",対象[25-17],"対開講(木1,木2)",,31,2026横浜キャンパス前期.pdf,サーバシステム構築,IF-351,サーバシステム構築,required,専門分野,情報システム学科科目,exact,1.0,IF-351,サーバシステム構築,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,2,,3,M6,システムソリューション 賈 伊陽,,yba721203,32H,対象[24-17],"対開講(月2,木2)",,31,2026横浜キャンパス前期.pdf,システムソリューション賈伊陽,IF-324,システムソリューション,elective,専門分野,情報システム学科科目,fuzzy,0.88,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M6,基礎体育(2b),高瀬 武志 備前 嘉文,ybb054202,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2b),PE-114,基礎体育(2b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M4,Reading and Writing(2b),小林 美文,ybb074201,32F,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M5,Reading and Writing(2b),小倉 雅明,ybb074202,32K,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,1,M6,Reading and Writing(2b),ボルジロフスカヤ ア ンナ,ybb074203,22E,対象[26-26],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,2,M6,ドイツ語(2b),森田 里津子,ybb054201,31D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2b),FL-244,ドイツ語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,,2,M6,SD PBL(2),宮地 英生,ybb724201,"22B, 22D",対象[25-17],,,31,2026横浜キャンパス前期.pdf,SDPBL(2),IF-201,SD PBL(2),required,専門分野,情報システム学科科目,exact,1.0,IF-201,SD PBL(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,3,,1,M6,教養ゼミナール(AIを活用 大谷 紀子 した楽曲創作),岡部 大介,ybz054305,31F,対象[26-17],教養ゼミナール,,31,2026横浜キャンパス前期.pdf,教養ゼミナール(AIを活用大谷紀子した楽曲創作),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,4,M6,再・Grammar(1),吉田 季実子,ybz054306,32J,対象[19-17]/18-17:英語文法ト レーニング,,,31,2026横浜キャンパス前期.pdf,Grammar(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,4,M6,再・Test Taking Skills(2),伊藤 衣里,ybz054301,32D,対象[19-19],,,31,2026横浜キャンパス前期.pdf,TestTakingSkills(2),FL-219,Test Taking Skills(2a),elective,共通分野,外国語科目,fuzzy,0.974,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,4,M6,再・ドイツ語(2),森田 里津子,ybz054302,31D,対象[19-17],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,4,M6,再・基礎体育(2),高瀬 武志 備前 嘉文,ybz054304,体育施設,対象[19-17],,,31,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,4,M6,再・中国語(2),黄 愛華,ybz054303,32G,対象[19-17],,,31,2026横浜キャンパス前期.pdf,中国語(2),FL-24J,中国語(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,1,M6,基礎体育(2a),高瀬 武志 備前 嘉文,yba054304,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2a),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,1,M6,プログラミング基礎演習B 中村 裕美,,yba722301,22H,対象[26-17],"対開講(火3,木3)",,31,2026横浜キャンパス前期.pdf,プログラミング基礎演習B中村裕美,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,1,M6,プログラミング基礎演習B 浅香 航太,,yba722302,21A,対象[26-17],"対開講(火3,木3)",,31,2026横浜キャンパス前期.pdf,プログラミング基礎演習B浅香航太,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,Grammar(1a),吉田 季実子,yba054305,32J,対象[25-20],,,31,2026横浜キャンパス前期.pdf,Grammar(1a),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,Test Taking Skills(2a),伊藤 衣里,yba054301,32D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,TestTakingSkills(2a),FL-219,Test Taking Skills(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,ドイツ語(2a),森田 里津子,yba054302,31D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2a),FL-243,ドイツ語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,中国語(2a),黄 愛華,yba054303,32G,対象[25-20],,,31,2026横浜キャンパス前期.pdf,中国語(2a),FL-24J,中国語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,1,M6,基礎体育(2b),高瀬 武志 備前 嘉文,ybb054304,体育施設,対象[26-20],,,31,2026横浜キャンパス前期.pdf,基礎体育(2b),PE-114,基礎体育(2b),elective-required,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,1,M6,コンピュータグラフィッ 宮地 英生 クス,,ybb701401,33I,対象[26-17],"対開講(月4,木3)",,31,2026横浜キャンパス前期.pdf,コンピュータグラフィッ宮地英生クス,IF-145,コンピュータグラフィックス,elective,専門分野,情報システム学科科目,fuzzy,0.867,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,Grammar(1b),吉田 季実子,ybb054305,32J,対象[25-20],,,31,2026横浜キャンパス前期.pdf,Grammar(1b),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,Test Taking Skills(2b),伊藤 衣里,ybb054301,32D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,TestTakingSkills(2b),FL-22A,Test Taking Skills(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,ドイツ語(2b),森田 里津子,ybb054302,31D,対象[25-20],,,31,2026横浜キャンパス前期.pdf,ドイツ語(2b),FL-244,ドイツ語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,中国語(2b),黄 愛華,ybb054303,32G,対象[25-20],,,31,2026横浜キャンパス前期.pdf,中国語(2b),FL-24K,中国語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,,2,M6,システム開発演習B,三川 健太,ybb724301,22H,対象[25-17],"対開講(木3,木4)",,31,2026横浜キャンパス前期.pdf,システム開発演習B,IF-224,システム開発演習Ｂ,elective,専門分野,情報システム学科科目,exact,1.0,IF-224,システム開発演習Ｂ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,4,,2,M6,応用体育(1),高瀬 武志,ybz054403,体育施設,対象[25-22],,,31,2026横浜キャンパス前期.pdf,応用体育(1),PE-211,応用体育(1),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,応用体育(2),高瀬 武志,ybz054404,体育施設,対象[25-22],,,31,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,4,M6,再・Critical Reading(3),吉田 季実子,ybz054401,32B,対象[19-17]/18-17:ニュースを 英語で読む,,,31,2026横浜キャンパス前期.pdf,CriticalReading(3),FL-313,Critical Reading(3a),elective,共通分野,外国語科目,fuzzy,0.973,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,4,M6,再・中国語(2),黄 愛華,ybz054402,32G,対象[19-17],,,31,2026横浜キャンパス前期.pdf,中国語(2),FL-24J,中国語(2a),elective,共通分野,外国語科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,Critical Reading(3a),吉田 季実子,yba054401,32B,対象[25-20],,,31,2026横浜キャンパス前期.pdf,CriticalReading(3a),FL-313,Critical Reading(3a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,キャリアデザイン,池田 宗人,yba721402,32K,対象[25-17],"対開講(月4,木4)",,31,2026横浜キャンパス前期.pdf,キャリアデザイン,IF-134,キャリアデザイン,elective,専門分野,情報システム学科科目,exact,1.0,IF-134,キャリアデザイン,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,4,,2,M6,中国語(2a),黄 愛華,yba054402,32G,対象[25-20],,,31,2026横浜キャンパス前期.pdf,中国語(2a),FL-24J,中国語(2a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,1,M6,情報環境論,関 博紀,ybb702401,32A,対象[26-17],"対開講(火4,木4)",,31,2026横浜キャンパス前期.pdf,情報環境論,IF-137,情報環境論,elective,専門分野,情報システム学科科目,exact,1.0,SM-143,情報環境論,curriculum-exact-title,1.0
+joho_system,情シ,横浜,木,4,,1,M6,スポーツ・健康論,岩嶋 孝夫,ybb003101,22D,対象[26-17],"対開講(水1,木4)",,31,2026横浜キャンパス前期.pdf,スポーツ・健康論,LA-135,スポーツ・健康論,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,Critical Reading(3b),吉田 季実子,ybb054401,32B,対象[25-20],,,31,2026横浜キャンパス前期.pdf,CriticalReading(3b),FL-314,Critical Reading(3b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,中国語(2b),黄 愛華,ybb054402,32G,対象[25-20],,,31,2026横浜キャンパス前期.pdf,中国語(2b),FL-24K,中国語(2b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,,2,M6,システム開発演習B,三川 健太,ybb724301,22H,対象[25-17],"対開講(木3,木4)",,31,2026横浜キャンパス前期.pdf,システム開発演習B,IF-224,システム開発演習Ｂ,elective,専門分野,情報システム学科科目,exact,1.0,IF-224,システム開発演習Ｂ,curriculum-exact-title,1.0
+joho_system,情シ,横浜,金,1,,4,M6,再・Reading and Writing(2),ボルジロフスカヤ ア ンナ,ybz055101,22E,対象[19-19],,,31,2026横浜キャンパス前期.pdf,ReadingandWriting(2),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.976,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,4,M6,再・基礎体育(2),備前 嘉文 岩嶋 孝夫,ybz055102,体育施設,対象[19-17],,,31,2026横浜キャンパス前期.pdf,基礎体育(2),PE-113,基礎体育(2a),elective-required,共通分野,体育科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,1,M6,コンピュータネットワー 浅香 航太 ク,,yba721401,FEIS,対象[26-17],"対開講(月4,金1)",,32,2026横浜キャンパス前期.pdf,コンピュータネットワー浅香航太ク,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,1,M6,基礎体育(2a) 備前 嘉文 岩嶋 孝夫,,yba055102,体育施設,対象[26-20],,,32,2026横浜キャンパス前期.pdf,基礎体育(2a)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,2,M6,再・Reading and ボルジロフスカヤ Writing(2a) ンナ,ア,yba055101,22E,対象[25-20],,,32,2026横浜キャンパス前期.pdf,ReadingandボルジロフスカヤWriting(2a)ンナ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,1,M6,基礎体育(2b) 備前 嘉文 岩嶋 孝夫,,ybb055102,体育施設,対象[26-20],,,32,2026横浜キャンパス前期.pdf,基礎体育(2b)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,2,M6,再・Reading and ボルジロフスカヤ Writing(2b) ンナ,ア,ybb055101,22E,対象[25-20],,,32,2026横浜キャンパス前期.pdf,ReadingandボルジロフスカヤWriting(2b)ンナ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,,2,M6,データベース 武田 友宏,,ybb702101,32A,対象[25-17],"対開講(金1,金2)",,32,2026横浜キャンパス前期.pdf,データベース武田友宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,4,M6,再・Communication ボルジロフスカヤ Strategies(3) ンナ,ア,ybz055201,22E,対象[19-17]/18-17:サバイバ ル・イングリッシュ,,,32,2026横浜キャンパス前期.pdf,CommunicationボルジロフスカヤStrategies(3)ンナ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,4,M6,再・基礎体育(2) 備前 嘉文 岩嶋 孝夫,,ybz055202,体育施設,対象[19-17],,,32,2026横浜キャンパス前期.pdf,基礎体育(2)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,1,M6,基礎体育(2a) 備前 嘉文 岩嶋 孝夫,,yba055202,体育施設,対象[26-20],,,32,2026横浜キャンパス前期.pdf,基礎体育(2a)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,1,M6,情報編集入門 松浦 李恵,,yba075201,22G,対象[26-17],"対開講(金2,金3)",,32,2026横浜キャンパス前期.pdf,情報編集入門松浦李恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,2,M6,Communication ボルジロフスカヤ Strategies(3a) ンナ,ア,yba055201,22E,対象[25-20],,,32,2026横浜キャンパス前期.pdf,CommunicationボルジロフスカヤStrategies(3a)ンナ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,3,M6,ネットワークセキュリ 騫 申 ティ,,yba723102,FEIS,対象[24-17],"対開講(水1,金2)",,32,2026横浜キャンパス前期.pdf,ネットワークセキュリ騫申ティ,IF-364,ネットワークセキュリティ,elective,専門分野,情報システム学科科目,fuzzy,0.923,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,1,M6,基礎体育(2b) 備前 嘉文 岩嶋 孝夫,,ybb055202,体育施設,対象[26-20],,,32,2026横浜キャンパス前期.pdf,基礎体育(2b)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,1,M6,ソフトウエア開発技法 賈 伊陽,,ybb722201,FEIS,対象[26-17],"対開講(火2,金2)",,32,2026横浜キャンパス前期.pdf,ソフトウエア開発技法賈伊陽,IF-124,ソフトウエア開発技法,required,専門分野,情報システム学科科目,fuzzy,0.87,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,2,M6,Communication ボルジロフスカヤ Strategies(3b) ンナ,ア,ybb055201,22E,対象[25-20],,,32,2026横浜キャンパス前期.pdf,CommunicationボルジロフスカヤStrategies(3b)ンナ,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,,2,M6,データベース 武田 友宏,,ybb702101,32A,対象[25-17],"対開講(金1,金2)",,32,2026横浜キャンパス前期.pdf,データベース武田友宏,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,1,M6,教養特別講義（都市の社 増永 理考 会史）,,ybz055303,32B,対象[26-17],,,32,2026横浜キャンパス前期.pdf,教養特別講義(都市の社増永理考会史),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,2,M6,再・Communication M・フォードリー Skills(2),,ybz055301,32F,対象[25-17],,,32,2026横浜キャンパス前期.pdf,CommunicationM・フォードリーSkills(2),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,4,M6,再・基礎体育(2) 備前 嘉文 岩嶋 孝夫,,ybz055302,体育施設,対象[19-17],,,32,2026横浜キャンパス前期.pdf,基礎体育(2)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,1,M6,基礎体育(2a) 備前 嘉文 岩嶋 孝夫,,yba055301,体育施設,,,,32,2026横浜キャンパス前期.pdf,基礎体育(2a)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,1,M6,情報編集入門 松浦 李恵,,yba075201,22G,対象[26-17],"対開講(金2,金3)",,32,2026横浜キャンパス前期.pdf,情報編集入門松浦李恵,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,2,M6,サイエンス・スタディー 山口 純 ズ,,yba705301,33I,対象[25-17],"対開講(金3,金4)",,32,2026横浜キャンパス前期.pdf,サイエンス・スタディー山口純ズ,IF-235,サイエンス・スタディーズ,elective,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,1,M6,基礎体育(2b) 備前 嘉文 岩嶋 孝夫,,ybb055301,体育施設,対象[26-20],,,32,2026横浜キャンパス前期.pdf,基礎体育(2b)備前嘉文岩嶋孝夫,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,,2,M6,電子商取引論 増田 聡,,ybb701201,"22B, FEIS",対象[25-17],"対開講(月2,金3)",,32,2026横浜キャンパス前期.pdf,電子商取引論増田聡,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,,1,M6,西洋経済史 増永 理考,,ybz055401,32B,対象[26-17],,,32,2026横浜キャンパス前期.pdf,西洋経済史増永理考,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,,1,M6,コンピュータシステム 岩野 公司,,yba702201,31A,対象[26-17],"対開講(火2,金4)",,32,2026横浜キャンパス前期.pdf,コンピュータシステム岩野公司,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,,1,M6,キャリアデザイン基礎 小木 貢,,yba072401,32D,対象[26-17],"対開講(火4,金4)",,32,2026横浜キャンパス前期.pdf,キャリアデザイン基礎小木貢,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,,2,M6,サイエンス・スタディー 山口 純 ズ,,yba705301,33I,対象[25-17],"対開講(金3,金4)",,32,2026横浜キャンパス前期.pdf,サイエンス・スタディー山口純ズ,IF-235,サイエンス・スタディーズ,elective,専門分野,情報システム学科科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,1,,1,M6,特別活動の理論と方法 岩本 俊一,,ybz076101,32I,対象[26-17],,,32,2026横浜キャンパス前期.pdf,特別活動の理論と方法岩本俊一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,2,,1,M6,教育制度論 岩本 俊一,,ybz076201,32I,対象[26-17],,,32,2026横浜キャンパス前期.pdf,教育制度論岩本俊一,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,2,,1,M6,特別支援教育 前川 圭一郎,,sbz006201,,対象[26-19],"対開講(土2,土3,土4)/08-217",,32,2026横浜キャンパス前期.pdf,特別支援教育前川圭一郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,3,,1,M6,特別支援教育 前川 圭一郎,,sbz006201,,対象[26-19],"対開講(土2,土3,土4)/08-217",,32,2026横浜キャンパス前期.pdf,特別支援教育前川圭一郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,,1,M6,特別支援教育 前川 圭一郎,,sbz006201,,対象[26-19],"対開講(土2,土3,土4)/08-217",,32,2026横浜キャンパス前期.pdf,特別支援教育前川圭一郎,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,1,M6,ビジネス&アイデア・クリ 田口 亮 エーション 芝 正孝 大久保 寛基,,sbz007642,,対象[26-17],"教養特別講義|YC実施教室 32A 【開講日】 9/23,10/7,10/21,11/4,11/25,12 /9,12/23,1/13 18:00～20:30",,32,2026横浜キャンパス前期.pdf,ビジネス&アイデア・クリ田口亮エーション芝正孝大久保寛基,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,2,M6,Academic English(1a),中條 純子,ybz057004,,対象[25-20],,,32,2026横浜キャンパス前期.pdf,AcademicEnglish(1a),FL-21N,Academic English(1a),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,2,M6,Academic English(1b),中條 純子,ybz057005,,対象[25-20],,,32,2026横浜キャンパス前期.pdf,AcademicEnglish(1b),FL-21O,Academic English(1b),elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,2,M6,応用体育(1),岩嶋 孝夫,ybz057002,,対象[25-17],,,32,2026横浜キャンパス前期.pdf,応用体育(1),PE-211,応用体育(1),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,2,M6,応用体育(2),岩嶋 孝夫,ybz057003,,対象[25-17],,,32,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,2,M6,再・応用体育(2),岩嶋 孝夫,ybz057001,,対象[21-17],,,32,2026横浜キャンパス前期.pdf,応用体育(2),PE-212,応用体育(2),elective,共通分野,体育科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,宮地 英生,ybz727002,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,岩野 公司,ybz727004,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,増田 聡,ybz727007,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,大谷 紀子,ybz727001,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,三川 健太,ybz727008,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,小倉 信彦,ybz727003,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,中村 裕美,ybz727005,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,浅香 航太,ybz727006,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,騫 申,ybz727018,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,3,M6,事例研究,賈 伊陽,ybz727017,,対象[24-20],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,事例研究,IF-313,事例研究,required,専門分野,情報システム学科科目,exact,1.0,IF-313,事例研究,curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),宮地 英生,ybz727010,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),岩野 公司,ybz727012,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),増田 聡,ybz727015,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),大谷 紀子,ybz727009,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),三川 健太,ybz727016,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),小倉 信彦,ybz727011,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),中村 裕美,ybz727014,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),浅香 航太,ybz727013,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),騫 申,ybz727019,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,卒業研究(2),賈 伊陽,ybz727020,,対象[23-19],CAP制の上限に含まれます,,32,2026横浜キャンパス前期.pdf,卒業研究(2),IF-413,卒業研究(2),required,専門分野,情報システム学科科目,exact,1.0,SM-411,卒業研究(2),curriculum-exact-title,1.0
+joho_system,情シ,横浜,土,4,後集中,4,M6,再・Academic English(1),中條 純子,ybz057006,,対象[19-17]/18-17:英語でライ ティング＆プレゼンテーション,,,32,2026横浜キャンパス前期.pdf,AcademicEnglish(1),FL-21N,Academic English(1a),elective,共通分野,外国語科目,fuzzy,0.973,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,後集中,1,M6,プログラミング基礎演習,髙橋 弘毅,yba811101,"22D, 22H",対象[26-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,プログラミング基礎演習,IF-121,プログラミング基礎演習Ａ,required,専門分野,情報システム学科科目,fuzzy,0.957,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,後集中,2,M6,オペレーションマネジメ ント,大久保 寛基,yba814101,31A,対象[25-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,オペレーションマネジメント,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,後集中,1,M6,量的ユーザー調査,阪口 紗季,ybb811101,72A,対象[26-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,量的ユーザー調査,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,1,後集中,2,M6,データマイニング,小川 祐樹,ybb811102,32A,対象[25-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,データマイニング,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,後集中,1,M6,プログラミング基礎演習,髙橋 弘毅,yba811101,"22D, 22H",対象[26-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,プログラミング基礎演習,IF-121,プログラミング基礎演習Ａ,required,専門分野,情報システム学科科目,fuzzy,0.957,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,後集中,2,M6,オペレーションマネジメ ント,大久保 寛基,yba814101,31A,対象[25-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,オペレーションマネジメント,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,後集中,1,M6,量的ユーザー調査,阪口 紗季,ybb811101,72A,対象[26-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,量的ユーザー調査,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,2,後集中,2,M6,データマイニング,小川 祐樹,ybb811102,32A,対象[25-23],"対開講(月1,月2)",,33,2026横浜キャンパス前期.pdf,データマイニング,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,後集中,2,M6,金融・市場システム論,塚本 憲弘,yba811302,31B,対象[25-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,金融・市場システム論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,後集中,3,M6,サプライチェーンデザイ ン演習,斎藤 文,yba811301,72A,対象[24-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,サプライチェーンデザイン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,3,後集中,2,M6,データベース,山口 敦子,ybb814103,32A,対象[25-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,データベース,IF-234,データベース,elective,専門分野,情報システム学科科目,exact,1.0,SM-254,データベース,curriculum-exact-title,1.0
+joho_system,情シ,横浜,月,4,後集中,2,M6,金融・市場システム論,塚本 憲弘,yba811302,31B,対象[25-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,金融・市場システム論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,後集中,3,M6,サプライチェーンデザイ ン演習,斎藤 文,yba811301,72A,対象[24-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,サプライチェーンデザイン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,月,4,後集中,2,M6,データベース,山口 敦子,ybb814103,32A,対象[25-23],"対開講(月3,月4)",,33,2026横浜キャンパス前期.pdf,データベース,IF-234,データベース,elective,専門分野,情報システム学科科目,exact,1.0,SM-254,データベース,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,1,後集中,2,M6,Reading Comprehension,中村 優子,yba812102,32G,対象[25-23],"対開講(火1,金1)",,33,2026横浜キャンパス前期.pdf,ReadingComprehension,FL-211,Reading Comprehension,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,後集中,2,M6,English Test Preparation,中村 優子,ybb812101,33K,対象[25-23],"対開講(火1,金1)",,33,2026横浜キャンパス前期.pdf,EnglishTestPreparation,FL-214,English Test Preparation,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,1,後集中,2,M6,Intercultural Understanding(1),畑 和樹,yba812101,32D,対象[25-23],"対開講(火1,火2)",,33,2026横浜キャンパス前期.pdf,InterculturalUnderstanding(1),LA-356,Intercultural Understanding(1),elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,後集中,1,M6,質的ユーザー調査,蓮池 公威,yba812201,72A,対象[26-23],"対開講(火2,火3)",,33,2026横浜キャンパス前期.pdf,質的ユーザー調査,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,後集中,1,M6,情報編集入門,永盛 祐介,ybb082201,72A,対象[26-23],"対開講(火2,火3)",,33,2026横浜キャンパス前期.pdf,情報編集入門,LA-14B,情報編集入門,elective,共通分野,教養科目,exact,1.0,LA-14B,情報編集入門,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,2,後集中,2,M6,Academic Reading,ストーン リチャード,yba812202,32B,対象[25-23],"対開講(火2,金2)",,33,2026横浜キャンパス前期.pdf,AcademicReading,FL-311,Academic Reading,elective-required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,2,後集中,2,M6,Intercultural Understanding(1),畑 和樹,yba812101,32D,対象[25-23],"対開講(火1,火2)",,33,2026横浜キャンパス前期.pdf,InterculturalUnderstanding(1),LA-356,Intercultural Understanding(1),elective-required,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,後集中,1,M6,質的ユーザー調査,蓮池 公威,yba812201,72A,対象[26-23],"対開講(火2,火3)",,33,2026横浜キャンパス前期.pdf,質的ユーザー調査,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,後集中,3,M6,感性デザイン演習,永盛 祐介,yba812301,72D,対象[24-23],"対開講(火3,火4)",,33,2026横浜キャンパス前期.pdf,感性デザイン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,3,後集中,1,M6,情報編集入門,永盛 祐介,ybb082201,72A,対象[26-23],"対開講(火2,火3)",,33,2026横浜キャンパス前期.pdf,情報編集入門,LA-14B,情報編集入門,elective,共通分野,教養科目,exact,1.0,LA-14B,情報編集入門,curriculum-exact-title,1.0
+joho_system,情シ,横浜,火,3,後集中,2,M6,統計データ解析演習,河合 孝純,ybb813103,33K,対象[25-23],"対開講(火3,火4)",,33,2026横浜キャンパス前期.pdf,統計データ解析演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,後集中,1,M6,日本国憲法,大沼 友紀恵,ybz002401,22G,対象[26-23]/19-23:法と市民 （憲法を含む）,,,33,2026横浜キャンパス前期.pdf,日本国憲法,LA-12J,日本国憲法,elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,後集中,2,M6,Academic Research & Writing,デトレフ ラングマン,yba812302,32J,対象[25-23],"対開講(火4,木4)",,33,2026横浜キャンパス前期.pdf,AcademicResearch&Writing,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,後集中,3,M6,感性デザイン演習,永盛 祐介,yba812301,72D,対象[24-23],"対開講(火3,火4)",,33,2026横浜キャンパス前期.pdf,感性デザイン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,後集中,2,M6,統計データ解析演習,河合 孝純,ybb813103,33K,対象[25-23],"対開講(火3,火4)",,33,2026横浜キャンパス前期.pdf,統計データ解析演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,火,4,後集中,2,M6,総合的品質管理,斎藤 文,ybb812401,32D,対象[25-23],"対開講(火4,木4)",,33,2026横浜キャンパス前期.pdf,総合的品質管理,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,1,M6,データサイエンスリテラ シー(2),江頭 満正,yba093101,32D,対象[26-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,データサイエンスリテラシー(2),LA-241,データサイエンスリテラシー(2),elective,共通分野,教養科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,1,M6,English II-A 畑 ストーン,和樹 リチャード,yba813102,72A,対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,EnglishII-A畑ストーン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,2,M6,機械学習演習 河合,孝純,yba813103,"72B, 72C",対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,機械学習演習河合,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,3,M6,ウェブデータ処理 山口,敦子,yba813101,32K,対象[24-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,ウェブデータ処理山口,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,1,M6,English II-B 畑 ストーン,和樹 リチャード,ybb813102,32A,対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,EnglishII-B畑ストーン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,1,M6,スポーツ・健康論 岩嶋,孝夫,ybb003101,22D,対象[26-23],"対開講(水1,木4)",,33,2026横浜キャンパス前期.pdf,スポーツ・健康論岩嶋,LA-135,スポーツ・健康論,elective,共通分野,教養科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,1,後集中,3,M6,SD PBL(3) 小川 山口 河合,祐樹 敦子 孝純,ybb813101,72A,対象[24-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,SDPBL(3)小川山口河合,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,1,M6,データサイエンスリテラ 江頭 満正 シー(2),,yba093101,32D,対象[26-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,データサイエンスリテラ江頭満正シー(2),LA-241,データサイエンスリテラシー(2),elective,共通分野,教養科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,1,M6,English II-A 畑 ストーン,和樹 リチャード,yba813102,72A,対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,EnglishII-A畑ストーン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,2,M6,機械学習演習 河合,孝純,yba813103,"72B, 72C",対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,機械学習演習河合,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,3,M6,ウェブデータ処理 山口,敦子,yba813101,32K,対象[24-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,ウェブデータ処理山口,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,1,M6,English II-B 畑 ストーン,和樹 リチャード,ybb813102,32A,対象[25-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,EnglishII-B畑ストーン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,水,2,後集中,3,M6,SD PBL(3) 小川 山口 河合,祐樹 敦子 孝純,ybb813101,72A,対象[24-23],"対開講(水1,水2)",,33,2026横浜キャンパス前期.pdf,SDPBL(3)小川山口河合,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,後集中,4,M6,キャップストーンプロ ストーン ジェクト デトレフ 永盛 畑,リチャード ラングマン 祐介 和樹,ybz814101,72A,対象[23-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,キャップストーンプロストーンジェクトデトレフ永盛畑,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,後集中,1,M6,社会とジェンダー(a) 渡邊,寛,yba094101,FEIS,対象[26-20],,,33,2026横浜キャンパス前期.pdf,社会とジェンダー(a)渡邊,LA-13D,社会とジェンダー(a),elective,共通分野,教養科目,fuzzy,0.917,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,後集中,1,M6,社会とジェンダー(b) 渡邊,寛,ybb094101,FEIS,対象[26-20],,,33,2026横浜キャンパス前期.pdf,社会とジェンダー(b)渡邊,LA-13E,社会とジェンダー(b),elective,共通分野,教養科目,fuzzy,0.917,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,後集中,1,M6,ソーシャルシステムデザ 大久保 寛基 イン入門 関 吉川 斎藤,良明 玄徳 文,ybb814102,"72B, 72C",対象[26-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,ソーシャルシステムデザ大久保寛基イン入門関吉川斎藤,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,1,後集中,3,M6,画像・音声処理 佐藤,圭浩,ybb814101,32H,対象[24-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,画像・音声処理佐藤,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,4,M6,キャップストーンプロ ストーン ジェクト デトレフ 永盛 畑,リチャード ラングマン 祐介 和樹,ybz814101,72A,対象[23-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,キャップストーンプロストーンジェクトデトレフ永盛畑,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,1,M6,社会とジェンダー(a) 渡邊,寛,yba094201,FEIS,対象[26-20],,,33,2026横浜キャンパス前期.pdf,社会とジェンダー(a)渡邊,LA-13D,社会とジェンダー(a),elective,共通分野,教養科目,fuzzy,0.917,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,2,M6,Writing Strategies 瀬端,睦,yab812104,72D,対象[25-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,WritingStrategies瀬端,FL-215,Writing Strategies,elective,共通分野,外国語科目,fuzzy,0.944,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,3,M6,ブランドコンセプトデザ 澤田 浩二 イン,,yba814201,"72B, 72C",対象[24-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,ブランドコンセプトデザ澤田浩二イン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,1,M6,社会とジェンダー(b) 渡邊,寛,ybb094201,FEIS,対象[26-20],,,33,2026横浜キャンパス前期.pdf,社会とジェンダー(b)渡邊,LA-13E,社会とジェンダー(b),elective,共通分野,教養科目,fuzzy,0.917,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,1,M6,ソーシャルシステムデザ 大久保 寛基 イン入門 関 吉川 斎藤,良明 玄徳 文,ybb814102,"72B, 72C",対象[26-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,ソーシャルシステムデザ大久保寛基イン入門関吉川斎藤,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,2,M6,Debate & Discussion 瀬端,睦,ybb811301,72D,対象[25-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,Debate&Discussion瀬端,FL-212,Debate & Discussion,elective,共通分野,外国語科目,fuzzy,0.944,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,2,後集中,3,M6,画像・音声処理 佐藤,圭浩,ybb814101,32H,対象[24-23],"対開講(木1,木2)",,33,2026横浜キャンパス前期.pdf,画像・音声処理佐藤,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,後集中,2,M6,Writing Strategies 瀬端,睦,yab812104,72D,対象[25-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,WritingStrategies瀬端,FL-215,Writing Strategies,elective,共通分野,外国語科目,fuzzy,0.944,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,後集中,3,M6,ブランドコンセプトデザ 澤田 浩二 イン,,yba814201,"72B, 72C",対象[24-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,ブランドコンセプトデザ澤田浩二イン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,後集中,2,M6,Debate & Discussion 瀬端,睦,ybb811301,72D,対象[25-23],"対開講(木2,木3)",,33,2026横浜キャンパス前期.pdf,Debate&Discussion瀬端,FL-212,Debate & Discussion,elective,共通分野,外国語科目,fuzzy,0.944,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,3,後集中,3,M6,ビジネスシステムデザイ 長谷川 泰 ン演習,,ybb814301,72A,対象[24-23],"対開講(木3,木4)",,33,2026横浜キャンパス前期.pdf,ビジネスシステムデザイ長谷川泰ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,後集中,2,M6,Academic Research & デトレフ Writing,ラングマン,yba812302,32J,対象[25-23],"対開講(火4,木4)",,33,2026横浜キャンパス前期.pdf,AcademicResearch&デトレフWriting,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,後集中,3,M6,リスク＆クライシスマネ 吉川 玄徳 ジメント,,yba814401,72A,対象[24-23],"対開講(木4,木5)",,33,2026横浜キャンパス前期.pdf,リスク&クライシスマネ吉川玄徳ジメント,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,後集中,1,M6,スポーツ・健康論 岩嶋,孝夫,ybb003101,22D,対象[26-23],"対開講(水1,木4)",,33,2026横浜キャンパス前期.pdf,スポーツ・健康論岩嶋,LA-135,スポーツ・健康論,elective,共通分野,教養科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,後集中,2,M6,総合的品質管理 斎藤,文,ybb812401,32D,対象[25-23],"対開講(火4,木4)",,33,2026横浜キャンパス前期.pdf,総合的品質管理斎藤,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,4,後集中,3,M6,ビジネスシステムデザイ 長谷川 泰 ン演習,,ybb814301,72A,対象[24-23],"対開講(木3,木4)",,33,2026横浜キャンパス前期.pdf,ビジネスシステムデザイ長谷川泰ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,木,5,後集中,3,M6,リスク＆クライシスマネ 吉川 玄徳 ジメント,,yba814401,72A,対象[24-23],"対開講(木4,木5)",,33,2026横浜キャンパス前期.pdf,リスク&クライシスマネ吉川玄徳ジメント,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,後集中,4,M6,キャップストーンプロ ジェクト,佐藤 圭浩 吉川 玄徳 大久保 寛基 小川 祐樹,ybz815101,72A,対象[23-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,キャップストーンプロジェクト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,後集中,2,M6,Reading Comprehension,中村 優子,yba812102,32G,対象[25-23],"対開講(火1,金1)",,34,2026横浜キャンパス前期.pdf,ReadingComprehension,FL-211,Reading Comprehension,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,後集中,3,M6,デザインプロダクション 蓮池 公威 演習,,yba815101,"72B, 72C",対象[24-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,デザインプロダクション蓮池公威演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,後集中,2,M6,English Test Preparation,中村 優子,ybb812101,33K,対象[25-23],"対開講(火1,金1)",,34,2026横浜キャンパス前期.pdf,EnglishTestPreparation,FL-214,English Test Preparation,elective,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,1,後集中,3,M6,インタラクションデザイ 阪口 紗季 ン演習,,ybb815101,72D,対象[24-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,インタラクションデザイ阪口紗季ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,後集中,4,M6,キャップストーンプロ ジェクト,佐藤 圭浩 吉川 玄徳 大久保 寛基 小川 祐樹,ybz815101,72A,対象[23-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,キャップストーンプロジェクト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,後集中,3,M6,デザインプロダクション 蓮池 公威 演習,,yba815101,"72B, 72C",対象[24-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,デザインプロダクション蓮池公威演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,後集中,2,M6,Academic Reading,ストーン リチャード,yba812202,32B,対象[25-23],"対開講(火2,金2)",,34,2026横浜キャンパス前期.pdf,AcademicReading,FL-311,Academic Reading,elective-required,共通分野,外国語科目,exact,1.0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,2,後集中,3,M6,インタラクションデザイ 阪口 紗季 ン演習,,ybb815101,72D,対象[24-23],"対開講(金1,金2)",,34,2026横浜キャンパス前期.pdf,インタラクションデザイ阪口紗季ン演習,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,1,M6,教養特別講義（都市の社 増永 理考 会史）,,ybz055303,32B,対象[26-23],,,34,2026横浜キャンパス前期.pdf,教養特別講義(都市の社増永理考会史),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,1,M6,データ社会論,斎藤 文 吉川 玄徳,yba815302,FEIS,対象[26-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,データ社会論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,2,M6,ウェブプログラミング,阪口 紗季,yba815303,72A,対象[25-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,ウェブプログラミング,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,3,M6,自然言語処理,小川 祐樹,yba815301,31B,対象[24-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,自然言語処理,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,1,M6,アルゴリズムとデータ構 小川 祐樹 造,,ybb815302,31A,対象[26-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,アルゴリズムとデータ構小川祐樹造,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,2,M6,情報デザイン,矢崎 裕一,ybb815303,72B,対象[25-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,情報デザイン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,3,後集中,3,M6,未来創造デザインプロ ジェクト,吉川 玄徳,ybb815301,72A,対象[24-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,未来創造デザインプロジェクト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,1,M6,データ社会論,斎藤 文 吉川 玄徳,yba815302,FEIS,対象[26-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,データ社会論,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,2,M6,ウェブプログラミング,阪口 紗季,yba815303,72A,対象[25-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,ウェブプログラミング,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,3,M6,自然言語処理,小川 祐樹,yba815301,31B,対象[24-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,自然言語処理,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,1,M6,アルゴリズムとデータ構 小川 祐樹 造,,ybb815302,31A,対象[26-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,アルゴリズムとデータ構小川祐樹造,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,2,M6,情報デザイン,矢崎 裕一,ybb815303,72B,対象[25-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,情報デザイン,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,3,M6,未来創造デザインプロ ジェクト,吉川 玄徳,ybb815301,72A,対象[24-23],"対開講(金3,金4)",,34,2026横浜キャンパス前期.pdf,未来創造デザインプロジェクト,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,1,M6,特別講義(DX・GXが創造す 大久保 寛基 るビジネスの新しい潮 流）,,ybz817001,,対象[26-23],,,34,2026横浜キャンパス前期.pdf,特別講義(DX・GXが創造す大久保寛基るビジネスの新しい潮流),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,1,M6,ビジネス&アイデア・クリ 田口 亮 エーション,芝 正孝 大久保 寛基,sbz007642,,対象[26-23],"教養特別講義|YC実施教室 32A 【開講日】 9/23,10/7,10/21,11/4,11/25,12 /9,12/23,1/13 18:00～20:30",,34,2026横浜キャンパス前期.pdf,ビジネス&アイデア・クリ田口亮エーション,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_system,情シ,横浜,金,4,後集中,3,M6,ビヘイビアル・ファイナ 大久保 ンス 未定,寛基,yaz817001,,対象[24-23],,,34,2026横浜キャンパス前期.pdf,ビヘイビアル・ファイナ大久保ンス未定,,,,,,unmatched,0,,,unmatched-to-curriculum,0

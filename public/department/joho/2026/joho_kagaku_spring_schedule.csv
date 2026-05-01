@@ -1,0 +1,122 @@
+﻿departmentId,sourceDepartment,campus,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage,sourceFile,normalizedTitle,matchedCourseId,matchedCourseTitle,matchedCourseType,matchedCategory,matchedGroup,matchStatus,matchConfidence,curriculumCourseId,curriculumCourseTitle,curriculumMatchStatus,curriculumMatchConfidence
+joho_kagaku,情科,世田谷,月,1,前期前,1,,物理学(1),松尾 洋介,saa311104,1BL,対象[26-15],"対開講(月1,木1)",,33,2026世田谷キャンパス前期.pdf,物理学(1),IT-121,物理学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-121,物理学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,1,前期前,1,国際,物理学(1),砂畑 浩樹,saa311105,1BN,対象[26-15],"対開講(月1,木1)",,33,2026世田谷キャンパス前期.pdf,物理学(1),IT-121,物理学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-121,物理学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,1,前期前,2,国際,人工知能,中野 秀洋,saa311106,12M,対象[20-15],"対開講(月1,木1) ○",○,33,2026世田谷キャンパス前期.pdf,人工知能,CS-352,人工知能,required,専門分野,専門科目,exact,1.0,CS-352,人工知能,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,1,前期前,3,国際,人工知能,中野 秀洋,saa311106,12M,対象[24-21],"対開講(月1,木1) ○",○,33,2026世田谷キャンパス前期.pdf,人工知能,CS-352,人工知能,required,専門分野,専門科目,exact,1.0,CS-352,人工知能,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,1,前期後,1,国際,化学(1),堀越 篤史,sab311107,31A,対象[26-15],"対開講(月1,木1)",,33,2026世田谷キャンパス前期.pdf,化学(1),IT-125,化学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-125,化学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,1,前期後,2,国際,ハードウェア記述言語,中野 秀洋,sab311108,12L,対象[25-15],"対開講(月1,木1) ○",○,33,2026世田谷キャンパス前期.pdf,ハードウェア記述言語,CS-231,ハードウェア記述言語,elective,専門分野,専門科目,exact,1.0,CS-231,ハードウェア記述言語,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期前,1,国際,物理学(1)演習,松尾 洋介,saa311209,1BL,対象[26-15],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,物理学(1)演習,IT-122,物理学(1)演習,elective,専門分野,情報工学基盤科目,exact,1.0,IT-122,物理学(1)演習,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期前,2,国際,情報理論,新家 稔央,saa311202,22C,対象[25-15],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,情報理論,CS-251,情報理論,required,専門分野,専門科目,exact,1.0,CS-251,情報理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期前,2,国際,古典制御理論,大屋 英稔,saa311206,22B,対象[20-15],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,古典制御理論,CS-254,古典制御理論,elective,専門分野,専門科目,exact,1.0,CS-254,古典制御理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期前,3,国際,古典制御理論,大屋 英稔,saa311206,22B,対象[24-21],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,古典制御理論,CS-254,古典制御理論,elective,専門分野,専門科目,exact,1.0,CS-254,古典制御理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期後,2,国際,コンピュータシステム,中野 秀洋,sab311207,1BN,対象[25-15],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,コンピュータシステム,CS-232,コンピュータシステム,required,専門分野,専門科目,exact,1.0,CS-232,コンピュータシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期後,2,国際,ベクトル解析学,肥田野 久二男,sab151221,1BM,対象[25-15],"対開講(月2,木4)",,33,2026世田谷キャンパス前期.pdf,ベクトル解析学,IT-312,ベクトル解析学,elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-312,ベクトル解析学,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,2,前期後,3,国際,組込みシステム,兪 明連,sab311203,22B,対象[24-15],"対開講(月2,木2)",,33,2026世田谷キャンパス前期.pdf,組込みシステム,CS-332,組込みシステム,elective,専門分野,専門科目,exact,1.0,CS-332,組込みシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,3,前期,3,国際,情報科学演習,中野 秀洋 中村 徹 兪 明連 張 英夏,saz311305,"22A,22B,情",対象[24-15],"対開講(月3,月4,月5) 報通信実験 室,情報科学 科掲示板参",,33,2026世田谷キャンパス前期.pdf,情報科学演習,CS-211,情報科学演習,required,専門分野,専門科目,exact,1.0,CS-211,情報科学演習,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,3,前期前,1,国際,基礎体育(1a),久保 哲也 山田 盛朗 山口 良博,saa311301,-,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,基礎体育(1a),PE-111,基礎体育(1a),elective-required,共通分野,体育科目,exact,1.0,PE-111,基礎体育(1a),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,3,前期後,1,国際,基礎体育(1b),久保 哲也 山田 盛朗 山口 良博,sab311302,-,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,基礎体育(1b),PE-112,基礎体育(1b),elective-required,共通分野,体育科目,exact,1.0,PE-112,基礎体育(1b),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,4,前期,3,国際,情報科学演習,中野 秀洋 中村 徹 兪 明連 張 英夏,saz311305,"22A,22B,情",対象[24-15],"対開講(月3,月4,月5) 報通信実験 室,情報科学 科掲示板参",,33,2026世田谷キャンパス前期.pdf,情報科学演習,CS-211,情報科学演習,required,専門分野,専門科目,exact,1.0,CS-211,情報科学演習,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,4,前期前,2,国際,微分方程式論,古田 公司,saa311401,11A,対象[25-15],"対開講(月4,木4)",,33,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,月,5,前期,3,国際,情報科学演習,中野 秀洋 中村 徹 兪 明連 張 英夏,saz311305,"22A,22B,情",対象[24-15],"対開講(月3,月4,月5) 報通信実験 室,情報科学 科掲示板参",,33,2026世田谷キャンパス前期.pdf,情報科学演習,CS-211,情報科学演習,required,専門分野,専門科目,exact,1.0,CS-211,情報科学演習,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-A,Reading and,日高 正司,saa112101,12J,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-B,Reading and Writing(1a),ヴァーラ内田 エイ ドリアン ミッシェ,saa112102,12G,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,ReadingandWriting(1a),FL-117,Reading and Writing(2a),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-C,Reading and,秋間 聖代,saa112103,12C,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-D,Reading and,水戸 俊介,saa112104,12D,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-E,Reading and,鴨下 恵子,saa112105,12B,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-F,Reading and,古谷 裕美,saa112106,12E,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-G,Reading and,松本 淳子,saa112107,12F,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-H,Reading and,鷹取 勇希,saa112108,13K,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-I,Reading and,染谷 昌弘,saa112109,11C,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,1,III-J,Reading and,小林 美文,saa112110,12H,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期前,2,III-J,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-15],"対開講(火1,金1) ○",○,33,2026世田谷キャンパス前期.pdf,基礎論理回路,CS-131,基礎論理回路,required,専門分野,専門科目,exact,1.0,CS-131,基礎論理回路,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-A,Reading and,日高 正司,sab112111,12J,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-B,Reading and Writing(1b),ヴァーラ内田 エイ ドリアン ミッシェ,sab112112,12G,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,ReadingandWriting(1b),FL-118,Reading and Writing(2b),required,共通分野,外国語科目,fuzzy,0.952,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-C,Reading and,秋間 聖代,sab112113,12C,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-D,Reading and,水戸 俊介,sab112114,12D,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-E,Reading and,鴨下 恵子,sab112115,12B,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-F,Reading and,古谷 裕美,sab112116,12E,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-G,Reading and,松本 淳子,sab112117,12F,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-H,Reading and,鷹取 勇希,sab112118,13K,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-I,Reading and,染谷 昌弘,sab112119,11C,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,1,III-J,Reading and,小林 美文,sab112120,12H,対象[26-26],,,33,2026世田谷キャンパス前期.pdf,Readingand,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,1,前期後,3,III-J,計算論,池口 徹,sab312102,11D,対象[24-15],"対開講(火1,火2)",,33,2026世田谷キャンパス前期.pdf,計算論,CS-354,計算論,elective,専門分野,専門科目,exact,1.0,CS-354,計算論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,2,前期前,1,III-J,線形代数学(1a),陸名 雄一,saa312201,13N,対象[26-21],,,33,2026世田谷キャンパス前期.pdf,線形代数学(1a),IT-113,線形代数学(1a),required,専門分野,情報工学基盤科目,exact,1.0,IT-113,線形代数学(1a),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,2,前期前,2,III-J,デジタル信号処理,荒井 秀一,saa312206,22C,対象[25-15],"対開講(火2,金2)",,33,2026世田谷キャンパス前期.pdf,デジタル信号処理,CS-241,デジタル信号処理,required,専門分野,専門科目,exact,1.0,CS-241,デジタル信号処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,2,前期後,1,III-J,線形代数学(1b),陸名 雄一,sab312202,13N,対象[26-21],,,33,2026世田谷キャンパス前期.pdf,線形代数学(1b),IT-114,線形代数学(1b),required,専門分野,情報工学基盤科目,exact,1.0,IT-114,線形代数学(1b),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,2,前期後,2,III-J,アルゴリズムとデータ構 造,兪 明連,sab312208,21C,対象[25-15],"対開講(火2,金2)",,33,2026世田谷キャンパス前期.pdf,アルゴリズムとデータ構造,CS-222,アルゴリズムとデータ構造,required,専門分野,専門科目,exact,1.0,CS-222,アルゴリズムとデータ構造,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,2,前期後,3,III-J,計算論,池口 徹,sab312102,11D,対象[24-15],"対開講(火1,火2)",,33,2026世田谷キャンパス前期.pdf,計算論,CS-354,計算論,elective,専門分野,専門科目,exact,1.0,CS-354,計算論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期前,1,III-J,コンピュータ概論,佐々木 智志,saa312307,21C,対象[26-15],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,コンピュータ概論,IT-132,コンピュータ概論,required,専門分野,情報工学基盤科目,exact,1.0,IT-132,コンピュータ概論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期前,3,III-J,インタラクティブ･メ ディア,圓道 知博,saa312306,12H,対象[24-15],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,インタラクティブ・メディア,CS-344,インタラクティブ・メディア,elective,専門分野,専門科目,exact,1.0,CS-344,インタラクティブ・メディア,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期後,1,III-J,基礎確率統計,相原 研輔,sab312305,21C,対象[26-15],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,基礎確率統計,IT-115,基礎確率統計,required,専門分野,情報工学基盤科目,exact,1.0,IT-115,基礎確率統計,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期後,2,III-J,データベースシステム,延澤 志保,sab312303,21B,対象[25-15],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,データベースシステム,CS-242,データベースシステム,elective,専門分野,専門科目,exact,1.0,CS-242,データベースシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期後,2,III-J,画像処理,張 英夏,sab312308,12H,対象[20-15],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,画像処理,CS-342,画像処理,elective,専門分野,専門科目,exact,1.0,CS-342,画像処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,3,前期後,3,III-J,画像処理,張 英夏,sab312308,12H,対象[24-21],"対開講(火3,金3)",,33,2026世田谷キャンパス前期.pdf,画像処理,CS-342,画像処理,elective,専門分野,専門科目,exact,1.0,CS-342,画像処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,4,前期,1,III-J,数学演習(1),古田 公司 郭 柔均 肥田野 久二男,saz312403,"12A,12B,12C",対象[20-15],,,33,2026世田谷キャンパス前期.pdf,数学演習(1),IT-116,数学演習(1a),elective-required,専門分野,情報工学基盤科目,fuzzy,0.933,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,火,4,前期前,1,III-J,数学演習(1a),古田 公司 郭 柔均 肥田野 久二男,saa312401,"12A,12B,12C",対象[26-21],,,33,2026世田谷キャンパス前期.pdf,数学演習(1a),IT-116,数学演習(1a),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-116,数学演習(1a),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,4,前期前,2,III-J,ｵﾌﾞｼﾞｪｸﾄ指向ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ (1),中村 徹,saa312404,12J,対象[25-15],"対開講(火4,火5)",,33,2026世田谷キャンパス前期.pdf,オブジェクト指向プログラミング(1),CS-223,オブジェクト指向プログラミング(1),required,専門分野,専門科目,exact,1.0,CS-223,オブジェクト指向プログラミング(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,4,前期前,3,III-J,プログラミング言語処理,延澤 志保,saa312405,21B,対象[24-15],"対開講(火4,金4)",,33,2026世田谷キャンパス前期.pdf,プログラミング言語処理,CS-323,プログラミング言語処理,elective,専門分野,専門科目,exact,1.0,CS-323,プログラミング言語処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,4,前期後,1,III-J,数学演習(1b),古田 公司 郭 柔均 肥田野 久二男,sab312402,"12A,12B,12C",対象[26-21],,,33,2026世田谷キャンパス前期.pdf,数学演習(1b),IT-117,数学演習(1b),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-117,数学演習(1b),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,4,前期後,3,III-J,自然言語処理,延澤 志保,sab312406,12E,対象[24-15],"対開講(火4,金4)",,33,2026世田谷キャンパス前期.pdf,自然言語処理,CS-345,自然言語処理,elective,専門分野,専門科目,exact,1.0,CS-345,自然言語処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,火,5,前期前,2,III-J,ｵﾌﾞｼﾞｪｸﾄ指向ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ (1),中村 徹,saa312404,12J,対象[25-15],"対開講(火4,火5)",,33,2026世田谷キャンパス前期.pdf,オブジェクト指向プログラミング(1),CS-223,オブジェクト指向プログラミング(1),required,専門分野,専門科目,exact,1.0,CS-223,オブジェクト指向プログラミング(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,水,1,前期,1,III-J,SD PBL(1),圓道 知博 荒井 秀一 大屋 英稔 中野 秀洋,saz313101,"61C,1BL(1Q)","対象[26-20] 1BC,1BD,1BL ,1BM,1BN(2Q )",,,33,2026世田谷キャンパス前期.pdf,SDPBL(1),IT-137,SD PBL(1),required,専門分野,情報工学基盤科目,exact,1.0,IT-137,SD PBL(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,水,2,前期,2,III-J,SD PBL(2),圓道 知博 荒井 秀一 大屋 英稔 中野 秀洋,saz313201,"1BC,1BD,1BL","対象[25-20] ,1BM(1Q)1BC ,1BD,1BL,1B M,1BN(2Q)",,,34,2026世田谷キャンパス前期.pdf,SDPBL(2),IT-237,SD PBL(2),required,専門分野,情報工学基盤科目,exact,1.0,IT-237,SD PBL(2),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期前,1,III-J,物理学(1),松尾 洋介,saa311104,1BL,対象[26-15],"対開講(月1,木1)",,34,2026世田谷キャンパス前期.pdf,物理学(1),IT-121,物理学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-121,物理学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期前,1,国際,物理学(1),砂畑 浩樹,saa311105,1BN,対象[26-15],"対開講(月1,木1)",,34,2026世田谷キャンパス前期.pdf,物理学(1),IT-121,物理学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-121,物理学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期前,2,国際,人工知能,中野 秀洋,saa311106,12M,対象[20-15],"対開講(月1,木1) ○",○,34,2026世田谷キャンパス前期.pdf,人工知能,CS-352,人工知能,required,専門分野,専門科目,exact,1.0,CS-352,人工知能,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期前,3,国際,人工知能,中野 秀洋,saa311106,12M,対象[24-21],"対開講(月1,木1) ○",○,34,2026世田谷キャンパス前期.pdf,人工知能,CS-352,人工知能,required,専門分野,専門科目,exact,1.0,CS-352,人工知能,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期後,1,国際,化学(1),堀越 篤史,sab311107,31A,対象[26-15],"対開講(月1,木1)",,34,2026世田谷キャンパス前期.pdf,化学(1),IT-125,化学(1),elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-125,化学(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,1,前期後,2,国際,ハードウェア記述言語,中野 秀洋,sab311108,12L,対象[25-15],"対開講(月1,木1) ○",○,34,2026世田谷キャンパス前期.pdf,ハードウェア記述言語,CS-231,ハードウェア記述言語,elective,専門分野,専門科目,exact,1.0,CS-231,ハードウェア記述言語,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期前,1,国際,物理学(1)演習,松尾 洋介,saa311209,1BL,対象[26-15],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,物理学(1)演習,IT-122,物理学(1)演習,elective,専門分野,情報工学基盤科目,exact,1.0,IT-122,物理学(1)演習,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期前,2,国際,情報理論,新家 稔央,saa311202,22C,対象[25-15],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,情報理論,CS-251,情報理論,required,専門分野,専門科目,exact,1.0,CS-251,情報理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期前,2,国際,古典制御理論,大屋 英稔,saa311206,22B,対象[20-15],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,古典制御理論,CS-254,古典制御理論,elective,専門分野,専門科目,exact,1.0,CS-254,古典制御理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期前,3,国際,古典制御理論,大屋 英稔,saa311206,22B,対象[24-21],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,古典制御理論,CS-254,古典制御理論,elective,専門分野,専門科目,exact,1.0,CS-254,古典制御理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期後,2,国際,コンピュータシステム,中野 秀洋,sab311207,1BN,対象[25-15],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,コンピュータシステム,CS-232,コンピュータシステム,required,専門分野,専門科目,exact,1.0,CS-232,コンピュータシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,2,前期後,3,国際,組込みシステム,兪 明連,sab311203,22B,対象[24-15],"対開講(月2,木2)",,34,2026世田谷キャンパス前期.pdf,組込みシステム,CS-332,組込みシステム,elective,専門分野,専門科目,exact,1.0,CS-332,組込みシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,3,前期前,1,国際,情報リテラシー,張 英夏,saa314301,22C,対象[26-15],"対開講(木3,木4)",,34,2026世田谷キャンパス前期.pdf,情報リテラシー,IT-131,情報リテラシー,required,専門分野,情報工学基盤科目,exact,1.0,IT-131,情報リテラシー,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,3,前期後,2,国際,ｵﾌﾞｼﾞｪｸﾄ指向ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ (2),中村 徹,sab314302,12J,対象[25-15],"対開講(木3,木4)",,34,2026世田谷キャンパス前期.pdf,オブジェクト指向プログラミング(2),CS-321,オブジェクト指向プログラミング(2),required,専門分野,専門科目,exact,1.0,CS-321,オブジェクト指向プログラミング(2),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,4,前期前,1,国際,情報リテラシー,張 英夏,saa314301,22C,対象[26-15],"対開講(木3,木4)",,34,2026世田谷キャンパス前期.pdf,情報リテラシー,IT-131,情報リテラシー,required,専門分野,情報工学基盤科目,exact,1.0,IT-131,情報リテラシー,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,4,前期前,2,国際,微分方程式論,古田 公司,saa311401,11A,対象[25-15],"対開講(月4,木4)",,34,2026世田谷キャンパス前期.pdf,微分方程式論,IT-311,微分方程式論,elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-311,微分方程式論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,4,前期後,2,国際,ｵﾌﾞｼﾞｪｸﾄ指向ﾌﾟﾛｸﾞﾗﾐﾝｸﾞ (2),中村 徹,sab314302,12J,対象[25-15],"対開講(木3,木4)",,34,2026世田谷キャンパス前期.pdf,オブジェクト指向プログラミング(2),CS-321,オブジェクト指向プログラミング(2),required,専門分野,専門科目,exact,1.0,CS-321,オブジェクト指向プログラミング(2),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,4,前期後,2,国際,ベクトル解析学,肥田野 久二男,sab151221,1BM,対象[25-15],"対開講(月2,木4)",,34,2026世田谷キャンパス前期.pdf,ベクトル解析学,IT-312,ベクトル解析学,elective-required,専門分野,情報工学基盤科目,exact,1.0,IT-312,ベクトル解析学,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,木,5,前期,2,国際,デジタル信号処理,L・マテラム,saz314501,12J,対象[25-15],,,34,2026世田谷キャンパス前期.pdf,デジタル信号処理,CS-241,デジタル信号処理,required,専門分野,専門科目,exact,1.0,CS-241,デジタル信号処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-A,Communication,佐竹 幸信,saz115101,12G,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-B,Communication,グルンデル 教子,saz115102,12H,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-C,Communication Skills(1),ヴァーラ内田 エイ ドリアン ミッシェ,saz115103,12D,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,CommunicationSkills(1),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-D,Communication,倉持 和歌子,saz115104,12E,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-E,Communication,吹野 佐枝子,saz115105,11C,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-F,Communication,大塚 圭,saz115106,12B,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-G,Communication,吉田 季実子,saz115107,12F,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-H,Communication,松本 弘法,saz115108,11D,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-I,Communication,稲垣 亜希子,saz115109,11B,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期,1,III-J,Communication,三宅 加恵,saz115110,1BL,対象[26-26],,,34,2026世田谷キャンパス前期.pdf,Communication,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,1,前期前,2,III-J,基礎論理回路,佐々木 智志,saa312103,22C,対象[25-15],"対開講(火1,金1) ○",○,34,2026世田谷キャンパス前期.pdf,基礎論理回路,CS-131,基礎論理回路,required,専門分野,専門科目,exact,1.0,CS-131,基礎論理回路,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,1,前期後,3,III-J,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[24-15],"対開講(金1,金2)",,34,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,IT-134,キャリアデザイン,required,専門分野,情報工学基盤科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,2,前期前,1,III-J,微分積分学(1a),大槻 玲,saa315201,13M,対象[26-21],,,34,2026世田谷キャンパス前期.pdf,微分積分学(1a),IT-111,微分積分学(1a),required,専門分野,情報工学基盤科目,exact,1.0,IT-111,微分積分学(1a),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,2,前期前,2,III-J,デジタル信号処理,荒井 秀一,saa312206,22C,対象[25-15],"対開講(火2,金2)",,34,2026世田谷キャンパス前期.pdf,デジタル信号処理,CS-241,デジタル信号処理,required,専門分野,専門科目,exact,1.0,CS-241,デジタル信号処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,2,前期後,1,III-J,微分積分学(1b),大槻 玲,sab315202,13M,対象[26-21],,,34,2026世田谷キャンパス前期.pdf,微分積分学(1b),IT-112,微分積分学(1b),required,専門分野,情報工学基盤科目,exact,1.0,IT-112,微分積分学(1b),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,2,前期後,2,III-J,アルゴリズムとデータ構 造,兪 明連,sab312208,21C,対象[25-15],"対開講(火2,金2)",,34,2026世田谷キャンパス前期.pdf,アルゴリズムとデータ構造,CS-222,アルゴリズムとデータ構造,required,専門分野,専門科目,exact,1.0,CS-222,アルゴリズムとデータ構造,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,2,前期後,3,III-J,専門キャリアデザイン,川上 誓,sab315101,1BB,対象[24-15],"対開講(金1,金2)",,34,2026世田谷キャンパス前期.pdf,専門キャリアデザイン,IT-134,キャリアデザイン,required,専門分野,情報工学基盤科目,fuzzy,0.889,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,3,前期前,1,III-J,コンピュータ概論,佐々木 智志,saa312307,21C,対象[26-15],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,コンピュータ概論,IT-132,コンピュータ概論,required,専門分野,情報工学基盤科目,exact,1.0,IT-132,コンピュータ概論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,3,前期前,3,III-J,インタラクティブ･メ ディア,圓道 知博,saa312306,12H,対象[24-15],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,インタラクティブ・メディア,CS-344,インタラクティブ・メディア,elective,専門分野,専門科目,exact,1.0,CS-344,インタラクティブ・メディア,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,3,前期後,1,III-J,基礎確率統計,相原 研輔,sab312305,21C,対象[26-15],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,基礎確率統計,IT-115,基礎確率統計,required,専門分野,情報工学基盤科目,exact,1.0,IT-115,基礎確率統計,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,3,前期後,2,III-J,データベースシステム,延澤 志保,sab312303,21B,対象[25-15],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,データベースシステム,CS-242,データベースシステム,elective,専門分野,専門科目,exact,1.0,CS-242,データベースシステム,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,3,前期後,2,III-J,画像処理,張 英夏,sab312308,12J,対象[20-15],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,画像処理,CS-342,画像処理,elective,専門分野,専門科目,exact,1.0,CS-342,画像処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,3,前期後,3,III-J,画像処理,張 英夏,sab312308,12J,対象[24-21],"対開講(火3,金3)",,34,2026世田谷キャンパス前期.pdf,画像処理,CS-342,画像処理,elective,専門分野,専門科目,exact,1.0,CS-342,画像処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,4,前期前,3,III-J,プログラミング言語処理,延澤 志保,saa312405,21B,対象[24-15],"対開講(火4,金4)",,34,2026世田谷キャンパス前期.pdf,プログラミング言語処理,CS-323,プログラミング言語処理,elective,専門分野,専門科目,exact,1.0,CS-323,プログラミング言語処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,4,前期後,2,III-J,技術者倫理,田川 史朗,sab315401,21C,対象[25-22],,,34,2026世田谷キャンパス前期.pdf,技術者倫理,IT-232,技術者倫理,required,専門分野,情報工学基盤科目,exact,1.0,IT-232,技術者倫理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,4,前期後,2,III-J,再・情報社会と倫理(a),田川 史朗,sab315401,21C,対象[21-21],,,34,2026世田谷キャンパス前期.pdf,情報社会と倫理(a),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,金,4,前期後,3,III-J,自然言語処理,延澤 志保,sab312406,12E,対象[24-15],"対開講(火4,金4)",,34,2026世田谷キャンパス前期.pdf,自然言語処理,CS-345,自然言語処理,elective,専門分野,専門科目,exact,1.0,CS-345,自然言語処理,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,金,5,前期,2,国際,情報理論,L・マテラム,saz315501,12J,対象[25-15],,,34,2026世田谷キャンパス前期.pdf,情報理論,CS-251,情報理論,required,専門分野,専門科目,exact,1.0,CS-251,情報理論,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,1,前期,3,国際,再・情報社会と職業,川上 誓,saz316103,13L,対象[20-15],,,34,2026世田谷キャンパス前期.pdf,情報社会と職業,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,土,1,前期前,1,国際,プログラミング(1),星 義克,saa316101,21C,対象[26-15],"対開講(土1,土2)",,34,2026世田谷キャンパス前期.pdf,プログラミング(1),CS-121,プログラミング(1),required,専門分野,専門科目,exact,1.0,CS-121,プログラミング(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,1,前期前,3,国際,情報社会と職業(a),川上 誓,saa316105,13L,対象[24-21],,,34,2026世田谷キャンパス前期.pdf,情報社会と職業(a),IT-234,情報社会と職業(a),elective,専門分野,情報工学基盤科目,exact,1.0,IT-234,情報社会と職業(a),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,1,前期後,1,国際,プログラミング(2),盧 承鐸,sab316102,21C,対象[26-15],"対開講(土1,土2)",,34,2026世田谷キャンパス前期.pdf,プログラミング(2),CS-122,プログラミング(2),required,専門分野,専門科目,exact,1.0,CS-122,プログラミング(2),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,1,前期後,3,国際,情報社会と職業(b),川上 誓,sab316106,13L,対象[24-21],,,34,2026世田谷キャンパス前期.pdf,情報社会と職業(b),IT-235,情報社会と職業(b),elective,専門分野,情報工学基盤科目,exact,1.0,IT-235,情報社会と職業(b),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前期前,1,国際,プログラミング(1),星 義克,saa316101,21C,対象[26-15],"対開講(土1,土2)",,34,2026世田谷キャンパス前期.pdf,プログラミング(1),CS-121,プログラミング(1),required,専門分野,専門科目,exact,1.0,CS-121,プログラミング(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前期後,1,国際,プログラミング(2),盧 承鐸,sab316102,21C,対象[26-15],"対開講(土1,土2)",,34,2026世田谷キャンパス前期.pdf,プログラミング(2),CS-122,プログラミング(2),required,専門分野,専門科目,exact,1.0,CS-122,プログラミング(2),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前集中,1,国際,データサイエンスリテラ シー(1),吉田 雅裕,saz317601,-,対象[26-21],,,34,2026世田谷キャンパス前期.pdf,データサイエンスリテラシー(1),LA-145,データサイエンスリテラシー(1),elective,共通分野,教養科目,exact,1.0,LA-145,データサイエンスリテラシー(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前集中,2,国際,メディア表現,江口 響子,saz317603,-,対象[25-15],,,34,2026世田谷キャンパス前期.pdf,メディア表現,,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,土,2,前集中,2,国際,再・情報社会と倫理(b),相原 研輔 張 英夏,saz317602,-,対象[21-21],,,34,2026世田谷キャンパス前期.pdf,情報社会と倫理(b),,,,,,unmatched,0,,,unmatched-to-curriculum,0
+joho_kagaku,情科,世田谷,土,2,前集中,3,国際,情報リテラシー,張 英夏,saz317610,-,対象[24-15],,,34,2026世田谷キャンパス前期.pdf,情報リテラシー,IT-131,情報リテラシー,required,専門分野,情報工学基盤科目,exact,1.0,IT-131,情報リテラシー,curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前集中,4,国際,卒業研究(1),圓道 知博 荒井 秀一 大屋 英稔 中野 秀洋,saz317606,-,対象[23-19],,,34,2026世田谷キャンパス前期.pdf,卒業研究(1),CS-411,卒業研究(1),required,専門分野,専門科目,exact,1.0,CS-411,卒業研究(1),curriculum-exact-title,1.0
+joho_kagaku,情科,世田谷,土,2,前集中,4,国際,卒業研究(2),圓道 知博 荒井 秀一 大屋 英稔 中野 秀洋,saz317607,-,対象[23-19],,,34,2026世田谷キャンパス前期.pdf,卒業研究(2),CS-412,卒業研究(2),required,専門分野,専門科目,exact,1.0,CS-412,卒業研究(2),curriculum-exact-title,1.0

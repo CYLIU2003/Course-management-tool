@@ -1,8 +1,6 @@
 import type { Department } from '../../utils/autoLoadCSV';
-import type { ReactNode } from 'react';
 import YearSelector from '../timetable/YearSelector';
-
-export type AppPage = 'timetable' | 'grades' | 'courses';
+import { APP_PAGE_LABELS, type AppPage } from '../navigation/appNavigation';
 
 type AppHeaderProps = {
   title: string;
@@ -14,9 +12,7 @@ type AppHeaderProps = {
   onDepartmentChange: (departmentId: string) => void | Promise<void>;
   onEntranceYearChange: (year: number) => void | Promise<void>;
   onYearChange: (year: string) => void;
-  onPageChange: (page: AppPage) => void;
   onOpenSettings?: () => void;
-  dataMenu: ReactNode;
 };
 
 export default function AppHeader({
@@ -29,9 +25,7 @@ export default function AppHeader({
   onDepartmentChange,
   onEntranceYearChange,
   onYearChange,
-  onPageChange,
   onOpenSettings,
-  dataMenu,
 }: AppHeaderProps) {
   const entranceYears = [2023, 2024, 2025, 2026, 2027];
 
@@ -42,7 +36,9 @@ export default function AppHeader({
           <div className="app-brand__mark">🎓</div>
           <div>
             <h1 className="app-brand__title">{title}</h1>
-            <p className="app-brand__subtitle">履修状況をひと目で把握できるダッシュボード</p>
+            <p className="app-brand__subtitle">
+              {APP_PAGE_LABELS[currentPage]} / 履修状況をひと目で把握できるダッシュボード
+            </p>
           </div>
         </div>
 
@@ -70,18 +66,6 @@ export default function AppHeader({
           </label>
 
           <YearSelector value={currentYear} onChange={onYearChange} />
-
-          <nav className="page-switch" aria-label="ページ切り替え">
-            <button type="button" className={currentPage === 'timetable' ? 'page-switch__button is-active' : 'page-switch__button'} onClick={() => onPageChange('timetable')}>
-              時間割
-            </button>
-            <button type="button" className={currentPage === 'grades' ? 'page-switch__button is-active' : 'page-switch__button'} onClick={() => onPageChange('grades')}>
-              成績・単位
-            </button>
-            <button type="button" className={currentPage === 'courses' ? 'page-switch__button is-active' : 'page-switch__button'} onClick={() => onPageChange('courses')}>
-              科目一覧
-            </button>
-          </nav>
         </div>
 
         <div className="app-header__actions">
@@ -90,7 +74,6 @@ export default function AppHeader({
               設定
             </button>
           )}
-          {dataMenu}
         </div>
       </div>
     </header>

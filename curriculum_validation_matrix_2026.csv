@@ -1,0 +1,20 @@
+﻿departmentId,departmentName,facultyId,sourceStatus,requirementRows,curriculumRowsTotal,curriculumRowsFromPdf,scheduleDerivedSupplementRows,springScheduleRows,springScheduleRowsMatchedToCurriculum,springScheduleMatchRate,risk
+kikai,機械工学科,rikou,partial_no_department_curriculum_pdf,6,274,232,42,135,135,100.0%,要確認: 学科別教育課程表PDF未提供
+kikai_system,機械システム工学科,rikou,partial_no_department_curriculum_pdf,6,281,232,49,167,167,100.0%,要確認: 学科別教育課程表PDF未提供
+denki,電気電子通信工学科,rikou,partial_no_department_curriculum_pdf,6,328,232,96,182,182,100.0%,要確認: 学科別教育課程表PDF未提供
+iyo,医用工学科,rikou,partial_no_department_curriculum_pdf,6,273,232,41,142,142,100.0%,要確認: 学科別教育課程表PDF未提供
+ouyou_kagaku,応用化学科,rikou,partial_no_department_curriculum_pdf,6,328,232,96,270,270,100.0%,要確認: 学科別教育課程表PDF未提供
+genshiryoku,原子力安全工学科,rikou,partial_no_department_curriculum_pdf,6,232,232,0,0,0,0.0%,要確認: 学科別教育課程表PDF未提供
+shizen_shizen,自然科学科（自然コース）,rikou,partial_no_department_curriculum_pdf,6,306,232,74,152,152,100.0%,要確認: 学科別教育課程表PDF未提供
+shizen_suuri,自然科学科（数理コース）,rikou,partial_no_department_curriculum_pdf,6,306,232,74,152,152,100.0%,要確認: 学科別教育課程表PDF未提供
+kenchiku,建築学科,kenchiku_toshi,curriculum_pdf_available,6,308,308,0,167,114,68.3%,OK
+toshi_kogaku,都市工学科,kenchiku_toshi,curriculum_pdf_available,6,275,275,0,153,98,64.1%,OK
+joho_kagaku,情報科学科,joho,curriculum_pdf_available,6,277,277,0,121,84,69.4%,OK
+chino_joho,知能情報工学科,joho,curriculum_pdf_available,6,269,269,0,306,66,21.6%,OK
+kankyo_sosei,環境創生学科,kankyo,curriculum_pdf_available,6,170,170,0,479,160,33.4%,OK
+kankyo_keiei,環境経営システム学科,kankyo,curriculum_pdf_available,6,170,170,0,475,134,28.2%,OK
+shakai_media,社会メディア学科,media_joho,curriculum_pdf_available,6,154,154,0,469,106,22.6%,OK
+joho_system,情報システム学科,media_joho,curriculum_pdf_available,6,154,154,0,828,127,15.3%,OK
+design_data,デザイン・データ科学科,design_data,curriculum_pdf_available,5,74,74,0,0,0,0.0%,OK
+toshi_seikatsu,都市生活学科,toshi_seikatsu,curriculum_pdf_available,6,82,82,0,0,0,0.0%,OK
+ningen,人間科学科,ningen,curriculum_pdf_available,6,457,99,358,882,882,100.0%,OK

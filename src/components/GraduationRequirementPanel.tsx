@@ -1,142 +1,116 @@
-import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum } from '../utils/academicProgress';
+import { useEffect, useMemo, useState } from 'react';
+import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicYear } from '../utils/academicProgress';
 import { calculateGraduationRequirements } from '../utils/graduationRequirements';
+import { fetchRequirementCategories } from '../api/requirements';
+import RequirementCategoryGrid from './requirements/RequirementCategoryGrid';
+import RequirementCategoryDetailDrawer from './requirements/RequirementCategoryDetailDrawer';
+import type { RequirementCategorySummary } from '../utils/requirements';
 
 type GraduationRequirementPanelProps = {
   curriculum?: AcademicCurriculum;
   allYearsData: AcademicAllYearsData;
   courses: AcademicCourse[];
+  currentYear?: AcademicYear;
 };
+const CATEGORY_LOAD_ERROR = '区分一覧を読み込めませんでした。';
 
-const STATUS_STYLES = {
-  satisfied: {
-    border: 'color-mix(in oklab, var(--primary) 22%, var(--border-soft) 78%)',
-    background: 'color-mix(in oklab, var(--primary-soft) 72%, var(--surface) 28%)',
-    accent: 'var(--primary-strong)',
-  },
-  warning: {
-    border: 'color-mix(in oklab, var(--warning) 24%, var(--border-soft) 76%)',
-    background: 'color-mix(in oklab, var(--warning-soft) 72%, var(--surface) 28%)',
-    accent: 'var(--warning)',
-  },
-  danger: {
-    border: 'color-mix(in oklab, var(--danger) 24%, var(--border-soft) 76%)',
-    background: 'color-mix(in oklab, var(--danger-soft) 72%, var(--surface) 28%)',
-    accent: 'var(--danger)',
-  },
-} as const;
+export default function GraduationRequirementPanel({ curriculum, allYearsData, courses, currentYear }: GraduationRequirementPanelProps) {
+  const result = useMemo(() => calculateGraduationRequirements({ allYearsData, courses, curriculum }), [allYearsData, courses, curriculum]);
+  const [categories, setCategories] = useState<RequirementCategorySummary[]>([]);
+  const [loadingCategories, setLoadingCategories] = useState(true);
+  const [categoryError, setCategoryError] = useState<string | null>(null);
+  const [openCategoryId, setOpenCategoryId] = useState<string | null>(null);
 
-function getBadgeTone(missingCredits: number, earnedCredits: number, requiredCredits: number, plannedCredits: number) {
-  if (missingCredits <= 0 && earnedCredits >= requiredCredits) {
-    return 'satisfied' as const;
-  }
+  useEffect(() => {
+    let cancelled = false;
 
-  if (missingCredits <= 0 && plannedCredits > 0) {
-    return 'warning' as const;
-  }
+    async function loadCategories() {
+      setLoadingCategories(true);
+      setCategoryError(null);
 
-  if (missingCredits >= 5) {
-    return 'danger' as const;
-  }
+      try {
+        const nextCategories = await fetchRequirementCategories();
+        if (!cancelled) {
+          setCategories(nextCategories);
+        }
+      } catch (loadError) {
+        if (!cancelled) {
+          setCategoryError(loadError instanceof Error ? loadError.message : CATEGORY_LOAD_ERROR);
+        }
+      } finally {
+        if (!cancelled) {
+          setLoadingCategories(false);
+        }
+      }
+    }
 
-  return 'warning' as const;
-}
+    loadCategories();
 
-function getStatusText(missingCredits: number, earnedCredits: number, requiredCredits: number, plannedCredits: number) {
-  if (requiredCredits === 0) {
-    return '対象外';
-  }
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
-  if (missingCredits <= 0 && earnedCredits >= requiredCredits) {
-    return '条件達成済み';
-  }
-
-  if (missingCredits <= 0 && plannedCredits > 0) {
-    return '履修予定を含めれば達成';
-  }
-
-  return `不足 ${missingCredits} 単位`;
-}
-
-export default function GraduationRequirementPanel({ curriculum, allYearsData, courses }: GraduationRequirementPanelProps) {
-  const result = calculateGraduationRequirements({ allYearsData, courses, curriculum });
-  const totalStatus = result.statuses.find((status) => status.category === 'total');
+  const currentRequiredCredits = result.statuses.find((status) => status.category === 'total')?.requiredCredits ?? curriculum?.requiredCredits ?? 0;
 
   return (
     <section className="tt-card" style={{ marginTop: '1.5rem' }}>
       <div className="section-title">
         <div>
-          <h2>卒業要件不足表示</h2>
-          <span className="small">履修予定を含めたルールベース判定です</span>
+          <h2>区分別 該当授業・要件算入状況</h2>
+          <span className="small">区分ごとの該当授業と、卒業要件への算入状況をひとつの画面で確認できます</span>
         </div>
-        <span className="course-tag" style={{ fontWeight: 800 }}>
+        <span className="course-tag course-tag--neutral" style={{ fontWeight: 800 }}>
           {result.plannedCredits > 0 ? `履修予定 ${result.plannedCredits} 単位` : '履修予定なし'}
         </span>
       </div>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))',
-          gap: '0.85rem',
-        }}
-      >
-        {result.statuses.map((status) => {
-          const tone = getBadgeTone(status.missingCredits, status.earnedCredits, status.requiredCredits, status.plannedCredits);
-          const toneStyle = STATUS_STYLES[tone];
-
-          return (
-            <article
-              key={status.category}
-              style={{
-                border: `1px solid ${toneStyle.border}`,
-                borderRadius: '14px',
-                padding: '0.95rem 1rem',
-                background: toneStyle.background,
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.75rem', alignItems: 'start' }}>
-                <div>
-                  <div style={{ fontWeight: 800, marginBottom: '0.25rem' }}>{status.label}</div>
-                  <div className="small" style={{ color: 'var(--muted)' }}>
-                    必要 {status.requiredCredits} 単位
-                  </div>
-                </div>
-                <span className="course-tag" style={{ color: toneStyle.accent, fontWeight: 800 }}>
-                  {getStatusText(status.missingCredits, status.earnedCredits, status.requiredCredits, status.plannedCredits)}
-                </span>
-              </div>
-
-              <div style={{ display: 'grid', gap: '0.35rem', marginTop: '0.85rem', fontSize: '0.92rem' }}>
-                <div>取得済み: {status.earnedCredits} 単位</div>
-                <div>履修予定: {status.plannedCredits} 単位</div>
-                <div>不足: {status.missingCredits} 単位</div>
-              </div>
-
-              <div style={{ height: '10px', borderRadius: '999px', background: 'var(--stroke)', overflow: 'hidden', marginTop: '0.9rem' }}>
-                <div
-                  style={{
-                    width: `${status.requiredCredits === 0 ? 100 : Math.min(100, ((status.earnedCredits + status.plannedCredits) / status.requiredCredits) * 100)}%`,
-                    height: '100%',
-                    borderRadius: '999px',
-                    background: `linear-gradient(135deg, ${toneStyle.accent}, color-mix(in oklab, ${toneStyle.accent} 60%, white 40%))`,
-                  }}
-                />
-              </div>
-            </article>
-          );
-        })}
-      </div>
-
-      <div style={{ marginTop: '1rem', display: 'grid', gap: '0.5rem' }}>
-        <div className="small" style={{ color: 'var(--muted)' }}>
-          取得済み {result.earnedCredits} 単位 / 履修予定 {result.plannedCredits} 単位 / 合計 {totalStatus?.requiredCredits ?? 0} 単位
+      {!curriculum ? (
+        <div
+          style={{
+            padding: '0.9rem 1rem',
+            borderRadius: '12px',
+            border: '1px solid color-mix(in oklab, #f59e0b 30%, var(--stroke) 70%)',
+            background: 'color-mix(in oklab, #f59e0b 10%, var(--card) 90%)',
+            color: 'var(--text)',
+            marginBottom: '1rem',
+          }}
+        >
+          卒業要件CSVが未読込です。区分別の表示はモックデータで確認できますが、実データの卒業判定は要件CSVを読み込むと有効になります。
         </div>
-        {result.plannedCourses.length > 0 && (
-          <div className="small" style={{ color: 'var(--muted)' }}>
-            履修予定科目 {result.plannedCourses.length} 件が時間割に反映されています。
-          </div>
-        )}
+      ) : null}
+
+      <div className="small" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>
+        現在の集計: 取得済 {result.earnedCredits} 単位 / 履修予定 {result.plannedCredits} 単位 / 必要 {currentRequiredCredits} 単位
       </div>
+
+      <RequirementCategoryGrid
+        categories={categories}
+        currentYear={currentYear}
+        loading={loadingCategories}
+        error={categoryError}
+        onRetry={() => {
+          setCategoryError(null);
+          setLoadingCategories(true);
+          fetchRequirementCategories()
+            .then((nextCategories) => {
+              setCategories(nextCategories);
+            })
+            .catch((loadError) => {
+              setCategoryError(loadError instanceof Error ? loadError.message : CATEGORY_LOAD_ERROR);
+            })
+            .finally(() => {
+              setLoadingCategories(false);
+            });
+        }}
+        onOpenDetail={setOpenCategoryId}
+      />
+
+      <RequirementCategoryDetailDrawer
+        open={openCategoryId !== null}
+        categoryId={openCategoryId}
+        onClose={() => setOpenCategoryId(null)}
+      />
     </section>
   );
 }
