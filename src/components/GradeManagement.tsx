@@ -15,6 +15,7 @@ interface GradeManagementProps {
   allYearsData: AcademicAllYearsData;
   currentYear: AcademicYear;
   onBack: () => void;
+  showRequirementsPanel?: boolean;
 }
 
 export default function GradeManagement({
@@ -24,14 +25,15 @@ export default function GradeManagement({
   allYearsData,
   currentYear,
   onBack,
+  showRequirementsPanel = true,
 }: GradeManagementProps) {
   return (
     <section className="grade-page">
       <div className="tt-card">
         <div className="section-title">
-          <h2>📊 成績・単位管理</h2>
+          <h2>成績と GPA</h2>
           <button type="button" onClick={onBack} className="btn-ghost">
-            ← 時間割に戻る
+            ← 時間割へ
           </button>
         </div>
       </div>
@@ -45,12 +47,14 @@ export default function GradeManagement({
         curriculum={settings.curriculum}
       />
 
-      <GraduationRequirementPanel
-        curriculum={settings.curriculum}
-        allYearsData={allYearsData}
-        courses={importedCourses}
-        currentYear={currentYear}
-      />
+      {showRequirementsPanel && (
+        <GraduationRequirementPanel
+          curriculum={settings.curriculum}
+          allYearsData={allYearsData}
+          courses={importedCourses}
+          currentYear={currentYear}
+        />
+      )}
 
       <GpaSummaryPanel snapshot={snapshot} allYearsData={allYearsData} />
 
