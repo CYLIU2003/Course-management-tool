@@ -1,6 +1,6 @@
-import { parseCSVFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithSchedule } from './csvImporter';
+import { parseCreditRequirementsFile, parseCoursesFile, parseClassScheduleFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithSchedule } from './csvImporter';
 import type { AcademicCourse, AcademicCurriculum } from './academicProgress';
-import type { CreditRequirementRow, CourseRow, ClassScheduleRow } from './csvImporter';
+import type { ClassScheduleRow, CsvParseIssue } from './csvImporter';
 
 export interface Department {
   id: string;
@@ -98,6 +98,14 @@ function findDepartment(departmentId: string): Department | undefined {
   return AVAILABLE_DEPARTMENTS.find((d) => d.id === departmentId);
 }
 
+function summarizeValidationIssues(issues: CsvParseIssue[]) {
+  return issues.slice(0, 3).map((issue) => {
+    const rowPrefix = issue.rowNumber ? `row ${issue.rowNumber}` : 'row ?';
+    const fieldPrefix = issue.field ? `${issue.field}: ` : '';
+    return `${rowPrefix} ${fieldPrefix}${issue.message}`.trim();
+  }).join(' / ');
+}
+
 function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
   const dept = findDepartment(departmentId);
   const facultyId = dept?.facultyId ?? 'rikou';
@@ -170,18 +178,50 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     resources.push(timetableFetch.result);
     const requirementsFile = new File([new Blob([requirementsFetch.text], { type: 'text/csv' })], `${departmentId}_credit_requirements.csv`, { type: 'text/csv' });
     const timetableFile = new File([new Blob([timetableFetch.text], { type: 'text/csv' })], `${departmentId}_timetable_by_category.csv`, { type: 'text/csv' });
-    const requirementRows = await parseCSVFile<CreditRequirementRow>(requirementsFile);
-    requirementsFetch.result.rowCount = requirementRows.length;
-    const timetableRows = await parseCSVFile<CourseRow>(timetableFile);
-    timetableFetch.result.rowCount = timetableRows.length;
+    const requirementParse = await parseCreditRequirementsFile(requirementsFile);
+    const requirementRows = requirementParse.rows;
+    requirementsFetch.result.rowCount = requirementParse.rows.length;
+    requirementsFetch.result.message = `${requirementsFetch.result.message ?? 'requirements CSVを読み込みました。'} (${requirementParse.rows.length}行)`;
+    if (requirementParse.warnings.length > 0) {
+      messages.push({ level: 'warning', text: `${requirementsFetch.result.path ?? requirementsFile.name}: ${summarizeValidationIssues(requirementParse.warnings)}` });
+    }
+    if (requirementParse.errors.length > 0) {
+      requirementsFetch.result.status = 'failed';
+      requirementsFetch.result.error = summarizeValidationIssues(requirementParse.errors);
+      throw new CSVAutoLoadError('卒業要件CSVに不正な行があります。', [requirementsFetch.result, timetableFetch.result], [...messages, { level: 'error', text: `卒業要件CSV: ${summarizeValidationIssues(requirementParse.errors)}` }]);
+    }
+
+    const timetableParse = await parseCoursesFile(timetableFile);
+    const timetableRows = timetableParse.rows;
+    timetableFetch.result.rowCount = timetableParse.rows.length;
+    timetableFetch.result.message = `${timetableFetch.result.message ?? 'timetable CSVを読み込みました。'} (${timetableParse.rows.length}行)`;
+    if (timetableParse.warnings.length > 0) {
+      messages.push({ level: 'warning', text: `${timetableFetch.result.path ?? timetableFile.name}: ${summarizeValidationIssues(timetableParse.warnings)}` });
+    }
+    if (timetableParse.errors.length > 0) {
+      timetableFetch.result.status = 'failed';
+      timetableFetch.result.error = summarizeValidationIssues(timetableParse.errors);
+      throw new CSVAutoLoadError('科目一覧CSVに不正な行があります。', [requirementsFetch.result, timetableFetch.result], [...messages, { level: 'error', text: `科目一覧CSV: ${summarizeValidationIssues(timetableParse.errors)}` }]);
+    }
+
     const scheduleFetch = await fetchOptionalCSVText('schedule', [paths.schedule, paths.sharedSchedule, paths.fallbackSchedule, paths.fallbackSharedSchedule]);
     resources.push(scheduleFetch.result);
     let scheduleRows: ClassScheduleRow[] = [];
     let scheduleCourses: AcademicCourse[] = [];
     if (scheduleFetch.result.status === 'loaded' && scheduleFetch.text) {
       const scheduleFile = new File([new Blob([scheduleFetch.text], { type: 'text/csv' })], scheduleFetch.result.path?.split('/').pop() ?? 'spring_schedule.csv', { type: 'text/csv' });
-      scheduleRows = await parseCSVFile<ClassScheduleRow>(scheduleFile);
-      scheduleFetch.result.rowCount = scheduleRows.length;
+      const scheduleParse = await parseClassScheduleFile(scheduleFile);
+      scheduleFetch.result.rowCount = scheduleParse.rows.length;
+      scheduleFetch.result.message = `${scheduleFetch.result.message ?? 'schedule CSVを読み込みました。'} (${scheduleParse.rows.length}行)`;
+      if (scheduleParse.warnings.length > 0) {
+        messages.push({ level: 'warning', text: `${scheduleFetch.result.path ?? scheduleFile.name}: ${summarizeValidationIssues(scheduleParse.warnings)}` });
+      }
+      if (scheduleParse.errors.length > 0) {
+        scheduleFetch.result.status = 'failed';
+        scheduleFetch.result.error = summarizeValidationIssues(scheduleParse.errors);
+        throw new CSVAutoLoadError('時間割CSVに不正な行があります。', [requirementsFetch.result, timetableFetch.result, scheduleFetch.result], [...messages, { level: 'error', text: `時間割CSV: ${summarizeValidationIssues(scheduleParse.errors)}` }]);
+      }
+      scheduleRows = scheduleParse.rows;
       scheduleCourses = parseClassScheduleRows(scheduleRows, departmentId);
     }
     const curriculum = parseCreditRequirements(requirementRows);

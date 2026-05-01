@@ -99,6 +99,32 @@ function formatOfferingSummary(offering?: CourseOffering) {
   ].filter(Boolean).join(' / ');
 }
 
+function buildCsvLoadDetails(result: AutoLoadDepartmentCSVResult | null) {
+  if (!result) {
+    return [] as string[];
+  }
+
+  const requirementResource = result.resources.find((resource) => resource.kind === 'requirements');
+  const timetableResource = result.resources.find((resource) => resource.kind === 'timetable');
+  const scheduleResource = result.resources.find((resource) => resource.kind === 'schedule');
+  const warnings = result.messages.filter((message) => message.level === 'warning').length;
+  const errors = result.messages.filter((message) => message.level === 'error').length;
+
+  const details = [
+    requirementResource ? `要件CSV: ${requirementResource.path ?? requirementResource.attemptedPaths[0] ?? '-'} / ${requirementResource.rowCount ?? 0}行` : null,
+    timetableResource ? `科目CSV: ${timetableResource.path ?? timetableResource.attemptedPaths[0] ?? '-'} / ${timetableResource.rowCount ?? 0}行` : null,
+    scheduleResource
+      ? scheduleResource.status === 'missing'
+        ? '時間割CSV: 未検出（教室・担当教員・講義コードの同期は制限されます）'
+        : `時間割CSV: ${scheduleResource.path ?? scheduleResource.attemptedPaths[0] ?? '-'} / ${scheduleResource.rowCount ?? 0}行`
+      : null,
+    result.resources.some((resource) => resource.status === 'fallback-loaded') ? 'fallback CSVを使用しました' : null,
+    `警告 ${warnings}件 / エラー ${errors}件`,
+  ].filter((value): value is string => Boolean(value));
+
+  return details;
+}
+
 // ヘルパー関数群
 function createDefaultQuarterRanges(): QuarterRanges {
   const ranges = {} as QuarterRanges;
@@ -144,6 +170,7 @@ export default function TimetableApp() {
   const [csvLoading, setCsvLoading] = useState(false);
   const [csvLoadResult, setCsvLoadResult] = useState<AutoLoadDepartmentCSVResult | null>(null);
   const [csvLoadError, setCsvLoadError] = useState<string | null>(null);
+  const csvLoadDetails = useMemo(() => buildCsvLoadDetails(csvLoadResult), [csvLoadResult]);
 
   useEffect(() => {
     if (import.meta.env.DEV) {
@@ -642,6 +669,7 @@ export default function TimetableApp() {
       <DataLoadNotice
         status={csvLoading ? "loading" : csvLoadError ? "failed" : csvLoadResult?.status === "partial" ? "partial" : csvLoadResult?.status === "success" ? "ready" : "idle"}
         message={csvLoadError}
+        details={csvLoadDetails}
         onRetry={csvLoadError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
       />
 
