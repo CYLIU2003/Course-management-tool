@@ -1,0 +1,459 @@
+{
+  "kikai": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "機械工学科",
+    "course_rows": 283,
+    "courseTypeCounts": {
+      "elective": 232,
+      "elective-required": 15,
+      "required": 36
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 283
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/kikai_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/kikai_timetable_by_category.csv"
+    }
+  },
+  "kikai_system": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "機械システム工学科",
+    "course_rows": 300,
+    "courseTypeCounts": {
+      "elective": 228,
+      "elective-required": 28,
+      "required": 44
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 300
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/kikai_system_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/kikai_system_timetable_by_category.csv"
+    }
+  },
+  "denki": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "電気電子通信工学科",
+    "course_rows": 308,
+    "courseTypeCounts": {
+      "elective": 230,
+      "elective-required": 39,
+      "required": 39
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 308
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/denki_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/denki_timetable_by_category.csv"
+    }
+  },
+  "iyo": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "医用工学科",
+    "course_rows": 295,
+    "courseTypeCounts": {
+      "elective": 230,
+      "elective-required": 21,
+      "required": 44
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 295
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/iyo_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/iyo_timetable_by_category.csv"
+    }
+  },
+  "ouyou_kagaku": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "応用化学科",
+    "course_rows": 306,
+    "courseTypeCounts": {
+      "elective": 244,
+      "elective-required": 15,
+      "required": 47
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 306
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/ouyou_kagaku_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/ouyou_kagaku_timetable_by_category.csv"
+    }
+  },
+  "genshiryoku": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "原子力安全工学科",
+    "course_rows": 296,
+    "courseTypeCounts": {
+      "elective": 237,
+      "elective-required": 22,
+      "required": 37
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 296
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/genshiryoku_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/genshiryoku_timetable_by_category.csv"
+    }
+  },
+  "shizen_shizen": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "自然科学科（自然コース）",
+    "course_rows": 311,
+    "courseTypeCounts": {
+      "elective": 250,
+      "elective-required": 21,
+      "required": 40
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 311
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/shizen_shizen_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/shizen_shizen_timetable_by_category.csv"
+    }
+  },
+  "shizen_suuri": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "自然科学科（数理コース）",
+    "course_rows": 311,
+    "courseTypeCounts": {
+      "elective": 250,
+      "elective-required": 21,
+      "required": 40
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 311
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/rikou/2026/shizen_suuri_credit_requirements.csv",
+      "courses": "public/department/rikou/2026/shizen_suuri_timetable_by_category.csv"
+    }
+  },
+  "kenchiku": {
+    "facultyId": "kenchiku_toshi",
+    "faculty": "建築都市デザイン学部",
+    "departmentName": "建築学科",
+    "course_rows": 293,
+    "courseTypeCounts": {
+      "elective": 205,
+      "elective-required": 48,
+      "required": 40
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 293
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/kenchiku_toshi/2026/kenchiku_credit_requirements.csv",
+      "courses": "public/department/kenchiku_toshi/2026/kenchiku_timetable_by_category.csv"
+    }
+  },
+  "toshi_kogaku": {
+    "facultyId": "kenchiku_toshi",
+    "faculty": "建築都市デザイン学部",
+    "departmentName": "都市工学科",
+    "course_rows": 268,
+    "courseTypeCounts": {
+      "elective": 203,
+      "elective-required": 30,
+      "required": 35
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 267,
+      "pdf_table_missing_course_number": 1
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科の4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/kenchiku_toshi/2026/toshi_kogaku_credit_requirements.csv",
+      "courses": "public/department/kenchiku_toshi/2026/toshi_kogaku_timetable_by_category.csv"
+    }
+  },
+  "joho_kagaku": {
+    "facultyId": "joho",
+    "faculty": "情報工学部",
+    "departmentName": "情報科学科",
+    "course_rows": 285,
+    "courseTypeCounts": {
+      "elective": 214,
+      "elective-required": 25,
+      "required": 46
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 285
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科・コースの4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/joho/2026/joho_kagaku_credit_requirements.csv",
+      "courses": "public/department/joho/2026/joho_kagaku_timetable_by_category.csv"
+    }
+  },
+  "chino_joho": {
+    "facultyId": "joho",
+    "faculty": "情報工学部",
+    "departmentName": "知能情報工学科",
+    "course_rows": 280,
+    "courseTypeCounts": {
+      "elective": 230,
+      "elective-required": 17,
+      "required": 33
+    },
+    "sourceQualityCounts": {
+      "pdf_table": 280
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年次終了時に、卒業要件非加算を除き60単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "3年以上在学し、卒業要件非加算を除き100単位以上を修得し、各学科・コースの4年次進級条件を満たすこと。",
+      "research": "4年次進級条件を満たすこと。早期着手は学部・大学院一貫教育プログラム等で学科が認める場合に限る。"
+    },
+    "files": {
+      "requirements": "public/department/joho/2026/chino_joho_credit_requirements.csv",
+      "courses": "public/department/joho/2026/chino_joho_timetable_by_category.csv"
+    }
+  },
+  "kankyo_sosei": {
+    "facultyId": "kankyo",
+    "faculty": "環境学部",
+    "departmentName": "環境創生学科",
+    "course_rows": 266,
+    "courseTypeCounts": {
+      "required": 20,
+      "elective": 243,
+      "elective-required": 3
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 266
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年以上在学し、66単位以上を修得しなければ事例研究(1)に着手できない。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、事例研究(1)及び事例研究(2)を含む100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/kankyo/2026/kankyo_sosei_credit_requirements.csv",
+      "courses": "public/department/kankyo/2026/kankyo_sosei_timetable_by_category.csv"
+    }
+  },
+  "kankyo_keiei": {
+    "facultyId": "kankyo",
+    "faculty": "環境学部",
+    "departmentName": "環境経営システム学科",
+    "course_rows": 265,
+    "courseTypeCounts": {
+      "required": 17,
+      "elective": 245,
+      "elective-required": 3
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 265
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年以上在学し、66単位以上を修得しなければ事例研究(1)に着手できない。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、事例研究(1)及び事例研究(2)を含む100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/kankyo/2026/kankyo_keiei_credit_requirements.csv",
+      "courses": "public/department/kankyo/2026/kankyo_keiei_timetable_by_category.csv"
+    }
+  },
+  "shakai_media": {
+    "facultyId": "media_joho",
+    "faculty": "メディア情報学部",
+    "departmentName": "社会メディア学科",
+    "course_rows": 261,
+    "courseTypeCounts": {
+      "required": 16,
+      "elective": 222,
+      "elective-required": 23
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 261
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年以上在学し、66単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、事例研究を含む100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/media_joho/2026/shakai_media_credit_requirements.csv",
+      "courses": "public/department/media_joho/2026/shakai_media_timetable_by_category.csv"
+    }
+  },
+  "joho_system": {
+    "facultyId": "media_joho",
+    "faculty": "メディア情報学部",
+    "departmentName": "情報システム学科",
+    "course_rows": 258,
+    "courseTypeCounts": {
+      "required": 31,
+      "elective": 221,
+      "elective-required": 6
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 258
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年以上在学し、66単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、事例研究を含む100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/media_joho/2026/joho_system_credit_requirements.csv",
+      "courses": "public/department/media_joho/2026/joho_system_timetable_by_category.csv"
+    }
+  },
+  "design_data": {
+    "facultyId": "design_data",
+    "faculty": "デザイン・データ科学部",
+    "departmentName": "デザイン・データ科学科",
+    "course_rows": 125,
+    "courseTypeCounts": {
+      "elective": 81,
+      "elective-required": 30,
+      "required": 14
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 125
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "2年以上在学し、50単位以上を修得しなければ3年次に進級できない。",
+      "fourth": "4年次進級条件は個別明記ではなくキャップストーンプロジェクト着手条件として管理。",
+      "research": "3年半以上在学し、110単位以上を修得しなければキャップストーンプロジェクトに着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/design_data/2026/design_data_credit_requirements.csv",
+      "courses": "public/department/design_data/2026/design_data_timetable_by_category.csv"
+    }
+  },
+  "toshi_seikatsu": {
+    "facultyId": "toshi_seikatsu",
+    "faculty": "都市生活学部",
+    "departmentName": "都市生活学科",
+    "course_rows": 274,
+    "courseTypeCounts": {
+      "elective": 223,
+      "required": 23,
+      "elective-required": 28
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 274
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "学則上、3年次進級の単位条件は個別記載なし。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/toshi_seikatsu/2026/toshi_seikatsu_credit_requirements.csv",
+      "courses": "public/department/toshi_seikatsu/2026/toshi_seikatsu_timetable_by_category.csv"
+    }
+  },
+  "ningen": {
+    "facultyId": "ningen",
+    "faculty": "人間科学部",
+    "departmentName": "人間科学科",
+    "course_rows": 291,
+    "courseTypeCounts": {
+      "elective": 203,
+      "required": 78,
+      "elective-required": 10
+    },
+    "sourceQualityCounts": {
+      "pdftotext_line": 291
+    },
+    "graduation_total_credits": 124.0,
+    "progression": {
+      "third": "学則上、3年次進級の単位条件は個別記載なし。",
+      "fourth": "4年次進級条件は個別明記ではなく卒業研究着手条件として管理。",
+      "research": "3年以上在学し、100単位以上を修得しなければ卒業研究に着手できない。"
+    },
+    "files": {
+      "requirements": "public/department/ningen/2026/ningen_credit_requirements.csv",
+      "courses": "public/department/ningen/2026/ningen_timetable_by_category.csv"
+    }
+  }
+}
