@@ -78,6 +78,8 @@ function toCourseTypeLabel(courseType: CourseType) {
       return '選択必修';
     case 'elective':
       return '選択';
+    case 'unknown':
+      return '区分未確認';
   }
 }
 
@@ -111,6 +113,10 @@ export function recommendCourses({
 
   for (const course of courses) {
     if ((course.credits ?? 0) <= 0) {
+      continue;
+    }
+
+    if (course.courseType === 'unknown') {
       continue;
     }
 

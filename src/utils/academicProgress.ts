@@ -1,9 +1,11 @@
 export type Grade = "秀" | "優" | "良" | "可" | "不可" | "未履修";
-export type CourseType = "required" | "elective-required" | "elective";
+export type CourseType = "required" | "elective-required" | "elective" | "unknown";
 export type AcademicQuarter = "1Q" | "2Q" | "3Q" | "4Q";
 export type AcademicYear = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
 
 export interface CourseOffering {
+  id?: string;
+  courseId?: string;
   departmentId: string;
   sourceDepartment?: string;
   day: string;
@@ -31,10 +33,16 @@ export interface AcademicCourse {
   tags?: string[];
   requirementSubtype?: 'triangle1' | 'triangle2' | 'none';
   sourceKind?: 'curriculum' | 'schedule';
+  departmentId?: string;
+  curriculumYear?: number;
+  lectureCodes?: string[];
+  aliases?: string[];
   offerings?: CourseOffering[];
 }
 
 export interface AcademicCourseCell {
+  courseId?: string;
+  offeringId?: string;
   title: string;
   room?: string;
   teacher?: string;
@@ -221,15 +229,24 @@ function collectMetrics(allYearsData: AcademicAllYearsData) {
   let currentGradedCredits = 0;
   const failedRequiredCourses: AcademicCourseInstance[] = [];
   const failedElectiveRequiredCourses: AcademicCourseInstance[] = [];
+  const unknownCourses: AcademicCourseInstance[] = [];
 
   for (const entry of entries) {
     const credits = entry.credits ?? 0;
+    if (entry.courseType === 'unknown' && credits > 0) {
+      unknownCourses.push(entry);
+    }
+
     if (!entry.grade || entry.grade === "未履修" || credits <= 0) {
       continue;
     }
 
     currentGradedCredits += credits;
     currentEarnedPoints += getGradePoint(entry.grade) * credits;
+
+    if (entry.courseType === 'unknown') {
+      continue;
+    }
 
     if (entry.grade === "不可") {
       if (entry.courseType === "required") {
@@ -259,6 +276,7 @@ function collectMetrics(allYearsData: AcademicAllYearsData) {
     currentGpa: currentGradedCredits === 0 ? 0 : currentEarnedPoints / currentGradedCredits,
     failedRequiredCourses,
     failedElectiveRequiredCourses,
+    unknownCourses,
   };
 }
 
@@ -434,6 +452,18 @@ export function generateGraduationWarnings(
     }
   }
 
+  if (metrics.unknownCourses.length > 0) {
+    warnings.push({
+      id: "unknown-course-type",
+      level: "warning",
+      message: `区分未確認の科目が${metrics.unknownCourses.length}件あります`,
+      detail: metrics.unknownCourses
+        .slice(0, 3)
+        .map((course) => `${course.title} (${formatCourseLocation(course)})`)
+        .join(" / "),
+    });
+  }
+
   if (metrics.failedRequiredCourses.length > 0) {
     warnings.push({
       id: "failed-required",
@@ -465,9 +495,83 @@ export function generateDetailedGraduationWarnings(
   allYearsData: AcademicAllYearsData,
   courses: AcademicCourse[],
 ): DetailedRequirementWarning[] {
-  void allYearsData;
-  void courses;
-  return [];
+  const warnings: DetailedRequirementWarning[] = [];
+  const courseIndex = new Map<string, AcademicCourse>();
+
+  for (const course of courses) {
+    const normalizedTitle = course.title.normalize('NFKC').replace(/\s+/g, '').toLowerCase();
+    if (!courseIndex.has(normalizedTitle)) {
+      courseIndex.set(normalizedTitle, course);
+    }
+
+    if (course.courseType === 'unknown') {
+      warnings.push({
+        id: `unknown-course-master-${course.id}`,
+        level: 'danger',
+        message: `区分未確認の科目マスタがあります: ${course.title}`,
+        detail: `ID: ${course.id}${course.credits > 0 ? ` / ${course.credits}単位` : ''}`,
+      });
+    }
+
+    if ((course.credits ?? 0) <= 0) {
+      warnings.push({
+        id: `zero-credit-course-${course.id}`,
+        level: 'warning',
+        message: `単位数0の科目マスタがあります: ${course.title}`,
+        detail: `ID: ${course.id}`,
+      });
+    }
+  }
+
+  const seenWarnings = new Set<string>();
+
+  for (const entry of collectCourseInstances(allYearsData)) {
+    const credits = entry.credits ?? 0;
+    const normalizedTitle = entry.title.normalize('NFKC').replace(/\s+/g, '').toLowerCase();
+    const matchedCourse = courseIndex.get(normalizedTitle);
+    const location = `${entry.title} (${formatCourseLocation(entry)})`;
+
+    if (credits <= 0) {
+      const key = `zero-credit-cell-${normalizedTitle}`;
+      if (!seenWarnings.has(key)) {
+        seenWarnings.add(key);
+        warnings.push({
+          id: key,
+          level: 'warning',
+          message: `単位数0の履修セルがあります: ${entry.title}`,
+          detail: location,
+        });
+      }
+    }
+
+    if (entry.courseType === 'unknown') {
+      const key = `unknown-cell-${normalizedTitle}`;
+      if (!seenWarnings.has(key)) {
+        seenWarnings.add(key);
+        warnings.push({
+          id: key,
+          level: 'danger',
+          message: `区分未確認の履修セルがあります: ${entry.title}`,
+          detail: location,
+        });
+      }
+    }
+
+    if (!matchedCourse) {
+      const key = `unmatched-cell-${normalizedTitle}`;
+      if (!seenWarnings.has(key)) {
+        seenWarnings.add(key);
+        warnings.push({
+          id: key,
+          level: 'warning',
+          message: `科目マスタに見つからない履修セルがあります: ${entry.title}`,
+          detail: location,
+        });
+      }
+    }
+  }
+
+  return warnings;
 }
 
 export function buildDashboardSnapshot(

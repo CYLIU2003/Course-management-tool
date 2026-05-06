@@ -4,6 +4,7 @@ const LABELS: Record<CourseType, string> = {
   required: '必修',
   'elective-required': '選択必修',
   elective: '選択',
+  unknown: '区分未確認',
 };
 
 export default function CourseTypeBadge({ courseType }: { courseType: CourseType }) {

@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicTimetable, AcademicYear } from '../core/types';
-import { calculateGraduationRisk } from '../core/graduation';
+import { calculateGraduationRisk, generateDetailedGraduationWarnings } from '../core/graduation';
 import { recommendCourses } from '../core/courses';
 import { calculateTargetGpaPlan } from '../utils/targetGpa';
 import GraduationRiskPanel from './GraduationRiskPanel';
@@ -116,7 +116,22 @@ export default function AcademicOverview({
   onOpenCalendar,
   showActions = false,
 }: AcademicOverviewProps) {
-  const visibleWarnings = compact ? snapshot.warnings.slice(0, 3) : snapshot.warnings;
+  const detailedWarnings = useMemo(
+    () => (allYearsData && courses ? generateDetailedGraduationWarnings(allYearsData, courses) : []),
+    [allYearsData, courses],
+  );
+  const combinedWarnings = useMemo(() => {
+    const warningMap = new Map<string, typeof snapshot.warnings[number]>();
+
+    for (const warning of [...snapshot.warnings, ...detailedWarnings]) {
+      if (!warningMap.has(warning.id)) {
+        warningMap.set(warning.id, warning);
+      }
+    }
+
+    return [...warningMap.values()];
+  }, [detailedWarnings, snapshot.warnings]);
+  const visibleCombinedWarnings = compact ? combinedWarnings.slice(0, 3) : combinedWarnings;
   const graduationRisk = useMemo(
     () => (allYearsData ? calculateGraduationRisk(snapshot, allYearsData, courses ?? [], curriculum) : null),
     [allYearsData, courses, curriculum, snapshot],
@@ -322,7 +337,7 @@ export default function AcademicOverview({
         <h3 style={{ fontSize: '0.95rem', marginBottom: '0.75rem', color: 'var(--text)' }}>
           注意・確認事項
         </h3>
-        {visibleWarnings.length === 0 ? (
+        {visibleCombinedWarnings.length === 0 ? (
           <div
             style={{
               padding: '0.9rem 1rem',
@@ -336,7 +351,7 @@ export default function AcademicOverview({
           </div>
         ) : (
           <div style={{ display: 'grid', gap: '0.75rem' }}>
-            {visibleWarnings.map((warning) => {
+              {visibleCombinedWarnings.map((warning) => {
               const style = WARNING_STYLES[warning.level];
               return (
                 <div

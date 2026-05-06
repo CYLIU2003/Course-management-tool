@@ -994,8 +994,14 @@ html[data-theme="eco"] {
 
 .course-badge--required,
 .course-badge--elective-required,
-.course-badge--elective {
+.course-badge--elective,
+.course-badge--unknown {
   border: 1px solid color-mix(in oklab, var(--primary) 28%, var(--border) 72%);
+}
+
+.course-badge--unknown {
+  background: color-mix(in oklab, var(--danger-soft) 72%, var(--surface) 28%);
+  color: var(--danger);
 }
 
 .course-tag {

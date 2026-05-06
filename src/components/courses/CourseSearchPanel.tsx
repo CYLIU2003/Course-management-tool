@@ -126,6 +126,7 @@ export default function CourseSearchPanel({ courses }: CourseSearchPanelProps) {
             <option value="required">必修</option>
             <option value="elective-required">選択必修</option>
             <option value="elective">選択</option>
+            <option value="unknown">区分未確認</option>
           </select>
         </label>
         <label className="course-search__field">

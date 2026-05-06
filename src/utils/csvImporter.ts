@@ -132,6 +132,20 @@ function parseOptionalNumber(value: string | number | undefined, field: string, 
   return numericValue;
 }
 
+function parseOptionalList(value: string | number | undefined) {
+  const normalizedValue = normalizeCsvCell(value);
+  if (!normalizedValue) {
+    return undefined;
+  }
+
+  const items = normalizedValue
+    .split(/[\n,;；、]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  return items.length > 0 ? items : undefined;
+}
+
 function parseRequiredText(value: string | number | undefined, field: string, fileLabel: string, rowNumber: number) {
   const normalizedValue = normalizeCsvCell(value);
   if (!normalizedValue) {
@@ -172,7 +186,11 @@ export interface CourseRow {
   raw_required: string;
   category: string;
   group: string;
-  courseType: 'required' | 'elective-required' | 'elective';
+  courseType: 'required' | 'elective-required' | 'elective' | 'unknown';
+  lectureCodes?: string[];
+  aliases?: string[];
+  departmentId?: string;
+  curriculumYear?: number;
 }
 
 export interface ClassScheduleRow {
@@ -197,10 +215,6 @@ interface CsvSchema<T> {
   fileLabel: string;
   requiredFields: string[];
   parseRow: (row: CsvNormalizedRow, rowNumber: number) => T;
-}
-
-function createCsvValidationError(fileLabel: string, rowNumber: number, field: string, message: string): never {
-  throw new CsvValidationError(`${fileLabel}の${rowNumber}行目で${field}が不正です。${message}`, [createIssue('error', `${field}が不正です。${message}`, rowNumber, field)]);
 }
 
 function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvParseResult<T>> {
@@ -268,7 +282,9 @@ function parseCourseType(value: string | number | undefined, fileLabel: string, 
     return normalized;
   }
 
-  createCsvValidationError(fileLabel, rowNumber, 'courseType', 'required / elective-required / elective のいずれかを指定してください。');
+  void fileLabel;
+  void rowNumber;
+  return 'unknown';
 }
 
 function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number): CreditRequirementRow {
@@ -296,6 +312,8 @@ function parseCourseRow(row: CsvNormalizedRow, rowNumber: number): CourseRow {
     category: normalizeCsvCell(row.category),
     group: normalizeCsvCell(row.group),
     courseType: parseCourseType(row.courseType, fileLabel, rowNumber),
+    lectureCodes: parseOptionalList(row.lectureCodes ?? row.lectureCode),
+    aliases: parseOptionalList(row.aliases),
   };
 }
 
@@ -333,6 +351,26 @@ export function parseCoursesFile(file: File) {
     fileLabel: '科目一覧CSV',
     requiredFields: COURSE_CSV_HEADERS,
     parseRow: parseCourseRow,
+  }).then((result) => {
+    const warnings = [...result.warnings];
+
+    for (const row of result.rows) {
+      if (row.courseType === 'unknown') {
+        warnings.push(
+          createIssue(
+            'warning',
+            'courseTypeが不明なため「区分未確認」として読み込みました。',
+            row.__rowNumber,
+            'courseType',
+          ),
+        );
+      }
+    }
+
+    return {
+      ...result,
+      warnings,
+    };
   });
 }
 
@@ -378,13 +416,16 @@ export function parseClassScheduleRows(rows: ClassScheduleRow[], departmentId: s
   const seen = new Set<string>();
 
   return filtered.flatMap((row) => {
-    const key = [row.departmentId, row.lectureCode, row.day, row.period, row.term, row.className].join(':');
+    const offeringId = [row.departmentId, row.lectureCode, row.day, row.period, row.term, row.className || 'all'].join(':');
+    const key = offeringId;
     if (seen.has(key)) {
       return [];
     }
     seen.add(key);
 
     const offering: CourseOffering = {
+      id: offeringId,
+      courseId: row.lectureCode,
       departmentId: row.departmentId,
       sourceDepartment: row.sourceDepartment,
       day: row.day,
@@ -430,43 +471,166 @@ export function parseClassScheduleRows(rows: ClassScheduleRow[], departmentId: s
       tags: ['2026前期', '時間割', ...(row.requiredFlag === '○' ? ['必修印'] : [])],
       requirementSubtype: 'none',
       sourceKind: 'schedule',
+      departmentId: row.departmentId,
+      lectureCodes: [row.lectureCode],
+      aliases: [row.title],
       offerings: [offering],
     } satisfies AcademicCourse];
   });
 }
 
-export function mergeCoursesWithSchedule(courses: AcademicCourse[], scheduleCourses: AcademicCourse[]) {
+export interface CourseMergeStats {
+  matchedByLectureCode: number;
+  matchedByCourseId: number;
+  matchedByTitle: number;
+  ambiguousMatches: number;
+  unmatchedOfferings: number;
+  unmatchedCourseRows: number;
+  unknownCourseTypes: number;
+}
+
+export interface MergeCoursesWithScheduleResult {
+  courses: AcademicCourse[];
+  stats: CourseMergeStats;
+}
+
+function normalizeLookupText(value: string) {
+  return normalizeCourseTitle(value).toLowerCase();
+}
+
+function uniqueStrings(values: Array<string | undefined>) {
+  return [...new Set(values.filter((value): value is string => Boolean(value && value.trim())))];
+}
+
+function courseLookupKeys(course: AcademicCourse) {
+  return new Set(
+    uniqueStrings([
+      course.id,
+      ...(course.lectureCodes ?? []),
+      ...(course.aliases ?? []),
+    ]).map((value) => normalizeLookupText(value)),
+  );
+}
+
+function getScheduleOffering(schedule: AcademicCourse) {
+  return schedule.offerings?.[0];
+}
+
+function scoreCourseMatch(course: AcademicCourse, schedule: AcademicCourse) {
+  const offering = getScheduleOffering(schedule);
+  const lectureCode = normalizeLookupText(offering?.lectureCode ?? '');
+  const courseKeys = courseLookupKeys(course);
+  if (lectureCode && courseKeys.has(lectureCode)) {
+    return { reason: 'lectureCode' as const, score: 0 };
+  }
+
+  const courseId = normalizeLookupText(course.id);
+  const offeringCourseId = normalizeLookupText(offering?.courseId ?? '');
+  if (courseId && offeringCourseId && courseId === offeringCourseId) {
+    return { reason: 'courseId' as const, score: 1 };
+  }
+
+  const normalizedTitle = normalizeLookupText(schedule.title);
+  const normalizedCourseTitle = normalizeLookupText(course.title);
+  if (!normalizedTitle || normalizedTitle !== normalizedCourseTitle) {
+    return null;
+  }
+
+  const normalizedDepartment = normalizeLookupText(schedule.departmentId ?? offering?.departmentId ?? '');
+  const normalizedCourseDepartment = normalizeLookupText(course.departmentId ?? '');
+  if (normalizedDepartment && normalizedCourseDepartment && normalizedDepartment === normalizedCourseDepartment) {
+    return { reason: 'title' as const, score: 2 };
+  }
+
+  return { reason: 'title' as const, score: 3 };
+}
+
+export function mergeCoursesWithScheduleDetailed(courses: AcademicCourse[], scheduleCourses: AcademicCourse[]): MergeCoursesWithScheduleResult {
   const mergedCourses: AcademicCourse[] = courses.map((course) => ({
     ...course,
     sourceKind: course.sourceKind ?? 'curriculum',
     offerings: [...(course.offerings ?? [])],
   }));
 
+  const stats: CourseMergeStats = {
+    matchedByLectureCode: 0,
+    matchedByCourseId: 0,
+    matchedByTitle: 0,
+    ambiguousMatches: 0,
+    unmatchedOfferings: 0,
+    unmatchedCourseRows: 0,
+    unknownCourseTypes: mergedCourses.filter((course) => course.courseType === 'unknown').length,
+  };
+
   for (const schedule of scheduleCourses) {
-    const normalizedTitle = normalizeCourseTitle(schedule.title);
-    const matchedCourse = mergedCourses.find((course) => normalizeCourseTitle(course.title) === normalizedTitle);
+    const candidates = mergedCourses
+      .map((course, index) => ({
+        course,
+        index,
+        match: scoreCourseMatch(course, schedule),
+      }))
+      .filter((candidate): candidate is { course: AcademicCourse; index: number; match: { reason: 'lectureCode' | 'courseId' | 'title'; score: number } } => Boolean(candidate.match));
 
-    if (matchedCourse) {
-      matchedCourse.offerings = [
-        ...(matchedCourse.offerings ?? []),
-        ...(schedule.offerings ?? []),
-      ];
-
-      if (!matchedCourse.rawRequired && schedule.rawRequired) {
-        matchedCourse.rawRequired = schedule.rawRequired;
-      }
-
-      if (!matchedCourse.tags?.length && schedule.tags?.length) {
-        matchedCourse.tags = schedule.tags;
-      }
-
+    if (candidates.length === 0) {
+      stats.unmatchedOfferings += 1;
+      mergedCourses.push(schedule);
       continue;
     }
 
-    mergedCourses.push(schedule);
+    candidates.sort((left, right) => left.match.score - right.match.score || left.course.title.localeCompare(right.course.title, 'ja'));
+    const bestScore = candidates[0].match.score;
+    const bestMatches = candidates.filter((candidate) => candidate.match.score === bestScore);
+
+    if (bestMatches.length > 1) {
+      stats.ambiguousMatches += 1;
+    }
+
+    const matched = bestMatches[0];
+    if (matched.match.reason === 'lectureCode') {
+      stats.matchedByLectureCode += 1;
+    } else if (matched.match.reason === 'courseId') {
+      stats.matchedByCourseId += 1;
+    } else {
+      stats.matchedByTitle += 1;
+    }
+
+    const matchedCourse = mergedCourses[matched.index];
+    matchedCourse.offerings = [
+      ...(matchedCourse.offerings ?? []),
+      ...(schedule.offerings ?? []),
+    ];
+
+    if (!matchedCourse.rawRequired && schedule.rawRequired) {
+      matchedCourse.rawRequired = schedule.rawRequired;
+    }
+
+    if (!matchedCourse.tags?.length && schedule.tags?.length) {
+      matchedCourse.tags = schedule.tags;
+    }
+
+    if (!matchedCourse.departmentId && schedule.departmentId) {
+      matchedCourse.departmentId = schedule.departmentId;
+    }
+
+    if (schedule.lectureCodes?.length) {
+      matchedCourse.lectureCodes = uniqueStrings([...(matchedCourse.lectureCodes ?? []), ...schedule.lectureCodes]);
+    }
+
+    if (schedule.aliases?.length) {
+      matchedCourse.aliases = uniqueStrings([...(matchedCourse.aliases ?? []), ...schedule.aliases]);
+    }
   }
 
-  return mergedCourses;
+  stats.unmatchedCourseRows = mergedCourses.filter((course) => course.sourceKind !== 'schedule' && (course.offerings?.length ?? 0) === 0).length;
+
+  return {
+    courses: mergedCourses,
+    stats,
+  };
+}
+
+export function mergeCoursesWithSchedule(courses: AcademicCourse[], scheduleCourses: AcademicCourse[]) {
+  return mergeCoursesWithScheduleDetailed(courses, scheduleCourses).courses;
 }
 
 // 卒業要件CSVからカリキュラムテンプレートを生成
@@ -526,7 +690,7 @@ export function parseCreditRequirements(rows: CreditRequirementRow[]) {
 }
 
 // 科目CSVから科目リストを取得
-export function parseCourses(rows: CourseRow[]): AcademicCourse[] {
+export function parseCourses(rows: CourseRow[], departmentId?: string): AcademicCourse[] {
   console.log('🔄 parseCourses: Processing', rows.length, 'rows');
   
   const courses = rows
@@ -543,6 +707,9 @@ export function parseCourses(rows: CourseRow[]): AcademicCourse[] {
         tags: parseTags(row.raw_required),
         requirementSubtype: parseRequirementSubtype(row.raw_required),
         sourceKind: 'curriculum' as const,
+        departmentId,
+        lectureCodes: row.lectureCodes,
+        aliases: row.aliases,
       };
     });
   

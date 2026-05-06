@@ -13,6 +13,7 @@ import CourseSearchPanel from "./components/courses/CourseSearchPanel";
 import CourseTagBadge from "./components/courses/CourseTagBadge";
 import CourseTypeBadge from "./components/courses/CourseTypeBadge";
 import GraduationRequirementPanel from "./components/GraduationRequirementPanel";
+import CsvDiagnosticsPanel from "./components/status/CsvDiagnosticsPanel";
 import { DataLoadNotice } from "./components/status/DataLoadNotice";
 import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./core/types";
 import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS, CSVAutoLoadError } from "./utils/autoLoadCSV";
@@ -115,6 +116,8 @@ function buildCsvLoadDetails(result: AutoLoadDepartmentCSVResult | null) {
         : `時間割CSV: ${scheduleResource.path ?? scheduleResource.attemptedPaths[0] ?? '-'} / ${scheduleResource.rowCount ?? 0}行`
       : null,
     result.resources.some((resource) => resource.status === 'fallback-loaded') ? 'fallback CSVを使用しました' : null,
+    result.stats ? `診断: 科目 ${result.stats.curriculumCourses}件 / 開講 ${result.stats.offerings}件 / 未結合 ${result.stats.unmatchedOfferings}件 / 区分未確認 ${result.stats.unknownCourseTypes}件` : null,
+    result.stats ? `マージ: 講義コード ${result.stats.matchedByLectureCode}件 / 科目ID ${result.stats.matchedByCourseId}件 / タイトル ${result.stats.matchedByTitle}件 / 曖昧 ${result.stats.ambiguousMatches}件` : null,
     `警告 ${warnings}件 / エラー ${errors}件`,
   ].filter((value): value is string => Boolean(value));
 
@@ -247,6 +250,13 @@ export default function TimetableApp() {
             mergedCourses: 0,
             coursesWithOfferings: 0,
             offerings: 0,
+            matchedByLectureCode: 0,
+            matchedByCourseId: 0,
+            matchedByTitle: 0,
+            ambiguousMatches: 0,
+            unmatchedOfferings: 0,
+            unmatchedCourseRows: 0,
+            unknownCourseTypes: 0,
           },
           resources: error.resources,
           messages: error.messages,
@@ -292,6 +302,13 @@ export default function TimetableApp() {
           mergedCourses: 0,
           coursesWithOfferings: 0,
           offerings: 0,
+          matchedByLectureCode: 0,
+          matchedByCourseId: 0,
+          matchedByTitle: 0,
+          ambiguousMatches: 0,
+          unmatchedOfferings: 0,
+          unmatchedCourseRows: 0,
+          unknownCourseTypes: 0,
         },
         resources: [],
         messages: [{ level: 'error', text: error instanceof Error ? error.message : 'CSVの読み込みに失敗しました。' }],
@@ -800,6 +817,7 @@ export default function TimetableApp() {
           details={csvLoadDetails}
           onRetry={csvLoadError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
         />
+        <CsvDiagnosticsPanel result={csvLoadResult} />
         <DesktopNavigation currentPage={currentPage} onPageChange={setCurrentPage} />
         {pageContent}
       </main>
@@ -1103,6 +1121,7 @@ function EditModal({
                         <option value="required">必修</option>
                         <option value="elective-required">選択必修</option>
                         <option value="elective">選択</option>
+                        <option value="unknown">区分未確認</option>
                       </select>
                       <select value={courseTag} onChange={(e) => setCourseTag(e.target.value)}>
                         <option value="all">タグすべて</option>
@@ -1212,6 +1231,7 @@ function EditModal({
                 <option value="required">必修科目</option>
                 <option value="elective-required">選択必修科目</option>
                 <option value="elective">選択科目(自由科目)</option>
+                <option value="unknown">区分未確認</option>
               </select>
             </Field>
           </div>

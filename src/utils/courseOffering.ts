@@ -133,6 +133,8 @@ export function buildSyncedCourseCell(
   ];
 
   return {
+    courseId: course.id,
+    offeringId: offering?.id,
     title: course.title,
     credits: course.credits > 0 ? course.credits : undefined,
     courseType: course.courseType,

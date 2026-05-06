@@ -237,8 +237,9 @@ function collectCourseRecords(allYearsData: AcademicAllYearsData, courses: Acade
 
           const course = findMatchingCourse(courses, cell.title);
           const credits = cell.credits ?? course?.credits ?? 0;
+          const courseType = cell.courseType ?? course?.courseType;
 
-          if (credits <= 0) {
+          if (credits <= 0 || !courseType || courseType === 'unknown') {
             continue;
           }
 

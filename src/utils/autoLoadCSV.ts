@@ -1,4 +1,4 @@
-import { parseCreditRequirementsFile, parseCoursesFile, parseClassScheduleFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithSchedule } from './csvImporter';
+import { parseCreditRequirementsFile, parseCoursesFile, parseClassScheduleFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithScheduleDetailed } from './csvImporter';
 import type { AcademicCourse, AcademicCurriculum } from './academicProgress';
 import type { ClassScheduleRow, CsvParseIssue } from './csvImporter';
 
@@ -63,6 +63,13 @@ export interface AutoLoadDepartmentCSVResult {
     mergedCourses: number;
     coursesWithOfferings: number;
     offerings: number;
+    matchedByLectureCode: number;
+    matchedByCourseId: number;
+    matchedByTitle: number;
+    ambiguousMatches: number;
+    unmatchedOfferings: number;
+    unmatchedCourseRows: number;
+    unknownCourseTypes: number;
   };
   resources: CSVResourceLoadResult[];
   messages: { level: 'info' | 'warning' | 'error'; text: string }[];
@@ -225,14 +232,26 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
       scheduleCourses = parseClassScheduleRows(scheduleRows, departmentId);
     }
     const curriculum = parseCreditRequirements(requirementRows);
-    const curriculumCourses = parseCourses(timetableRows);
-    const courses = scheduleCourses.length > 0 ? mergeCoursesWithSchedule(curriculumCourses, scheduleCourses) : curriculumCourses;
+    const curriculumCourses = parseCourses(timetableRows, departmentId);
+    const mergedResult = scheduleCourses.length > 0
+      ? mergeCoursesWithScheduleDetailed(curriculumCourses, scheduleCourses)
+      : { courses: curriculumCourses, stats: { matchedByLectureCode: 0, matchedByCourseId: 0, matchedByTitle: 0, ambiguousMatches: 0, unmatchedOfferings: 0, unmatchedCourseRows: curriculumCourses.filter((course) => (course.offerings?.length ?? 0) === 0).length, unknownCourseTypes: curriculumCourses.filter((course) => course.courseType === 'unknown').length } };
+    const courses = mergedResult.courses;
     if (scheduleFetch.result.status === 'missing') messages.push({ level: 'warning', text: '2026年度前期時間割CSVが見つからないため、教室・担当者・講義コードの自動同期は利用できません。' });
     const coursesWithOfferings = courses.filter((course) => (course.offerings?.length ?? 0) > 0).length;
     const offerings = courses.reduce((sum, course) => sum + (course.offerings?.length ?? 0), 0);
-    return { status: scheduleCourses.length > 0 ? 'success' : 'partial', departmentId, departmentName, entranceYear, curriculum, courses, stats: { requirementRows: requirementRows.length, timetableRows: timetableRows.length, scheduleRows: scheduleRows.length, curriculumCourses: curriculumCourses.length, scheduleCourses: scheduleCourses.length, mergedCourses: courses.length, coursesWithOfferings, offerings }, resources, messages };
+    if (mergedResult.stats.unknownCourseTypes > 0) {
+      messages.push({ level: 'warning', text: `区分未確認の科目が${mergedResult.stats.unknownCourseTypes}件あります。` });
+    }
+    if (mergedResult.stats.unmatchedOfferings > 0) {
+      messages.push({ level: 'warning', text: `科目マスタと結び付かなかった開講情報が${mergedResult.stats.unmatchedOfferings}件あります。` });
+    }
+    if (mergedResult.stats.ambiguousMatches > 0) {
+      messages.push({ level: 'warning', text: `曖昧なマッチが${mergedResult.stats.ambiguousMatches}件あります。` });
+    }
+    return { status: scheduleCourses.length > 0 ? 'success' : 'partial', departmentId, departmentName, entranceYear, curriculum, courses, stats: { requirementRows: requirementRows.length, timetableRows: timetableRows.length, scheduleRows: scheduleRows.length, curriculumCourses: curriculumCourses.length, scheduleCourses: scheduleCourses.length, mergedCourses: courses.length, coursesWithOfferings, offerings, matchedByLectureCode: mergedResult.stats.matchedByLectureCode, matchedByCourseId: mergedResult.stats.matchedByCourseId, matchedByTitle: mergedResult.stats.matchedByTitle, ambiguousMatches: mergedResult.stats.ambiguousMatches, unmatchedOfferings: mergedResult.stats.unmatchedOfferings, unmatchedCourseRows: mergedResult.stats.unmatchedCourseRows, unknownCourseTypes: mergedResult.stats.unknownCourseTypes }, resources, messages };
   } catch (error) {
-    const result: AutoLoadDepartmentCSVResult = { status: 'failed', departmentId, departmentName, entranceYear, curriculum: { name: departmentName, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } }, courses: [], stats: { requirementRows: 0, timetableRows: 0, scheduleRows: 0, curriculumCourses: 0, scheduleCourses: 0, mergedCourses: 0, coursesWithOfferings: 0, offerings: 0 }, resources, messages };
+    const result: AutoLoadDepartmentCSVResult = { status: 'failed', departmentId, departmentName, entranceYear, curriculum: { name: departmentName, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } }, courses: [], stats: { requirementRows: 0, timetableRows: 0, scheduleRows: 0, curriculumCourses: 0, scheduleCourses: 0, mergedCourses: 0, coursesWithOfferings: 0, offerings: 0, matchedByLectureCode: 0, matchedByCourseId: 0, matchedByTitle: 0, ambiguousMatches: 0, unmatchedOfferings: 0, unmatchedCourseRows: 0, unknownCourseTypes: 0 }, resources, messages };
     if (error instanceof CSVAutoLoadError) throw new CSVAutoLoadError(error.message, error.resources.length > 0 ? error.resources : resources, [...messages, ...error.messages], result);
     throw new CSVAutoLoadError(error instanceof Error ? error.message : 'CSVの読み込みに失敗しました。', resources, messages, result);
   }
