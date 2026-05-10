@@ -1,115 +1,62 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicYear } from '../utils/academicProgress';
-import { calculateGraduationRequirements } from '../utils/graduationRequirements';
-import { fetchRequirementCategories } from '../api/requirements';
+import { generateRequirementCategories } from '../api/requirements';
 import RequirementCategoryGrid from './requirements/RequirementCategoryGrid';
 import RequirementCategoryDetailDrawer from './requirements/RequirementCategoryDetailDrawer';
-import type { RequirementCategorySummary } from '../utils/requirements';
+import type { ApplicableCourseRow } from '../utils/csvImporter';
 
 type GraduationRequirementPanelProps = {
   curriculum?: AcademicCurriculum;
   allYearsData: AcademicAllYearsData;
   courses: AcademicCourse[];
+  applicableCourses: ApplicableCourseRow[];
   currentYear?: AcademicYear;
 };
-const CATEGORY_LOAD_ERROR = '区分一覧を読み込めませんでした。';
 
-export default function GraduationRequirementPanel({ curriculum, allYearsData, courses, currentYear }: GraduationRequirementPanelProps) {
-  const result = useMemo(() => calculateGraduationRequirements({ allYearsData, courses, curriculum }), [allYearsData, courses, curriculum]);
-  const [categories, setCategories] = useState<RequirementCategorySummary[]>([]);
-  const [loadingCategories, setLoadingCategories] = useState(true);
-  const [categoryError, setCategoryError] = useState<string | null>(null);
+export default function GraduationRequirementPanel({ curriculum, allYearsData, courses, applicableCourses }: GraduationRequirementPanelProps) {
+  const categories = useMemo(() => {
+    if (!curriculum) return [];
+    return generateRequirementCategories(curriculum, courses, allYearsData, applicableCourses);
+  }, [curriculum, courses, allYearsData, applicableCourses]);
+
   const [openCategoryId, setOpenCategoryId] = useState<string | null>(null);
 
-  useEffect(() => {
-    let cancelled = false;
-
-    async function loadCategories() {
-      setLoadingCategories(true);
-      setCategoryError(null);
-
-      try {
-        const nextCategories = await fetchRequirementCategories();
-        if (!cancelled) {
-          setCategories(nextCategories);
-        }
-      } catch (loadError) {
-        if (!cancelled) {
-          setCategoryError(loadError instanceof Error ? loadError.message : CATEGORY_LOAD_ERROR);
-        }
-      } finally {
-        if (!cancelled) {
-          setLoadingCategories(false);
-        }
-      }
-    }
-
-    loadCategories();
-
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const currentRequiredCredits = result.statuses.find((status) => status.category === 'total')?.requiredCredits ?? curriculum?.requiredCredits ?? 0;
+  const selectedTitle = useMemo(() => {
+    if (!openCategoryId || !categories) return '';
+    const cat = categories.find((c) => c.categoryId === openCategoryId);
+    return cat ? cat.categoryName : '要件詳細';
+  }, [categories, openCategoryId]);
 
   return (
-    <section className="tt-card" style={{ marginTop: '1.5rem' }}>
-      <div className="section-title">
-        <div>
-          <h2>区分別 該当授業・要件算入状況</h2>
-          <span className="small">区分ごとの該当授業と、卒業要件への算入状況をひとつの画面で確認できます</span>
+    <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
+      <div className="p-6 border-b border-slate-200 pb-5">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-10 h-10 rounded-lg bg-indigo-50 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+            </svg>
+          </div>
+          <h2 className="text-xl font-bold text-slate-800 tracking-tight">卒業要件の達成状況</h2>
         </div>
-        <span className="course-tag course-tag--neutral" style={{ fontWeight: 800 }}>
-          {result.plannedCredits > 0 ? `履修予定 ${result.plannedCredits} 単位` : '履修予定なし'}
-        </span>
+        <p className="text-sm text-slate-500 ml-13">教育課程表に基づく単位取得状況。計画通りに履修した場合のシミュレーション情報を含みます。</p>
       </div>
-
-      {!curriculum ? (
-        <div
-          style={{
-            padding: '0.9rem 1rem',
-            borderRadius: '12px',
-            border: '1px solid color-mix(in oklab, #f59e0b 30%, var(--stroke) 70%)',
-            background: 'color-mix(in oklab, #f59e0b 10%, var(--card) 90%)',
-            color: 'var(--text)',
-            marginBottom: '1rem',
-          }}
-        >
-          卒業要件CSVが未読込です。区分別の表示はモックデータで確認できますが、実データの卒業判定は要件CSVを読み込むと有効になります。
-        </div>
-      ) : null}
-
-      <div className="small" style={{ color: 'var(--muted)', marginBottom: '1rem' }}>
-        現在の集計: 取得済 {result.earnedCredits} 単位 / 履修予定 {result.plannedCredits} 単位 / 必要 {currentRequiredCredits} 単位
+      
+      <div className="p-6">
+        <RequirementCategoryGrid 
+          categories={categories}
+          onOpenDetail={setOpenCategoryId}
+        />
       </div>
-
-      <RequirementCategoryGrid
-        categories={categories}
-        currentYear={currentYear}
-        loading={loadingCategories}
-        error={categoryError}
-        onRetry={() => {
-          setCategoryError(null);
-          setLoadingCategories(true);
-          fetchRequirementCategories()
-            .then((nextCategories) => {
-              setCategories(nextCategories);
-            })
-            .catch((loadError) => {
-              setCategoryError(loadError instanceof Error ? loadError.message : CATEGORY_LOAD_ERROR);
-            })
-            .finally(() => {
-              setLoadingCategories(false);
-            });
-        }}
-        onOpenDetail={setOpenCategoryId}
-      />
 
       <RequirementCategoryDetailDrawer
         open={openCategoryId !== null}
+        title={selectedTitle}
         categoryId={openCategoryId}
         onClose={() => setOpenCategoryId(null)}
+        curriculum={curriculum}
+        allYearsData={allYearsData}
+        courses={courses}
+        applicableCourses={applicableCourses}
       />
     </section>
   );

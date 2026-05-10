@@ -214,7 +214,7 @@ export interface ClassScheduleRow {
 interface CsvSchema<T> {
   fileLabel: string;
   requiredFields: string[];
-  parseRow: (row: CsvNormalizedRow, rowNumber: number) => T;
+  parseRow: (row: CsvNormalizedRow, rowNumber: number, fileLabel: string) => T;
 }
 
 function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvParseResult<T>> {
@@ -253,7 +253,7 @@ function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvPar
             }
 
             try {
-              const parsedRow = schema.parseRow(normalizedRow, rowNumber);
+              const parsedRow = schema.parseRow(normalizedRow, rowNumber, schema.fileLabel);
               rows.push({ ...parsedRow, __rowNumber: rowNumber });
             } catch (error) {
               if (error instanceof CsvValidationError) {
@@ -287,7 +287,7 @@ function parseCourseType(value: string | number | undefined, fileLabel: string, 
   return 'unknown';
 }
 
-function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number): CreditRequirementRow {
+function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number, _fileLabel: string): CreditRequirementRow {
   const fileLabel = '卒業要件CSV';
   return {
     stage: parseRequiredText(row.stage, 'stage', fileLabel, rowNumber),
@@ -302,7 +302,7 @@ function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number): Cr
   };
 }
 
-function parseCourseRow(row: CsvNormalizedRow, rowNumber: number): CourseRow {
+function parseCourseRow(row: CsvNormalizedRow, rowNumber: number, _fileLabel: string): CourseRow {
   const fileLabel = '科目一覧CSV';
   return {
     id: parseRequiredText(row.id, 'id', fileLabel, rowNumber),
@@ -317,14 +317,54 @@ function parseCourseRow(row: CsvNormalizedRow, rowNumber: number): CourseRow {
   };
 }
 
-function parseClassScheduleRow(row: CsvNormalizedRow, rowNumber: number): ClassScheduleRow {
-  const fileLabel = '時間割CSV';
+function inferScheduleTerm(fileLabel: string) {
+  const normalized = fileLabel.toLowerCase();
+
+  if (normalized.includes('fall') || normalized.includes('autumn') || normalized.includes('後期')) {
+    return '後期';
+  }
+
+  if (normalized.includes('spring') || normalized.includes('前期')) {
+    return '前期';
+  }
+
+  if (normalized.includes('summer') || normalized.includes('夏学期')) {
+    return '夏学期';
+  }
+
+  if (normalized.includes('winter') || normalized.includes('冬学期')) {
+    return '冬学期';
+  }
+
+  if (normalized.includes('annual') || normalized.includes('通年')) {
+    return '通年';
+  }
+
+  return '前期';
+}
+
+function parseScheduleTerm(row: CsvNormalizedRow, rowNumber: number, fileLabel: string) {
+  const normalizedTerm = normalizeCsvCell(row.term);
+  if (normalizedTerm) {
+    return normalizedTerm;
+  }
+
+  const inferredTerm = inferScheduleTerm(fileLabel);
+  if (inferredTerm) {
+    return inferredTerm;
+  }
+
+  const scheduleLabel = fileLabel || '時間割CSV';
+  throw new CsvValidationError(`${scheduleLabel}の${rowNumber}行目でtermが空欄です。`, [createIssue('error', 'termが空欄です。', rowNumber, 'term')]);
+}
+
+function parseClassScheduleRow(row: CsvNormalizedRow, rowNumber: number, fileLabel: string): ClassScheduleRow {
   return {
     departmentId: parseRequiredText(row.departmentId, 'departmentId', fileLabel, rowNumber),
     sourceDepartment: parseRequiredText(row.sourceDepartment, 'sourceDepartment', fileLabel, rowNumber),
     day: parseRequiredText(row.day, 'day', fileLabel, rowNumber),
     period: parseRequiredText(row.period, 'period', fileLabel, rowNumber),
-    term: parseRequiredText(row.term, 'term', fileLabel, rowNumber),
+    term: parseScheduleTerm(row, rowNumber, fileLabel),
     gradeYear: normalizeCsvCell(row.gradeYear) || undefined,
     className: normalizeCsvCell(row.className) || undefined,
     title: parseRequiredText(row.title, 'title', fileLabel, rowNumber),
@@ -376,7 +416,7 @@ export function parseCoursesFile(file: File) {
 
 export function parseClassScheduleFile(file: File) {
   return parseCsvFileStrict(file, {
-    fileLabel: '時間割CSV',
+    fileLabel: file.name,
     requiredFields: CLASS_SCHEDULE_CSV_HEADERS,
     parseRow: parseClassScheduleRow,
   });
@@ -727,4 +767,68 @@ export async function loadDepartmentCSVs(departmentName: string, category: 'requ
   const fullPath = `${basePath}/${filename}`;
   
   return fullPath;
+}
+export const APPLICABLE_COURSES_CSV_HEADERS = [
+  'departmentId',
+  'facultyId',
+  'stage',
+  'area',
+  'subarea',
+  'requirementKey',
+  'requiredCredits',
+  'courseId',
+  'title',
+  'credits',
+  'courseType',
+  'applicability',
+];
+
+export interface ApplicableCourseRow {
+  departmentId: string;
+  facultyId: string;
+  stage: string;
+  area: string;
+  subarea: string;
+  requirementKey: string;
+  requiredCredits: number;
+  courseId: string;
+  title: string;
+  credits: number;
+  courseType: string;
+  category: string;
+  group: string;
+  applicability: string;
+  matchReason: string;
+  sourceQuality: string;
+  notes?: string;
+}
+
+export function parseApplicableCourseRow(row: CsvNormalizedRow): ApplicableCourseRow {
+  return {
+    departmentId: String(row.departmentId || ''),
+    facultyId: String(row.facultyId || ''),
+    stage: String(row.stage || ''),
+    area: String(row.area || ''),
+    subarea: String(row.subarea || ''),
+    requirementKey: String(row.requirementKey || ''),
+    requiredCredits: Number(row.requiredCredits || 0),
+    courseId: String(row.courseId || ''),
+    title: String(row.title || ''),
+    credits: Number(row.credits || 0),
+    courseType: String(row.courseType || ''),
+    category: String(row.category || ''),
+    group: String(row.group || ''),
+    applicability: String(row.applicability || ''),
+    matchReason: String(row.matchReason || ''),
+    sourceQuality: String(row.sourceQuality || ''),
+    notes: row.notes != null ? String(row.notes) : undefined,
+  };
+}
+
+export function parseApplicableCoursesFile(file: File) {
+  return parseCsvFileStrict(file, {
+    fileLabel: '該当科目CSV',
+    requiredFields: APPLICABLE_COURSES_CSV_HEADERS,
+    parseRow: parseApplicableCourseRow,
+  });
 }

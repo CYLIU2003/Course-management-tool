@@ -159,3 +159,47 @@
 1. ZIP内の `public/department` をリポジトリ直下の `public/department` に上書きする。
 2. 開発サーバーで学科選択と入学年度 `2026` を選び、CSV診断で `requirements` と `timetable` が loaded になることを確認する。
 3. 進級条件をUIに出す場合は、卒業要件の集計とは分けて `stage=3年次進級 / 4年次進級 / 卒業研究着手` を表示する。
+
+## 追補: 該当科目情報の追加抽出
+
+以下を追加生成した。
+
+- `requirements_2026_applicable_courses.json`: 学科ごと・要件行ごとの該当科目リスト。
+- `applicable_courses_flat_2026.csv`: 全学科を横断したフラットな該当科目対応表。
+- `public/department/{facultyId}/2026/{departmentId}_applicable_courses.csv`: 学科別の該当科目対応表。
+- `applicable_courses_2026_summary.json`: UI表示・検証用の軽量サマリ。
+
+### 該当科目対応の扱い
+
+- `stage=卒業` かつ `自由選択` 以外の要件行について、教育課程表CSVの `category` または `group` が要件 `subarea` と一致する科目を直接該当科目として展開した。
+- `自由選択` は、各区分の要件超過分を合算する政策行であるため、全科目を重複展開せず `matchPolicy=overflow_policy...` として保持した。
+- 進級・卒業研究着手条件は、単位総量・在学年数・事例研究/卒業研究等の修得状況で判定するため、条件文として保持し、関連科目が見つかる場合のみ `relatedCourses` に格納した。
+- PDF抽出時に乱れた一部カテゴリ名（例: `基情盤報科工目学`）は、該当科目対応のため正規化した。
+
+### 直接マッピング件数
+
+| departmentId | 学科 | 直接対応済み科目 | 直接対応外/政策行扱い科目 |
+|---|---|---:|---:|
+| `design_data` | デザイン・データ科学科 | 117 | 8 |
+| `chino_joho` | 知能情報工学科 | 280 | 0 |
+| `joho_kagaku` | 情報科学科 | 285 | 0 |
+| `kankyo_keiei` | 環境経営システム学科 | 256 | 8 |
+| `kankyo_sosei` | 環境創生学科 | 257 | 8 |
+| `kenchiku` | 建築学科 | 293 | 0 |
+| `toshi_kogaku` | 都市工学科 | 268 | 0 |
+| `joho_system` | 情報システム学科 | 249 | 8 |
+| `shakai_media` | 社会メディア学科 | 252 | 8 |
+| `ningen` | 人間科学科 | 284 | 7 |
+| `denki` | 電気電子通信工学科 | 308 | 0 |
+| `genshiryoku` | 原子力安全工学科 | 296 | 0 |
+| `iyo` | 医用工学科 | 295 | 0 |
+| `kikai_system` | 機械システム工学科 | 300 | 0 |
+| `kikai` | 機械工学科 | 283 | 0 |
+| `ouyou_kagaku` | 応用化学科 | 306 | 0 |
+| `shizen_shizen` | 自然科学科（自然コース） | 311 | 0 |
+| `shizen_suuri` | 自然科学科（数理コース） | 311 | 0 |
+| `toshi_seikatsu` | 都市生活学科 | 265 | 8 |
+
+### 要確認警告
+
+- 直接該当科目が0件の卒業要件行は検出されなかった。

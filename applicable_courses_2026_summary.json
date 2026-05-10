@@ -1,0 +1,1839 @@
+{
+  "design_data": {
+    "facultyId": "design_data",
+    "faculty": "デザイン・データ科学部",
+    "departmentName": "デザイン・データ科学科",
+    "directMappedCourseCount": 117,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:基礎分野:教養科目",
+        "requiredCredits": 12.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 44,
+        "counts": {
+          "elective": 37,
+          "elective-required": 7
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 14.0,
+          "elective": 56.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎分野:外国語科目",
+        "requiredCredits": 14.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 16,
+        "counts": {
+          "required": 6,
+          "elective": 5,
+          "elective-required": 5
+        },
+        "availableCredits": {
+          "required": 6.0,
+          "elective-required": 10.0,
+          "elective": 10.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門基礎科目",
+        "requiredCredits": 50.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 12,
+        "counts": {
+          "required": 5,
+          "elective-required": 7
+        },
+        "availableCredits": {
+          "required": 9.0,
+          "elective-required": 14.0,
+          "elective": 0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門応用科目",
+        "requiredCredits": 40.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 45,
+        "counts": {
+          "elective-required": 11,
+          "elective": 31,
+          "required": 3
+        },
+        "availableCredits": {
+          "required": 6.0,
+          "elective-required": 22.0,
+          "elective": 64.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 8.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "chino_joho": {
+    "facultyId": "joho",
+    "faculty": "情報工学部",
+    "departmentName": "知能情報工学科",
+    "directMappedCourseCount": 280,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:情報工学基盤科目",
+        "requiredCredits": 33.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 57,
+        "counts": {
+          "elective": 29,
+          "required": 15,
+          "elective-required": 13
+        },
+        "availableCredits": {
+          "required": 18.0,
+          "elective-required": 20.0,
+          "elective": 39.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 45,
+        "counts": {
+          "required": 12,
+          "elective": 33
+        },
+        "availableCredits": {
+          "required": 23.0,
+          "elective-required": 0,
+          "elective": 63.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 12.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "joho_kagaku": {
+    "facultyId": "joho",
+    "faculty": "情報工学部",
+    "departmentName": "情報科学科",
+    "directMappedCourseCount": 285,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:情報工学基盤科目",
+        "requiredCredits": 33.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 57,
+        "counts": {
+          "elective-required": 21,
+          "required": 18,
+          "elective": 18
+        },
+        "availableCredits": {
+          "required": 23.0,
+          "elective-required": 30.0,
+          "elective": 24.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 50,
+        "counts": {
+          "required": 22,
+          "elective": 28
+        },
+        "availableCredits": {
+          "required": 42.0,
+          "elective-required": 0,
+          "elective": 51.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 12.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "kankyo_keiei": {
+    "facultyId": "kankyo",
+    "faculty": "環境学部",
+    "departmentName": "環境経営システム学科",
+    "directMappedCourseCount": 256,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:基礎科目:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 92,
+        "counts": {
+          "required": 6,
+          "elective": 86
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 87.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 5,
+        "counts": {
+          "elective-required": 3,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 1.5,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 96,
+        "counts": {
+          "elective": 96
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 138.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科基盤科目:専門基礎科目",
+        "requiredCredits": 34.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 44,
+        "counts": {
+          "elective": 38,
+          "required": 6
+        },
+        "availableCredits": {
+          "required": 11.0,
+          "elective-required": 0,
+          "elective": 73.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科専門科目:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 20,
+        "counts": {
+          "required": 5,
+          "elective": 15
+        },
+        "availableCredits": {
+          "required": 11.0,
+          "elective-required": 0,
+          "elective": 30.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択科目:自由選択",
+        "requiredCredits": 11.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "kankyo_sosei": {
+    "facultyId": "kankyo",
+    "faculty": "環境学部",
+    "departmentName": "環境創生学科",
+    "directMappedCourseCount": 257,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:基礎科目:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 92,
+        "counts": {
+          "required": 6,
+          "elective": 86
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 87.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 5,
+        "counts": {
+          "elective-required": 3,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 1.5,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 96,
+        "counts": {
+          "elective": 96
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 138.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科基盤科目:専門基礎科目",
+        "requiredCredits": 34.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 48,
+        "counts": {
+          "elective": 39,
+          "required": 9
+        },
+        "availableCredits": {
+          "required": 17.0,
+          "elective-required": 0,
+          "elective": 77.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科専門科目:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 17,
+        "counts": {
+          "required": 5,
+          "elective": 12
+        },
+        "availableCredits": {
+          "required": 11.0,
+          "elective-required": 0,
+          "elective": 24.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択科目:自由選択",
+        "requiredCredits": 11.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "kenchiku": {
+    "facultyId": "kenchiku_toshi",
+    "faculty": "建築都市デザイン学部",
+    "departmentName": "建築学科",
+    "directMappedCourseCount": 293,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:学部基盤科目",
+        "requiredCredits": 30.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 42,
+        "counts": {
+          "required": 14,
+          "elective": 24,
+          "elective-required": 4
+        },
+        "availableCredits": {
+          "required": 19.0,
+          "elective-required": 8.0,
+          "elective": 39.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 66.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 73,
+        "counts": {
+          "elective": 13,
+          "elective-required": 40,
+          "required": 20
+        },
+        "availableCredits": {
+          "required": 31.0,
+          "elective-required": 66.5,
+          "elective": 23.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 9.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "toshi_kogaku": {
+    "facultyId": "kenchiku_toshi",
+    "faculty": "建築都市デザイン学部",
+    "departmentName": "都市工学科",
+    "directMappedCourseCount": 268,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:学部基盤科目",
+        "requiredCredits": 30.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 42,
+        "counts": {
+          "required": 14,
+          "elective": 24,
+          "elective-required": 4
+        },
+        "availableCredits": {
+          "required": 19.0,
+          "elective-required": 8.0,
+          "elective": 39.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 48,
+        "counts": {
+          "elective-required": 22,
+          "elective": 11,
+          "required": 15
+        },
+        "availableCredits": {
+          "required": 28.0,
+          "elective-required": 47.0,
+          "elective": 18.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 15.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "joho_system": {
+    "facultyId": "media_joho",
+    "faculty": "メディア情報学部",
+    "departmentName": "情報システム学科",
+    "directMappedCourseCount": 249,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:基礎科目:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 91,
+        "counts": {
+          "required": 6,
+          "elective": 85
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 86.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 91,
+        "counts": {
+          "elective": 91
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 128.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科基盤科目:専門基礎科目",
+        "requiredCredits": 33.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 44,
+        "counts": {
+          "elective": 23,
+          "required": 19,
+          "elective-required": 2
+        },
+        "availableCredits": {
+          "required": 28.0,
+          "elective-required": 4.0,
+          "elective": 42.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科専門科目:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 18,
+        "counts": {
+          "elective": 12,
+          "required": 6
+        },
+        "availableCredits": {
+          "required": 12.0,
+          "elective-required": 0,
+          "elective": 24.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択科目:自由選択",
+        "requiredCredits": 12.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "shakai_media": {
+    "facultyId": "media_joho",
+    "faculty": "メディア情報学部",
+    "departmentName": "社会メディア学科",
+    "directMappedCourseCount": 252,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:基礎科目:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 91,
+        "counts": {
+          "required": 6,
+          "elective": 85
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 86.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:基礎科目:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 91,
+        "counts": {
+          "elective": 91
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 128.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科基盤科目:専門基礎科目",
+        "requiredCredits": 33.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 49,
+        "counts": {
+          "required": 6,
+          "elective": 27,
+          "elective-required": 16
+        },
+        "availableCredits": {
+          "required": 12.0,
+          "elective-required": 27.0,
+          "elective": 50.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:学科専門科目:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 16,
+        "counts": {
+          "elective": 9,
+          "elective-required": 3,
+          "required": 4
+        },
+        "availableCredits": {
+          "required": 10.0,
+          "elective-required": 6.0,
+          "elective": 17.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択科目:自由選択",
+        "requiredCredits": 12.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "ningen": {
+    "facultyId": "ningen",
+    "faculty": "人間科学部",
+    "departmentName": "人間科学科",
+    "directMappedCourseCount": 284,
+    "unmappedCourseCount": 7,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 6.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 86,
+        "counts": {
+          "elective": 85,
+          "required": 1
+        },
+        "availableCredits": {
+          "required": 2.0,
+          "elective-required": 0,
+          "elective": 118.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 2.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 2.0,
+          "elective-required": 0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門基礎科目",
+        "requiredCredits": 32.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 19,
+        "counts": {
+          "required": 18,
+          "elective-required": 1
+        },
+        "availableCredits": {
+          "required": 30.0,
+          "elective-required": 2.0,
+          "elective": 0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 58.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 80,
+        "counts": {
+          "elective": 22,
+          "required": 49,
+          "elective-required": 9
+        },
+        "availableCredits": {
+          "required": 84.0,
+          "elective-required": 16.0,
+          "elective": 40.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 18.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "denki": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "電気電子通信工学科",
+    "directMappedCourseCount": 308,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 15,
+          "elective-required": 16,
+          "elective": 28
+        },
+        "availableCredits": {
+          "required": 17.0,
+          "elective-required": 26.0,
+          "elective": 47.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 71,
+        "counts": {
+          "elective": 34,
+          "elective-required": 19,
+          "required": 18
+        },
+        "availableCredits": {
+          "required": 32.0,
+          "elective-required": 38.0,
+          "elective": 61.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "genshiryoku": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "原子力安全工学科",
+    "directMappedCourseCount": 296,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 17,
+          "elective-required": 8,
+          "elective": 34
+        },
+        "availableCredits": {
+          "required": 23.0,
+          "elective-required": 12.0,
+          "elective": 55.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "elective": 35,
+          "required": 14,
+          "elective-required": 10
+        },
+        "availableCredits": {
+          "required": 22.0,
+          "elective-required": 20.0,
+          "elective": 60.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "iyo": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "医用工学科",
+    "directMappedCourseCount": 295,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 18,
+          "elective": 35,
+          "elective-required": 6
+        },
+        "availableCredits": {
+          "required": 19.0,
+          "elective-required": 14.0,
+          "elective": 57.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 58,
+        "counts": {
+          "elective": 27,
+          "required": 20,
+          "elective-required": 11
+        },
+        "availableCredits": {
+          "required": 34.0,
+          "elective-required": 22.0,
+          "elective": 49.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "kikai_system": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "機械システム工学科",
+    "directMappedCourseCount": 300,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 17,
+          "elective-required": 9,
+          "elective": 33
+        },
+        "availableCredits": {
+          "required": 20.0,
+          "elective-required": 12.0,
+          "elective": 58.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 63,
+        "counts": {
+          "elective": 27,
+          "required": 21,
+          "elective-required": 15
+        },
+        "availableCredits": {
+          "required": 34.5,
+          "elective-required": 28.5,
+          "elective": 49.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "kikai": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "機械工学科",
+    "directMappedCourseCount": 283,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 16,
+          "elective-required": 11,
+          "elective": 32
+        },
+        "availableCredits": {
+          "required": 17.0,
+          "elective-required": 22.0,
+          "elective": 51.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 46,
+        "counts": {
+          "elective": 32,
+          "required": 14
+        },
+        "availableCredits": {
+          "required": 31.0,
+          "elective-required": 0,
+          "elective": 60.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "ouyou_kagaku": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "応用化学科",
+    "directMappedCourseCount": 306,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 59,
+        "counts": {
+          "required": 19,
+          "elective-required": 11,
+          "elective": 29
+        },
+        "availableCredits": {
+          "required": 23.0,
+          "elective-required": 22.0,
+          "elective": 45.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 69,
+        "counts": {
+          "elective": 47,
+          "required": 22
+        },
+        "availableCredits": {
+          "required": 30.0,
+          "elective-required": 0,
+          "elective": 77.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "shizen_shizen": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "自然科学科（自然コース）",
+    "directMappedCourseCount": 311,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 58,
+        "counts": {
+          "required": 17,
+          "elective": 35,
+          "elective-required": 6
+        },
+        "availableCredits": {
+          "required": 19.0,
+          "elective-required": 12.0,
+          "elective": 57.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 75,
+        "counts": {
+          "elective": 47,
+          "elective-required": 11,
+          "required": 17
+        },
+        "availableCredits": {
+          "required": 39.0,
+          "elective-required": 22.0,
+          "elective": 81.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "shizen_suuri": {
+    "facultyId": "rikou",
+    "faculty": "理工学部",
+    "departmentName": "自然科学科（数理コース）",
+    "directMappedCourseCount": 311,
+    "unmappedCourseCount": 0,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 79,
+        "counts": {
+          "elective": 79
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 108.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:理工学基礎科目",
+        "requiredCredits": 31.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 58,
+        "counts": {
+          "required": 17,
+          "elective": 35,
+          "elective-required": 6
+        },
+        "availableCredits": {
+          "required": 19.0,
+          "elective-required": 12.0,
+          "elective": 57.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 60.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 75,
+        "counts": {
+          "elective": 47,
+          "elective-required": 11,
+          "required": 17
+        },
+        "availableCredits": {
+          "required": 39.0,
+          "elective-required": 22.0,
+          "elective": 81.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 14.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  },
+  "toshi_seikatsu": {
+    "facultyId": "toshi_seikatsu",
+    "faculty": "都市生活学部",
+    "departmentName": "都市生活学科",
+    "directMappedCourseCount": 265,
+    "unmappedCourseCount": 8,
+    "graduationRequirementItems": [
+      {
+        "requirementKey": "卒業:共通分野:教養科目",
+        "requiredCredits": 10.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 85,
+        "counts": {
+          "elective": 85
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 0,
+          "elective": 118.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:外国語科目",
+        "requiredCredits": 8.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 93,
+        "counts": {
+          "required": 6,
+          "elective": 87
+        },
+        "availableCredits": {
+          "required": 4.0,
+          "elective-required": 0,
+          "elective": 88.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:共通分野:体育科目",
+        "requiredCredits": 1.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 6,
+        "counts": {
+          "elective-required": 4,
+          "elective": 2
+        },
+        "availableCredits": {
+          "required": 0,
+          "elective-required": 2.0,
+          "elective": 2.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門基礎科目",
+        "requiredCredits": 39.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 19,
+        "counts": {
+          "required": 7,
+          "elective-required": 12
+        },
+        "availableCredits": {
+          "required": 15.0,
+          "elective-required": 24.0,
+          "elective": 0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:専門分野:専門科目",
+        "requiredCredits": 53.0,
+        "matchPolicy": "direct_course_category_match",
+        "courseCount": 63,
+        "counts": {
+          "required": 10,
+          "elective-required": 12,
+          "elective": 41
+        },
+        "availableCredits": {
+          "required": 18.0,
+          "elective-required": 24.0,
+          "elective": 77.0,
+          "unknown": 0
+        }
+      },
+      {
+        "requirementKey": "卒業:自由選択:自由選択",
+        "requiredCredits": 13.0,
+        "matchPolicy": "overflow_policy_all_graduation_counting_courses_after_category_requirements",
+        "courseCount": 0,
+        "counts": {},
+        "availableCredits": {}
+      }
+    ]
+  }
+}

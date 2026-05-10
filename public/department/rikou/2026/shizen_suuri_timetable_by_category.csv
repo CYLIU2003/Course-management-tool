@@ -227,11 +227,11 @@ SE-941,インターンシップ(1),1,,理工学基礎科目,理工学教養系,e
 SE-942,インターンシップ(2),1,,理工学基礎科目,理工学教養系,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,インターンシップ(2) | 1 | SE-942 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=自然科学科（数理コース）; source_page=4
 SE-943,海外体験実習(1),2,,理工学基礎科目,理工学教養系,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,海外体験実習(1) | 2 | SE-943 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=自然科学科（数理コース）; source_page=4
 SE-944,海外体験実習(2),2,,理工学基礎科目,理工学教養系,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,海外体験実習(2) | 2 | SE-944 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=自然科学科（数理コース）; source_page=4
-SE-341,金属加工(実習含),2,,理工学基礎科目,教理養工系学,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基理礎工科学目 | 教理養工系学 | 金属加工(実習含) | 2 | 2 | SE-341 | 0 | 0 | 0 | 0 100,pdf_table,,department=自然科学科（数理コース）; source_page=5
-SE-342,電気工学概論(実習含),2,,理工学基礎科目,教理養工系学,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,電気工学概論(実習含) | 2 | 2 | SE-342 | 30 | 10 | 20 | 30 10,pdf_table,,department=自然科学科（数理コース）; source_page=5
-SE-945,SD PBL(1),1,○,理工学基礎科目,教理養工系学,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(1) | ○ | ○ | 1 | 2 | SE-945 | 30 | 10 | 25 | 15 20,pdf_table,,department=自然科学科（数理コース）; source_page=5
-SE-946,SD PBL(2),1,○,理工学基礎科目,教理養工系学,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(2) | ○ | ○ | 1 | 2 | SE-946 | 30 | 10 | 30 | 10 20,pdf_table,,department=自然科学科（数理コース）; source_page=5
-SE-947,SD PBL(3),1,○,理工学基礎科目,教理養工系学,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(3) | ○ | ○ | 1 | 2 | SE-947 | 9 | 24 | 24 | 24 19,pdf_table,,department=自然科学科（数理コース）; source_page=5
+SE-341,金属加工(実習含),2,,理工学基礎科目,理工学教養系,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基理礎工科学目 | 教理養工系学 | 金属加工(実習含) | 2 | 2 | SE-341 | 0 | 0 | 0 | 0 100,pdf_table,,department=自然科学科（数理コース）; source_page=5
+SE-342,電気工学概論(実習含),2,,理工学基礎科目,理工学教養系,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,電気工学概論(実習含) | 2 | 2 | SE-342 | 30 | 10 | 20 | 30 10,pdf_table,,department=自然科学科（数理コース）; source_page=5
+SE-945,SD PBL(1),1,○,理工学基礎科目,理工学教養系,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(1) | ○ | ○ | 1 | 2 | SE-945 | 30 | 10 | 25 | 15 20,pdf_table,,department=自然科学科（数理コース）; source_page=5
+SE-946,SD PBL(2),1,○,理工学基礎科目,理工学教養系,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(2) | ○ | ○ | 1 | 2 | SE-946 | 30 | 10 | 30 | 10 20,pdf_table,,department=自然科学科（数理コース）; source_page=5
+SE-947,SD PBL(3),1,○,理工学基礎科目,理工学教養系,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,SD PBL(3) | ○ | ○ | 1 | 2 | SE-947 | 9 | 24 | 24 | 24 19,pdf_table,,department=自然科学科（数理コース）; source_page=5
 SL-101,理工学と生活,2,,専門科目,専門教養,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,専門科目 | 専門教養 | 理工学と生活 | 2 | 2 | SL-101 | 15 | 15 15 | 30 25,pdf_table,,department=自然科学科（数理コース）; source_page=5
 SL-102,工業概論,2,,専門科目,専門教養,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,工業概論 | 2 | 2 | SL-102 | 40 | 10 30 | 20 0,pdf_table,,department=自然科学科（数理コース）; source_page=5
 SL-103,原子力汎論,2,,専門科目,専門教養,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,原子力汎論 | 2 | 2 | SL-103 | 40 | 0 0 | 0 60,pdf_table,,department=自然科学科（数理コース）; source_page=5
@@ -260,44 +260,44 @@ NS-325,博物館学実習(2) ◇,2,,専門科目,学科共通,elective,curriculu
 NS-911,特別講義(NS-1),2,,専門科目,学科共通,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,特別講義(NS-1) | 2 | NS-911 | 45 | 45 0 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=5
 NS-912,特別講義(NS-2),2,,専門科目,学科共通,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,特別講義(NS-2) | 2 | ◎ | ◎ | ◎ | ◎ | NS-912 | 45 | 45 0 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=5
 NS-913,特別講義(NS-3),2,,専門科目,学科共通,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,特別講義(NS-3) | 2 | NS-913 | 45 | 45 0 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-131,力学,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,自 然 | 力学 | ○ | 2 | 2 | NS-131 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-132,力学演習,1,,専門科目,自 然,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,力学演習 | 1 | 2 | ◎ | NS-132 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-133,波動・熱力学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,波動・熱力学 | △ | 2 | 2 | NS-133 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-234,電磁気学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,電磁気学 | △ | 2 | 2 | NS-234 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-231,分子構造論,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子構造論 | ○ | 2 | 2 | NS-231 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-332,生命の化学,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,生命の化学 | ○ | 2 | 2 | NS-332 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-236,分子物性論,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子物性論 | ○ | 2 | 2 | NS-236 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-333,分子の運動,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子の運動 | △ | 2 | 2 | NS-333 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-232,進化論,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,進化論 | ○ | 2 | 2 | NS-232 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-237,動物学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,動物学 | △ | 2 | 2 | NS-237 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-238,植物学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,植物学 | △ | 2 | 2 | ○ | NS-238 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-335,生命と物質,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,生命と物質 | ○ | 2 | 2 | NS-335 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-233,地球変動論,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,地球変動論 | ○ | 2 | 2 | NS-233 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-235,プレート・テクトニクス,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,プレート・テクトニクス | △ | 2 | 2 | NS-235 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-239,宇宙科学,2,○,専門科目,自 然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,宇宙科学 | ○ | 2 | 2 | NS-239 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-336,惑星科学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,惑星科学 | △ | 2 | 2 | NS-336 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-334,古生物学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,古生物学 | △ | 2 | 2 | NS-334 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-337,地理学,2,△,専門科目,自 然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,地理学 | △ | 2 | 2 | NS-337 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
-NS-141,数学演習(1a),0.5,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,専門科目 | 数 理 | 数学演習(1a) | △ | 0.5 | 1 | NS-141 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-142,数学演習(1b),0.5,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(1b) | △ | 0.5 | 1 | NS-142 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-143,数学演習(2a),0.5,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(2a) | △ | 0.5 | 1 | NS-143 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-144,数学演習(2b),0.5,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(2b) | △ | 0.5 | 1 | NS-144 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-941,基礎論理回路,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基礎論理回路 | △ | 2 | 2 | NS-941 | 15 | 20 15 | 10 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-145,離散数学,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,離散数学 | △ | 2 | 2 | NS-145 | 10 | 20 10 | 10 50,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-241,集合と論理,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,集合と論理 | ○ | 2 | 2 | NS-241 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-341,極限と位相,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,極限と位相 | ○ | 2 | 2 | NS-341 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-146,基礎確率統計,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基礎確率統計 | △ | 2 | 2 | NS-146 | 0 | 15 10 | 0 75,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-248,関数論,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,関数論 | ○ | 2 | 2 | NS-248 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-242,代数学(1),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(1) | ○ | 2 | 2 | NS-242 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-243,代数学(2),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(2) | △ | 2 | 2 | NS-243 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-244,代数学(3),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(3) | △ | 2 | 2 | NS-244 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-245,幾何学(1),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(1) | ○ | 2 | 2 | NS-245 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-246,幾何学(2),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(2) | △ | 2 | 2 | NS-246 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-247,幾何学(3),2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(3) | △ | 2 | 2 | NS-247 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-343,ルベーグ積分論,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,ルベーグ積分論 | △ | 2 | 2 | NS-343 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-344,関数解析学,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,関数解析学 | ○ | 2 | 2 | NS-344 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-342,現代代数学,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,現代代数学 | ○ | 2 | 2 | NS-342 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
-NS-345,計算物理学,2,,専門科目,数 理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,計算物理学 | ○ | 2 | 2 | NS-345 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-131,力学,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,自 然 | 力学 | ○ | 2 | 2 | NS-131 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-132,力学演習,1,,専門科目,自然,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,力学演習 | 1 | 2 | ◎ | NS-132 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-133,波動・熱力学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,波動・熱力学 | △ | 2 | 2 | NS-133 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-234,電磁気学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,電磁気学 | △ | 2 | 2 | NS-234 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-231,分子構造論,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子構造論 | ○ | 2 | 2 | NS-231 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-332,生命の化学,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,生命の化学 | ○ | 2 | 2 | NS-332 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-236,分子物性論,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子物性論 | ○ | 2 | 2 | NS-236 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-333,分子の運動,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,分子の運動 | △ | 2 | 2 | NS-333 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-232,進化論,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,進化論 | ○ | 2 | 2 | NS-232 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-237,動物学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,動物学 | △ | 2 | 2 | NS-237 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-238,植物学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,植物学 | △ | 2 | 2 | ○ | NS-238 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-335,生命と物質,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,生命と物質 | ○ | 2 | 2 | NS-335 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-233,地球変動論,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,地球変動論 | ○ | 2 | 2 | NS-233 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-235,プレート・テクトニクス,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,プレート・テクトニクス | △ | 2 | 2 | NS-235 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-239,宇宙科学,2,○,専門科目,自然,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,宇宙科学 | ○ | 2 | 2 | NS-239 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-336,惑星科学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,惑星科学 | △ | 2 | 2 | NS-336 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-334,古生物学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,古生物学 | △ | 2 | 2 | NS-334 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-337,地理学,2,△,専門科目,自然,elective-required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,地理学 | △ | 2 | 2 | NS-337 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=5
+NS-141,数学演習(1a),0.5,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,専門科目 | 数 理 | 数学演習(1a) | △ | 0.5 | 1 | NS-141 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-142,数学演習(1b),0.5,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(1b) | △ | 0.5 | 1 | NS-142 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-143,数学演習(2a),0.5,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(2a) | △ | 0.5 | 1 | NS-143 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-144,数学演習(2b),0.5,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,数学演習(2b) | △ | 0.5 | 1 | NS-144 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-941,基礎論理回路,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基礎論理回路 | △ | 2 | 2 | NS-941 | 15 | 20 15 | 10 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-145,離散数学,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,離散数学 | △ | 2 | 2 | NS-145 | 10 | 20 10 | 10 50,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-241,集合と論理,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,集合と論理 | ○ | 2 | 2 | NS-241 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-341,極限と位相,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,極限と位相 | ○ | 2 | 2 | NS-341 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-146,基礎確率統計,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,基礎確率統計 | △ | 2 | 2 | NS-146 | 0 | 15 10 | 0 75,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-248,関数論,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,関数論 | ○ | 2 | 2 | NS-248 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-242,代数学(1),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(1) | ○ | 2 | 2 | NS-242 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-243,代数学(2),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(2) | △ | 2 | 2 | NS-243 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-244,代数学(3),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,代数学(3) | △ | 2 | 2 | NS-244 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-245,幾何学(1),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(1) | ○ | 2 | 2 | NS-245 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-246,幾何学(2),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(2) | △ | 2 | 2 | NS-246 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-247,幾何学(3),2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,幾何学(3) | △ | 2 | 2 | NS-247 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-343,ルベーグ積分論,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,ルベーグ積分論 | △ | 2 | 2 | NS-343 | 40 | 20 30 | 0 10,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-344,関数解析学,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,関数解析学 | ○ | 2 | 2 | NS-344 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-342,現代代数学,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,現代代数学 | ○ | 2 | 2 | NS-342 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
+NS-345,計算物理学,2,,専門科目,数理,elective,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,計算物理学 | ○ | 2 | 2 | NS-345 | 30 | 30 0 | 0 40,pdf_table,,department=自然科学科（数理コース）; source_page=6
 NS-312,事例研究(1),4,○,専門科目,卒業研究関連科目,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,関卒連業科研目究 | 事例研究(1) | ○ | ○ | 4 | 4 | (4) | ◎ | ○ | ◎ | ○ | NS-312 | 25 | 25 25 | 0 25,pdf_table,,department=自然科学科（数理コース）; source_page=6
 NS-313,事例研究(2),2,○,専門科目,卒業研究関連科目,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,事例研究(2) | ○ | ○ | 2 | (2) | 2 | ◎ | ○ | ◎ | ○ | NS-313 | 25 | 25 25 | 0 25,pdf_table,,department=自然科学科（数理コース）; source_page=6
 NS-411,卒業研究(1),3,○,専門科目,卒業研究関連科目,required,curriculum,7f952e53f2cdbe399fe9858c53a40a4e.pdf,卒業研究(1) | ○ | ○ | 3 | (6) | 6 | ◎ | ○ | ◎ | ○ | NS-411 | 20 | 20 20 | 20 20,pdf_table,,department=自然科学科（数理コース）; source_page=6

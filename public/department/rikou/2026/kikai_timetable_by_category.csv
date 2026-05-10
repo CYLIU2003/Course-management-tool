@@ -222,17 +222,17 @@ SE-333,情報処理応用,2,,理工学基礎科目,情報系,elective,curriculum
 SE-331,数値解析,2,,理工学基礎科目,情報系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,数値解析 | 2 | 2 | SE-331 | 40 | 10 | 10 | 0 | 40,pdf_table,,department=機械工学科; source_page=4
 SE-235,AI・ビッグデータ基礎,1,,理工学基礎科目,情報系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,AI・ビッグデータ基礎 | 1 | 2 | SE-235 | 20 | 10 | 20 | 20 | 30,pdf_table,,department=機械工学科; source_page=4
 SE-332,AI・ビッグデータ応用,1,,理工学基礎科目,情報系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,AI・ビッグデータ応用 | 1 | 2 | SE-332 | 20 | 10 | 20 | 20 | 30,pdf_table,,department=機械工学科; source_page=4
-SE-241,技術者倫理,2,○,理工学基礎科目,教理養工系学,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,教理養工系学 | 技術者倫理 | ○ | 2 | 2 | SE-241 | 20 | 19 | 21 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
-SE-141,未来を拓くイノベーション,2,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,未来を拓くイノベーション | 2 | 2 | SE-141 | 60 | 20 | 10 | 0 | 10,pdf_table,,department=機械工学科; source_page=4
-SE-941,インターンシップ(1),1,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,インターンシップ(1) | 1 | SE-941 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
-SE-942,インターンシップ(2),1,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,インターンシップ(2) | 1 | SE-942 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
-SE-943,海外体験実習(1),2,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,海外体験実習(1) | 2 | SE-943 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
-SE-944,海外体験実習(2),2,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,海外体験実習(2) | 2 | SE-944 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
-SE-341,金属加工(実習含),2,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,基理礎工科学目 | 教理養工系学 | 金属加工(実習含) | 2 | 2 | SE-341 | 0 | 0 | 0 0 | 100,pdf_table,,department=機械工学科; source_page=5
-SE-342,電気工学概論(実習含),2,,理工学基礎科目,教理養工系学,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,電気工学概論(実習含) | 2 | 2 | SE-342 | 30 | 10 | 20 30 | 10,pdf_table,,department=機械工学科; source_page=5
-SE-945,SD PBL(1),1,○,理工学基礎科目,教理養工系学,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(1) | ○ | 1 | 2 | SE-945 | 30 | 10 | 25 15 | 20,pdf_table,,department=機械工学科; source_page=5
-SE-946,SD PBL(2),1,○,理工学基礎科目,教理養工系学,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(2) | ○ | 1 | 2 | SE-946 | 30 | 10 | 30 10 | 20,pdf_table,,department=機械工学科; source_page=5
-SE-947,SD PBL(3),1,○,理工学基礎科目,教理養工系学,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(3) | ○ | 1 | 2 | SE-947 | 9 | 24 | 24 24 | 19,pdf_table,,department=機械工学科; source_page=5
+SE-241,技術者倫理,2,○,理工学基礎科目,理工学教養系,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,教理養工系学 | 技術者倫理 | ○ | 2 | 2 | SE-241 | 20 | 19 | 21 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
+SE-141,未来を拓くイノベーション,2,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,未来を拓くイノベーション | 2 | 2 | SE-141 | 60 | 20 | 10 | 0 | 10,pdf_table,,department=機械工学科; source_page=4
+SE-941,インターンシップ(1),1,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,インターンシップ(1) | 1 | SE-941 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
+SE-942,インターンシップ(2),1,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,インターンシップ(2) | 1 | SE-942 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
+SE-943,海外体験実習(1),2,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,海外体験実習(1) | 2 | SE-943 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
+SE-944,海外体験実習(2),2,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,海外体験実習(2) | 2 | SE-944 | 20 | 20 | 20 | 20 | 20,pdf_table,,department=機械工学科; source_page=4
+SE-341,金属加工(実習含),2,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,基理礎工科学目 | 教理養工系学 | 金属加工(実習含) | 2 | 2 | SE-341 | 0 | 0 | 0 0 | 100,pdf_table,,department=機械工学科; source_page=5
+SE-342,電気工学概論(実習含),2,,理工学基礎科目,理工学教養系,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,電気工学概論(実習含) | 2 | 2 | SE-342 | 30 | 10 | 20 30 | 10,pdf_table,,department=機械工学科; source_page=5
+SE-945,SD PBL(1),1,○,理工学基礎科目,理工学教養系,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(1) | ○ | 1 | 2 | SE-945 | 30 | 10 | 25 15 | 20,pdf_table,,department=機械工学科; source_page=5
+SE-946,SD PBL(2),1,○,理工学基礎科目,理工学教養系,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(2) | ○ | 1 | 2 | SE-946 | 30 | 10 | 30 10 | 20,pdf_table,,department=機械工学科; source_page=5
+SE-947,SD PBL(3),1,○,理工学基礎科目,理工学教養系,required,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,SD PBL(3) | ○ | 1 | 2 | SE-947 | 9 | 24 | 24 24 | 19,pdf_table,,department=機械工学科; source_page=5
 SL-101,理工学と生活,2,,専門科目,専門 教養,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,専門科目 | 専門 教養 | 理工学と生活 | 2 | 2 | △ | △ | △ | △ | SL-101 | 15 | 15 | 15 3 | 0 25,pdf_table,,department=機械工学科; source_page=5
 SL-102,工業概論,2,,専門科目,専門 教養,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,工業概論 | 2 | 2 | ◎ | △ | ◎ | ◎ | ◎ | SL-102 | 40 | 10 | 30 2 | 0 0,pdf_table,,department=機械工学科; source_page=5
 SL-103,原子力汎論,2,,専門科目,専門 教養,elective,curriculum,055bc6c29e9f19180c4e506fc36756a0.pdf,原子力汎論 | 2 | 2 | △ | SL-103 | 40 | 0 | 0 | 0 60,pdf_table,,department=機械工学科; source_page=5

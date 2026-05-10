@@ -1,6 +1,6 @@
-import { parseCreditRequirementsFile, parseCoursesFile, parseClassScheduleFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithScheduleDetailed } from './csvImporter';
+import { parseCreditRequirementsFile, parseCoursesFile, parseClassScheduleFile, parseApplicableCoursesFile, parseCreditRequirements, parseCourses, parseClassScheduleRows, mergeCoursesWithScheduleDetailed } from './csvImporter';
 import type { AcademicCourse, AcademicCurriculum } from './academicProgress';
-import type { ClassScheduleRow, CsvParseIssue } from './csvImporter';
+import type { ClassScheduleRow, CsvParseIssue, ApplicableCourseRow } from './csvImporter';
 
 export interface Department {
   id: string;
@@ -34,7 +34,7 @@ export const AVAILABLE_DEPARTMENTS: Department[] = [
 ] as const;
 
 export type CSVLoadStatus = 'success' | 'partial' | 'failed';
-export type CSVResourceKind = 'requirements' | 'timetable' | 'schedule';
+export type CSVResourceKind = 'requirements' | 'timetable' | 'schedule' | 'applicableCourses';
 export type CSVResourceStatus = 'loaded' | 'fallback-loaded' | 'missing' | 'failed' | 'skipped';
 
 export interface CSVResourceLoadResult {
@@ -54,6 +54,7 @@ export interface AutoLoadDepartmentCSVResult {
   entranceYear?: number;
   curriculum: AcademicCurriculum;
   courses: AcademicCourse[];
+  applicableCourses: ApplicableCourseRow[];
   stats: {
     requirementRows: number;
     timetableRows: number;
@@ -91,10 +92,12 @@ export class CSVAutoLoadError extends Error {
 }
 
 type CSVPaths = {
+  fallbackApplicableCourses?: string;
   requirements: string;
   timetable: string;
   schedule: string;
   sharedSchedule: string;
+  applicableCourses: string;
   fallbackRequirements?: string;
   fallbackTimetable?: string;
   fallbackSchedule?: string;
@@ -124,10 +127,12 @@ function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
       timetable: `${basePath}/${entranceYear}/${departmentId}_timetable_by_category.csv`,
       schedule: `${basePath}/${entranceYear}/${departmentId}_${entranceYear}_spring_schedule.csv`,
       sharedSchedule: `${basePath}/${entranceYear}/${facultyId}_${entranceYear}_spring_schedule.csv`,
+      applicableCourses: `${basePath}/${entranceYear}/${departmentId}_applicable_courses.csv`,
       fallbackRequirements: `${basePath}/${departmentId}_credit_requirements.csv`,
       fallbackTimetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
       fallbackSchedule: `${basePath}/${departmentId}_${entranceYear}_spring_schedule.csv`,
       fallbackSharedSchedule: `${basePath}/${facultyId}_${entranceYear}_spring_schedule.csv`,
+      fallbackApplicableCourses: `${basePath}/${departmentId}_applicable_courses.csv`,
     };
   }
   return {
@@ -135,8 +140,10 @@ function buildCSVPaths(departmentId: string, entranceYear?: number): CSVPaths {
     timetable: `${basePath}/${departmentId}_timetable_by_category.csv`,
     schedule: `${basePath}/${departmentId}_spring_schedule.csv`,
     sharedSchedule: `${basePath}/${facultyId}_spring_schedule.csv`,
+    applicableCourses: `${basePath}/${departmentId}_applicable_courses.csv`,
     fallbackRequirements: `${legacyRikouPath}/${departmentId}_credit_requirements.csv`,
     fallbackTimetable: `${legacyRikouPath}/${departmentId}_timetable_by_category.csv`,
+    fallbackApplicableCourses: `${legacyRikouPath}/${departmentId}_applicable_courses.csv`,
   };
 }
 
@@ -211,6 +218,12 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
       throw new CSVAutoLoadError('科目一覧CSVに不正な行があります。', [requirementsFetch.result, timetableFetch.result], [...messages, { level: 'error', text: `科目一覧CSV: ${summarizeValidationIssues(timetableParse.errors)}` }]);
     }
 
+    const applicableFetch = await fetchOptionalCSVText('applicableCourses', [paths.applicableCourses, paths.fallbackApplicableCourses]);
+    resources.push(applicableFetch.result);
+    const applicableCoursesFile = new File([new Blob([applicableFetch.text], { type: 'text/csv' })], `${departmentId}_applicable_courses.csv`, { type: 'text/csv' });
+    const applicableParse = await parseApplicableCoursesFile(applicableCoursesFile);
+    const applicableCourses = applicableParse.rows;
+
     const scheduleFetch = await fetchOptionalCSVText('schedule', [paths.schedule, paths.sharedSchedule, paths.fallbackSchedule, paths.fallbackSharedSchedule]);
     resources.push(scheduleFetch.result);
     let scheduleRows: ClassScheduleRow[] = [];
@@ -249,9 +262,9 @@ export async function autoLoadDepartmentCSVs(departmentId: string, entranceYear?
     if (mergedResult.stats.ambiguousMatches > 0) {
       messages.push({ level: 'warning', text: `曖昧なマッチが${mergedResult.stats.ambiguousMatches}件あります。` });
     }
-    return { status: scheduleCourses.length > 0 ? 'success' : 'partial', departmentId, departmentName, entranceYear, curriculum, courses, stats: { requirementRows: requirementRows.length, timetableRows: timetableRows.length, scheduleRows: scheduleRows.length, curriculumCourses: curriculumCourses.length, scheduleCourses: scheduleCourses.length, mergedCourses: courses.length, coursesWithOfferings, offerings, matchedByLectureCode: mergedResult.stats.matchedByLectureCode, matchedByCourseId: mergedResult.stats.matchedByCourseId, matchedByTitle: mergedResult.stats.matchedByTitle, ambiguousMatches: mergedResult.stats.ambiguousMatches, unmatchedOfferings: mergedResult.stats.unmatchedOfferings, unmatchedCourseRows: mergedResult.stats.unmatchedCourseRows, unknownCourseTypes: mergedResult.stats.unknownCourseTypes }, resources, messages };
+    return { status: scheduleCourses.length > 0 ? 'success' : 'partial', departmentId, departmentName, entranceYear, curriculum, courses, applicableCourses, stats: { requirementRows: requirementRows.length, timetableRows: timetableRows.length, scheduleRows: scheduleRows.length, curriculumCourses: curriculumCourses.length, scheduleCourses: scheduleCourses.length, mergedCourses: courses.length, coursesWithOfferings, offerings, matchedByLectureCode: mergedResult.stats.matchedByLectureCode, matchedByCourseId: mergedResult.stats.matchedByCourseId, matchedByTitle: mergedResult.stats.matchedByTitle, ambiguousMatches: mergedResult.stats.ambiguousMatches, unmatchedOfferings: mergedResult.stats.unmatchedOfferings, unmatchedCourseRows: mergedResult.stats.unmatchedCourseRows, unknownCourseTypes: mergedResult.stats.unknownCourseTypes }, resources, messages };
   } catch (error) {
-    const result: AutoLoadDepartmentCSVResult = { status: 'failed', departmentId, departmentName, entranceYear, curriculum: { name: departmentName, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } }, courses: [], stats: { requirementRows: 0, timetableRows: 0, scheduleRows: 0, curriculumCourses: 0, scheduleCourses: 0, mergedCourses: 0, coursesWithOfferings: 0, offerings: 0, matchedByLectureCode: 0, matchedByCourseId: 0, matchedByTitle: 0, ambiguousMatches: 0, unmatchedOfferings: 0, unmatchedCourseRows: 0, unknownCourseTypes: 0 }, resources, messages };
+    const result: AutoLoadDepartmentCSVResult = { status: 'failed', departmentId, departmentName, entranceYear, curriculum: { name: departmentName, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } }, courses: [], applicableCourses: [], stats: { requirementRows: 0, timetableRows: 0, scheduleRows: 0, curriculumCourses: 0, scheduleCourses: 0, mergedCourses: 0, coursesWithOfferings: 0, offerings: 0, matchedByLectureCode: 0, matchedByCourseId: 0, matchedByTitle: 0, ambiguousMatches: 0, unmatchedOfferings: 0, unmatchedCourseRows: 0, unknownCourseTypes: 0 }, resources, messages };
     if (error instanceof CSVAutoLoadError) throw new CSVAutoLoadError(error.message, error.resources.length > 0 ? error.resources : resources, [...messages, ...error.messages], result);
     throw new CSVAutoLoadError(error instanceof Error ? error.message : 'CSVの読み込みに失敗しました。', resources, messages, result);
   }

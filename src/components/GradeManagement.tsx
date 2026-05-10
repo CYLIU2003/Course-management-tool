@@ -12,6 +12,7 @@ interface GradeManagementProps {
   settings: AcademicSettings;
   snapshot: AcademicDashboardSnapshot;
   importedCourses: AcademicCourse[];
+  applicableCourses?: import('../utils/csvImporter').ApplicableCourseRow[];
   allYearsData: AcademicAllYearsData;
   currentYear: AcademicYear;
   onBack: () => void;
@@ -25,6 +26,7 @@ export default function GradeManagement({
   allYearsData,
   currentYear,
   onBack,
+  applicableCourses,
   showRequirementsPanel = true,
 }: GradeManagementProps) {
   return (
@@ -52,6 +54,7 @@ export default function GradeManagement({
           curriculum={settings.curriculum}
           allYearsData={allYearsData}
           courses={importedCourses}
+          applicableCourses={applicableCourses ?? []}
           currentYear={currentYear}
         />
       )}

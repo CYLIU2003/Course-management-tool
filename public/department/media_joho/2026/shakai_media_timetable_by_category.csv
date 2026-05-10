@@ -90,12 +90,12 @@ FL-24R,韓国語(2a),1,,基礎科目,外国語科目,elective,curriculum,36f4e40
 FL-24S,韓国語(2b),1,,基礎科目,外国語科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,韓国語(2b) 1 1 (1) FL-24S 20 30 10 10 30,pdftotext_line,,department=社会メディア学科; source_page=81
 FL-24T,日本語表現(a),1,,基礎科目,外国語科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,日本語表現(a) 1 1 (1) FL-24T 20 30 10 10 30,pdftotext_line,,department=社会メディア学科; source_page=81
 FL-24U,日本語表現(b),1,,基礎科目,外国語科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,日本語表現(b) 1 1 (1) FL-24U 20 30 10 10 30,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-111,体育(1a),0.5,△,学科専門科目,専門科目,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,基礎体育(1a) △ 0.5 1 PE-111 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-112,体育(1b),0.5,△,学科専門科目,専門科目,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,基礎体育(1b) △ 0.5 1 PE-112 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-113,育,0.5,△,学科専門科目,専門科目,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,育 基礎体育(2a) △ 0.5 1 PE-113 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-114,体育(2b),0.5,△,学科専門科目,専門科目,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,科 基礎体育(2b) △ 0.5 1 PE-114 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-211,応用体育(1),1,,学科専門科目,専門科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,応用体育(1) 1 2 (2) PE-211 20 0 0 60 20 集中講義あり,pdftotext_line,,department=社会メディア学科; source_page=81
-PE-212,応用体育(2),1,,学科専門科目,専門科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,応用体育(2) 1 2 (2) PE-212 20 0 0 60 20 集中講義あり,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-111,体育(1a),0.5,△,体育科目,その他,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,基礎体育(1a) △ 0.5 1 PE-111 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-112,体育(1b),0.5,△,体育科目,その他,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,基礎体育(1b) △ 0.5 1 PE-112 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-113,育,0.5,△,体育科目,その他,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,育 基礎体育(2a) △ 0.5 1 PE-113 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-114,体育(2b),0.5,△,体育科目,その他,elective-required,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,科 基礎体育(2b) △ 0.5 1 PE-114 20 0 0 60 20,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-211,応用体育(1),1,,体育科目,その他,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,応用体育(1) 1 2 (2) PE-211 20 0 0 60 20 集中講義あり,pdftotext_line,,department=社会メディア学科; source_page=81
+PE-212,応用体育(2),1,,体育科目,その他,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,応用体育(2) 1 2 (2) PE-212 20 0 0 60 20 集中講義あり,pdftotext_line,,department=社会メディア学科; source_page=81
 LA-111,哲学(1),2,Ｇ,基礎科目,教養科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,哲学(1) Ｇ 2 2 LA-111 25 30 10 15 20,pdftotext_line,,department=社会メディア学科; source_page=81
 LA-112,哲学(2),2,Ｇ,基礎科目,教養科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,哲学(2) Ｇ 2 2 LA-112 5 50 15 20 10,pdftotext_line,,department=社会メディア学科; source_page=81
 LA-113,倫理学(1),2,,基礎科目,教養科目,elective,curriculum,36f4e4062d15fd6e4875f8e78bec3bd6.pdf,倫理学(1) 2 2 LA-113 30 50 10 0 10 ＳＣ開講,pdftotext_line,,department=社会メディア学科; source_page=81

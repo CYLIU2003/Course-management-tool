@@ -126,12 +126,40 @@ function validateCourseRow(row, rowNumber) {
   return issues;
 }
 
-function validateScheduleRow(row, rowNumber) {
+function inferScheduleTermFromPath(relativePath) {
+  const normalizedPath = normalizeCell(relativePath).toLowerCase();
+
+  if (normalizedPath.includes("fall_schedule") || normalizedPath.includes("autumn_schedule") || normalizedPath.includes("後期")) {
+    return "後期";
+  }
+
+  if (normalizedPath.includes("spring_schedule") || normalizedPath.includes("前期")) {
+    return "前期";
+  }
+
+  return "";
+}
+
+function isValidScheduleTerm(term) {
+  return term === "通年" || term.startsWith("前") || term.startsWith("後") || term.startsWith("春") || term.startsWith("秋") || term.startsWith("夏") || term.startsWith("冬");
+}
+
+function validateScheduleRow(row, rowNumber, expectedTerm = "") {
   const issues = [];
-  for (const field of ["departmentId", "sourceDepartment", "day", "period", "term", "title", "lectureCode"]) {
+
+  for (const field of ["departmentId", "sourceDepartment", "day", "period", "title", "lectureCode"]) {
     if (!normalizeCell(row[field])) {
       issues.push(`${rowNumber}行目: ${field} が空欄`);
     }
+  }
+
+  const term = normalizeCell(row.term);
+  if (!term) {
+    if (!expectedTerm) {
+      issues.push(`${rowNumber}行目: term が空欄`);
+    }
+  } else if (!isValidScheduleTerm(term)) {
+    issues.push(`${rowNumber}行目: term が不正`);
   }
 
   if (normalizeCell(row.sourcePage) && Number.isNaN(Number(normalizeCell(row.sourcePage).replace(/,/g, "")))) {
@@ -181,9 +209,9 @@ function checkCsv(relativePath, requiredHeader, label, validator, required = tru
   return { exists: true, rows, headerMatches: true };
 }
 
-function checkSchedule(departmentId, scheduleHeader) {
-  const departmentSchedulePath = `public/department/rikou/2026/${departmentId}_2026_spring_schedule.csv`;
-  const sharedSchedulePath = "public/department/rikou/2026/rikou_2026_spring_schedule.csv";
+function checkSchedule(departmentId, scheduleHeader, departmentSchedulePath, sharedSchedulePath) {
+  const departmentExpectedTerm = inferScheduleTermFromPath(departmentSchedulePath);
+  const sharedExpectedTerm = inferScheduleTermFromPath(sharedSchedulePath);
 
   if (fileExists(departmentSchedulePath)) {
     const parsed = parseCsv(departmentSchedulePath);
@@ -195,7 +223,7 @@ function checkSchedule(departmentId, scheduleHeader) {
     const issues = missingFields.length > 0 ? [`schedule: missing required fields -> ${missingFields.join(", ")}`] : [];
     issues.push(...parsed.errors.flatMap((errorItem) => [`schedule: ${errorItem.message}`]));
     parsed.data.forEach((row, index) => {
-      const rowIssues = validateScheduleRow(row, index + 2);
+      const rowIssues = validateScheduleRow(row, index + 2, departmentExpectedTerm);
       issues.push(...rowIssues.map((issue) => `schedule: ${issue}`));
     });
 
@@ -219,7 +247,7 @@ function checkSchedule(departmentId, scheduleHeader) {
     const issues = missingFields.length > 0 ? [`schedule fallback: missing required fields -> ${missingFields.join(", ")}`] : [];
     issues.push(...parsed.errors.flatMap((errorItem) => [`schedule fallback: ${errorItem.message}`]));
     parsed.data.forEach((row, index) => {
-      const rowIssues = validateScheduleRow(row, index + 2);
+      const rowIssues = validateScheduleRow(row, index + 2, sharedExpectedTerm);
       issues.push(...rowIssues.map((issue) => `schedule fallback: ${issue}`));
     });
 
@@ -236,19 +264,104 @@ function checkSchedule(departmentId, scheduleHeader) {
   log("WARN", `schedule missing: ${departmentSchedulePath} and ${sharedSchedulePath}`);
 }
 
-const departments = [
-  { id: "denki", name: "電気電子通信工学科" },
-  { id: "kikai", name: "機械工学科" },
-  { id: "kikai_system", name: "機械システム工学科" },
-  { id: "iyo", name: "医用工学科" },
-  { id: "ouyou_kagaku", name: "応用化学科" },
-  { id: "genshiryoku", name: "原子力安全工学科" },
-  { id: "shizen_shizen", name: "自然科学科（自然コース）" },
-  { id: "shizen_suuri", name: "自然科学科（数理コース）" },
-];
+function normalizeCatalogPath(catalogPath) {
+  const trimmed = normalizeCell(catalogPath);
+  if (!trimmed) {
+    return "";
+  }
+
+  return trimmed.startsWith("/") ? `public${trimmed}` : `public/${trimmed}`;
+}
+
+function validateApplicableCourseRow(row, rowNumber) {
+  const issues = [];
+
+  for (const field of ["departmentId", "facultyId", "stage", "area", "subarea", "requirementKey", "requiredCredits", "courseId", "title", "credits", "courseType", "applicability"]) {
+    if (!normalizeCell(row[field])) {
+      issues.push(`${rowNumber}行目: ${field} が空欄`);
+    }
+  }
+
+  for (const field of ["requiredCredits", "credits"]) {
+    if (normalizeCell(row[field]) && Number.isNaN(Number(normalizeCell(row[field]).replace(/,/g, "")))) {
+      issues.push(`${rowNumber}行目: ${field} が数値ではない`);
+    }
+  }
+
+  if (normalizeCell(row.sourcePage) && Number.isNaN(Number(normalizeCell(row.sourcePage).replace(/,/g, "")))) {
+    issues.push(`${rowNumber}行目: sourcePage が数値ではない`);
+  }
+
+  return issues;
+}
+
+function loadDepartmentsFromCatalog() {
+  const catalogPath = "public/department/_catalog/departments_2026.csv";
+  if (!fileExists(catalogPath)) {
+    log("ERROR", `${catalogPath} not found`);
+    return [];
+  }
+
+  const parsed = parseCsv(catalogPath);
+  const requiredFields = ["departmentId", "name", "facultyId", "facultyName", "campus", "sourceDepartment", "entranceYear", "curriculumPath", "schedulePath", "sourceStatus"];
+  const headerFields = parsed.meta.fields ?? [];
+  const missingFields = requiredFields.filter((field) => !headerFields.includes(field));
+
+  if (missingFields.length > 0) {
+    log("ERROR", `catalog: missing required fields -> ${missingFields.join(", ")}`);
+    return [];
+  }
+
+  if (parsed.errors.length > 0) {
+    log("ERROR", `catalog: validation failed (${parsed.errors.length} issues)`);
+    parsed.errors.slice(0, 5).forEach((errorItem) => console.log(`       catalog: ${errorItem.message}`));
+    return [];
+  }
+
+  const departmentsById = new Map();
+
+  parsed.data.forEach((row, index) => {
+    const departmentId = normalizeCell(row.departmentId);
+    const name = normalizeCell(row.name);
+    const facultyId = normalizeCell(row.facultyId);
+    const facultyName = normalizeCell(row.facultyName);
+    const campus = normalizeCell(row.campus);
+    const sourceStatus = normalizeCell(row.sourceStatus);
+    const curriculumPath = normalizeCatalogPath(row.curriculumPath);
+    const schedulePath = normalizeCatalogPath(row.schedulePath);
+
+    if (!departmentId || !name || !facultyId || !facultyName || !curriculumPath || !schedulePath) {
+      log("ERROR", `catalog: row ${index + 2} is incomplete`);
+      return;
+    }
+
+    if (!departmentsById.has(departmentId)) {
+      departmentsById.set(departmentId, {
+        id: departmentId,
+        name,
+        faculty: facultyName,
+        facultyId,
+        campus,
+        sourceStatus: sourceStatus || undefined,
+        curriculumPath,
+        schedulePath,
+      });
+    }
+  });
+
+  return Array.from(departmentsById.values());
+}
+
+const departments = loadDepartmentsFromCatalog();
+const uniqueFacultyDirectories = Array.from(new Set(departments.map((department) => department.facultyId)));
+
+if (departments.length !== 19) {
+  log("WARN", `catalog: expected 19 departments, found ${departments.length}`);
+}
 
 const requirementsHeader = "stage,area,subarea,total_required_credits,必修_credits,選択必修1_credits,選択必修2_credits,自由_credits,notes";
 const coursesHeader = "id,title,credits,raw_required,category,group,courseType";
+const applicableCoursesHeader = "departmentId,facultyId,stage,area,subarea,requirementKey,requiredCredits,courseId,title,credits,courseType,applicability,matchReason,sourceFile,sourceQuality,sourcePage,notes";
 const scheduleHeader = "departmentId,sourceDepartment,day,period,term,gradeYear,className,title,teacher,lectureCode,room,target,remarks,requiredFlag,sourcePage";
 
 console.log("============================================================");
@@ -257,6 +370,7 @@ console.log("============================================================");
 console.log("");
 console.log(`[INFO] Project root: ${root}`);
 console.log(`[INFO] Check time: ${formatTimestamp(new Date())}`);
+console.log(`[INFO] Departments in catalog: ${departments.length}`);
 console.log("");
 
 if (!csvOnly) {
@@ -276,22 +390,34 @@ if (!csvOnly) {
 }
 
 console.log("------------------------------------------------------------");
-console.log("CSV directory");
+console.log("CSV directories");
 console.log("------------------------------------------------------------");
 
-checkDirectory("public/department/rikou/2026");
+for (const facultyId of uniqueFacultyDirectories) {
+  checkDirectory(`public/department/${facultyId}/2026`);
+}
 console.log("");
 
 console.log("------------------------------------------------------------");
-console.log("2026 Rikou CSV status");
+console.log("2026 department CSV status");
 console.log("------------------------------------------------------------");
 
 for (const department of departments) {
   console.log("");
-  console.log(`[${department.id}] ${department.name}`);
+  console.log(`[${department.id}] ${department.name} (${department.facultyId})`);
+
+  if (department.sourceStatus === "partial_no_department_curriculum_pdf") {
+    log("WARN", `${department.id}: 学科別教育課程表PDF未提供`);
+  }
+
+  const requirementsPath = department.curriculumPath.replace(/_timetable_by_category\.csv$/, "_credit_requirements.csv");
+  const timetablePath = department.curriculumPath;
+  const applicableCoursesPath = department.curriculumPath.replace(/_timetable_by_category\.csv$/, "_applicable_courses.csv");
+  const schedulePath = department.schedulePath;
+  const sharedSchedulePath = `public/department/${department.facultyId}/2026/${department.facultyId}_2026_spring_schedule.csv`;
 
   checkCsv(
-    `public/department/rikou/2026/${department.id}_credit_requirements.csv`,
+    requirementsPath,
     requirementsHeader,
     "requirements",
     validateCreditRequirementRow,
@@ -299,14 +425,22 @@ for (const department of departments) {
   );
 
   checkCsv(
-    `public/department/rikou/2026/${department.id}_timetable_by_category.csv`,
+    timetablePath,
     coursesHeader,
     "courses",
     validateCourseRow,
     true,
   );
 
-  checkSchedule(department.id, scheduleHeader);
+  checkCsv(
+    applicableCoursesPath,
+    applicableCoursesHeader,
+    "applicableCourses",
+    validateApplicableCourseRow,
+    true,
+  );
+
+  checkSchedule(department.id, scheduleHeader, schedulePath, sharedSchedulePath);
 }
 
 console.log("");

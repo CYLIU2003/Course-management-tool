@@ -240,7 +240,7 @@ export default function TimetableApp() {
             requiredCredits: 0,
             breakdown: { required: 0, electiveRequired: 0, elective: 0 },
           },
-          courses: [],
+          courses: [], applicableCourses: [],
           stats: {
             requirementRows: 0,
             timetableRows: 0,
@@ -292,7 +292,7 @@ export default function TimetableApp() {
           requiredCredits: 0,
           breakdown: { required: 0, electiveRequired: 0, elective: 0 },
         },
-        courses: [],
+        courses: [], applicableCourses: [],
         stats: {
           requirementRows: 0,
           timetableRows: 0,
@@ -724,6 +724,7 @@ export default function TimetableApp() {
               curriculum={settings.curriculum}
               allYearsData={allYearsData}
               courses={importedCourses}
+              applicableCourses={csvLoadResult?.applicableCourses ?? []}
               currentYear={currentYear}
             />
           </div>
@@ -731,14 +732,16 @@ export default function TimetableApp() {
       case "grades":
         return (
           <GradeManagement
-            settings={settings}
-            snapshot={dashboardSnapshot}
-            importedCourses={importedCourses}
-            allYearsData={allYearsData}
-            currentYear={currentYear}
-            onBack={() => setCurrentPage("timetable")}
-            showRequirementsPanel={false}
-          />
+                settings={settings}
+                snapshot={dashboardSnapshot}
+                importedCourses={importedCourses}
+                allYearsData={allYearsData}
+                currentYear={currentYear}
+                applicableCourses={csvLoadResult?.applicableCourses ?? []}
+                onBack={() => {
+                  setActiveQuarter("1Q");
+                }}
+              />
         );
       case "settings":
         return (
