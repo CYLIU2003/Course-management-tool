@@ -95,7 +95,7 @@ export const HIRAMEKI_COURSE_GROUPS = [
   { id: 'kurashi', label: 'くらしづくり', keywords: ['くらしづくり'] },
   { id: 'hito', label: 'ひとづくり', keywords: ['ひとづくり'] },
   { id: 'next-pbl', label: 'Next PBL / SD PBL', keywords: ['nextpbl', 'sdpbl'] },
-  { id: 'data-science', label: 'AI・データサイエンス', keywords: ['ai', 'データサイエンス', '数理データ'] },
+  { id: 'data-science', label: 'AI・データサイエンス', keywords: ['aiデータサイエンス', '人工知能', 'データサイエンス', '数理データ'] },
 ] as const;
 
 export function createDefaultUniversityProgramProfile(): UniversityProgramProfile {
