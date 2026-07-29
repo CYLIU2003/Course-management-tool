@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-07-29",
+  "institution": "東京都市大学",
+  "repository": "CYLIU2003/Course-management-tool",
+  "policy": {
+    "authorityOrder": [
+      "portal_correction",
+      "current_handbook",
+      "current_timetable",
+      "current_program_official",
+      "department_official",
+      "historical_official"
+    ],
+    "allowedHosts": [
+      "www.asc.tcu.ac.jp",
+      "tap.tcu.ac.jp",
+      "hirameki.tcu.ac.jp",
+      "www.ee.tcu.ac.jp",
+      "tsap.tcu.ac.jp"
+    ],
+    "automaticDecisionRule": "autoDecisionAllowed=false の資料だけでは、修了・卒業・進級を達成済みにしない。",
+    "refreshRule": "dynamic または provisional の資料は実装時に再取得し、checkedAt と contentSha256 を更新する。"
+  },
+  "sources": [
+    {
+      "id": "tcu-2026-setagaya-timetable-landing",
+      "title": "【2026年度】授業時間表／世田谷キャンパス",
+      "url": "https://www.asc.tcu.ac.jp/7567/",
+      "format": "html",
+      "academicYear": 2026,
+      "scope": ["setagaya", "undergraduate", "graduate"],
+      "authority": "current_timetable",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["source_discovery", "correction_tracking"],
+      "notes": [
+        "ページ自体が『情報は随時更新』と明記している。",
+        "学修要覧の正誤表はポータルの文書ライブラリも確認すること。"
+      ]
+    },
+    {
+      "id": "tcu-2026-setagaya-front-all",
+      "title": "2026年度 世田谷キャンパス 全学科 前期 授業時間表",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/04/bdd00cb5d971b29dcea530b6758858ef.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["setagaya", "undergraduate", "front_term"],
+      "authority": "current_timetable",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["course_offerings", "rooms", "teachers", "lecture_codes", "target_years"],
+      "targetPattern": "public/department/{facultyId}/2026/{departmentId}_2026_spring_schedule.csv",
+      "notes": [
+        "59ページ。学科、曜日、時限、学期、年次、クラス、科目名、担当者、講義コード、教室、対象、備考を含む。",
+        "前期前=1Q、前期後=2Q。前期・前集中・通年は元表記も保存する。"
+      ]
+    },
+    {
+      "id": "tcu-2026-setagaya-back-all",
+      "title": "2026年度 世田谷キャンパス 全学科 後期 授業時間表",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/04/ede8727c2715d47e891b76cc03504ac3.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["setagaya", "undergraduate", "back_term"],
+      "authority": "current_timetable",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["course_offerings", "rooms", "teachers", "lecture_codes", "target_years"],
+      "targetPattern": "public/department/{facultyId}/2026/{departmentId}_2026_fall_schedule.csv",
+      "notes": [
+        "65ページ。学科別後期PDFの公開前でも、全学科版は公開済み。",
+        "後期前=3Q、後期後=4Q。後期・後集中・通年は元表記も保存する。"
+      ]
+    },
+    {
+      "id": "tcu-2026-denki-front",
+      "title": "2026年度 電気電子通信工学科 前期 授業時間表",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/03/038082e45f9d6043cec8273a03e3a11a.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["rikou", "denki", "front_term"],
+      "authority": "current_timetable",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["denki_validation", "hirameki_offerings", "international_offerings"],
+      "notes": [
+        "4ページ。全学科版から抽出した電気電子通信工学科の検算用。",
+        "『国際』科目、ひらめき集中科目、卒業研究の講義コードを含む。"
+      ]
+    },
+    {
+      "id": "tcu-2026-denki-handbook",
+      "title": "2026年度 理工学部 電気電子通信工学科 学修要覧",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/04/78e5697e9686a63f788d825d0d89daab.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["rikou", "denki", "curriculum", "graduation", "progression"],
+      "authority": "current_handbook",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["credit_requirements", "progression_rules", "graduation_research_rules", "ds_ms_rules", "tap_department_cautions"],
+      "sourcePages": [
+        {"pdfPage": 8, "printedPage": 127, "topic": "3年次・4年次進級、卒業研究着手"},
+        {"pdfPage": 9, "printedPage": 128, "topic": "卒業要件、DS/MS、超過単位"},
+        {"pdfPage": 10, "printedPage": 129, "topic": "TAP参加学生の履修上の注意"}
+      ],
+      "notes": [
+        "ポータル文書ライブラリの正誤表が最優先。",
+        "4年次進級と卒業要件は総単位だけでなく内訳・必修・△1・△2を同時に判定する。"
+      ]
+    },
+    {
+      "id": "tcu-2026-academic-calendar",
+      "title": "2026年度 学年暦",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2025/12/2ebbaf7f69e4e5ed2771236cb789f2ae.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["all_campuses", "calendar"],
+      "authority": "current_handbook",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["quarter_dates", "holidays", "exam_periods", "class_times"],
+      "target": "public/academic-calendar/2026.json",
+      "notes": [
+        "第1～7回が学期前半クォーター、第8～14回が学期後半クォーター。",
+        "100分授業の時限は 1限09:20-11:00、2限11:10-12:50、3限13:40-15:20、4限15:30-17:10、5限17:20-19:00。"
+      ]
+    },
+    {
+      "id": "tcu-2026-yokohama-timetable-landing",
+      "title": "【2026年度】横浜キャンパス授業時間表",
+      "url": "https://www.asc.tcu.ac.jp/7580/",
+      "format": "html",
+      "academicYear": 2026,
+      "scope": ["yokohama", "undergraduate", "graduate"],
+      "authority": "current_timetable",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["source_discovery", "correction_tracking"],
+      "notes": ["時間割訂正は2026-05-15更新。訂正PDFを必ず差分適用する。"]
+    },
+    {
+      "id": "tcu-2026-yokohama-undergraduate",
+      "title": "2026年度 横浜キャンパス 学部授業時間表",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/05/9c74fabca74255b40c7b0937b4083631.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["yokohama", "undergraduate"],
+      "authority": "current_timetable",
+      "freshness": "current",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["course_offerings", "rooms", "teachers", "lecture_codes", "target_years"],
+      "notes": ["36ページ。環境学部、メディア情報学部、デザイン・データ科学部を含む。"]
+    },
+    {
+      "id": "tcu-2026-yokohama-corrections",
+      "title": "2026年度 横浜キャンパス 時間割訂正",
+      "url": "https://www.asc.tcu.ac.jp/wp-content/uploads/2026/03/34709aa45ad4308d612e54c8a823ce28.pdf",
+      "format": "pdf",
+      "academicYear": 2026,
+      "scope": ["yokohama", "corrections"],
+      "authority": "portal_correction",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": true,
+      "download": true,
+      "useFor": ["schedule_corrections"],
+      "notes": ["訂正はベース時間割へ上書きし、変更履歴を保持する。"]
+    },
+    {
+      "id": "tcu-tap-current-overview",
+      "title": "TAPの概要",
+      "url": "https://tap.tcu.ac.jp/tap/about.html",
+      "format": "html",
+      "scope": ["tap"],
+      "authority": "current_program_official",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["program_schedule", "recognized_credits", "cycle_assignment", "program_guidance"],
+      "notes": [
+        "公開ページでは12単位、100日の準備講座、通常4年卒業可能を案内。",
+        "参加継続条件の最終正本はWebClassの募集要項・ハンドブック。"
+      ]
+    },
+    {
+      "id": "tcu-tap-current-comparison",
+      "title": "TAP/ATAP比較",
+      "url": "https://tap.tcu.ac.jp/",
+      "format": "html",
+      "scope": ["tap", "atap"],
+      "authority": "current_program_official",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["eligibility_guidance", "conflict_warnings"],
+      "notes": [
+        "TAPはサイクルA=1年次2～5月、サイクルB=2年次8～11月。",
+        "公開比較表は準備講座出席率80%以上、前期・後期各10単位以上を示す。",
+        "画面上は補助判定とし、募集要項未確認なら needs_confirmation にする。"
+      ]
+    },
+    {
+      "id": "tcu-atap-current-overview",
+      "title": "ATAPの概要",
+      "url": "https://tap.tcu.ac.jp/atap/about.html",
+      "format": "html",
+      "scope": ["atap"],
+      "authority": "current_program_official",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["eligibility_guidance", "program_schedule"],
+      "notes": [
+        "16週間、2～6月、QUT、定員50名。",
+        "公開条件はIELTS 5.5以上（各サブスコア5.0以上）またはTOEFL iBT 56以上（L/R10、W15、S14以上）、GPA2.5以上。",
+        "QUT条件は予告なく変更される場合がある。"
+      ]
+    },
+    {
+      "id": "tcu-atap-current-curriculum",
+      "title": "ATAPカリキュラム",
+      "url": "https://tap.tcu.ac.jp/atap/curriculum.html",
+      "format": "html",
+      "scope": ["atap", "credit_recognition"],
+      "authority": "current_program_official",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["recognized_courses", "recognized_credits"],
+      "notes": [
+        "Academic Communication 1を必修とし、他2科目を選択する構成。",
+        "各4単位、合計12単位の案内があるが、学部により認定されない科目があるため所属学部ルールを優先する。"
+      ]
+    },
+    {
+      "id": "tcu-hirameki-current-process",
+      "title": "ひらめきプログラム 統合的学びのプロセス・科目群",
+      "url": "https://hirameki.tcu.ac.jp/program/process/",
+      "format": "html",
+      "scope": ["hirameki"],
+      "authority": "current_program_official",
+      "freshness": "dynamic",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["course_group_taxonomy", "program_description"],
+      "notes": [
+        "公開ページは入学年度別に科目群を示すが、2026年度の完全な修了判定表が常にHTMLに出ているとは限らない。",
+        "2026年度の最終判定は2026年度リーフレット、学修要覧、学内配布資料を正本とする。"
+      ]
+    },
+    {
+      "id": "tcu-innovator-2026",
+      "title": "国際イノベーター育成オナーズプログラム 2026年度以降",
+      "url": "https://www.ee.tcu.ac.jp/innovator-program2026/",
+      "format": "html",
+      "academicYearFrom": 2026,
+      "scope": ["rikou", "denki", "international_innovator"],
+      "authority": "department_official",
+      "freshness": "provisional",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["program_course_mapping", "program_completion_guidance"],
+      "notes": [
+        "ページ自体が『今後、修正や追記の可能性』を明記。",
+        "公開案内では対象科目から50単位以上、△1・△2は各4単位を修了単位へ加算する説明がある。",
+        "2026年度時間割の『国際』科目と講義コードで照合し、未公開・未開講科目は修了判定に使わない。"
+      ]
+    },
+    {
+      "id": "tcu-tucp-historical",
+      "title": "TUCPの特徴",
+      "url": "https://tsap.tcu.ac.jp/tucp-home/",
+      "format": "html",
+      "scope": ["tucp"],
+      "authority": "historical_official",
+      "freshness": "historical",
+      "autoDecisionAllowed": false,
+      "download": true,
+      "useFor": ["program_description_only"],
+      "notes": [
+        "公開内容は2019年度科目例や過年度スケジュールを含む。",
+        "2026年度の参加条件・単位認定には使用せず、現行募集要項が得られるまで needs_confirmation とする。"
+      ]
+    }
+  ]
+}
