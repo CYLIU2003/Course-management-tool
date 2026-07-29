@@ -19,5 +19,23 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          argsIgnorePattern: '^_',
+          caughtErrorsIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+        },
+      ],
+    },
+  },
+  {
+    files: ['src/TimetableApp.tsx'],
+    rules: {
+      // The timetable grid is a legacy dynamic record. Keep this narrow override
+      // until the component is split and the grid helpers move into core/types.
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
   },
 ])
