@@ -9,6 +9,8 @@
     "check:status": "node scripts/diagnostics/check-system-status.mjs",
     "check:csv": "node scripts/diagnostics/check-system-status.mjs --csv-only",
     "check:all": "npm run check:status && npm run build",
+    "sources:plan": "node scripts/sources/download-official-2026.mjs --dry-run",
+    "sources:fetch": "node scripts/sources/download-official-2026.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
