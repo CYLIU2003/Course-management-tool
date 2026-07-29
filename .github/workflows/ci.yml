@@ -32,6 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate official source manifest
+        run: npm run sources:plan
+
       - name: Validate curriculum data and build
         run: npm run check:all
 
