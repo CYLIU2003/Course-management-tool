@@ -9,6 +9,7 @@ import { loadHandbookCatalog, loadHandbookDocument, loadHiramekiPrograms, localH
 import HiramekiPanel from './HiramekiPanel';
 import HandbookPageEvidence from './HandbookPageEvidence';
 import StudentProfile from './StudentProfile';
+import OfferingBrowser from '../OfferingBrowser';
 import { DEFAULT_OPTIONS } from '../../core/handbooks/profile';
 import TapFaq from './TapFaq';
 
@@ -124,5 +125,6 @@ export default function HandbookBrowser({ department, entranceYear, allYearsData
       {(view === 'courses' ? courseResults.length : pageResults.length) > pageLimit && <button type="button" onClick={() => setPageLimit((limit) => limit + PAGE_SIZE)}>次の{PAGE_SIZE}件を表示</button>}
     </>}
 
+    <details><summary>2026年度の開講情報を確認する</summary><OfferingBrowser departmentId={department?.id} /></details>
   </section>;
 }

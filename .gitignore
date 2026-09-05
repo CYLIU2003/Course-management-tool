@@ -25,3 +25,9 @@ dist-ssr
 __pycache__/
 tmp/
 data/*.sqlite3*
+.env
+.env.*
+!.env.example
+
+# Reproducible official API export (contains no accounts)
+data/supabase-reference/

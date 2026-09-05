@@ -103,4 +103,39 @@ CREATE TABLE IF NOT EXISTS account_state (
 CREATE TABLE IF NOT EXISTS auth_attempts (
   bucket TEXT PRIMARY KEY, attempts INTEGER NOT NULL, resets_at INTEGER NOT NULL
 );
-PRAGMA user_version = 3;
+CREATE TABLE IF NOT EXISTS admin_members (
+  account_id TEXT PRIMARY KEY REFERENCES accounts(id) ON DELETE CASCADE,
+  granted_at INTEGER NOT NULL
+);
+CREATE TABLE IF NOT EXISTS usage_events (
+  id TEXT PRIMARY KEY, account_id TEXT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
+  event_name TEXT NOT NULL CHECK(event_name IN ('home','timetable','grades','handbooks','settings','requirements')),
+  created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS usage_date_idx ON usage_events(created_at,account_id);
+CREATE TABLE IF NOT EXISTS support_tickets (
+  id TEXT PRIMARY KEY, account_id TEXT NOT NULL REFERENCES accounts(id) ON DELETE CASCADE,
+  subject TEXT NOT NULL CHECK(length(subject) BETWEEN 1 AND 120),
+  status TEXT NOT NULL CHECK(status IN ('open','answered','closed')),
+  created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS tickets_owner_idx ON support_tickets(account_id,updated_at);
+CREATE TABLE IF NOT EXISTS support_messages (
+  id TEXT PRIMARY KEY, ticket_id TEXT NOT NULL REFERENCES support_tickets(id) ON DELETE CASCADE,
+  author_id TEXT NOT NULL REFERENCES accounts(id), is_admin INTEGER NOT NULL CHECK(is_admin IN (0,1)),
+  body TEXT NOT NULL CHECK(length(body) BETWEEN 1 AND 5000), created_at INTEGER NOT NULL
+);
+CREATE INDEX IF NOT EXISTS support_message_ticket_idx ON support_messages(ticket_id,created_at);
+CREATE TABLE IF NOT EXISTS offering_sources (
+  id TEXT PRIMARY KEY, academic_year INTEGER NOT NULL, metadata_json TEXT NOT NULL CHECK(json_valid(metadata_json)), payload_json TEXT NOT NULL CHECK(json_valid(payload_json))
+);
+CREATE TABLE IF NOT EXISTS offering_occurrences (
+  id TEXT PRIMARY KEY, academic_year INTEGER NOT NULL, source_id TEXT NOT NULL REFERENCES offering_sources(id), page INTEGER NOT NULL,
+  lecture_code TEXT NOT NULL, is_canonical INTEGER NOT NULL, payload_json TEXT NOT NULL CHECK(json_valid(payload_json))
+);
+CREATE INDEX IF NOT EXISTS offering_code_idx ON offering_occurrences(academic_year,lecture_code);
+CREATE TABLE IF NOT EXISTS scheduled_offerings (
+  id TEXT PRIMARY KEY, academic_year INTEGER NOT NULL, lecture_code TEXT NOT NULL, payload_json TEXT NOT NULL CHECK(json_valid(payload_json)), UNIQUE(academic_year,lecture_code)
+);
+CREATE TABLE IF NOT EXISTS offering_imports(academic_year INTEGER PRIMARY KEY,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)));
+PRAGMA user_version = 4;

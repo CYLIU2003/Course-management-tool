@@ -14,10 +14,13 @@ from .accounts import (PASSWORDS, SESSION_SECONDS, check_password, consume_attem
                        new_session, validate_cohort, validate_credentials, validate_state)
 from .database import ROOT, connect, database_health, initialize
 from .server import read_document, read_profile, save_profile
+from .administration import blueprint as administration
+from . import offerings
 
 
 def create_app(config=None):
     app = Flask(__name__, static_folder=None)
+    app.register_blueprint(administration)
     origin = os.environ.get('PUBLIC_ORIGIN', '').rstrip('/')
     if origin and (urlparse(origin).scheme != 'https' or not urlparse(origin).hostname or urlparse(origin).path):
         raise ValueError('PUBLIC_ORIGIN must be an HTTPS origin without a path')
@@ -39,6 +42,9 @@ def create_app(config=None):
 
     @app.before_request
     def guard():
+        # Flask runs before_request even when routing rejected an untrusted Host.
+        if request.routing_exception and request.routing_exception.code == 400:
+            raise request.routing_exception
         if request.method not in ('GET', 'HEAD', 'OPTIONS'):
             if request.headers.get('Origin') not in app.config['ALLOWED_ORIGINS'] or request.headers.get('X-Campus-Request') != '1':
                 return fail('この画面からの操作を確認できません。再読み込みしてください。', 403)
@@ -48,6 +54,10 @@ def create_app(config=None):
             if row is None:
                 return fail('ログインしてください。', 401)
             g.account = dict(row)
+            with connect() as connection:
+                g.account['is_admin'] = bool(connection.execute('SELECT 1 FROM admin_members WHERE account_id=?', (row['account_id'],)).fetchone())
+            if request.path.startswith('/api/me/admin/') and not g.account['is_admin']:
+                return fail('管理者権限が必要です。', 403)
             if request.method not in ('GET', 'HEAD') and not secrets.compare_digest(request.headers.get('X-CSRF-Token', ''), row['csrf_token']):
                 return fail('ログイン情報が変更されています。再読み込みしてください。', 403)
 
@@ -123,7 +133,7 @@ def create_app(config=None):
     def me():
         with connect() as connection:
             row = connection.execute('SELECT * FROM account_state WHERE account_id=?', (g.account['account_id'],)).fetchone()
-        return jsonify(id=g.account['account_id'], username=g.account['username'], departmentId=g.account['department_id'], entranceYear=g.account['entrance_year'], csrfToken=g.account['csrf_token'], state=json.loads(row['payload_json']) if row else None, revision=row['revision'] if row else 0)
+        return jsonify(id=g.account['account_id'], username=g.account['username'], departmentId=g.account['department_id'], entranceYear=g.account['entrance_year'], isAdmin=g.account['is_admin'], csrfToken=g.account['csrf_token'], state=json.loads(row['payload_json']) if row else None, revision=row['revision'] if row else 0)
 
     @app.post('/api/me/logout')
     def logout():
@@ -151,6 +161,14 @@ def create_app(config=None):
             connection.execute('UPDATE accounts SET department_id=?,entrance_year=? WHERE id=?', (state['departmentId'], state['entranceYear'], g.account['account_id']))
         return jsonify(revision=revision)
 
+    @app.post('/api/me/validate-state')
+    def validate_import():
+        data = body()
+        validate_state(data)
+        with connect() as connection:
+            validate_cohort(connection, data)
+        return jsonify(ok=True)
+
     @app.route('/api/me/profile', methods=['GET', 'PUT'])
     def profile():
         with connect() as connection:
@@ -165,6 +183,17 @@ def create_app(config=None):
     @app.get('/api/health')
     def health():
         return jsonify(database_health())
+
+    @app.get('/api/offerings/<int:year>')
+    def offering_catalog(year):
+        with connect() as connection:
+            return jsonify(offerings.catalog(connection,year))
+
+    @app.get('/api/offerings/<int:year>/audit')
+    def offering_audit(year):
+        with connect() as connection:
+            result=offerings.audit(connection,year)
+        return jsonify(result) if result else fail('開講資料が未登録です。',404)
 
     @app.get('/api/curricula/<department>/<int:year>')
     def curriculum(department, year):

@@ -1,3 +1,4 @@
+import { apiFetch } from '../api/client';
 import type { AcademicQuarter, AcademicTimetable } from './academicProgress';
 
 export type CalendarExportRange = '1Q' | '2Q' | '3Q' | '4Q' | 'spring' | 'fall' | 'full-year';
@@ -286,7 +287,7 @@ export function downloadIcsFile(icsText: string, fileName: string) {
 }
 
 export async function loadAcademicCalendarConfig(academicYear: number): Promise<AcademicCalendarConfig> {
-  const response = await fetch(`/api/academic-calendar/${academicYear}`);
+  const response = await apiFetch(`/api/academic-calendar/${academicYear}`);
   if (!response.ok) {
     throw new Error(`academic calendar not found: ${academicYear}`);
   }

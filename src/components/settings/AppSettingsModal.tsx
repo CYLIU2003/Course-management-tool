@@ -189,12 +189,10 @@ export default function AppSettingsModal({
         </div>
         <div className="tt-dialog__foot">
           <button type="button" onClick={() => {
-            if (window.confirm('LocalStorage の保存データを初期化します。よろしいですか？')) {
-              onResetLocalStorage();
-              onClose();
-            }
+            onResetLocalStorage();
+            onClose();
           }} className="btn-ghost danger">
-            LocalStorage初期化
+            時間割・成績を初期化
           </button>
           <div className="foot-actions">
             <button type="button" onClick={onClose} className="btn-ghost">

@@ -8,11 +8,12 @@ import os
 import threading
 from urllib.request import urlopen, Request
 from unittest.mock import patch
-from http.server import ThreadingHTTPServer
+from werkzeug.serving import make_server
 from uuid import uuid4
 
 from .database import ROOT, connect, import_reference_data, database_health, backup_database, read_json, validate_course_evidence
-from .server import Handler, save_profile, read_profile, read_document
+from .server import save_profile, read_profile, read_document
+from .web import create_app
 
 
 class DatabaseTests(unittest.TestCase):
@@ -98,7 +99,7 @@ class DatabaseTests(unittest.TestCase):
 
     def test_http_catalog_document_programs_and_profile(self):
         with patch.dict(os.environ, CURRICULUM_DB_PATH=str(self.path)):
-            server = ThreadingHTTPServer(('127.0.0.1', 0), Handler)
+            server = make_server('127.0.0.1', 0, create_app())
             thread = threading.Thread(target=server.serve_forever, daemon=True)
             thread.start()
             base = f'http://127.0.0.1:{server.server_port}'
@@ -127,11 +128,12 @@ class DatabaseTests(unittest.TestCase):
                         # Unverified CSV rules must not reappear as authoritative requirements.
                         self.assertTrue(dataset['referenceOnly'])
                         self.assertEqual(dataset['curriculum']['requiredCredits'], 0)
-                profile_id = str(uuid4())
-                self.assertIsNone(get('/api/students/' + profile_id))
-                request = Request(base + '/api/students/' + profile_id, data=json.dumps(self.profile()).encode(), headers={'Content-Type': 'application/json'}, method='PUT')
-                with urlopen(request) as response:
-                    self.assertEqual(json.load(response)['revision'], 1)
+                # Ownerless UUID endpoints were removed for public deployment.
+                from urllib.error import HTTPError
+                with self.assertRaises(HTTPError) as error:
+                    get('/api/students/' + str(uuid4()))
+                self.assertEqual(error.exception.code, 404)
+                error.exception.close()
             finally:
                 server.shutdown()
                 server.server_close()

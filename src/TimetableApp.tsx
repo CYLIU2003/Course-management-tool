@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { accountRequest, responseError, type Account, type StudentState } from "./api/account";
 import HandbookBrowser from "./components/handbooks/HandbookBrowser";
 import StudentGrades from "./components/StudentGrades";
 import AppShell from "./components/layout/AppShell";
@@ -88,19 +89,16 @@ function createDefaultAllYearsData(): AllYearsData {
   };
 }
 
-export default function TimetableApp() {
+export default function TimetableApp({ account, onStateChange }: { account: Account; onStateChange: (state: StudentState) => void }) {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<AppPage>("home");
-  const [profileConfirmed, setProfileConfirmed] = useState(() => localStorage.getItem('campus-profile-confirmed') === 'yes');
+  useEffect(() => {
+    void accountRequest('/api/me/events', 'POST', { page: currentPage }).catch(() => console.warn('利用画面の記録に失敗しました。'));
+  }, [currentPage]);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [entranceYear, setEntranceYear] = useState<number>(() => {
-    const stored = localStorage.getItem("entrance_year");
-    return stored ? Number(stored) : new Date().getFullYear();
-  });
-  const [selectedDepartmentId, setSelectedDepartmentId] = useState<string>(() => {
-    return localStorage.getItem("selected_department_id") ?? AVAILABLE_DEPARTMENTS[0].id;
-  });
+  const [entranceYear, setEntranceYear] = useState(account.state?.entranceYear ?? account.entranceYear);
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState(account.state?.departmentId ?? account.departmentId);
   const selectedDepartment = AVAILABLE_DEPARTMENTS.find((department) => department.id === selectedDepartmentId);
 
   const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
@@ -119,7 +117,7 @@ export default function TimetableApp() {
 
   const [settings, setSettings] = useState<Settings>(() => {
     const defaults = createDefaultSettings();
-    const stored = load<Partial<Settings>>("timetable_settings_v2");
+    const stored = account.state?.settings;
     if (!stored) return defaults;
     return {
       ...defaults,
@@ -170,7 +168,6 @@ export default function TimetableApp() {
       }));
 
       setImportedCourses(result.courses);
-      localStorage.setItem("selected_department_id", departmentId);
       return result;
     } catch (error) {
       console.error('❌ Auto-load failed:', error);
@@ -200,7 +197,6 @@ export default function TimetableApp() {
         },
       }));
       setImportedCourses([]);
-      localStorage.setItem("selected_department_id", departmentId);
       return result;
     } finally {
       if (requestId === departmentLoadId.current) setCurriculumLoading(false);
@@ -238,7 +234,7 @@ export default function TimetableApp() {
 
   // 年度ごとのデータ管理
   const [allYearsData, setAllYearsData] = useState<AllYearsData>(() => {
-    const stored = load<AllYearsData>("timetable_allyears_v2");
+    const stored = account.state?.allYearsData;
     if (stored) return stored;
     
     // 初期化: createDefaultAllYearsData を使用
@@ -261,17 +257,11 @@ export default function TimetableApp() {
     [allYearsData, settings],
   );
 
-  useEffect(() => {
-    save("timetable_allyears_v2", allYearsData);
-  }, [allYearsData]);
-  
-  useEffect(() => {
-    save("timetable_settings_v2", settings);
-  }, [settings]);
-
-  useEffect(() => {
-    localStorage.setItem("entrance_year", String(entranceYear));
-  }, [entranceYear]);
+  const studentState = useMemo<StudentState>(() => ({
+    departmentId: selectedDepartmentId, entranceYear, allYearsData,
+    settings: { title: settings.title, days: settings.days, periods: settings.periods, showTime: settings.showTime },
+  }), [selectedDepartmentId, entranceYear, allYearsData, settings.title, settings.days, settings.periods, settings.showTime]);
+  useEffect(() => { onStateChange(studentState); }, [studentState, onStateChange]);
 
   const [editing, setEditing] = useState<{
     open: boolean;
@@ -325,7 +315,7 @@ export default function TimetableApp() {
   const clearCell = () => saveCell(null);
 
   const exportJSON = () => {
-    const blob = new Blob([JSON.stringify({ version: 3, entranceYear, settings, allYearsData }, null, 2)], {
+    const blob = new Blob([JSON.stringify({ version: 4, ...studentState }, null, 2)], {
       type: "application/json",
     });
     const a = document.createElement("a");
@@ -333,54 +323,33 @@ export default function TimetableApp() {
     a.download = `timetable_${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
   };
-  const importJSON = (file: File) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      try {
-        const obj = JSON.parse(String(reader.result));
-        if (obj.settings && obj.allYearsData) {
-          if (typeof obj.entranceYear === "number" && Number.isFinite(obj.entranceYear)) {
-            setEntranceYear(obj.entranceYear);
-          }
-          // v2 形式
-          setSettings((prev) => ({
-            ...prev,
-            ...(obj.settings ?? {}),
-            curriculum: prev.curriculum,
-            requiredCredits: prev.requiredCredits,
-          }));
-          setAllYearsData(obj.allYearsData);
-          alert("読込が完了しました。");
-        } else if (obj.settings && obj.data) {
-          // v1 形式 - 1年次にマイグレーション
-          const fixed: Timetable = {} as Timetable;
-          for (const q of QUARTERS) {
-            fixed[q] = mergeGrids(
-              buildEmptyQuarter(obj.settings.days ?? settings.days, obj.settings.periods ?? settings.periods),
-              obj.data[q] ?? {}
-            );
-          }
-          const migratedData: AllYearsData = createDefaultAllYearsData();
-          migratedData["1年次"].timetable = fixed;
-          if (obj.settings?.quarterRanges) {
-            migratedData["1年次"].quarterRanges = obj.settings.quarterRanges;
-          }
-          setSettings((prev) => ({
-            ...prev,
-            ...(obj.settings ?? {}),
-            curriculum: prev.curriculum,
-            requiredCredits: prev.requiredCredits,
-          }));
-          setAllYearsData(migratedData);
-          alert("読込が完了しました(v1形式を1年次に変換しました)。");
-        } else {
-          alert("不正なファイルです。");
-        }
-      } catch {
-        alert("読込に失敗しました。");
+  const importJSON = async (file: File) => {
+    try {
+      if (file.size > 1024 * 1024) throw new Error('1MB以下のJSONファイルを選択してください。');
+      const obj = JSON.parse(await file.text());
+      if (!obj || typeof obj !== 'object' || !obj.settings) throw new Error('時間割のJSONファイルを選択してください。');
+      let importedData = obj.allYearsData;
+      if (!importedData && obj.data) {
+        importedData = createDefaultAllYearsData();
+        for (const q of QUARTERS) importedData['1年次'].timetable[q] = obj.data[q] ?? {};
+        if (obj.settings.quarterRanges) importedData['1年次'].quarterRanges = obj.settings.quarterRanges;
       }
-    };
-    reader.readAsText(file);
+      const candidate: StudentState = {
+        departmentId: obj.departmentId ?? selectedDepartmentId,
+        entranceYear: obj.entranceYear ?? entranceYear,
+        settings: { title: obj.settings.title ?? settings.title, days: obj.settings.days ?? settings.days,
+          periods: obj.settings.periods ?? settings.periods, showTime: obj.settings.showTime ?? settings.showTime },
+        allYearsData: importedData,
+      };
+      const validation = await accountRequest('/api/me/validate-state', 'POST', candidate);
+      if (!validation.ok) throw new Error(await responseError(validation));
+      if (!window.confirm('現在の時間割・成績を、このファイルの内容に置き換えますか？')) return;
+      setEntranceYear(candidate.entranceYear); setSelectedDepartmentId(candidate.departmentId);
+      setSettings((previous) => ({ ...previous, ...candidate.settings }));
+      setAllYearsData(candidate.allYearsData);
+      await loadDepartment(candidate.departmentId, candidate.entranceYear);
+      alert('読み込みました。画面上部の保存状態を確認してください。');
+    } catch (reason) { alert(reason instanceof Error ? reason.message : '読込に失敗しました。'); }
   };
 
   const exportICS = async () => {
@@ -466,12 +435,9 @@ export default function TimetableApp() {
   };
 
   const handleResetLocalStorage = async () => {
-    const defaultDepartmentId = AVAILABLE_DEPARTMENTS[0]?.id ?? selectedDepartmentId;
-    const defaultEntranceYear = new Date().getFullYear();
-    localStorage.removeItem("timetable_settings_v2");
-    localStorage.removeItem("timetable_allyears_v2");
-    localStorage.removeItem("selected_department_id");
-    localStorage.removeItem("entrance_year");
+    if (!window.confirm("保存された時間割・成績をすべて初期化しますか？ 学科・入学年度は維持します。")) return;
+    const defaultDepartmentId = selectedDepartmentId;
+    const defaultEntranceYear = entranceYear;
     setCurrentYear("1年次");
     setActiveQuarter("1Q");
     setCurrentPage("home");
@@ -573,7 +539,7 @@ export default function TimetableApp() {
                     onCellClick={openEdit}
                   />
                 </div>
-                <p className="small print:hidden">この端末に自動保存されます。大学の履修登録は大学ポータルで行ってください。</p>
+                <p className="small print:hidden">アカウントに自動保存されます。大学の履修登録は大学ポータルで行ってください。</p>
               </section>
             </div>
           </div>
@@ -685,7 +651,6 @@ export default function TimetableApp() {
       />
 
       <main className="app-container app-main" data-curriculum-key={curriculumData ? `${curriculumData.departmentId}:${curriculumData.entranceYear}` : undefined} data-curriculum-status={curriculumData?.status}>
-        {!profileConfirmed && <section className="onboarding-card"><div><p className="eyebrow">はじめに / 1分で準備</p><h2>あなたの学科・入学年度を確認</h2><p>画面上部で学科と入学年度を選んでください。「表示学年」は入力する時間割・成績の学年です。</p><strong>{selectedDepartment?.name} · {entranceYear}年度入学</strong></div><button className="btn-primary" onClick={() => { localStorage.setItem('campus-profile-confirmed', 'yes'); setProfileConfirmed(true); }}>この内容ではじめる</button></section>}
         <DataLoadNotice
           status={curriculumLoading ? "loading" : curriculumError ? "failed" : curriculumData?.status === "unavailable" ? "unavailable" : "ready"}
           message={curriculumError}
@@ -957,25 +922,12 @@ function clone<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj));
 }
 
-function save(key: string, value: unknown) {
-  localStorage.setItem(key, JSON.stringify(value));
-}
-
-function load<T>(key: string): T | null {
-  try {
-    const s = localStorage.getItem(key);
-    return s ? (JSON.parse(s) as T) : null;
-  } catch {
-    return null;
-  }
-}
-
 function createDefaultSettings(): Settings {
   return {
     days: [...DEFAULT_DAYS],
     periods: DEFAULT_PERIODS.map((p) => ({ ...p })),
     title: "時間割",
     showTime: true,
-    requiredCredits: 124, // デフォルト値
+    requiredCredits: 0, // 要件はSQLiteの検証済みデータだけを使用
   };
 }

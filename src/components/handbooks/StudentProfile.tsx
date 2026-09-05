@@ -1,3 +1,5 @@
+import { apiFetch } from '../../api/client';
+import { accountRequest } from '../../api/account';
 import { useEffect, useRef, useState } from 'react';
 import { DEFAULT_OPTIONS, type StudyOptions } from '../../core/handbooks/profile';
 interface Profile extends StudyOptions { departmentId: string; entranceYear: number; individualNote: string; revision: number }
@@ -11,29 +13,23 @@ export default function StudentProfile({ departmentId, entranceYear, onChange }:
   const [attempt, setAttempt] = useState(0);
   const saveController = useRef<AbortController | null>(null);
   useEffect(() => () => saveController.current?.abort(), []);
-  const [id] = useState(() => {
-    const key = `study-profile:${departmentId}:${entranceYear}`;
-    const saved = localStorage.getItem(key) ?? crypto.randomUUID();
-    localStorage.setItem(key, saved);
-    return saved;
-  });
   useEffect(() => {
     const controller = new AbortController();
     onChange(DEFAULT_OPTIONS);
-    fetch(`/api/students/${id}`, { signal: controller.signal }).then(async (response) => {
+    apiFetch(`/api/me/profile`, { signal: controller.signal }).then(async (response) => {
       if (!response.ok) throw new Error('履修区分を読み込めませんでした。');
       const value: Profile = await response.json() ?? { ...DEFAULT_OPTIONS, departmentId, entranceYear, individualNote: '', revision: 0 };
       if (!controller.signal.aborted) { setProfile(value); onChange(value); setMessage(value.revision ? '保存済み' : '履修区分を選択して保存してください。'); }
     }).catch((error: unknown) => { if (!controller.signal.aborted) setMessage(error instanceof Error ? error.message : '読み込みに失敗しました。'); });
     return () => controller.abort();
-  }, [id, departmentId, entranceYear, onChange, attempt]);
+  }, [departmentId, entranceYear, onChange, attempt]);
 
   async function save() {
     const controller = new AbortController();
     saveController.current = controller;
     setSaving(true);
     try {
-      const response = await fetch(`/api/students/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(profile), signal: controller.signal });
+      const response = await accountRequest('/api/me/profile', 'PUT', { ...profile, departmentId, entranceYear }, controller.signal);
       if (!response.ok) throw new Error(response.status === 409 ? '別画面で変更されています。再読み込みしてください。' : '保存できませんでした。再度お試しください。');
       const saved: Profile = await response.json();
       if (controller.signal.aborted) return;

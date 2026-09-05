@@ -1,9 +1,10 @@
+import { apiFetch } from './client';
 import type { HandbookCatalog, HandbookDocument, HandbookSource, HiramekiProgram } from '../core/handbooks';
 import { isCheckedCourseForDepartment, normalizeHandbookText, selectHandbookSources } from '../core/handbooks';
 import type { AcademicCourse } from '../core/types';
 
 async function fetchJson(path: string, signal?: AbortSignal): Promise<unknown> {
-  const response = await fetch(path, { signal });
+  const response = await apiFetch(path, { signal });
   if (!response.ok) throw new Error(`履修資料を読み込めませんでした（HTTP ${response.status}）。`);
   const contentType = response.headers.get('content-type') ?? '';
   if (!contentType.includes('json')) throw new Error('履修資料の応答がJSONではありません。配置を確認してください。');

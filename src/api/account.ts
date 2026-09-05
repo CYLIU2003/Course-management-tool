@@ -1,4 +1,5 @@
 import type { AcademicAllYearsData } from '../core/types';
+import { apiFetch, setRequestIdentity } from './client';
 
 export interface StudentState {
   departmentId: string;
@@ -14,14 +15,17 @@ export interface Account {
   csrfToken: string;
   state: StudentState | null;
   revision: number;
+  isAdmin: boolean;
 }
 
 let csrfToken = '';
+let accountId = '';
 export function setAccountToken(token: string) { csrfToken = token; }
+export function setAccountIdentity(id: string) { accountId = id; setRequestIdentity(id); }
 
 export async function accountRequest(path: string, method: 'POST' | 'PUT', value: unknown, signal?: AbortSignal) {
-  return fetch(path, { method, credentials: 'same-origin', headers: {
-    'Content-Type': 'application/json', 'X-Campus-Request': '1', 'X-CSRF-Token': csrfToken,
+  return apiFetch(path, { method, credentials: 'same-origin', headers: {
+    'Content-Type': 'application/json', 'X-Campus-Request': '1', 'X-CSRF-Token': csrfToken, 'X-Account-ID': accountId,
   }, body: JSON.stringify(value), signal });
 }
 

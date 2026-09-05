@@ -35,7 +35,7 @@ export default function DataManagementMenu({
           <button type="button" className="menu-action" onClick={onPrint}>印刷</button>
           {onClearLocalStorage && (
             <button type="button" className="menu-action menu-action--danger" onClick={onClearLocalStorage}>
-              LocalStorage初期化
+              時間割・成績を初期化
             </button>
           )}
         </div>

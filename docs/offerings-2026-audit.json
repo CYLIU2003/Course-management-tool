@@ -1,0 +1,321 @@
+{
+  "year": 2026,
+  "sourceDocuments": 35,
+  "canonicalCodeOccurrences": 8576,
+  "canonicalRows": 8576,
+  "uniqueClasses": 3706,
+  "canonicalClasses": 3702,
+  "correctionRecords": 165,
+  "correctionOnlyClasses": 4,
+  "globalOrCorrectionOnlyRecords": 5,
+  "duplicateClassKeys": 0,
+  "classesNeedingCorrectionReview": 97,
+  "documents": [
+    {
+      "sourceId": "offering-2026-15e7b5f3f4140e6d4c7b",
+      "filename": "ef50bb78760668d0622d89406816824a.pdf",
+      "label": "〈世田谷キャンパス〉授業時間表表紙",
+      "canonical": false,
+      "pages": 1,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-4da27ab87f3987a0ea9a",
+      "filename": "1d287d6585aa27fca40540c0feee9717.pdf",
+      "label": "〈世田谷キャンパス〉注意事項",
+      "canonical": false,
+      "pages": 5,
+      "codeOccurrences": 1,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-9abcaeeb0b15a4e0d7e7",
+      "filename": "27b33c72bc7356131a09f3d3fc9ffe2c.pdf",
+      "label": "〈世田谷キャンパス〉校舎配置図",
+      "canonical": false,
+      "pages": 1,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-1e4518c8bc6f3c198ef5",
+      "filename": "a9d693120429d2a237235de0bdf86220.pdf",
+      "label": "〈世田谷キャンパス〉再履修についての注意事項",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-a94fe64dc25c154a032e",
+      "filename": "73cfe07fcfba1fad0688c0ef5aee3794.pdf",
+      "label": "〈世田谷キャンパス〉前期 開講科目に関する注意事項",
+      "canonical": false,
+      "pages": 2,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-e1ed85b6b179c9e86e9d",
+      "filename": "0f0edaa80f7ed41f650ca896792a32c2.pdf",
+      "label": "〈世田谷キャンパス〉後期 開講科目に関する注意事項",
+      "canonical": false,
+      "pages": 2,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-00ded45dcb1ee25dbd3a",
+      "filename": "bdd00cb5d971b29dcea530b6758858ef.pdf",
+      "label": "〈世田谷キャンパス〉全学科 前期 授業時間表",
+      "canonical": true,
+      "pages": 59,
+      "codeOccurrences": 2677,
+      "extractedRows": 2677
+    },
+    {
+      "sourceId": "offering-2026-db51172a9c70b0ff8cc7",
+      "filename": "39ee695eae5f9ddcd4256f11b1b5a268.pdf",
+      "label": "〈世田谷キャンパス〉授業時間表変更一覧",
+      "canonical": false,
+      "pages": 13,
+      "codeOccurrences": 116,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-63990f8809846b61aaa6",
+      "filename": "ede8727c2715d47e891b76cc03504ac3.pdf",
+      "label": "〈世田谷キャンパス〉全学科 後期 授業時間表",
+      "canonical": true,
+      "pages": 65,
+      "codeOccurrences": 3027,
+      "extractedRows": 3027
+    },
+    {
+      "sourceId": "offering-2026-dd5232b2b122de30478c",
+      "filename": "3883fda1b362e14af82d12b8933eddf6.pdf",
+      "label": "機械工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 135,
+      "extractedRows": 135
+    },
+    {
+      "sourceId": "offering-2026-aeb03e2542b088a1192f",
+      "filename": "3dfc0365f745415103f100841a569a9f.pdf",
+      "label": "機械システム工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 167,
+      "extractedRows": 167
+    },
+    {
+      "sourceId": "offering-2026-1c7f917ae8d74d32787d",
+      "filename": "038082e45f9d6043cec8273a03e3a11a.pdf",
+      "label": "電気電子通信工学科",
+      "canonical": false,
+      "pages": 4,
+      "codeOccurrences": 182,
+      "extractedRows": 182
+    },
+    {
+      "sourceId": "offering-2026-284a2ffda1f1b76108fd",
+      "filename": "c8353baec202163b4b91cf54ee26c8a8.pdf",
+      "label": "医用工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 142,
+      "extractedRows": 142
+    },
+    {
+      "sourceId": "offering-2026-28e7ced7f6ed6df5d23c",
+      "filename": "da658ad780015ceb812f2521e927dd13.pdf",
+      "label": "応用化学科／エネルギー化学科",
+      "canonical": false,
+      "pages": 4,
+      "codeOccurrences": 141,
+      "extractedRows": 141
+    },
+    {
+      "sourceId": "offering-2026-60aedac0ee23cc060f03",
+      "filename": "9667a5aa78e1b2f722b5d320c85cde23.pdf",
+      "label": "原子力安全工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 129,
+      "extractedRows": 129
+    },
+    {
+      "sourceId": "offering-2026-1ab59406a1ad1bb17741",
+      "filename": "6d1cbe3061d28c5eae00317cc7b02faa.pdf",
+      "label": "自然科学科",
+      "canonical": false,
+      "pages": 5,
+      "codeOccurrences": 152,
+      "extractedRows": 152
+    },
+    {
+      "sourceId": "offering-2026-31d6ffa0e5d03e117833",
+      "filename": "addc5d05b0e44a1e58209b1b46485277.pdf",
+      "label": "建築学科",
+      "canonical": false,
+      "pages": 4,
+      "codeOccurrences": 167,
+      "extractedRows": 167
+    },
+    {
+      "sourceId": "offering-2026-1e7cc514fd5ec22bf170",
+      "filename": "e4b0430e9a3523349e4c29130d907572.pdf",
+      "label": "都市工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 153,
+      "extractedRows": 153
+    },
+    {
+      "sourceId": "offering-2026-8fc941061c4e667b6876",
+      "filename": "e9159ee1dad739fe3331175c387c5cd7.pdf",
+      "label": "情報科学科",
+      "canonical": false,
+      "pages": 2,
+      "codeOccurrences": 121,
+      "extractedRows": 121
+    },
+    {
+      "sourceId": "offering-2026-0f0a7ec98b3c303fd666",
+      "filename": "226efe1460174eeed805110f17ab07d7.pdf",
+      "label": "知能情報工学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 135,
+      "extractedRows": 135
+    },
+    {
+      "sourceId": "offering-2026-859f2c28b2ef418a6daf",
+      "filename": "707104ca7fee5f3722a5fe392c92d568.pdf",
+      "label": "都市生活学科",
+      "canonical": false,
+      "pages": 4,
+      "codeOccurrences": 171,
+      "extractedRows": 171
+    },
+    {
+      "sourceId": "offering-2026-e58e500a2bd52bff029f",
+      "filename": "1df6e6f90fa5f21223b54063884447f9.pdf",
+      "label": "人間科学科／児童学科",
+      "canonical": false,
+      "pages": 3,
+      "codeOccurrences": 146,
+      "extractedRows": 146
+    },
+    {
+      "sourceId": "offering-2026-ba329993ec69a1ead82e",
+      "filename": "05b60abc97fc9b4f448feb4e0dc672bc-1.pdf",
+      "label": "共通科目",
+      "canonical": false,
+      "pages": 18,
+      "codeOccurrences": 736,
+      "extractedRows": 736
+    },
+    {
+      "sourceId": "offering-2026-909a025b884cee994493",
+      "filename": "45f62652853be3c046219378c75c02e4.pdf",
+      "label": "授業時間表",
+      "canonical": true,
+      "pages": 18,
+      "codeOccurrences": 314,
+      "extractedRows": 314
+    },
+    {
+      "sourceId": "offering-2026-a6eb23e91016556bd401",
+      "filename": "8fcb76dac03961872c52c502b4794a53.pdf",
+      "label": "授業時間表　履修に関する注意事項、登録方法",
+      "canonical": false,
+      "pages": 10,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-5fd548ea92a503ccc47e",
+      "filename": "a4da3651bc4018e9dc16f2311af941b4.pdf",
+      "label": "授業時間表",
+      "canonical": false,
+      "pages": 4,
+      "codeOccurrences": 128,
+      "extractedRows": 128
+    },
+    {
+      "sourceId": "offering-2026-2b91644666cfb320b6c9",
+      "filename": "a3bca365faf1eca3dc30491ea306c98a.pdf",
+      "label": "総合理工学研究科　先行履修についての案内",
+      "canonical": false,
+      "pages": 1,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-192656ff7ebae124385d",
+      "filename": "6561f89e253d2d53bce49e3e75dc0eff.pdf",
+      "label": "環境情報学研究科　博士前期課程授業科目の先行履修について",
+      "canonical": false,
+      "pages": 2,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-e679e4e8aea987c31354",
+      "filename": "9b296c0ff7af7f30f9f0566c55023148.pdf",
+      "label": "注意事項等",
+      "canonical": false,
+      "pages": 20,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-a945026748cbd9b878ea",
+      "filename": "9c74fabca74255b40c7b0937b4083631.pdf",
+      "label": "授業時間表",
+      "canonical": true,
+      "pages": 36,
+      "codeOccurrences": 2394,
+      "extractedRows": 2394
+    },
+    {
+      "sourceId": "offering-2026-6ce34588f76890def7ae",
+      "filename": "34709aa45ad4308d612e54c8a823ce28.pdf",
+      "label": "時間割訂正",
+      "canonical": false,
+      "pages": 6,
+      "codeOccurrences": 49,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-770edd96bf9d1e575d19",
+      "filename": "60afefd49e2d911161dc40fd5e4f9b7a.pdf",
+      "label": "注意事項等",
+      "canonical": false,
+      "pages": 10,
+      "codeOccurrences": 0,
+      "extractedRows": 0
+    },
+    {
+      "sourceId": "offering-2026-838c4330d13a892f7a96",
+      "filename": "20ef6bb7920bc38870a5898b50e40f74-1.pdf",
+      "label": "授業時間表",
+      "canonical": true,
+      "pages": 4,
+      "codeOccurrences": 127,
+      "extractedRows": 127
+    },
+    {
+      "sourceId": "offering-2026-9e3da47c32958ca42dda",
+      "filename": "8f0e6e5654ede6e1d81aee0e7c74d4ea.pdf",
+      "label": "授業時間表",
+      "canonical": true,
+      "pages": 2,
+      "codeOccurrences": 37,
+      "extractedRows": 37
+    }
+  ]
+}

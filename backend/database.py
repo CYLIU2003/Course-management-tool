@@ -36,7 +36,7 @@ def initialize(path=None):
     path.parent.mkdir(parents=True, exist_ok=True)
     with connect(path) as connection:
         version = connection.execute('PRAGMA user_version').fetchone()[0]
-        if version not in (0, 1, 2, 3):
+        if version not in (0, 1, 2, 3, 4):
             raise ValueError(f'Unsupported database schema version: {version}')
         connection.execute('PRAGMA journal_mode=WAL')
         connection.executescript(Path(__file__).with_name('schema.sql').read_text(encoding='utf-8'))

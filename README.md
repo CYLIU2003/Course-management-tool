@@ -2,7 +2,7 @@
 
 [![React](https://img.shields.io/badge/React-19.0-20232a.svg?logo=react)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue.svg?logo=typescript)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF.svg?logo=vite)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7.x-646CFF.svg?logo=vite)](https://vitejs.dev/)
 
 東京都市大学の4クォーター制に対応した、時間割作成・成績管理・卒業要件の進捗確認をまとめて行えるWebアプリです。
 
@@ -14,6 +14,12 @@
 フロントを学生の日常操作から再設計しました。初回は学科・入学年度を確認し、科目検索の「追加」から空きコマを選んで登録できます。「成績・単位」で成績を直接入力し、履修ガイドで通常課程と追加プログラムの条件を確認できます。見た目と操作の規約は [DESIGN.md](DESIGN.md)、変更・検証は [UI再設計ノート](docs/development_note_ui.md) を参照してください。
 
 ---
+
+アカウント登録ではユーザー名・パスワード・入学学科・年度を保存します。[アカウント・公開構成の開発ノート](docs/development_note_accounts.md)を参照してください。
+
+公開版は **Cloudflare Workers Static Assets + Supabase Auth/PostgreSQL + 利用者別LocalStorage同期** に対応しています。SQLiteは公式資料の取込・監査とローカル開発に使います。Supabase版の登録ではメールアドレスも入力します。現在は公開先プロジェクト未設定のため未デプロイです。[公開・管理者設定手順](docs/deployment_cloudflare_supabase.md)を参照してください。
+
+2026年度開講資料35件を保存し、8,576掲載行から3,706講義コードを重複なく収録しました。ただし97講義は条件付き訂正等の確認が残るため、確定時間割としての完全性は未達です。[原本照合・収録範囲](docs/development_note_offerings.md)を参照してください。管理画面には利用状況集計と問い合わせ回答機能があります。
 
 ## 目次
 
@@ -56,7 +62,7 @@
 ### 5. データ保存と出力
 - JSONで全年度データを保存・復元できます。
 - ICS形式でカレンダーに出力できます。
-- LocalStorageに自動保存されます。
+- ログインしたアカウントに時間割・成績・設定を保存します。
 
 ### 6. カレンダー出力
 - 1Q / 2Q / 3Q / 4Q / 前期 / 後期 / 年間 でICSファイルを出力できます。
@@ -78,7 +84,7 @@
 
 ```bash
 npm ci
-python -m pip install -r scripts/curriculum/requirements.txt
+python -m pip install -r backend/requirements.txt -r scripts/curriculum/requirements.txt
 npm run db:build
 npm run dev
 ```
