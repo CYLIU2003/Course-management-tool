@@ -1,0 +1,4 @@
+# Local data generation and audited export; never installed on Cloudflare.
+-r backend/requirements.txt
+-r scripts/curriculum/requirements.txt
+-r supabase/requirements-import.txt

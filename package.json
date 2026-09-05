@@ -18,11 +18,14 @@
     "lint": "eslint .",
     "preview": "node scripts/dev.mjs --preview",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
-    "deploy:cloudflare": "npm run build:cloudflare && wrangler deploy",
+    "deploy:cloudflare": "npm run verify:cloudflare && wrangler deploy",
     "test:accounts": "python -m unittest backend.test_accounts backend.test_administration -v",
     "test:supabase": "node scripts/test-supabase.mjs",
     "db:offerings": "python -m scripts.curriculum.import_offerings",
-    "db:export-supabase": "python -m scripts.export_supabase"
+    "db:export-supabase": "python -m scripts.export_supabase",
+    "dev:supabase": "node scripts/dev-supabase.mjs",
+    "test:cloudflare": "node --test scripts/test-cloudflare.mjs",
+    "verify:cloudflare": "npm run test:cloudflare && npm run test:supabase && npm run build:cloudflare"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.115.0",
@@ -46,5 +49,8 @@
     "typescript-eslint": "^8.43.0",
     "vite": "^7.1.6",
     "wrangler": "^4.129.0"
+  },
+  "engines": {
+    "node": ">=22.12 <23"
   }
 }

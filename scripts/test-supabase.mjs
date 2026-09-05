@@ -1,5 +1,5 @@
 import { PGlite } from '@electric-sql/pglite';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir } from 'node:fs/promises';
 import assert from 'node:assert/strict';
 
 const db = new PGlite();
@@ -7,7 +7,9 @@ await db.exec(`create role anon; create role authenticated; create schema auth;
   create table auth.users(id uuid primary key,raw_user_meta_data jsonb);
   create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;
   grant usage on schema auth to authenticated; grant execute on function auth.uid() to authenticated;`);
-await db.exec(await readFile('supabase/migrations/202609050001_campus_note.sql', 'utf8'));
+for (const migration of (await readdir('supabase/migrations')).filter((name) => name.endsWith('.sql')).sort()) {
+  await db.exec(await readFile(`supabase/migrations/${migration}`, 'utf8'));
+}
 await db.query('insert into public.reference_payloads values ($1,$2)', ['/api/curricula/kikai/2022', {}]);
 const first = '00000000-0000-4000-a000-000000000001';
 const second = '00000000-0000-4000-a000-000000000002';
@@ -43,7 +45,7 @@ assert.equal((await db.query('select * from public.student_states')).rows.length
 await assert.rejects(rpc('/api/me/support/'+ticket.id), /Ticket not found/);
 await assert.rejects(rpc('/api/me/support/'+ticket.id,'POST',{body:'forged'}), /Ticket not found/);
 await db.exec('reset role');
-await db.query('insert into public.admin_members values ($1)',[second]);
+await db.query('insert into public.admin_members(account_id) select id from public.profiles where username=$1 on conflict (account_id) do nothing',['student_two']);
 await login(second);
 assert.equal((await rpc('/api/me')).isAdmin,true);
 const answer = await rpc('/api/me/support/'+ticket.id,'POST',{body:'科目一覧から選択してください。'});

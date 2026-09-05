@@ -210,3 +210,8 @@ src/components/          画面
 - 原本照合: `scripts/curriculum/verify_pdf_courses.py`。未確認条件を自動認定しない。
 
 </details>
+
+
+### 公開前の検証と環境分離
+
+Node 22.23.2を使用します。`npm run dev`はローカルPython/SQLite、`npm run dev:supabase`はSupabase stagingです。公開前は`npm run verify:cloudflare`でSQL/RLS・環境分離・ビルド・assets容量を検査します。Cloudflareは`main`をproduction、`feature/*`をstaging接続のpreviewとして扱います。設定値と管理者SQL、データ生成順序は[公開手順](docs/deployment_cloudflare_supabase.md)に統一しています。Python運営依存は`requirements-ops.txt`から導入できます。
