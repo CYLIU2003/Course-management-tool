@@ -1,5 +1,23 @@
 # 公開運用の整備（2026-09-05）
 
+## 本番初回公開（2026-09-05）
+
+以下は後述の初期検証記録以降に実施した本番作業。
+
+- 公開URL: https://campus-note.a041139158715.workers.dev/
+- Cloudflare Worker: `campus-note`。公開version: `c7a7ab38-b985-43d3-a481-aaa75884f2ca`。
+- Supabase: `campus-note-prod` / `rnsqvyejfimzxwfkzfkf`。ローカルのGit対象外 `.env.local` に本番URLとpublishable keyを設定した。秘密鍵はフロントや文書に保存していない。
+- 空だった `reference_payloads` に、ローカルmanifestのハッシュを検査した参照データ227件を投入。投入後、リモートの全path集合とローカルsnapshotが一致した。
+- 今回は空テーブルであることを確認した初回のみ、管理用キーを一時的なプロセス環境で扱いREST経由で分割投入した。全件を単一トランザクションで投入したものではない。今後の更新は既存の `scripts.import_supabase --apply` によるPostgreSQLの原子的な更新を使う。
+- 本番SQLで `profiles.onboarding_completed` と `campus_request_completed(text,text,jsonb)` の存在、および参照データ227件を確認した。
+- Google Providerは既に有効で、有効なGoogle Client IDとSecretが設定済みだった。既存設定を利用し、Google同意画面の要求範囲は名前・プロフィール写真・メールのみであることを確認した。
+- Supabase Site URLを公開originに変更し、Redirect URLsに同originと末尾 `/` 付きURLを追加した。既存localhost許可URLは維持した。
+- `npm.cmd run deploy:cloudflare` が完了。環境検証3件、Google認証テスト、SQL/RLS/RPCテスト、公開build、assets上限検査を通過した。
+- 公開サイトでGoogleログインを実行し、公開サイトの初期設定画面へ復帰、19学科の選択肢を表示した。個人プロフィールの入力値は本人確認待ちで、成績保存・複数端末同期・管理者回答の本番実機検証はまだ完了していない。
+- stagingの作成、Git連携による自動デプロイ、Google OAuth Audienceの一般公開状態は、この初回公開作業では未確認。管理者付与もプロフィール確定後に行う。外部レビューは未実施。
+
+## 初期の実装・検証記録
+
 対象: c2ff2bfからの作業差分。公開構成はReact/Vite → Supabase Auth/PostgreSQL/RLS/RPCのまま維持し、Python/SQLiteはデータ生成とローカル開発専用とした。
 
 ## 変更

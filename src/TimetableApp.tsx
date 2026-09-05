@@ -684,6 +684,8 @@ export default function TimetableApp({ account, onStateChange }: { account: Acco
 
       {currentPage === "timetable" && editing.open && (
         <CourseEditor
+          departmentId={selectedDepartmentId}
+          quarter={activeQuarter}
           initial={editing.value ?? null}
           canDelete={!pendingCourse && !!editing.value?.title}
           day={editing.day!}

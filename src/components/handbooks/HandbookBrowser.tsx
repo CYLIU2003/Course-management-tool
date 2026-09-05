@@ -12,6 +12,7 @@ import StudentProfile from './StudentProfile';
 import OfferingBrowser from '../OfferingBrowser';
 import { DEFAULT_OPTIONS } from '../../core/handbooks/profile';
 import TapFaq from './TapFaq';
+import GuideProgress from './GuideProgress';
 
 type View = HandbookTopic | 'courses' | 'all';
 const VIEWS: Array<{ id: View; label: string }> = [
@@ -97,6 +98,7 @@ export default function HandbookBrowser({ department, entranceYear, allYearsData
       key={item.id} type="button" aria-pressed={view === item.id} onClick={() => changeView(item.id)}>{item.label}</button>)}</div>
     {error && <div role="alert" className="handbook-notice">{error} <button type="button" onClick={() => setRetry((count) => count + 1)}>再読み込み</button></div>}
     {view === 'hirameki' && <HiramekiPanel programs={relevantPrograms} sources={sources} allYearsData={allYearsData} onOpenSource={openSource} />}
+    {view === 'graduation' && !loading && department && <GuideProgress documents={documents} department={department.name} data={allYearsData} />}
     {view === 'teacher' && <p className="handbook-notice">免許種別ごとの必要単位・教育実習の条件を確認してください。</p>}
     {view === 'tap' && <p className="handbook-notice">学部・派遣先ごとの参加条件と単位認定・読み替えを確認してください。</p>}
     {view === 'tap' && <TapFaq />}

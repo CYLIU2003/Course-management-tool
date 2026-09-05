@@ -4,6 +4,7 @@ export type AcademicQuarter = "1Q" | "2Q" | "3Q" | "4Q";
 export type AcademicYear = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
 
 export interface CourseOffering {
+  academicYear?: number;
   id?: string;
   courseId?: string;
   departmentId: string;

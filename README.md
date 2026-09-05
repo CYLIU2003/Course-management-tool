@@ -6,6 +6,8 @@
 
 東京都市大学の4クォーター制に対応した、時間割作成・成績管理・卒業要件の進捗確認をまとめて行えるWebアプリです。
 
+v0.1.1：2026年度のクラス選択による教員・教場の自動入力と、履修ガイドの区分別科目・単位・成績照合を追加しました。[変更・原本照合・検証記録](docs/development_note_offering_guide.md)。
+
 入学年度はカリキュラム・卒業要件を決める基準、現在学年は時間割・成績入力の表示対象を切り替える基準として分けています。
 
 公式学修要覧（2022〜2026年度）119件とひらめきパンフレット6件を取り込み、SQLiteに出典付きで保存しました。「履修資料」で必要単位・履修条件・科目表・TAP／ATAP・教職の資料を検索できます。一般の学部生を基本に、**ひらめき・TAP／ATAP・教職を独立して複数選択**できます（全8通り）。収録範囲、更新手順、バックアップ、判定の制限は[開発ノート](docs/development_note_curriculum.md)を参照してください。
@@ -17,7 +19,7 @@
 
 公開版はGoogleログイン後にユーザー名・入学学科・年度を保存します。ローカルPython版のみユーザー名・パスワード認証を使います。[アカウント・公開構成の開発ノート](docs/development_note_accounts.md)を参照してください。
 
-公開版は **Cloudflare Workers Static Assets + Supabase Auth/PostgreSQL + 利用者別LocalStorage同期** に対応しています。SQLiteは公式資料の取込・監査とローカル開発に使います。Supabase公開版はGoogleログイン後、初回だけユーザー名・学科・入学年度を設定します。現在は公開先プロジェクト未設定のため未デプロイです。[公開・管理者設定手順](docs/deployment_cloudflare_supabase.md)を参照してください。
+公開版は **Cloudflare Workers Static Assets + Supabase Auth/PostgreSQL + 利用者別LocalStorage同期** に対応しています。SQLiteは公式資料の取込・監査とローカル開発に使います。Supabase公開版はGoogleログイン後、初回だけユーザー名・学科・入学年度を設定します。2026-09-05に[β版を公開](https://campus-note.a041139158715.workers.dev/)し、Googleログインから初期設定画面まで実機確認しました。[実施記録](docs/development_note_public_operations.md#本番初回公開2026-09-05)と[公開・管理者設定手順](docs/deployment_cloudflare_supabase.md)を参照してください。
 
 2026年度開講資料35件を保存し、8,576掲載行から3,706講義コードを重複なく収録しました。ただし97講義は条件付き訂正等の確認が残るため、確定時間割としての完全性は未達です。[原本照合・収録範囲](docs/development_note_offerings.md)を参照してください。管理画面には利用状況集計と問い合わせ回答機能があります。
 
@@ -217,3 +219,5 @@ src/components/          画面
 Node 22.23.2を使用します。`npm run dev`はローカルPython/SQLite、`npm run dev:supabase`はSupabase stagingです。公開前は`npm run verify:cloudflare`でSQL/RLS・環境分離・ビルド・assets容量を検査します。Cloudflareは`main`をproduction、`feature/*`をstaging接続のpreviewとして扱います。設定値と管理者SQL、データ生成順序は[公開手順](docs/deployment_cloudflare_supabase.md)に統一しています。Python運営依存は`requirements-ops.txt`から導入できます。
 
 Google OAuthへの変更、追加migration、Google Cloud/Supabaseの設定順序は[Googleログイン開発ノート](docs/development_note_google_auth.md)を参照してください。公開版のメール／パスワード登録は非表示・API経路も無効化しました。ローカルPython版の認証は開発用として維持しています。
+
+Google Cloud・Supabase・Cloudflareを初めて設定する場合は、[画面ごとの詳細設定ガイド](docs/cloud_services_setup.md)を参照してください。

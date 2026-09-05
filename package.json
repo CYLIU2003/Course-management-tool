@@ -1,7 +1,7 @@
 {
   "name": "timesch",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.1",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
@@ -25,7 +25,8 @@
     "db:export-supabase": "python -m scripts.export_supabase",
     "dev:supabase": "node scripts/dev-supabase.mjs",
     "test:cloudflare": "node --test scripts/test-cloudflare.mjs",
-    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:supabase && npm run build:cloudflare",
+    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:offering-guide && npm run test:supabase && npm run build:cloudflare",
+    "test:offering-guide": "node scripts/test-offering-guide.mjs",
     "test:google-auth": "node scripts/test-google-auth.mjs"
   },
   "dependencies": {

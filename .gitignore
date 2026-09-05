@@ -31,3 +31,4 @@ data/*.sqlite3*
 
 # Reproducible official API export (contains no accounts)
 data/supabase-reference/
+kimitsujouhou.txt
