@@ -11,15 +11,12 @@ export async function supabaseFetch(path: string, init: RequestInit = {}): Promi
   const route = new URL(path, window.location.origin);
   const method = init.method ?? 'GET';
   const payload = typeof init.body === 'string' ? JSON.parse(init.body) : {};
-  if (route.pathname === '/api/auth/register') {
-    const { data, error } = await supabase.auth.signUp({ email: payload.email, password: payload.password,
-      options: { emailRedirectTo: window.location.origin, data: { username: payload.username.toLowerCase(), departmentId: payload.departmentId, entranceYear: payload.entranceYear } } });
-    return error ? json({ error: '登録できませんでした。入力内容・ユーザー名の重複を確認してください。' }, 400) : json({ ok: true, confirmationRequired: !data.session });
+  if (route.pathname === '/api/auth/google' && method === 'POST') {
+    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google',
+      options: { redirectTo: window.location.origin, scopes: 'openid email profile' } });
+    return error ? json({ error: 'Googleログインを開始できませんでした。もう一度お試しください。' }, 503) : json({ ok: true });
   }
-  if (route.pathname === '/api/auth/login') {
-    const { error } = await supabase.auth.signInWithPassword({ email: payload.email, password: payload.password });
-    return error ? json({ error: 'メールアドレス・パスワード、またはメール認証を確認してください。' }, 401) : json({ ok: true });
-  }
+  if (route.pathname.startsWith('/api/auth/')) return json({ error: 'Googleでログインしてください。' }, 404);
   if (route.pathname === '/api/me/logout') {
     const { data: { session } } = await supabase.auth.getSession();
     const owner = new Headers(init.headers).get('X-Account-ID');
@@ -37,7 +34,7 @@ export async function supabaseFetch(path: string, init: RequestInit = {}): Promi
     const { data, error } = await supabase.rpc('campus_request', { route: route.pathname, verb: method, payload: { ...query, ...payload } });
     if (error) {
       const status = error.code === '40001' ? 409 : error.code === '42501' ? 403 : error.code === 'P0002' ? 404 : error.code.startsWith('22') ? 400 : 503;
-      return json({ error: status === 409 ? '別の画面で更新されています。入力内容を保存して再読み込みしてください。' : status === 403 ? 'この操作の権限がありません。再ログインしてください。' : '処理できませんでした。入力内容と接続状態を確認してください。' }, status);
+      return json({ error: status === 409 ? '別の画面で更新されています。入力内容を保存して再読み込みしてください。' : error.message === 'Username unavailable' ? 'そのユーザー名は使用されています。別の名前を入力してください。' : status === 403 ? 'この操作の権限がありません。再ログインしてください。' : '処理できませんでした。入力内容と接続状態を確認してください。' }, status);
     }
     return json(data);
   }

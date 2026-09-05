@@ -8,6 +8,7 @@ export interface StudentState {
   allYearsData: AcademicAllYearsData;
 }
 export interface Account {
+  onboardingCompleted?: true;
   id: string;
   username: string;
   departmentId: string;
@@ -32,4 +33,8 @@ export async function accountRequest(path: string, method: 'POST' | 'PUT', value
 export async function responseError(response: Response): Promise<string> {
   try { const value = await response.json(); return typeof value.error === 'string' ? value.error : '処理に失敗しました。'; }
   catch { return 'サーバーに接続できません。しばらくして再試行してください。'; }
+}
+
+export interface PendingAccount extends Omit<Account, "username" | "departmentId" | "entranceYear" | "onboardingCompleted"> {
+  username: null; departmentId: null; entranceYear: null; onboardingCompleted: false;
 }

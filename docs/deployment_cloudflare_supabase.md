@@ -9,9 +9,13 @@
 - SQLiteはPDF抽出・出典照合とローカル開発用。公式データだけを227件のAPIスナップショットとしてPostgreSQLに移す。ローカルアカウント、パスワードハッシュ、成績はエクスポートしない。
 - LocalStorageは利用者別の未同期キャッシュ。再接続時のrevision競合は自動上書きしない。初回認証・起動には接続が必要。
 
+## 現在の認証方針
+
+公開版はGoogle OAuth＋初回セットアップを採用する。Email ProviderのON/OFFやConfirm emailは今回のログイン経路では利用しない。公開版をGoogleのみとする場合、Supabase側でもEmail Providerを無効にする（既存メール利用者の移行を確認してから）。[Google設定手順](development_note_google_auth.md)を先に確認する。
+
 ## 1. Supabase
 
-対象プロジェクトのSQL Editor等で`supabase/migrations/202609050001_campus_note.sql`を一度適用する。新規スキーマ向けの初回マイグレーションで、既存テーブルへ重ねて実行しない。AuthのEmailを有効にし、Site URL／Redirect URLsを実際の公開URLに設定する。登録にはユーザー名、メール、12文字以上のパスワード、学科、入学年度を使う。メール確認を有効にする場合は、受信確認を本番テストに含める。
+新規Supabaseには`supabase/migrations/`のSQLをファイル名順に適用する。初回SQLを適用済みのDBには`202609050002_google_onboarding.sql`だけを追加する。既存プロフィール・時間割・権限は保持し、新規OAuthユーザーだけ初期設定待ちとなる。Google Providerと戻り先URLを設定してからGoogleログインを確認する。
 
 監査済みSQLiteから参照データを生成する:
 
@@ -49,7 +53,7 @@ CAMPUS_STAGING_SUPABASE_PUBLISHABLE_KEY=<staging-publishable-key>
 
 ## 3. 管理者
 
-公開アプリで自分のアカウントを登録・メール確認してから、運営用SQL接続でユーザー名を確認し、管理権限を付与する:
+公開アプリで自分のアカウントをGoogleログイン・初期設定を完了してから、運営用SQL接続でユーザー名を確認し、管理権限を付与する:
 
 ```sql
 select id, username from public.profiles where username = '<登録したユーザー名>';
@@ -78,7 +82,7 @@ on conflict (account_id) do nothing;
 - ローカル本番ビルドは従来の`VITE_SUPABASE_*`2変数だけでも実行可能。ローカルstagingの成果物確認は`npm run build:cloudflare -- --target=staging`。
 - `verify:cloudflare`は環境分離／秘密鍵拒否／assets上限テスト → 全migrationのRLS/RPCテスト → 型検査／公開ビルド → 20,000ファイル・1ファイル25 MiB以内の検査を行う。成功後だけ`deploy:cloudflare`が公開へ進む。
 - 初回SQLは今後変更せず、日付順の追加migrationを作る。`test:supabase`は全SQLをファイル名順に実行する。新規プロジェクトも同じ順序で適用する。既存DBでは適用済みSQLを再実行せず、新規分のみ適用・履歴管理する。
-- β版はメール確認OFFで即時登録する方針。未確認メールを本人確認済みとして扱わない。Auth側のパスワード最小長も12文字に設定する。パスワード復旧画面は未実装。本格運用のSMTP・メール確認ON・復旧画面は次段階。今回は実プロジェクトのAuth設定を変更していない。
+- 従来のメール確認OFFによるβ登録案はGoogle OAuthへ置き換えた。Campus Note用の確認メールやパスワード入力は使わない。実プロジェクトのAuth設定は未変更。
 - 更新順序は`db:build → db:offerings → export → import検査 → import --apply`。両DBにはそれぞれ接続先を確認して投入する。参照データだけならCloudflare再配信は不要。ただし公開PDFそのものを変更・追加した場合はassetsの再デプロイが必要。
 - mainへのマージ、GitHub連携、2プロジェクトの作成・課金・実デプロイは未実施。無料枠が使えるかはアカウントの利用状況も含めて作成時に確認する。
 

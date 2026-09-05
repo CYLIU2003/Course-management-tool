@@ -1,3 +1,4 @@
+import { GoogleSignIn, Onboarding } from './GoogleAccount';
 import { usesSupabase } from '../api/supabase';
 import { clearAccountCache, readPendingDraft, saveAccountCache, serializeState } from '../api/accountCache';
 import { apiFetch } from '../api/client';
@@ -5,12 +6,12 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import TimetableApp from '../TimetableApp';
 import AdminDashboard from './AdminDashboard';
 import SupportDesk from './SupportDesk';
-import { accountRequest, responseError, setAccountToken, setAccountIdentity, type Account, type StudentState } from '../api/account';
+import { accountRequest, responseError, setAccountToken, setAccountIdentity, type Account, type PendingAccount, type StudentState } from '../api/account';
 
 interface RegistrationOption { id: string; name: string; faculty: string; entranceYear: number; status: string }
 
 export default function AccountGate() {
-  const [account, setAccount] = useState<Account | null>(null);
+  const [account, setAccount] = useState<Account | PendingAccount | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const loadAccount = useCallback(async () => {
@@ -19,7 +20,7 @@ export default function AccountGate() {
       const response = await apiFetch('/api/me', { cache: 'no-store' });
       if (response.status === 401) { setAccount(null); setAccountToken(''); setAccountIdentity(''); return; }
       if (!response.ok) throw new Error(await responseError(response));
-      const value: Account = await response.json();
+      const value: Account | PendingAccount = await response.json();
       setAccountToken(value.csrfToken); setAccountIdentity(value.id); setAccount(value);
     } catch (reason) { setError(reason instanceof Error ? reason.message : '接続できません。'); }
     finally { setLoading(false); }
@@ -27,7 +28,8 @@ export default function AccountGate() {
   useEffect(() => { void loadAccount(); }, [loadAccount]);
   if (loading) return <main className="account-page"><p role="status">アカウントを確認しています…</p></main>;
   if (error) return <main className="account-page"><section className="account-card"><h1>接続を確認してください</h1><p role="alert">{error}</p><button onClick={loadAccount}>再試行</button></section></main>;
-  return account ? <AccountSession key={account.id} account={account} onLogout={() => { setAccountToken(''); setAccountIdentity(''); setAccount(null); }} /> : <SignIn onAuthenticated={loadAccount} />;
+  if (account?.onboardingCompleted === false) return <Onboarding onCompleted={loadAccount} onLogout={() => { setAccountToken(''); setAccountIdentity(''); setAccount(null); }} />;
+  return account ? <AccountSession key={account.id} account={account} onLogout={() => { setAccountToken(''); setAccountIdentity(''); setAccount(null); }} /> : usesSupabase ? <GoogleSignIn /> : <SignIn onAuthenticated={loadAccount} />;
 }
 
 function SignIn({ onAuthenticated }: { onAuthenticated: () => Promise<void> }) {

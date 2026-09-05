@@ -15,9 +15,9 @@
 
 ---
 
-アカウント登録ではユーザー名・パスワード・入学学科・年度を保存します。[アカウント・公開構成の開発ノート](docs/development_note_accounts.md)を参照してください。
+公開版はGoogleログイン後にユーザー名・入学学科・年度を保存します。ローカルPython版のみユーザー名・パスワード認証を使います。[アカウント・公開構成の開発ノート](docs/development_note_accounts.md)を参照してください。
 
-公開版は **Cloudflare Workers Static Assets + Supabase Auth/PostgreSQL + 利用者別LocalStorage同期** に対応しています。SQLiteは公式資料の取込・監査とローカル開発に使います。Supabase版の登録ではメールアドレスも入力します。現在は公開先プロジェクト未設定のため未デプロイです。[公開・管理者設定手順](docs/deployment_cloudflare_supabase.md)を参照してください。
+公開版は **Cloudflare Workers Static Assets + Supabase Auth/PostgreSQL + 利用者別LocalStorage同期** に対応しています。SQLiteは公式資料の取込・監査とローカル開発に使います。Supabase公開版はGoogleログイン後、初回だけユーザー名・学科・入学年度を設定します。現在は公開先プロジェクト未設定のため未デプロイです。[公開・管理者設定手順](docs/deployment_cloudflare_supabase.md)を参照してください。
 
 2026年度開講資料35件を保存し、8,576掲載行から3,706講義コードを重複なく収録しました。ただし97講義は条件付き訂正等の確認が残るため、確定時間割としての完全性は未達です。[原本照合・収録範囲](docs/development_note_offerings.md)を参照してください。管理画面には利用状況集計と問い合わせ回答機能があります。
 
@@ -215,3 +215,5 @@ src/components/          画面
 ### 公開前の検証と環境分離
 
 Node 22.23.2を使用します。`npm run dev`はローカルPython/SQLite、`npm run dev:supabase`はSupabase stagingです。公開前は`npm run verify:cloudflare`でSQL/RLS・環境分離・ビルド・assets容量を検査します。Cloudflareは`main`をproduction、`feature/*`をstaging接続のpreviewとして扱います。設定値と管理者SQL、データ生成順序は[公開手順](docs/deployment_cloudflare_supabase.md)に統一しています。Python運営依存は`requirements-ops.txt`から導入できます。
+
+Google OAuthへの変更、追加migration、Google Cloud/Supabaseの設定順序は[Googleログイン開発ノート](docs/development_note_google_auth.md)を参照してください。公開版のメール／パスワード登録は非表示・API経路も無効化しました。ローカルPython版の認証は開発用として維持しています。
