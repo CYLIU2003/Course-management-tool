@@ -1,0 +1,636 @@
+{
+  "database": {
+    "schemaVersion": 2,
+    "integrity": "ok",
+    "counts": {
+      "source_documents": 125,
+      "source_pages": 5887,
+      "source_tables": 2651,
+      "course_records": 24181,
+      "requirement_evidence": 4255,
+      "programs": 6,
+      "student_profiles": 0,
+      "cohort_datasets": 95
+    }
+  },
+  "originalPdfHashesVerified": 125,
+  "extractionReviewRows": 1069,
+  "pagesWithoutExtractableText": 106,
+  "originalPdfBytes": 357639036,
+  "tapPagesByCohort": [
+    {
+      "year": 2022,
+      "pages": 69
+    },
+    {
+      "year": 2023,
+      "pages": 65
+    },
+    {
+      "year": 2024,
+      "pages": 75
+    },
+    {
+      "year": 2025,
+      "pages": 67
+    },
+    {
+      "year": 2026,
+      "pages": 71
+    }
+  ],
+  "teacherPagesByCohort": [
+    {
+      "year": 2022,
+      "pages": 236
+    },
+    {
+      "year": 2023,
+      "pages": 259
+    },
+    {
+      "year": 2024,
+      "pages": 223
+    },
+    {
+      "year": 2025,
+      "pages": 245
+    },
+    {
+      "year": 2026,
+      "pages": 222
+    }
+  ],
+  "cohorts": [
+    {
+      "department_id": "chino_joho",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 213
+    },
+    {
+      "department_id": "chino_joho",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 281
+    },
+    {
+      "department_id": "chino_joho",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 275
+    },
+    {
+      "department_id": "chino_joho",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 287
+    },
+    {
+      "department_id": "chino_joho",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 277
+    },
+    {
+      "department_id": "denki",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 235
+    },
+    {
+      "department_id": "denki",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 312
+    },
+    {
+      "department_id": "denki",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 311
+    },
+    {
+      "department_id": "denki",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 314
+    },
+    {
+      "department_id": "denki",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 307
+    },
+    {
+      "department_id": "design_data",
+      "entrance_year": 2022,
+      "status": "unavailable",
+      "course_count": 0
+    },
+    {
+      "department_id": "design_data",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 116
+    },
+    {
+      "department_id": "design_data",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 116
+    },
+    {
+      "department_id": "design_data",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 128
+    },
+    {
+      "department_id": "design_data",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 116
+    },
+    {
+      "department_id": "genshiryoku",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 216
+    },
+    {
+      "department_id": "genshiryoku",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 302
+    },
+    {
+      "department_id": "genshiryoku",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 300
+    },
+    {
+      "department_id": "genshiryoku",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 308
+    },
+    {
+      "department_id": "genshiryoku",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 295
+    },
+    {
+      "department_id": "iyo",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 217
+    },
+    {
+      "department_id": "iyo",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 299
+    },
+    {
+      "department_id": "iyo",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 303
+    },
+    {
+      "department_id": "iyo",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 303
+    },
+    {
+      "department_id": "iyo",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 292
+    },
+    {
+      "department_id": "joho_kagaku",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 212
+    },
+    {
+      "department_id": "joho_kagaku",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 279
+    },
+    {
+      "department_id": "joho_kagaku",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 280
+    },
+    {
+      "department_id": "joho_kagaku",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 292
+    },
+    {
+      "department_id": "joho_kagaku",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 285
+    },
+    {
+      "department_id": "joho_system",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 221
+    },
+    {
+      "department_id": "joho_system",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 252
+    },
+    {
+      "department_id": "joho_system",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 255
+    },
+    {
+      "department_id": "joho_system",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 130
+    },
+    {
+      "department_id": "joho_system",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 262
+    },
+    {
+      "department_id": "kankyo_keiei",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 170
+    },
+    {
+      "department_id": "kankyo_keiei",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 259
+    },
+    {
+      "department_id": "kankyo_keiei",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 257
+    },
+    {
+      "department_id": "kankyo_keiei",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 134
+    },
+    {
+      "department_id": "kankyo_keiei",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 272
+    },
+    {
+      "department_id": "kankyo_sosei",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 169
+    },
+    {
+      "department_id": "kankyo_sosei",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 258
+    },
+    {
+      "department_id": "kankyo_sosei",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 256
+    },
+    {
+      "department_id": "kankyo_sosei",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 133
+    },
+    {
+      "department_id": "kankyo_sosei",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 271
+    },
+    {
+      "department_id": "kenchiku",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 224
+    },
+    {
+      "department_id": "kenchiku",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 292
+    },
+    {
+      "department_id": "kenchiku",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 286
+    },
+    {
+      "department_id": "kenchiku",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 300
+    },
+    {
+      "department_id": "kenchiku",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 293
+    },
+    {
+      "department_id": "kikai",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 216
+    },
+    {
+      "department_id": "kikai",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 283
+    },
+    {
+      "department_id": "kikai",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 286
+    },
+    {
+      "department_id": "kikai",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 290
+    },
+    {
+      "department_id": "kikai",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 277
+    },
+    {
+      "department_id": "kikai_system",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 224
+    },
+    {
+      "department_id": "kikai_system",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 299
+    },
+    {
+      "department_id": "kikai_system",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 302
+    },
+    {
+      "department_id": "kikai_system",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 296
+    },
+    {
+      "department_id": "kikai_system",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 298
+    },
+    {
+      "department_id": "ningen",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 267
+    },
+    {
+      "department_id": "ningen",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 239
+    },
+    {
+      "department_id": "ningen",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 279
+    },
+    {
+      "department_id": "ningen",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 285
+    },
+    {
+      "department_id": "ningen",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 276
+    },
+    {
+      "department_id": "ouyou_kagaku",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 223
+    },
+    {
+      "department_id": "ouyou_kagaku",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 306
+    },
+    {
+      "department_id": "ouyou_kagaku",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 308
+    },
+    {
+      "department_id": "ouyou_kagaku",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 314
+    },
+    {
+      "department_id": "ouyou_kagaku",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 303
+    },
+    {
+      "department_id": "shakai_media",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 223
+    },
+    {
+      "department_id": "shakai_media",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 254
+    },
+    {
+      "department_id": "shakai_media",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 258
+    },
+    {
+      "department_id": "shakai_media",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 132
+    },
+    {
+      "department_id": "shakai_media",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 264
+    },
+    {
+      "department_id": "shizen_shizen",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 230
+    },
+    {
+      "department_id": "shizen_shizen",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 308
+    },
+    {
+      "department_id": "shizen_shizen",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 314
+    },
+    {
+      "department_id": "shizen_shizen",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 319
+    },
+    {
+      "department_id": "shizen_shizen",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 296
+    },
+    {
+      "department_id": "shizen_suuri",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 230
+    },
+    {
+      "department_id": "shizen_suuri",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 308
+    },
+    {
+      "department_id": "shizen_suuri",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 314
+    },
+    {
+      "department_id": "shizen_suuri",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 319
+    },
+    {
+      "department_id": "shizen_suuri",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 296
+    },
+    {
+      "department_id": "toshi_kogaku",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 193
+    },
+    {
+      "department_id": "toshi_kogaku",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 263
+    },
+    {
+      "department_id": "toshi_kogaku",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 260
+    },
+    {
+      "department_id": "toshi_kogaku",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 277
+    },
+    {
+      "department_id": "toshi_kogaku",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 267
+    },
+    {
+      "department_id": "toshi_seikatsu",
+      "entrance_year": 2022,
+      "status": "partial",
+      "course_count": 253
+    },
+    {
+      "department_id": "toshi_seikatsu",
+      "entrance_year": 2023,
+      "status": "partial",
+      "course_count": 265
+    },
+    {
+      "department_id": "toshi_seikatsu",
+      "entrance_year": 2024,
+      "status": "partial",
+      "course_count": 268
+    },
+    {
+      "department_id": "toshi_seikatsu",
+      "entrance_year": 2025,
+      "status": "partial",
+      "course_count": 265
+    },
+    {
+      "department_id": "toshi_seikatsu",
+      "entrance_year": 2026,
+      "status": "partial",
+      "course_count": 268
+    }
+  ]
+}

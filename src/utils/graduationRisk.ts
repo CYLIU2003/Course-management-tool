@@ -1,7 +1,7 @@
 import type { AcademicAllYearsData, AcademicCourse, AcademicCurriculum, AcademicDashboardSnapshot, AcademicYear, CourseType, Grade } from './academicProgress';
 import { calculateGraduationRequirements, type GraduationCategory } from './graduationRequirements';
 
-export type GraduationRiskLevel = 'safe' | 'warning' | 'danger';
+export type GraduationRiskLevel = 'safe' | 'warning' | 'danger' | 'unknown';
 
 export interface GraduationRiskItem {
   key: GraduationCategory;
@@ -46,12 +46,14 @@ type CourseEntry = {
 };
 
 const RISK_ORDER: Record<GraduationRiskLevel, number> = {
+  unknown: 3,
   safe: 0,
   warning: 1,
   danger: 2,
 };
 
 const RISK_LABELS: Record<GraduationRiskLevel, string> = {
+  unknown: '未判定',
   safe: '安全',
   warning: '注意',
   danger: '危険',
@@ -135,6 +137,13 @@ export function calculateGraduationRisk(
   courses: AcademicCourse[] = [],
   curriculum?: AcademicCurriculum,
 ): GraduationRiskSummary {
+  if (!curriculum || curriculum.requiredCredits <= 0 || !curriculum.details?.some((detail) => detail.stage === '卒業')) {
+    return {
+      overallRiskLevel: 'unknown', overallLabel: '未判定',
+      overallMessage: '入学年度に対応する計算用要件が未設定です。「履修資料」で公式の必要単位・追加条件を確認してください。',
+      requiredMissingCredits: 0, totalMissingCredits: 0, items: [], shortageItems: [], requiredCourseAlerts: [],
+    };
+  }
   const entries = collectCourseEntries(allYearsData);
   const requirements = calculateGraduationRequirements({ allYearsData, courses, curriculum });
   const requiredCourseAlerts = entries

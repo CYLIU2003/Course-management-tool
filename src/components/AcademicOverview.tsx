@@ -116,6 +116,7 @@ export default function AcademicOverview({
   onOpenCalendar,
   showActions = false,
 }: AcademicOverviewProps) {
+  const canAssessCredits = !!curriculum && snapshot.requiredCredits > 0;
   const detailedWarnings = useMemo(
     () => (allYearsData && courses ? generateDetailedGraduationWarnings(allYearsData, courses) : []),
     [allYearsData, courses],
@@ -181,7 +182,7 @@ export default function AcademicOverview({
             marginBottom: '1rem',
           }}
         >
-          卒業要件CSVが未読込です。卒業判定と不足単位の表示は、要件CSVを読み込むと有効になります。
+          この入学年度の不足単位は未判定です。学修要覧で必要単位を確認してください。
         </div>
       ) : null}
 
@@ -203,13 +204,13 @@ export default function AcademicOverview({
         </div>
         <div className="stats-card">
           <div className="stats-label">不足単位</div>
-          <div className={`stats-value ${snapshot.requiredCredits - snapshot.earnedCredits <= 0 ? 'stats-complete' : ''}`}>
-            {snapshot.requiredCredits - snapshot.earnedCredits > 0
+          <div className={`stats-value ${canAssessCredits && snapshot.requiredCredits - snapshot.earnedCredits <= 0 ? 'stats-complete' : ''}`}>
+            {!canAssessCredits ? '未判定' : snapshot.requiredCredits - snapshot.earnedCredits > 0
               ? `${snapshot.requiredCredits - snapshot.earnedCredits} 単位`
               : '達成！'}
           </div>
           <div className="small" style={{ color: 'var(--muted)' }}>
-            必修未修得 {graduationRisk?.requiredMissingCredits ?? 0} 単位
+            {canAssessCredits ? `必修未修得 ${graduationRisk?.requiredMissingCredits ?? 0} 単位` : '必要単位を確認してください'}
           </div>
         </div>
         <div className="stats-card">
@@ -223,7 +224,7 @@ export default function AcademicOverview({
           <div className="stats-label">GPA</div>
           <div className="stats-value">{snapshot.gpa.currentGpa.toFixed(2)}</div>
           <div className="small" style={{ color: 'var(--muted)' }}>
-            目標3.00なら平均GP {Number.isFinite(targetGpaPlan.requiredAverageGradePoint) ? targetGpaPlan.requiredAverageGradePoint.toFixed(2) : '0.00'} 必要
+            {canAssessCredits ? `目標3.00なら平均GP ${Number.isFinite(targetGpaPlan.requiredAverageGradePoint) ? targetGpaPlan.requiredAverageGradePoint.toFixed(2) : '—'} 必要` : '登録済みの成績から集計'}
           </div>
         </div>
         <div className="stats-card">
@@ -239,9 +240,9 @@ export default function AcademicOverview({
         </div>
         <div className="stats-card">
           <div className="stats-label">進捗率</div>
-          <div className="stats-value">{Math.min(100, snapshot.completionRate * 100).toFixed(1)}%</div>
+          <div className="stats-value">{canAssessCredits ? `${Math.min(100, snapshot.completionRate * 100).toFixed(1)}%` : '未判定'}</div>
           <div className="small" style={{ color: 'var(--muted)' }}>
-            取得 {snapshot.earnedCredits} 単位 / 必要 {snapshot.requiredCredits} 単位
+            取得 {snapshot.earnedCredits} 単位{canAssessCredits ? ` / 必要 ${snapshot.requiredCredits} 単位` : ''}
           </div>
         </div>
       </div>

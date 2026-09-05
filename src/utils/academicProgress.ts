@@ -133,6 +133,7 @@ export interface AcademicGpaSnapshot {
 }
 
 export interface AcademicDashboardSnapshot {
+  recordedEarnedCredits?: number;
   requiredCredits: number;
   earnedCredits: number;
   gradedCredits: number;
@@ -218,12 +219,19 @@ function formatCourseLocation(entry: AcademicCourseInstance) {
 
 function collectMetrics(allYearsData: AcademicAllYearsData) {
   const entries = collectCourseInstances(allYearsData);
+  const uniqueEntries = new Map<string, AcademicCourseInstance>();
+  for (const entry of entries) {
+    const key = `${entry.year}:${entry.courseId || entry.title.normalize('NFKC').replace(/\s+/g, '')}`;
+    const previous = uniqueEntries.get(key);
+    if (!previous || ((!previous.grade || previous.grade === '未履修') && entry.grade && entry.grade !== '未履修')) uniqueEntries.set(key, entry);
+  }
   const creditsByType = {
     required: 0,
     electiveRequired: 0,
     elective: 0,
     total: 0,
   };
+  let unclassifiedEarnedCredits = 0;
 
   let currentEarnedPoints = 0;
   let currentGradedCredits = 0;
@@ -231,7 +239,7 @@ function collectMetrics(allYearsData: AcademicAllYearsData) {
   const failedElectiveRequiredCourses: AcademicCourseInstance[] = [];
   const unknownCourses: AcademicCourseInstance[] = [];
 
-  for (const entry of entries) {
+  for (const entry of uniqueEntries.values()) {
     const credits = entry.credits ?? 0;
     if (entry.courseType === 'unknown' && credits > 0) {
       unknownCourses.push(entry);
@@ -245,6 +253,8 @@ function collectMetrics(allYearsData: AcademicAllYearsData) {
     currentEarnedPoints += getGradePoint(entry.grade) * credits;
 
     if (entry.courseType === 'unknown') {
+      // Earned credits are a record of passing grades, independent of graduation classification.
+      if (entry.grade !== '不可') unclassifiedEarnedCredits += credits;
       continue;
     }
 
@@ -271,6 +281,7 @@ function collectMetrics(allYearsData: AcademicAllYearsData) {
   return {
     entries,
     creditsByType,
+    recordedEarnedCredits: creditsByType.total + unclassifiedEarnedCredits,
     currentEarnedPoints,
     currentGradedCredits,
     currentGpa: currentGradedCredits === 0 ? 0 : currentEarnedPoints / currentGradedCredits,
@@ -388,12 +399,12 @@ export function generateGraduationWarnings(
   const curriculum = settings.curriculum;
   const overallRequired = curriculum?.requiredCredits ?? settings.requiredCredits;
 
-  if (!curriculum) {
+  if (!curriculum || overallRequired <= 0) {
     warnings.push({
       id: "no-curriculum",
       level: "info",
-      message: "卒業要件CSVが未読込です",
-      detail: "卒業要件が未設定のため、区分別の不足判定はまだできません。",
+      message: "この入学年度の卒業要件を確認してください",
+      detail: "不足単位は未判定です。学修要覧の必要単位を確認してください。",
     });
   } else {
     const remainingTotal = Math.max(0, overallRequired - metrics.creditsByType.total);
@@ -504,23 +515,6 @@ export function generateDetailedGraduationWarnings(
       courseIndex.set(normalizedTitle, course);
     }
 
-    if (course.courseType === 'unknown') {
-      warnings.push({
-        id: `unknown-course-master-${course.id}`,
-        level: 'danger',
-        message: `区分未確認の科目マスタがあります: ${course.title}`,
-        detail: `ID: ${course.id}${course.credits > 0 ? ` / ${course.credits}単位` : ''}`,
-      });
-    }
-
-    if ((course.credits ?? 0) <= 0) {
-      warnings.push({
-        id: `zero-credit-course-${course.id}`,
-        level: 'warning',
-        message: `単位数0の科目マスタがあります: ${course.title}`,
-        detail: `ID: ${course.id}`,
-      });
-    }
   }
 
   const seenWarnings = new Set<string>();
@@ -587,6 +581,7 @@ export function buildDashboardSnapshot(
   return {
     requiredCredits,
     earnedCredits: metrics.creditsByType.total,
+    recordedEarnedCredits: metrics.recordedEarnedCredits,
     gradedCredits: metrics.currentGradedCredits,
     completionRate: requiredCredits === 0 ? 0 : metrics.creditsByType.total / requiredCredits,
     gpa,

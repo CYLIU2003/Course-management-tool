@@ -6,6 +6,7 @@ type GraduationRiskPanelProps = {
 };
 
 const RISK_STYLES = {
+  unknown: { border: 'var(--border-soft)', background: 'var(--surface)', accent: 'var(--muted)' },
   safe: {
     border: 'color-mix(in oklab, var(--primary) 22%, var(--border-soft) 78%)',
     background: 'color-mix(in oklab, var(--primary-soft) 70%, var(--surface) 30%)',
@@ -24,18 +25,20 @@ const RISK_STYLES = {
 } as const;
 
 const RISK_LABELS = {
+  unknown: '未判定',
   safe: '安全',
   warning: '注意',
   danger: '危険',
 } as const;
 
-function getAlertTone(level: 'safe' | 'warning' | 'danger') {
+function getAlertTone(level: 'safe' | 'warning' | 'danger' | 'unknown') {
   if (level === 'danger') return 'is-danger';
   if (level === 'warning') return 'is-warning';
   return 'is-info';
 }
 
 export default function GraduationRiskPanel({ risk, compact = false }: GraduationRiskPanelProps) {
+  if (risk.overallRiskLevel === 'unknown') return <section className="handbook-notice"><h3>卒業危険度：未判定</h3><p>{risk.overallMessage}</p></section>;
   const visibleShortages = compact ? risk.shortageItems.slice(0, 2) : risk.shortageItems;
   const visibleAlerts = compact ? risk.requiredCourseAlerts.slice(0, 2) : risk.requiredCourseAlerts;
   const summaryStyle = RISK_STYLES[risk.overallRiskLevel];

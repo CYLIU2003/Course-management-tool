@@ -1,4 +1,13 @@
-# Curriculum CSV Generation
+# Curriculum Source Processing
+
+現行アプリはSQLite APIを参照します。原本収集・抽出・座標照合・DB構築の手順は
+[公式履修資料・SQLite統合 開発ノート](../../docs/development_note_curriculum.md#再収集と更新)を参照してください。
+`verify_pdf_courses.py` を通過した科目だけを検索候補へ取り込みます。
+
+以下は旧CSV生成手順の記録です。旧CSVローダーは削除済みで、ここに記載されたCSV配置は
+現在のアプリやDB構築には反映されません。
+
+## 旧CSV生成手順（保管用）
 
 このフォルダは、履修要覧PDFからCSVを生成するための補助スクリプト置き場です。
 

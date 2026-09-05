@@ -1,5 +1,5 @@
 export type DataLoadNoticeProps = {
-  status?: "idle" | "loading" | "ready" | "partial" | "failed";
+  status?: "idle" | "loading" | "ready" | "partial" | "failed" | "unavailable";
   message?: string | null;
   details?: string[];
   onRetry?: () => void;
@@ -18,10 +18,10 @@ export function DataLoadNotice({ status = "idle", message, details = [], onRetry
     );
   }
 
-  if (status === "partial") {
+  if (status === "partial" || status === "unavailable") {
     return (
       <div className="data-load-notice is-partial" aria-live="polite">
-        一部の時間割情報が未読込です。科目一覧と卒業要件は利用できます。
+        {message || (status === 'unavailable' ? 'この学科・入学年度に対応する履修情報はありません。' : '科目一覧には未確認の項目があります。必選・必要単位は学修要覧で確認してください。')}
         {details.length > 0 && (
           <ul style={{ margin: '0.5rem 0 0', paddingLeft: '1.2rem' }}>
             {details.map((detail) => (

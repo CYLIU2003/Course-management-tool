@@ -1943,7 +1943,7 @@ html[data-theme="eco"] {
 
 @media (max-width: 1080px) {
   .app-header__inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .app-header__controls {
@@ -1978,6 +1978,9 @@ html[data-theme="eco"] {
 }
 
 @media (max-width: 720px) {
+  .app-brand, .app-brand > div { min-width: 0; }
+  .app-brand__mark { flex-shrink: 0; }
+  .control-field select, .control-field input { min-width: 0; max-width: 100%; flex: 1; }
   .app-container {
     width: min(100%, calc(100% - 20px));
   }
@@ -2239,4 +2242,53 @@ html[data-theme="eco"] {
   .tt-card {
     box-shadow: none !important;
   }
+}
+.handbook-browser { display: grid; gap: 20px; padding: clamp(16px, 3vw, 32px); min-width: 0; }
+.handbook-heading, .handbook-program header { display: flex; justify-content: space-between; gap: 20px; align-items: flex-start; }
+.handbook-heading h2, .handbook-program h3 { margin: 6px 0 10px; }
+.handbook-eyebrow { font-size: 12px; letter-spacing: .08em; color: var(--muted); }
+.handbook-coverage { font-size: 13px; text-align: right; white-space: nowrap; line-height: 1.8; }
+.handbook-notice { padding: 14px 18px; border-left: 3px solid #287b8a; background: color-mix(in srgb, #287b8a 8%, var(--card, white)); border-radius: 8px; line-height: 1.8; margin: 12px 0; }
+.handbook-tabs, .handbook-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.handbook-tabs button { padding: 10px 14px; border: 1px solid var(--stroke, #cbd5e1); border-radius: 8px; }
+.handbook-tabs button[aria-pressed=true] { background: #146572; color: white; border-color: #146572; }
+.handbook-filters { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.handbook-filters label { display: grid; gap: 6px; font-size: 13px; }
+.handbook-filters input, .handbook-filters select { min-width: 0; width: 100%; padding: 10px; border: 1px solid var(--stroke, #cbd5e1); border-radius: 8px; background: var(--card, white); color: inherit; }
+.handbook-evidence, .handbook-inventory { border: 1px solid var(--stroke, #d8dfe8); border-radius: 10px; padding: 16px; min-width: 0; }
+.handbook-evidence summary, .handbook-inventory summary { cursor: pointer; font-weight: 600; }
+.handbook-evidence-preview { display: block; margin: 8px 0 0 18px; font-size: 13px; line-height: 1.6; color: var(--muted); font-weight: 400; }
+.handbook-evidence .handbook-actions { margin-top: 16px; }
+.handbook-page-text { font-family: inherit; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.8; max-height: 600px; overflow: auto; padding: 14px; background: color-mix(in srgb, #64748b 5%, var(--card, white)); }
+.handbook-table-scroll { overflow: auto; max-width: 100%; margin: 12px 0; }
+.handbook-table-scroll table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.handbook-table-scroll td, .handbook-table-scroll th { border: 1px solid var(--stroke, #d8dfe8); padding: 9px 12px; text-align: left; vertical-align: top; white-space: pre-line; min-width: 55px; }
+.handbook-table-scroll th { background: color-mix(in srgb, #287b8a 8%, var(--card, white)); }
+.handbook-code { display: block; color: var(--muted); margin-top: 4px; }
+.handbook-program { border: 1px solid var(--stroke, #d8dfe8); padding: 22px; border-radius: 12px; }
+.handbook-program li { margin-bottom: 8px; line-height: 1.7; }
+.handbook-credit-total { font-size: 36px; color: #146572; }
+.handbook-credit-total small { display: block; font-size: 12px; font-weight: 400; text-align: right; }
+.handbook-group-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.handbook-group-grid > div { padding: 16px; background: color-mix(in srgb, #287b8a 6%, var(--card, white)); border-radius: 8px; }
+.handbook-group-grid span { display: block; font-size: 13px; min-height: 32px; }
+.handbook-group-grid strong { font-size: 24px; }
+.handbook-group-grid small, .handbook-group-grid p { font-size: 12px; font-weight: normal; }
+.handbook-inventory li { margin: 10px 0; }
+.study-profile { min-width: 0; }
+.study-profile .handbook-tabs { gap: 12px; margin-bottom: 14px; }
+.study-profile label { display: flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--card); border: 1px solid var(--stroke); border-radius: 8px; }
+.study-profile button { padding: 8px 12px; margin: 4px 6px 4px 0; border: 1px solid var(--stroke); background: var(--card); color: var(--text); border-radius: 8px; cursor: pointer; }
+.study-profile button:disabled { opacity: .6; cursor: wait; }
+.handbook-inventory > details { margin: 14px 0; }
+@media (max-width: 600px) {
+  .handbook-filters { grid-template-columns: 1fr; }
+  .handbook-heading { flex-direction: column; }
+  .handbook-coverage { text-align: left; }
+  .handbook-tabs { gap: 6px; }
+  .handbook-tabs button { padding: 9px; font-size: 12px; }
+  .handbook-program { padding: 14px; }
+  .bottom-navigation { gap: 2px; padding: 6px; }
+  .bottom-navigation__button { padding-left: 3px; padding-right: 3px; }
+  .bottom-navigation__label { font-size: 10px; }
 }

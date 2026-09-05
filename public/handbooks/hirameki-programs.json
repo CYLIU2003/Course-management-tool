@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "programs": [
+    {
+      "id": "hirameki-2026-1f1a3fbccfa9a0abdfecd08f554a176e",
+      "entranceYears": [
+        2026
+      ],
+      "facultyIds": [
+        "rikou",
+        "kenchiku_toshi",
+        "joho",
+        "kankyo",
+        "media_joho",
+        "toshi_seikatsu",
+        "ningen"
+      ],
+      "title": "ひらめき 基礎プログラム",
+      "sourceId": "hirameki-2026-1f1a3fbccfa9a0abdfecd08f554a176e",
+      "sourcePage": 2,
+      "totalCredits": 12,
+      "groups": [
+        {
+          "name": "基礎プログラム",
+          "credits": 12
+        }
+      ],
+      "courses": [
+        {
+          "title": "ことづくり",
+          "credits": 1
+        },
+        {
+          "title": "デザインリサーチ",
+          "credits": 2
+        },
+        {
+          "title": "サステナビリティ",
+          "credits": 2
+        },
+        {
+          "title": "デザインシンキング",
+          "credits": 2
+        },
+        {
+          "title": "アイデアソン演習",
+          "credits": 1
+        },
+        {
+          "title": "ハッカソン演習",
+          "credits": 1
+        },
+        {
+          "title": "ビジネスコンテスト演習",
+          "credits": 1
+        },
+        {
+          "title": "フィールドリサーチ",
+          "credits": 2
+        }
+      ],
+      "assessment": "course_list",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "成績との照合は科目名と単位数の一致を確認します。表示単位が揃っていても大学による修了認定を意味しません。"
+      ]
+    },
+    {
+      "id": "hirameki-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+      "entranceYears": [
+        2025
+      ],
+      "facultyIds": [
+        "rikou"
+      ],
+      "title": "ひらめき プログラム（実践）",
+      "sourceId": "hirameki-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+      "sourcePage": 2,
+      "totalCredits": 124,
+      "groups": [
+        {
+          "name": "ひらめきづくり",
+          "credits": 11
+        },
+        {
+          "name": "ことづくり",
+          "credits": 11
+        },
+        {
+          "name": "AI・ビッグデータ・数理データサイエンス",
+          "credits": 20
+        },
+        {
+          "name": "ものづくり",
+          "credits": 48,
+          "note": "48単位の内数として分野融合科目8単位を含む。"
+        },
+        {
+          "name": "くらしづくり",
+          "credits": 8,
+          "note": "パンフレットでは自由選択扱い。算入条件は学修要覧で確認。"
+        },
+        {
+          "name": "ひとづくり",
+          "credits": 26
+        }
+      ],
+      "courses": [],
+      "assessment": "department_conditions",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "各群の単位数に加え、学科・コース別の必修と各記号の選択必修条件を満たす必要があります。",
+        "124単位の内訳はパンフレットのプログラム構成です。学科の卒業要件と別に124単位を加算するものではありません。",
+        "学則上の科目名とプログラム内の呼称が異なる科目があります。詳細表の「学則上の科目名」を確認してください。"
+      ],
+      "departmentIds": [
+        "kikai",
+        "kikai_system",
+        "denki",
+        "iyo",
+        "ouyou_kagaku",
+        "genshiryoku",
+        "shizen_shizen",
+        "shizen_suuri"
+      ]
+    },
+    {
+      "id": "hirameki-2025-58429a500560dda0fb299438a739c28f",
+      "entranceYears": [
+        2025
+      ],
+      "facultyIds": [
+        "kenchiku_toshi",
+        "joho",
+        "kankyo",
+        "media_joho",
+        "toshi_seikatsu",
+        "ningen"
+      ],
+      "title": "ひらめき 基礎プログラム",
+      "sourceId": "hirameki-2025-58429a500560dda0fb299438a739c28f",
+      "sourcePage": 2,
+      "totalCredits": 12,
+      "groups": [
+        {
+          "name": "基礎プログラム",
+          "credits": 12
+        }
+      ],
+      "courses": [
+        {
+          "title": "ことづくり(1)",
+          "credits": 1
+        },
+        {
+          "title": "ことづくり(2)",
+          "credits": 1
+        },
+        {
+          "title": "ことづくり(3)",
+          "credits": 1
+        },
+        {
+          "title": "ことづくり(4)",
+          "credits": 1
+        },
+        {
+          "title": "ことづくり(5)",
+          "credits": 1
+        },
+        {
+          "title": "ひらめきづくり(1)",
+          "credits": 1
+        },
+        {
+          "title": "ひらめきづくり(2)",
+          "credits": 1
+        },
+        {
+          "title": "ひらめきづくり(3)",
+          "credits": 1
+        },
+        {
+          "title": "ひらめきづくり(4)",
+          "credits": 1
+        },
+        {
+          "title": "ひらめきづくり(5)",
+          "credits": 1
+        },
+        {
+          "title": "Next PBL(1)",
+          "credits": 1
+        },
+        {
+          "title": "Next PBL(2)",
+          "credits": 1
+        }
+      ],
+      "assessment": "course_list",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "成績との照合は科目名と単位数の一致を確認します。表示単位が揃っていても大学による修了認定を意味しません。"
+      ]
+    },
+    {
+      "id": "hirameki-2024-9cdbc5cecaf243dec3c4188f532ef68b",
+      "entranceYears": [
+        2024
+      ],
+      "facultyIds": [
+        "rikou"
+      ],
+      "title": "ひらめき プログラム",
+      "sourceId": "hirameki-2024-9cdbc5cecaf243dec3c4188f532ef68b",
+      "sourcePage": 2,
+      "totalCredits": 124,
+      "groups": [
+        {
+          "name": "ひらめきづくり",
+          "credits": 11
+        },
+        {
+          "name": "ことづくり",
+          "credits": 11
+        },
+        {
+          "name": "AI・ビッグデータ・数理データサイエンス",
+          "credits": 20
+        },
+        {
+          "name": "ものづくり",
+          "credits": 48,
+          "note": "48単位の内数として分野融合科目8単位を含む。"
+        },
+        {
+          "name": "くらしづくり",
+          "credits": 8,
+          "note": "パンフレットでは自由選択扱い。算入条件は学修要覧で確認。"
+        },
+        {
+          "name": "ひとづくり",
+          "credits": 26
+        }
+      ],
+      "courses": [],
+      "assessment": "department_conditions",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "各群の単位数に加え、学科・コース別の必修と各記号の選択必修条件を満たす必要があります。",
+        "124単位の内訳はパンフレットのプログラム構成です。学科の卒業要件と別に124単位を加算するものではありません。",
+        "学則上の科目名とプログラム内の呼称が異なる科目があります。詳細表の「学則上の科目名」を確認してください。"
+      ],
+      "departmentIds": [
+        "kikai",
+        "kikai_system",
+        "denki",
+        "iyo",
+        "ouyou_kagaku",
+        "genshiryoku",
+        "shizen_shizen",
+        "shizen_suuri"
+      ]
+    },
+    {
+      "id": "hirameki-2023-762a7db6ca8f63cb9f8626a2b6d077f1",
+      "entranceYears": [
+        2023
+      ],
+      "facultyIds": [
+        "rikou"
+      ],
+      "title": "ひらめき プログラム",
+      "sourceId": "hirameki-2023-762a7db6ca8f63cb9f8626a2b6d077f1",
+      "sourcePage": 2,
+      "totalCredits": 124,
+      "groups": [
+        {
+          "name": "ひらめきづくり",
+          "credits": 11
+        },
+        {
+          "name": "ことづくり",
+          "credits": 11
+        },
+        {
+          "name": "AI・ビッグデータ・数理データサイエンス",
+          "credits": 20
+        },
+        {
+          "name": "ものづくり",
+          "credits": 48,
+          "note": "48単位の内数として分野融合科目8単位を含む。"
+        },
+        {
+          "name": "くらしづくり",
+          "credits": 8,
+          "note": "パンフレットでは自由選択扱い。算入条件は学修要覧で確認。"
+        },
+        {
+          "name": "ひとづくり",
+          "credits": 26
+        }
+      ],
+      "courses": [],
+      "assessment": "department_conditions",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "各群の単位数に加え、学科・コース別の必修と各記号の選択必修条件を満たす必要があります。",
+        "124単位の内訳はパンフレットのプログラム構成です。学科の卒業要件と別に124単位を加算するものではありません。",
+        "学則上の科目名とプログラム内の呼称が異なる科目があります。詳細表の「学則上の科目名」を確認してください。"
+      ],
+      "departmentIds": [
+        "kikai",
+        "kikai_system",
+        "denki",
+        "iyo",
+        "ouyou_kagaku",
+        "genshiryoku"
+      ]
+    },
+    {
+      "id": "hirameki-2022-for_student",
+      "entranceYears": [
+        2021,
+        2022
+      ],
+      "facultyIds": [
+        "rikou"
+      ],
+      "title": "ひらめき プログラム",
+      "sourceId": "hirameki-2022-for_student",
+      "sourcePage": 4,
+      "totalCredits": 124,
+      "groups": [
+        {
+          "name": "ひらめきづくり",
+          "credits": 14
+        },
+        {
+          "name": "ことづくり",
+          "credits": 14
+        },
+        {
+          "name": "AI・ビッグデータ・数理データサイエンス",
+          "credits": 20
+        },
+        {
+          "name": "ものづくり",
+          "credits": 48
+        },
+        {
+          "name": "ひとづくり",
+          "credits": 28
+        }
+      ],
+      "courses": [],
+      "assessment": "department_conditions",
+      "notes": [
+        "パンフレットの適用入学年度に基づく情報です。履修登録方法・先修条件・卒業要件への算入は、当該年度の学修要覧と正誤表を確認してください。",
+        "各群の単位数に加え、学科・コース別の必修と各記号の選択必修条件を満たす必要があります。",
+        "124単位の内訳はパンフレットのプログラム構成です。学科の卒業要件と別に124単位を加算するものではありません。",
+        "学則上の科目名とプログラム内の呼称が異なる科目があります。詳細表の「学則上の科目名」を確認してください。"
+      ],
+      "departmentIds": [
+        "kikai",
+        "kikai_system",
+        "denki"
+      ]
+    }
+  ]
+}

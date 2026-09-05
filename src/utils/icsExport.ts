@@ -286,7 +286,7 @@ export function downloadIcsFile(icsText: string, fileName: string) {
 }
 
 export async function loadAcademicCalendarConfig(academicYear: number): Promise<AcademicCalendarConfig> {
-  const response = await fetch(`/academic-calendar/${academicYear}.json`);
+  const response = await fetch(`/api/academic-calendar/${academicYear}`);
   if (!response.ok) {
     throw new Error(`academic calendar not found: ${academicYear}`);
   }

@@ -1,4 +1,4 @@
-import type { Department } from '../../utils/autoLoadCSV';
+import type { Department } from '../../core/departments';
 import YearSelector from '../timetable/YearSelector';
 import { APP_PAGE_LABELS, type AppPage } from '../navigation/appNavigation';
 
@@ -27,17 +27,17 @@ export default function AppHeader({
   onYearChange,
   onOpenSettings,
 }: AppHeaderProps) {
-  const entranceYears = [2023, 2024, 2025, 2026, 2027];
+  const entranceYears = [...new Set([2022, 2023, 2024, 2025, 2026, entranceYear])].sort();
 
   return (
     <header className="app-header print:hidden">
       <div className="app-container app-header__inner">
         <div className="app-brand">
-          <div className="app-brand__mark">🎓</div>
+          <div className="app-brand__mark" aria-hidden="true">c.</div>
           <div>
-            <h1 className="app-brand__title">{title}</h1>
+            <h1 className="app-brand__title" title={title}>Campus Note</h1>
             <p className="app-brand__subtitle">
-              {APP_PAGE_LABELS[currentPage]} / 履修状況をひと目で把握できるダッシュボード
+              {APP_PAGE_LABELS[currentPage]} · 東京都市大学の学生向け履修ノート
             </p>
           </div>
         </div>

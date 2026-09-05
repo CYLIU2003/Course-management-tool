@@ -217,9 +217,10 @@ interface CsvSchema<T> {
   parseRow: (row: CsvNormalizedRow, rowNumber: number, fileLabel: string) => T;
 }
 
-function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvParseResult<T>> {
+async function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvParseResult<T>> {
+  const text = await file.text();
   return new Promise((resolve, reject) => {
-    Papa.parse<Record<string, unknown>>(file, {
+    Papa.parse<Record<string, unknown>>(text, {
       header: true,
       skipEmptyLines: 'greedy',
       transformHeader: (header) => header.replace(/^\uFEFF/, '').trim(),
@@ -269,7 +270,7 @@ function parseCsvFileStrict<T>(file: File, schema: CsvSchema<T>): Promise<CsvPar
 
         resolve({ rows, errors, warnings, meta: results.meta });
       },
-      error: (error) => {
+      error: (error: Error) => {
         reject(error);
       },
     });
@@ -757,17 +758,6 @@ export function parseCourses(rows: CourseRow[], departmentId?: string): Academic
   return courses;
 }
 
-// departmentフォルダ内のファイルを検索して一覧を返す
-export async function loadDepartmentCSVs(departmentName: string, category: 'requirements' | 'timetable') {
-  const basePath = `/department/${departmentName}`;
-  const filename = category === 'requirements' 
-    ? `${departmentName}_credit_requirements.csv`
-    : `${departmentName}_timetable_by_category.csv`;
-  
-  const fullPath = `${basePath}/${filename}`;
-  
-  return fullPath;
-}
 export const APPLICABLE_COURSES_CSV_HEADERS = [
   'departmentId',
   'facultyId',

@@ -1,0 +1,889 @@
+{
+  "method": "pdf-word-title-and-vertical-credit-header-v1",
+  "documents": [
+    {
+      "id": "handbook-2022-0cb7237324b5d40678d5f1f66c2311c9",
+      "label": "メディア情報学部",
+      "year": 2022,
+      "rawRows": 437,
+      "positionChecked": 284
+    },
+    {
+      "id": "handbook-2022-117c0e5981a41cce06761c8bc088cb9f",
+      "label": "電気電子通信工学科",
+      "year": 2022,
+      "rawRows": 87,
+      "positionChecked": 73
+    },
+    {
+      "id": "handbook-2022-1c9e3b144e0d92b5f0addd1c9421decd",
+      "label": "機械システム工学科",
+      "year": 2022,
+      "rawRows": 62,
+      "positionChecked": 62
+    },
+    {
+      "id": "handbook-2022-22cdc7c0684c81c91da58c6c0f451e73",
+      "label": "都市工学科",
+      "year": 2022,
+      "rawRows": 86,
+      "positionChecked": 44
+    },
+    {
+      "id": "handbook-2022-26f17f402ad9b49f74709de3e6cd1cc9",
+      "label": "共通分野",
+      "year": 2022,
+      "rawRows": 225,
+      "positionChecked": 162
+    },
+    {
+      "id": "handbook-2022-48cca1d90aa3c8b386fe90c81314e2fa",
+      "label": "教職課程",
+      "year": 2022,
+      "rawRows": 42,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2022-56f3d2c431eb37d1c1bbb24c3d8aa8ec",
+      "label": "応用化学科",
+      "year": 2022,
+      "rawRows": 61,
+      "positionChecked": 61
+    },
+    {
+      "id": "handbook-2022-69af55e9ab67b3d91ca5b4cb1546fb40",
+      "label": "理工学部",
+      "year": 2022,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2022-739fd57d1b9266b59a7430125d318398",
+      "label": "自然科学科",
+      "year": 2022,
+      "rawRows": 117,
+      "positionChecked": 107
+    },
+    {
+      "id": "handbook-2022-84f04f6b84d41dada8cfb310eebb9ccb",
+      "label": "建築学科",
+      "year": 2022,
+      "rawRows": 173,
+      "positionChecked": 109
+    },
+    {
+      "id": "handbook-2022-874833bfe414bce09b3333f33cb7444b",
+      "label": "知能情報工学科",
+      "year": 2022,
+      "rawRows": 90,
+      "positionChecked": 79
+    },
+    {
+      "id": "handbook-2022-894f6b9c6434bedd5f22780679ce9898",
+      "label": "環境学部",
+      "year": 2022,
+      "rawRows": 494,
+      "positionChecked": 235
+    },
+    {
+      "id": "handbook-2022-96f0dcbfeeca7662e93f8fdc1377c44f",
+      "label": "教職課程",
+      "year": 2022,
+      "rawRows": 42,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2022-a83cade6e1bf1416f9c46cc455b5babd",
+      "label": "建築都市デザイン学部",
+      "year": 2022,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2022-ba18b28421362d72ddac50c16e252b29",
+      "label": "都市生活学部",
+      "year": 2022,
+      "rawRows": 319,
+      "positionChecked": 253
+    },
+    {
+      "id": "handbook-2022-c36f424288a4776205e9be8a11ff6b0e",
+      "label": "共通分野",
+      "year": 2022,
+      "rawRows": 224,
+      "positionChecked": 167
+    },
+    {
+      "id": "handbook-2022-c69d8eb9e3c5e80a892f84365ac3d10d",
+      "label": "機械工学科",
+      "year": 2022,
+      "rawRows": 101,
+      "positionChecked": 101
+    },
+    {
+      "id": "handbook-2022-d45612eb707f202e4b1eb5d8d01c34da",
+      "label": "原子力安全工学科",
+      "year": 2022,
+      "rawRows": 58,
+      "positionChecked": 55
+    },
+    {
+      "id": "handbook-2022-d72bc94f71d0b7bf06f1d5e045c987a7",
+      "label": "情報科学科",
+      "year": 2022,
+      "rawRows": 109,
+      "positionChecked": 45
+    },
+    {
+      "id": "handbook-2022-e95c628b3db6db8e0d86cc6325501d01",
+      "label": "共通分野",
+      "year": 2022,
+      "rawRows": 206,
+      "positionChecked": 149
+    },
+    {
+      "id": "handbook-2022-eba82b65a659765b1453b20f5f20a923",
+      "label": "医用工学科",
+      "year": 2022,
+      "rawRows": 138,
+      "positionChecked": 55
+    },
+    {
+      "id": "handbook-2022-f503234e484bd4e997ffa4250bfb1f02",
+      "label": "情報工学部",
+      "year": 2022,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2022-fd06a17ce82741eae823ad66d2307f2f",
+      "label": "人間科学部",
+      "year": 2022,
+      "rawRows": 309,
+      "positionChecked": 267
+    },
+    {
+      "id": "handbook-2023-0188268e62a307b1b69c8517bfde4405",
+      "label": "環境学部",
+      "year": 2023,
+      "rawRows": 580,
+      "positionChecked": 326
+    },
+    {
+      "id": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1",
+      "label": "電気電子通信工学科",
+      "year": 2023,
+      "rawRows": 275,
+      "positionChecked": 203
+    },
+    {
+      "id": "handbook-2023-1c9e3b144e0d92b5f0addd1c9421decd-1",
+      "label": "機械システム工学科",
+      "year": 2023,
+      "rawRows": 124,
+      "positionChecked": 120
+    },
+    {
+      "id": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1",
+      "label": "都市工学科",
+      "year": 2023,
+      "rawRows": 171,
+      "positionChecked": 126
+    },
+    {
+      "id": "handbook-2023-26f17f402ad9b49f74709de3e6cd1cc9-1",
+      "label": "共通分野",
+      "year": 2023,
+      "rawRows": 336,
+      "positionChecked": 307
+    },
+    {
+      "id": "handbook-2023-48cca1d90aa3c8b386fe90c81314e2fa-1",
+      "label": "教職課程",
+      "year": 2023,
+      "rawRows": 42,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2023-56f3d2c431eb37d1c1bbb24c3d8aa8ec-1",
+      "label": "応用化学科",
+      "year": 2023,
+      "rawRows": 202,
+      "positionChecked": 198
+    },
+    {
+      "id": "handbook-2023-6286de2f4d3beead1fd38f0845c62dd1",
+      "label": "デザイン・データ科学部",
+      "year": 2023,
+      "rawRows": 133,
+      "positionChecked": 116
+    },
+    {
+      "id": "handbook-2023-69af55e9ab67b3d91ca5b4cb1546fb40-1",
+      "label": "理工学部",
+      "year": 2023,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2023-739fd57d1b9266b59a7430125d318398-1",
+      "label": "自然科学科",
+      "year": 2023,
+      "rawRows": 193,
+      "positionChecked": 183
+    },
+    {
+      "id": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+      "label": "都市生活学部",
+      "year": 2023,
+      "rawRows": 322,
+      "positionChecked": 265
+    },
+    {
+      "id": "handbook-2023-84f04f6b84d41dada8cfb310eebb9ccb-1",
+      "label": "建築学科",
+      "year": 2023,
+      "rawRows": 252,
+      "positionChecked": 188
+    },
+    {
+      "id": "handbook-2023-874833bfe414bce09b3333f33cb7444b-1",
+      "label": "知能情報工学科",
+      "year": 2023,
+      "rawRows": 158,
+      "positionChecked": 147
+    },
+    {
+      "id": "handbook-2023-96f0dcbfeeca7662e93f8fdc1377c44f-1",
+      "label": "教職課程",
+      "year": 2023,
+      "rawRows": 42,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2023-a83cade6e1bf1416f9c46cc455b5babd-1",
+      "label": "建築都市デザイン学部",
+      "year": 2023,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2023-c36f424288a4776205e9be8a11ff6b0e-1",
+      "label": "共通分野",
+      "year": 2023,
+      "rawRows": 334,
+      "positionChecked": 305
+    },
+    {
+      "id": "handbook-2023-c69d8eb9e3c5e80a892f84365ac3d10d-1",
+      "label": "機械工学科",
+      "year": 2023,
+      "rawRows": 106,
+      "positionChecked": 104
+    },
+    {
+      "id": "handbook-2023-cec75b4a7fe4fabe90ac9e9a1a00086d",
+      "label": "メディア情報学部",
+      "year": 2023,
+      "rawRows": 475,
+      "positionChecked": 318
+    },
+    {
+      "id": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1",
+      "label": "原子力安全工学科",
+      "year": 2023,
+      "rawRows": 182,
+      "positionChecked": 176
+    },
+    {
+      "id": "handbook-2023-d72bc94f71d0b7bf06f1d5e045c987a7-1",
+      "label": "情報科学科",
+      "year": 2023,
+      "rawRows": 212,
+      "positionChecked": 145
+    },
+    {
+      "id": "handbook-2023-de4de496f190cba1e8b59934cdfbc329",
+      "label": "医用工学科",
+      "year": 2023,
+      "rawRows": 222,
+      "positionChecked": 120
+    },
+    {
+      "id": "handbook-2023-e95c628b3db6db8e0d86cc6325501d01-1",
+      "label": "共通分野",
+      "year": 2023,
+      "rawRows": 316,
+      "positionChecked": 287
+    },
+    {
+      "id": "handbook-2023-f503234e484bd4e997ffa4250bfb1f02-1",
+      "label": "情報工学部",
+      "year": 2023,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2023-fe0e2ef7f3b702e406c05696bfc51330",
+      "label": "人間科学部",
+      "year": 2023,
+      "rawRows": 291,
+      "positionChecked": 239
+    },
+    {
+      "id": "handbook-2024-0167e528eac1ea48980e575efc0ab2e0",
+      "label": "デザイン・データ科学部",
+      "year": 2024,
+      "rawRows": 133,
+      "positionChecked": 116
+    },
+    {
+      "id": "handbook-2024-030abea637d0072c669514bed0a04a16",
+      "label": "知能情報工学科",
+      "year": 2024,
+      "rawRows": 107,
+      "positionChecked": 95
+    },
+    {
+      "id": "handbook-2024-152279e049a2bd96b29380dfd55bfbb8",
+      "label": "建築学科",
+      "year": 2024,
+      "rawRows": 271,
+      "positionChecked": 211
+    },
+    {
+      "id": "handbook-2024-2140adee38a2c8d9dabf1b5995d06746",
+      "label": "環境学部",
+      "year": 2024,
+      "rawRows": 477,
+      "positionChecked": 324
+    },
+    {
+      "id": "handbook-2024-252f2cb8ec49e97cb9d6b03b5d53a4f6",
+      "label": "教職課程",
+      "year": 2024,
+      "rawRows": 41,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2024-3b85f9d774533dc5e292a20bc1cc918f",
+      "label": "共通分野",
+      "year": 2024,
+      "rawRows": 289,
+      "positionChecked": 272
+    },
+    {
+      "id": "handbook-2024-430d2dde691506d2e445f6665bb37af6",
+      "label": "応用化学科",
+      "year": 2024,
+      "rawRows": 199,
+      "positionChecked": 199
+    },
+    {
+      "id": "handbook-2024-45d1a27c359701ccd010b7a810500da3",
+      "label": "理工学部",
+      "year": 2024,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2024-4aaa1a502b6f221e06c95d14da46cfa5",
+      "label": "情報工学部",
+      "year": 2024,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2024-52be53d2cebbe60d8be64af70ec6a1db",
+      "label": "情報科学科",
+      "year": 2024,
+      "rawRows": 212,
+      "positionChecked": 145
+    },
+    {
+      "id": "handbook-2024-5716936670a5f63c184a34121eb1123b",
+      "label": "共通分野",
+      "year": 2024,
+      "rawRows": 339,
+      "positionChecked": 326
+    },
+    {
+      "id": "handbook-2024-6163177de179eef2a04222bdc9bbf109",
+      "label": "原子力安全工学科",
+      "year": 2024,
+      "rawRows": 185,
+      "positionChecked": 178
+    },
+    {
+      "id": "handbook-2024-719ad5e3938075409edd28830277b67c",
+      "label": "都市生活学部",
+      "year": 2024,
+      "rawRows": 307,
+      "positionChecked": 268
+    },
+    {
+      "id": "handbook-2024-9402ce29081808d752884bbd68b46cd6",
+      "label": "建築都市デザイン学部",
+      "year": 2024,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2024-98b111d69794a93a768ccd981f609ed9",
+      "label": "電気電子通信工学科",
+      "year": 2024,
+      "rawRows": 189,
+      "positionChecked": 180
+    },
+    {
+      "id": "handbook-2024-9f8c14225d594fab88807f5849921fae",
+      "label": "教職課程",
+      "year": 2024,
+      "rawRows": 41,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2024-a5e0f341217c98383ea20afeae197703",
+      "label": "メディア情報学部",
+      "year": 2024,
+      "rawRows": 482,
+      "positionChecked": 321
+    },
+    {
+      "id": "handbook-2024-ae2847fd216c89235cf07a703b060c0b",
+      "label": "機械システム工学科",
+      "year": 2024,
+      "rawRows": 178,
+      "positionChecked": 171
+    },
+    {
+      "id": "handbook-2024-b334f4add85602c728c54bc03cbca0bf",
+      "label": "医用工学科",
+      "year": 2024,
+      "rawRows": 342,
+      "positionChecked": 183
+    },
+    {
+      "id": "handbook-2024-ced955c0ba01b17c15df2ba46ec3af37",
+      "label": "共通分野",
+      "year": 2024,
+      "rawRows": 321,
+      "positionChecked": 308
+    },
+    {
+      "id": "handbook-2024-d4c6b179c8bc9f694cdb4d4f6bb4f982",
+      "label": "都市工学科",
+      "year": 2024,
+      "rawRows": 122,
+      "positionChecked": 80
+    },
+    {
+      "id": "handbook-2024-d53fd2196d1bd8a77eaeec5d99b712ed",
+      "label": "機械工学科",
+      "year": 2024,
+      "rawRows": 158,
+      "positionChecked": 150
+    },
+    {
+      "id": "handbook-2024-daac75bfbe8d3e385727e7b5d230e342",
+      "label": "人間科学部",
+      "year": 2024,
+      "rawRows": 336,
+      "positionChecked": 279
+    },
+    {
+      "id": "handbook-2024-e734fa3fdc1d3912b24c1df11107593c",
+      "label": "自然科学科",
+      "year": 2024,
+      "rawRows": 144,
+      "positionChecked": 134
+    },
+    {
+      "id": "handbook-2025-06f500176260c223d8ea7701afff7f6e",
+      "label": "建築都市デザイン学部",
+      "year": 2025,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+      "label": "原子力安全工学科",
+      "year": 2025,
+      "rawRows": 226,
+      "positionChecked": 226
+    },
+    {
+      "id": "handbook-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+      "label": "理工学部",
+      "year": 2025,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2025-3c70811a77d3cabd40ec72338c464f47",
+      "label": "人間科学部",
+      "year": 2025,
+      "rawRows": 354,
+      "positionChecked": 285
+    },
+    {
+      "id": "handbook-2025-43656c25fc0ac01ea8622a609ff0427e",
+      "label": "環境学部",
+      "year": 2025,
+      "rawRows": 480,
+      "positionChecked": 213
+    },
+    {
+      "id": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f",
+      "label": "都市工学科",
+      "year": 2025,
+      "rawRows": 149,
+      "positionChecked": 149
+    },
+    {
+      "id": "handbook-2025-4edfeb1afbae208a6d7d5f034ffd0217",
+      "label": "情報科学科",
+      "year": 2025,
+      "rawRows": 214,
+      "positionChecked": 147
+    },
+    {
+      "id": "handbook-2025-546d609eaf14654cf1c0713fe9ff5f9d",
+      "label": "デザイン・データ科学部",
+      "year": 2025,
+      "rawRows": 144,
+      "positionChecked": 128
+    },
+    {
+      "id": "handbook-2025-5e86bd654b5845fe796a11261b3f963b",
+      "label": "応用化学科",
+      "year": 2025,
+      "rawRows": 179,
+      "positionChecked": 173
+    },
+    {
+      "id": "handbook-2025-6000a883073fbcd1a3d9dd3027eded5d",
+      "label": "自然科学科",
+      "year": 2025,
+      "rawRows": 188,
+      "positionChecked": 138
+    },
+    {
+      "id": "handbook-2025-7bcc89c6d0cfb836a1f7a13ac2ed9ce4",
+      "label": "共通分野",
+      "year": 2025,
+      "rawRows": 351,
+      "positionChecked": 322
+    },
+    {
+      "id": "handbook-2025-808bf0e0c7e6180197ca85b6c1bcfa70",
+      "label": "医用工学科",
+      "year": 2025,
+      "rawRows": 240,
+      "positionChecked": 135
+    },
+    {
+      "id": "handbook-2025-837d837ca68d3e9c43bd47dce6abeafe",
+      "label": "機械工学科",
+      "year": 2025,
+      "rawRows": 166,
+      "positionChecked": 158
+    },
+    {
+      "id": "handbook-2025-898a1761b3492b8f99f1171334229fd8-1",
+      "label": "知能情報工学科",
+      "year": 2025,
+      "rawRows": 119,
+      "positionChecked": 119
+    },
+    {
+      "id": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+      "label": "都市生活学部",
+      "year": 2025,
+      "rawRows": 303,
+      "positionChecked": 265
+    },
+    {
+      "id": "handbook-2025-977903d24179b19d863d6bab55edb4c7-1",
+      "label": "情報工学部",
+      "year": 2025,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2025-ad2458bd522b3199f9490a82c71d4f67",
+      "label": "機械システム工学科",
+      "year": 2025,
+      "rawRows": 195,
+      "positionChecked": 172
+    },
+    {
+      "id": "handbook-2025-c492b5628a4ce1c5889ec85c6a57e105",
+      "label": "建築学科",
+      "year": 2025,
+      "rawRows": 221,
+      "positionChecked": 163
+    },
+    {
+      "id": "handbook-2025-c8fd0619f1e340509f352167fb7d512b",
+      "label": "共通分野",
+      "year": 2025,
+      "rawRows": 381,
+      "positionChecked": 338
+    },
+    {
+      "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06-1",
+      "label": "教職課程",
+      "year": 2025,
+      "rawRows": 40,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06",
+      "label": "教職課程",
+      "year": 2025,
+      "rawRows": 40,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2025-ec67b6baaf174180bed144cdf252a8ce",
+      "label": "メディア情報学部",
+      "year": 2025,
+      "rawRows": 473,
+      "positionChecked": 208
+    },
+    {
+      "id": "handbook-2025-f1b4c6ee72e6f2cabaf1eaea765149c3",
+      "label": "電気電子通信工学科",
+      "year": 2025,
+      "rawRows": 148,
+      "positionChecked": 134
+    },
+    {
+      "id": "handbook-2025-fd690a3f9d67e91eda83c185aad131bd",
+      "label": "共通分野",
+      "year": 2025,
+      "rawRows": 368,
+      "positionChecked": 339
+    },
+    {
+      "id": "handbook-2026-044f76895bf88df8ce2a7a26145986c4",
+      "label": "機械システム工学科",
+      "year": 2026,
+      "rawRows": 128,
+      "positionChecked": 120
+    },
+    {
+      "id": "handbook-2026-055bc6c29e9f19180c4e506fc36756a0",
+      "label": "機械工学科",
+      "year": 2026,
+      "rawRows": 107,
+      "positionChecked": 99
+    },
+    {
+      "id": "handbook-2026-0b9b37db00b8706444e4f7a750410138",
+      "label": "共通分野",
+      "year": 2026,
+      "rawRows": 343,
+      "positionChecked": 287
+    },
+    {
+      "id": "handbook-2026-1645ea440a266a3749d688602d3256df",
+      "label": "教職課程",
+      "year": 2026,
+      "rawRows": 40,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2026-179522a177db8d7839ccc9a9e43dde33",
+      "label": "医用工学科",
+      "year": 2026,
+      "rawRows": 123,
+      "positionChecked": 114
+    },
+    {
+      "id": "handbook-2026-311a4a97843fb88816a58e1fc4e50d98",
+      "label": "建築学科",
+      "year": 2026,
+      "rawRows": 183,
+      "positionChecked": 115
+    },
+    {
+      "id": "handbook-2026-3572269f6340349616b7620dfc1989d5",
+      "label": "応用化学科",
+      "year": 2026,
+      "rawRows": 134,
+      "positionChecked": 125
+    },
+    {
+      "id": "handbook-2026-36f4e4062d15fd6e4875f8e78bec3bd6",
+      "label": "メディア情報学部",
+      "year": 2026,
+      "rawRows": 456,
+      "positionChecked": 336
+    },
+    {
+      "id": "handbook-2026-3db8dbc9a70710d1a1cf633fefc085e8",
+      "label": "デザイン・データ科学部",
+      "year": 2026,
+      "rawRows": 134,
+      "positionChecked": 116
+    },
+    {
+      "id": "handbook-2026-4123eec2627f153000328b01720cf021",
+      "label": "情報科学科",
+      "year": 2026,
+      "rawRows": 187,
+      "positionChecked": 107
+    },
+    {
+      "id": "handbook-2026-523786516152752ab91293dd787cc0cc",
+      "label": "情報工学部",
+      "year": 2026,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2026-78e5697e9686a63f788d825d0d89daab",
+      "label": "電気電子通信工学科",
+      "year": 2026,
+      "rawRows": 170,
+      "positionChecked": 149
+    },
+    {
+      "id": "handbook-2026-7f952e53f2cdbe399fe9858c53a40a4e",
+      "label": "自然科学科",
+      "year": 2026,
+      "rawRows": 133,
+      "positionChecked": 117
+    },
+    {
+      "id": "handbook-2026-887e7ccb382048811b8840d6003b9a24",
+      "label": "建築都市デザイン学部",
+      "year": 2026,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2026-9a97b84ce1f096e0db084e81dac0bf1f",
+      "label": "都市生活学部",
+      "year": 2026,
+      "rawRows": 313,
+      "positionChecked": 268
+    },
+    {
+      "id": "handbook-2026-9ac54018ba04a3dadd1774fcaec7facc",
+      "label": "人間科学部",
+      "year": 2026,
+      "rawRows": 576,
+      "positionChecked": 545
+    },
+    {
+      "id": "handbook-2026-a0dc671e8eb03cda69fc0648edf104cd",
+      "label": "理工学部",
+      "year": 2026,
+      "rawRows": 0,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2026-a3ddef1c2ac8f7b0b933b5318f6aa937",
+      "label": "共通分野",
+      "year": 2026,
+      "rawRows": 360,
+      "positionChecked": 299
+    },
+    {
+      "id": "handbook-2026-afd7c5631753ad09f074370a0eaa9524",
+      "label": "共通分野",
+      "year": 2026,
+      "rawRows": 372,
+      "positionChecked": 302
+    },
+    {
+      "id": "handbook-2026-b2424772163806e832630365b78767c2",
+      "label": "知能情報工学科",
+      "year": 2026,
+      "rawRows": 146,
+      "positionChecked": 138
+    },
+    {
+      "id": "handbook-2026-cb381fb96ef7432b0aed7577694e14de",
+      "label": "教職課程",
+      "year": 2026,
+      "rawRows": 40,
+      "positionChecked": 0
+    },
+    {
+      "id": "handbook-2026-d53856023b230327727f2739fe1355a0",
+      "label": "原子力安全工学科",
+      "year": 2026,
+      "rawRows": 118,
+      "positionChecked": 117
+    },
+    {
+      "id": "handbook-2026-e69aa2716a5d0db78c4241f183a36f63",
+      "label": "環境学部",
+      "year": 2026,
+      "rawRows": 397,
+      "positionChecked": 347
+    },
+    {
+      "id": "handbook-2026-fcfa81125b1516a4c6c647f0753fc555",
+      "label": "都市工学科",
+      "year": 2026,
+      "rawRows": 95,
+      "positionChecked": 91
+    },
+    {
+      "id": "hirameki-2022-for_student",
+      "label": "2021・2022年度入学 機械・機械システム・電気電子通信",
+      "year": 2022,
+      "rawRows": 186,
+      "positionChecked": 0
+    },
+    {
+      "id": "hirameki-2023-762a7db6ca8f63cb9f8626a2b6d077f1",
+      "label": "2023年度入学 理工学部6学科（自然科学科以外）",
+      "year": 2023,
+      "rawRows": 384,
+      "positionChecked": 0
+    },
+    {
+      "id": "hirameki-2024-9cdbc5cecaf243dec3c4188f532ef68b",
+      "label": "2024年度入学 理工学部",
+      "year": 2024,
+      "rawRows": 356,
+      "positionChecked": 0
+    },
+    {
+      "id": "hirameki-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+      "label": "2025年度入学 理工学部",
+      "year": 2025,
+      "rawRows": 420,
+      "positionChecked": 0
+    },
+    {
+      "id": "hirameki-2025-58429a500560dda0fb299438a739c28f",
+      "label": "2025年度入学 他6学部",
+      "year": 2025,
+      "rawRows": 72,
+      "positionChecked": 0
+    },
+    {
+      "id": "hirameki-2026-1f1a3fbccfa9a0abdfecd08f554a176e",
+      "label": "2026年度入学",
+      "year": 2026,
+      "rawRows": 8,
+      "positionChecked": 0
+    }
+  ],
+  "reasons": {
+    "title_not_unique_in_pdf_words": 1425,
+    "outside_scoped_curriculum_table": 4766,
+    "credit_column_not_uniquely_confirmed": 265
+  },
+  "rawRows": 24181,
+  "positionChecked": 17725,
+  "quarantined": 6456,
+  "recoveredNumberedRows": 5291
+}

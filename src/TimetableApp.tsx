@@ -1,5 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
-import GradeManagement from "./components/GradeManagement";
+import { useEffect, useMemo, useRef, useState } from "react";
+import HandbookBrowser from "./components/handbooks/HandbookBrowser";
+import StudentGrades from "./components/StudentGrades";
 import AppShell from "./components/layout/AppShell";
 import AppHeader from "./components/layout/AppHeader";
 import DataManagementMenu from "./components/layout/DataManagementMenu";
@@ -10,16 +11,14 @@ import { type AppPage } from "./components/navigation/appNavigation";
 import QuarterTabs from "./components/timetable/QuarterTabs";
 import AppSettingsModal from "./components/settings/AppSettingsModal";
 import CourseSearchPanel from "./components/courses/CourseSearchPanel";
-import CourseTagBadge from "./components/courses/CourseTagBadge";
-import CourseTypeBadge from "./components/courses/CourseTypeBadge";
+import CourseEditor from "./components/CourseEditor";
 import GraduationRequirementPanel from "./components/GraduationRequirementPanel";
-import CsvDiagnosticsPanel from "./components/status/CsvDiagnosticsPanel";
 import { DataLoadNotice } from "./components/status/DataLoadNotice";
-import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData, CourseOffering, CourseType, Grade } from "./core/types";
-import { autoLoadDepartmentCSVs, AVAILABLE_DEPARTMENTS, CSVAutoLoadError } from "./utils/autoLoadCSV";
-import type { AutoLoadDepartmentCSVResult } from "./utils/autoLoadCSV";
+import type { AcademicAllYearsData, AcademicCourse, AcademicCourseCell, AcademicSettings, AcademicTimetable, AcademicYearData } from "./core/types";
+import { AVAILABLE_DEPARTMENTS } from "./core/departments";
+import { loadDepartmentCurriculum } from "./api/curriculum";
+import type { CurriculumDataset } from "./core/curriculum";
 import { buildDashboardSnapshot } from "./core/graduation";
-import { buildSyncedCourseCell, selectBestOfferingDetailed } from "./utils/courseOffering";
 import {
   buildCalendarExportFilename,
   buildCalendarExportIcs,
@@ -63,68 +62,6 @@ type Settings = AcademicSettings & {
   showTime: boolean;
 };
 
-function normalizeSearchText(value: string) {
-  return value.normalize('NFKC').toLowerCase().replace(/\s+/g, '');
-}
-
-function getOfferingSearchText(offering: CourseOffering) {
-  return [
-    offering.day,
-    offering.period,
-    offering.day && offering.period ? `${offering.day}${offering.period}` : '',
-    offering.term,
-    offering.gradeYear,
-    offering.className,
-    offering.teacher,
-    offering.lectureCode,
-    offering.room,
-    offering.target,
-    offering.remarks,
-  ].filter(Boolean).join(' ');
-}
-
-function formatOfferingSummary(offering?: CourseOffering) {
-  if (!offering) {
-    return '';
-  }
-
-  return [
-    offering.term ? `${offering.term}` : '',
-    offering.day && offering.period ? `${offering.day}${offering.period}限` : '',
-    offering.gradeYear ? `${offering.gradeYear}年次` : '',
-    offering.className ? offering.className : '',
-  ].filter(Boolean).join(' / ');
-}
-
-function buildCsvLoadDetails(result: AutoLoadDepartmentCSVResult | null) {
-  if (!result) {
-    return [] as string[];
-  }
-
-  const requirementResource = result.resources.find((resource) => resource.kind === 'requirements');
-  const timetableResource = result.resources.find((resource) => resource.kind === 'timetable');
-  const scheduleResource = result.resources.find((resource) => resource.kind === 'schedule');
-  const warnings = result.messages.filter((message) => message.level === 'warning').length;
-  const errors = result.messages.filter((message) => message.level === 'error').length;
-
-  const details = [
-    requirementResource ? `要件CSV: ${requirementResource.path ?? requirementResource.attemptedPaths[0] ?? '-'} / ${requirementResource.rowCount ?? 0}行` : null,
-    timetableResource ? `科目CSV: ${timetableResource.path ?? timetableResource.attemptedPaths[0] ?? '-'} / ${timetableResource.rowCount ?? 0}行` : null,
-    scheduleResource
-      ? scheduleResource.status === 'missing'
-        ? '時間割CSV: 未検出（教室・担当教員・講義コードの同期は制限されます）'
-        : `時間割CSV: ${scheduleResource.path ?? scheduleResource.attemptedPaths[0] ?? '-'} / ${scheduleResource.rowCount ?? 0}行`
-      : null,
-    result.resources.some((resource) => resource.status === 'fallback-loaded') ? 'fallback CSVを使用しました' : null,
-    result.stats ? `診断: 科目 ${result.stats.curriculumCourses}件 / 開講 ${result.stats.offerings}件 / 未結合 ${result.stats.unmatchedOfferings}件 / 区分未確認 ${result.stats.unknownCourseTypes}件` : null,
-    result.stats ? `マージ: 講義コード ${result.stats.matchedByLectureCode}件 / 科目ID ${result.stats.matchedByCourseId}件 / タイトル ${result.stats.matchedByTitle}件 / 曖昧 ${result.stats.ambiguousMatches}件` : null,
-    `警告 ${warnings}件 / エラー ${errors}件`,
-  ].filter((value): value is string => Boolean(value));
-
-  return details;
-}
-
-// ヘルパー関数群
 function createDefaultQuarterRanges(): QuarterRanges {
   const ranges = {} as QuarterRanges;
   for (const q of QUARTERS) {
@@ -155,6 +92,7 @@ export default function TimetableApp() {
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>("1年次");
   const [currentPage, setCurrentPage] = useState<AppPage>("home");
+  const [profileConfirmed, setProfileConfirmed] = useState(() => localStorage.getItem('campus-profile-confirmed') === 'yes');
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [entranceYear, setEntranceYear] = useState<number>(() => {
     const stored = localStorage.getItem("entrance_year");
@@ -166,10 +104,9 @@ export default function TimetableApp() {
   const selectedDepartment = AVAILABLE_DEPARTMENTS.find((department) => department.id === selectedDepartmentId);
 
   const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
-  const [csvLoading, setCsvLoading] = useState(false);
-  const [csvLoadResult, setCsvLoadResult] = useState<AutoLoadDepartmentCSVResult | null>(null);
-  const [csvLoadError, setCsvLoadError] = useState<string | null>(null);
-  const csvLoadDetails = useMemo(() => buildCsvLoadDetails(csvLoadResult), [csvLoadResult]);
+  const [curriculumLoading, setCurriculumLoading] = useState(false);
+  const [curriculumData, setCurriculumData] = useState<CurriculumDataset | null>(null);
+  const [curriculumError, setCurriculumError] = useState<string | null>(null);
 
   useEffect(() => {
     if (import.meta.env.DEV) {
@@ -187,6 +124,8 @@ export default function TimetableApp() {
     return {
       ...defaults,
       ...stored,
+      curriculum: undefined,
+      requiredCredits: 0,
       days: stored.days ?? defaults.days,
       periods: stored.periods ?? defaults.periods,
       title: stored.title ?? defaults.title,
@@ -203,18 +142,24 @@ export default function TimetableApp() {
     }
   }, [settings.curriculum]);
 
-  async function loadDepartment(departmentId: string, year = entranceYear): Promise<AutoLoadDepartmentCSVResult> {
-    setCsvLoading(true);
-    setCsvLoadError(null);
+  const departmentLoadId = useRef(0);
+  async function loadDepartment(departmentId: string, year = entranceYear): Promise<CurriculumDataset> {
+    const requestId = ++departmentLoadId.current;
+    setCurriculumLoading(true);
+    setImportedCourses([]);
+    setCurriculumData(null);
+    setSettings((previous) => ({ ...previous, curriculum: undefined }));
+    setCurriculumError(null);
 
     try {
-      const result = await autoLoadDepartmentCSVs(departmentId, year);
+      const result = await loadDepartmentCurriculum(departmentId, year);
+      if (requestId !== departmentLoadId.current) return result;
 
       if (import.meta.env.DEV && result.courses.length === 0) {
-        console.warn(`No courses loaded for department=${departmentId}, entranceYear=${year}. Check CSV headers and file path.`);
+        console.warn(`No courses loaded for department=${departmentId}, entranceYear=${year}. Check cohort availability.`);
       }
 
-      setCsvLoadResult(result);
+      setCurriculumData(result);
 
       setSettings((prev) => ({
         ...prev,
@@ -228,61 +173,9 @@ export default function TimetableApp() {
       localStorage.setItem("selected_department_id", departmentId);
       return result;
     } catch (error) {
-      if (error instanceof CSVAutoLoadError) {
-        const dept = AVAILABLE_DEPARTMENTS.find((department) => department.id === departmentId);
-        const result: AutoLoadDepartmentCSVResult = error.result ?? {
-          status: 'failed',
-          departmentId,
-          departmentName: dept ? `${dept.faculty} ${dept.name}` : departmentId,
-          entranceYear: year,
-          curriculum: {
-            name: dept ? `${dept.faculty} ${dept.name}` : departmentId,
-            requiredCredits: 0,
-            breakdown: { required: 0, electiveRequired: 0, elective: 0 },
-          },
-          courses: [], applicableCourses: [],
-          stats: {
-            requirementRows: 0,
-            timetableRows: 0,
-            scheduleRows: 0,
-            curriculumCourses: 0,
-            scheduleCourses: 0,
-            mergedCourses: 0,
-            coursesWithOfferings: 0,
-            offerings: 0,
-            matchedByLectureCode: 0,
-            matchedByCourseId: 0,
-            matchedByTitle: 0,
-            ambiguousMatches: 0,
-            unmatchedOfferings: 0,
-            unmatchedCourseRows: 0,
-            unknownCourseTypes: 0,
-          },
-          resources: error.resources,
-          messages: error.messages,
-        };
-
-        if (import.meta.env.DEV) {
-          console.error('CSV auto-load failed:', error);
-        }
-
-        setCsvLoadResult(result);
-        setCsvLoadError('科目データの読み込みに失敗しました。');
-        setSettings((prev) => ({
-          ...prev,
-          curriculum: {
-            ...result.curriculum,
-            name: `${result.departmentName} ${year}年度入学`,
-          },
-        }));
-        setImportedCourses(result.courses);
-        localStorage.setItem("selected_department_id", departmentId);
-        return result;
-      }
-
       console.error('❌ Auto-load failed:', error);
       const dept = AVAILABLE_DEPARTMENTS.find((department) => department.id === departmentId);
-      const result: AutoLoadDepartmentCSVResult = {
+      const result: CurriculumDataset = {
         status: 'failed',
         departmentId,
         departmentName: dept ? `${dept.faculty} ${dept.name}` : departmentId,
@@ -293,29 +186,12 @@ export default function TimetableApp() {
           breakdown: { required: 0, electiveRequired: 0, elective: 0 },
         },
         courses: [], applicableCourses: [],
-        stats: {
-          requirementRows: 0,
-          timetableRows: 0,
-          scheduleRows: 0,
-          curriculumCourses: 0,
-          scheduleCourses: 0,
-          mergedCourses: 0,
-          coursesWithOfferings: 0,
-          offerings: 0,
-          matchedByLectureCode: 0,
-          matchedByCourseId: 0,
-          matchedByTitle: 0,
-          ambiguousMatches: 0,
-          unmatchedOfferings: 0,
-          unmatchedCourseRows: 0,
-          unknownCourseTypes: 0,
-        },
-        resources: [],
-        messages: [{ level: 'error', text: error instanceof Error ? error.message : 'CSVの読み込みに失敗しました。' }],
+
       };
 
-      setCsvLoadResult(result);
-      setCsvLoadError('科目データの読み込みに失敗しました。');
+      if (requestId !== departmentLoadId.current) return result;
+      setCurriculumData(result);
+      setCurriculumError('科目データの読み込みに失敗しました。');
       setSettings((prev) => ({
         ...prev,
         curriculum: {
@@ -327,15 +203,15 @@ export default function TimetableApp() {
       localStorage.setItem("selected_department_id", departmentId);
       return result;
     } finally {
-      setCsvLoading(false);
+      if (requestId === departmentLoadId.current) setCurriculumLoading(false);
     }
   }
 
-  // 起動時にCSVを自動読み込み
+  // 起動時にSQLite APIから履修情報を読み込む
   useEffect(() => {
-    const loadCSVs = async () => {
+    const loadInitialCurriculum = async () => {
       if (importedCourses.length > 0) {
-        setCsvLoading(false);
+        setCurriculumLoading(false);
         if (import.meta.env.DEV) {
           console.log('⏭️ Courses already loaded, skipping auto-load');
         }
@@ -348,14 +224,14 @@ export default function TimetableApp() {
       try {
         const result = await loadDepartment(selectedDepartmentId, entranceYear);
         if (import.meta.env.DEV) {
-          console.log('CSV load result', result);
+          console.log('Curriculum load result', result);
         }
       } catch (error) {
         console.error('❌ Auto-load failed:', error);
       }
     };
 
-    void loadCSVs();
+    void loadInitialCurriculum();
     // 初回マウント時のみ。学科・入学年度変更時は各handlerで再読込する。
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -403,10 +279,24 @@ export default function TimetableApp() {
     periodId?: number;
     value?: CourseCell;
   }>({ open: false });
+  const [pendingCourse, setPendingCourse] = useState<AcademicCourse | null>(null);
+  const [actionMessage, setActionMessage] = useState('');
+  useEffect(() => { setPendingCourse(null); setActionMessage(''); setEditing({ open: false }); }, [selectedDepartmentId, entranceYear, currentYear, activeQuarter]);
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); setPendingCourse(null); setActionMessage(''); }, [currentPage]);
+
+  const startAddingCourse = (course: AcademicCourse) => {
+    setPendingCourse(course);
+    setActionMessage('');
+    document.getElementById('student-schedule')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   
   const openEdit = (day: string, periodId: number) => {
     const v = currentYearData.timetable[activeQuarter]?.[day]?.[String(periodId)] ?? null;
-    setEditing({ open: true, day, periodId, value: v });
+    if (pendingCourse && v?.title) { setActionMessage('このコマには授業があります。空きコマを選んでください。'); return; }
+    setEditing({ open: true, day, periodId, value: pendingCourse ? {
+      title: pendingCourse.title, courseId: pendingCourse.id, credits: pendingCourse.credits,
+      courseType: pendingCourse.courseType, grade: '未履修',
+    } : v });
   };
   
   const saveCell = (payload: CourseCell) => {
@@ -420,7 +310,7 @@ export default function TimetableApp() {
           [activeQuarter]: {
             ...prev[currentYear].timetable[activeQuarter],
             [editing.day!]: {
-              ...prev[currentYear].timetable[activeQuarter][editing.day!],
+              ...prev[currentYear].timetable[activeQuarter]?.[editing.day!],
               [String(editing.periodId!)]: payload,
             },
           },
@@ -428,29 +318,12 @@ export default function TimetableApp() {
       },
     }));
     setEditing({ open: false });
+    setPendingCourse(null);
+    setActionMessage(payload ? '時間割を保存しました。' : 'このコマの授業を削除しました。');
   };
   
   const clearCell = () => saveCell(null);
 
-  // CSVインポートのハンドラー
-  const handleImportCurriculum = (curriculum: { requiredCredits: number; breakdown: { required: number; electiveRequired: number; elective: number }; name: string }) => {
-    setSettings(prev => ({
-      ...prev,
-      requiredCredits: curriculum.requiredCredits,
-      curriculum: {
-        name: curriculum.name,
-        requiredCredits: curriculum.requiredCredits,
-        breakdown: curriculum.breakdown
-      }
-    }));
-  };
-
-  const handleImportCourses = (courses: AcademicCourse[]) => {
-    if (import.meta.env.DEV) {
-      console.log('📚 Importing courses:', courses.length, 'courses');
-    }
-    setImportedCourses(courses);
-  };
   const exportJSON = () => {
     const blob = new Blob([JSON.stringify({ version: 3, entranceYear, settings, allYearsData }, null, 2)], {
       type: "application/json",
@@ -473,6 +346,8 @@ export default function TimetableApp() {
           setSettings((prev) => ({
             ...prev,
             ...(obj.settings ?? {}),
+            curriculum: prev.curriculum,
+            requiredCredits: prev.requiredCredits,
           }));
           setAllYearsData(obj.allYearsData);
           alert("読込が完了しました。");
@@ -493,6 +368,8 @@ export default function TimetableApp() {
           setSettings((prev) => ({
             ...prev,
             ...(obj.settings ?? {}),
+            curriculum: prev.curriculum,
+            requiredCredits: prev.requiredCredits,
           }));
           setAllYearsData(migratedData);
           alert("読込が完了しました(v1形式を1年次に変換しました)。");
@@ -642,30 +519,24 @@ export default function TimetableApp() {
       onImportJson={importJSON}
       onExportIcs={exportICS}
       onPrint={printPage}
-      onImportCurriculum={handleImportCurriculum}
-      onImportCourses={handleImportCourses}
     />
   );
 
   const pageContent = (() => {
     switch (currentPage) {
+      case 'handbooks':
+        return <HandbookBrowser key={`${selectedDepartmentId}:${entranceYear}`} department={selectedDepartment} entranceYear={entranceYear} allYearsData={allYearsData} />;
       case "home":
         return (
           <HomeDashboard
             snapshot={dashboardSnapshot}
             curriculumName={settings.curriculum?.name}
-            allYearsData={allYearsData}
-            courses={importedCourses}
             currentYear={currentYear}
-            curriculum={settings.curriculum}
             currentQuarter={activeQuarter}
             timetable={currentYearData.timetable}
-            days={settings.days}
-            periods={settings.periods}
             onOpenTimetable={() => setCurrentPage("timetable")}
-            onOpenRequirements={() => setCurrentPage("requirements")}
+            onOpenRequirements={() => setCurrentPage("handbooks")}
             onOpenGrades={() => setCurrentPage("grades")}
-            onOpenSettingsPage={() => setCurrentPage("settings")}
           />
         );
       case "timetable":
@@ -675,7 +546,7 @@ export default function TimetableApp() {
               <div className="section-title">
                 <div>
                   <h2>{currentYear} - {activeQuarter} の時間割</h2>
-                  <span className="small print:hidden">時間割を編集しながら、履修候補も確認できます。</span>
+                  <span className="small print:hidden">科目を探す → 追加 → 空きコマを選ぶ。登録済みの授業はタップで編集できます。</span>
                 </div>
                 <button type="button" onClick={() => setCopyOpen(true)} className="btn-ghost print:hidden">
                   他Qへコピー
@@ -685,10 +556,12 @@ export default function TimetableApp() {
 
             <div className="timetable-page__layout">
               <aside className="tt-card timetable-page__search">
-                <CourseSearchPanel courses={importedCourses} />
+                <CourseSearchPanel key={`${selectedDepartmentId}:${entranceYear}`} courses={importedCourses} onAdd={startAddingCourse} />
               </aside>
 
-              <section className="tt-card timetable-page__schedule">
+              <section id="student-schedule" className="tt-card timetable-page__schedule">
+                {pendingCourse && <div className="placement-banner" role="status"><div><strong>{pendingCourse.title}</strong><p>追加する空きコマを選んでください。</p></div><button className="btn-ghost" onClick={() => { setPendingCourse(null); setActionMessage(''); }}>キャンセル</button></div>}
+                {actionMessage && <p className="student-note" role="status">{actionMessage}</p>}
                 <QuarterTabs value={activeQuarter} quarters={QUARTERS} onChange={(quarter) => setActiveQuarter(quarter as Quarter)} />
                 <div className="tt-tablewrap timetable-scroll timetable-page__tablewrap">
                   <Table
@@ -700,12 +573,15 @@ export default function TimetableApp() {
                     onCellClick={openEdit}
                   />
                 </div>
-                <p className="small print:hidden">Esc キーでモーダルを閉じられます。</p>
+                <p className="small print:hidden">この端末に自動保存されます。大学の履修登録は大学ポータルで行ってください。</p>
               </section>
             </div>
           </div>
         );
       case "requirements":
+        if (curriculumData?.referenceOnly || curriculumData?.status === 'failed' || curriculumData?.status === 'unavailable') {
+          return <HandbookBrowser key={`${selectedDepartmentId}:${entranceYear}`} department={selectedDepartment} entranceYear={entranceYear} allYearsData={allYearsData} />;
+        }
         return (
           <div className="page-stack requirements-page">
             <section className="tt-card">
@@ -724,24 +600,22 @@ export default function TimetableApp() {
               curriculum={settings.curriculum}
               allYearsData={allYearsData}
               courses={importedCourses}
-              applicableCourses={csvLoadResult?.applicableCourses ?? []}
+              applicableCourses={curriculumData?.applicableCourses ?? []}
               currentYear={currentYear}
             />
           </div>
         );
       case "grades":
         return (
-          <GradeManagement
-                settings={settings}
-                snapshot={dashboardSnapshot}
-                importedCourses={importedCourses}
-                allYearsData={allYearsData}
-                currentYear={currentYear}
-                applicableCourses={csvLoadResult?.applicableCourses ?? []}
-                onBack={() => {
-                  setActiveQuarter("1Q");
-                }}
-              />
+          <StudentGrades data={allYearsData} year={currentYear} snapshot={dashboardSnapshot}
+            onOpenTimetable={() => setCurrentPage('timetable')}
+            onGradeChange={(key, grade) => setAllYearsData(previous => {
+              const next = structuredClone(previous);
+              for (const days of Object.values(next[currentYear].timetable)) for (const slots of Object.values(days)) for (const cell of Object.values(slots)) {
+                if (cell && (cell.courseId || cell.title.normalize('NFKC').replace(/\s+/g, '')) === key) cell.grade = grade;
+              }
+              return next;
+            })} />
         );
       case "settings":
         return (
@@ -761,9 +635,6 @@ export default function TimetableApp() {
                 <div className="stats-card">
                   <div className="stats-label">学科</div>
                   <div className="stats-value">{selectedDepartment?.faculty ?? "-"} {selectedDepartment?.name ?? ""}</div>
-                  <div className="small" style={{ color: 'var(--muted)' }}>
-                    ID: {selectedDepartmentId}
-                  </div>
                 </div>
                 <div className="stats-card">
                   <div className="stats-label">入学年度</div>
@@ -810,18 +681,21 @@ export default function TimetableApp() {
         onDepartmentChange={handleDepartmentChange}
         onEntranceYearChange={handleEntranceYearChange}
         onYearChange={(year: string) => setCurrentYear(year as Year)}
-        onOpenSettings={handleOpenSettings}
+        onOpenSettings={() => setCurrentPage('settings')}
       />
 
-      <main className="app-container app-main">
+      <main className="app-container app-main" data-curriculum-key={curriculumData ? `${curriculumData.departmentId}:${curriculumData.entranceYear}` : undefined} data-curriculum-status={curriculumData?.status}>
+        {!profileConfirmed && <section className="onboarding-card"><div><p className="eyebrow">はじめに / 1分で準備</p><h2>あなたの学科・入学年度を確認</h2><p>画面上部で学科と入学年度を選んでください。「表示学年」は入力する時間割・成績の学年です。</p><strong>{selectedDepartment?.name} · {entranceYear}年度入学</strong></div><button className="btn-primary" onClick={() => { localStorage.setItem('campus-profile-confirmed', 'yes'); setProfileConfirmed(true); }}>この内容ではじめる</button></section>}
         <DataLoadNotice
-          status={csvLoading ? "loading" : csvLoadError ? "failed" : csvLoadResult?.status === "partial" ? "partial" : csvLoadResult?.status === "success" ? "ready" : "idle"}
-          message={csvLoadError}
-          details={csvLoadDetails}
-          onRetry={csvLoadError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
+          status={curriculumLoading ? "loading" : curriculumError ? "failed" : curriculumData?.status === "unavailable" ? "unavailable" : "ready"}
+          message={curriculumError}
+          onRetry={curriculumError ? () => void loadDepartment(selectedDepartmentId, entranceYear) : undefined}
         />
-        <CsvDiagnosticsPanel result={csvLoadResult} />
         <DesktopNavigation currentPage={currentPage} onPageChange={setCurrentPage} />
+        {currentPage === 'requirements' && <div className="handbook-notice">
+          進級・コース別の条件も学修要覧で確認してください。
+          {' '}<button type="button" onClick={() => setCurrentPage('handbooks')}>学修要覧を確認</button>
+        </div>}
         {pageContent}
       </main>
 
@@ -844,16 +718,15 @@ export default function TimetableApp() {
       />
 
       {currentPage === "timetable" && editing.open && (
-        <EditModal
+        <CourseEditor
           initial={editing.value ?? null}
+          canDelete={!pendingCourse && !!editing.value?.title}
           day={editing.day!}
           periodId={editing.periodId!}
-          currentYear={currentYear}
           onClose={() => setEditing({ open: false })}
           onSave={saveCell}
           onClear={clearCell}
-          importedCourses={importedCourses}
-          hasCurriculum={!!settings.curriculum}
+          courses={importedCourses}
         />
       )}
 
@@ -914,6 +787,7 @@ function Table({
                   <button
                     type="button"
                     className={`tt-cell${cell ? " cell-filled" : " cell-empty"}`}
+                    aria-label={`${d}曜日${p.id}限${cell?.title ? ` ${cell.title}を編集` : 'に授業を追加'}`}
                     onClick={() => onCellClick(d, p.id)}
                   >
                     {cell ? (
@@ -941,7 +815,7 @@ function Table({
                         {cell.memo && <div className="memo">備考：{cell.memo}</div>}
                       </div>
                     ) : (
-                      <span>＋ クリックして入力</span>
+                      <span>＋ 授業を追加</span>
                     )}
                   </button>
                 </td>
@@ -951,358 +825,6 @@ function Table({
         ))}
       </tbody>
     </table>
-  );
-}
-
-function EditModal({
-  initial,
-  day,
-  periodId,
-  currentYear,
-  onSave,
-  onClear,
-  onClose,
-  importedCourses,
-  hasCurriculum,
-}: {
-  initial: CourseCell;
-  day: string;
-  periodId: number;
-  currentYear: Year;
-  onSave: (v: CourseCell) => void;
-  onClear: () => void;
-  onClose: () => void;
-  importedCourses: AcademicCourse[];
-  hasCurriculum: boolean;
-}) {
-  const [title, setTitle] = useState(initial?.title ?? "");
-  const [room, setRoom] = useState(initial?.room ?? "");
-  const [teacher, setTeacher] = useState(initial?.teacher ?? "");
-  const [color, setColor] = useState(initial?.color ?? "#eef2ff");
-  const [memo, setMemo] = useState(initial?.memo ?? "");
-  const [credits, setCredits] = useState(String(initial?.credits ?? ""));
-  const [grade, setGrade] = useState<Grade>(initial?.grade ?? "未履修");
-  const [courseType, setCourseType] = useState<CourseType>(initial?.courseType ?? "elective");
-  const [courseSearchOpen, setCourseSearchOpen] = useState(false);
-  const [courseSearchQuery, setCourseSearchQuery] = useState("");
-  const [courseCategory, setCourseCategory] = useState("all");
-  const [courseGroup, setCourseGroup] = useState("all");
-  const [courseTypeFilter, setCourseTypeFilter] = useState<CourseType | "all">("all");
-  const [courseTag, setCourseTag] = useState("all");
-  const [selectedOffering, setSelectedOffering] = useState<CourseOffering | undefined>(initial?.sourceOffering);
-  const [offeringSyncMessage, setOfferingSyncMessage] = useState<string | null>(null);
-
-  const selectCourse = (course: AcademicCourse) => {
-    const selection = selectBestOfferingDetailed({ course, day, periodId, currentYear });
-    const syncedCell = buildSyncedCourseCell(course, selection.offering);
-    setSelectedOffering(selection.offering);
-    setOfferingSyncMessage(selection.message);
-    setTitle(syncedCell.title);
-    setCredits(syncedCell.credits ? String(syncedCell.credits) : '');
-    setCourseType(syncedCell.courseType ?? 'elective');
-    setTeacher(syncedCell.teacher ?? '');
-    setRoom(syncedCell.room ?? '');
-    setMemo(syncedCell.memo ?? '');
-    setCourseSearchOpen(false);
-  };
-
-  const courseCategories = useMemo(
-    () => [...new Set(importedCourses.map((course) => course.category).filter(Boolean))].sort(),
-    [importedCourses],
-  );
-
-  const courseGroups = useMemo(
-    () => [...new Set(importedCourses.map((course) => course.group).filter(Boolean))].sort(),
-    [importedCourses],
-  );
-
-  const courseLabels = useMemo(() => {
-    const collected = importedCourses.flatMap((course) => {
-      const tags = [...(course.tags ?? [])];
-      if (course.requirementSubtype === 'triangle1') tags.push('△1');
-      if (course.requirementSubtype === 'triangle2') tags.push('△2');
-      return tags;
-    });
-    return [...new Set(collected)].sort();
-  }, [importedCourses]);
-
-  const visibleCourses = useMemo(() => {
-    const keyword = normalizeSearchText(courseSearchQuery.trim());
-    return importedCourses.filter((course) => {
-      const tags = [...(course.tags ?? [])];
-      if (course.requirementSubtype === 'triangle1') tags.push('△1');
-      if (course.requirementSubtype === 'triangle2') tags.push('△2');
-      const searchable = [course.id, course.title, course.category, course.group, course.rawRequired ?? '', course.courseType, ...tags, ...(course.offerings ?? []).map((offering) => getOfferingSearchText(offering))]
-        .join(' ')
-        .normalize('NFKC')
-        .toLowerCase()
-        .replace(/\s+/g, '');
-      return (
-        (!keyword || searchable.includes(keyword)) &&
-        (courseCategory === 'all' || course.category === courseCategory) &&
-        (courseGroup === 'all' || course.group === courseGroup) &&
-        (courseTypeFilter === 'all' || course.courseType === courseTypeFilter) &&
-        (courseTag === 'all' || tags.includes(courseTag))
-      );
-    });
-  }, [courseSearchQuery, importedCourses, courseCategory, courseGroup, courseTypeFilter, courseTag]);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
-
-  return (
-    <div className="tt-modal">
-      <div className="tt-dialog">
-        <div className="tt-dialog__head">
-          <h2>
-            {day} / {periodId}限 を編集
-          </h2>
-          <button type="button" onClick={onClose} className="tt-close" aria-label="閉じる">
-            ✕
-          </button>
-        </div>
-        <div className="tt-dialog__body">
-          <div className="form-grid">
-            <Field label="授業名" required>
-              <div className="course-picker">
-                <div className="course-picker__row">
-                  <input
-                    value={title}
-                    onChange={(e) => {
-                      setTitle(e.target.value);
-                      setSelectedOffering(undefined);
-                      setOfferingSyncMessage(null);
-                    }}
-                    placeholder="例：電力システム工学A"
-                  />
-                  {hasCurriculum && importedCourses.length > 0 && (
-                    <button
-                      type="button"
-                      onClick={() => setCourseSearchOpen((prev) => !prev)}
-                      className="btn-ghost course-picker__toggle"
-                      aria-pressed={courseSearchOpen}
-                      title="科目を検索"
-                    >
-                      🔍
-                    </button>
-                  )}
-                </div>
-
-                {offeringSyncMessage && (
-                  <div className="course-picker__sync-note small">
-                    {offeringSyncMessage}
-                  </div>
-                )}
-
-                {courseSearchOpen && hasCurriculum && importedCourses.length > 0 && (
-                  <div className="course-picker__panel">
-                    <div className="course-picker__filters">
-                      <input
-                        value={courseSearchQuery}
-                        onChange={(e) => setCourseSearchQuery(e.target.value)}
-                        placeholder="科目名 / 教員 / 教室 / 講義コード / 曜日時限で検索"
-                      />
-                      <select value={courseCategory} onChange={(e) => setCourseCategory(e.target.value)}>
-                        <option value="all">カテゴリすべて</option>
-                        {courseCategories.map((value) => (
-                          <option key={value} value={value}>{value}</option>
-                        ))}
-                      </select>
-                      <select value={courseGroup} onChange={(e) => setCourseGroup(e.target.value)}>
-                        <option value="all">科目群すべて</option>
-                        {courseGroups.map((value) => (
-                          <option key={value} value={value}>{value}</option>
-                        ))}
-                      </select>
-                      <select value={courseTypeFilter} onChange={(e) => setCourseTypeFilter(e.target.value as CourseType | 'all')}>
-                        <option value="all">区分すべて</option>
-                        <option value="required">必修</option>
-                        <option value="elective-required">選択必修</option>
-                        <option value="elective">選択</option>
-                        <option value="unknown">区分未確認</option>
-                      </select>
-                      <select value={courseTag} onChange={(e) => setCourseTag(e.target.value)}>
-                        <option value="all">タグすべて</option>
-                        {courseLabels.map((value) => (
-                          <option key={value} value={value}>{value}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div className="course-picker__summary small">
-                      表示 {Math.min(visibleCourses.length, courseSearchQuery.trim() ? 50 : 30)} 件 / 候補 {visibleCourses.length} 件
-                    </div>
-
-                    <div className="course-picker__results">
-                      {visibleCourses.length === 0 ? (
-                        <div className="course-picker__empty">一致する科目がありません。</div>
-                      ) : (
-                        visibleCourses.slice(0, courseSearchQuery.trim() ? 50 : 30).map((course) => {
-                          const tags = [...(course.tags ?? [])];
-                          if (course.requirementSubtype === 'triangle1') tags.push('△1');
-                          if (course.requirementSubtype === 'triangle2') tags.push('△2');
-                          return (
-                            <button
-                              key={course.id}
-                              type="button"
-                              className="course-picker__result"
-                              onClick={() => selectCourse(course)}
-                            >
-                              <div className="course-picker__result-head">
-                                <div>
-                                  <strong>{course.title}</strong>
-                                  <div className="small">{course.id} / {course.category || '未設定'} / {course.group || '未設定'}</div>
-                                </div>
-                                <CourseTypeBadge courseType={course.courseType} />
-                              </div>
-                              <div className="course-picker__chips">
-                                {tags.map((tag) => <CourseTagBadge key={`${course.id}-${tag}`} label={tag} />)}
-                              </div>
-                              <div className="course-picker__meta small">
-                                単位数 {course.credits} / raw_required: {course.rawRequired || 'なし'}
-                              </div>
-                              {(course.offerings?.length ?? 0) > 0 && (
-                                <div className="course-picker__offerings">
-                                  {course.offerings?.slice(0, 3).map((offering, index) => {
-                                    const isSlotMatched = offering.day === day && offering.period === String(periodId);
-                                    return (
-                                      <div key={`${course.id}-${offering.lectureCode ?? index}`} className={`course-candidate__offering${isSlotMatched ? ' is-slot-matched' : ''}`}>
-                                        <span>{formatOfferingSummary(offering) || '開講情報あり'}</span>
-                                        <span>{offering.teacher ? `担当 ${offering.teacher}` : '担当未設定'}</span>
-                                        {offering.room ? <span className="course-candidate__room">教室 {offering.room}</span> : null}
-                                        {offering.lectureCode ? <span>{offering.lectureCode}</span> : null}
-                                        {offering.target ? <span>{offering.target}</span> : null}
-                                        {offering.remarks ? <span>{offering.remarks}</span> : null}
-                                      </div>
-                                    );
-                                  })}
-                                </div>
-                              )}
-                            </button>
-                          );
-                        })
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </Field>
-            <Field label="教場">
-              <input
-                value={room}
-                onChange={(e) => setRoom(e.target.value)}
-                placeholder="例：2号館 305"
-              />
-            </Field>
-            <Field label="担当">
-              <input
-                value={teacher}
-                onChange={(e) => setTeacher(e.target.value)}
-                placeholder="例：中島 達人"
-              />
-            </Field>
-            <Field label="色（背景）">
-              <input type="color" value={color} onChange={(e) => setColor(e.target.value)} />
-            </Field>
-            <Field label="単位数">
-              <input
-                type="number"
-                min="0"
-                step="0.5"
-                value={credits}
-                onChange={(e) => setCredits(e.target.value)}
-                placeholder="例：2"
-              />
-            </Field>
-            <Field label="成績">
-              <select value={grade} onChange={(e) => setGrade(e.target.value as Grade)}>
-                <option value="未履修">未履修</option>
-                <option value="秀">秀 (4.0)</option>
-                <option value="優">優 (3.0)</option>
-                <option value="良">良 (2.0)</option>
-                <option value="可">可 (1.0)</option>
-                <option value="不可">不可 (0.0)</option>
-              </select>
-            </Field>
-            <Field label="科目区分">
-              <select value={courseType} onChange={(e) => setCourseType(e.target.value as CourseType)}>
-                <option value="required">必修科目</option>
-                <option value="elective-required">選択必修科目</option>
-                <option value="elective">選択科目(自由科目)</option>
-                <option value="unknown">区分未確認</option>
-              </select>
-            </Field>
-          </div>
-          <Field label="備考">
-            <textarea
-              value={memo}
-              onChange={(e) => setMemo(e.target.value)}
-              placeholder="例：隔週 / Zoom併用 など"
-            />
-          </Field>
-        </div>
-        <div className="tt-dialog__foot">
-          <button type="button" onClick={onClear} className="btn-ghost danger">
-            このコマを空にする
-          </button>
-          <div className="foot-actions">
-            <button type="button" onClick={onClose} className="btn-ghost">
-              キャンセル
-            </button>
-            <button
-              type="button"
-              onClick={() => onSave({
-                title: title.trim(),
-                room: room.trim() || undefined,
-                teacher: teacher.trim() || undefined,
-                color,
-                memo: memo.trim() || undefined,
-                credits: credits ? parseFloat(credits) : undefined,
-                grade: grade !== "未履修" ? grade : undefined,
-                courseType,
-                lectureCode: selectedOffering?.lectureCode,
-                term: selectedOffering?.term,
-                target: selectedOffering?.target,
-                className: selectedOffering?.className,
-                remarks: selectedOffering?.remarks,
-                sourceOffering: selectedOffering,
-                scheduleDay: selectedOffering?.day,
-                schedulePeriod: selectedOffering?.period,
-              })}
-              className="btn-primary"
-              disabled={!title.trim()}
-            >
-              保存
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Field({
-  label,
-  required,
-  children,
-}: {
-  label: string;
-  required?: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <label className="field">
-      <span>
-        {label}
-        {required && <span> *</span>}
-      </span>
-      {children}
-    </label>
   );
 }
 
