@@ -1,47 +1,23 @@
 # Curriculum Source Processing
 
-現行アプリはSQLite APIを参照します。原本収集・抽出・座標照合・DB構築の手順は
-[公式履修資料・SQLite統合 開発ノート](../../docs/development_note_curriculum.md#再収集と更新)を参照してください。
-`verify_pdf_courses.py` を通過した科目だけを検索候補へ取り込みます。
+原本収集・抽出・座標照合・DB構築は[開発ノート](../../docs/development_note_curriculum.md#再収集と更新)を参照。ローカル版はSQLite API、公開版はSQLiteからexportしたSupabase参照データを使用する。フロントはCSVを読まない。
 
-以下は旧CSV生成手順の記録です。旧CSVローダーは削除済みで、ここに記載されたCSV配置は
-現在のアプリやDB構築には反映されません。
+## 区分の再抽出
 
-## 旧CSV生成手順（保管用）
+`verify_pdf_courses.py` による科目行の原本座標確認後に実行する。
 
-このフォルダは、履修要覧PDFからCSVを生成するための補助スクリプト置き場です。
+```powershell
+python scripts/curriculum/audit_classification.py
+python scripts/curriculum/classify_pdf_courses.py
+python scripts/curriculum/test_classification.py
+npm.cmd run db:build
+node scripts/audit-guide.mjs
+python -m scripts.export_supabase
+python -m scripts.import_supabase
+```
 
-方針:
-- PDFの直接取り込みはアプリ本体に入れない
-- まず `scripts/curriculum/` でCSVを生成する
-- 生成結果を人間が確認してから `public/department/rikou/` に配置する
-- アプリ本体は既存のCSVローダーで読む
+分類結果は原本JSONにハッシュ・ページ・セル座標付きで保存。未知ラベルやセル対応不明は未解決とする。`docs/classification-coverage.json` と `docs/classification-cohorts.json` で資料別・学科年度別に確認する。必要単位の条件まで確認したものではない。
 
-実運用では、PDFの版ごとに変換スクリプトを分け、生成物は `generated/` に出力します。
+最後のimportは検査のみ。検証後、運営端末の `SUPABASE_DB_URL` で `python -m scripts.import_supabase --apply` を実行する。公開フロントの環境変数にはDB接続文字列を入れない。
 
-## 2026年度前期時間割CSV
-
-時間割の開講情報は、次のファイル名で `public/department/rikou/2026/` に置く想定です。
-
-- `rikou_2026_spring_schedule.csv`
-- 学科別に分ける場合は `denki_2026_spring_schedule.csv` なども読み込み対象にできます
-
-想定列は以下です。
-
-- `departmentId`
-- `sourceDepartment`
-- `day`
-- `period`
-- `term`
-- `gradeYear`
-- `className`
-- `title`
-- `teacher`
-- `lectureCode`
-- `room`
-- `target`
-- `remarks`
-- `requiredFlag`
-- `sourcePage`
-
-アプリ本体は、この CSV が無くても動作し、存在する場合だけ開講情報を科目一覧と編集モーダルに反映します。
+2026年度開講情報は `npm.cmd run db:offerings` をexportより先に行う。教員・教場は `/api/offerings/2026` のDB payloadから参照する。旧 `public/department/rikou/` のCSV配置は現行アプリへ反映されない。

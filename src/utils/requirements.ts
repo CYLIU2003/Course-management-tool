@@ -17,7 +17,7 @@ export interface RequirementCategorySummary {
   passedCourses?: number;
 }
 
-export type CourseTakenStatus = 'passed' | 'planned' | 'not_taken';
+export type CourseTakenStatus = 'passed' | 'planned' | 'not_taken' | 'failed';
 
 export type CategoryMatchState =
   | 'counted_in_this_category'
@@ -55,6 +55,7 @@ export const REQUIREMENT_STATUS_LABELS: Record<RequirementStatus, string> = {
 };
 
 export const COURSE_TAKEN_STATUS_LABELS: Record<CourseTakenStatus, string> = {
+  failed: '不合格',
   passed: '取得済',
   planned: '履修予定',
   not_taken: '未取得',
@@ -105,6 +106,7 @@ export const REQUIREMENT_STATUS_THEME: Record<RequirementStatus, BadgeTheme> = {
 };
 
 export const COURSE_TAKEN_STATUS_THEME: Record<CourseTakenStatus, BadgeTheme> = {
+  failed: { background: '#fff4df', border: '#ead1a4', color: '#80500c' },
   passed: {
     background: 'color-mix(in oklab, var(--primary-soft) 82%, var(--surface) 18%)',
     border: 'color-mix(in oklab, var(--primary) 28%, var(--border-soft) 72%)',

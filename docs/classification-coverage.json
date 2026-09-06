@@ -1,0 +1,1076 @@
+{
+  "method": "original-merged-cell-path-v1",
+  "documents": [
+    {
+      "id": "handbook-2022-0cb7237324b5d40678d5f1f66c2311c9",
+      "year": 2022,
+      "faculty": "メディア情報学部",
+      "label": "メディア情報学部",
+      "courses": 284,
+      "classified": 284,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-117c0e5981a41cce06761c8bc088cb9f",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "電気電子通信工学科",
+      "courses": 73,
+      "classified": 73,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-1c9e3b144e0d92b5f0addd1c9421decd",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "機械システム工学科",
+      "courses": 62,
+      "classified": 62,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-22cdc7c0684c81c91da58c6c0f451e73",
+      "year": 2022,
+      "faculty": "建築都市デザイン学部",
+      "label": "都市工学科",
+      "courses": 44,
+      "classified": 44,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-26f17f402ad9b49f74709de3e6cd1cc9",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "共通分野",
+      "courses": 162,
+      "classified": 115,
+      "unresolved": 47
+    },
+    {
+      "id": "handbook-2022-48cca1d90aa3c8b386fe90c81314e2fa",
+      "year": 2022,
+      "faculty": "情報工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-56f3d2c431eb37d1c1bbb24c3d8aa8ec",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "応用化学科",
+      "courses": 61,
+      "classified": 58,
+      "unresolved": 3
+    },
+    {
+      "id": "handbook-2022-69af55e9ab67b3d91ca5b4cb1546fb40",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "理工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-739fd57d1b9266b59a7430125d318398",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "自然科学科",
+      "courses": 107,
+      "classified": 107,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-84f04f6b84d41dada8cfb310eebb9ccb",
+      "year": 2022,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築学科",
+      "courses": 109,
+      "classified": 109,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-874833bfe414bce09b3333f33cb7444b",
+      "year": 2022,
+      "faculty": "情報工学部",
+      "label": "知能情報工学科",
+      "courses": 79,
+      "classified": 76,
+      "unresolved": 3
+    },
+    {
+      "id": "handbook-2022-894f6b9c6434bedd5f22780679ce9898",
+      "year": 2022,
+      "faculty": "環境学部",
+      "label": "環境学部",
+      "courses": 235,
+      "classified": 235,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-96f0dcbfeeca7662e93f8fdc1377c44f",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-a83cade6e1bf1416f9c46cc455b5babd",
+      "year": 2022,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築都市デザイン学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-ba18b28421362d72ddac50c16e252b29",
+      "year": 2022,
+      "faculty": "都市生活学部",
+      "label": "都市生活学部",
+      "courses": 253,
+      "classified": 253,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-c36f424288a4776205e9be8a11ff6b0e",
+      "year": 2022,
+      "faculty": "情報工学部",
+      "label": "共通分野",
+      "courses": 167,
+      "classified": 167,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-c69d8eb9e3c5e80a892f84365ac3d10d",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "機械工学科",
+      "courses": 101,
+      "classified": 101,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-d45612eb707f202e4b1eb5d8d01c34da",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "原子力安全工学科",
+      "courses": 55,
+      "classified": 55,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-d72bc94f71d0b7bf06f1d5e045c987a7",
+      "year": 2022,
+      "faculty": "情報工学部",
+      "label": "情報科学科",
+      "courses": 45,
+      "classified": 45,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-e95c628b3db6db8e0d86cc6325501d01",
+      "year": 2022,
+      "faculty": "建築都市デザイン学部",
+      "label": "共通分野",
+      "courses": 149,
+      "classified": 149,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-eba82b65a659765b1453b20f5f20a923",
+      "year": 2022,
+      "faculty": "理工学部",
+      "label": "医用工学科",
+      "courses": 55,
+      "classified": 55,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-f503234e484bd4e997ffa4250bfb1f02",
+      "year": 2022,
+      "faculty": "情報工学部",
+      "label": "情報工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2022-fd06a17ce82741eae823ad66d2307f2f",
+      "year": 2022,
+      "faculty": "人間科学部",
+      "label": "人間科学部",
+      "courses": 267,
+      "classified": 267,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-0188268e62a307b1b69c8517bfde4405",
+      "year": 2023,
+      "faculty": "環境学部",
+      "label": "環境学部",
+      "courses": 326,
+      "classified": 268,
+      "unresolved": 58
+    },
+    {
+      "id": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "電気電子通信工学科",
+      "courses": 203,
+      "classified": 146,
+      "unresolved": 57
+    },
+    {
+      "id": "handbook-2023-1c9e3b144e0d92b5f0addd1c9421decd-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "機械システム工学科",
+      "courses": 120,
+      "classified": 120,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1",
+      "year": 2023,
+      "faculty": "建築都市デザイン学部",
+      "label": "都市工学科",
+      "courses": 126,
+      "classified": 126,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-26f17f402ad9b49f74709de3e6cd1cc9-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "共通分野",
+      "courses": 307,
+      "classified": 250,
+      "unresolved": 57
+    },
+    {
+      "id": "handbook-2023-48cca1d90aa3c8b386fe90c81314e2fa-1",
+      "year": 2023,
+      "faculty": "情報工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-56f3d2c431eb37d1c1bbb24c3d8aa8ec-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "応用化学科",
+      "courses": 198,
+      "classified": 198,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-6286de2f4d3beead1fd38f0845c62dd1",
+      "year": 2023,
+      "faculty": "デザイン・データ科学部",
+      "label": "デザイン・データ科学部",
+      "courses": 116,
+      "classified": 116,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-69af55e9ab67b3d91ca5b4cb1546fb40-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "理工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-739fd57d1b9266b59a7430125d318398-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "自然科学科",
+      "courses": 183,
+      "classified": 183,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+      "year": 2023,
+      "faculty": "都市生活学部",
+      "label": "都市生活学部",
+      "courses": 265,
+      "classified": 265,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-84f04f6b84d41dada8cfb310eebb9ccb-1",
+      "year": 2023,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築学科",
+      "courses": 188,
+      "classified": 188,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-874833bfe414bce09b3333f33cb7444b-1",
+      "year": 2023,
+      "faculty": "情報工学部",
+      "label": "知能情報工学科",
+      "courses": 147,
+      "classified": 147,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-96f0dcbfeeca7662e93f8fdc1377c44f-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-a83cade6e1bf1416f9c46cc455b5babd-1",
+      "year": 2023,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築都市デザイン学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-c36f424288a4776205e9be8a11ff6b0e-1",
+      "year": 2023,
+      "faculty": "情報工学部",
+      "label": "共通分野",
+      "courses": 305,
+      "classified": 305,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-c69d8eb9e3c5e80a892f84365ac3d10d-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "機械工学科",
+      "courses": 104,
+      "classified": 104,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-cec75b4a7fe4fabe90ac9e9a1a00086d",
+      "year": 2023,
+      "faculty": "メディア情報学部",
+      "label": "メディア情報学部",
+      "courses": 318,
+      "classified": 269,
+      "unresolved": 49
+    },
+    {
+      "id": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "原子力安全工学科",
+      "courses": 176,
+      "classified": 157,
+      "unresolved": 19
+    },
+    {
+      "id": "handbook-2023-d72bc94f71d0b7bf06f1d5e045c987a7-1",
+      "year": 2023,
+      "faculty": "情報工学部",
+      "label": "情報科学科",
+      "courses": 145,
+      "classified": 145,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-de4de496f190cba1e8b59934cdfbc329",
+      "year": 2023,
+      "faculty": "理工学部",
+      "label": "医用工学科",
+      "courses": 120,
+      "classified": 120,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-e95c628b3db6db8e0d86cc6325501d01-1",
+      "year": 2023,
+      "faculty": "建築都市デザイン学部",
+      "label": "共通分野",
+      "courses": 287,
+      "classified": 287,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-f503234e484bd4e997ffa4250bfb1f02-1",
+      "year": 2023,
+      "faculty": "情報工学部",
+      "label": "情報工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2023-fe0e2ef7f3b702e406c05696bfc51330",
+      "year": 2023,
+      "faculty": "人間科学部",
+      "label": "人間科学部",
+      "courses": 239,
+      "classified": 225,
+      "unresolved": 14
+    },
+    {
+      "id": "handbook-2024-0167e528eac1ea48980e575efc0ab2e0",
+      "year": 2024,
+      "faculty": "デザイン・データ科学部",
+      "label": "デザイン・データ科学部",
+      "courses": 116,
+      "classified": 116,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-030abea637d0072c669514bed0a04a16",
+      "year": 2024,
+      "faculty": "情報工学部",
+      "label": "知能情報工学科",
+      "courses": 95,
+      "classified": 95,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-152279e049a2bd96b29380dfd55bfbb8",
+      "year": 2024,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築学科",
+      "courses": 211,
+      "classified": 211,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-2140adee38a2c8d9dabf1b5995d06746",
+      "year": 2024,
+      "faculty": "環境学部",
+      "label": "環境学部",
+      "courses": 324,
+      "classified": 251,
+      "unresolved": 73
+    },
+    {
+      "id": "handbook-2024-252f2cb8ec49e97cb9d6b03b5d53a4f6",
+      "year": 2024,
+      "faculty": "情報工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-3b85f9d774533dc5e292a20bc1cc918f",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "共通分野",
+      "courses": 272,
+      "classified": 272,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-430d2dde691506d2e445f6665bb37af6",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "応用化学科",
+      "courses": 199,
+      "classified": 199,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-45d1a27c359701ccd010b7a810500da3",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "理工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-4aaa1a502b6f221e06c95d14da46cfa5",
+      "year": 2024,
+      "faculty": "情報工学部",
+      "label": "情報工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-52be53d2cebbe60d8be64af70ec6a1db",
+      "year": 2024,
+      "faculty": "情報工学部",
+      "label": "情報科学科",
+      "courses": 145,
+      "classified": 145,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-5716936670a5f63c184a34121eb1123b",
+      "year": 2024,
+      "faculty": "情報工学部",
+      "label": "共通分野",
+      "courses": 326,
+      "classified": 326,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-6163177de179eef2a04222bdc9bbf109",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "原子力安全工学科",
+      "courses": 178,
+      "classified": 178,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-719ad5e3938075409edd28830277b67c",
+      "year": 2024,
+      "faculty": "都市生活学部",
+      "label": "都市生活学部",
+      "courses": 268,
+      "classified": 268,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-9402ce29081808d752884bbd68b46cd6",
+      "year": 2024,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築都市デザイン学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-98b111d69794a93a768ccd981f609ed9",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "電気電子通信工学科",
+      "courses": 180,
+      "classified": 172,
+      "unresolved": 8
+    },
+    {
+      "id": "handbook-2024-9f8c14225d594fab88807f5849921fae",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-a5e0f341217c98383ea20afeae197703",
+      "year": 2024,
+      "faculty": "メディア情報学部",
+      "label": "メディア情報学部",
+      "courses": 321,
+      "classified": 293,
+      "unresolved": 28
+    },
+    {
+      "id": "handbook-2024-ae2847fd216c89235cf07a703b060c0b",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "機械システム工学科",
+      "courses": 171,
+      "classified": 171,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-b334f4add85602c728c54bc03cbca0bf",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "医用工学科",
+      "courses": 183,
+      "classified": 164,
+      "unresolved": 19
+    },
+    {
+      "id": "handbook-2024-ced955c0ba01b17c15df2ba46ec3af37",
+      "year": 2024,
+      "faculty": "建築都市デザイン学部",
+      "label": "共通分野",
+      "courses": 308,
+      "classified": 308,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-d4c6b179c8bc9f694cdb4d4f6bb4f982",
+      "year": 2024,
+      "faculty": "建築都市デザイン学部",
+      "label": "都市工学科",
+      "courses": 80,
+      "classified": 80,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-d53fd2196d1bd8a77eaeec5d99b712ed",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "機械工学科",
+      "courses": 150,
+      "classified": 150,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2024-daac75bfbe8d3e385727e7b5d230e342",
+      "year": 2024,
+      "faculty": "人間科学部",
+      "label": "人間科学部",
+      "courses": 279,
+      "classified": 236,
+      "unresolved": 43
+    },
+    {
+      "id": "handbook-2024-e734fa3fdc1d3912b24c1df11107593c",
+      "year": 2024,
+      "faculty": "理工学部",
+      "label": "自然科学科",
+      "courses": 134,
+      "classified": 134,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-06f500176260c223d8ea7701afff7f6e",
+      "year": 2025,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築都市デザイン学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "原子力安全工学科",
+      "courses": 226,
+      "classified": 226,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "理工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-3c70811a77d3cabd40ec72338c464f47",
+      "year": 2025,
+      "faculty": "人間科学部",
+      "label": "人間科学部",
+      "courses": 285,
+      "classified": 242,
+      "unresolved": 43
+    },
+    {
+      "id": "handbook-2025-43656c25fc0ac01ea8622a609ff0427e",
+      "year": 2025,
+      "faculty": "環境学部",
+      "label": "環境学部",
+      "courses": 213,
+      "classified": 0,
+      "unresolved": 213
+    },
+    {
+      "id": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f",
+      "year": 2025,
+      "faculty": "建築都市デザイン学部",
+      "label": "都市工学科",
+      "courses": 149,
+      "classified": 149,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-4edfeb1afbae208a6d7d5f034ffd0217",
+      "year": 2025,
+      "faculty": "情報工学部",
+      "label": "情報科学科",
+      "courses": 147,
+      "classified": 92,
+      "unresolved": 55
+    },
+    {
+      "id": "handbook-2025-546d609eaf14654cf1c0713fe9ff5f9d",
+      "year": 2025,
+      "faculty": "デザイン・データ科学部",
+      "label": "デザイン・データ科学部",
+      "courses": 128,
+      "classified": 128,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-5e86bd654b5845fe796a11261b3f963b",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "応用化学科",
+      "courses": 173,
+      "classified": 131,
+      "unresolved": 42
+    },
+    {
+      "id": "handbook-2025-6000a883073fbcd1a3d9dd3027eded5d",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "自然科学科",
+      "courses": 138,
+      "classified": 138,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-7bcc89c6d0cfb836a1f7a13ac2ed9ce4",
+      "year": 2025,
+      "faculty": "建築都市デザイン学部",
+      "label": "共通分野",
+      "courses": 322,
+      "classified": 322,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-808bf0e0c7e6180197ca85b6c1bcfa70",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "医用工学科",
+      "courses": 135,
+      "classified": 135,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-837d837ca68d3e9c43bd47dce6abeafe",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "機械工学科",
+      "courses": 158,
+      "classified": 135,
+      "unresolved": 23
+    },
+    {
+      "id": "handbook-2025-898a1761b3492b8f99f1171334229fd8-1",
+      "year": 2025,
+      "faculty": "情報工学部",
+      "label": "知能情報工学科",
+      "courses": 119,
+      "classified": 119,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+      "year": 2025,
+      "faculty": "都市生活学部",
+      "label": "都市生活学部",
+      "courses": 265,
+      "classified": 265,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-977903d24179b19d863d6bab55edb4c7-1",
+      "year": 2025,
+      "faculty": "情報工学部",
+      "label": "情報工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-ad2458bd522b3199f9490a82c71d4f67",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "機械システム工学科",
+      "courses": 172,
+      "classified": 172,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-c492b5628a4ce1c5889ec85c6a57e105",
+      "year": 2025,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築学科",
+      "courses": 163,
+      "classified": 163,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-c8fd0619f1e340509f352167fb7d512b",
+      "year": 2025,
+      "faculty": "情報工学部",
+      "label": "共通分野",
+      "courses": 338,
+      "classified": 338,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06-1",
+      "year": 2025,
+      "faculty": "情報工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-ec67b6baaf174180bed144cdf252a8ce",
+      "year": 2025,
+      "faculty": "メディア情報学部",
+      "label": "メディア情報学部",
+      "courses": 208,
+      "classified": 208,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-f1b4c6ee72e6f2cabaf1eaea765149c3",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "電気電子通信工学科",
+      "courses": 134,
+      "classified": 134,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2025-fd690a3f9d67e91eda83c185aad131bd",
+      "year": 2025,
+      "faculty": "理工学部",
+      "label": "共通分野",
+      "courses": 339,
+      "classified": 339,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-044f76895bf88df8ce2a7a26145986c4",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "機械システム工学科",
+      "courses": 120,
+      "classified": 120,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-055bc6c29e9f19180c4e506fc36756a0",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "機械工学科",
+      "courses": 99,
+      "classified": 99,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-0b9b37db00b8706444e4f7a750410138",
+      "year": 2026,
+      "faculty": "建築都市デザイン学部",
+      "label": "共通分野",
+      "courses": 287,
+      "classified": 287,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-1645ea440a266a3749d688602d3256df",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-179522a177db8d7839ccc9a9e43dde33",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "医用工学科",
+      "courses": 114,
+      "classified": 114,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-311a4a97843fb88816a58e1fc4e50d98",
+      "year": 2026,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築学科",
+      "courses": 115,
+      "classified": 115,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-3572269f6340349616b7620dfc1989d5",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "応用化学科",
+      "courses": 125,
+      "classified": 125,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-36f4e4062d15fd6e4875f8e78bec3bd6",
+      "year": 2026,
+      "faculty": "メディア情報学部",
+      "label": "メディア情報学部",
+      "courses": 336,
+      "classified": 336,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-3db8dbc9a70710d1a1cf633fefc085e8",
+      "year": 2026,
+      "faculty": "デザイン・データ科学部",
+      "label": "デザイン・データ科学部",
+      "courses": 116,
+      "classified": 110,
+      "unresolved": 6
+    },
+    {
+      "id": "handbook-2026-4123eec2627f153000328b01720cf021",
+      "year": 2026,
+      "faculty": "情報工学部",
+      "label": "情報科学科",
+      "courses": 107,
+      "classified": 107,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-523786516152752ab91293dd787cc0cc",
+      "year": 2026,
+      "faculty": "情報工学部",
+      "label": "情報工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-78e5697e9686a63f788d825d0d89daab",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "電気電子通信工学科",
+      "courses": 149,
+      "classified": 149,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-7f952e53f2cdbe399fe9858c53a40a4e",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "自然科学科",
+      "courses": 117,
+      "classified": 117,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-887e7ccb382048811b8840d6003b9a24",
+      "year": 2026,
+      "faculty": "建築都市デザイン学部",
+      "label": "建築都市デザイン学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-9a97b84ce1f096e0db084e81dac0bf1f",
+      "year": 2026,
+      "faculty": "都市生活学部",
+      "label": "都市生活学部",
+      "courses": 268,
+      "classified": 250,
+      "unresolved": 18
+    },
+    {
+      "id": "handbook-2026-9ac54018ba04a3dadd1774fcaec7facc",
+      "year": 2026,
+      "faculty": "人間科学部",
+      "label": "人間科学部",
+      "courses": 545,
+      "classified": 545,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-a0dc671e8eb03cda69fc0648edf104cd",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "理工学部",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-a3ddef1c2ac8f7b0b933b5318f6aa937",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "共通分野",
+      "courses": 299,
+      "classified": 299,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-afd7c5631753ad09f074370a0eaa9524",
+      "year": 2026,
+      "faculty": "情報工学部",
+      "label": "共通分野",
+      "courses": 302,
+      "classified": 302,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-b2424772163806e832630365b78767c2",
+      "year": 2026,
+      "faculty": "情報工学部",
+      "label": "知能情報工学科",
+      "courses": 138,
+      "classified": 138,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-cb381fb96ef7432b0aed7577694e14de",
+      "year": 2026,
+      "faculty": "情報工学部",
+      "label": "教職課程",
+      "courses": 0,
+      "classified": 0,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-d53856023b230327727f2739fe1355a0",
+      "year": 2026,
+      "faculty": "理工学部",
+      "label": "原子力安全工学科",
+      "courses": 117,
+      "classified": 117,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-e69aa2716a5d0db78c4241f183a36f63",
+      "year": 2026,
+      "faculty": "環境学部",
+      "label": "環境学部",
+      "courses": 347,
+      "classified": 347,
+      "unresolved": 0
+    },
+    {
+      "id": "handbook-2026-fcfa81125b1516a4c6c647f0753fc555",
+      "year": 2026,
+      "faculty": "建築都市デザイン学部",
+      "label": "都市工学科",
+      "courses": 91,
+      "classified": 91,
+      "unresolved": 0
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Downloaded source evidence must retain the bytes used by its SHA-256 manifest.
+/public/handbooks/tap-faq.html -text

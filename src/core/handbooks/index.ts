@@ -30,6 +30,11 @@ export interface HandbookCatalog {
 }
 
 export interface HandbookCourse {
+  classification?: {
+    status: 'pdf_cell_checked' | 'unresolved'; sourceSha256: string; scope?: string;
+    path?: { label: string; bbox: number[] }[]; printedRequirement?: string;
+    requirementInterpretation?: 'unreviewed'; reason?: string;
+  };
   id: string;
   title: string;
   credits: number;

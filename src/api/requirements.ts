@@ -7,7 +7,6 @@ import {
 
 import type { AcademicCourse, AcademicCurriculum, AcademicAllYearsData } from '../utils/academicProgress';
 import type { ApplicableCourseRow } from '../utils/csvImporter';
-import { calculateGraduationRequirements } from '../utils/graduationRequirements';
 
 function summarizeDetail(detail: RequirementCategoryDetail): RequirementCategorySummary {
   const totalEligibleCourses = detail.courses.filter((course) => course.matchState !== 'not_eligible').length;
@@ -52,23 +51,20 @@ export function generateRequirementCategoryDetail(
   const applicableCourseRowsForDisplay = applicableCourses.filter(ac => ac.area === area && ac.subarea === subarea);
   const totalReq = rules.length ? rules.reduce((acc, r) => acc + r.totalRequiredCredits, 0) : 0;
   
-  const progressResult = calculateGraduationRequirements({ curriculum, courses, allYearsData });
+  const cells = Object.values(allYearsData).flatMap(year => Object.values(year.timetable).flatMap(days => Object.values(days).flatMap(slots => Object.values(slots))));
 
-  const earned = progressResult.statuses.find(s => s.category === area || s.category === categoryId)?.earnedCredits || 0;
-  const planned = 0;
-
-  const detailCourses: CategoryCourse[] = applicableCourseRowsForDisplay.map(ac => {
+  const detailCourses: CategoryCourse[] = [...new Map(applicableCourseRowsForDisplay.map(row => [row.courseId, row])).values()].map(ac => {
     const matchedCourse = courses.find((c) => c.id === ac.courseId);
     let takenStatus: 'passed' | 'failed' | 'planned' | 'not_taken' = 'not_taken';
     if (matchedCourse) {
-      const isPassed = ['firstYear', 'secondYear', 'thirdYear', 'fourthYear'].some(year => {
-        const yd = allYearsData[year as keyof AcademicAllYearsData] as any;
-        return yd && yd.grades && yd.grades.some((g: any) => g.courseId === matchedCourse.id && g.status === 'passed');
-      });
+      const records = cells.filter(cell => cell?.courseId === matchedCourse.id && cell.credits === ac.credits);
+      const isPassed = records.some(cell => ['秀', '優', '良', '可'].includes(cell?.grade ?? ''));
       if (isPassed) {
         takenStatus = 'passed';
-      } else {
+      } else if (records.some(cell => !cell?.grade || cell.grade === '未履修')) {
         takenStatus = 'planned';
+      } else if (records.some(cell => cell?.grade === '不可')) {
+        takenStatus = 'failed';
       }
     }
     
@@ -77,10 +73,6 @@ export function generateRequirementCategoryDetail(
       courseCode: ac.courseId,
       courseName: ac.title,
       credits: ac.credits,
-      yearLevel: 1, 
-      semester: '前期',
-      dayPeriod: '',
-      instructor: '',
       takenStatus,
       matchState: takenStatus === 'passed' ? 'counted_in_this_category' : 'eligible_for_this_category',
       eligibleCategoryIds: [categoryId],
@@ -88,6 +80,8 @@ export function generateRequirementCategoryDetail(
       countedCategoryName: takenStatus === 'passed' ? categoryId : undefined,
     };
   });
+  const earned = detailCourses.reduce((sum, course) => sum + (course.takenStatus === 'passed' ? course.credits : 0), 0);
+  const planned = detailCourses.reduce((sum, course) => sum + (course.takenStatus === 'planned' ? course.credits : 0), 0);
 
   return {
     categoryId,
@@ -96,7 +90,7 @@ export function generateRequirementCategoryDetail(
     requiredCredits: totalReq,
     earnedCredits: earned,
     plannedCredits: planned,
-    remainingCredits: Math.max(0, totalReq - earned - planned),
+    remainingCredits: Math.max(0, totalReq - earned),
     status: calculateRequirementStatus(totalReq, earned, planned),
     courses: detailCourses,
   };
