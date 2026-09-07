@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import type { AcademicAllYearsData } from '../../core/types';
 import { matchProgramCourses, type HandbookSource, type HiramekiProgram } from '../../core/handbooks';
-import { localHandbookUrl } from '../../api/handbooks';
 
 interface Props {
   programs: HiramekiProgram[];
@@ -39,8 +38,7 @@ function ProgramCard({ program, source, allYearsData, onOpenSource }: {
     </>}
     <details><summary>履修上の注意</summary><ul>{program.notes.map((note) => <li key={note}>{note}</li>)}</ul></details>
     {source && <div className="handbook-actions">
-      <button type="button" onClick={() => onOpenSource(source.id)}>科目該当表・条件を読む</button>
-      <a href={localHandbookUrl(source.localPath, program.sourcePage)} target="_blank" rel="noopener noreferrer">パンフレット原本（PDF {program.sourcePage}ページ）</a>
+      <button type="button" onClick={() => onOpenSource(source.id)}>資料・出典を開く</button>
     </div>}
   </article>;
 }

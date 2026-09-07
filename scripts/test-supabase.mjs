@@ -82,6 +82,15 @@ for (let i=0;i<8;i++) {
   const value={departmentId:'kikai',entranceYear:2022,isGeneral:true,takesTeacher:!!(i&1),takesHirameki:!!(i&2),takesTap:!!(i&4),individualNote:'',revision:i};
   assert.equal((await rpc('/api/me/profile','PUT',value)).revision,i+1);
 }
+const dated = studentState();
+dated.allYearsData = { '2025': {...dated.allYearsData['1年次'], departmentId:'kikai', entranceYear:2022}, '2026': {...dated.allYearsData['2年次'], departmentId:'kikai', entranceYear:2022} };
+dated.allYearsData['2025'].timetable = {'1Q':{'月':{'1':{title:'Past',credits:2,grade:'可'}}}};
+assert.equal((await rpc('/api/me/state','PUT',{state:dated,revision:1})).revision,2);
+const copy = structuredClone(dated); copy.allYearsData['2026'].timetable = {'1Q':{'月':{'1':{title:'Current',credits:2,grade:'未履修'}}}};
+await rpc('/api/me/state','PUT',{state:copy,revision:2});
+assert.deepEqual((await rpc('/api/me')).state.allYearsData['2025'],dated.allYearsData['2025']);
+await assert.rejects(rpc('/api/me/state','PUT',{state:studentState(),revision:3}), /Reload the app/);
+await assert.rejects(rpc('/api/me/validate-state','POST',{...dated,allYearsData:{'bad':dated.allYearsData['2025']}}),/Invalid years/);
 await db.exec('reset role; set role anon');
 assert.equal((await db.query('select * from public.reference_payloads')).rows.length,1);
 await assert.rejects(rpc('/api/me'), /permission denied/);

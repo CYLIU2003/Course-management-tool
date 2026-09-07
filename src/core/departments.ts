@@ -1,9 +1,11 @@
+import graduateDepartments from './graduate-departments.json';
 export interface Department {
   id: string;
   name: string;
   faculty: string;
   facultyId: string;
   campus?: string;
+  studyLevel?: string;
   sourceStatus?: 'curriculum_pdf_available' | 'partial_no_department_curriculum_pdf';
 }
 
@@ -27,5 +29,6 @@ export const AVAILABLE_DEPARTMENTS: Department[] = [
   { id: 'design_data', name: 'デザイン・データ科学科', faculty: 'デザイン・データ科学部', facultyId: 'design_data', campus: '横浜', sourceStatus: 'curriculum_pdf_available' },
   { id: 'toshi_seikatsu', name: '都市生活学科', faculty: '都市生活学部', facultyId: 'toshi_seikatsu', campus: '世田谷', sourceStatus: 'curriculum_pdf_available' },
   { id: 'ningen', name: '人間科学科', faculty: '人間科学部', facultyId: 'ningen', campus: '世田谷', sourceStatus: 'curriculum_pdf_available' },
+  ...graduateDepartments.map(department => ({...department, name: `${department.name}（${department.studyLevel === 'master' ? '博士前期・修士' : '博士後期'}）`})),
 ] as const;
 

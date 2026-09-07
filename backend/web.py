@@ -152,10 +152,15 @@ def create_app(config=None):
         validate_state(state)
         with connect() as connection:
             validate_cohort(connection, state)
+            for record in state["allYearsData"].values():
+                if "departmentId" in record:
+                    validate_cohort(connection, record)
             connection.execute('BEGIN IMMEDIATE')
-            row = connection.execute('SELECT revision FROM account_state WHERE account_id=?', (g.account['account_id'],)).fetchone()
+            row = connection.execute('SELECT revision,payload_json FROM account_state WHERE account_id=?', (g.account['account_id'],)).fetchone()
             if data['revision'] != (row[0] if row else 0):
                 raise FileExistsError()
+            if row and all(key.isdigit() for key in json.loads(row[1])['allYearsData']) and any(not key.isdigit() for key in state['allYearsData']):
+                raise FileExistsError('アプリを再読み込みしてください。年度別の記録を旧形式で上書きできません。')
             revision = data['revision'] + 1
             connection.execute('INSERT INTO account_state VALUES (?,?,?,?) ON CONFLICT(account_id) DO UPDATE SET payload_json=excluded.payload_json,revision=excluded.revision,updated_at=excluded.updated_at', (g.account['account_id'], json.dumps(state, ensure_ascii=False, allow_nan=False), revision, int(time.time())))
             connection.execute('UPDATE accounts SET department_id=?,entrance_year=? WHERE id=?', (state['departmentId'], state['entranceYear'], g.account['account_id']))

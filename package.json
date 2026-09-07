@@ -1,13 +1,13 @@
 {
   "name": "timesch",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "start": "python -m backend.server",
     "db:prepare": "node scripts/curriculum/prepare_datasets.mjs",
-    "db:build": "npm run db:prepare && python -m backend.database --import",
+    "db:build": "npm run db:prepare && python -m backend.database --import && python -m scripts.curriculum.import_graduate",
     "db:check": "python -m backend.database",
     "test:handbooks": "node scripts/curriculum/test-handbooks.mjs",
     "test:database": "python -m unittest backend.test_database -v",
@@ -25,9 +25,10 @@
     "db:export-supabase": "python -m scripts.export_supabase",
     "dev:supabase": "node scripts/dev-supabase.mjs",
     "test:cloudflare": "node --test scripts/test-cloudflare.mjs",
-    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:offering-guide && npm run test:supabase && npm run build:cloudflare",
+    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:offering-guide && npm run test:academic-years && npm run test:supabase && npm run build:cloudflare",
     "test:offering-guide": "node scripts/test-offering-guide.mjs",
-    "test:google-auth": "node scripts/test-google-auth.mjs"
+    "test:google-auth": "node scripts/test-google-auth.mjs",
+    "test:academic-years": "node scripts/test-academic-years.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.115.0",

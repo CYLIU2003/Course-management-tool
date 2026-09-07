@@ -19,6 +19,17 @@ DEPARTMENTS = {'機械':['kikai'],'機シ':['kikai_system'],'電通':['denki'],'
                '環創':['kankyo_sosei'],'環経':['kankyo_keiei'],'社メ':['shakai_media'],'情シ':['joho_system'],'デ科':['design_data']}
 
 
+def audience_departments(row):
+    label = row['departmentLabel']
+    if label == '院総':
+        return ['grad_master_'+major for major in ('kikai','denki_kagaku','genshiryoku','shizen','kenchiku','joho')]
+    if label == '院情':
+        return ['grad_master_data']
+    if label == '院環':
+        return ['grad_master_'+slug for abbreviation,slug in [('環情','kankyo'),('都生','toshi'),('国際','international')] if abbreviation in row['className']]
+    return DEPARTMENTS.get(label,[])
+
+
 def compact(text):
     return re.sub(r'\s+', '', normalize(text))
 
@@ -136,7 +147,7 @@ def import_data():
             meeting=meetings.setdefault(meeting_key,dict(campus=row['campus'],term=row['term'],day=row['day'],period=row['period'],rooms=[],teachers=[],remarks=[]))
             for key,field in [('rooms','room'),('teachers','teacher'),('remarks','remarks')]:
                 if row[field] and row[field] not in meeting[key]: meeting[key].append(row[field])
-            audience=dict(departmentLabel=row['departmentLabel'],departmentIds=DEPARTMENTS.get(row['departmentLabel'],[]),campus=row['campus'],gradeYear=row['gradeYear'],className=row['className'],target=row['target'])
+            audience=dict(departmentLabel=row['departmentLabel'],departmentIds=audience_departments(row),campus=row['campus'],gradeYear=row['gradeYear'],className=row['className'],target=row['target'])
             audiences[json.dumps(audience,sort_keys=True)]=audience
         classes.append(dict(id='2026:'+code,year=2026,lectureCode=code,title=titles[0],titleVariants=titles,meetings=list(meetings.values()),audiences=list(audiences.values()),corrections=by_code[code],correctionApplications=applications,
                             sourceOccurrences=[dict(sourceId=r['sourceId'],page=r['page'],bbox=r['bbox']) for r in rows],status='correction_review_required' if any(a['status']=='source_review_required' for a in applications) else 'source_extracted'))

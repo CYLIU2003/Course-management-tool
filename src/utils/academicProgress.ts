@@ -1,7 +1,7 @@
 export type Grade = "秀" | "優" | "良" | "可" | "不可" | "未履修";
 export type CourseType = "required" | "elective-required" | "elective" | "unknown";
 export type AcademicQuarter = "1Q" | "2Q" | "3Q" | "4Q";
-export type AcademicYear = "1年次" | "2年次" | "3年次" | "4年次" | "M1" | "M2";
+export type AcademicYear = string;
 
 export interface CourseOffering {
   academicYear?: number;
@@ -68,6 +68,8 @@ export type AcademicTimetable = Record<
 >;
 
 export interface AcademicYearData {
+  departmentId?: string;
+  entranceYear?: number;
   timetable: AcademicTimetable;
   quarterRanges: Record<AcademicQuarter, { start: string; end: string }>;
 }
@@ -164,7 +166,7 @@ export interface AcademicCourseInstance extends AcademicCourseCell {
   periodId: string;
 }
 
-const YEARS: AcademicYear[] = ["1年次", "2年次", "3年次", "4年次", "M1", "M2"];
+
 const QUARTERS: AcademicQuarter[] = ["1Q", "2Q", "3Q", "4Q"];
 
 const GRADE_POINTS: Record<Exclude<Grade, "未履修">, number> = {
@@ -186,7 +188,7 @@ function getGradePoint(grade?: Grade) {
 function collectCourseInstances(allYearsData: AcademicAllYearsData) {
   const entries: AcademicCourseInstance[] = [];
 
-  for (const year of YEARS) {
+  for (const year of Object.keys(allYearsData)) {
     const yearData = allYearsData[year];
     if (!yearData) continue;
 

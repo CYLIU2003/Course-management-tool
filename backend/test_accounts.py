@@ -49,6 +49,26 @@ class AccountTests(unittest.TestCase):
     def headers(self, me):
         return dict(HEADERS, **{'X-CSRF-Token': me['csrfToken']})
 
+    def test_academic_year_records_and_legacy_downgrade(self):
+        me = self.register()
+        data = state()
+        year = dict(data['allYearsData']['1年次'], departmentId='kikai', entranceYear=2022)
+        data['allYearsData'] = {'2025': copy.deepcopy(year), '2026': copy.deepcopy(year)}
+        data['allYearsData']['2025']['timetable'] = {'1Q': {'月': {'1': dict(title='過去', credits=2, grade='可')}}}
+        response = self.client.put('/api/me/state', headers=self.headers(me), json=dict(state=data, revision=0))
+        self.assertEqual(response.status_code, 200, response.json)
+        data['allYearsData']['2026']['timetable'] = {'1Q': {'火': {'1': dict(title='今年', credits=2, grade='優')}}}
+        response = self.client.put('/api/me/state', headers=self.headers(me), json=dict(state=data, revision=1))
+        self.assertEqual(response.status_code, 200, response.json)
+        saved = self.client.get('/api/me').json['state']['allYearsData']
+        self.assertEqual(saved['2025']['timetable']['1Q']['月']['1']['title'], '過去')
+        self.assertNotIn('火', saved['2025']['timetable']['1Q'])
+        response = self.client.put('/api/me/state', headers=self.headers(me), json=dict(state=state(), revision=2))
+        self.assertEqual(response.status_code, 409)
+        data['allYearsData']['2026']['departmentId'] = 'unknown'
+        response = self.client.put('/api/me/state', headers=self.headers(me), json=dict(state=data, revision=2))
+        self.assertEqual(response.status_code, 400)
+
     def test_registration_hash_cookie_and_options(self):
         me = self.register()
         self.assertEqual((me['departmentId'], me['entranceYear']), ('kikai', 2022))

@@ -17,7 +17,7 @@ export function officialCandidates(catalog: OfficialCatalog, title: string, depa
   if (catalog.year !== 2026 || !normalize(title)) return [];
   return catalog.classes.flatMap(course => {
     if (course.year !== 2026 || course.status !== 'source_extracted' || ![course.title, ...course.titleVariants].some(name => normalize(name) === normalize(title))) return [];
-    const audiences = course.audiences.filter(a => a.departmentIds.includes(departmentId) || (a.departmentLabel === '共通' && a.campus === campus));
+    const audiences = course.audiences.filter(a => a.departmentIds.includes(departmentId) || (!departmentId.startsWith('grad_') && a.departmentLabel === '共通' && a.campus === campus));
     if (!audiences.length) return [];
     return course.meetings.flatMap((meeting, index) => {
       if (meeting.campus !== campus || meeting.day !== day || meeting.period !== String(period) || !terms[quarter].includes(meeting.term)) return [];

@@ -1,0 +1,154 @@
+[
+  {
+    "id": "grad_master_kikai",
+    "name": "機械専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_kikai",
+    "name": "機械専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_denki_kagaku",
+    "name": "電気・化学専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_denki_kagaku",
+    "name": "電気・化学専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_genshiryoku",
+    "name": "共同原子力専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_genshiryoku",
+    "name": "共同原子力専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_shizen",
+    "name": "自然科学専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_shizen",
+    "name": "自然科学専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_kenchiku",
+    "name": "建築都市デザイン専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_kenchiku",
+    "name": "建築都市デザイン専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_joho",
+    "name": "情報専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_joho",
+    "name": "情報専攻",
+    "faculty": "総合理工学研究科",
+    "facultyId": "grad_sougou",
+    "campus": "世田谷",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_kankyo",
+    "name": "環境情報学専攻",
+    "faculty": "環境情報学研究科",
+    "facultyId": "grad_kankyo",
+    "campus": "横浜",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_kankyo",
+    "name": "環境情報学専攻",
+    "faculty": "環境情報学研究科",
+    "facultyId": "grad_kankyo",
+    "campus": "横浜",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_toshi",
+    "name": "都市生活学専攻",
+    "faculty": "環境情報学研究科",
+    "facultyId": "grad_kankyo",
+    "campus": "横浜",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_toshi",
+    "name": "都市生活学専攻",
+    "faculty": "環境情報学研究科",
+    "facultyId": "grad_kankyo",
+    "campus": "横浜",
+    "studyLevel": "doctor"
+  },
+  {
+    "id": "grad_master_international",
+    "name": "東京都市大学・エディスコーワン大学 国際連携環境融合科学専攻",
+    "faculty": "環境情報学研究科",
+    "facultyId": "grad_kankyo",
+    "campus": "横浜",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_master_data",
+    "name": "情報データ科学専攻",
+    "faculty": "情報データ科学研究科",
+    "facultyId": "grad_data",
+    "campus": "横浜",
+    "studyLevel": "master"
+  },
+  {
+    "id": "grad_doctor_data",
+    "name": "情報データ科学専攻",
+    "faculty": "情報データ科学研究科",
+    "facultyId": "grad_data",
+    "campus": "横浜",
+    "studyLevel": "doctor"
+  }
+]

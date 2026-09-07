@@ -1,0 +1,6 @@
+{
+  "verifiedAt": "2026-09-07T05:20:40.219Z",
+  "payloads": 373,
+  "graduateCohorts": 87,
+  "method": "paginated anonymous REST; every payload structurally equal to SQLite export"
+}

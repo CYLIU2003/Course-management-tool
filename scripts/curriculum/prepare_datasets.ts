@@ -17,7 +17,7 @@ globalThis.fetch = async (input) => {
   return new Response(bytes, { headers: { 'content-type': path.endsWith('.json') ? 'application/json' : 'text/csv' } });
 };
 const datasets: CurriculumDataset[] = [];
-for (const department of AVAILABLE_DEPARTMENTS) for (const year of [2022, 2023, 2024, 2025, 2026]) {
+for (const department of AVAILABLE_DEPARTMENTS.filter(item => !item.studyLevel)) for (const year of [2022, 2023, 2024, 2025, 2026]) {
   if (department.id === 'design_data' && year === 2022) {
     datasets.push({ status: 'unavailable', referenceOnly: true, departmentId: department.id, departmentName: `${department.faculty} ${department.name}`, entranceYear: year,
       curriculum: { name: department.name, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } }, courses: [], applicableCourses: [] });
@@ -33,5 +33,5 @@ for (const department of AVAILABLE_DEPARTMENTS) for (const year of [2022, 2023, 
   console.log(`${department.id}/${year}: ${courses.length} PDF-checked courses; graduation rules unreviewed`);
 }
 mkdirSync('data/import', { recursive: true });
-writeFileSync('data/import/curricula.json', JSON.stringify({ schemaVersion: 1, departments: AVAILABLE_DEPARTMENTS,
+writeFileSync('data/import/curricula.json', JSON.stringify({ schemaVersion: 1, departments: AVAILABLE_DEPARTMENTS.filter(item => !item.studyLevel),
   inputs: [...inputs].map(([path, sha256]) => ({ path, sha256 })), datasets }));

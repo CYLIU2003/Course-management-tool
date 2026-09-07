@@ -18,6 +18,8 @@ def read_document(connection, source_id):
     document['pages'] = [dict(page=row['page_number'], text=row['text'], hasText=bool(row['text'].strip()), topics=json.loads(row['topics_json']), tables=tables.get(row['page_number'], []))
                          for row in connection.execute('SELECT * FROM source_pages WHERE source_id=? ORDER BY page_number', (source_id,))]
     document['courses'] = [json.loads(row[0]) for row in connection.execute('SELECT record_json FROM course_records WHERE source_id=? ORDER BY page_number,id', (source_id,))]
+    if document.get('level') == 'graduate' and connection.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='reference_activities'").fetchone():
+        document['courses'].extend(json.loads(row[0]) for row in connection.execute('SELECT record_json FROM reference_activities WHERE source_id=? ORDER BY id',(source_id,)))
     return document
 
 

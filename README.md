@@ -25,6 +25,8 @@ v0.1.1：2026年度のクラス選択による教員・教場の自動入力と�
 
 2026年度開講資料35件を保存し、8,576掲載行から3,706講義コードを重複なく収録しました。ただし97講義は条件付き訂正等の確認が残るため、確定時間割としての完全性は未達です。[原本照合・収録範囲](docs/development_note_offerings.md)を参照してください。管理画面には利用状況集計と問い合わせ回答機能があります。
 
+2026-09-07：ブルー基調のUI、曜日別棒グラフ、成績内訳ドーナツ、成績検索・未入力フィルタを追加。[設計と検証記録](docs/development_note_blue_ux.md)。v0.1.2として本番反映済み。
+
 ## 目次
 
 - [主な機能](#主な機能)
@@ -223,3 +225,10 @@ Node 22.23.2を使用します。`npm run dev`はローカルPython/SQLite、`np
 Google OAuthへの変更、追加migration、Google Cloud/Supabaseの設定順序は[Googleログイン開発ノート](docs/development_note_google_auth.md)を参照してください。公開版のメール／パスワード登録は非表示・API経路も無効化しました。ローカルPython版の認証は開発用として維持しています。
 
 Google Cloud・Supabase・Cloudflareを初めて設定する場合は、[画面ごとの詳細設定ガイド](docs/cloud_services_setup.md)を参照してください。
+
+
+### v0.2.0: 年度別保存・大学院対応
+
+時間割・成績・期間設定は実際の年度（4月〜翌3月）ごとに保存します。入学年度は履修要件の基準として別に保持し、各年度の学科・専攻とセットで記録します。旧学年形式は利用者による年度確認後に移行し、旧版クライアントからの上書きをDBで拒否します。原本PDF・時間割はヘッダーの「資料・出典」に集約しました。
+
+大学院の2022〜2026年度資料は `npm run db:build` で学部データに続けて取り込みます。更新時は `python -m scripts.curriculum.collect_graduate` → `npm run db:build` → `npm run db:offerings` → `npm run db:export-supabase` の順です。大学院の修了条件の自動判定は未対応です。収集・照合の範囲は [年度別保存と大学院の開発記録](docs/development_note_academic_years.md) と [収録件数](docs/graduate-coverage.json) を確認してください。

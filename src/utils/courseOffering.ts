@@ -41,7 +41,7 @@ export function selectBestOfferingDetailed({
   currentYear,
   selectedClassName,
 }: SelectBestOfferingInput): OfferingSelectionResult {
-  const offerings = course.offerings ?? [];
+  const offerings = (course.offerings ?? []).filter(offering => !currentYear || !/^20\d{2}$/.test(currentYear) || offering.academicYear === Number(currentYear));
   if (offerings.length === 0) {
     return {
       reason: 'none',

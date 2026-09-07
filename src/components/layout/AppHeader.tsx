@@ -3,6 +3,7 @@ import YearSelector from '../timetable/YearSelector';
 import { APP_PAGE_LABELS, type AppPage } from '../navigation/appNavigation';
 
 type AppHeaderProps = {
+  academicYears?: string[];
   title: string;
   departmentId: string;
   departments: readonly Department[];
@@ -12,11 +13,13 @@ type AppHeaderProps = {
   onDepartmentChange: (departmentId: string) => void | Promise<void>;
   onEntranceYearChange: (year: number) => void | Promise<void>;
   onYearChange: (year: string) => void;
+  onOpenSources?: () => void;
   onOpenSettings?: () => void;
 };
 
 export default function AppHeader({
   title,
+  academicYears,
   departmentId,
   departments,
   entranceYear,
@@ -26,6 +29,7 @@ export default function AppHeader({
   onEntranceYearChange,
   onYearChange,
   onOpenSettings,
+  onOpenSources,
 }: AppHeaderProps) {
   const entranceYears = [...new Set([2022, 2023, 2024, 2025, 2026, entranceYear])].sort();
 
@@ -44,7 +48,7 @@ export default function AppHeader({
 
         <div className="app-header__controls">
           <label className="control-field">
-            <span>学科</span>
+            <span>この年度の学科・専攻</span>
             <select value={departmentId} onChange={(e) => onDepartmentChange(e.target.value)}>
               {departments.map((department) => (
                 <option key={department.id} value={department.id}>
@@ -65,10 +69,10 @@ export default function AppHeader({
             </select>
           </label>
 
-          <YearSelector value={currentYear} onChange={onYearChange} />
+          <YearSelector value={currentYear} onChange={onYearChange} years={academicYears} />
         </div>
 
-        <div className="app-header__actions">
+        <div className="app-header__actions"><button type="button" className="btn-ghost" onClick={onOpenSources}>資料・出典</button>
           {onOpenSettings && (
             <button type="button" className="btn-ghost app-header__settings" onClick={onOpenSettings}>
               設定

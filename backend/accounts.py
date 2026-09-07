@@ -87,11 +87,15 @@ def validate_state(data):
         if any(not isinstance(period[k], str) or len(period[k]) > 100 for k in ('label', 'time')):
             raise ValueError('時限設定が不正です。')
     years = data['allYearsData']
-    if not isinstance(years, dict) or set(years) != {'1年次', '2年次', '3年次', '4年次', 'M1', 'M2'}:
+    if not isinstance(years, dict) or not 1 <= len(years) <= 30 or not (set(years) == {'1年次', '2年次', '3年次', '4年次', 'M1', 'M2'} or all(re.fullmatch(r'20[0-9]{2}|2100', key) for key in years)):
         raise ValueError('学年データが不正です。')
     for year in years.values():
-        if not isinstance(year, dict) or set(year) != {'timetable', 'quarterRanges'}:
+        if not isinstance(year, dict) or not {'timetable', 'quarterRanges'} <= set(year) or not set(year) <= {'timetable', 'quarterRanges', 'departmentId', 'entranceYear'}:
             raise ValueError('時間割データが不正です。')
+        if 'departmentId' in year and (not isinstance(year['departmentId'], str) or len(year['departmentId']) > 100):
+            raise ValueError('所属が不正です。')
+        if 'entranceYear' in year and (type(year['entranceYear']) is not int or not 2000 <= year['entranceYear'] <= 2100):
+            raise ValueError('入学年度が不正です。')
         ranges = year['quarterRanges']
         if not isinstance(ranges, dict) or set(ranges) != {'1Q', '2Q', '3Q', '4Q'}:
             raise ValueError('学期設定が不正です。')

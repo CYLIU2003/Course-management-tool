@@ -1,6 +1,7 @@
-export type AppPage = 'home' | 'timetable' | 'requirements' | 'handbooks' | 'grades' | 'settings';
+export type AppPage = 'sources' | 'home' | 'timetable' | 'requirements' | 'handbooks' | 'grades' | 'settings';
 
 export const APP_PAGE_LABELS: Record<AppPage, string> = {
+  sources: '資料・出典',
   home: 'ホーム',
   timetable: '時間割',
   requirements: '卒業要件',

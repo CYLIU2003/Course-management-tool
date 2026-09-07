@@ -4,6 +4,7 @@ export type HandbookTopic = 'graduation' | 'progression' | 'registration' | 'cur
 export type HandbookKind = 'handbook' | 'hirameki';
 
 export interface HandbookSource {
+  level?: string;
   id: string;
   kind: HandbookKind;
   year: number;
@@ -30,6 +31,7 @@ export interface HandbookCatalog {
 }
 
 export interface HandbookCourse {
+  studyLevel?: string;
   classification?: {
     status: 'pdf_cell_checked' | 'unresolved'; sourceSha256: string; scope?: string;
     path?: { label: string; bbox: number[] }[]; printedRequirement?: string;
@@ -106,7 +108,7 @@ export function selectHandbookSources(
   const department = profile.departmentName.replace(/（.*?）/g, '');
   return documents.filter((source) => source.kind === 'handbook' && source.year === profile.entranceYear
     && source.faculty === profile.faculty
-    && [profile.faculty, department, '共通分野', '教職課程'].includes(source.label))
+    && (source.level === 'graduate' || [profile.faculty, department, '共通分野', '教職課程'].includes(source.label)))
     .sort((left, right) => {
       const order = [department, '共通分野', profile.faculty, '教職課程'];
       return order.indexOf(left.label) - order.indexOf(right.label);
