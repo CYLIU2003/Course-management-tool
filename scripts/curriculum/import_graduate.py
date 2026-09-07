@@ -11,6 +11,9 @@ from backend.database import connect, encode
 from verify_pdf_courses import verify_row, all_chars, credit_anchors
 from pdf_unicode import recover_unicode
 from course_titles import compact
+from graduate_classification import classify_graduate_courses
+from graduate_research_cells import master_research_courses, graduate_degree_requirement, graduate_course_category
+from classify_pdf_courses import cell_text
 
 MAJORS = [
     ("kikai", "機械専攻", "sougou", "総合理工学研究科"),
@@ -84,6 +87,7 @@ def international_courses(pdf, source):
         heading = compact(page.get_text())[:450]
         if "教育課程表" not in heading or "国際連携環境融合科学専攻" not in heading:
             continue
+        chars = all_chars(page)
         for ti, table in enumerate(page.find_tables().tables):
             rows = table.extract()
             if not rows:
@@ -112,6 +116,7 @@ def international_courses(pdf, source):
                 )
             if title_col is None or total_col is None:
                 continue
+            provider_col = next((i for i, value in enumerate(rows[0]) if '開設大学' in compact(value or '') or compact(value or '') == '備考'), None)
             category = ""
             for ri, row in enumerate(rows[2:], 2):
                 if title_col:
@@ -124,21 +129,31 @@ def international_courses(pdf, source):
                     continue
                 title = row[title_col] or ""
                 credit = compact(row[total_col] or "")
-                if not title or not re.fullmatch(r"[1-9](?:\.5)?", credit):
+                if not title or not re.fullmatch(r"[0-9](?:\.5)?", credit):
                     continue
                 if (
-                    compact(page.get_textbox(pymupdf.Rect(tb))) != compact(title)
-                    or compact(page.get_textbox(pymupdf.Rect(cb))) != credit
+                    cell_text(chars, tb) != compact(title)
+                    or cell_text(chars, cb) != credit
                 ):
                     continue
+                provider_box = boxes[provider_col] if provider_col is not None else None
+                if provider_box:
+                    # The 2026 vertical border intersects the first provider glyph.
+                    provider_box = [provider_box[0] - 8, *provider_box[1:]]
+                provider_text = cell_text(chars, provider_box) if provider_box else ''
+                university = 'エディスコーワン大学' if 'エディスコーワン大学' in provider_text else '本学' if '本学' in provider_text or any(label in provider_text for label in ['環境情報学専攻', '総合理工学研究科']) else None
+                if not university:
+                    raise ValueError(f'International course provider lacks original evidence: {source["id"]} p{pi+1} {title}: {provider_text!r}')
                 title = " ".join(title.split())
                 result.append(
                     dict(
                         id=f"{source['id']}:international:{pi+1}:{ti}:{ri}",
                         title=title,
                         credits=float(credit),
+                        creditBasis='not_credit_based' if float(credit) == 0 else 'credits',
+                        providerEvidence=dict(university=university, text=provider_text, bbox=provider_box, page=pi + 1, sourceSha256=source['sha256'], method='original-provider-column'),
                         category=category or "関連科目",
-                        group="配当・算入条件確認中",
+                        group='他専攻・他研究科開講科目' if compact(rows[0][provider_col]) == '備考' else '本専攻開講科目',
                         rawRequired="",
                         courseType="unknown",
                         sourceCode="",
@@ -325,7 +340,7 @@ def main():
         data["courses"] = [
             c
             for c in data["courses"]
-            if ":doctor:" not in c["id"] and ":international:" not in c["id"]
+            if ":doctor:" not in c["id"] and ":international:" not in c["id"] and ":master-research:" not in c["id"]
         ]
         by_page = {}
         for course in data["courses"]:
@@ -383,6 +398,9 @@ def main():
             data["courses"].extend(doctoral_courses(pdf, source))
             if source["faculty"] == "環境情報学研究科":
                 data["courses"].extend(international_courses(pdf, source))
+            classify_graduate_courses(pdf, data)
+            if source['faculty'] == '環境情報学研究科':
+                data['courses'].extend(master_research_courses(pdf, source))
         data["dataPath"] = source["extractedPath"]
         data["level"] = "graduate"
         source.update(
@@ -430,21 +448,44 @@ def main():
                         ):
                             continue
                         key = (compact(course["title"]), course["credits"])
+                        category_proof = course.get('classification', {})
+                        verified_path = category_proof.get('path', []) if category_proof.get('sourceSha256') == source['sha256'] else []
+                        required_header = course.get('requiredEvidence', {})
+                        required_columns = course.get('requirementEvidence', {})
+                        options = required_columns.get('options', []) if required_columns.get('sourceSha256') == source['sha256'] else []
+                        course_type = 'required' if required_header.get('sourceSha256') == source['sha256'] else options[0]['courseType'] if len(options) == 1 and options[0]['courseType'] in ('required', 'elective-required') else 'unknown'
+                        if year in (2022, 2023) and level == 'master' and faculty == '総合理工学研究科' and re.fullmatch(r'29-5[YZ][0-9A-Z]', compact(course.get('sourceCode', ''))):
+                            # The pre-2024 lists have no compulsory-mark column.
+                            # Their research numbering, own-major scope and annual
+                            # compulsory-research rule identify the research block.
+                            course_type = 'elective-required' if slug == 'genshiryoku' else 'required'
+                        if slug == 'genshiryoku' and options and '※' in options[0].get('rawPrintedSymbol', ''):
+                            course_type = 'elective-required'
+                        degree_category = graduate_course_category(course, course_type, level, slug)
+                        if slug == 'international':
+                            provider = course.get('providerEvidence', {})
+                            if provider.get('sourceSha256') != source['sha256']:
+                                raise ValueError('International course provider evidence missing')
+                            degree_category = '本学開設科目' if provider['university'] == '本学' else 'エディスコーワン大学開設科目'
+                            course_type = 'elective'
+                        if degree_category == '授業科目':
+                            course_type = 'elective'
                         candidates.setdefault(
                             key,
                             dict(
                                 id=f"reference-{department['id']}-{course['id']}",
                                 title=course["title"],
                                 credits=course["credits"],
-                                courseType="unknown",
-                                category=course["category"] or "区分確認中",
+                                courseType=course_type,
+                                category=verified_path[0]['label'] if verified_path else course['category'],
                                 group=course.get("group", ""),
                                 sourceKind="curriculum",
                                 departmentId=department["id"],
                                 curriculumYear=year,
-                                tags=["算入条件確認中"],
+                                tags=['指導教員の研究分野に対応する科目を履修'] if slug == 'genshiryoku' and course_type == 'elective-required' else ['他専攻履修の許可が必要'] if course.get('group') == '他専攻・他研究科開講科目' else [],
                                 sourceDocumentId=source["id"],
                                 sourcePage=course["page"],
+                                degreeCategory=degree_category,
                             ),
                         )
                 payload = dict(
@@ -461,6 +502,7 @@ def main():
                     ),
                     courses=list(candidates.values()),
                     applicableCourses=[],
+                    graduateRequirements=graduate_degree_requirement(slug, level, year, all_data),
                 )
                 datasets.append(payload)
     with connect() as db:

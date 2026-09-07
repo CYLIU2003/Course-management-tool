@@ -7,6 +7,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import argparse
 
 import pymupdf
 
@@ -32,6 +33,8 @@ def page_scope(document, page, previous):
         if '学部共通科目' in heading[:120]:
             return document['faculty']
         matches = [name for name in DEPARTMENTS if name in heading[:220]]
+        if len(matches) > 1 and '共通' in heading[:220] and '基礎科目' in heading[:220]:
+            return document['faculty']
         return matches[0] if len(matches) == 1 else None
     # Continuation is allowed only on the next page with an actual timetable header.
     headers = ''.join(compact(str(row)) for table in page['tables'] for row in table['rows'][:4])
@@ -59,18 +62,38 @@ def credit_anchors(chars):
         if any(c['c'] == '単' and abs(center(c)[0] - x) < 3
                and 0 < y - center(c)[1] < 22 for c in chars):
             anchors.append((x, y, list(char['bbox'])))
-    return anchors
+    full_headers = [anchor for anchor in anchors if any(c['c'] == '数'
+                    and abs(center(c)[0] - anchor[0]) < 3 and 0 < center(c)[1] - anchor[1] < 22 for c in chars)]
+    return full_headers or anchors
 
 
-def verify_row(course, words, chars, anchors, scope, sha256):
+def credit_glyphs(chars, x, y):
+    """Read one contiguous numeric token, including decimal digits off-center."""
+    digits = sorted((c for c in chars if re.fullmatch(r'[0-9.]', c['c'])
+                     and abs(center(c)[0] - x) < 15 and abs(center(c)[1] - y) < 2.5), key=lambda c: c['bbox'][0])
+    clusters = []
+    for char in digits:
+        if not clusters or char['bbox'][0] - clusters[-1][-1]['bbox'][2] > 1.5:
+            clusters.append([])
+        clusters[-1].append(char)
+    candidates = [cluster for cluster in clusters if any(abs(center(c)[0] - x) < 5 for c in cluster)]
+    return candidates[0] if len(candidates) == 1 else []
+
+
+def verify_row(course, words, chars, anchors, scope, sha256, *, recover_credit=False):
     if not scope:
         return {'status': 'quarantined', 'reason': 'outside_scoped_curriculum_table'}
     printed_title = course['title'].split('※')[0].strip()
     # G and teaching format are separate annotations in these original tables.
     if scope in {'人間科学科', '児童学科', '都市生活学科'}:
-        printed_title = re.sub(r'\s*(?:G\s+)?(?:講義|演習|実験|実習)$', '', printed_title)
+        format_cell = any(re.search(r'(?:\\n|\n)\s*(?:講義|演習|実験|実習)$', value or '')
+                          for value in course.get('rawCells', []))
+        if format_cell:
+            printed_title = re.sub(r'\s*(?:G\s+)?(?:講義|演習|実験|実習)$', '', printed_title)
         printed_title = re.sub(r'\s+G$', '', printed_title)
     title = compact(printed_title)
+    if title in {'講義', '演習', '実験', '実習', '実技'}:
+        return {'status': 'quarantined', 'reason': 'teaching_format_is_not_a_course_title'}
     # Whole PDF words are independent of the table parser's clipped cell borders.
     matches = [word for word in words if compact(word[4]) == title]
     if not matches:
@@ -86,18 +109,32 @@ def verify_row(course, words, chars, anchors, scope, sha256):
                 if combined == title:
                     matches.append((first[0], first[1], last[2], max(first[3], last[3]), printed_title))
                     break
+    if len(matches) > 1 and course.get('sourceCode'):
+        code_words = [word for word in words if compact(word[4]) == compact(course['sourceCode'])]
+        if len(code_words) == 1:
+            code = code_words[0]
+            row_y = (code[1] + code[3]) / 2
+            credit_columns = [x for x, header_y, _ in anchors if header_y < row_y and x < code[0]]
+            if len(credit_columns) == 1:
+                row_matches = [word for word in matches if abs((word[1] + word[3]) / 2 - row_y) < 2.5 and word[2] < credit_columns[0]]
+                # The course cell is to the right of a repeated category label.
+                if row_matches:
+                    matches = [max(row_matches, key=lambda word: word[0])]
     if len(matches) != 1:
         return {'status': 'quarantined', 'reason': 'title_not_unique_in_pdf_words'}
     word = matches[0]
     y = (word[1] + word[3]) / 2
+    preceding = [anchor for anchor in anchors if anchor[1] < y]
+    if preceding:
+        latest_header_y = max(anchor[1] for anchor in preceding)
+        anchors = [anchor for anchor in preceding if abs(anchor[1] - latest_header_y) < 3]
     candidates = []
     for x, header_y, header_box in anchors:
         if x <= word[2] or header_y >= y:
             continue
-        digits = sorted([c for c in chars if abs(center(c)[0] - x) < 5
-                         and abs(center(c)[1] - y) < 2.5], key=lambda c: c['bbox'][0])
+        digits = credit_glyphs(chars, x, y)
         printed = ''.join(c['c'] for c in digits)
-        if re.fullmatch(r'\d+(?:\.\d+)?', printed) and float(printed) == course['credits']:
+        if re.fullmatch(r'\d+(?:\.\d+)?', printed) and 0 < float(printed) <= 20 and (recover_credit or float(printed) == course['credits']):
             candidates.append({'headerBbox': header_box, 'text': printed,
                                'glyphBboxes': [list(c['bbox']) for c in digits]})
     if len(candidates) != 1:
@@ -115,10 +152,13 @@ def recover_numbered_rows(data, page_number, page, words, chars, anchors, scope,
     """
     if not scope:
         return []
+    from classify_pdf_courses import LABELS, structural_tables, cell_text
+    title_headers = [box for table in structural_tables(page) for box in table.cells
+                     if box and cell_text(chars, box) in {'授業科目', '科目名'}]
     recovered = []
     for code_word in words:
         code = compact(code_word[4])
-        if not re.fullmatch(r'[A-Z]{2,3}-[0-9A-Z]{3}', code):
+        if not re.fullmatch(r'(?:[A-Z]{2,3}|[0-9]{2})-[0-9A-Z]{3}', code):
             continue
         if sum(compact(w[4]) == code for w in words) != 1:
             continue
@@ -126,17 +166,45 @@ def recover_numbered_rows(data, page_number, page, words, chars, anchors, scope,
             continue
         y = (code_word[1] + code_word[3]) / 2
         columns = [(x, hy) for x, hy, _ in anchors if hy < y and x < code_word[0]]
+        if columns:
+            latest_header_y = max(hy for _, hy in columns)
+            columns = [(x, hy) for x, hy in columns if abs(hy - latest_header_y) < 3]
         if len(columns) != 1:
             continue
         x, _ = columns[0]
-        credit_chars = sorted([c for c in chars if abs(center(c)[0] - x) < 5
-                               and abs(center(c)[1] - y) < 2.5], key=lambda c: c['bbox'][0])
+        title_positions = [c['verification']['titleBbox'][0] for c in existing
+                           if c.get('verification', {}).get('status') == 'pdf_position_checked'
+                           and c['verification'].get('creditEvidence')
+                           and abs(sum(c['verification']['creditEvidence']['headerBbox'][::2]) / 2 - x) < 1]
+        title_left = min(title_positions) - 1 if title_positions else page.rect.width * .14
+        preceding_title_headers = [box for box in title_headers if box[3] < y and box[2] < x]
+        if preceding_title_headers:
+            title_left = min(title_left, max(preceding_title_headers, key=lambda box: box[3])[0])
+        credit_chars = credit_glyphs(chars, x, y)
         credit = ''.join(c['c'] for c in credit_chars)
         if not re.fullmatch(r'\d+(?:\.\d+)?', credit) or not 0 < float(credit) <= 20:
             continue
-        left = sorted([w for w in words if page.rect.width * .14 < w[0] and w[2] < x - 12
+        if data['id'] == 'handbook-2026-9ac54018ba04a3dadd1774fcaec7facc' and page_number == 61 and code == 'HS-271':
+            if data['sha256'] != 'c0e658d1beee8e76708dc00e1fccafe1e07a4115ab0a35572851879a3f1672dd':
+                raise ValueError('Reviewed multiline course source changed')
+            title_box = [113.03460693359375, 697.3424072265625, 200.61334228515625, 716.51123046875]
+            expected = '特別な配慮を必要とする子どもの理解と支援'
+            if cell_text(chars, title_box) != expected or credit != '2':
+                raise ValueError('Reviewed multiline title or credit changed')
+            header = next(box for ax, _, box in anchors if abs(ax - x) < .1)
+            recovered.append(dict(id=f"{data['id']}-p61-number-{code}", title=expected, credits=2,
+                rawRequired='', courseType='unknown', category='', group='', sourceCode=code,
+                sourceId=data['id'], page=61, table=-1, row=-1, status='extracted_reference', rawCells=[],
+                extractionMethod='numbered_pdf_row', verification=dict(status='pdf_position_checked', scope=scope,
+                sourceSha256=data['sha256'], titleText=expected, titleBbox=title_box,
+                sourceCodeBbox=list(code_word[:4]), method='original-render-reviewed-multiline-cell',
+                creditEvidence=dict(headerBbox=header, text=credit, glyphBboxes=[list(c['bbox']) for c in credit_chars]))))
+            continue
+        left = sorted([w for w in words if title_left <= w[0] and w[2] < x - 12
                        and abs((w[1] + w[3]) / 2 - y) < 2.5 and w[3] - w[1] < 18
                        and re.search(r'[一-龯ぁ-んァ-ヶA-Za-z]', w[4]) and len(compact(w[4])) >= 2
+                       and compact(w[4]) not in {'講義', '演習', '実験', '実習', '実技'}
+                       and (title_positions or compact(w[4]) not in LABELS)
                        and not w[4].startswith('※')], key=lambda w: w[0])
         if not left:
             continue
@@ -159,12 +227,21 @@ def recover_numbered_rows(data, page_number, page, words, chars, anchors, scope,
 
 
 def main():
+    from apply_title_reviews import apply_title_reviews
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--source', action='append')
+    arguments = parser.parse_args()
     report = {'method': 'pdf-word-title-and-vertical-credit-header-v1', 'documents': [], 'reasons': {}}
     total = accepted = 0
     catalog_path = ROOT / 'public/handbooks/catalog.json'
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+    source_ids = {source['id'] for source in catalog['documents']}
     for path in sorted(EXTRACTED.glob('*.json')):
         data = json.loads(path.read_text(encoding='utf-8'))
+        if data['id'] not in source_ids:
+            continue
+        if arguments.source and data['id'] not in arguments.source:
+            continue
         data['courses'] = [c for c in data['courses'] if c.get('extractionMethod') != 'numbered_pdf_row']
         pdf_path = ROOT / 'public' / data['localPath'].lstrip('/')
         if hashlib.sha256(pdf_path.read_bytes()).hexdigest() != data['sha256']:
@@ -189,6 +266,13 @@ def main():
                 anchors = credit_anchors(chars)
                 for course in courses:
                     evidence = verify_row(course, words, chars, anchors, scope, data['sha256'])
+                    if evidence.get('reason') == 'credit_column_not_uniquely_confirmed':
+                        corrected = verify_row(course, words, chars, anchors, scope, data['sha256'], recover_credit=True)
+                        if corrected['status'] == 'pdf_position_checked':
+                            course.setdefault('originalExtractedCredits', course['credits'])
+                            course['credits'] = float(corrected['creditEvidence']['text'])
+                            corrected['creditCorrection'] = 'unique_original_credit_header_and_row_glyphs'
+                            evidence = corrected
                     course['verification'] = evidence
                     if evidence['status'] == 'pdf_position_checked':
                         checked += 1
@@ -198,6 +282,8 @@ def main():
                 recovered = recover_numbered_rows(data, cached_page['page'], page, words, chars, anchors, scope, courses)
                 data['courses'].extend(recovered)
                 checked += len(recovered)
+        apply_title_reviews(data)
+        checked = sum(course.get('verification', {}).get('status') == 'pdf_position_checked' for course in data['courses'])
         path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
         report['documents'].append({'id': data['id'], 'label': data['label'], 'year': data['year'],
                                     'rawRows': len(data['courses']), 'positionChecked': checked})
@@ -205,10 +291,20 @@ def main():
         accepted += checked
         next(source for source in catalog['documents'] if source['id'] == data['id'])['courseCount'] = len(data['courses'])
         print(f"{data['year']} {data['label']}: {checked}/{len(data['courses'])}", flush=True)
-    report.update(rawRows=total, positionChecked=accepted, quarantined=total - accepted)
-    report['recoveredNumberedRows'] = sum(c.get('extractionMethod') == 'numbered_pdf_row'
-                                        for path in EXTRACTED.glob('*.json')
-                                        for c in json.loads(path.read_text(encoding='utf-8'))['courses'])
+    # A targeted repair must still emit a complete catalog coverage report.
+    report.update(documents=[], reasons={}, rawRows=0, positionChecked=0, recoveredNumberedRows=0)
+    for source in catalog['documents']:
+        data = json.loads((ROOT / 'public' / source['dataPath'].lstrip('/')).read_text(encoding='utf8'))
+        checked = sum(c.get('verification', {}).get('status') == 'pdf_position_checked' for c in data['courses'])
+        report['documents'].append(dict(id=data['id'], label=data['label'], year=data['year'], rawRows=len(data['courses']), positionChecked=checked))
+        report['rawRows'] += len(data['courses'])
+        report['positionChecked'] += checked
+        report['recoveredNumberedRows'] += sum(c.get('extractionMethod') == 'numbered_pdf_row' for c in data['courses'])
+        for course in data['courses']:
+            reason = course.get('verification', {}).get('reason')
+            if reason:
+                report['reasons'][reason] = report['reasons'].get(reason, 0) + 1
+    report['quarantined'] = report['rawRows'] - report['positionChecked']
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2), encoding='utf-8')
     (ROOT / 'docs/pdf-course-verification.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
 

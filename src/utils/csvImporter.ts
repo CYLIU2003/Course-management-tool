@@ -288,7 +288,7 @@ function parseCourseType(value: string | number | undefined, fileLabel: string, 
   return 'unknown';
 }
 
-function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number, _fileLabel: string): CreditRequirementRow {
+function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number): CreditRequirementRow {
   const fileLabel = '卒業要件CSV';
   return {
     stage: parseRequiredText(row.stage, 'stage', fileLabel, rowNumber),
@@ -303,7 +303,7 @@ function parseCreditRequirementRow(row: CsvNormalizedRow, rowNumber: number, _fi
   };
 }
 
-function parseCourseRow(row: CsvNormalizedRow, rowNumber: number, _fileLabel: string): CourseRow {
+function parseCourseRow(row: CsvNormalizedRow, rowNumber: number): CourseRow {
   const fileLabel = '科目一覧CSV';
   return {
     id: parseRequiredText(row.id, 'id', fileLabel, rowNumber),

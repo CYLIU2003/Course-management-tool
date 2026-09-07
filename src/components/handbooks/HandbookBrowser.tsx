@@ -13,6 +13,9 @@ import OfferingBrowser from '../OfferingBrowser';
 import { DEFAULT_OPTIONS } from '../../core/handbooks/profile';
 import TapFaq from './TapFaq';
 import GuideProgress from './GuideProgress';
+import GraduateGuide from './GraduateGuide';
+import { loadDepartmentCurriculum } from '../../api/curriculum';
+import type { CurriculumDataset } from '../../core/curriculum';
 
 type View = HandbookTopic | 'courses' | 'all';
 const VIEWS: Array<{ id: View; label: string }> = [
@@ -39,6 +42,22 @@ export default function HandbookBrowser({ department, entranceYear, allYearsData
   const view = (requestedView === 'teacher' && !options.takesTeacher) || (requestedView === 'hirameki' && !options.takesHirameki) || (requestedView === 'tap' && !options.takesTap) ? 'graduation' : requestedView;
   const [sourceId, setSourceId] = useState('');
   const [pageLimit, setPageLimit] = useState(PAGE_SIZE);
+  const [degreeDataset, setDegreeDataset] = useState<CurriculumDataset>();
+  const [degreeError, setDegreeError] = useState('');
+  const departmentId = department?.id;
+  const degreeReady = degreeDataset?.departmentId === department?.id && degreeDataset?.entranceYear === entranceYear;
+  const degreeRules = degreeReady
+    ? degreeDataset.degreeRequirementSets : undefined;
+
+  useEffect(() => {
+    if (!departmentId) return;
+    const controller = new AbortController();
+    setDegreeError('');
+    loadDepartmentCurriculum(departmentId, entranceYear, controller.signal)
+      .then(value => { if (!controller.signal.aborted) setDegreeDataset(value); })
+      .catch(() => { if (!controller.signal.aborted) setDegreeError('必要単位を読み込めませんでした。再読み込みしてください。'); });
+    return () => controller.abort();
+  }, [departmentId, entranceYear, retry]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -70,7 +89,7 @@ export default function HandbookBrowser({ department, entranceYear, allYearsData
         setLoading(false);
       });
     return () => controller.abort();
-  }, [catalog, sources, retry, department?.studyLevel]);
+  }, [catalog, sources, retry, department?.studyLevel, department?.id]);
 
   const selectedDocuments = useMemo(() => documents.filter((document) => sourceId ? document.id === sourceId
     : view === 'hirameki' ? document.kind === 'hirameki' : document.kind === 'handbook'), [documents, sourceId, view]);
@@ -91,16 +110,18 @@ export default function HandbookBrowser({ department, entranceYear, allYearsData
       <h2 id="handbook-heading">履修ガイド</h2><p>{entranceYear}年度入学 · {department?.faculty} {department?.name}</p></div>
 
     </header>
-    {department && !department.studyLevel && <StudentProfile key={`${department.id}:${entranceYear}`} departmentId={department.id} entranceYear={entranceYear} onChange={setOptions} />}
+    {department && !department.studyLevel && <StudentProfile key={`${department.id}:${entranceYear}`} departmentId={department.id} entranceYear={entranceYear} onChange={setOptions} requirementSets={degreeRules} />}
     {!options.isGeneral && <p className="handbook-notice">個別条件の適用は未判定です。ここで表示する通常課程の必要単位を、そのまま卒業判定には使えません。</p>}
     <p className="handbook-notice">変更・訂正は大学ポータルの正誤表も確認してください。</p>
     <div className="handbook-tabs" role="group" aria-label="履修資料の表示内容">{VIEWS.filter((item) => (raw || !['all', 'courses', 'registration', 'progression'].includes(item.id)) && (item.id !== 'teacher' || options.takesTeacher) && (item.id !== 'hirameki' || options.takesHirameki) && (item.id !== 'tap' || options.takesTap)).map((item) => <button
       key={item.id} type="button" aria-pressed={view === item.id} onClick={() => changeView(item.id)}>{item.label}</button>)}</div>
     {loading && <p role="status">履修情報を読み込み中です…</p>}
-    {department?.studyLevel && <p className="handbook-notice">大学院の科目候補を表示します。修了要件の自動判定は未対応です。必要単位・研究指導の条件は「資料・出典」で確認できます。</p>}
     {error && <div role="alert" className="handbook-notice">{error} <button type="button" onClick={() => setRetry((count) => count + 1)}>再読み込み</button></div>}
     {view === 'hirameki' && <HiramekiPanel programs={relevantPrograms} sources={sources} allYearsData={allYearsData} onOpenSource={openSource} />}
-    {view === 'graduation' && !loading && department && <GuideProgress documents={documents} department={department.name} data={allYearsData} />}
+    {view === 'graduation' && degreeError && <p role="alert">{degreeError}</p>}
+    {view === 'graduation' && !degreeReady && !degreeError && <p role="status">必要単位を読み込み中です…</p>}
+    {view === 'graduation' && degreeReady && degreeDataset.graduateRequirements && <GraduateGuide requirements={degreeDataset.graduateRequirements} courses={degreeDataset.courses} data={allYearsData} />}
+    {view === 'graduation' && !loading && degreeReady && department && !department.studyLevel && <GuideProgress key={`${department.id}:${entranceYear}`} documents={documents} department={department.name} data={allYearsData} requirementSets={degreeRules} profileVariant={options.degreeVariant ?? ''} />}
     {view === 'teacher' && <p className="handbook-notice">免許種別ごとの必要単位・教育実習の条件を確認してください。</p>}
     {view === 'tap' && <p className="handbook-notice">学部・派遣先ごとの参加条件と単位認定・読み替えを確認してください。</p>}
     {view === 'tap' && <TapFaq />}

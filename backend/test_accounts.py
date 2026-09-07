@@ -132,7 +132,7 @@ class AccountTests(unittest.TestCase):
             response = self.client.put('/api/me/profile', headers=self.headers(me), json=data)
             self.assertEqual(response.status_code, 200)
             revision = response.json['revision']
-            self.assertEqual(self.client.get('/api/me/profile').json, dict(data, revision=revision))
+            self.assertEqual(self.client.get('/api/me/profile').json, dict(data, revision=revision, degreeVariant=None))
         other = self.app.test_client(); self.register(other, 'student_two')
         self.assertIsNone(other.get('/api/me/profile').json)
 

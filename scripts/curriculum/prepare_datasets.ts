@@ -2,9 +2,13 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { AVAILABLE_DEPARTMENTS } from '../../src/core/departments';
 import { loadOfficialCourseCandidates } from '../../src/api/handbooks';
-import type { CurriculumDataset } from '../../src/core/curriculum';
+import type { CurriculumDataset, DegreeRequirementSet } from '../../src/core/curriculum';
 
 const inputs = new Map<string, string>();
+const rulesPath = 'data/verified/undergraduate_degree_rules.json';
+const rulesBytes = readFileSync(rulesPath);
+inputs.set(rulesPath, createHash('sha256').update(rulesBytes).digest('hex'));
+const degreeRules = (JSON.parse(rulesBytes.toString('utf8')) as { sets: DegreeRequirementSet[] }).sets;
 inputs.set('src/core/departments.ts', createHash('sha256').update(readFileSync('src/core/departments.ts')).digest('hex'));
 globalThis.fetch = async (input) => {
   const url = String(input);
@@ -29,7 +33,7 @@ for (const department of AVAILABLE_DEPARTMENTS.filter(item => !item.studyLevel))
   datasets.push({ status: 'partial', referenceOnly: true,
     departmentId: department.id, departmentName: `${department.faculty} ${year === 2022 && department.id === 'ningen' ? '児童学科' : department.name}`, entranceYear: year,
     curriculum: { name: department.name, requiredCredits: 0, breakdown: { required: 0, electiveRequired: 0, elective: 0 } },
-    courses, applicableCourses: [] });
+    courses, applicableCourses: [], degreeRequirementSets: degreeRules.filter(rule => rule.departmentId === department.id && rule.entranceYear === year) });
   console.log(`${department.id}/${year}: ${courses.length} PDF-checked courses; graduation rules unreviewed`);
 }
 mkdirSync('data/import', { recursive: true });

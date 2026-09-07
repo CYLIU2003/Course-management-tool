@@ -131,7 +131,7 @@ export default function AcademicOverview({
     }
 
     return [...warningMap.values()];
-  }, [detailedWarnings, snapshot.warnings]);
+  }, [detailedWarnings, snapshot]);
   const visibleCombinedWarnings = compact ? combinedWarnings.slice(0, 3) : combinedWarnings;
   const graduationRisk = useMemo(
     () => (allYearsData ? calculateGraduationRisk(snapshot, allYearsData, courses ?? [], curriculum) : null),

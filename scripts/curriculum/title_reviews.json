@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "reviews": [
+    {
+      "sourceId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1",
+      "sourceSha256": "93ebc4b9d943316e5219515536d339fa3bf4229cd60b92f3e884c624156ea200",
+      "page": 5,
+      "rejectedId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1-p5-t1-r18",
+      "rejectedTitle": "PBL(1)",
+      "acceptedId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1-p5-number-SL-906",
+      "acceptedTitle": "Next PBL(1)",
+      "titleBbox": [
+        123.30970764160156,
+        314.3518981933594,
+        155.63291931152344,
+        323.6084289550781
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1",
+      "sourceSha256": "93ebc4b9d943316e5219515536d339fa3bf4229cd60b92f3e884c624156ea200",
+      "page": 5,
+      "rejectedId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1-p5-t1-r19",
+      "rejectedTitle": "PBL(2)",
+      "acceptedId": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1-p5-number-SL-907",
+      "acceptedTitle": "Next PBL(2)",
+      "titleBbox": [
+        123.30970764160156,
+        325.45208740234375,
+        155.63291931152344,
+        334.7086181640625
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1",
+      "sourceSha256": "018de7dea6de6edbef34ecea5110f39aabf5cbb07db12c0bc9009bcb0af1263a",
+      "page": 5,
+      "rejectedId": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1-p5-number-UC-2B1",
+      "rejectedTitle": "マネジメ 建設施工マネジメント",
+      "acceptedId": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1-p5-t1-r33",
+      "acceptedTitle": "建設施工マネジメント",
+      "titleBbox": [
+        133.09471130371094,
+        525.8828125,
+        207.78176879882812,
+        537.7764892578125
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1",
+      "sourceSha256": "2a277ee62b434e7f6676869c375bb33855ec8272d8346b67450bf5327b5ccfeb",
+      "page": 6,
+      "rejectedId": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1-p6-number-NE-481",
+      "rejectedTitle": "究関連 卒業研究(1)",
+      "acceptedId": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1-p6-t1-r25",
+      "acceptedTitle": "卒業研究(1)",
+      "titleBbox": [
+        119.92289733886719,
+        460.7790832519531,
+        154.24745178222656,
+        467.93359375
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2024-6163177de179eef2a04222bdc9bbf109",
+      "sourceSha256": "d0853f093be42e14336de53ac1f1ba96bbe2ab456b21e18a3db1775379c8edd2",
+      "page": 6,
+      "rejectedId": "handbook-2024-6163177de179eef2a04222bdc9bbf109-p6-number-NE-332",
+      "rejectedTitle": "工学 原子炉設計工学",
+      "acceptedId": "handbook-2024-6163177de179eef2a04222bdc9bbf109-p6-t1-r15",
+      "acceptedTitle": "原子炉設計工学",
+      "titleBbox": [
+        105.74299621582031,
+        312.4225769042969,
+        153.1092071533203,
+        323.1937255859375
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2024-6163177de179eef2a04222bdc9bbf109",
+      "sourceSha256": "d0853f093be42e14336de53ac1f1ba96bbe2ab456b21e18a3db1775379c8edd2",
+      "page": 6,
+      "rejectedId": "handbook-2024-6163177de179eef2a04222bdc9bbf109-p6-number-NE-372",
+      "rejectedTitle": "工学 放射線利用工学",
+      "acceptedId": "handbook-2024-6163177de179eef2a04222bdc9bbf109-p6-t1-r23",
+      "acceptedTitle": "放射線利用工学",
+      "titleBbox": [
+        105.74299621582031,
+        432.83056640625,
+        153.1092071533203,
+        443.6017150878906
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2024-b334f4add85602c728c54bc03cbca0bf",
+      "sourceSha256": "920134bf3b7f800a2d5f381fdfaad05909fc4b8e7e92e803795d25d5f89f097f",
+      "page": 5,
+      "rejectedId": "handbook-2024-b334f4add85602c728c54bc03cbca0bf-p5-number-MD-381",
+      "rejectedTitle": "卒業研究 事例研究(2)",
+      "acceptedId": "handbook-2024-b334f4add85602c728c54bc03cbca0bf-p5-t0-r62",
+      "acceptedTitle": "事例研究(2)",
+      "titleBbox": [
+        131.34661865234375,
+        692.5859375,
+        165.30886840820312,
+        702.482177734375
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+      "sourceSha256": "135b6f358ed4fd12945db59da07b6156a190fa85d2e0ec5e12485510eaa3f442",
+      "page": 6,
+      "rejectedId": "handbook-2025-202457f6e199e17ea68701e06174ad20-p6-number-NE-342",
+      "rejectedTitle": "クル工学 バックエンド工学",
+      "acceptedId": "handbook-2025-202457f6e199e17ea68701e06174ad20-p6-t1-r5",
+      "acceptedTitle": "バックエンド工学",
+      "titleBbox": [
+        115.18179321289062,
+        174.00149536132812,
+        161.9044189453125,
+        183.30593872070312
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+      "sourceSha256": "135b6f358ed4fd12945db59da07b6156a190fa85d2e0ec5e12485510eaa3f442",
+      "page": 6,
+      "rejectedId": "handbook-2025-202457f6e199e17ea68701e06174ad20-p6-number-NE-352",
+      "rejectedTitle": "設計工学 原子力メンテナンス工学",
+      "acceptedId": "handbook-2025-202457f6e199e17ea68701e06174ad20-p6-t1-r7",
+      "acceptedTitle": "原子力メンテナンス工学",
+      "titleBbox": [
+        115.18179321289062,
+        196.06478881835938,
+        179.4188232421875,
+        205.36923217773438
+      ],
+      "method": "original-render-title-cell-reviewed"
+    },
+    {
+      "sourceId": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f",
+      "sourceSha256": "8295e05daac03fb7f90ce50fb6cb781c925002b16273b65f94facf614439227c",
+      "page": 5,
+      "rejectedId": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f-p5-number-AL-101",
+      "rejectedTitle": "専門教養 都市のインフラストラクチャー",
+      "acceptedId": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f-p5-t1-r2",
+      "acceptedTitle": "都市のインフラストラクチャー",
+      "titleBbox": [
+        121.29830932617188,
+        141.08840942382812,
+        212.925537109375,
+        151.50900268554688
+      ],
+      "method": "original-render-title-cell-reviewed"
+    }
+  ]
+}

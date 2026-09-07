@@ -2,8 +2,8 @@ import { apiFetch } from './client';
 import type { CurriculumDataset } from '../core/curriculum';
 
 /** The sole automatic course/requirement source: the local SQLite API. */
-export async function loadDepartmentCurriculum(departmentId: string, entranceYear: number): Promise<CurriculumDataset> {
-  const response = await apiFetch(`/api/curricula/${encodeURIComponent(departmentId)}/${entranceYear}`);
+export async function loadDepartmentCurriculum(departmentId: string, entranceYear: number, signal?: AbortSignal): Promise<CurriculumDataset> {
+  const response = await apiFetch(`/api/curricula/${encodeURIComponent(departmentId)}/${entranceYear}`, { signal });
   if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) {
     throw new Error('履修情報を読み込めませんでした。再読み込みしてください。');
   }

@@ -934,20 +934,20 @@ function buildEmptyQuarter(
   days: string[],
   periods: { id: number; label: string; time: string }[]
 ) {
-  const grid: any = {};
+  const grid: { [day: string]: { [pid: string]: CourseCell } } = {};
   for (const d of days) {
     grid[d] = {};
     for (const p of periods) grid[d][String(p.id)] = null;
   }
-  return grid as { [day: string]: { [pid: string]: CourseCell } };
+  return grid;
 }
 
-function mergeGrids(baseGrid: any, existing: any) {
-  const out: any = clone(baseGrid);
-  for (const d of Object.keys(existing ?? {})) {
+function mergeGrids(baseGrid: { [day: string]: { [pid: string]: CourseCell } }, existing: { [day: string]: { [pid: string]: CourseCell } } | undefined) {
+  const out = clone(baseGrid);
+  for (const [d, slots] of Object.entries(existing ?? {})) {
     out[d] ??= {};
-    for (const pid of Object.keys(existing[d] ?? {})) {
-      out[d][pid] = existing[d][pid];
+    for (const [pid, cell] of Object.entries(slots ?? {})) {
+      out[d][pid] = cell;
     }
   }
   return out;

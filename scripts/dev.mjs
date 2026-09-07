@@ -33,7 +33,8 @@ try {
       status = await health();
     }
   }
-  if (status?.schemaVersion !== 4 || status?.counts?.cohort_datasets !== 95) throw new Error('SQLiteの学科・入学年度データが未準備です。npm run db:build 後にAPIを再起動してください。');
+  const cohortCount = status?.counts?.cohort_datasets;
+  if (status?.schemaVersion !== 5 || !Number.isInteger(cohortCount) || cohortCount < 182) throw new Error('SQLiteの学部・大学院データが未準備です。npm run db:build 後にAPIを再起動してください。');
   const args = process.argv.slice(2);
   const preview = args.includes('--preview');
   web = spawn(process.execPath, ['node_modules/vite/bin/vite.js', ...(preview ? ['preview'] : []), ...args.filter((arg) => arg !== '--preview')], { stdio: 'inherit' });

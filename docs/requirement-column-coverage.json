@@ -1,0 +1,892 @@
+[
+  {
+    "id": "handbook-2022-0cb7237324b5d40678d5f1f66c2311c9",
+    "checked": 313,
+    "courses": 313
+  },
+  {
+    "id": "handbook-2022-117c0e5981a41cce06761c8bc088cb9f",
+    "checked": 127,
+    "courses": 127
+  },
+  {
+    "id": "handbook-2022-15d3046328b4990da4a1885bd206d526",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-1c9e3b144e0d92b5f0addd1c9421decd",
+    "checked": 177,
+    "courses": 177
+  },
+  {
+    "id": "handbook-2022-22cdc7c0684c81c91da58c6c0f451e73",
+    "checked": 78,
+    "courses": 78
+  },
+  {
+    "id": "handbook-2022-26f17f402ad9b49f74709de3e6cd1cc9",
+    "checked": 354,
+    "courses": 354
+  },
+  {
+    "id": "handbook-2022-3d4d854613c7b1d6cf2e0ac0a6be322f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-48cca1d90aa3c8b386fe90c81314e2fa",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-4a27d22c98d32b7b18e675d07d39834a",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-56f3d2c431eb37d1c1bbb24c3d8aa8ec",
+    "checked": 136,
+    "courses": 136
+  },
+  {
+    "id": "handbook-2022-69af55e9ab67b3d91ca5b4cb1546fb40",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-6c9603076ad4bb63fb205a5a3c6ee160",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-716f0090f6a788a478eed3b9f3f17dd3",
+    "checked": 0,
+    "courses": 302
+  },
+  {
+    "id": "handbook-2022-739fd57d1b9266b59a7430125d318398",
+    "checked": 117,
+    "courses": 117
+  },
+  {
+    "id": "handbook-2022-84f04f6b84d41dada8cfb310eebb9ccb",
+    "checked": 143,
+    "courses": 143
+  },
+  {
+    "id": "handbook-2022-874833bfe414bce09b3333f33cb7444b",
+    "checked": 142,
+    "courses": 142
+  },
+  {
+    "id": "handbook-2022-894f6b9c6434bedd5f22780679ce9898",
+    "checked": 323,
+    "courses": 323
+  },
+  {
+    "id": "handbook-2022-8af237d016b9d2a7cf0a81c222a0f9b2",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-96f0dcbfeeca7662e93f8fdc1377c44f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-a83cade6e1bf1416f9c46cc455b5babd",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-ba18b28421362d72ddac50c16e252b29",
+    "checked": 267,
+    "courses": 267
+  },
+  {
+    "id": "handbook-2022-c00c884e18c4e4ddb4bfc903df79cf42",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-c36f424288a4776205e9be8a11ff6b0e",
+    "checked": 353,
+    "courses": 353
+  },
+  {
+    "id": "handbook-2022-c69d8eb9e3c5e80a892f84365ac3d10d",
+    "checked": 148,
+    "courses": 148
+  },
+  {
+    "id": "handbook-2022-d45612eb707f202e4b1eb5d8d01c34da",
+    "checked": 151,
+    "courses": 151
+  },
+  {
+    "id": "handbook-2022-d72bc94f71d0b7bf06f1d5e045c987a7",
+    "checked": 97,
+    "courses": 97
+  },
+  {
+    "id": "handbook-2022-e3738ee029ff0e8176579ca813612169",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-e95c628b3db6db8e0d86cc6325501d01",
+    "checked": 335,
+    "courses": 335
+  },
+  {
+    "id": "handbook-2022-eba82b65a659765b1453b20f5f20a923",
+    "checked": 102,
+    "courses": 102
+  },
+  {
+    "id": "handbook-2022-ecac31d580786bcf8ba82255fa6d3bb3",
+    "checked": 0,
+    "courses": 68
+  },
+  {
+    "id": "handbook-2022-f503234e484bd4e997ffa4250bfb1f02",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2022-fd06a17ce82741eae823ad66d2307f2f",
+    "checked": 272,
+    "courses": 272
+  },
+  {
+    "id": "handbook-2023-0188268e62a307b1b69c8517bfde4405",
+    "checked": 328,
+    "courses": 328
+  },
+  {
+    "id": "handbook-2023-02f4991058b9eec98051eab749a53b77",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-117c0e5981a41cce06761c8bc088cb9f-1",
+    "checked": 208,
+    "courses": 208
+  },
+  {
+    "id": "handbook-2023-1a0155ffe8fab23f7021cefc7dead23f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-1c9e3b144e0d92b5f0addd1c9421decd-1",
+    "checked": 120,
+    "courses": 120
+  },
+  {
+    "id": "handbook-2023-22cdc7c0684c81c91da58c6c0f451e73-1",
+    "checked": 124,
+    "courses": 124
+  },
+  {
+    "id": "handbook-2023-26f17f402ad9b49f74709de3e6cd1cc9-1",
+    "checked": 307,
+    "courses": 307
+  },
+  {
+    "id": "handbook-2023-48cca1d90aa3c8b386fe90c81314e2fa-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-56f3d2c431eb37d1c1bbb24c3d8aa8ec-1",
+    "checked": 198,
+    "courses": 198
+  },
+  {
+    "id": "handbook-2023-6286de2f4d3beead1fd38f0845c62dd1",
+    "checked": 117,
+    "courses": 117
+  },
+  {
+    "id": "handbook-2023-69af55e9ab67b3d91ca5b4cb1546fb40-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-6e2baea458e2771009b82efc964089f3",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-6f3fe03490cf4b39146fca4be23f7eaf",
+    "checked": 0,
+    "courses": 68
+  },
+  {
+    "id": "handbook-2023-739fd57d1b9266b59a7430125d318398-1",
+    "checked": 183,
+    "courses": 183
+  },
+  {
+    "id": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "checked": 268,
+    "courses": 268
+  },
+  {
+    "id": "handbook-2023-84f04f6b84d41dada8cfb310eebb9ccb-1",
+    "checked": 187,
+    "courses": 187
+  },
+  {
+    "id": "handbook-2023-867806a716346c22b2da3dfab900080d",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-874833bfe414bce09b3333f33cb7444b-1",
+    "checked": 147,
+    "courses": 147
+  },
+  {
+    "id": "handbook-2023-8faea7afe6903e4b21363cdde1eafde1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-96f0dcbfeeca7662e93f8fdc1377c44f-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-a83cade6e1bf1416f9c46cc455b5babd-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-b4bf27b5865690a18b5df28ffa897715",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-c36f424288a4776205e9be8a11ff6b0e-1",
+    "checked": 305,
+    "courses": 305
+  },
+  {
+    "id": "handbook-2023-c69d8eb9e3c5e80a892f84365ac3d10d-1",
+    "checked": 105,
+    "courses": 105
+  },
+  {
+    "id": "handbook-2023-cd3af44ef71cf86b6a7cd2c4b47b733f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-cec75b4a7fe4fabe90ac9e9a1a00086d",
+    "checked": 318,
+    "courses": 318
+  },
+  {
+    "id": "handbook-2023-d45612eb707f202e4b1eb5d8d01c34da-1",
+    "checked": 180,
+    "courses": 180
+  },
+  {
+    "id": "handbook-2023-d72bc94f71d0b7bf06f1d5e045c987a7-1",
+    "checked": 145,
+    "courses": 145
+  },
+  {
+    "id": "handbook-2023-de4de496f190cba1e8b59934cdfbc329",
+    "checked": 120,
+    "courses": 120
+  },
+  {
+    "id": "handbook-2023-e95c628b3db6db8e0d86cc6325501d01-1",
+    "checked": 287,
+    "courses": 287
+  },
+  {
+    "id": "handbook-2023-f503234e484bd4e997ffa4250bfb1f02-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2023-f8779759974189aa1a9e0d216105f987",
+    "checked": 0,
+    "courses": 295
+  },
+  {
+    "id": "handbook-2023-fe0e2ef7f3b702e406c05696bfc51330",
+    "checked": 275,
+    "courses": 275
+  },
+  {
+    "id": "handbook-2024-0167e528eac1ea48980e575efc0ab2e0",
+    "checked": 117,
+    "courses": 117
+  },
+  {
+    "id": "handbook-2024-030abea637d0072c669514bed0a04a16",
+    "checked": 95,
+    "courses": 95
+  },
+  {
+    "id": "handbook-2024-152279e049a2bd96b29380dfd55bfbb8",
+    "checked": 210,
+    "courses": 210
+  },
+  {
+    "id": "handbook-2024-2140adee38a2c8d9dabf1b5995d06746",
+    "checked": 330,
+    "courses": 330
+  },
+  {
+    "id": "handbook-2024-252f2cb8ec49e97cb9d6b03b5d53a4f6",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-3b85f9d774533dc5e292a20bc1cc918f",
+    "checked": 272,
+    "courses": 272
+  },
+  {
+    "id": "handbook-2024-430d2dde691506d2e445f6665bb37af6",
+    "checked": 199,
+    "courses": 199
+  },
+  {
+    "id": "handbook-2024-45d1a27c359701ccd010b7a810500da3",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-4aaa1a502b6f221e06c95d14da46cfa5",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-520daa273e67670bae60caa3e49ac590",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-52be53d2cebbe60d8be64af70ec6a1db",
+    "checked": 145,
+    "courses": 145
+  },
+  {
+    "id": "handbook-2024-566251a64fe9472ed2c5c54e11a23a2c",
+    "checked": 0,
+    "courses": 109
+  },
+  {
+    "id": "handbook-2024-5716936670a5f63c184a34121eb1123b",
+    "checked": 326,
+    "courses": 326
+  },
+  {
+    "id": "handbook-2024-5f6fbca57d97ccf9a611a3e407f333ce",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-6163177de179eef2a04222bdc9bbf109",
+    "checked": 177,
+    "courses": 177
+  },
+  {
+    "id": "handbook-2024-70fe86a7dc994b033b9b42b6bd76808d",
+    "checked": 262,
+    "courses": 297
+  },
+  {
+    "id": "handbook-2024-719ad5e3938075409edd28830277b67c",
+    "checked": 271,
+    "courses": 271
+  },
+  {
+    "id": "handbook-2024-9402ce29081808d752884bbd68b46cd6",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-98b111d69794a93a768ccd981f609ed9",
+    "checked": 187,
+    "courses": 187
+  },
+  {
+    "id": "handbook-2024-9f8c14225d594fab88807f5849921fae",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-a5e0f341217c98383ea20afeae197703",
+    "checked": 322,
+    "courses": 322
+  },
+  {
+    "id": "handbook-2024-ae2847fd216c89235cf07a703b060c0b",
+    "checked": 178,
+    "courses": 178
+  },
+  {
+    "id": "handbook-2024-b334f4add85602c728c54bc03cbca0bf",
+    "checked": 182,
+    "courses": 182
+  },
+  {
+    "id": "handbook-2024-bb96dbb614a8fafd2705c16eafecc74f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-ced955c0ba01b17c15df2ba46ec3af37",
+    "checked": 308,
+    "courses": 308
+  },
+  {
+    "id": "handbook-2024-d0f3b248c777816487f94b1c623f04b0",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-d4c6b179c8bc9f694cdb4d4f6bb4f982",
+    "checked": 79,
+    "courses": 79
+  },
+  {
+    "id": "handbook-2024-d53fd2196d1bd8a77eaeec5d99b712ed",
+    "checked": 151,
+    "courses": 151
+  },
+  {
+    "id": "handbook-2024-d89e47ec82e92e1e535085fe58082009",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-daac75bfbe8d3e385727e7b5d230e342",
+    "checked": 286,
+    "courses": 286
+  },
+  {
+    "id": "handbook-2024-df3772ea2706e5e252809b4574d8d6fd",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2024-e734fa3fdc1d3912b24c1df11107593c",
+    "checked": 134,
+    "courses": 134
+  },
+  {
+    "id": "handbook-2024-f39dae6bd8d86e8035041590ad5d6236",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-008edb2002f87a53638a3222fb76d40c",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-06f500176260c223d8ea7701afff7f6e",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-10b8e8304526f1a73d324bdd4894d69f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-1148cf36552b921ce7e68ed7f8687794",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-15f2293cdd5c450f835ae8948d79919e-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+    "checked": 230,
+    "courses": 230
+  },
+  {
+    "id": "handbook-2025-2422094035ca4ffb915ddb81539f3c64",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-32f492be1326ea60be4ae3ea9fc2f6af",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-3c70811a77d3cabd40ec72338c464f47",
+    "checked": 304,
+    "courses": 304
+  },
+  {
+    "id": "handbook-2025-43656c25fc0ac01ea8622a609ff0427e",
+    "checked": 358,
+    "courses": 358
+  },
+  {
+    "id": "handbook-2025-4405926c0ea66eb76b307cd26ce4ca02",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-49a90ce668b96a266ed656227b1c9f6f",
+    "checked": 148,
+    "courses": 148
+  },
+  {
+    "id": "handbook-2025-4edfeb1afbae208a6d7d5f034ffd0217",
+    "checked": 159,
+    "courses": 159
+  },
+  {
+    "id": "handbook-2025-546d609eaf14654cf1c0713fe9ff5f9d",
+    "checked": 129,
+    "courses": 129
+  },
+  {
+    "id": "handbook-2025-5959f0e84125691a7d08eb21bf079063-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-5e86bd654b5845fe796a11261b3f963b",
+    "checked": 173,
+    "courses": 173
+  },
+  {
+    "id": "handbook-2025-6000a883073fbcd1a3d9dd3027eded5d",
+    "checked": 150,
+    "courses": 150
+  },
+  {
+    "id": "handbook-2025-6ca457cc58289dc8b099c869a7a88da0",
+    "checked": 28,
+    "courses": 34
+  },
+  {
+    "id": "handbook-2025-788b122e9b825541c4ca211c310320a1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-79919e1c155246fa5f706c0e9d738445",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-7bcc89c6d0cfb836a1f7a13ac2ed9ce4",
+    "checked": 322,
+    "courses": 322
+  },
+  {
+    "id": "handbook-2025-808bf0e0c7e6180197ca85b6c1bcfa70",
+    "checked": 135,
+    "courses": 135
+  },
+  {
+    "id": "handbook-2025-837d837ca68d3e9c43bd47dce6abeafe",
+    "checked": 160,
+    "courses": 160
+  },
+  {
+    "id": "handbook-2025-887bc666578ad64bc2e08dc7afa2affb",
+    "checked": 0,
+    "courses": 111
+  },
+  {
+    "id": "handbook-2025-898a1761b3492b8f99f1171334229fd8-1",
+    "checked": 119,
+    "courses": 119
+  },
+  {
+    "id": "handbook-2025-89b2966e6254929f7aa16428ba111004",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "checked": 280,
+    "courses": 280
+  },
+  {
+    "id": "handbook-2025-977903d24179b19d863d6bab55edb4c7-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-ad2458bd522b3199f9490a82c71d4f67",
+    "checked": 184,
+    "courses": 184
+  },
+  {
+    "id": "handbook-2025-c492b5628a4ce1c5889ec85c6a57e105",
+    "checked": 175,
+    "courses": 175
+  },
+  {
+    "id": "handbook-2025-c8fd0619f1e340509f352167fb7d512b",
+    "checked": 338,
+    "courses": 338
+  },
+  {
+    "id": "handbook-2025-cf16cfcd24b0ec45f29568c8fc6e8000",
+    "checked": 267,
+    "courses": 304
+  },
+  {
+    "id": "handbook-2025-dee831ab462e503ec35a8126e78dc05d",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-def34815054843eac083124eda9a8a2c",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06-1",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-e053dcecaff96bf47d57df447c92df06",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-e8ef628e05e4d028518b69f8d0e79cb2",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2025-ec67b6baaf174180bed144cdf252a8ce",
+    "checked": 347,
+    "courses": 347
+  },
+  {
+    "id": "handbook-2025-f1b4c6ee72e6f2cabaf1eaea765149c3",
+    "checked": 134,
+    "courses": 134
+  },
+  {
+    "id": "handbook-2025-fd690a3f9d67e91eda83c185aad131bd",
+    "checked": 339,
+    "courses": 339
+  },
+  {
+    "id": "handbook-2026-01faa31cca60894a587f0a9e578c3f90",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-044f76895bf88df8ce2a7a26145986c4",
+    "checked": 121,
+    "courses": 121
+  },
+  {
+    "id": "handbook-2026-055bc6c29e9f19180c4e506fc36756a0",
+    "checked": 104,
+    "courses": 104
+  },
+  {
+    "id": "handbook-2026-0b9b37db00b8706444e4f7a750410138",
+    "checked": 297,
+    "courses": 297
+  },
+  {
+    "id": "handbook-2026-127aa859259adf3ff7bd97d116da7cca",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-1645ea440a266a3749d688602d3256df",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-179522a177db8d7839ccc9a9e43dde33",
+    "checked": 116,
+    "courses": 116
+  },
+  {
+    "id": "handbook-2026-311a4a97843fb88816a58e1fc4e50d98",
+    "checked": 114,
+    "courses": 114
+  },
+  {
+    "id": "handbook-2026-3572269f6340349616b7620dfc1989d5",
+    "checked": 127,
+    "courses": 127
+  },
+  {
+    "id": "handbook-2026-36f4e4062d15fd6e4875f8e78bec3bd6",
+    "checked": 344,
+    "courses": 344
+  },
+  {
+    "id": "handbook-2026-3db8dbc9a70710d1a1cf633fefc085e8",
+    "checked": 124,
+    "courses": 124
+  },
+  {
+    "id": "handbook-2026-4123eec2627f153000328b01720cf021",
+    "checked": 107,
+    "courses": 107
+  },
+  {
+    "id": "handbook-2026-454f36fb9ad48f2ce487cede8bd0df78",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-523786516152752ab91293dd787cc0cc",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-574f152e7ea96a266e1a8150e903a464",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-610d9d687dc94507859280b4e176e3a9",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-78e5697e9686a63f788d825d0d89daab",
+    "checked": 149,
+    "courses": 149
+  },
+  {
+    "id": "handbook-2026-7f952e53f2cdbe399fe9858c53a40a4e",
+    "checked": 132,
+    "courses": 132
+  },
+  {
+    "id": "handbook-2026-82d60000e78c657ce06fe36d65f9992c",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-86a258ebb28776520f9c74f0d03620df",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-887e7ccb382048811b8840d6003b9a24",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-91448d4a1c79fca78b26aabf7e76df6e",
+    "checked": 0,
+    "courses": 130
+  },
+  {
+    "id": "handbook-2026-9a97b84ce1f096e0db084e81dac0bf1f",
+    "checked": 274,
+    "courses": 274
+  },
+  {
+    "id": "handbook-2026-9ac54018ba04a3dadd1774fcaec7facc",
+    "checked": 300,
+    "courses": 300
+  },
+  {
+    "id": "handbook-2026-a0dc671e8eb03cda69fc0648edf104cd",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-a3ddef1c2ac8f7b0b933b5318f6aa937",
+    "checked": 309,
+    "courses": 309
+  },
+  {
+    "id": "handbook-2026-a87a21b976c092f5d809cdfba1474a99",
+    "checked": 28,
+    "courses": 34
+  },
+  {
+    "id": "handbook-2026-afd7c5631753ad09f074370a0eaa9524",
+    "checked": 312,
+    "courses": 312
+  },
+  {
+    "id": "handbook-2026-b2424772163806e832630365b78767c2",
+    "checked": 143,
+    "courses": 143
+  },
+  {
+    "id": "handbook-2026-b957018027a5443888a5a0cd6267c544",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-c25debf649e1d1457db122ac67edad0f",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-cb381fb96ef7432b0aed7577694e14de",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-ccf34f063d12411c96762c907345458b",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-d53856023b230327727f2739fe1355a0",
+    "checked": 117,
+    "courses": 117
+  },
+  {
+    "id": "handbook-2026-e69aa2716a5d0db78c4241f183a36f63",
+    "checked": 347,
+    "courses": 347
+  },
+  {
+    "id": "handbook-2026-ea1f8f40b548d8fd94677d6f6de019f3",
+    "checked": 268,
+    "courses": 305
+  },
+  {
+    "id": "handbook-2026-f537a6217aa7296bbbde3b54da9c9596",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-f595ecfb04357ab27ea2f4bc341a0858",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-fb31f5b54ddc480b65a152f91fe1eac9",
+    "checked": 0,
+    "courses": 0
+  },
+  {
+    "id": "handbook-2026-fcfa81125b1516a4c6c647f0753fc555",
+    "checked": 91,
+    "courses": 91
+  }
+]

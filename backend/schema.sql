@@ -41,6 +41,32 @@ CREATE TABLE IF NOT EXISTS course_records (
 );
 CREATE INDEX IF NOT EXISTS course_title_idx ON course_records(title);
 CREATE INDEX IF NOT EXISTS course_source_page_idx ON course_records(source_id,page_number);
+-- Read normalized evidence without maintaining a second, potentially stale
+-- copy of the source-bound classifications stored in each course record.
+CREATE VIEW IF NOT EXISTS verified_course_categories AS
+SELECT c.id AS course_id, c.source_id, d.entrance_year,
+       CAST(p.key AS INTEGER) AS path_position,
+       json_extract(p.value,'$.label') AS category_name,
+       COALESCE(json_extract(p.value,'$.page'),json_extract(c.record_json,'$.classification.page'),c.page_number) AS evidence_page,
+       json_extract(p.value,'$.bbox') AS bbox_json, d.sha256 AS source_sha256
+FROM course_records c JOIN source_documents d ON d.id=c.source_id,
+     json_each(c.record_json,'$.classification.path') p
+WHERE json_extract(c.record_json,'$.verification.status')='pdf_position_checked'
+  AND json_extract(c.record_json,'$.classification.status')='pdf_cell_checked'
+  AND json_extract(c.record_json,'$.classification.sourceSha256')=d.sha256;
+CREATE VIEW IF NOT EXISTS verified_course_requirements AS
+SELECT c.id AS course_id, c.source_id, d.entrance_year,
+       json_extract(o.value,'$.column') AS column_number,
+       json_extract(o.value,'$.departmentId') AS department_id,
+       json_extract(o.value,'$.courseType') AS course_type,
+       json_extract(o.value,'$.printedSymbol') AS printed_symbol,
+       json_extract(c.record_json,'$.requirementEvidence.page') AS evidence_page,
+       json_extract(o.value,'$.bbox') AS bbox_json, d.sha256 AS source_sha256
+FROM course_records c JOIN source_documents d ON d.id=c.source_id,
+     json_each(c.record_json,'$.requirementEvidence.options') o
+WHERE json_extract(c.record_json,'$.verification.status')='pdf_position_checked'
+  AND json_extract(c.record_json,'$.requirementEvidence.status')='pdf_requirement_cells_checked'
+  AND json_extract(c.record_json,'$.requirementEvidence.sourceSha256')=d.sha256;
 CREATE TABLE IF NOT EXISTS requirement_evidence (
   source_id TEXT NOT NULL, page_number INTEGER NOT NULL,
   requirement_kind TEXT NOT NULL CHECK(requirement_kind IN ('graduation','progression','registration','teacher','hirameki','tap')),
@@ -71,6 +97,7 @@ CREATE TABLE IF NOT EXISTS student_profiles (
   takes_hirameki INTEGER NOT NULL CHECK(takes_hirameki IN (0,1)),
   takes_tap INTEGER NOT NULL DEFAULT 0 CHECK(takes_tap IN (0,1)),
   individual_note TEXT NOT NULL DEFAULT '' CHECK(length(individual_note)<=1000),
+  degree_variant TEXT,
   revision INTEGER NOT NULL DEFAULT 1 CHECK(revision>0), updated_at TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS cohort_datasets (
@@ -85,6 +112,42 @@ CREATE TABLE IF NOT EXISTS academic_calendars (
   academic_year INTEGER PRIMARY KEY,
   payload_json TEXT NOT NULL CHECK(json_valid(payload_json))
 );
+CREATE VIEW IF NOT EXISTS graduate_degree_rules AS
+SELECT department_id, entrance_year,
+       json_extract(payload_json,'$.graduateRequirements.creditBasis') AS credit_basis,
+       json_extract(payload_json,'$.graduateRequirements.totalCredits') AS total_credits,
+       json_extract(payload_json,'$.graduateRequirements.evidence.sourceId') AS source_id,
+       json_extract(payload_json,'$.graduateRequirements.evidence.page') AS source_page,
+       json_extract(payload_json,'$.graduateRequirements') AS record_json
+FROM cohort_datasets
+WHERE json_type(payload_json,'$.graduateRequirements')='object';
+CREATE TABLE IF NOT EXISTS degree_requirement_sets (
+  id TEXT PRIMARY KEY, department_id TEXT NOT NULL, entrance_year INTEGER NOT NULL,
+  variant TEXT NOT NULL, source_id TEXT NOT NULL REFERENCES source_documents(id) ON DELETE CASCADE,
+  source_page INTEGER NOT NULL CHECK(source_page>0), total_credits REAL NOT NULL CHECK(total_credits>0),
+  free_choice_credits REAL NOT NULL CHECK(free_choice_credits>=0),
+  record_json TEXT NOT NULL CHECK(json_valid(record_json)),
+  UNIQUE(department_id,entrance_year,variant),
+  FOREIGN KEY(department_id,entrance_year) REFERENCES cohort_datasets(department_id,entrance_year) ON DELETE CASCADE
+);
+CREATE TABLE IF NOT EXISTS degree_category_rules (
+  requirement_set_id TEXT NOT NULL REFERENCES degree_requirement_sets(id) ON DELETE CASCADE,
+  category_id TEXT NOT NULL, minimum_credits REAL NOT NULL CHECK(minimum_credits>0),
+  course_categories_json TEXT NOT NULL CHECK(json_valid(course_categories_json)),
+  PRIMARY KEY(requirement_set_id,category_id)
+);
+CREATE VIEW IF NOT EXISTS degree_group_rules AS
+SELECT s.id AS requirement_set_id, s.department_id, s.entrance_year, s.variant,
+       json_extract(g.value,'$.id') AS group_id,
+       json_extract(g.value,'$.category') AS category,
+       json_extract(g.value,'$.minimumCredits') AS minimum_credits,
+       json_extract(g.value,'$.membership') AS membership,
+       json_extract(g.value,'$.symbols') AS symbols_json,
+       json_extract(g.value,'$.courseCategories') AS course_categories_json,
+       json_extract(g.value,'$.evidence.sourceId') AS source_id,
+       json_extract(g.value,'$.evidence.page') AS source_page,
+       g.value AS record_json
+FROM degree_requirement_sets s, json_each(s.record_json,'$.groups') g;
 CREATE TABLE IF NOT EXISTS accounts (
   id TEXT PRIMARY KEY, username TEXT NOT NULL UNIQUE COLLATE NOCASE,
   password_hash TEXT NOT NULL, department_id TEXT NOT NULL REFERENCES departments(id),
@@ -138,4 +201,4 @@ CREATE TABLE IF NOT EXISTS scheduled_offerings (
   id TEXT PRIMARY KEY, academic_year INTEGER NOT NULL, lecture_code TEXT NOT NULL, payload_json TEXT NOT NULL CHECK(json_valid(payload_json)), UNIQUE(academic_year,lecture_code)
 );
 CREATE TABLE IF NOT EXISTS offering_imports(academic_year INTEGER PRIMARY KEY,payload_json TEXT NOT NULL CHECK(json_valid(payload_json)));
-PRAGMA user_version = 4;
+PRAGMA user_version = 5;

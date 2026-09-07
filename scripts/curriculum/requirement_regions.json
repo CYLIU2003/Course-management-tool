@@ -1,0 +1,218 @@
+[
+  {
+    "sourceId": "handbook-2025-4edfeb1afbae208a6d7d5f034ffd0217",
+    "sourceSha256": "cf7a9a562934f0926a941b9eac2a4724ea42cd611ac6b21ea79c0034b611b30f",
+    "page": 4,
+    "xEdges": [
+      270,
+      292,
+      314
+    ],
+    "headerBbox": [
+      270,
+      108,
+      314,
+      149
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-202457f6e199e17ea68701e06174ad20",
+    "sourceSha256": "135b6f358ed4fd12945db59da07b6156a190fa85d2e0ec5e12485510eaa3f442",
+    "page": 4,
+    "xEdges": [
+      279,
+      301
+    ],
+    "headerBbox": [
+      279,
+      103,
+      301,
+      141
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2024-e734fa3fdc1d3912b24c1df11107593c",
+    "sourceSha256": "ef554026084f7c12be5c03e4355775209e8848084b197ff0b5c8f140257391ab",
+    "page": 4,
+    "xEdges": [
+      270,
+      289,
+      308
+    ],
+    "headerBbox": [
+      270,
+      106,
+      308,
+      138
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "sourceSha256": "4c9b980327d0dabed199df2c844d7309981bdc7b38f3be743d2a1418321456a1",
+    "page": 62,
+    "xEdges": [
+      258,
+      279,
+      300
+    ],
+    "headerBbox": [
+      258,
+      72,
+      300,
+      112
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "sourceSha256": "4c9b980327d0dabed199df2c844d7309981bdc7b38f3be743d2a1418321456a1",
+    "page": 63,
+    "xEdges": [
+      258,
+      279,
+      300
+    ],
+    "headerBbox": [
+      258,
+      72,
+      300,
+      112
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "sourceSha256": "4c9b980327d0dabed199df2c844d7309981bdc7b38f3be743d2a1418321456a1",
+    "page": 64,
+    "xEdges": [
+      258,
+      279,
+      300
+    ],
+    "headerBbox": [
+      258,
+      72,
+      300,
+      112
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "sourceSha256": "4c9b980327d0dabed199df2c844d7309981bdc7b38f3be743d2a1418321456a1",
+    "page": 65,
+    "xEdges": [
+      220,
+      241,
+      262
+    ],
+    "headerBbox": [
+      220,
+      72,
+      262,
+      112
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2023-83d7b838cc7113925d126dd31d7063d4",
+    "sourceSha256": "4c9b980327d0dabed199df2c844d7309981bdc7b38f3be743d2a1418321456a1",
+    "page": 66,
+    "xEdges": [
+      220,
+      241,
+      262
+    ],
+    "headerBbox": [
+      220,
+      72,
+      262,
+      112
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+    "page": 60,
+    "xEdges": [
+      269,
+      290
+    ],
+    "headerBbox": [
+      269,
+      66,
+      290,
+      110
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+    "page": 61,
+    "xEdges": [
+      269,
+      290
+    ],
+    "headerBbox": [
+      269,
+      66,
+      290,
+      110
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+    "page": 62,
+    "xEdges": [
+      269,
+      290
+    ],
+    "headerBbox": [
+      269,
+      66,
+      290,
+      110
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+    "page": 63,
+    "xEdges": [
+      230,
+      251
+    ],
+    "headerBbox": [
+      230,
+      66,
+      251,
+      110
+    ],
+    "method": "render-reviewed-requirement-columns"
+  },
+  {
+    "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+    "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+    "page": 64,
+    "xEdges": [
+      230,
+      251
+    ],
+    "headerBbox": [
+      230,
+      66,
+      251,
+      110
+    ],
+    "method": "render-reviewed-requirement-columns",
+    "yMax": 370
+  }
+]

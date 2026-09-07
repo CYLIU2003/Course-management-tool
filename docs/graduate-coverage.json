@@ -1,8 +1,8 @@
 {
   "documents": 59,
   "pages": 1369,
-  "rawCourses": 1952,
-  "checkedCourses": 1877,
+  "rawCourses": 2132,
+  "checkedCourses": 2057,
   "cohorts": [
     {
       "departmentId": "grad_master_kikai",
@@ -307,27 +307,27 @@
     {
       "departmentId": "grad_master_kankyo",
       "year": 2022,
-      "courses": 20
+      "courses": 26
     },
     {
       "departmentId": "grad_master_kankyo",
       "year": 2023,
-      "courses": 20
+      "courses": 26
     },
     {
       "departmentId": "grad_master_kankyo",
       "year": 2024,
-      "courses": 19
+      "courses": 25
     },
     {
       "departmentId": "grad_master_kankyo",
       "year": 2025,
-      "courses": 21
+      "courses": 27
     },
     {
       "departmentId": "grad_master_kankyo",
       "year": 2026,
-      "courses": 42
+      "courses": 48
     },
     {
       "departmentId": "grad_doctor_kankyo",
@@ -357,27 +357,27 @@
     {
       "departmentId": "grad_master_toshi",
       "year": 2022,
-      "courses": 20
+      "courses": 26
     },
     {
       "departmentId": "grad_master_toshi",
       "year": 2023,
-      "courses": 20
+      "courses": 26
     },
     {
       "departmentId": "grad_master_toshi",
       "year": 2024,
-      "courses": 19
+      "courses": 25
     },
     {
       "departmentId": "grad_master_toshi",
       "year": 2025,
-      "courses": 21
+      "courses": 27
     },
     {
       "departmentId": "grad_master_toshi",
       "year": 2026,
-      "courses": 42
+      "courses": 48
     },
     {
       "departmentId": "grad_doctor_toshi",
@@ -412,12 +412,12 @@
     {
       "departmentId": "grad_master_international",
       "year": 2025,
-      "courses": 28
+      "courses": 42
     },
     {
       "departmentId": "grad_master_international",
       "year": 2026,
-      "courses": 24
+      "courses": 40
     },
     {
       "departmentId": "grad_master_data",

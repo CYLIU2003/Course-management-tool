@@ -1,6 +1,7 @@
 import type { AcademicAllYearsData, AcademicCourseCell } from './academicProgress';
 import type { HandbookCourse, HandbookDocument } from '../core/handbooks';
 import { isCheckedCourseForDepartment, normalizeHandbookText as normalize } from '../core/handbooks';
+import type { DegreeGroup, DegreeRequirementSet } from '../core/curriculum';
 
 export function guideCourses(documents: HandbookDocument[], department: string, data: AcademicAllYearsData) {
   const cells = Object.values(data).flatMap(year => Object.values(year.timetable).flatMap(days => Object.values(days).flatMap(slots => Object.values(slots)))).filter((cell): cell is AcademicCourseCell => !!cell);
@@ -40,4 +41,63 @@ export function guideMinimum(documents: HandbookDocument[], category: string, de
 
 export function sumCourseCredits(courses: { course: HandbookCourse; status: string }[], status?: string) {
   return courses.reduce((sum, entry) => sum + (!status || entry.status === status ? entry.course.credits : 0), 0);
+}
+
+export function degreeSurplus(courses: Array<{ category: string; course: HandbookCourse; status: string }>, requirements: DegreeRequirementSet): number {
+  return requirements.categories.reduce((total, rule) => total
+    + Math.max(0, sumCourseCredits(courses.filter(entry => entry.category === rule.name), '修得済み') - rule.minimumCredits), 0);
+}
+
+export function degreeCourseOption(course: HandbookCourse, document: HandbookDocument, requirements?: DegreeRequirementSet) {
+  const evidence = course.requirementEvidence;
+  if (!requirements || evidence?.status !== 'pdf_requirement_cells_checked' || evidence.sourceSha256 !== document.sha256) return undefined;
+  const options = evidence.options;
+  const category = course.classification?.path?.map(field => field.label) ?? [];
+  if (requirements.variant === 'international' && category.includes('外国語科目')
+    && evidence.titleAnnotations?.some(annotation => annotation.symbol === '*')) {
+    return { column: 0, printedSymbol: '*', courseType: 'designated' as const, bbox: evidence.titleAnnotations[0].bbox };
+  }
+  const scoped = options.filter(option => option.departmentId === requirements.departmentId);
+  if (scoped.length === 1) return scoped[0];
+  if (options.some(option => option.departmentId)) return undefined;
+  if (options.length === 1) return options[0];
+  const { departmentId, variant } = requirements;
+  if (options.length === 2) {
+    if (['joho_kagaku', 'chino_joho'].includes(departmentId)) return options[variant === 'international' ? 1 : 0];
+    if (departmentId === 'toshi_seikatsu' && ['creative', 'international_urban'].includes(variant)) return options[variant === 'international_urban' ? 1 : 0];
+    if (departmentId === 'ningen' && ['child', 'human'].includes(variant)) return options[variant === 'human' ? 1 : 0];
+    if (['shizen_shizen', 'shizen_suuri'].includes(departmentId)) return options[departmentId === 'shizen_suuri' ? 1 : 0];
+    if (['kenchiku', 'toshi_kogaku'].includes(departmentId)) return options[departmentId === 'toshi_kogaku' ? 1 : 0];
+  }
+  if (options.length === 4 && ['joho_kagaku', 'chino_joho'].includes(departmentId)) {
+    return options[(departmentId === 'chino_joho' ? 2 : 0) + (variant === 'international' ? 1 : 0)];
+  }
+  return undefined;
+}
+
+export function degreeCourseApplies(course: HandbookCourse, departmentName: string, sourceSha256: string): boolean {
+  if (course.requirementEvidence?.sourceSha256 !== sourceSha256) return true;
+  const restrictions = normalize(course.requirementEvidence?.restrictions ?? '');
+  const department = normalize(departmentName.replace(/（.*?）/g, ''));
+  if (restrictions.includes('自然科学科以外対象')) return department !== '自然科学科';
+  if (restrictions.includes('自然科学科対象')) return department === '自然科学科';
+  if (restrictions.includes('のみ対象')) return restrictions.includes(department);
+  return true;
+}
+
+export function degreeGroupProgress(entries: Array<{ course: HandbookCourse; status: string; group: string; leaf?: string; symbol?: string }>, rule: DegreeGroup) {
+  const members = entries.filter(entry => entry.leaf && rule.courseCategories.includes(entry.leaf)
+    && entry.symbol && rule.symbols.includes(entry.symbol.replace('〇', '○'))
+    && (!rule.courseGroup || entry.group.includes(rule.courseGroup)));
+  const earned = sumCourseCredits(members, '修得済み');
+  const missing = members.filter(entry => entry.status !== '修得済み');
+  // A numeric threshold cannot prove that every compulsory course was passed.
+  const complete = earned >= rule.minimumCredits && (rule.membership !== 'all_marked' || missing.length === 0);
+  return { members, earned, missing, complete, remaining: Math.max(0, rule.minimumCredits - earned) };
+}
+
+export function degreeProgramProgress<T extends { course: HandbookCourse; document: HandbookDocument; status: string }>(entries: T[], marks: string[]) {
+  const members = entries.filter(entry => entry.course.requirementEvidence?.sourceSha256 === entry.document.sha256
+    && entry.course.requirementEvidence.programMarks?.some(mark => marks.includes(mark.symbol)));
+  return { members, earned: sumCourseCredits(members, '修得済み') };
 }

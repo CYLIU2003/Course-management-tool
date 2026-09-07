@@ -82,6 +82,18 @@ for (let i=0;i<8;i++) {
   const value={departmentId:'kikai',entranceYear:2022,isGeneral:true,takesTeacher:!!(i&1),takesHirameki:!!(i&2),takesTap:!!(i&4),individualNote:'',revision:i};
   assert.equal((await rpc('/api/me/profile','PUT',value)).revision,i+1);
 }
+await db.exec('reset role');
+await db.query("update public.reference_payloads set payload=$1 where path='/api/curricula/kikai/2022'", [{degreeRequirementSets:[{variant:'standard'}]}]);
+await login(first);
+const profile = await rpc('/api/me/profile');
+await assert.rejects(rpc('/api/me/profile','PUT',{...profile,degreeVariant:'international'}), /Unknown degree variant/);
+await assert.rejects(rpc('/api/me/profile','PUT',{...profile,degreeVariant:42}), /Invalid degree variant/);
+await rpc('/api/me/profile','PUT',{...profile,degreeVariant:'standard'});
+assert.equal((await rpc('/api/me/profile')).degreeVariant,'standard');
+await assert.rejects(rpc('/api/me/profile','PUT',{...profile,degreeVariant:'standard'}), /Save conflict/);
+await login(second);
+assert.equal(await rpc('/api/me/profile'),null,'course preference must not leak to another account');
+await login(first);
 const dated = studentState();
 dated.allYearsData = { '2025': {...dated.allYearsData['1年次'], departmentId:'kikai', entranceYear:2022}, '2026': {...dated.allYearsData['2年次'], departmentId:'kikai', entranceYear:2022} };
 dated.allYearsData['2025'].timetable = {'1Q':{'月':{'1':{title:'Past',credits:2,grade:'可'}}}};

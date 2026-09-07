@@ -25,7 +25,7 @@ def read_document(connection, source_id):
 
 def save_profile(connection, profile_id, data):
     UUID(profile_id)
-    if set(data) != {'departmentId', 'entranceYear', 'isGeneral', 'takesTeacher', 'takesHirameki', 'takesTap', 'individualNote', 'revision'}:
+    if set(data) - {'degreeVariant'} != {'departmentId', 'entranceYear', 'isGeneral', 'takesTeacher', 'takesHirameki', 'takesTap', 'individualNote', 'revision'}:
         raise ValueError('Invalid profile fields')
     if any(type(data[key]) is not bool for key in ['isGeneral', 'takesTeacher', 'takesHirameki', 'takesTap']) or not data['isGeneral']:
         raise ValueError('Profile choices must be booleans')
@@ -35,19 +35,26 @@ def save_profile(connection, profile_id, data):
         raise ValueError('Invalid revision or note')
     if not isinstance(data['departmentId'], str) or not connection.execute('SELECT 1 FROM departments WHERE id=?', (data['departmentId'],)).fetchone():
         raise ValueError('Unknown department')
+    raw_variant = data.get('degreeVariant')
+    if raw_variant is not None and not isinstance(raw_variant, str):
+        raise ValueError('Invalid course variant')
+    variant = raw_variant or None
+    if variant is not None and (not isinstance(variant, str) or not connection.execute('SELECT 1 FROM degree_requirement_sets WHERE department_id=? AND entrance_year=? AND variant=?', (data['departmentId'], data['entranceYear'], variant)).fetchone()):
+        raise ValueError('Unknown course variant for this admission cohort')
     connection.execute('BEGIN IMMEDIATE')
     old = connection.execute('SELECT revision FROM student_profiles WHERE id=?', (profile_id,)).fetchone()
     if data['revision'] != (old[0] if old else 0):
         raise FileExistsError('Profile changed elsewhere. Reload before saving.')
     values = (profile_id, data['departmentId'], data['entranceYear'], True, data['takesTeacher'], data['takesHirameki'], data['takesTap'], data['individualNote'], data['revision'] + 1, datetime.now(timezone.utc).isoformat())
     connection.execute('INSERT INTO student_profiles(id,department_id,entrance_year,is_general,takes_teacher,takes_hirameki,takes_tap,individual_note,revision,updated_at) VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET department_id=excluded.department_id,entrance_year=excluded.entrance_year,is_general=excluded.is_general,takes_teacher=excluded.takes_teacher,takes_hirameki=excluded.takes_hirameki,takes_tap=excluded.takes_tap,individual_note=excluded.individual_note,revision=excluded.revision,updated_at=excluded.updated_at', values)
-    return dict(data, revision=data['revision'] + 1)
+    connection.execute('UPDATE student_profiles SET degree_variant=? WHERE id=?', (variant, profile_id))
+    return dict(data, degreeVariant=variant, revision=data['revision'] + 1)
 
 
 def read_profile(connection, profile_id):
     UUID(profile_id)
     row = connection.execute('SELECT * FROM student_profiles WHERE id=?', (profile_id,)).fetchone()
-    return None if row is None else dict(departmentId=row['department_id'], entranceYear=row['entrance_year'], isGeneral=bool(row['is_general']), takesTeacher=bool(row['takes_teacher']), takesHirameki=bool(row['takes_hirameki']), takesTap=bool(row['takes_tap']), individualNote=row['individual_note'], revision=row['revision'])
+    return None if row is None else dict(departmentId=row['department_id'], entranceYear=row['entrance_year'], isGeneral=bool(row['is_general']), takesTeacher=bool(row['takes_teacher']), takesHirameki=bool(row['takes_hirameki']), takesTap=bool(row['takes_tap']), individualNote=row['individual_note'], degreeVariant=row['degree_variant'], revision=row['revision'])
 
 
 if __name__ == '__main__':

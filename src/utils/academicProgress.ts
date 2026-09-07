@@ -39,6 +39,7 @@ export interface AcademicCourse {
   lectureCodes?: string[];
   aliases?: string[];
   offerings?: CourseOffering[];
+  degreeCategory?: string | null;
 }
 
 export interface AcademicCourseCell {

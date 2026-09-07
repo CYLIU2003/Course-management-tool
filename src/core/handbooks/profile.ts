@@ -3,6 +3,7 @@ export interface StudyOptions {
   takesTeacher: boolean;
   takesHirameki: boolean;
   takesTap: boolean;
+  degreeVariant?: string | null;
 }
 
 export const DEFAULT_OPTIONS: StudyOptions = {

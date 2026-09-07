@@ -3,11 +3,30 @@ import hashlib
 import json
 from pathlib import Path
 import statistics
+import argparse
 import pymupdf
 from pdf_unicode import recover_unicode
 from course_titles import compact
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def structural_tables(page):
+    """Exclude outlined glyph strokes that otherwise split merged category cells."""
+    paths = []
+    for drawing in page.get_drawings():
+        items = [item for item in drawing['items'] if (
+            item[0] == 'l'
+            and (abs(item[1].x - item[2].x) < .2 or abs(item[1].y - item[2].y) < .2)
+            and abs(item[1] - item[2]) > 12
+        ) or (
+            item[0] == 're'
+            and min(item[1].width, item[1].height) < 1.5
+            and max(item[1].width, item[1].height) > 12
+        )]
+        if items:
+            paths.append(dict(drawing, items=items))
+    return page.find_tables(paths=paths).tables
 
 # Labels read from the original curriculum tables. Unknown spellings are kept as
 # unresolved evidence; they must not become invented categories in the guide.
@@ -70,16 +89,30 @@ def classify(course, tables, chars, sha):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--unresolved-only', action='store_true')
+    parser.add_argument('--source', action='append', help='Classify selected sources; coverage still includes all sources')
+    args = parser.parse_args()
+    reviews = json.loads(Path(__file__).with_name('classification_regions.json').read_text(encoding='utf8'))['documents']
     reports = []
     for path in sorted((ROOT / 'public/handbooks/extracted').glob('*.json')):
         data = json.loads(path.read_text(encoding='utf-8'))
-        if data['kind'] != 'handbook':
+        if data['kind'] != 'handbook' or '研究科' in data['faculty']:
             continue
         pdf_path = ROOT / 'public' / data['localPath'].lstrip('/')
         assert hashlib.sha256(pdf_path.read_bytes()).hexdigest() == data['sha256']
+        review = reviews.get(data['id'], {})
+        if review and review['sourceSha256'] != data['sha256']:
+            raise ValueError(f"Reviewed PDF changed: {data['id']}")
         accepted = [c for c in data['courses'] if c.get('verification', {}).get('status') == 'pdf_position_checked']
+        if args.source and data['id'] not in args.source:
+            resolved = sum(c.get('classification', {}).get('status') == 'pdf_cell_checked' for c in accepted)
+            reports.append(dict(id=data['id'], year=data['year'], faculty=data['faculty'], label=data['label'], courses=len(accepted), classified=resolved, unresolved=len(accepted)-resolved))
+            continue
         by_page = {}
         for course in accepted:
+            if args.unresolved_only and not review and course.get('classification', {}).get('status') == 'pdf_cell_checked':
+                continue
             by_page.setdefault(course['page'], []).append(course)
         with pymupdf.open(pdf_path) as pdf:
             recover_unicode(pdf)
@@ -87,15 +120,45 @@ def main():
                 page = pdf[number - 1]
                 if page.rotation:
                     page.remove_rotation()
-                tables = page.find_tables().tables
+                tables = structural_tables(page)
                 chars = [c for block in page.get_text('rawdict')['blocks'] for line in block.get('lines', []) for span in line['spans'] for c in span['chars']]
-                for course in courses:
-                    course['classification'] = classify(course, tables, chars, data['sha256'])
+                results = [classify(course, tables, chars, data['sha256']) for course in courses]
+                # Some layouts use short legitimate cell rules. The original line
+                # geometry remains a second source-backed reading, never a guess.
+                fallback = page.find_tables().tables if any(r['status'] != 'pdf_cell_checked' for r in results) else []
+                for course, result in zip(courses, results):
+                    if result['status'] != 'pdf_cell_checked':
+                        alternate = classify(course, fallback, chars, data['sha256'])
+                        if alternate['status'] == 'pdf_cell_checked':
+                            result = alternate
+                    if result['status'] != 'pdf_cell_checked' and result.get('rawPath'):
+                        fields = [dict(field, label=review.get('aliases', {}).get(field['label'], field['label'])) for field in result['rawPath']]
+                        if all(f['label'] in LABELS | {'研究関連'} for f in fields):
+                            result = dict(status='pdf_cell_checked', sourceSha256=data['sha256'], path=fields,
+                                          method='pdf-render-reviewed-transcription', page=number)
+                    title = course['verification']['titleBbox']
+                    cx, cy = (title[0] + title[2]) / 2, (title[1] + title[3]) / 2
+                    regions = [r for r in review.get('regions', []) if r['page'] == number
+                               and r['courseArea'][0] < cx < r['courseArea'][2]
+                               and r['courseArea'][1] < cy < r['courseArea'][3]]
+                    if len(regions) > 1:
+                        raise ValueError(f"Overlapping reviewed regions: {course['id']}")
+                    if regions:
+                        result = dict(status='pdf_cell_checked', sourceSha256=data['sha256'], path=regions[0]['path'],
+                                      method='pdf-render-reviewed-region', page=number)
+                    for parent in review.get('parents', []):
+                        if parent['page'] == number and result.get('path') and result['path'][0]['label'] in parent['children']:
+                            result['path'].insert(0, dict(label=parent['label'], bbox=parent['bbox'], page=parent['evidencePage']))
+                            result['method'] = 'pdf-render-reviewed-parent'
+                    result['scope'] = course['verification'].get('scope')
+                    result['requirementInterpretation'] = 'unreviewed'
+                    course['classification'] = result
         path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
         resolved = sum(c['classification']['status'] == 'pdf_cell_checked' for c in accepted)
         reports.append(dict(id=data['id'],year=data['year'],faculty=data['faculty'],label=data['label'],courses=len(accepted),classified=resolved, unresolved=len(accepted)-resolved))
         print(f"{data['year']} {data['label']}: {resolved}/{len(accepted)}", flush=True)
-    (ROOT/'docs/classification-coverage.json').write_text(json.dumps(dict(method='original-merged-cell-path-v1',documents=reports),ensure_ascii=False,indent=2),encoding='utf-8')
+    (ROOT/'docs/classification-coverage.json').write_text(json.dumps(dict(method='original-merged-cell-path-v2',
+        requirementInterpretation='unreviewed', documents=reports),ensure_ascii=False,indent=2),encoding='utf-8')
 
 
 if __name__ == '__main__':

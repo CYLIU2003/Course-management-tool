@@ -36,10 +36,13 @@ def initialize(path=None):
     path.parent.mkdir(parents=True, exist_ok=True)
     with connect(path) as connection:
         version = connection.execute('PRAGMA user_version').fetchone()[0]
-        if version not in (0, 1, 2, 3, 4):
+        if version not in (0, 1, 2, 3, 4, 5):
             raise ValueError(f'Unsupported database schema version: {version}')
         connection.execute('PRAGMA journal_mode=WAL')
-        connection.executescript(Path(__file__).with_name('schema.sql').read_text(encoding='utf-8'))
+        # Keep the version marker and additive column migration atomic.
+        connection.executescript('BEGIN IMMEDIATE;\n' + Path(__file__).with_name('schema.sql').read_text(encoding='utf-8'))
+        if 'degree_variant' not in {row['name'] for row in connection.execute('PRAGMA table_info(student_profiles)')}:
+            connection.execute('ALTER TABLE student_profiles ADD COLUMN degree_variant TEXT')
 
 
 def encode(value):
@@ -57,13 +60,21 @@ def validate_course_evidence(course, bundle, department, records):
         raise ValueError('Course has no PDF source record')
     original, source = record
     evidence = original.get('verification', {})
+    requirement = original.get('requirementEvidence', {})
+    options = requirement.get('options', [])
+    scoped_options = [option for option in options if option.get('departmentId') == department['id']]
+    options = scoped_options if scoped_options else [option for option in options if not option.get('departmentId')]
+    expected_type = 'unknown'
+    if (requirement.get('status') == 'pdf_requirement_cells_checked' and requirement.get('sourceSha256') == source['sha256']
+            and len(options) == 1 and options[0]['courseType'] in ('required', 'elective-required')):
+        expected_type = options[0]['courseType']
     scopes = {department['faculty'], re.sub('（.*?）', '', department['name']), '共通分野'}
     if department['id'] == 'ningen' and bundle['entranceYear'] == 2022:
         scopes.add('児童学科')
     if (evidence.get('status') != 'pdf_position_checked' or evidence.get('sourceSha256') != source['sha256']
             or evidence.get('scope') not in scopes or source['year'] != bundle['entranceYear']
             or source['faculty'] != department['faculty'] or course['title'] != evidence.get('titleText')
-            or course['credits'] != original['credits'] or course['courseType'] != 'unknown'):
+            or course['credits'] != original['credits'] or course['courseType'] != expected_type):
         raise ValueError('Course PDF evidence or applicability mismatch')
 
 
@@ -73,6 +84,7 @@ def import_reference_data(path=None):
     catalog = read_json(base / 'catalog.json')
     programs = read_json(base / 'hirameki-programs.json')['programs']
     bundles = read_json(ROOT / 'data/import/curricula.json')
+    degree_rules = {rule['id']: rule for rule in read_json(ROOT / 'data/verified/undergraduate_degree_rules.json')['sets']}
     for item in bundles['inputs']:
         source_path = (ROOT / item['path']).resolve()
         if not source_path.is_relative_to(ROOT) or hashlib.sha256(source_path.read_bytes()).hexdigest() != item['sha256']:
@@ -133,12 +145,47 @@ def import_reference_data(path=None):
                 connection.execute('INSERT INTO program_courses VALUES (?,?,?,?)', (program['id'], position, course['title'], course['credits']))
         connection.execute('DELETE FROM cohort_datasets')
         for bundle in bundles['datasets']:
+            expected_rules = [rule for rule in degree_rules.values() if rule['departmentId'] == bundle['departmentId'] and rule['entranceYear'] == bundle['entranceYear']]
+            if sorted(rule['id'] for rule in bundle.get('degreeRequirementSets', [])) != sorted(rule['id'] for rule in expected_rules):
+                raise ValueError('Degree rule set missing from cohort payload')
             if any(course.get('departmentId') != bundle['departmentId'] or course.get('curriculumYear') != bundle['entranceYear'] for course in bundle['courses']):
                 raise ValueError('Course cohort mismatch')
             for course in bundle['courses']:
                 validate_course_evidence(course, bundle, departments[bundle['departmentId']], records)
             connection.execute('INSERT INTO cohort_datasets VALUES (?,?,?,?,?)',
                                (bundle['departmentId'], bundle['entranceYear'], bundle['status'], len(bundle['courses']), encode(bundle)))
+            for rule in bundle.get('degreeRequirementSets', []):
+                if (degree_rules.get(rule['id']) != rule or rule['departmentId'] != bundle['departmentId']
+                        or rule['entranceYear'] != bundle['entranceYear']):
+                    raise ValueError('Degree rule does not match its verified cohort source')
+                evidence = rule['evidence']
+                source = connection.execute('SELECT sha256,page_count FROM source_documents WHERE id=?', (evidence['sourceId'],)).fetchone()
+                if not source or source['sha256'] != evidence['sourceSha256'] or not 1 <= evidence['page'] <= source['page_count']:
+                    raise ValueError('Degree rule PDF evidence mismatch')
+                if sum(category['minimumCredits'] for category in rule['categories']) + rule['freeChoice']['minimumCredits'] != rule['totalCredits']:
+                    raise ValueError('Degree category totals do not reconcile')
+                groups = rule.get('groups', [])
+                if len({group['id'] for group in groups}) != len(groups):
+                    raise ValueError('Duplicate degree group identity')
+                for group in groups:
+                    proof = group['evidence']
+                    original = connection.execute('SELECT sha256,page_count FROM source_documents WHERE id=?', (proof['sourceId'],)).fetchone()
+                    if not original or original['sha256'] != proof['sourceSha256'] or not 1 <= proof['page'] <= original['page_count']:
+                        raise ValueError('Degree group PDF evidence mismatch')
+                    if group['minimumCredits'] <= 0 or group['membership'] not in ('all_marked', 'minimum') or not group['symbols']:
+                        raise ValueError('Invalid degree group condition')
+                for condition in rule.get('conditions', []):
+                    proof = condition['evidence']
+                    page = connection.execute('SELECT d.sha256,d.entrance_year,p.text FROM source_documents d JOIN source_pages p ON p.source_id=d.id WHERE d.id=? AND p.page_number=?', (proof['sourceId'], proof['page'])).fetchone()
+                    if not page or page['sha256'] != proof['sourceSha256'] or page['entrance_year'] != rule['entranceYear']:
+                        raise ValueError('Degree subset condition source mismatch')
+                    source_text = re.sub(r'\s', '', unicodedata.normalize('NFKC', page['text']))
+                    if condition['sourceText'] not in source_text or condition['minimumCredits'] <= 0:
+                        raise ValueError('Degree subset condition is not present in its original page')
+                connection.execute('INSERT INTO degree_requirement_sets VALUES (?,?,?,?,?,?,?,?,?)',
+                    (rule['id'], rule['departmentId'], rule['entranceYear'], rule['variant'], evidence['sourceId'], evidence['page'], rule['totalCredits'], rule['freeChoice']['minimumCredits'], encode(rule)))
+                connection.executemany('INSERT INTO degree_category_rules VALUES (?,?,?,?)',
+                    [(rule['id'], c['id'], c['minimumCredits'], encode(c['courseCategories'])) for c in rule['categories']])
         connection.execute('DELETE FROM academic_calendars')
         for calendar_path in (ROOT / 'public/academic-calendar').glob('*.json'):
             calendar = read_json(calendar_path)

@@ -11,7 +11,7 @@ from unittest.mock import patch
 from werkzeug.serving import make_server
 from uuid import uuid4
 
-from .database import ROOT, connect, import_reference_data, database_health, backup_database, read_json, validate_course_evidence
+from .database import ROOT, connect, initialize, import_reference_data, database_health, backup_database, read_json, validate_course_evidence
 from .server import save_profile, read_profile, read_document
 from .web import create_app
 
@@ -30,6 +30,24 @@ class DatabaseTests(unittest.TestCase):
     def profile(self, **changes):
         return dict(departmentId='kikai', entranceYear=2022, isGeneral=True, takesTeacher=False, takesHirameki=False, takesTap=False, individualNote='', revision=0, **changes)
 
+    def test_degree_minima_preserve_admission_year_and_course_variant(self):
+        with connect(self.path) as connection:
+            self.assertEqual(connection.execute('SELECT count(*) FROM degree_requirement_sets').fetchone()[0], 111)
+            self.assertEqual(connection.execute('SELECT count(*) FROM degree_group_rules').fetchone()[0], 731)
+            def minimum(department, year, variant, category):
+                return connection.execute('SELECT minimum_credits FROM degree_category_rules WHERE requirement_set_id=? AND category_id=?',
+                    (f'{department}:{year}:{variant}', category)).fetchone()[0]
+            self.assertEqual(minimum('denki', 2022, 'standard', '理工学基礎科目'), 30)
+            self.assertEqual(minimum('denki', 2023, 'standard', '理工学基礎科目'), 31)
+            self.assertEqual(minimum('kenchiku', 2023, 'standard', '学部基盤科目'), 33)
+            self.assertEqual(minimum('kenchiku', 2024, 'standard', '学部基盤科目'), 30)
+            self.assertEqual(minimum('chino_joho', 2026, 'general', '外国語科目'), 8)
+            self.assertEqual(minimum('chino_joho', 2026, 'international', '外国語科目'), 12)
+            self.assertEqual(minimum('ningen', 2023, 'child', '教養・外国語・体育科目'), 20)
+            self.assertEqual(minimum('ningen', 2024, 'human', '教養科目'), 6)
+            required = connection.execute("SELECT minimum_credits FROM degree_group_rules WHERE requirement_set_id='denki:2022:standard' AND category='専門科目' AND membership='all_marked'").fetchone()[0]
+            self.assertEqual(required, 32)
+
     def test_all_eight_combinations_round_trip(self):
         for teacher, hirameki, tap in itertools.product([False, True], repeat=3):
             profile_id = str(uuid4())
@@ -39,6 +57,26 @@ class DatabaseTests(unittest.TestCase):
                 saved = save_profile(connection, profile_id, value)
             with connect(self.path) as connection:
                 self.assertEqual(saved, read_profile(connection, profile_id))
+
+    def test_course_candidates_preserve_scoped_symbols_and_corrected_original_names(self):
+        bundles = read_json(ROOT / 'data/import/curricula.json')['datasets']
+        def courses(department, year):
+            return next(bundle['courses'] for bundle in bundles if bundle['departmentId'] == department and bundle['entranceYear'] == year)
+        for department, expected in [('denki', 'elective-required'), ('kikai', 'required')]:
+            calculus = next(course for course in courses(department, 2022) if course['title'] == '微分積分学(2a)')
+            self.assertEqual(calculus['courseType'], expected)
+        names = {course['title'] for course in courses('denki', 2023)}
+        self.assertIn('Next PBL(1)', names)
+        self.assertIn('Next PBL(2)', names)
+        self.assertNotIn('PBL(1)', names)
+        self.assertNotIn('PBL(2)', names)
+        with connect(self.path) as connection:
+            rows = connection.execute("SELECT r.department_id,r.course_type,r.evidence_page FROM verified_course_requirements r JOIN course_records c ON c.id=r.course_id WHERE r.entrance_year=2022 AND json_extract(c.record_json,'$.requirementEvidence.courseCode')='10-211'").fetchall()
+            self.assertEqual(len(rows), 8)
+            actual = {row['department_id']: (row['course_type'], row['evidence_page']) for row in rows}
+            self.assertEqual(actual['denki'], ('elective-required', 11))
+            self.assertEqual(actual['kikai'], ('required', 11))
+            self.assertEqual(connection.execute('SELECT count(DISTINCT course_id) FROM verified_course_categories').fetchone()[0], 19338)
 
     def test_conflict_and_boolean_validation(self):
         profile_id = str(uuid4())
@@ -50,6 +88,33 @@ class DatabaseTests(unittest.TestCase):
         value['takesTap'] = 'false'
         with self.assertRaises(ValueError), connect(self.path) as connection:
             save_profile(connection, str(uuid4()), value)
+
+    def test_degree_variant_is_bound_to_the_admission_cohort(self):
+        profile_id = str(uuid4())
+        value = dict(self.profile(), departmentId='ningen', entranceYear=2026, degreeVariant='child')
+        with connect(self.path) as connection:
+            saved = save_profile(connection, profile_id, value)
+        with connect(self.path) as connection:
+            self.assertEqual(read_profile(connection, profile_id), saved)
+            self.assertEqual(read_profile(connection, profile_id)['degreeVariant'], 'child')
+            self.assertIsNone(read_profile(connection, str(uuid4())))
+        for variant in ['international', 42, False]:
+            with self.assertRaises(ValueError), connect(self.path) as connection:
+                save_profile(connection, str(uuid4()), dict(value, degreeVariant=variant))
+
+    def test_schema_four_upgrade_preserves_existing_profile(self):
+        profile_id = str(uuid4())
+        with connect(self.path) as connection:
+            saved = save_profile(connection, profile_id, self.profile())
+        upgraded = Path(self.directory.name) / 'schema-four-upgrade.sqlite3'
+        backup_database(upgraded, self.path)
+        with connect(upgraded) as connection:
+            connection.execute('ALTER TABLE student_profiles DROP COLUMN degree_variant')
+            connection.execute('PRAGMA user_version=4')
+        initialize(upgraded)
+        with connect(upgraded) as connection:
+            self.assertEqual(connection.execute('PRAGMA user_version').fetchone()[0], 5)
+            self.assertEqual(read_profile(connection, profile_id), saved)
 
     def test_runtime_course_rejects_changed_title_credit_year_and_department(self):
         bundles = read_json(ROOT / 'data/import/curricula.json')

@@ -1,0 +1,828 @@
+{
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "year": 2026,
+      "scope": "sougou",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "特殊研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 2
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ],
+        "campusMinimumCredits": {
+          "東京都市大学": 10,
+          "早稲田大学": 10
+        }
+      },
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2026-f595ecfb04357ab27ea2f4bc341a0858",
+        "sourceSha256": "0272430bf192339fc0854a237e8ebfae0f9584e17b75358c8c7d9d7f5950c899",
+        "page": 51,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2026,
+      "scope": "kankyo",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2026-ccf34f063d12411c96762c907345458b",
+        "sourceSha256": "ff1e201f633f3a8dfee4d135c078512101257ac27b4fd2845af89c270003388d",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2026,
+      "scope": "international",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "本学開設科目",
+            "minimumCredits": 15
+          },
+          {
+            "name": "エディスコーワン大学開設科目",
+            "minimumCredits": 15
+          }
+        ]
+      },
+      "doctor": null,
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": 3,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2026-c25debf649e1d1457db122ac67edad0f",
+        "sourceSha256": "2f594f11f104b8d7221413dc9a65c0b7112b3d4587a3c007c8d04031a27b348c",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2026,
+      "scope": "toshi",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2026-82d60000e78c657ce06fe36d65f9992c",
+        "sourceSha256": "3df83dabfb5ea56415df8f8c6eb754e0a3cfb362f8f75a6c3d1a486312bffc75",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2026,
+      "scope": "data",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2026-86a258ebb28776520f9c74f0d03620df",
+        "sourceSha256": "9402b9727073894d65ef85fe803b67c7d5376a7190e9b2fe13d984a33d6843a5",
+        "page": 3,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2025,
+      "scope": "sougou",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "特殊研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 2
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ],
+        "campusMinimumCredits": {
+          "東京都市大学": 10,
+          "早稲田大学": 10
+        }
+      },
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2025-008edb2002f87a53638a3222fb76d40c",
+        "sourceSha256": "fdf454fa0e6ae2ade540cac639af5dd552dcdf6908a65a4b8c2e36a885755348",
+        "page": 49,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2025,
+      "scope": "kankyo",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2025-2422094035ca4ffb915ddb81539f3c64",
+        "sourceSha256": "d5d37545dae84ff5ab1c1178ddb36addb60eccb52d76c9d1961c34eaa933bb26",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2025,
+      "scope": "international",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "本学開設科目",
+            "minimumCredits": 15
+          },
+          {
+            "name": "エディスコーワン大学開設科目",
+            "minimumCredits": 15
+          }
+        ]
+      },
+      "doctor": null,
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": 3,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2025-79919e1c155246fa5f706c0e9d738445",
+        "sourceSha256": "5f7a6111a2447938037cea8edfef98cd9edc691428d5fd286df9648db9b9e18d",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2025,
+      "scope": "toshi",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2025-4405926c0ea66eb76b307cd26ce4ca02",
+        "sourceSha256": "f4d29c80666534e870fb9466a067cb8c1100369b911349a3c4b9b16a68bda7a4",
+        "page": 4,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2025,
+      "scope": "data",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "必修研究科目の小計",
+            "minimumCredits": 12,
+            "courseCategories": [
+              "文献研究・演習",
+              "特別研究"
+            ]
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [
+        {
+          "kind": "inconsistent_original_table",
+          "message": "原本の文献研究・演習8単位、特別研究6単位は小計12単位と整合しない。各内訳の数値を自動判定に使用しない。",
+          "printedValues": [
+            8,
+            6,
+            12
+          ]
+        }
+      ],
+      "evidence": {
+        "sourceId": "handbook-2025-dee831ab462e503ec35a8126e78dc05d",
+        "sourceSha256": "90530096c7ff2501f554412aafad939eb1a1f543e8598a8b932cb7625a45f38f",
+        "page": 3,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2024,
+      "scope": "sougou",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "特殊研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 2
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ],
+        "campusMinimumCredits": {
+          "東京都市大学": 10,
+          "早稲田大学": 10
+        }
+      },
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2024-d89e47ec82e92e1e535085fe58082009",
+        "sourceSha256": "a440ec99e455387587b776095a310a01545e3a5bfec2b16512bd349cb2cbaf8a",
+        "page": 45,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2024,
+      "scope": "kankyo",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2024-566251a64fe9472ed2c5c54e11a23a2c",
+        "sourceSha256": "c9121d3453a48b571fc70b95e45e1776edc3522f7290fd477b6cde8d6e917bf0",
+        "page": 55,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2024,
+      "scope": "international",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "本学開設科目",
+            "minimumCredits": 15
+          },
+          {
+            "name": "エディスコーワン大学開設科目",
+            "minimumCredits": 15
+          }
+        ]
+      },
+      "doctor": null,
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [
+        {
+          "kind": "conflicting_original_pages",
+          "message": "研究科目の内数はPDF63ページで3単位、教育課程表61ページで4単位。訂正根拠が必要。",
+          "pages": [
+            61,
+            63
+          ],
+          "printedValues": [
+            4,
+            3
+          ]
+        }
+      ],
+      "evidence": {
+        "sourceId": "handbook-2024-566251a64fe9472ed2c5c54e11a23a2c",
+        "sourceSha256": "c9121d3453a48b571fc70b95e45e1776edc3522f7290fd477b6cde8d6e917bf0",
+        "page": 63,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2023,
+      "scope": "sougou",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "特殊研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 2
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ],
+        "campusMinimumCredits": {
+          "東京都市大学": 10,
+          "早稲田大学": 10
+        }
+      },
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2023-8faea7afe6903e4b21363cdde1eafde1",
+        "sourceSha256": "1cbe39819898a4e4e38b1e0fc17e12145933674079d9fa038f1d645037e46240",
+        "page": 47,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2023,
+      "scope": "kankyo",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2023-6f3fe03490cf4b39146fca4be23f7eaf",
+        "sourceSha256": "bd3c41fb39a3513e27961fac1c0be65771a585be1e0bbcf0235a26defcad1a8d",
+        "page": 56,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2022,
+      "scope": "sougou",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 18
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "特殊研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "実習・演習",
+            "minimumCredits": 2
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ],
+        "campusMinimumCredits": {
+          "東京都市大学": 10,
+          "早稲田大学": 10
+        }
+      },
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2022-6c9603076ad4bb63fb205a5a3c6ee160",
+        "sourceSha256": "19034790259c9089459f721c5dd4da8b61e2a271a3ed668b70456a1280b7e15a",
+        "page": 45,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    },
+    {
+      "year": 2022,
+      "scope": "kankyo",
+      "master": {
+        "totalCredits": 30,
+        "categories": [
+          {
+            "name": "文献研究・演習",
+            "minimumCredits": 4
+          },
+          {
+            "name": "特別研究",
+            "minimumCredits": 6
+          },
+          {
+            "name": "授業科目",
+            "minimumCredits": 20
+          }
+        ]
+      },
+      "doctor": {
+        "totalCredits": 24,
+        "categories": [
+          {
+            "name": "講究",
+            "minimumCredits": 8
+          },
+          {
+            "name": "研究",
+            "minimumCredits": 16
+          }
+        ]
+      },
+      "jointNuclearMaster": null,
+      "researchCreditsWithinTcu": null,
+      "issues": [],
+      "evidence": {
+        "sourceId": "handbook-2022-ecac31d580786bcf8ba82255fa6d3bb3",
+        "sourceSha256": "a9241d4478c429876e0f9354fa308779ea4fcf9d0b8b4b2cc4b259602b33f1d7",
+        "page": 54,
+        "method": "original-render-and-text-checked",
+        "section": "修了するために必要な修得単位数"
+      }
+    }
+  ]
+}

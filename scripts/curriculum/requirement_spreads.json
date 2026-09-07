@@ -1,0 +1,77 @@
+{
+  "handbook-2022-26f17f402ad9b49f74709de3e6cd1cc9": {
+    "sourceSha256": "ab162d3f0c06751973669b9bf6936067935e8b9b5daeacf470e96015ab365816",
+    "titlePage": 10,
+    "requirementPage": 11,
+    "departmentColumns": [
+      "kikai",
+      "kikai_system",
+      "denki",
+      "iyo",
+      "ouyou_kagaku",
+      "genshiryoku",
+      "shizen_shizen",
+      "shizen_suuri"
+    ]
+  },
+  "handbook-2023-26f17f402ad9b49f74709de3e6cd1cc9-1": {
+    "sourceSha256": "55983f40165b7cda9de52f5f618dab3892b01bd65592e9b244bdd700e3d37a1a",
+    "titlePage": 10,
+    "requirementPage": 11,
+    "departmentColumns": [
+      "kikai",
+      "kikai_system",
+      "denki",
+      "iyo",
+      "ouyou_kagaku",
+      "genshiryoku",
+      "shizen_shizen",
+      "shizen_suuri"
+    ]
+  },
+  "handbook-2024-3b85f9d774533dc5e292a20bc1cc918f": {
+    "sourceSha256": "8b0c1c8efd0dd78de463428077535aa7547448399237ba1fcb6c740accfeee97",
+    "titlePage": 10,
+    "requirementPage": 11,
+    "departmentColumns": [
+      "kikai",
+      "kikai_system",
+      "denki",
+      "iyo",
+      "ouyou_kagaku",
+      "genshiryoku",
+      "shizen_shizen",
+      "shizen_suuri"
+    ]
+  },
+  "handbook-2025-fd690a3f9d67e91eda83c185aad131bd": {
+    "sourceSha256": "bc8dc7af804627027281f64074c3adcc73dcc378945940e2fd1735cb60f166b0",
+    "titlePage": 10,
+    "requirementPage": 11,
+    "departmentColumns": [
+      "kikai",
+      "kikai_system",
+      "denki",
+      "iyo",
+      "ouyou_kagaku",
+      "genshiryoku",
+      "shizen_shizen",
+      "shizen_suuri"
+    ]
+  },
+  "handbook-2026-a3ddef1c2ac8f7b0b933b5318f6aa937": {
+    "sourceSha256": "878ee63451e5c5da18dd3fbedc99ccdbe2c699fd65137d35ca491c801a16ecf7",
+    "titlePage": 10,
+    "requirementPage": 11,
+    "departmentColumns": [
+      "kikai",
+      "kikai_system",
+      "denki",
+      "iyo",
+      "ouyou_kagaku",
+      "genshiryoku",
+      "shizen_shizen",
+      "shizen_suuri"
+    ]
+  }
+}

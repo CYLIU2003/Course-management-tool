@@ -1,7 +1,7 @@
 {
   "name": "timesch",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "node scripts/dev.mjs",
@@ -15,7 +15,7 @@
     "check:status": "node scripts/diagnostics/check-system-status.mjs",
     "check:csv": "node scripts/diagnostics/check-system-status.mjs --csv-only",
     "check:all": "npm run check:status && npm run build",
-    "lint": "eslint .",
+    "lint": "eslint src scripts",
     "preview": "node scripts/dev.mjs --preview",
     "build:cloudflare": "node scripts/build-cloudflare.mjs",
     "deploy:cloudflare": "npm run verify:cloudflare && wrangler deploy",
@@ -25,10 +25,12 @@
     "db:export-supabase": "python -m scripts.export_supabase",
     "dev:supabase": "node scripts/dev-supabase.mjs",
     "test:cloudflare": "node --test scripts/test-cloudflare.mjs",
-    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:offering-guide && npm run test:academic-years && npm run test:supabase && npm run build:cloudflare",
+    "verify:cloudflare": "npm run test:cloudflare && npm run test:google-auth && npm run test:offering-guide && npm run test:degree-guide && npm run test:degree-membership && npm run test:academic-years && npm run test:supabase && npm run build:cloudflare",
     "test:offering-guide": "node scripts/test-offering-guide.mjs",
     "test:google-auth": "node scripts/test-google-auth.mjs",
-    "test:academic-years": "node scripts/test-academic-years.mjs"
+    "test:academic-years": "node scripts/test-academic-years.mjs",
+    "test:degree-guide": "node scripts/test-degree-guide.mjs",
+    "test:degree-membership": "node scripts/audit-degree-membership.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.115.0",

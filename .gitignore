@@ -38,3 +38,5 @@ kimitsujouhou.txt
 
 # Temporary, checksum-verified deployment transport bundles
 /data/reference-release/
+/data/reference-release-v*/
+/output/playwright/

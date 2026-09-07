@@ -2,10 +2,12 @@ import { apiFetch } from '../../api/client';
 import { accountRequest } from '../../api/account';
 import { useEffect, useRef, useState } from 'react';
 import { DEFAULT_OPTIONS, type StudyOptions } from '../../core/handbooks/profile';
+import type { DegreeRequirementSet } from '../../core/curriculum';
 interface Profile extends StudyOptions { departmentId: string; entranceYear: number; individualNote: string; revision: number }
 
-export default function StudentProfile({ departmentId, entranceYear, onChange }: {
+export default function StudentProfile({ departmentId, entranceYear, onChange, requirementSets }: {
   departmentId: string; entranceYear: number; onChange: (options: StudyOptions) => void;
+  requirementSets?: DegreeRequirementSet[];
 }) {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [message, setMessage] = useState('');
@@ -19,6 +21,7 @@ export default function StudentProfile({ departmentId, entranceYear, onChange }:
     apiFetch(`/api/me/profile`, { signal: controller.signal }).then(async (response) => {
       if (!response.ok) throw new Error('履修区分を読み込めませんでした。');
       const value: Profile = await response.json() ?? { ...DEFAULT_OPTIONS, departmentId, entranceYear, individualNote: '', revision: 0 };
+      if (value.departmentId !== departmentId || value.entranceYear !== entranceYear) value.degreeVariant = null;
       if (!controller.signal.aborted) { setProfile(value); onChange(value); setMessage(value.revision ? '保存済み' : '履修区分を選択して保存してください。'); }
     }).catch((error: unknown) => { if (!controller.signal.aborted) setMessage(error instanceof Error ? error.message : '読み込みに失敗しました。'); });
     return () => controller.abort();
@@ -42,6 +45,7 @@ export default function StudentProfile({ departmentId, entranceYear, onChange }:
       ['takesHirameki', 'ひらめきを履修する'], ['takesTap', 'TAP／ATAPに参加する'], ['takesTeacher', '教職課程を履修する'],
     ] as const).map(([key, label]) => <label key={key}><input type="checkbox" checked={profile[key]} disabled={saving}
       onChange={(event) => { setProfile({ ...profile, [key]: event.target.checked }); setMessage('未保存'); }} />{label}</label>)}</div>
+      {requirementSets && requirementSets.length > 1 && <label>所属コース<select value={profile.degreeVariant ?? ''} disabled={saving} onChange={event => { setProfile({ ...profile, degreeVariant: event.target.value }); setMessage('未保存'); }}><option value="">選択してください</option>{requirementSets.map(rule => <option key={rule.id} value={rule.variant}>{rule.variantName}</option>)}</select></label>}
       <button type="button" disabled={saving} onClick={save}>履修区分を保存</button></>}
     <span role="status"> {message} </span><button type="button" disabled={saving} onClick={() => setAttempt((value) => value + 1)}>保存内容を再読み込み</button>
   </fieldset>;

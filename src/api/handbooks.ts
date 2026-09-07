@@ -58,9 +58,17 @@ export async function loadOfficialCourseCandidates(profile: {
   return [...grouped.values()].flatMap((matches) => {
     if (new Set(matches.map(({ course }) => course.credits)).size !== 1) return [];
     const { course, document } = matches[0];
+    const classification = course.classification;
+    const path = classification?.status === 'pdf_cell_checked' && classification.sourceSha256 === document.sha256
+      ? classification.path?.map(field => field.label) ?? [] : [];
+    const evidence = course.requirementEvidence;
+    const options = evidence?.status === 'pdf_requirement_cells_checked' && evidence.sourceSha256 === document.sha256 ? evidence.options : [];
+    const applicable = options.filter(option => option.departmentId === profile.id);
+    const option = applicable.length === 1 ? applicable[0] : options.length === 1 && !options[0].departmentId ? options[0] : undefined;
+    const courseType = option?.courseType === 'required' || option?.courseType === 'elective-required' ? option.courseType : 'unknown';
     return [{ id: `reference-${profile.id}-${course.id}`, title: course.verification!.titleText!, credits: course.credits,
-      courseType: 'unknown', category: '公式資料の参考科目',
-      group: `${document.label} / PDF ${course.page}ページ（適用区分は原本確認）`,
+      courseType, category: path[0] ?? '公式資料の参考科目',
+      group: path.slice(1).join(' / '),
       sourceKind: 'curriculum', departmentId: profile.id, curriculumYear: profile.entranceYear,
       tags: ['必選・算入条件は原本確認'],
     } satisfies AcademicCourse];

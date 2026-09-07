@@ -31,6 +31,13 @@ export interface HandbookCatalog {
 }
 
 export interface HandbookCourse {
+  requirementEvidence?: {
+    titleAnnotations?: Array<{ symbol: string; bbox: number[] }>;
+    programMarks?: Array<{ symbol: string; bbox: number[]; headerBbox: number[] | null; method: string }>;
+    restrictions?: string;
+    status: 'pdf_requirement_cells_checked'; sourceSha256: string; page: number; headerBbox: number[];
+    options: Array<{ column: number; departmentId?: string; printedSymbol: string; courseType: 'required' | 'elective-required' | 'designated' | 'unmarked'; bbox: number[] }>;
+  };
   studyLevel?: string;
   classification?: {
     status: 'pdf_cell_checked' | 'unresolved'; sourceSha256: string; scope?: string;

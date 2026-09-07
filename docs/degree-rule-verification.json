@@ -1,0 +1,12 @@
+{
+  "integrity": "ok",
+  "foreignKeyErrors": 0,
+  "cohorts": 182,
+  "degreeSets": 104,
+  "minimumCategories": 530,
+  "classifiedCourseRows": 19563,
+  "requirementCourseRows": 17104,
+  "requirementColumns": 21948,
+  "coverage": "category_minima_and_printed_columns_only",
+  "releaseStatus": "incomplete_not_deployed"
+}

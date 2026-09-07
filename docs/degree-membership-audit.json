@@ -1,0 +1,43 @@
+{
+  "ruleSets": 111,
+  "groups": 731,
+  "failures": [],
+  "sourceConflicts": [
+    {
+      "set": "toshi_seikatsu:2025:standard",
+      "group": "必修科目",
+      "category": "専門基礎科目",
+      "expected": 23,
+      "available": 20,
+      "members": [
+        "マーケティング概論",
+        "経営学概論",
+        "都市の経済学",
+        "世界の都市",
+        "グラフィックデザイン演習",
+        "まちの観察",
+        "都市デジタルシミュレーション(1)",
+        "マーケティングリサーチ演習(1)",
+        "SD PBL(1)",
+        "SD PBL(2)",
+        "SD PBL(3)",
+        "キャリアデザイン"
+      ],
+      "evidence": [
+        {
+          "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+          "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+          "page": 63,
+          "method": "original-render-and-marked-course-sum"
+        },
+        {
+          "sourceId": "handbook-2025-8a8f8e5bb2105070e34d4554ed89df63",
+          "sourceSha256": "25857f9df744dbf90fdf631e2d2d16e55d6b2547fe9147df69495650190176a2",
+          "page": 64,
+          "method": "original-render-and-minimum-table"
+        }
+      ],
+      "message": "原本内で不一致があります。修得条件表は必修23単位、教育課程表の○印は合計20単位です。空間デザイン演習(1)は△印・2単位と記載されています。訂正が確認できるまで、この区分の条件達成は判定しません。"
+    }
+  ]
+}
