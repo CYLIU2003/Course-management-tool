@@ -35,3 +35,6 @@ kimitsujouhou.txt
 
 # Local browser QA artifacts
 .playwright-cli/
+
+# Temporary, checksum-verified deployment transport bundles
+/data/reference-release/

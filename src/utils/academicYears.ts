@@ -28,3 +28,9 @@ export function migrateAcademicYears(data: AcademicAllYearsData, mapping: Record
 export function cohortRecords(data: AcademicAllYearsData, departmentId: string, entranceYear: number): AcademicAllYearsData {
   return Object.fromEntries(Object.entries(data).filter(([, value]) => value.departmentId === departmentId && value.entranceYear === entranceYear));
 }
+
+export function initialAcademicCohort(data: AcademicAllYearsData, academicYear: number, fallback: { departmentId: string; entranceYear: number }) {
+  const key = Object.keys(data).filter(key => isAcademicYear(key) && Number(key) <= academicYear)
+    .sort((a,b) => Number(b)-Number(a)).find(key => data[key].departmentId && data[key].entranceYear);
+  return key ? {departmentId: data[key].departmentId!, entranceYear: data[key].entranceYear!} : fallback;
+}

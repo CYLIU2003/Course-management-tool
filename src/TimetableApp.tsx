@@ -1,6 +1,6 @@
 import SourceLibrary from './components/handbooks/SourceLibrary';
 import AcademicYearMigration from './components/AcademicYearMigration';
-import { currentAcademicYear, emptyAcademicYear, hasLegacyYears, hasAcademicRecords, cohortRecords } from './utils/academicYears';
+import { currentAcademicYear, emptyAcademicYear, hasLegacyYears, hasAcademicRecords, initialAcademicCohort, cohortRecords } from './utils/academicYears';
 import { useEffect, useMemo, useRef, useState } from "react";
 import { accountRequest, responseError, type Account, type StudentState } from "./api/account";
 import HandbookBrowser from "./components/handbooks/HandbookBrowser";
@@ -93,6 +93,7 @@ function createDefaultAllYearsData(): AllYearsData {
 }
 
 export default function TimetableApp({ account, onStateChange }: { account: Account; onStateChange: (state: StudentState) => void }) {
+  const initialCohort = initialAcademicCohort(account.state?.allYearsData ?? {}, currentAcademicYear(), account);
   const [activeQuarter, setActiveQuarter] = useState<Quarter>("1Q");
   const [currentYear, setCurrentYear] = useState<Year>(String(currentAcademicYear()));
   const [currentPage, setCurrentPage] = useState<AppPage>("home");
@@ -100,8 +101,8 @@ export default function TimetableApp({ account, onStateChange }: { account: Acco
     void accountRequest('/api/me/events', 'POST', { page: currentPage === 'sources' ? 'handbooks' : currentPage }).catch(() => console.warn('利用画面の記録に失敗しました。'));
   }, [currentPage]);
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [entranceYear, setEntranceYear] = useState(account.state?.allYearsData[String(currentAcademicYear())]?.entranceYear ?? account.state?.entranceYear ?? account.entranceYear);
-  const [selectedDepartmentId, setSelectedDepartmentId] = useState(account.state?.allYearsData[String(currentAcademicYear())]?.departmentId ?? account.state?.departmentId ?? account.departmentId);
+  const [entranceYear, setEntranceYear] = useState(initialCohort.entranceYear);
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState(initialCohort.departmentId);
   const selectedDepartment = AVAILABLE_DEPARTMENTS.find((department) => department.id === selectedDepartmentId);
 
   const [importedCourses, setImportedCourses] = useState<AcademicCourse[]>([]);
@@ -238,11 +239,11 @@ export default function TimetableApp({ account, onStateChange }: { account: Acco
   // 年度ごとのデータ管理
   const [allYearsData, setAllYearsData] = useState<AllYearsData>(() => {
     const stored = account.state?.allYearsData;
-    if (stored && hasLegacyYears(stored) && !Object.values(stored).some(hasAcademicRecords)) return { [String(currentAcademicYear())]: emptyAcademicYear(account.departmentId, account.entranceYear) };
-    if (stored) return hasLegacyYears(stored) ? stored : { ...stored, [String(currentAcademicYear())]: stored[String(currentAcademicYear())] ?? emptyAcademicYear(account.departmentId, account.entranceYear) };
+    if (stored && hasLegacyYears(stored) && !Object.values(stored).some(hasAcademicRecords)) return { [String(currentAcademicYear())]: emptyAcademicYear(initialCohort.departmentId, initialCohort.entranceYear) };
+    if (stored) return hasLegacyYears(stored) ? stored : { ...stored, [String(currentAcademicYear())]: stored[String(currentAcademicYear())] ?? emptyAcademicYear(initialCohort.departmentId, initialCohort.entranceYear) };
     
     // 初期化: createDefaultAllYearsData を使用
-    return { [String(currentAcademicYear())]: emptyAcademicYear(account.departmentId, account.entranceYear) };
+    return { [String(currentAcademicYear())]: emptyAcademicYear(initialCohort.departmentId, initialCohort.entranceYear) };
   });
 
   // 現在の年度のデータを取得

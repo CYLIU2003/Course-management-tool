@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
 const result=await build({stdin:{contents:"export * from './src/utils/academicYears';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
-const {currentAcademicYear,migrateAcademicYears,emptyAcademicYear,cohortRecords}=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+const {currentAcademicYear,initialAcademicCohort,migrateAcademicYears,emptyAcademicYear,cohortRecords}=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 assert.equal(currentAcademicYear(new Date('2026-03-31T14:59:59Z')),2025);
 assert.equal(currentAcademicYear(new Date('2026-03-31T15:00:00Z')),2026);
 const original={'1年次':emptyAcademicYear('kikai',2022),'2年次':emptyAcademicYear('kikai',2022)};
@@ -16,3 +16,5 @@ assert.deepEqual(Object.keys(cohortRecords(migrated,'kikai',2022)),['2024','2026
 console.log('PASS: Tokyo April boundary, confirmed migration, year isolation, admission/degree separation.');
 
 assert.deepEqual(Object.keys(migrateAcademicYears(original,{"1年次":"2024"},"kikai",2022)),["2024"]);
+
+assert.deepEqual(initialAcademicCohort({"2025":emptyAcademicYear("kikai",2022),"2026":emptyAcademicYear("grad_master_kikai",2026)},2027,{departmentId:"kikai",entranceYear:2022}),{departmentId:"grad_master_kikai",entranceYear:2026});
